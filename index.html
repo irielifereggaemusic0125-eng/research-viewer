@@ -97,6 +97,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px}
 .status-line{font-size:10px;font-weight:700;padding:6px 8px;border-radius:8px;margin:8px 0 6px;line-height:1.4}
 .status-line.listed{background:#e1f5ee;color:#0c6644}
 .status-line.waiting{background:#f0f0ed;color:#999}
+.store-note{font-size:9px;color:#7a4f00;background:#fff3d6;border-radius:8px;padding:5px 8px;margin:2px 0 6px;line-height:1.5}
+.store-note b{font-weight:700}
 /* 現物アクションボタン */
 .actions{display:flex;gap:8px;margin:0 0 4px}
 .act-btn{flex:1;min-height:46px;border-radius:10px;border:none;font-size:13px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:4px;cursor:pointer}
@@ -362,7 +364,8 @@ function render() {
         <div class="status-line ${r.listed?'listed':'waiting'}">${r.listed?'🟢 出品中 ─ この1点の商品ページへ直行できます':'⏳ 待ち受け中 ─ 現在この型番の出品なし（検索で探す）'}</div>
         <div class="actions">
           ${r.links.map(l=>`<a class="act-btn ${l.cls}" href="${l.href}" target="_blank" rel="noopener">${l.label}<span class="ab-sub">${l.sub}</span></a>`).join('')}
-        </div>`;})()}
+        </div>
+        <div class="store-note">🏪 ヤフオク仕入＝<b>ストア限定</b>（pleasure / ROGUE / メルキャスト / brand LAQOL）・個人出品は対象外。検索後は該当ストア出品のみ拾う（ルーティンがsellerIDで自動フィルタ）</div>`;})()}
         <div class="row"><span class="row-lbl">ソース</span><span class="row-val">${c.source}</span></div>
         ${c.current_price!=null?`<div class="row"><span class="row-lbl">現在価格</span><span class="row-val">${yen(c.current_price)}</span></div>`:''}
         ${c.end&&c.end!=='—'?`<div class="row"><span class="row-lbl">終了日時</span><span class="row-val ${hrs&&hrs<24?'red':''}">${c.end}</span></div>`:''}
@@ -400,7 +403,7 @@ function buildItemLinks(c){
     FENDI:'フェンディ',MARGIELA:'マルジェラ',YSL:'サンローラン',BALENCIAGA:'バレンシアガ',VERSACE:'ヴェルサーチ'};
   const brandKw = c.brand_jp || BRAND_JP[c.brand] || c.brand;
   const kw = encodeURIComponent([brandKw, c.model].filter(Boolean).join(' '));
-  links.push({cls: listed?'search':'primary', label:'🔍 ヤフオク', sub: listed?'他の出品も':'1円で探す',
+  links.push({cls: listed?'search':'primary', label:'🔍 ヤフオク1円', sub:'ストア限定で確認',
     href:`https://auctions.yahoo.co.jp/search/search?p=${kw}&aucminprice=1&aucmaxprice=1&istatus=2&n=50&s1=new&o1=d`});
   links.push({cls:'search', label:'🔍 EcoAuc', sub:'下見で探す',
     href:`https://www.ecoauc.com/client/auctions/inspect?q=${kw}&master_item_ranks[]=2&master_item_ranks[]=3&master_item_ranks[]=4`});
@@ -429,6 +432,15 @@ function setTab(tab) {
           ★現物URLをタップで実物確認
         </div>
         <div style="margin-top:10px;color:#d03030;font-weight:600;font-size:11px">⚠️ 入札は自分で判断（自動入札はしない）</div>
+        <hr style="border:none;border-top:.5px solid #eee;margin:10px 0">
+        <div style="font-size:12px;font-weight:700;margin-bottom:6px">🏪 ヤフオク仕入＝ストア限定（個人は対象外）</div>
+        <div style="font-size:11px;color:#888;line-height:1.7;margin-bottom:8px">フォロー中の4ストアの出品のみ仕入れ対象。個人出品は偽物リスクso弾く。各ストアの在庫を直接見る:</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <a href="https://auctions.yahoo.co.jp/seller/7nXq3bXn7PRmL5ebfZo2heCAUTdd9" target="_blank" style="background:#eef4ff;color:#1558b0;padding:8px 10px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600">🏪 pleasure の出品を見る</a>
+          <a href="https://auctions.yahoo.co.jp/seller/BqxjFHv5QgGiNssrKDgDwpTaieD3z" target="_blank" style="background:#eef4ff;color:#1558b0;padding:8px 10px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600">🏪 株式会社ROGUE の出品を見る</a>
+          <a href="https://auctions.yahoo.co.jp/seller/RJq9ocjXkpy6e4U91ytTf9XJjGxw" target="_blank" style="background:#eef4ff;color:#1558b0;padding:8px 10px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600">🏪 メルキャスト の出品を見る</a>
+          <a href="https://auctions.yahoo.co.jp/seller/EXfU6QRTYpoKpZiqo6RiSxPvesw9u" target="_blank" style="background:#eef4ff;color:#1558b0;padding:8px 10px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600">🏪 brand LAQOL の出品を見る</a>
+        </div>
       </div>
     </div></div>`;
   }
