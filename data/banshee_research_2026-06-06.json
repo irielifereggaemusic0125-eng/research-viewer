@@ -1,6 +1,6 @@
 {
   "date": "2026-06-06",
-  "updated_at": "2026-06-06 (Tier A アクセ追加・ストア出品)",
+  "updated_at": "2026-06-06 (検算修正・回転実績明記)",
   "candidates": [
     {
       "id": "M00307",
@@ -22,7 +22,7 @@
       "coherence": "✅一致",
       "tier": "Tier1",
       "tier_detail": "全分布が閾値以上",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -46,7 +46,7 @@
       "coherence": "✅一致",
       "tier": "Tier1",
       "tier_detail": "全分布が閾値以上",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -60,17 +60,17 @@
       "url": "",
       "current_price": null,
       "end": "—",
-      "jissei": 26750,
-      "eco_shitene": 13813,
-      "yahoo_shitene": 16845,
+      "jissei": 26615,
+      "eco_shitene": 13884,
+      "yahoo_shitene": 16923,
       "profit_eco": 5000,
-      "kaiten": 20,
+      "kaiten": 42,
       "n40": 7,
       "n90": 13,
       "coherence": "✅一致",
       "tier": "Tier1",
       "tier_detail": "全分布が閾値以上",
-      "note": "",
+      "note": "🔧検算修正:cond2釣上げ補正→cond3¥26,615/付属混入除外・回転42日(実績n=7)(旧¥26,750→実勢¥26,615)",
       "status": "waiting",
       "in30k": true
     },
@@ -85,16 +85,16 @@
       "current_price": null,
       "end": "—",
       "jissei": 24211,
-      "eco_shitene": 11009,
-      "yahoo_shitene": 13759,
+      "eco_shitene": 11918,
+      "yahoo_shitene": 14759,
       "profit_eco": 6000,
-      "kaiten": 20,
+      "kaiten": 4,
       "n40": 6,
       "n90": 11,
       "coherence": "✅一致",
       "tier": "Tier1",
       "tier_detail": "全分布が閾値以上",
-      "note": "",
+      "note": "🔧検算修正:付属混入2件除外も中央変わらず・回転4日(実績)(旧¥24,211→実勢¥24,211)",
       "status": "waiting",
       "in30k": true
     },
@@ -118,7 +118,7 @@
       "coherence": "✅一致",
       "tier": "Tier1",
       "tier_detail": "全分布が閾値以上",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -142,7 +142,7 @@
       "coherence": "✅一致",
       "tier": "Tier1",
       "tier_detail": "全分布が閾値以上",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -166,7 +166,7 @@
       "coherence": "✅一致",
       "tier": "Tier1",
       "tier_detail": "全分布が閾値以上",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -228,17 +228,17 @@
       "url": "",
       "current_price": null,
       "end": "—",
-      "jissei": 49800,
-      "eco_shitene": 29763,
-      "yahoo_shitene": 34390,
+      "jissei": 48900,
+      "eco_shitene": 29027,
+      "yahoo_shitene": 33580,
       "profit_eco": 8000,
-      "kaiten": 20,
+      "kaiten": 19,
       "n40": 13,
       "n90": 24,
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安19,700は例外",
-      "note": "",
+      "note": "🔧検算修正:cond2 n=1釣上げ補正→cond3¥48,900・回転19日(実績n=12)・¥30k超Tier C相当(旧¥49,800→実勢¥48,900)",
       "status": "waiting",
       "in30k": true
     },
@@ -262,31 +262,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安4,200は例外",
-      "note": "",
-      "status": "waiting",
-      "in30k": true
-    },
-    {
-      "id": "M00609",
-      "name": "ルイヴィトン アイコニックピアス M00609",
-      "brand": "LV",
-      "model": "M00609",
-      "rank": "AB",
-      "source": "EcoAuc/ヤフオク",
-      "url": "",
-      "current_price": null,
-      "end": "—",
-      "jissei": 39000,
-      "eco_shitene": 24927,
-      "yahoo_shitene": 29070,
-      "profit_eco": 4000,
-      "kaiten": 20,
-      "n40": 9,
-      "n90": 11,
-      "coherence": "✅一致",
-      "tier": "Tier2",
-      "tier_detail": "p25安全・最安24,000は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -310,7 +286,7 @@
       "coherence": "✅(n=29)",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安5,700は例外",
-      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。",
+      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。 回転12日",
       "status": "waiting",
       "in30k": true
     },
@@ -334,7 +310,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安23,370は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -382,7 +358,7 @@
       "coherence": "✅(n=18)",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安22,900は例外",
-      "note": "🚨現物あり・pleasure・現在¥12・6/11終了",
+      "note": "🚨現物あり・pleasure・現在¥12・6/11終了 回転20日",
       "status": "listed",
       "in30k": true
     },
@@ -411,6 +387,30 @@
       "in30k": true
     },
     {
+      "id": "M00609",
+      "name": "ルイヴィトン アイコニックピアス M00609",
+      "brand": "LV",
+      "model": "M00609",
+      "rank": "AB",
+      "source": "EcoAuc/ヤフオク",
+      "url": "",
+      "current_price": null,
+      "end": "—",
+      "jissei": 31500,
+      "eco_shitene": 18790,
+      "yahoo_shitene": 22320,
+      "profit_eco": 4000,
+      "kaiten": 26,
+      "n40": 9,
+      "n90": 11,
+      "coherence": "✅一致",
+      "tier": "Tier2",
+      "tier_detail": "p25安全・最安24,000は例外",
+      "note": "🔧検算修正:AB中央¥39kだがcond3¥31,500が実体・回転26日(実績)(旧¥39,000→実勢¥31,500)",
+      "status": "waiting",
+      "in30k": true
+    },
+    {
       "id": "M01880",
       "name": "ルイヴィトン メタルモノグラムネックレス M01880",
       "brand": "LV",
@@ -430,7 +430,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安18,700は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -478,7 +478,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安12,799は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -502,7 +502,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安24,000は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -526,7 +526,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安8,300は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -550,7 +550,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安18,000は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -574,31 +574,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安16,000は例外",
-      "note": "",
-      "status": "waiting",
-      "in30k": true
-    },
-    {
-      "id": "DIOR-N",
-      "name": "ディオール クレールドリュヌ ネックレス",
-      "brand": "DIOR",
-      "model": "クレールドリュヌ",
-      "rank": "AB",
-      "source": "EcoAuc/ヤフオク",
-      "url": "",
-      "current_price": null,
-      "end": "—",
-      "jissei": 28700,
-      "eco_shitene": 15590,
-      "yahoo_shitene": 18800,
-      "profit_eco": 5000,
-      "kaiten": 20,
-      "n40": 7,
-      "n90": 10,
-      "coherence": "✅一致",
-      "tier": "Tier2",
-      "tier_detail": "p25安全・最安16,800は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -622,7 +598,31 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安7,335は例外",
-      "note": "",
+      "note": "回転20日",
+      "status": "waiting",
+      "in30k": true
+    },
+    {
+      "id": "DIOR-N",
+      "name": "ディオール クレールドリュヌ ネックレス",
+      "brand": "DIOR",
+      "model": "クレールドリュヌ",
+      "rank": "AB",
+      "source": "EcoAuc/ヤフオク",
+      "url": "",
+      "current_price": null,
+      "end": "—",
+      "jissei": 27850,
+      "eco_shitene": 14895,
+      "yahoo_shitene": 18035,
+      "profit_eco": 5000,
+      "kaiten": 5,
+      "n40": 7,
+      "n90": 10,
+      "coherence": "✅一致",
+      "tier": "Tier2",
+      "tier_detail": "p25安全・最安16,800は例外",
+      "note": "🔧検算修正:cond2釣上げ補正→cond3¥27,850・回転5日(実績・速い)(旧¥28,700→実勢¥27,850)",
       "status": "waiting",
       "in30k": true
     },
@@ -646,7 +646,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安15,500は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -670,7 +670,7 @@
       "coherence": "✅(n=8)",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安4,940は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -694,7 +694,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安6,000は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -718,7 +718,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安8,900は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -742,7 +742,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安7,500は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -766,7 +766,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安11,400は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -790,7 +790,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安12,900は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -814,7 +814,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安10,000は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -838,7 +838,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安9,000は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -862,7 +862,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安15,400は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -886,7 +886,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安8,040は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -910,7 +910,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安2,550は例外",
-      "note": "⚠️手動価格確認必須: 高額ウォッチ混入の可能性",
+      "note": "⚠️手動価格確認必須: 高額ウォッチ混入の可能性 回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -958,7 +958,7 @@
       "coherence": "✅(n=10)",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安1,200は例外",
-      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。",
+      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。 回転12日",
       "status": "waiting",
       "in30k": true
     },
@@ -982,7 +982,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安8,500は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1006,7 +1006,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安4,580は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1030,7 +1030,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安4,980は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1054,7 +1054,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=21,949<閾値39,949",
-      "note": "⚠️目視確認推奨: 先輩mat本命だが同ランクp25圧力",
+      "note": "⚠️目視確認推奨: 先輩mat本命だが同ランクp25圧力 回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1078,7 +1078,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=33,100<閾値37,272",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1102,7 +1102,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=25,800<閾値33,830",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1126,7 +1126,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=28,600<閾値33,660",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1150,7 +1150,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=26,290<閾値32,488",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1174,7 +1174,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=30,450<閾値32,300",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1198,7 +1198,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=15,550<閾値31,450",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1222,7 +1222,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=28,450<閾値31,450",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1246,7 +1246,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=26,325<閾値26,987",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1270,7 +1270,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=23,775<閾値26,775",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1294,7 +1294,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=25,140<閾値26,275",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1318,7 +1318,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=15,819<閾値21,845",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1342,7 +1342,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=17,000<閾値21,462",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1366,7 +1366,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=17,087<閾値21,250",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1390,7 +1390,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=15,000<閾値17,636",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1414,7 +1414,7 @@
       "coherence": "✅(n=15)",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=14,277<閾値14,875",
-      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。",
+      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。 回転12日",
       "status": "waiting",
       "in30k": true
     },
@@ -1438,7 +1438,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=13,199<閾値14,620",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1462,7 +1462,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=12,000<閾値14,025",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1486,7 +1486,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=9,350<閾値13,430",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1510,7 +1510,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=9,800<閾値13,386",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1534,7 +1534,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=9,625<閾値11,177",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1558,7 +1558,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=4,049<閾値7,956",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": true
     },
@@ -1582,7 +1582,7 @@
       "coherence": "✅一致",
       "tier": "Tier1",
       "tier_detail": "全分布が閾値以上",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": false
     },
@@ -1606,7 +1606,7 @@
       "coherence": "✅(n=14)",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安2,900は例外",
-      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。",
+      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。 回転12日",
       "status": "waiting",
       "in30k": false
     },
@@ -1630,7 +1630,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安37,300は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": false
     },
@@ -1654,7 +1654,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安6,000は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": false
     },
@@ -1678,7 +1678,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安35,000は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": false
     },
@@ -1702,7 +1702,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安37,500は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": false
     },
@@ -1726,7 +1726,7 @@
       "coherence": "✅一致",
       "tier": "Tier2",
       "tier_detail": "p25安全・最安28,000は例外",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": false
     },
@@ -1750,7 +1750,7 @@
       "coherence": "⚠️90日差",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=39,190<閾値73,100",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": false
     },
@@ -1774,7 +1774,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=24,100<閾値63,750",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": false
     },
@@ -1798,7 +1798,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=43,800<閾値54,230",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": false
     },
@@ -1822,7 +1822,7 @@
       "coherence": "✅一致",
       "tier": "Tier3",
       "tier_detail": "⚠️同ランクp25=7,050<閾値40,610",
-      "note": "",
+      "note": "回転20日",
       "status": "waiting",
       "in30k": false
     }
