@@ -93,6 +93,15 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px}
 .row-val.red{color:#d03030}
 .row-val.url a{color:#2980e8;text-decoration:none;font-size:11px}
 
+/* 現物アクションボタン */
+.actions{display:flex;gap:8px;margin:8px 0 4px}
+.act-btn{flex:1;min-height:46px;border-radius:10px;border:none;font-size:13px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:4px;cursor:pointer}
+.act-btn.primary{background:#1D9E75;color:#fff}
+.act-btn.primary:active{background:#178a64}
+.act-btn.search{background:#eef4ff;color:#1558b0;border:1.5px solid #cfe0fb}
+.act-btn.search:active{background:#dde9fc}
+.act-btn .ab-sub{font-size:9px;font-weight:500;opacity:.85;margin-left:2px}
+
 .note-box{background:#f7f7f4;border-radius:8px;padding:6px 8px;margin-top:6px;font-size:10px;color:#888;line-height:1.6}
 .note-box.warn{background:#fff3d6;color:#7a4f00}
 .note-box.danger{background:#fdeaea;color:#a02020}
@@ -345,7 +354,9 @@ function render() {
         <div class="card-rank">ランク${c.rank}</div>
       </div>
       <div class="card-body">
-        ${c.url?`<div class="row"><span class="row-lbl">★現物URL</span><span class="row-val url"><a href="${c.url}" target="_blank">→ 現物を開く</a></span></div>`:''}
+        <div class="actions">
+          ${buildItemLinks(c).map(l=>`<a class="act-btn ${l.cls}" href="${l.href}" target="_blank" rel="noopener">${l.label}<span class="ab-sub">${l.sub}</span></a>`).join('')}
+        </div>
         <div class="row"><span class="row-lbl">ソース</span><span class="row-val">${c.source}</span></div>
         ${c.current_price!=null?`<div class="row"><span class="row-lbl">現在価格</span><span class="row-val">${yen(c.current_price)}</span></div>`:''}
         ${c.end&&c.end!=='—'?`<div class="row"><span class="row-lbl">終了日時</span><span class="row-val ${hrs&&hrs<24?'red':''}">${c.end}</span></div>`:''}
@@ -362,6 +373,32 @@ function render() {
 }
 
 function yen(n){ return n && n>0 ? '¥'+n.toLocaleString('ja-JP') : '—'; }
+
+// ★現物URL生成（直リンク優先・無ければ型番でソース別の検索URLを生成）
+function buildItemLinks(c){
+  const links = [];
+  // 1) 直リンク（現物が特定済み）
+  if (c.url && c.url.startsWith('http')) {
+    links.push({cls:'primary', label:'🔗 現物を開く', sub:'実物ページ', href:c.url});
+  } else if (c.shohin_no && /ecoauc/i.test(c.source||'')) {
+    links.push({cls:'primary', label:'🔗 現物を開く', sub:'EcoAuc', href:`https://www.ecoauc.com/client/items/${c.shohin_no}`});
+  } else if (c.aucid) {
+    links.push({cls:'primary', label:'🔗 現物を開く', sub:'ヤフオク', href:`https://page.auctions.yahoo.co.jp/jp/auction/${c.aucid}`});
+  }
+  // 2) 型番で各販路を検索（現物未取得でも探せる）
+  const BRAND_JP = {LV:'ルイヴィトン',HERMES:'エルメス',CHANEL:'シャネル',TIFFANY:'ティファニー',
+    CARTIER:'カルティエ',CELINE:'セリーヌ',GUCCI:'グッチ',PRADA:'プラダ',DIOR:'ディオール',
+    FENDI:'フェンディ',MARGIELA:'マルジェラ',YSL:'サンローラン',BALENCIAGA:'バレンシアガ',VERSACE:'ヴェルサーチ'};
+  const brandKw = c.brand_jp || BRAND_JP[c.brand] || c.brand;
+  const kw = encodeURIComponent([brandKw, c.model].filter(Boolean).join(' '));
+  // ヤフオク 1円検索
+  links.push({cls:'search', label:'🔍 ヤフオク', sub:'1円で探す',
+    href:`https://auctions.yahoo.co.jp/search/search?p=${kw}&aucminprice=1&aucmaxprice=1&istatus=2&n=50&s1=new&o1=d`});
+  // EcoAuc 下見検索
+  links.push({cls:'search', label:'🔍 EcoAuc', sub:'下見で探す',
+    href:`https://www.ecoauc.com/client/auctions/inspect?q=${kw}&master_item_ranks[]=2&master_item_ranks[]=3&master_item_ranks[]=4`});
+  return links;
+}
 
 function setTab(tab) {
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
