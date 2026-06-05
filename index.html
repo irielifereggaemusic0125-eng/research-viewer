@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Banshee リサーチビューア</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="仕入リサーチ">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;background:#f0f0ed;color:#1a1a18;min-height:100vh;padding:12px 12px 60px}
+.app{max-width:520px;margin:0 auto}
+h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px}
+.sub{font-size:11px;color:#aaa;text-align:center;margin-bottom:12px}
+.updated{font-size:10px;color:#bbb;text-align:center;margin-bottom:8px}
+
+/* 日付セレクタ */
+.date-bar{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;-webkit-overflow-scrolling:touch}
+.date-btn{flex-shrink:0;padding:6px 12px;border-radius:20px;border:none;font-size:12px;font-weight:600;cursor:pointer;background:#e0e0db;color:#888;transition:.15s}
+.date-btn.active{background:#1D9E75;color:#fff}
+
+/* フィルタ・ソート */
+.filter-bar{background:#fff;border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.filter-label{font-size:11px;color:#aaa;font-weight:600;width:100%;margin-bottom:4px}
+.chip{padding:4px 10px;border-radius:16px;border:none;font-size:11px;font-weight:600;cursor:pointer;background:#f0f0ed;color:#888}
+.chip.on{background:#1D9E75;color:#fff}
+.chip.warn-on{background:#e07b00;color:#fff}
+select{font-size:12px;border:none;background:#f0f0ed;border-radius:8px;padding:4px 8px;color:#1a1a18;outline:none}
+
+/* サマリーバー */
+.summary{display:flex;gap:8px;margin-bottom:10px}
+.sum-item{flex:1;background:#fff;border-radius:10px;padding:8px 6px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.sum-num{font-size:20px;font-weight:700}
+.sum-lbl{font-size:9px;color:#aaa;margin-top:2px}
+
+/* 24hアラートバナー */
+.alert-banner{background:#fdeaea;border-radius:12px;padding:10px 12px;margin-bottom:10px;border-left:3px solid #d03030}
+.alert-title{font-size:11px;font-weight:700;color:#a02020;margin-bottom:4px}
+
+/* カード */
+.card{background:#fff;border-radius:14px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.card-header{display:flex;align-items:center;padding:10px 12px 6px;gap:8px}
+.tier-badge{font-size:18px;line-height:1}
+.card-title{flex:1}
+.card-name{font-size:14px;font-weight:700}
+.card-model{font-size:10px;color:#aaa;margin-top:1px}
+.card-rank{font-size:10px;font-weight:600;padding:2px 7px;border-radius:10px;background:#f0f0ed;color:#555}
+
+.card-body{padding:0 12px 12px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:.5px solid #f0f0ed;font-size:12px}
+.row:last-child{border-bottom:none}
+.row-lbl{color:#888}
+.row-val{font-weight:600;color:#1a1a18}
+.row-val.green{color:#1D9E75}
+.row-val.orange{color:#e07b00}
+.row-val.red{color:#d03030}
+.row-val.url a{color:#2980e8;text-decoration:none;font-size:11px}
+
+.note-box{background:#f7f7f4;border-radius:8px;padding:6px 8px;margin-top:6px;font-size:10px;color:#888;line-height:1.6}
+.note-box.warn{background:#fff3d6;color:#7a4f00}
+.note-box.danger{background:#fdeaea;color:#a02020}
+
+/* 終了アラート */
+.ending-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;background:#fdeaea;color:#d03030;margin-left:4px}
+
+/* 底部ナビ */
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:.5px solid #e0e0db;display:flex;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom));z-index:100}
+.nav-btn{font-size:10px;color:#aaa;text-align:center;cursor:pointer;padding:4px 12px}
+.nav-btn.active{color:#1D9E75}
+.nav-icon{font-size:20px;display:block;margin-bottom:2px}
+
+/* 空状態 */
+.empty{text-align:center;padding:40px 20px;color:#aaa;font-size:13px}
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>仕入リサーチビューア</h1>
+  <p class="sub">二重チェック確定候補｜Tier別・確信度順</p>
+  <div class="updated" id="updated-label"></div>
+
+  <!-- 日付セレクタ -->
+  <div class="date-bar" id="date-bar"></div>
+
+  <!-- フィルタ -->
+  <div class="filter-bar">
+    <div class="filter-label">フィルタ・ソート</div>
+    <div class="filter-row">
+      <button class="chip on" onclick="toggleFilter('tier','all')">すべて</button>
+      <button class="chip" onclick="toggleFilter('tier','Tier1')">🥇Tier1</button>
+      <button class="chip" onclick="toggleFilter('tier','Tier2')">🥈Tier2</button>
+      <button class="chip warn-on" id="chip-alert" onclick="toggleFilter('alert',true)">⏰24h</button>
+    </div>
+    <div class="filter-row" style="margin-top:8px">
+      <select id="sort-select" onchange="render()">
+        <option value="tier">確信度順(Tier)</option>
+        <option value="profit">粗利高い順</option>
+        <option value="jissei">実勢高い順</option>
+        <option value="end">終了早い順</option>
+      </select>
+      <button class="chip" id="chip-coherence" onclick="toggleFilter('coherence',true)">✅整合のみ</button>
+    </div>
+  </div>
+
+  <!-- サマリー -->
+  <div class="summary" id="summary"></div>
+
+  <!-- 24hアラート -->
+  <div id="alert-area"></div>
+
+  <!-- 候補リスト -->
+  <div id="cards"></div>
+</div>
+
+<!-- 底部ナビ -->
+<div class="bottom-nav">
+  <div class="nav-btn active" onclick="setTab('list')"><span class="nav-icon">📋</span>候補</div>
+  <div class="nav-btn" onclick="setTab('archive')"><span class="nav-icon">📅</span>日別</div>
+  <div class="nav-btn" onclick="setTab('help')"><span class="nav-icon">ℹ️</span>使い方</div>
+</div>
+
+<script>
+let allData = {};
+let currentDate = '';
+let filters = { tier: 'all', alert: false, coherence: false };
+
+const TIER_ICON = { Tier1: '🥇', Tier2: '🥈', Tier3: '🔴' };
+const TIER_COLOR = { Tier1: '#0c6644', Tier2: '#1558b0', Tier3: '#a02020' };
+
+async function loadDate(date) {
+  if (allData[date]) { currentDate = date; render(); return; }
+  try {
+    const r = await fetch(`data/banshee_research_${date}.json?t=${Date.now()}`);
+    if (!r.ok) throw new Error('404');
+    const d = await r.json();
+    allData[date] = d;
+    currentDate = date;
+    render();
+  } catch(e) {
+    document.getElementById('cards').innerHTML = `<div class="empty">データなし (${date})</div>`;
+  }
+}
+
+function getAvailableDates() {
+  // 今日から7日前まで生成（実際にあるファイルのみ表示）
+  const dates = [];
+  const today = new Date('2026-06-06');
+  for (let i = 0; i < 14; i++) {
+    const d = new Date(today);
+    d.setDate(today.getDate() - i);
+    const s = d.toISOString().slice(0,10);
+    dates.push(s);
+  }
+  return dates;
+}
+
+function buildDateBar() {
+  const bar = document.getElementById('date-bar');
+  const dates = getAvailableDates();
+  const today = '2026-06-06';
+  bar.innerHTML = dates.map(d => {
+    const label = d === today ? '今日' : d.slice(5).replace('-','/');
+    return `<button class="date-btn ${d===currentDate?'active':''}" onclick="switchDate('${d}')">${label}</button>`;
+  }).join('');
+}
+
+async function switchDate(date) {
+  currentDate = date;
+  buildDateBar();
+  await loadDate(date);
+}
+
+function isEndingSoon(endStr) {
+  // endStr例: "6/11 22:12"
+  if (!endStr || endStr === '—') return false;
+  try {
+    const [md, hm] = endStr.split(' ');
+    const [m, d] = md.split('/').map(Number);
+    const [h, min] = hm.split(':').map(Number);
+    const end = new Date(2026, m-1, d, h, min);
+    const now = new Date();
+    return (end - now) < 24 * 3600 * 1000 && (end - now) > 0;
+  } catch(e) { return false; }
+}
+
+function hoursLeft(endStr) {
+  if (!endStr || endStr === '—') return null;
+  try {
+    const [md, hm] = endStr.split(' ');
+    const [m, d] = md.split('/').map(Number);
+    const [h, min] = hm.split(':').map(Number);
+    const end = new Date(2026, m-1, d, h, min);
+    const hrs = Math.round((end - new Date()) / 3600000);
+    return hrs > 0 ? hrs : null;
+  } catch(e) { return null; }
+}
+
+function toggleFilter(key, val) {
+  if (key === 'tier') {
+    filters.tier = val;
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('on','warn-on'));
+    if (val === 'all') document.querySelectorAll('.chip')[0].classList.add('on');
+    else if (val === 'Tier1') document.querySelectorAll('.chip')[1].classList.add('on');
+    else if (val === 'Tier2') document.querySelectorAll('.chip')[2].classList.add('on');
+  } else if (key === 'alert') {
+    filters.alert = !filters.alert;
+    document.getElementById('chip-alert').classList.toggle('warn-on', filters.alert);
+  } else if (key === 'coherence') {
+    filters.coherence = !filters.coherence;
+    document.getElementById('chip-coherence').classList.toggle('on', filters.coherence);
+  }
+  render();
+}
+
+function render() {
+  if (!currentDate || !allData[currentDate]) return;
+  const data = allData[currentDate];
+  let candidates = [...data.candidates];
+
+  // フィルタ
+  if (filters.tier !== 'all') candidates = candidates.filter(c => c.tier === filters.tier);
+  if (filters.alert) candidates = candidates.filter(c => isEndingSoon(c.end));
+  if (filters.coherence) candidates = candidates.filter(c => c.coherence && c.coherence.startsWith('✅'));
+
+  // ソート
+  const sort = document.getElementById('sort-select').value;
+  if (sort === 'profit') candidates.sort((a,b) => (b.profit_eco||0) - (a.profit_eco||0));
+  else if (sort === 'jissei') candidates.sort((a,b) => (b.jissei||0) - (a.jissei||0));
+  else if (sort === 'end') candidates.sort((a,b) => {
+    const ha = hoursLeft(a.end) ?? 9999;
+    const hb = hoursLeft(b.end) ?? 9999;
+    return ha - hb;
+  });
+  else { // tier
+    const order = {'Tier1':0,'Tier2':1,'Tier3':2};
+    candidates.sort((a,b) => (order[a.tier]??9) - (order[b.tier]??9));
+  }
+
+  // updated label
+  document.getElementById('updated-label').textContent = `最終更新: ${data.updated_at}`;
+
+  // サマリー
+  const all = data.candidates;
+  document.getElementById('summary').innerHTML = `
+    <div class="sum-item"><div class="sum-num" style="color:#0c6644">${all.filter(c=>c.tier==='Tier1').length}</div><div class="sum-lbl">🥇確信MAX</div></div>
+    <div class="sum-item"><div class="sum-num" style="color:#1558b0">${all.filter(c=>c.tier==='Tier2').length}</div><div class="sum-lbl">🥈高確信</div></div>
+    <div class="sum-item"><div class="sum-num" style="color:#e07b00">${all.filter(c=>c.tier==='Tier3').length}</div><div class="sum-lbl">🔴要確認</div></div>
+    <div class="sum-item"><div class="sum-num">${all.filter(c=>isEndingSoon(c.end)).length}</div><div class="sum-lbl">⏰24h内</div></div>
+  `;
+
+  // 24hアラート
+  const ending = all.filter(c => isEndingSoon(c.end));
+  document.getElementById('alert-area').innerHTML = ending.length ? `
+    <div class="alert-banner">
+      <div class="alert-title">⏰ 24時間以内に終了する候補 (${ending.length}件)</div>
+      ${ending.map(c=>`<div style="font-size:11px;margin-top:2px">
+        ${TIER_ICON[c.tier]} ${c.name} ─ 残り${hoursLeft(c.end)}h・指値${yen(c.yahoo_shitene)}
+        ${c.url ? `<a href="${c.url}" style="color:#2980e8;margin-left:4px">→URL</a>` : ''}
+      </div>`).join('')}
+    </div>
+  ` : '';
+
+  // カード
+  const cards = document.getElementById('cards');
+  if (candidates.length === 0) {
+    cards.innerHTML = '<div class="empty">該当候補なし</div>';
+    return;
+  }
+  cards.innerHTML = candidates.map(c => {
+    const icon = TIER_ICON[c.tier] || '—';
+    const color = TIER_COLOR[c.tier] || '#555';
+    const hrs = hoursLeft(c.end);
+    const endBadge = hrs ? `<span class="ending-badge">残り${hrs}h</span>` : '';
+    const noteClass = c.note && (c.note.includes('⚠️手動') || c.note.includes('⚠️目視')) ? 'danger' : (c.note ? 'warn' : '');
+    return `
+    <div class="card">
+      <div class="card-header">
+        <div class="tier-badge">${icon}</div>
+        <div class="card-title">
+          <div class="card-name">${c.name}${endBadge}</div>
+          <div class="card-model">${c.brand} / ${c.model}</div>
+        </div>
+        <div class="card-rank">ランク${c.rank}</div>
+      </div>
+      <div class="card-body">
+        ${c.url ? `<div class="row"><span class="row-lbl">★現物URL</span><span class="row-val url"><a href="${c.url}" target="_blank">→ 現物を開く</a></span></div>` : ''}
+        <div class="row"><span class="row-lbl">ソース</span><span class="row-val">${c.source}</span></div>
+        ${c.current_price !== null && c.current_price !== undefined ? `<div class="row"><span class="row-lbl">現在価格</span><span class="row-val">${yen(c.current_price)}</span></div>` : ''}
+        ${c.end && c.end !== '—' ? `<div class="row"><span class="row-lbl">終了日時</span><span class="row-val ${hrs&&hrs<24?'red':''}">${c.end}</span></div>` : ''}
+        <div class="row"><span class="row-lbl">入札上限(指値)</span><span class="row-val green">Eco${yen(c.eco_shitene)} / Y${yen(c.yahoo_shitene)}</span></div>
+        <div class="row"><span class="row-lbl">実勢売値</span><span class="row-val">${yen(c.jissei)}</span></div>
+        <div class="row"><span class="row-lbl">予想粗利</span><span class="row-val green">${yen(c.profit_eco)}</span></div>
+        <div class="row"><span class="row-lbl">回転日数</span><span class="row-val">${c.kaiten}日</span></div>
+        <div class="row"><span class="row-lbl">二軸チェック</span><span class="row-val ${c.tier==='Tier3'?'orange':''}">${c.tier_detail}</span></div>
+        <div class="row"><span class="row-lbl">整合性</span><span class="row-val">${c.coherence}</span></div>
+        <div class="row"><span class="row-lbl">サンプル</span><span class="row-val">n=${c.n40}件${c.n90?` / 90日n=${c.n90}件`:''}</span></div>
+        ${c.note ? `<div class="note-box ${noteClass}">${c.note}</div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function yen(n) { return n && n > 0 ? '¥' + n.toLocaleString('ja-JP') : '—'; }
+
+function setTab(tab) {
+  document.querySelectorAll('.nav-btn').forEach((b,i) => b.classList.remove('active'));
+  if (tab === 'list') {
+    document.querySelectorAll('.nav-btn')[0].classList.add('active');
+  } else if (tab === 'archive') {
+    document.querySelectorAll('.nav-btn')[1].classList.add('active');
+    document.getElementById('cards').innerHTML = `<div class="empty">
+      <div style="font-size:32px;margin-bottom:8px">📅</div>
+      <div>日別アーカイブ</div>
+      <div style="font-size:11px;margin-top:4px">上の日付バーで日付を選択してください</div>
+    </div>`;
+  } else if (tab === 'help') {
+    document.querySelectorAll('.nav-btn')[2].classList.add('active');
+    document.getElementById('cards').innerHTML = `<div class="card"><div class="card-body" style="padding:12px">
+      <div style="font-size:13px;font-weight:700;margin-bottom:8px">使い方</div>
+      <div style="font-size:12px;line-height:2;color:#555">
+        🥇 Tier1: 完全安全（確信度MAX）<br>
+        🥈 Tier2: p25安全（高確信・最安は外れ値）<br>
+        🔴 Tier3: 要目視確認（底値競争）<br><br>
+        ⏰ 24h: 24時間以内終了品<br>
+        ✅整合: 1回目・2回目の相場が一致<br><br>
+        ★現物URLをタップで実物確認できます<br>
+        入札はあなたが判断してください<br><br>
+        <span style="color:#d03030">⚠️ 入札は絶対しない（¥53M事故）</span>
+      </div>
+    </div></div>`;
+  }
+}
+
+// 初期ロード
+(async () => {
+  currentDate = '2026-06-06';
+  buildDateBar();
+  await loadDate(currentDate);
+})();
+</script>
+</body>
+</html>
