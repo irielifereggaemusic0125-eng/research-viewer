@@ -1,10 +1,10 @@
 {
   "date": "2026-06-06",
-  "updated_at": "2026-06-06 (母数拡張版・83型番)",
+  "updated_at": "2026-06-06 (商品名具体化+ロンワンズ追加・88型番)",
   "candidates": [
     {
       "id": "M00307",
-      "name": "LV チェーンNK大",
+      "name": "ルイヴィトン チェーンネックレス M00307",
       "brand": "LV",
       "model": "M00307",
       "rank": "AB",
@@ -28,7 +28,7 @@
     },
     {
       "id": "M00783",
-      "name": "LV M00783 ネックレス",
+      "name": "ルイヴィトン ネックレス M00783",
       "brand": "LV",
       "model": "M00783",
       "rank": "AB",
@@ -52,7 +52,7 @@
     },
     {
       "id": "M30271",
-      "name": "LV M30271",
+      "name": "ルイヴィトン M30271",
       "brand": "LV",
       "model": "M30271",
       "rank": "AB",
@@ -76,7 +76,7 @@
     },
     {
       "id": "M02224",
-      "name": "LV M02224 ネックレス",
+      "name": "ルイヴィトン ネックレス M02224",
       "brand": "LV",
       "model": "M02224",
       "rank": "AB",
@@ -100,7 +100,7 @@
     },
     {
       "id": "M1267L",
-      "name": "LV リフレクトリング",
+      "name": "ルイヴィトン リフレクトリング M1267L",
       "brand": "LV",
       "model": "M1267L",
       "rank": "AB",
@@ -124,7 +124,7 @@
     },
     {
       "id": "FENDI-N",
-      "name": "FENDI エフイズNK",
+      "name": "フェンディ エフイズ ネックレス",
       "brand": "FENDI",
       "model": "エフイズ",
       "rank": "AB",
@@ -148,7 +148,7 @@
     },
     {
       "id": "M0607",
-      "name": "LV M0607 ベルト",
+      "name": "ルイヴィトン ベルト M0607",
       "brand": "LV",
       "model": "M0607",
       "rank": "AB",
@@ -172,7 +172,7 @@
     },
     {
       "id": "HERMES-D",
-      "name": "エルメス ドゴン財布",
+      "name": "エルメス ドゴン 財布",
       "brand": "HERMES",
       "model": "ドゴン",
       "rank": "AB",
@@ -196,7 +196,7 @@
     },
     {
       "id": "M1461S",
-      "name": "LV アイコニックリング",
+      "name": "ルイヴィトン アイコニックリング M1461S",
       "brand": "LV",
       "model": "M1461S",
       "rank": "AB",
@@ -220,7 +220,7 @@
     },
     {
       "id": "M00609",
-      "name": "LV アイコニックPierce",
+      "name": "ルイヴィトン アイコニックピアス M00609",
       "brand": "LV",
       "model": "M00609",
       "rank": "AB",
@@ -243,8 +243,32 @@
       "in30k": true
     },
     {
+      "id": "LONE-NECK",
+      "name": "ロンワンズ ネックレス",
+      "brand": "LONE",
+      "model": "ネックレス",
+      "rank": "AB",
+      "source": "自社実績(エコオク×アクセ)",
+      "url": "",
+      "current_price": null,
+      "end": "—",
+      "jissei": 36000,
+      "eco_shitene": 18836,
+      "yahoo_shitene": 22370,
+      "profit_eco": 8000,
+      "kaiten": 12,
+      "n40": 29,
+      "n90": null,
+      "coherence": "✅(n=29)",
+      "tier": "Tier2",
+      "tier_detail": "p25安全・最安5,700は例外",
+      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。",
+      "status": "waiting",
+      "in30k": true
+    },
+    {
       "id": "M62493",
-      "name": "LV バーグリング",
+      "name": "ルイヴィトン バーグリング M62493",
       "brand": "LV",
       "model": "M62493",
       "rank": "AB",
@@ -268,7 +292,7 @@
     },
     {
       "id": "M60171",
-      "name": "LV アンプラント長財布",
+      "name": "ルイヴィトン アンプラント財布 M60171",
       "brand": "LV",
       "model": "M60171",
       "rank": "AB",
@@ -292,7 +316,7 @@
     },
     {
       "id": "M01880",
-      "name": "LV メタルモノグラムNK",
+      "name": "ルイヴィトン メタルモノグラムネックレス M01880",
       "brand": "LV",
       "model": "M01880",
       "rank": "AB",
@@ -315,8 +339,32 @@
       "in30k": true
     },
     {
+      "id": "LONE-SILK",
+      "name": "ロンワンズ シルクリング",
+      "brand": "LONE",
+      "model": "シルクリング",
+      "rank": "AB",
+      "source": "自社実績(エコオク×アクセ)",
+      "url": "",
+      "current_price": null,
+      "end": "—",
+      "jissei": 31000,
+      "eco_shitene": 14745,
+      "yahoo_shitene": 17870,
+      "profit_eco": 8000,
+      "kaiten": 6,
+      "n40": 8,
+      "n90": null,
+      "coherence": "✅(n=8)",
+      "tier": "Tier2",
+      "tier_detail": "p25安全・最安1,780は例外",
+      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。★自社No47実績¥7,760粗利26%回転6日",
+      "status": "waiting",
+      "in30k": true
+    },
+    {
       "id": "M01473",
-      "name": "LV M01473 チャーム",
+      "name": "ルイヴィトン チャーム M01473",
       "brand": "LV",
       "model": "M01473",
       "rank": "AB",
@@ -340,7 +388,7 @@
     },
     {
       "id": "S2093",
-      "name": "CHANEL S2093 財布",
+      "name": "シャネル 財布 S2093",
       "brand": "CHANEL",
       "model": "S2093",
       "rank": "AB",
@@ -364,7 +412,7 @@
     },
     {
       "id": "M9044",
-      "name": "LV M9044 ベルト",
+      "name": "ルイヴィトン ベルト M9044",
       "brand": "LV",
       "model": "M9044",
       "rank": "AB",
@@ -388,7 +436,7 @@
     },
     {
       "id": "M8085",
-      "name": "LV M8085 ブレスレット",
+      "name": "ルイヴィトン ブレスレット M8085",
       "brand": "LV",
       "model": "M8085",
       "rank": "AB",
@@ -412,7 +460,7 @@
     },
     {
       "id": "M67498",
-      "name": "LV マヒナ財布",
+      "name": "ルイヴィトン マヒナ財布 M67498",
       "brand": "LV",
       "model": "M67498",
       "rank": "AB",
@@ -436,7 +484,7 @@
     },
     {
       "id": "DIOR-N",
-      "name": "Dior クレールNK",
+      "name": "ディオール クレールドリュヌ ネックレス",
       "brand": "DIOR",
       "model": "クレールドリュヌ",
       "rank": "AB",
@@ -460,7 +508,7 @@
     },
     {
       "id": "M80879",
-      "name": "LV M80879 コインケース",
+      "name": "ルイヴィトン アンプラントコインケース M80879",
       "brand": "LV",
       "model": "M80879",
       "rank": "AB",
@@ -484,7 +532,7 @@
     },
     {
       "id": "M9043",
-      "name": "LV M9043 ベルト",
+      "name": "ルイヴィトン ベルト M9043",
       "brand": "LV",
       "model": "M9043",
       "rank": "AB",
@@ -508,7 +556,7 @@
     },
     {
       "id": "M81557",
-      "name": "LV ヴィクトリーヌ",
+      "name": "ルイヴィトン ヴィクトリーヌ財布 M81557",
       "brand": "LV",
       "model": "M81557",
       "rank": "AB",
@@ -532,7 +580,7 @@
     },
     {
       "id": "M62037",
-      "name": "LV M62037 財布",
+      "name": "ルイヴィトン 財布 M62037",
       "brand": "LV",
       "model": "M62037",
       "rank": "AB",
@@ -556,7 +604,7 @@
     },
     {
       "id": "M60614",
-      "name": "LV M60614 財布",
+      "name": "ルイヴィトン 財布 M60614",
       "brand": "LV",
       "model": "M60614",
       "rank": "AB",
@@ -580,7 +628,7 @@
     },
     {
       "id": "HERMES-C",
-      "name": "エルメス カレ90スカーフ",
+      "name": "エルメス カレ90 スカーフ",
       "brand": "HERMES",
       "model": "カレ90",
       "rank": "AB",
@@ -604,7 +652,7 @@
     },
     {
       "id": "DIOR-W",
-      "name": "Dior オブリーク財布",
+      "name": "ディオール オブリーク 財布",
       "brand": "DIOR",
       "model": "オブリーク",
       "rank": "AB",
@@ -628,7 +676,7 @@
     },
     {
       "id": "N63076",
-      "name": "LV N63076",
+      "name": "ルイヴィトン N63076",
       "brand": "LV",
       "model": "N63076",
       "rank": "AB",
@@ -652,7 +700,7 @@
     },
     {
       "id": "M00512",
-      "name": "LV ビーズブレス",
+      "name": "ルイヴィトン モノグラムビーズブレスレット M00512",
       "brand": "LV",
       "model": "M00512",
       "rank": "AB",
@@ -676,7 +724,7 @@
     },
     {
       "id": "FENDI-P",
-      "name": "FENDI FFピアス",
+      "name": "フェンディ FFロゴ ピアス",
       "brand": "FENDI",
       "model": "FFロゴ",
       "rank": "AB",
@@ -700,7 +748,7 @@
     },
     {
       "id": "M30184",
-      "name": "LV M30184",
+      "name": "ルイヴィトン M30184",
       "brand": "LV",
       "model": "M30184",
       "rank": "AB",
@@ -724,7 +772,7 @@
     },
     {
       "id": "N63209",
-      "name": "LV N63209 財布",
+      "name": "ルイヴィトン 財布 N63209",
       "brand": "LV",
       "model": "N63209",
       "rank": "AB",
@@ -748,7 +796,7 @@
     },
     {
       "id": "CARTIER-S",
-      "name": "カルティエ サントスNK",
+      "name": "カルティエ サントス ネックレス",
       "brand": "CARTIER",
       "model": "サントス",
       "rank": "AB",
@@ -771,8 +819,32 @@
       "in30k": true
     },
     {
+      "id": "LONE-CROSS",
+      "name": "ロンワンズ クロス",
+      "brand": "LONE",
+      "model": "クロス",
+      "rank": "AB",
+      "source": "自社実績(エコオク×アクセ)",
+      "url": "",
+      "current_price": null,
+      "end": "—",
+      "jissei": 16750,
+      "eco_shitene": 3086,
+      "yahoo_shitene": 5045,
+      "profit_eco": 8000,
+      "kaiten": 12,
+      "n40": 10,
+      "n90": null,
+      "coherence": "✅(n=10)",
+      "tier": "Tier2",
+      "tier_detail": "p25安全・最安1,200は例外",
+      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。",
+      "status": "waiting",
+      "in30k": true
+    },
+    {
       "id": "N41626",
-      "name": "LV N41626 財布",
+      "name": "ルイヴィトン 財布 N41626",
       "brand": "LV",
       "model": "N41626",
       "rank": "AB",
@@ -796,7 +868,7 @@
     },
     {
       "id": "YSL-W",
-      "name": "YSL 財布",
+      "name": "サンローラン MRT692 財布",
       "brand": "YSL",
       "model": "MRT692",
       "rank": "AB",
@@ -820,7 +892,7 @@
     },
     {
       "id": "GUCCI-N",
-      "name": "GUCCI スクエアGNK",
+      "name": "グッチ スクエアG ネックレス",
       "brand": "GUCCI",
       "model": "スクエアG",
       "rank": "AB",
@@ -844,7 +916,7 @@
     },
     {
       "id": "CELINE-T",
-      "name": "CELINE トリオンフNK",
+      "name": "セリーヌ トリオンフ ネックレス",
       "brand": "CELINE",
       "model": "トリオンフ",
       "rank": "AB",
@@ -868,7 +940,7 @@
     },
     {
       "id": "M45236",
-      "name": "LV M45236",
+      "name": "ルイヴィトン M45236",
       "brand": "LV",
       "model": "M45236",
       "rank": "AB",
@@ -892,7 +964,7 @@
     },
     {
       "id": "TIFF-TS",
-      "name": "Tiffany Tスマイルブレス",
+      "name": "ティファニー Tスマイル ブレスレット",
       "brand": "TIFFANY",
       "model": "Tスマイル",
       "rank": "AB",
@@ -916,7 +988,7 @@
     },
     {
       "id": "M00530",
-      "name": "LV インスティンクトPierce",
+      "name": "ルイヴィトン インスティンクトピアス M00530",
       "brand": "LV",
       "model": "M00530",
       "rank": "AB",
@@ -940,7 +1012,7 @@
     },
     {
       "id": "M6605F",
-      "name": "LV M6605F ブレスレット",
+      "name": "ルイヴィトン ブレスレット M6605F",
       "brand": "LV",
       "model": "M6605F",
       "rank": "AB",
@@ -964,7 +1036,7 @@
     },
     {
       "id": "M81997",
-      "name": "LV M81997",
+      "name": "ルイヴィトン M81997",
       "brand": "LV",
       "model": "M81997",
       "rank": "AB",
@@ -988,7 +1060,7 @@
     },
     {
       "id": "M9609",
-      "name": "LV M9609 ベルト",
+      "name": "ルイヴィトン ベルト M9609",
       "brand": "LV",
       "model": "M9609",
       "rank": "AB",
@@ -1012,7 +1084,7 @@
     },
     {
       "id": "M01287",
-      "name": "LV アイコニックPierce大",
+      "name": "ルイヴィトン アイコニックピアス M01287",
       "brand": "LV",
       "model": "M01287",
       "rank": "AB",
@@ -1036,7 +1108,7 @@
     },
     {
       "id": "M67417",
-      "name": "LV M67417 ブレスレット",
+      "name": "ルイヴィトン ブレスレット M67417",
       "brand": "LV",
       "model": "M67417",
       "rank": "AB",
@@ -1060,7 +1132,7 @@
     },
     {
       "id": "MARGIELA",
-      "name": "マルジェラ 財布",
+      "name": "メゾンマルジェラ 4ステッチ 財布",
       "brand": "MARGIELA",
       "model": "4ステッチ",
       "rank": "AB",
@@ -1084,7 +1156,7 @@
     },
     {
       "id": "TIFFANY-B",
-      "name": "ティファニー バングル",
+      "name": "ティファニー 1837 ブレスレット",
       "brand": "TIFFANY",
       "model": "1837",
       "rank": "AB",
@@ -1108,7 +1180,7 @@
     },
     {
       "id": "TIFFANY-P",
-      "name": "ティファニー ピアス",
+      "name": "ティファニー ノーツ ピアス",
       "brand": "TIFFANY",
       "model": "ノーツ",
       "rank": "AB",
@@ -1132,7 +1204,7 @@
     },
     {
       "id": "DIOR-P",
-      "name": "Dior ディオレボリューション",
+      "name": "ディオール ディオレボリューション",
       "brand": "DIOR",
       "model": "ディオレボリューション",
       "rank": "AB",
@@ -1156,7 +1228,7 @@
     },
     {
       "id": "M6777E",
-      "name": "LV M6777E ブレスレット",
+      "name": "ルイヴィトン ブレスレット M6777E",
       "brand": "LV",
       "model": "M6777E",
       "rank": "AB",
@@ -1180,7 +1252,7 @@
     },
     {
       "id": "PRADA",
-      "name": "プラダ サフィアーノ財布",
+      "name": "プラダ サフィアーノ 財布",
       "brand": "PRADA",
       "model": "サフィアーノ",
       "rank": "B",
@@ -1203,8 +1275,32 @@
       "in30k": true
     },
     {
+      "id": "LONE-RING",
+      "name": "ロンワンズ リング",
+      "brand": "LONE",
+      "model": "リング",
+      "rank": "AB",
+      "source": "自社実績(エコオク×アクセ)",
+      "url": "",
+      "current_price": null,
+      "end": "—",
+      "jissei": 17500,
+      "eco_shitene": 4609,
+      "yahoo_shitene": 6720,
+      "profit_eco": 7000,
+      "kaiten": 12,
+      "n40": 15,
+      "n90": null,
+      "coherence": "✅(n=15)",
+      "tier": "Tier3",
+      "tier_detail": "⚠️同ランクp25=14,277<閾値14,875",
+      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。",
+      "status": "waiting",
+      "in30k": true
+    },
+    {
       "id": "GUCCI-W",
-      "name": "GUCCI 長財布",
+      "name": "グッチ インターロッキング 財布",
       "brand": "GUCCI",
       "model": "インターロッキング",
       "rank": "AB",
@@ -1228,7 +1324,7 @@
     },
     {
       "id": "GUCCI-R",
-      "name": "GUCCI ダブルGリング",
+      "name": "グッチ ダブルG リング",
       "brand": "GUCCI",
       "model": "ダブルG",
       "rank": "AB",
@@ -1252,7 +1348,7 @@
     },
     {
       "id": "TIFFANY-N",
-      "name": "ティファニー ネックレス",
+      "name": "ティファニー リターントゥ ネックレス",
       "brand": "TIFFANY",
       "model": "リターントゥ",
       "rank": "AB",
@@ -1276,7 +1372,7 @@
     },
     {
       "id": "A84432",
-      "name": "CHANEL A84432 財布",
+      "name": "シャネル 財布 A84432",
       "brand": "CHANEL",
       "model": "A84432",
       "rank": "AB",
@@ -1300,7 +1396,7 @@
     },
     {
       "id": "DIOR-B",
-      "name": "Dior D-Fusionブレス",
+      "name": "ディオール D-Fusion ブレスレット",
       "brand": "DIOR",
       "model": "D-Fusion",
       "rank": "AB",
@@ -1324,7 +1420,7 @@
     },
     {
       "id": "CARTIER",
-      "name": "カルティエ マスト財布",
+      "name": "カルティエ マストライン 財布",
       "brand": "CARTIER",
       "model": "マストライン",
       "rank": "AB",
@@ -1348,7 +1444,7 @@
     },
     {
       "id": "AP3177",
-      "name": "CHANEL AP3177 財布",
+      "name": "シャネル 財布 AP3177",
       "brand": "CHANEL",
       "model": "AP3177",
       "rank": "AB",
@@ -1371,8 +1467,32 @@
       "in30k": false
     },
     {
+      "id": "LONE-BRACE",
+      "name": "ロンワンズ ブレスレット",
+      "brand": "LONE",
+      "model": "ブレスレット",
+      "rank": "AB",
+      "source": "自社実績(エコオク×アクセ)",
+      "url": "",
+      "current_price": null,
+      "end": "—",
+      "jissei": 63500,
+      "eco_shitene": 41336,
+      "yahoo_shitene": 47120,
+      "profit_eco": 8000,
+      "kaiten": 12,
+      "n40": 14,
+      "n90": null,
+      "coherence": "✅(n=14)",
+      "tier": "Tier2",
+      "tier_detail": "p25安全・最安2,900は例外",
+      "note": "⚠️偽物リスク注意・正規品/ランク確認重視。",
+      "status": "waiting",
+      "in30k": false
+    },
+    {
       "id": "M82556",
-      "name": "LV M82556",
+      "name": "ルイヴィトン M82556",
       "brand": "LV",
       "model": "M82556",
       "rank": "AB",
@@ -1396,7 +1516,7 @@
     },
     {
       "id": "M69794",
-      "name": "LV M69794 財布",
+      "name": "ルイヴィトン 財布 M69794",
       "brand": "LV",
       "model": "M69794",
       "rank": "AB",
@@ -1420,7 +1540,7 @@
     },
     {
       "id": "N41455",
-      "name": "LV N41455",
+      "name": "ルイヴィトン N41455",
       "brand": "LV",
       "model": "N41455",
       "rank": "AB",
@@ -1444,7 +1564,7 @@
     },
     {
       "id": "M00596",
-      "name": "LV アイコニックNL",
+      "name": "ルイヴィトン M00596",
       "brand": "LV",
       "model": "M00596",
       "rank": "AB",
@@ -1468,7 +1588,7 @@
     },
     {
       "id": "M00308",
-      "name": "LV チェーンブレス",
+      "name": "ルイヴィトン チェーンブレスレット M00308",
       "brand": "LV",
       "model": "M00308",
       "rank": "AB",
@@ -1492,7 +1612,7 @@
     },
     {
       "id": "GI0495",
-      "name": "LV GI0495",
+      "name": "ルイヴィトン GI0495",
       "brand": "LV",
       "model": "GI0495",
       "rank": "AB",
@@ -1516,7 +1636,7 @@
     },
     {
       "id": "Z1326E",
-      "name": "LV Z1326E",
+      "name": "ルイヴィトン Z1326E",
       "brand": "LV",
       "model": "Z1326E",
       "rank": "AB",
@@ -1540,7 +1660,7 @@
     },
     {
       "id": "M00762",
-      "name": "LV エクリプスNK",
+      "name": "ルイヴィトン エクリプスネックレス M00762",
       "brand": "LV",
       "model": "M00762",
       "rank": "AB",
@@ -1564,7 +1684,7 @@
     },
     {
       "id": "CH7846BD",
-      "name": "CHANEL CH7846BD カードケース",
+      "name": "シャネル カードケース CH7846BD",
       "brand": "CHANEL",
       "model": "CH7846BD",
       "rank": "AB",
