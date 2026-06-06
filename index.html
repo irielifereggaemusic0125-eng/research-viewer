@@ -166,6 +166,15 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
   <!-- フィルタパネル（機能別グループ） -->
   <div class="filter-panel">
+    <!-- 在庫状態（出品中/待ち受け） -->
+    <div class="fgroup">
+      <div class="fgroup-label"><span class="ico">🟢</span>在庫状態（出品中で絞る）</div>
+      <div class="fchips" id="stock-chips">
+        <button class="fchip on" data-stock="all" onclick="setStock('all')">すべて<span class="fc-sub">全件</span></button>
+        <button class="fchip" data-stock="listed" onclick="setStock('listed')">🟢出品中<span class="fc-sub">現物あり・即入札</span></button>
+        <button class="fchip" data-stock="waiting" onclick="setStock('waiting')">⏳待ち受け<span class="fc-sub">出品待ち</span></button>
+      </div>
+    </div>
     <!-- 絞り込み -->
     <div class="fgroup">
       <div class="fgroup-label"><span class="ico">🔍</span>絞り込み（確信度で選ぶ）</div>
@@ -213,7 +222,15 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 <script>
 let allData = {};
 let currentDate = '';
-let filters = { tier: 'all', alert: false, coherence: false, sort: 'tier' };
+let filters = { tier: 'all', alert: false, coherence: false, sort: 'tier', stock: 'all' };
+
+// 出品中判定: JSONのstatus='listed'を主・無ければ個別商品URL有無で代用
+function isListed(c){
+  if (c.status === 'listed') return true;
+  if (c.status === 'waiting') return false;
+  const u = c.url || '';
+  return /page\.auctions\.yahoo\.co\.jp\/jp\/auction\/|ecoauc\.com\/client\/items\//.test(u);
+}
 
 // Tier日本語マッピング
 const TIER_JP = { Tier1: '確信MAX', Tier2: '高確信', Tier3: '要確認' };
@@ -312,6 +329,14 @@ function toggleCoherence() {
   document.getElementById('chip-coherence').classList.toggle('on', filters.coherence);
   render();
 }
+function setStock(val) {
+  filters.stock = val;
+  document.querySelectorAll('#stock-chips .fchip').forEach(c => {
+    c.classList.remove('on','on-gold','on-silver','on-warn');
+    if (c.dataset.stock === val) c.classList.add(val==='listed' ? 'on' : (val==='waiting' ? 'on-warn' : 'on'));
+  });
+  render();
+}
 function setSort(val) {
   filters.sort = val;
   document.querySelectorAll('#sort-chips .sort-chip').forEach(c => c.classList.toggle('on', c.dataset.sort === val));
@@ -323,11 +348,16 @@ function render() {
   const data = allData[currentDate];
   let candidates = [...data.candidates];
 
+  // 在庫状態フィルタ（出品中/待ち受け）
+  if (filters.stock === 'listed') candidates = candidates.filter(c => isListed(c));
+  else if (filters.stock === 'waiting') candidates = candidates.filter(c => !isListed(c));
   if (filters.tier !== 'all') candidates = candidates.filter(c => c.tier === filters.tier);
   if (filters.alert) candidates = candidates.filter(c => isEndingSoon(c.end));
   if (filters.coherence) candidates = candidates.filter(c => c.coherence && c.coherence.startsWith('✅'));
 
-  const sort = filters.sort;
+  // 出品中のみ表示時は終了が近い順を優先（入札判断に直行）
+  let sort = filters.sort;
+  if (filters.stock === 'listed' && sort === 'tier') sort = 'end';
   if (sort === 'profit') candidates.sort((a,b)=>(b.profit_eco||0)-(a.profit_eco||0));
   else if (sort === 'jissei') candidates.sort((a,b)=>(b.jissei||0)-(a.jissei||0));
   else if (sort === 'end') candidates.sort((a,b)=>((hoursLeft(a.end)??9999)-(hoursLeft(b.end)??9999)));
