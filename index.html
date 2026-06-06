@@ -25,7 +25,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;bac
 .app{max-width:520px;margin:0 auto}
 h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(--text)}
 .sub{font-size:11px;color:var(--muted);text-align:center;margin-bottom:8px}
-.updated{font-size:10px;color:var(--muted2);text-align:center;margin-bottom:10px}
+.updated-bar{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.updated{font-size:10px;color:var(--muted2);text-align:center}
+.refresh-btn{display:inline-flex;align-items:center;gap:5px;min-height:34px;padding:6px 14px;border-radius:18px;border:1.5px solid var(--t1);background:rgba(46,212,122,.12);color:var(--t1);font-size:12px;font-weight:700;cursor:pointer;transition:.15s}
+.refresh-btn:active{background:rgba(46,212,122,.25)}
+.refresh-btn[disabled]{opacity:.6;cursor:default}
+.refresh-btn .rf-ico{font-size:14px;display:inline-block}
+.refresh-btn.loading .rf-ico{animation:rf-spin .8s linear infinite}
+@keyframes rf-spin{to{transform:rotate(360deg)}}
 
 .date-bar{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;-webkit-overflow-scrolling:touch}
 .date-btn{flex-shrink:0;padding:7px 14px;border-radius:20px;border:none;font-size:12px;font-weight:600;cursor:pointer;background:var(--surface2);color:var(--muted);transition:.15s}
@@ -145,7 +152,10 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 <div class="app">
   <h1>仕入リサーチビューア</h1>
   <p class="sub">二重チェック確定候補｜確信度順</p>
-  <div class="updated" id="updated-label"></div>
+  <div class="updated-bar">
+    <span class="updated" id="updated-label"></span>
+    <button class="refresh-btn" id="refresh-btn" onclick="refreshData()" aria-label="更新"><span class="rf-ico" id="rf-ico">⟳</span><span id="rf-txt">更新</span></button>
+  </div>
 
   <!-- 日付セレクタ -->
   <div class="date-bar" id="date-bar"></div>
@@ -247,10 +257,31 @@ const TIER_DESC = {
 };
 const TIER_CLASS = { Tier1: 'tier1', Tier2: 'tier2', Tier3: 'tier3' };
 
+// 更新ボタン: 現在日のデータをキャッシュ回避で取り直す
+async function refreshData() {
+  const btn = document.getElementById('refresh-btn');
+  const lbl = document.getElementById('updated-label');
+  const txt = document.getElementById('rf-txt');
+  if (!currentDate) return;
+  btn.classList.add('loading'); btn.disabled = true; txt.textContent = '取得中…';
+  lbl.textContent = '最新を取得中…';
+  delete allData[currentDate];                 // メモリキャッシュ破棄→強制再取得
+  try {
+    const r = await fetch(`data/banshee_research_${currentDate}.json?t=${Date.now()}`, { cache: 'no-store' });
+    if (!r.ok) throw new Error('404');
+    allData[currentDate] = await r.json();
+    render();                                   // updated_at は render() 内で反映
+  } catch(e) {
+    lbl.textContent = '更新に失敗（通信を確認）';
+  } finally {
+    btn.classList.remove('loading'); btn.disabled = false; txt.textContent = '更新';
+  }
+}
+
 async function loadDate(date) {
   if (allData[date]) { currentDate = date; render(); return; }
   try {
-    const r = await fetch(`data/banshee_research_${date}.json?t=${Date.now()}`);
+    const r = await fetch(`data/banshee_research_${date}.json?t=${Date.now()}`, { cache: 'no-store' });
     if (!r.ok) throw new Error('404');
     allData[date] = await r.json();
     currentDate = date;
