@@ -1,6 +1,6 @@
 {
   "date": "2026-06-06",
-  "updated_at": "2026-06-06 (検算修正・回転実績明記)",
+  "updated_at": "2026-06-06 (ルート別送料是正・Yahoo仕入送料¥1500→¥1200)",
   "candidates": [
     {
       "id": "M00307",
@@ -14,7 +14,7 @@
       "end": "—",
       "jissei": 48000,
       "eco_shitene": 28654,
-      "yahoo_shitene": 33170,
+      "yahoo_shitene": 33470,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 7,
@@ -24,7 +24,8 @@
       "tier_detail": "全分布が閾値以上",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M00783",
@@ -38,7 +39,7 @@
       "end": "—",
       "jissei": 29200,
       "eco_shitene": 15090,
-      "yahoo_shitene": 18250,
+      "yahoo_shitene": 18550,
       "profit_eco": 6000,
       "kaiten": 20,
       "n40": 7,
@@ -48,7 +49,8 @@
       "tier_detail": "全分布が閾値以上",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M30271",
@@ -62,7 +64,7 @@
       "end": "—",
       "jissei": 26615,
       "eco_shitene": 13884,
-      "yahoo_shitene": 16923,
+      "yahoo_shitene": 17223,
       "profit_eco": 5000,
       "kaiten": 42,
       "n40": 7,
@@ -72,7 +74,8 @@
       "tier_detail": "全分布が閾値以上",
       "note": "🔧検算修正:cond2釣上げ補正→cond3¥26,615/付属混入除外・回転42日(実績n=7)(旧¥26,750→実勢¥26,615)",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M02224",
@@ -85,8 +88,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 24211,
-      "eco_shitene": 11918,
-      "yahoo_shitene": 14759,
+      "eco_shitene": 11009,
+      "yahoo_shitene": 14059,
       "profit_eco": 6000,
       "kaiten": 4,
       "n40": 6,
@@ -96,7 +99,8 @@
       "tier_detail": "全分布が閾値以上",
       "note": "🔧検算修正:付属混入2件除外も中央変わらず・回転4日(実績)(旧¥24,211→実勢¥24,211)",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M1267L",
@@ -110,7 +114,7 @@
       "end": "—",
       "jissei": 20000,
       "eco_shitene": 8472,
-      "yahoo_shitene": 10970,
+      "yahoo_shitene": 11270,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 3,
@@ -120,7 +124,8 @@
       "tier_detail": "全分布が閾値以上",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "FENDI-N",
@@ -134,7 +139,7 @@
       "end": "—",
       "jissei": 20000,
       "eco_shitene": 9381,
-      "yahoo_shitene": 11970,
+      "yahoo_shitene": 12270,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 5,
@@ -144,7 +149,8 @@
       "tier_detail": "全分布が閾値以上",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M0607",
@@ -158,7 +164,7 @@
       "end": "—",
       "jissei": 18249,
       "eco_shitene": 7949,
-      "yahoo_shitene": 10394,
+      "yahoo_shitene": 10694,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 6,
@@ -168,7 +174,8 @@
       "tier_detail": "全分布が閾値以上",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "TIFF-BEAN",
@@ -181,8 +188,8 @@
       "current_price": 1,
       "end": "6/10(水) 22:24",
       "jissei": 11000,
-      "eco_shitene": 2870,
-      "yahoo_shitene": 2870,
+      "eco_shitene": 1109,
+      "yahoo_shitene": 3170,
       "profit_eco": 5000,
       "kaiten": 16,
       "n40": 40,
@@ -192,7 +199,8 @@
       "tier_detail": "A(¥15k以下主戦場)・同条件実勢n十分・回転良",
       "status": "listed",
       "note": "付属:なし・ランク:要確認(記載なし)・回転16日(30日内68%)・pleasure・同条件実勢n=40固い",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "DIOR-RHINE-NK",
@@ -205,8 +213,8 @@
       "current_price": 1,
       "end": "6/10(水) 22:34",
       "jissei": 10600,
-      "eco_shitene": 2510,
-      "yahoo_shitene": 2510,
+      "eco_shitene": 781,
+      "yahoo_shitene": 2810,
       "profit_eco": 5000,
       "kaiten": 32,
       "n40": 54,
@@ -216,7 +224,8 @@
       "tier_detail": "A(¥15k以下主戦場)・同条件実勢n十分・回転良",
       "status": "listed",
       "note": "付属:なし・ランク:美品(AB)・回転32日(30日内49%)・pleasure・美品確認済・n=54固い",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "HERMES-D",
@@ -230,7 +239,7 @@
       "end": "—",
       "jissei": 48900,
       "eco_shitene": 29027,
-      "yahoo_shitene": 33580,
+      "yahoo_shitene": 33880,
       "profit_eco": 8000,
       "kaiten": 19,
       "n40": 13,
@@ -240,7 +249,8 @@
       "tier_detail": "p25安全・最安19,700は例外",
       "note": "🔧検算修正:cond2 n=1釣上げ補正→cond3¥48,900・回転19日(実績n=12)・¥30k超Tier C相当(旧¥49,800→実勢¥48,900)",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "M1461S",
@@ -254,7 +264,7 @@
       "end": "—",
       "jissei": 42500,
       "eco_shitene": 26881,
-      "yahoo_shitene": 31220,
+      "yahoo_shitene": 31520,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 4,
@@ -264,7 +274,8 @@
       "tier_detail": "p25安全・最安4,200は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "LONE-NECK",
@@ -278,7 +289,7 @@
       "end": "—",
       "jissei": 36000,
       "eco_shitene": 18836,
-      "yahoo_shitene": 22370,
+      "yahoo_shitene": 22670,
       "profit_eco": 8000,
       "kaiten": 12,
       "n40": 29,
@@ -288,7 +299,8 @@
       "tier_detail": "p25安全・最安5,700は例外",
       "note": "⚠️偽物リスク注意・正規品/ランク確認重視。 回転12日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M62493",
@@ -302,7 +314,7 @@
       "end": "—",
       "jissei": 35050,
       "eco_shitene": 20786,
-      "yahoo_shitene": 24515,
+      "yahoo_shitene": 24815,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 2,
@@ -312,7 +324,8 @@
       "tier_detail": "p25安全・最安23,370は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "CHANEL-COCO-EAR",
@@ -325,8 +338,8 @@
       "current_price": 1,
       "end": "要確認",
       "jissei": 35000,
-      "eco_shitene": 23470,
-      "yahoo_shitene": 23470,
+      "eco_shitene": 19836,
+      "yahoo_shitene": 23770,
       "profit_eco": 6000,
       "kaiten": 12,
       "n40": 10,
@@ -336,7 +349,8 @@
       "tier_detail": "B(¥15-30k条件付)・件数or価格帯で条件付(写真確認)",
       "status": "listed",
       "note": "付属:なし・ランク:要確認(記載なし)・回転12日(30日内70%)・pleasure・回転12日・¥30k超so条件付・要写真確認",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M60171",
@@ -350,7 +364,7 @@
       "end": "6/11 22:12",
       "jissei": 33000,
       "eco_shitene": 14199,
-      "yahoo_shitene": 17270,
+      "yahoo_shitene": 17570,
       "profit_eco": 10000,
       "kaiten": 20,
       "n40": 18,
@@ -360,7 +374,8 @@
       "tier_detail": "p25安全・最安22,900は例外",
       "note": "🚨現物あり・pleasure・現在¥12・6/11終了 回転20日",
       "status": "listed",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "CHANEL-PEARL-NK",
@@ -373,8 +388,8 @@
       "current_price": 1,
       "end": "要確認",
       "jissei": 32000,
-      "eco_shitene": 20370,
-      "yahoo_shitene": 20370,
+      "eco_shitene": 17381,
+      "yahoo_shitene": 21070,
       "profit_eco": 6000,
       "kaiten": 8,
       "n40": 11,
@@ -384,7 +399,8 @@
       "tier_detail": "B(¥15-30k条件付)・件数or価格帯で条件付(写真確認)",
       "status": "listed",
       "note": "付属:なし・ランク:美品(AB)・回転8日(30日内67%)・pleasure・回転8日と速い・¥30k帯so条件付Tier B",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M00609",
@@ -398,7 +414,7 @@
       "end": "—",
       "jissei": 31500,
       "eco_shitene": 18790,
-      "yahoo_shitene": 22320,
+      "yahoo_shitene": 22620,
       "profit_eco": 4000,
       "kaiten": 26,
       "n40": 9,
@@ -408,7 +424,8 @@
       "tier_detail": "p25安全・最安24,000は例外",
       "note": "🔧検算修正:AB中央¥39kだがcond3¥31,500が実体・回転26日(実績)(旧¥39,000→実勢¥31,500)",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M01880",
@@ -422,7 +439,7 @@
       "end": "—",
       "jissei": 31000,
       "eco_shitene": 14745,
-      "yahoo_shitene": 17870,
+      "yahoo_shitene": 18170,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 7,
@@ -432,7 +449,8 @@
       "tier_detail": "p25安全・最安18,700は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "LONE-SILK",
@@ -446,7 +464,7 @@
       "end": "—",
       "jissei": 31000,
       "eco_shitene": 14745,
-      "yahoo_shitene": 17870,
+      "yahoo_shitene": 18170,
       "profit_eco": 8000,
       "kaiten": 6,
       "n40": 8,
@@ -456,7 +474,8 @@
       "tier_detail": "p25安全・最安1,780は例外",
       "note": "⚠️偽物リスク注意・正規品/ランク確認重視。★自社No47実績¥7,760粗利26%回転6日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M01473",
@@ -470,7 +489,7 @@
       "end": "—",
       "jissei": 30300,
       "eco_shitene": 13809,
-      "yahoo_shitene": 16840,
+      "yahoo_shitene": 17140,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 2,
@@ -480,7 +499,8 @@
       "tier_detail": "p25安全・最安12,799は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "S2093",
@@ -494,7 +514,7 @@
       "end": "—",
       "jissei": 30000,
       "eco_shitene": 13563,
-      "yahoo_shitene": 16570,
+      "yahoo_shitene": 16870,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 3,
@@ -504,7 +524,8 @@
       "tier_detail": "p25安全・最安24,000は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "M9044",
@@ -518,7 +539,7 @@
       "end": "—",
       "jissei": 30000,
       "eco_shitene": 17563,
-      "yahoo_shitene": 20970,
+      "yahoo_shitene": 21270,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 3,
@@ -528,7 +549,8 @@
       "tier_detail": "p25安全・最安8,300は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M8085",
@@ -542,7 +564,7 @@
       "end": "—",
       "jissei": 30000,
       "eco_shitene": 15745,
-      "yahoo_shitene": 18970,
+      "yahoo_shitene": 19270,
       "profit_eco": 6000,
       "kaiten": 20,
       "n40": 5,
@@ -552,7 +574,8 @@
       "tier_detail": "p25安全・最安18,000は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M67498",
@@ -566,7 +589,7 @@
       "end": "—",
       "jissei": 30000,
       "eco_shitene": 13563,
-      "yahoo_shitene": 16570,
+      "yahoo_shitene": 16870,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 7,
@@ -576,7 +599,8 @@
       "tier_detail": "p25安全・最安16,000は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "M80879",
@@ -590,7 +614,7 @@
       "end": "—",
       "jissei": 28000,
       "eco_shitene": 15927,
-      "yahoo_shitene": 19170,
+      "yahoo_shitene": 19470,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 7,
@@ -600,7 +624,8 @@
       "tier_detail": "p25安全・最安7,335は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "DIOR-N",
@@ -614,7 +639,7 @@
       "end": "—",
       "jissei": 27850,
       "eco_shitene": 14895,
-      "yahoo_shitene": 18035,
+      "yahoo_shitene": 18335,
       "profit_eco": 5000,
       "kaiten": 5,
       "n40": 7,
@@ -624,7 +649,8 @@
       "tier_detail": "p25安全・最安16,800は例外",
       "note": "🔧検算修正:cond2釣上げ補正→cond3¥27,850・回転5日(実績・速い)(旧¥28,700→実勢¥27,850)",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M9043",
@@ -638,7 +664,7 @@
       "end": "—",
       "jissei": 26499,
       "eco_shitene": 14699,
-      "yahoo_shitene": 17819,
+      "yahoo_shitene": 18119,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 8,
@@ -648,7 +674,8 @@
       "tier_detail": "p25安全・最安15,500は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M81557",
@@ -662,7 +689,7 @@
       "end": "—",
       "jissei": 26400,
       "eco_shitene": 10618,
-      "yahoo_shitene": 13330,
+      "yahoo_shitene": 13630,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 8,
@@ -672,7 +699,8 @@
       "tier_detail": "p25安全・最安4,940は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "M62037",
@@ -686,7 +714,7 @@
       "end": "—",
       "jissei": 23000,
       "eco_shitene": 7836,
-      "yahoo_shitene": 10270,
+      "yahoo_shitene": 10570,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 3,
@@ -696,7 +724,8 @@
       "tier_detail": "p25安全・最安6,000は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "M60614",
@@ -710,7 +739,7 @@
       "end": "—",
       "jissei": 22875,
       "eco_shitene": 7734,
-      "yahoo_shitene": 10157,
+      "yahoo_shitene": 10457,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 4,
@@ -720,7 +749,8 @@
       "tier_detail": "p25安全・最安8,900は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "HERMES-C",
@@ -733,8 +763,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 22000,
-      "eco_shitene": 7381,
-      "yahoo_shitene": 9770,
+      "eco_shitene": 7018,
+      "yahoo_shitene": 9670,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 73,
@@ -744,7 +774,8 @@
       "tier_detail": "p25安全・最安7,500は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "DIOR-W",
@@ -758,7 +789,7 @@
       "end": "—",
       "jissei": 22000,
       "eco_shitene": 9745,
-      "yahoo_shitene": 12370,
+      "yahoo_shitene": 12670,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 11,
@@ -768,7 +799,8 @@
       "tier_detail": "p25安全・最安11,400は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "N63076",
@@ -781,8 +813,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 21000,
-      "eco_shitene": 9109,
-      "yahoo_shitene": 11670,
+      "eco_shitene": 9290,
+      "yahoo_shitene": 12170,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 15,
@@ -792,7 +824,8 @@
       "tier_detail": "p25安全・最安12,900は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M00512",
@@ -806,7 +839,7 @@
       "end": "—",
       "jissei": 19500,
       "eco_shitene": 8063,
-      "yahoo_shitene": 10520,
+      "yahoo_shitene": 10820,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 4,
@@ -816,7 +849,8 @@
       "tier_detail": "p25安全・最安10,000は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "FENDI-P",
@@ -830,7 +864,7 @@
       "end": "—",
       "jissei": 19000,
       "eco_shitene": 9472,
-      "yahoo_shitene": 12070,
+      "yahoo_shitene": 12370,
       "profit_eco": 3000,
       "kaiten": 20,
       "n40": 7,
@@ -840,7 +874,8 @@
       "tier_detail": "p25安全・最安9,000は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M30184",
@@ -853,8 +888,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 18900,
-      "eco_shitene": 7390,
-      "yahoo_shitene": 9780,
+      "eco_shitene": 7572,
+      "yahoo_shitene": 10280,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 7,
@@ -864,7 +899,8 @@
       "tier_detail": "p25安全・最安15,400は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "N63209",
@@ -878,7 +914,7 @@
       "end": "—",
       "jissei": 18500,
       "eco_shitene": 4154,
-      "yahoo_shitene": 6220,
+      "yahoo_shitene": 6520,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 11,
@@ -888,7 +924,8 @@
       "tier_detail": "p25安全・最安8,040は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "CARTIER-S",
@@ -902,7 +939,7 @@
       "end": "—",
       "jissei": 17000,
       "eco_shitene": 6018,
-      "yahoo_shitene": 8270,
+      "yahoo_shitene": 8570,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 5,
@@ -912,7 +949,8 @@
       "tier_detail": "p25安全・最安2,550は例外",
       "note": "⚠️手動価格確認必須: 高額ウォッチ混入の可能性 回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "TIFF-CURVE",
@@ -925,8 +963,8 @@
       "current_price": 1,
       "end": "6/11(木) 22:01",
       "jissei": 17000,
-      "eco_shitene": 8270,
-      "yahoo_shitene": 8270,
+      "eco_shitene": 6018,
+      "yahoo_shitene": 8570,
       "profit_eco": 5000,
       "kaiten": 22,
       "n40": 3,
@@ -936,7 +974,8 @@
       "tier_detail": "A(¥15k以下主戦場)・件数or価格帯で条件付(写真確認)",
       "status": "listed",
       "note": "付属:なし・ランク:要確認(記載なし)・回転22日(30日内67%)・pleasure・実勢n=3(40日)→90日n=11補強・要写真確認",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "LONE-CROSS",
@@ -950,7 +989,7 @@
       "end": "—",
       "jissei": 16750,
       "eco_shitene": 3086,
-      "yahoo_shitene": 5045,
+      "yahoo_shitene": 5345,
       "profit_eco": 8000,
       "kaiten": 12,
       "n40": 10,
@@ -960,7 +999,8 @@
       "tier_detail": "p25安全・最安1,200は例外",
       "note": "⚠️偽物リスク注意・正規品/ランク確認重視。 回転12日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "N41626",
@@ -974,7 +1014,7 @@
       "end": "—",
       "jissei": 14650,
       "eco_shitene": 1004,
-      "yahoo_shitene": 2755,
+      "yahoo_shitene": 3055,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 6,
@@ -984,7 +1024,8 @@
       "tier_detail": "p25安全・最安8,500は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "YSL-W",
@@ -998,7 +1039,7 @@
       "end": "—",
       "jissei": 13050,
       "eco_shitene": 2422,
-      "yahoo_shitene": 4315,
+      "yahoo_shitene": 4615,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 2,
@@ -1008,7 +1049,8 @@
       "tier_detail": "p25安全・最安4,580は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "GUCCI-N",
@@ -1022,7 +1064,7 @@
       "end": "—",
       "jissei": 10000,
       "eco_shitene": 2109,
-      "yahoo_shitene": 3970,
+      "yahoo_shitene": 4270,
       "profit_eco": 3000,
       "kaiten": 20,
       "n40": 29,
@@ -1032,7 +1074,8 @@
       "tier_detail": "p25安全・最安4,980は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "CELINE-T",
@@ -1045,8 +1088,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 46999,
-      "eco_shitene": 27471,
-      "yahoo_shitene": 31869,
+      "eco_shitene": 27835,
+      "yahoo_shitene": 32569,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 21,
@@ -1056,7 +1099,8 @@
       "tier_detail": "⚠️同ランクp25=21,949<閾値39,949",
       "note": "⚠️目視確認推奨: 先輩mat本命だが同ランクp25圧力 回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M45236",
@@ -1069,8 +1113,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 43850,
-      "eco_shitene": 27804,
-      "yahoo_shitene": 32235,
+      "eco_shitene": 27986,
+      "yahoo_shitene": 32735,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 10,
@@ -1080,7 +1124,8 @@
       "tier_detail": "⚠️同ランクp25=33,100<閾値37,272",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "TIFF-TS",
@@ -1094,7 +1139,7 @@
       "end": "—",
       "jissei": 39800,
       "eco_shitene": 21945,
-      "yahoo_shitene": 25790,
+      "yahoo_shitene": 26090,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 24,
@@ -1104,7 +1149,8 @@
       "tier_detail": "⚠️同ランクp25=25,800<閾値33,830",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M00530",
@@ -1118,7 +1164,7 @@
       "end": "—",
       "jissei": 39600,
       "eco_shitene": 24509,
-      "yahoo_shitene": 28610,
+      "yahoo_shitene": 28910,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 5,
@@ -1128,7 +1174,8 @@
       "tier_detail": "⚠️同ランクp25=28,600<閾値33,660",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M6605F",
@@ -1142,7 +1189,7 @@
       "end": "—",
       "jissei": 38222,
       "eco_shitene": 22472,
-      "yahoo_shitene": 26369,
+      "yahoo_shitene": 26669,
       "profit_eco": 6000,
       "kaiten": 20,
       "n40": 4,
@@ -1152,7 +1199,8 @@
       "tier_detail": "⚠️同ランクp25=26,290<閾値32,488",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M81997",
@@ -1165,8 +1213,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 38000,
-      "eco_shitene": 23018,
-      "yahoo_shitene": 26970,
+      "eco_shitene": 23199,
+      "yahoo_shitene": 27470,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 1,
@@ -1176,7 +1224,8 @@
       "tier_detail": "⚠️同ランクp25=30,450<閾値32,300",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M9609",
@@ -1190,7 +1239,7 @@
       "end": "—",
       "jissei": 37000,
       "eco_shitene": 23290,
-      "yahoo_shitene": 27270,
+      "yahoo_shitene": 27570,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 6,
@@ -1200,7 +1249,8 @@
       "tier_detail": "⚠️同ランクp25=15,550<閾値31,450",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M01287",
@@ -1214,7 +1264,7 @@
       "end": "—",
       "jissei": 37000,
       "eco_shitene": 22381,
-      "yahoo_shitene": 26270,
+      "yahoo_shitene": 26570,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 8,
@@ -1224,7 +1274,8 @@
       "tier_detail": "⚠️同ランクp25=28,450<閾値31,450",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M67417",
@@ -1238,7 +1289,7 @@
       "end": "—",
       "jissei": 31750,
       "eco_shitene": 17177,
-      "yahoo_shitene": 20545,
+      "yahoo_shitene": 20845,
       "profit_eco": 6000,
       "kaiten": 20,
       "n40": 6,
@@ -1248,7 +1299,8 @@
       "tier_detail": "⚠️同ランクp25=26,325<閾値26,987",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "MARGIELA",
@@ -1262,7 +1314,7 @@
       "end": "—",
       "jissei": 31500,
       "eco_shitene": 17518,
-      "yahoo_shitene": 20920,
+      "yahoo_shitene": 21220,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 18,
@@ -1272,7 +1324,8 @@
       "tier_detail": "⚠️同ランクp25=23,775<閾値26,775",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "TIFFANY-B",
@@ -1286,7 +1339,7 @@
       "end": "—",
       "jissei": 30912,
       "eco_shitene": 17400,
-      "yahoo_shitene": 20790,
+      "yahoo_shitene": 21090,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 24,
@@ -1296,7 +1349,8 @@
       "tier_detail": "⚠️同ランクp25=25,140<閾値26,275",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "TIFFANY-P",
@@ -1310,7 +1364,7 @@
       "end": "—",
       "jissei": 25700,
       "eco_shitene": 14045,
-      "yahoo_shitene": 17100,
+      "yahoo_shitene": 17400,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 65,
@@ -1320,7 +1374,8 @@
       "tier_detail": "⚠️同ランクp25=15,819<閾値21,845",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "DIOR-P",
@@ -1334,7 +1389,7 @@
       "end": "—",
       "jissei": 25250,
       "eco_shitene": 13677,
-      "yahoo_shitene": 16695,
+      "yahoo_shitene": 16995,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 6,
@@ -1344,7 +1399,8 @@
       "tier_detail": "⚠️同ランクp25=17,000<閾値21,462",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "M6777E",
@@ -1358,7 +1414,7 @@
       "end": "—",
       "jissei": 25000,
       "eco_shitene": 11654,
-      "yahoo_shitene": 14470,
+      "yahoo_shitene": 14770,
       "profit_eco": 6000,
       "kaiten": 20,
       "n40": 4,
@@ -1368,7 +1424,8 @@
       "tier_detail": "⚠️同ランクp25=17,087<閾値21,250",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "PRADA",
@@ -1381,8 +1438,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 20749,
-      "eco_shitene": 10903,
-      "yahoo_shitene": 13644,
+      "eco_shitene": 10540,
+      "yahoo_shitene": 13544,
       "profit_eco": 3000,
       "kaiten": 20,
       "n40": 70,
@@ -1392,7 +1449,8 @@
       "tier_detail": "⚠️同ランクp25=15,000<閾値17,636",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "LONE-RING",
@@ -1406,7 +1464,7 @@
       "end": "—",
       "jissei": 17500,
       "eco_shitene": 4609,
-      "yahoo_shitene": 6720,
+      "yahoo_shitene": 7020,
       "profit_eco": 7000,
       "kaiten": 12,
       "n40": 15,
@@ -1416,7 +1474,8 @@
       "tier_detail": "⚠️同ランクp25=14,277<閾値14,875",
       "note": "⚠️偽物リスク注意・正規品/ランク確認重視。 回転12日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "GUCCI-W",
@@ -1430,7 +1489,7 @@
       "end": "—",
       "jissei": 17200,
       "eco_shitene": 7636,
-      "yahoo_shitene": 10050,
+      "yahoo_shitene": 10350,
       "profit_eco": 3000,
       "kaiten": 20,
       "n40": 14,
@@ -1440,7 +1499,8 @@
       "tier_detail": "⚠️同ランクp25=13,199<閾値14,620",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "GUCCI-R",
@@ -1454,7 +1514,7 @@
       "end": "—",
       "jissei": 16500,
       "eco_shitene": 7427,
-      "yahoo_shitene": 9820,
+      "yahoo_shitene": 10120,
       "profit_eco": 3000,
       "kaiten": 20,
       "n40": 6,
@@ -1464,7 +1524,8 @@
       "tier_detail": "⚠️同ランクp25=12,000<閾値14,025",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "TIFFANY-N",
@@ -1478,7 +1539,7 @@
       "end": "—",
       "jissei": 15800,
       "eco_shitene": 5036,
-      "yahoo_shitene": 7190,
+      "yahoo_shitene": 7490,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 95,
@@ -1488,7 +1549,8 @@
       "tier_detail": "⚠️同ランクp25=9,350<閾値13,430",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "A84432",
@@ -1502,7 +1564,7 @@
       "end": "—",
       "jissei": 15749,
       "eco_shitene": 1903,
-      "yahoo_shitene": 3744,
+      "yahoo_shitene": 4044,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 2,
@@ -1512,7 +1574,8 @@
       "tier_detail": "⚠️同ランクp25=9,800<閾値13,386",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "DIOR-B",
@@ -1526,7 +1589,7 @@
       "end": "—",
       "jissei": 13150,
       "eco_shitene": 3777,
-      "yahoo_shitene": 5805,
+      "yahoo_shitene": 6105,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 8,
@@ -1536,7 +1599,8 @@
       "tier_detail": "⚠️同ランクp25=9,625<閾値11,177",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 300
     },
     {
       "id": "CARTIER",
@@ -1549,8 +1613,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 9360,
-      "eco_shitene": 1585,
-      "yahoo_shitene": 3394,
+      "eco_shitene": 1221,
+      "yahoo_shitene": 3294,
       "profit_eco": 3000,
       "kaiten": 20,
       "n40": 17,
@@ -1560,7 +1624,8 @@
       "tier_detail": "⚠️同ランクp25=4,049<閾値7,956",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": true
+      "in30k": true,
+      "_souryo_sale": 700
     },
     {
       "id": "AP3177",
@@ -1574,7 +1639,7 @@
       "end": "—",
       "jissei": 148000,
       "eco_shitene": 110109,
-      "yahoo_shitene": 122770,
+      "yahoo_shitene": 123070,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 1,
@@ -1584,7 +1649,8 @@
       "tier_detail": "全分布が閾値以上",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 700
     },
     {
       "id": "LONE-BRACE",
@@ -1598,7 +1664,7 @@
       "end": "—",
       "jissei": 63500,
       "eco_shitene": 41336,
-      "yahoo_shitene": 47120,
+      "yahoo_shitene": 47420,
       "profit_eco": 8000,
       "kaiten": 12,
       "n40": 14,
@@ -1608,7 +1674,8 @@
       "tier_detail": "p25安全・最安2,900は例外",
       "note": "⚠️偽物リスク注意・正規品/ランク確認重視。 回転12日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 300
     },
     {
       "id": "M82556",
@@ -1621,8 +1688,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 62790,
-      "eco_shitene": 43300,
-      "yahoo_shitene": 49281,
+      "eco_shitene": 43482,
+      "yahoo_shitene": 49781,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 8,
@@ -1632,7 +1699,8 @@
       "tier_detail": "p25安全・最安37,300は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 300
     },
     {
       "id": "M69794",
@@ -1646,7 +1714,7 @@
       "end": "—",
       "jissei": 62500,
       "eco_shitene": 40154,
-      "yahoo_shitene": 45820,
+      "yahoo_shitene": 46120,
       "profit_eco": 8000,
       "kaiten": 20,
       "n40": 8,
@@ -1656,7 +1724,8 @@
       "tier_detail": "p25安全・最安6,000は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 700
     },
     {
       "id": "N41455",
@@ -1669,8 +1738,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 60000,
-      "eco_shitene": 41018,
-      "yahoo_shitene": 46770,
+      "eco_shitene": 41200,
+      "yahoo_shitene": 47270,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 3,
@@ -1680,7 +1749,8 @@
       "tier_detail": "p25安全・最安35,000は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 300
     },
     {
       "id": "M00596",
@@ -1694,7 +1764,7 @@
       "end": "—",
       "jissei": 50000,
       "eco_shitene": 33927,
-      "yahoo_shitene": 38970,
+      "yahoo_shitene": 39270,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 9,
@@ -1704,7 +1774,8 @@
       "tier_detail": "p25安全・最安37,500は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 300
     },
     {
       "id": "M00308",
@@ -1718,7 +1789,7 @@
       "end": "—",
       "jissei": 49000,
       "eco_shitene": 33109,
-      "yahoo_shitene": 38070,
+      "yahoo_shitene": 38370,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 10,
@@ -1728,7 +1799,8 @@
       "tier_detail": "p25安全・最安28,000は例外",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 300
     },
     {
       "id": "GI0495",
@@ -1741,8 +1813,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 86000,
-      "eco_shitene": 62290,
-      "yahoo_shitene": 70170,
+      "eco_shitene": 62472,
+      "yahoo_shitene": 70670,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 1,
@@ -1752,7 +1824,8 @@
       "tier_detail": "⚠️同ランクp25=39,190<閾値73,100",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 300
     },
     {
       "id": "Z1326E",
@@ -1765,8 +1838,8 @@
       "current_price": null,
       "end": "—",
       "jissei": 75000,
-      "eco_shitene": 53290,
-      "yahoo_shitene": 60270,
+      "eco_shitene": 53472,
+      "yahoo_shitene": 60770,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 3,
@@ -1776,7 +1849,8 @@
       "tier_detail": "⚠️同ランクp25=24,100<閾値63,750",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 300
     },
     {
       "id": "M00762",
@@ -1790,7 +1864,7 @@
       "end": "—",
       "jissei": 63800,
       "eco_shitene": 44309,
-      "yahoo_shitene": 50390,
+      "yahoo_shitene": 50690,
       "profit_eco": 5000,
       "kaiten": 20,
       "n40": 2,
@@ -1800,7 +1874,8 @@
       "tier_detail": "⚠️同ランクp25=43,800<閾値54,230",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 300
     },
     {
       "id": "CH7846BD",
@@ -1814,7 +1889,7 @@
       "end": "—",
       "jissei": 47777,
       "eco_shitene": 32108,
-      "yahoo_shitene": 36969,
+      "yahoo_shitene": 37269,
       "profit_eco": 4000,
       "kaiten": 20,
       "n40": 2,
@@ -1824,7 +1899,8 @@
       "tier_detail": "⚠️同ランクp25=7,050<閾値40,610",
       "note": "回転20日",
       "status": "waiting",
-      "in30k": false
+      "in30k": false,
+      "_souryo_sale": 300
     }
   ]
 }
