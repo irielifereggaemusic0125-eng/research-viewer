@@ -283,27 +283,24 @@ async function switchDate(date) {
   await loadDate(date);
 }
 
+// 終了日時パース（"6/10(水) 22:24" / "6/11 22:12" 等・曜日や全角混入に頑健）
+function parseEnd(endStr) {
+  if (!endStr || endStr === '—' || endStr === '要確認') return null;
+  const m = String(endStr).match(/(\d{1,2})\s*\/\s*(\d{1,2}).*?(\d{1,2})\s*[:：]\s*(\d{1,2})/);
+  if (!m) return null;
+  return new Date(2026, (+m[1])-1, +m[2], +m[3], +m[4]);
+}
 function isEndingSoon(endStr) {
-  if (!endStr || endStr === '—') return false;
-  try {
-    const [md, hm] = endStr.split(' ');
-    const [m, d] = md.split('/').map(Number);
-    const [h, min] = hm.split(':').map(Number);
-    const end = new Date(2026, m-1, d, h, min);
-    const now = new Date();
-    return (end - now) < 24*3600*1000 && (end - now) > 0;
-  } catch(e) { return false; }
+  const end = parseEnd(endStr);
+  if (!end || isNaN(end)) return false;
+  const diff = end - new Date();
+  return diff < 24*3600*1000 && diff > 0;
 }
 function hoursLeft(endStr) {
-  if (!endStr || endStr === '—') return null;
-  try {
-    const [md, hm] = endStr.split(' ');
-    const [m, d] = md.split('/').map(Number);
-    const [h, min] = hm.split(':').map(Number);
-    const end = new Date(2026, m-1, d, h, min);
-    const hrs = Math.round((end - new Date())/3600000);
-    return hrs > 0 ? hrs : null;
-  } catch(e) { return null; }
+  const end = parseEnd(endStr);
+  if (!end || isNaN(end)) return null;
+  const hrs = Math.round((end - new Date())/3600000);
+  return hrs > 0 ? hrs : null;
 }
 
 function setTier(val) {
