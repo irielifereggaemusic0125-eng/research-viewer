@@ -1,0 +1,53 @@
+{
+  "updated_at": "2026-06-07 07:00",
+  "candidates": [
+    {
+      "name": "ポケモンカード 30th CELEBRATION（Watch）",
+      "brand": "ポケモン",
+      "category": "E",
+      "price": 7200,
+      "deadline": "",
+      "open_at": "",
+      "result_at": "",
+      "url": "https://www.30th.pokemon-card.com",
+      "mercari_net": 0,
+      "kaitori_net": 0,
+      "profit_max": 0,
+      "best_route": "未判定（発売前）",
+      "status": "未応募",
+      "note": "🔥WATCH: 2026/9/16発売・FUR新レアリティ・爆益候補。抽選開始次第即通知。発売前は相場未確定なので粗利保留。"
+    },
+    {
+      "name": "スクエニe-STORE「冒険家エリオット千年物語 CE」",
+      "brand": "スクウェア・エニックス",
+      "category": "H",
+      "price": 22990,
+      "deadline": "2026-06-18T23:59:00+09:00",
+      "open_at": "",
+      "result_at": "",
+      "url": "https://store.jp.square-enix.com/",
+      "mercari_net": 0,
+      "kaitori_net": 0,
+      "profit_max": 0,
+      "best_route": "発売後実機検証待ち",
+      "status": "未応募",
+      "note": "H.ゲーム系WATCH。発売後にメルカリ検証→粗利¥3k超確認後に採用判定。数量限定。"
+    },
+    {
+      "name": "アサシンクリード ブラックフラッグ RE:シンクロ CE（PS5）",
+      "brand": "Ubisoft",
+      "category": "H",
+      "price": 49980,
+      "deadline": "2026-07-09T23:59:00+09:00",
+      "open_at": "",
+      "result_at": "",
+      "url": "https://www.ubisoft.com/",
+      "mercari_net": 0,
+      "kaitori_net": 0,
+      "profit_max": 0,
+      "best_route": "発売後実機検証待ち",
+      "status": "未応募",
+      "note": "H.ゲーム系WATCH。2026/7/9発売・数量限定。発売後実機検証待ち。"
+    }
+  ]
+}

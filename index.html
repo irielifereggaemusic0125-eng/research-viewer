@@ -130,6 +130,47 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 .empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:13px}
 
+/* ===== 抽選タブ ===== */
+#lottery-area{padding:0}
+.lot-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.lot-title{font-size:14px;font-weight:700;color:var(--text)}
+.lot-meta{font-size:10px;color:var(--muted2)}
+.lot-cat-bar{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;-webkit-overflow-scrolling:touch}
+.lot-cat-btn{flex-shrink:0;padding:6px 12px;border-radius:16px;border:1.5px solid var(--line);font-size:11px;font-weight:600;cursor:pointer;background:var(--surface2);color:var(--muted)}
+.lot-cat-btn.on{background:var(--t3);border-color:var(--t3);color:#2a1c00}
+/* 抽選カード */
+.lot-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.lot-card.urgent{border-color:var(--alert)}
+.lot-card.watch{border-color:var(--t3)}
+.lot-strip{padding:5px 12px;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:6px}
+.lot-strip.urgent{background:rgba(255,92,92,.18);color:var(--alert)}
+.lot-strip.watch{background:rgba(255,181,71,.16);color:var(--t3)}
+.lot-strip.normal{background:var(--surface2);color:var(--muted)}
+.lot-body{padding:10px 12px 12px}
+.lot-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.lot-brand{font-size:10px;color:var(--muted);margin-bottom:8px}
+.lot-rows{display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.lot-row{display:flex;justify-content:space-between;font-size:12px;padding:3px 0;border-bottom:.5px solid var(--line)}
+.lot-row:last-child{border-bottom:none}
+.lot-lbl{color:var(--muted)}
+.lot-val{font-weight:600;color:var(--text)}
+.lot-val.profit{color:var(--profit);font-weight:700}
+.lot-val.deadline-soon{color:var(--alert);font-weight:700}
+.lot-note{font-size:10px;color:var(--t3);background:rgba(255,181,71,.1);border-radius:7px;padding:5px 8px;margin:4px 0 8px;line-height:1.6}
+.lot-actions{display:flex;gap:8px;align-items:center}
+.lot-url-btn{flex:1;min-height:44px;border-radius:10px;border:none;font-size:13px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:5px;background:var(--t3);color:#2a1c00;cursor:pointer}
+.lot-url-btn:active{opacity:.8}
+.lot-url-btn.disabled{background:var(--surface2);color:var(--muted);cursor:default}
+.lot-status-btn{min-width:90px;min-height:44px;border-radius:10px;border:1.5px solid var(--line);font-size:11px;font-weight:700;cursor:pointer;background:var(--surface2);color:var(--muted);transition:.15s}
+.lot-status-btn.applied{background:rgba(46,212,122,.14);border-color:var(--t1);color:var(--t1)}
+@media(min-width:768px){
+  #lottery-area #lot-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+  #lottery-area #lot-cards .lot-card{margin-bottom:0}
+}
+@media(min-width:1160px){
+  #lottery-area #lot-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
 /* ===== PC（≥768px）: グリッド表示 ===== */
 @media(min-width:768px){
   body{padding:18px 20px 70px}
@@ -230,6 +271,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 <!-- 底部ナビ -->
 <div class="bottom-nav">
   <div class="nav-btn active" onclick="setTab('list')"><span class="nav-icon">📋</span>候補</div>
+  <div class="nav-btn" onclick="setTab('lottery')"><span class="nav-icon">🎯</span>抽選</div>
   <div class="nav-btn" onclick="setTab('archive')"><span class="nav-icon">📅</span>日別</div>
   <div class="nav-btn" onclick="setTab('help')"><span class="nav-icon">ℹ️</span>使い方</div>
 </div>
@@ -237,6 +279,9 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 <script>
 let allData = {};
 let currentDate = '';
+let lotteryData = null;
+let lotCatFilter = 'all';
+let lotStatuses = {};  // id(name+deadline) → status override ('未応募'|'応募済')
 let filters = { tier: 'all', alert: false, coherence: false, sort: 'tier', stock: 'all' };
 
 // 出品中判定: JSONのstatus='listed'を主・無ければ個別商品URL有無で代用
@@ -490,11 +535,15 @@ function buildItemLinks(c){
 function setTab(tab) {
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
   if (tab==='list') { document.querySelectorAll('.nav-btn')[0].classList.add('active'); render(); }
-  else if (tab==='archive') {
+  else if (tab==='lottery') {
     document.querySelectorAll('.nav-btn')[1].classList.add('active');
+    showLottery();
+  }
+  else if (tab==='archive') {
+    document.querySelectorAll('.nav-btn')[2].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="empty"><div style="font-size:32px;margin-bottom:8px">📅</div><div>日別アーカイブ</div><div style="font-size:11px;margin-top:4px">上の日付バーで日を選んでください</div></div>`;
   } else if (tab==='help') {
-    document.querySelectorAll('.nav-btn')[2].classList.add('active');
+    document.querySelectorAll('.nav-btn')[3].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="card"><div class="card-body" style="padding:14px">
       <div style="font-size:13px;font-weight:700;margin-bottom:10px">確信度の見方</div>
       <div style="font-size:12px;line-height:1.9;color:#555">
@@ -521,6 +570,112 @@ function setTab(tab) {
       </div>
     </div></div>`;
   }
+}
+
+// ===== 抽選タブ =====
+const CAT_NAMES = {all:'すべて',A:'A.スニーカー',B:'B.ストリート',C:'C.ハイブランド',D:'D.コスメ',E:'E.トレカ',F:'F.iPhone',G:'G.カメラ',H:'H.ゲーム'};
+const DEADLINE_SOON_DAYS = 2; // 締切N日以内を強調
+
+function lotDeadlineHours(dl){
+  if(!dl) return null;
+  const d=new Date(dl);
+  if(isNaN(d)) return null;
+  return Math.round((d-new Date())/3600000);
+}
+function lotDeadlineLabel(dl){
+  const h=lotDeadlineHours(dl);
+  if(h===null) return '締切未定';
+  if(h<0) return '締切済';
+  if(h<24) return `⚠️残り${h}h`;
+  return `残り${Math.ceil(h/24)}日`;
+}
+function lotId(c){ return c.name+'|'+(c.deadline||''); }
+function toggleLotStatus(id){
+  const cur=lotStatuses[id]||'未応募';
+  lotStatuses[id]=cur==='未応募'?'応募済':'未応募';
+  renderLottery();
+}
+function setLotCat(cat){
+  lotCatFilter=cat;
+  document.querySelectorAll('.lot-cat-btn').forEach(b=>b.classList.toggle('on',b.dataset.cat===cat));
+  renderLottery();
+}
+
+function renderLottery(){
+  const area=document.getElementById('lot-cards');
+  if(!area) return;
+  if(!lotteryData){area.innerHTML='<div class="empty">データなし</div>';return;}
+  let items=[...lotteryData.candidates];
+  if(lotCatFilter!=='all') items=items.filter(c=>c.category===lotCatFilter);
+  // 締切昇順(未定は後ろ)
+  items.sort((a,b)=>{
+    const ha=lotDeadlineHours(a.deadline)??99999, hb=lotDeadlineHours(b.deadline)??99999;
+    return ha-hb;
+  });
+  if(!items.length){area.innerHTML='<div class="empty">該当なし</div>';return;}
+  area.innerHTML=items.map(c=>{
+    const id=lotId(c);
+    const status=lotStatuses[id]||c.status||'未応募';
+    const hrs=lotDeadlineHours(c.deadline);
+    const urgent=hrs!==null&&hrs>=0&&hrs<DEADLINE_SOON_DAYS*24;
+    const isWatch=c.note&&(c.note.includes('WATCH')||c.note.includes('Watch'));
+    const stripCls=urgent?'urgent':(isWatch?'watch':'normal');
+    const dlLabel=lotDeadlineLabel(c.deadline);
+    const profit=c.profit_max||0;
+    return `<div class="lot-card ${urgent?'urgent':(isWatch?'watch':'')}">
+  <div class="lot-strip ${stripCls}">
+    <span>${CAT_NAMES[c.category]||c.category} / ${isWatch?'🔭WATCH':profit>=3000?`想定利益¥${profit.toLocaleString('ja-JP')}+`:'相場検証待ち'}</span>
+    <span class="${urgent?'deadline-soon':''}">${dlLabel}</span>
+  </div>
+  <div class="lot-body">
+    <div class="lot-name">${c.name}</div>
+    <div class="lot-brand">${c.brand}</div>
+    <div class="lot-rows">
+      <div class="lot-row"><span class="lot-lbl">定価</span><span class="lot-val">${c.price>0?'¥'+c.price.toLocaleString('ja-JP'):'未定'}</span></div>
+      ${c.deadline?`<div class="lot-row"><span class="lot-lbl">申込締切</span><span class="lot-val ${urgent?'deadline-soon':''}">${new Date(c.deadline).toLocaleString('ja-JP',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}</span></div>`:''}
+      ${profit>0?`<div class="lot-row"><span class="lot-lbl">想定最大利益</span><span class="lot-val profit">+¥${profit.toLocaleString('ja-JP')}</span></div>`:''}
+      ${c.best_route&&c.best_route!=='未判定（発売前）'&&c.best_route!=='発売後実機検証待ち'?`<div class="lot-row"><span class="lot-lbl">推奨販路</span><span class="lot-val">${c.best_route}</span></div>`:''}
+    </div>
+    ${c.note?`<div class="lot-note">${c.note}</div>`:''}
+    <div class="lot-actions">
+      ${c.url?`<a class="lot-url-btn" href="${c.url}" target="_blank" rel="noopener">🔗 応募ページを開く</a>`:`<span class="lot-url-btn disabled">URL未取得</span>`}
+      <button class="lot-status-btn ${status==='応募済'?'applied':''}" onclick="toggleLotStatus('${id.replace(/'/g,'&apos;')}')">${status}</button>
+    </div>
+  </div>
+</div>`;
+  }).join('');
+}
+
+async function showLottery(){
+  const main=document.getElementById('cards');
+  // メインエリアを抽選UIに差し替え
+  if(!lotteryData){
+    main.innerHTML=`<div class="lot-header"><span class="lot-title">🎯 抽選モニター</span><span class="lot-meta" id="lot-meta">読み込み中…</span></div>
+<div class="lot-cat-bar" id="lot-cat-bar"></div>
+<div id="lot-cards"><div class="empty">取得中…</div></div>`;
+    try{
+      const r=await fetch(`data/lottery.json?t=${Date.now()}`,{cache:'no-store'});
+      if(!r.ok) throw new Error();
+      lotteryData=await r.json();
+    }catch(e){
+      document.getElementById('lot-cards').innerHTML='<div class="empty">抽選データを取得できませんでした</div>';
+      return;
+    }
+  } else {
+    main.innerHTML=`<div class="lot-header"><span class="lot-title">🎯 抽選モニター</span><span class="lot-meta" id="lot-meta"></span></div>
+<div class="lot-cat-bar" id="lot-cat-bar"></div>
+<div id="lot-cards"></div>`;
+  }
+  // メタ
+  const meta=document.getElementById('lot-meta');
+  if(meta) meta.textContent=`${lotteryData.candidates.length}件 / 更新:${lotteryData.updated_at}`;
+  // カテゴリフィルタ
+  const catBar=document.getElementById('lot-cat-bar');
+  if(catBar){
+    const cats=['all',...new Set(lotteryData.candidates.map(c=>c.category))];
+    catBar.innerHTML=cats.map(c=>`<button class="lot-cat-btn${c===lotCatFilter?' on':''}" data-cat="${c}" onclick="setLotCat('${c}')">${CAT_NAMES[c]||c}</button>`).join('');
+  }
+  renderLottery();
 }
 
 (async () => {
