@@ -124,7 +124,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .ending-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;background:var(--alert-bg);color:var(--alert);margin-left:4px}
 
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom));z-index:100}
-.nav-btn{font-size:10px;color:var(--muted);text-align:center;cursor:pointer;padding:4px 12px}
+.nav-btn{font-size:10px;color:var(--muted);text-align:center;cursor:pointer;padding:4px 7px}
 .nav-btn.active{color:var(--t1)}
 .nav-icon{font-size:20px;display:block;margin-bottom:2px}
 
@@ -185,6 +185,36 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .warn-flag{display:inline-flex;align-items:center;gap:2px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:8px;background:rgba(255,92,92,.2);color:var(--alert);margin-left:auto;flex-shrink:0;white-space:nowrap}
 /* スモールスクリーン：メトリクスを2×2 */
 @media(max-width:360px){.metrics-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== 検索ワードタブ ===== */
+.words-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:6px}
+.words-title{font-size:14px;font-weight:700;color:var(--text)}
+.words-meta{font-size:10px;color:var(--muted2)}
+.words-note{font-size:11px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-bottom:12px;line-height:1.8}
+.words-note b{color:var(--t2)}
+.words-cat{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.words-cat.exclude-cat{border:1.5px solid rgba(255,92,92,.5)}
+.words-cat-hdr{display:flex;align-items:center;gap:8px;padding:12px 14px;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
+.words-cat-hdr:active{background:var(--surface2)}
+.words-cat-lbl{flex:1;font-size:13px;font-weight:700;color:var(--text)}
+.words-cat-meta{font-size:10px;color:var(--muted2);flex-shrink:0}
+.words-cat-arrow{font-size:11px;color:var(--muted2);flex-shrink:0;transition:transform .2s}
+.words-cat-arrow.open{transform:rotate(180deg)}
+.words-cat-body{border-top:1px solid var(--line)}
+.word-row{padding:10px 14px;border-bottom:.5px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.word-row:last-child{border-bottom:none}
+.word-text{font-size:13px;font-weight:600;color:var(--text);line-height:1.4;word-break:break-all}
+.word-btns{display:flex;gap:8px}
+.word-btn{flex:1;min-height:42px;border-radius:10px;border:none;font-size:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:.12s;gap:4px;-webkit-tap-highlight-color:transparent}
+.word-btn.yahoo{background:rgba(77,159,255,.14);color:var(--t2);border:1.5px solid rgba(77,159,255,.4)}
+.word-btn.yahoo:active{background:rgba(77,159,255,.28)}
+.word-btn.eco{background:rgba(46,212,122,.12);color:var(--t1);border:1.5px solid rgba(46,212,122,.35)}
+.word-btn.eco:active{background:rgba(46,212,122,.24)}
+.exclude-row{padding:8px 14px;display:flex;align-items:center;gap:6px}
+.exclude-row .word-text{font-size:12px;color:var(--alert);font-weight:600}
+/* トースト通知 */
+.copy-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(12px);background:rgba(20,20,20,.96);color:var(--text);font-size:12px;font-weight:600;padding:10px 18px;border-radius:24px;border:1px solid var(--line);opacity:0;transition:opacity .2s,transform .2s;z-index:300;white-space:nowrap;pointer-events:none;max-width:calc(100vw - 40px);text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 /* ===== PC（≥768px）: グリッド表示 ===== */
 @media(min-width:768px){
   body{padding:18px 20px 70px}
@@ -286,6 +316,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 <div class="bottom-nav">
   <div class="nav-btn active" onclick="setTab('list')"><span class="nav-icon">📋</span>候補</div>
   <div class="nav-btn" onclick="setTab('lottery')"><span class="nav-icon">🎯</span>抽選</div>
+  <div class="nav-btn" onclick="setTab('words')"><span class="nav-icon">🔍</span>ワード</div>
   <div class="nav-btn" onclick="setTab('archive')"><span class="nav-icon">📅</span>日別</div>
   <div class="nav-btn" onclick="setTab('help')"><span class="nav-icon">ℹ️</span>使い方</div>
 </div>
@@ -557,11 +588,15 @@ function setTab(tab) {
     document.querySelectorAll('.nav-btn')[1].classList.add('active');
     showLottery();
   }
-  else if (tab==='archive') {
+  else if (tab==='words') {
     document.querySelectorAll('.nav-btn')[2].classList.add('active');
+    showWords();
+  }
+  else if (tab==='archive') {
+    document.querySelectorAll('.nav-btn')[3].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="empty"><div style="font-size:32px;margin-bottom:8px">📅</div><div>日別アーカイブ</div><div style="font-size:11px;margin-top:4px">上の日付バーで日を選んでください</div></div>`;
   } else if (tab==='help') {
-    document.querySelectorAll('.nav-btn')[3].classList.add('active');
+    document.querySelectorAll('.nav-btn')[4].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="card"><div class="card-body" style="padding:14px">
       <div style="font-size:13px;font-weight:700;margin-bottom:10px">確信度の見方</div>
       <div style="font-size:12px;line-height:1.9;color:#555">
@@ -694,6 +729,108 @@ async function showLottery(){
     catBar.innerHTML=cats.map(c=>`<button class="lot-cat-btn${c===lotCatFilter?' on':''}" data-cat="${c}" onclick="setLotCat('${c}')">${CAT_NAMES[c]||c}</button>`).join('');
   }
   renderLottery();
+}
+
+// ===== 検索ワードタブ =====
+let wordsData = null;
+const openCats = new Set();
+
+async function showWords() {
+  const main = document.getElementById('cards');
+  if (!wordsData) {
+    main.innerHTML = '<div class="empty"><div style="font-size:28px;margin-bottom:8px">🔍</div><div>読み込み中…</div></div>';
+    try {
+      const r = await fetch('data/search_words.json?t=' + Date.now(), {cache: 'no-store'});
+      if (!r.ok) throw new Error();
+      wordsData = await r.json();
+    } catch(e) {
+      main.innerHTML = '<div class="empty">検索ワードデータを取得できませんでした</div>';
+      return;
+    }
+  }
+  renderWords();
+}
+
+function toggleCat(id) {
+  if (openCats.has(id)) openCats.delete(id);
+  else openCats.add(id);
+  renderWords();
+}
+
+function renderWords() {
+  const main = document.getElementById('cards');
+  if (!wordsData) return;
+  const cats = wordsData.categories;
+  const total = cats.reduce((s,c)=>s+c.words.length, 0);
+  main.innerHTML = `
+    <div class="words-header">
+      <span class="words-title">🔍 検索ワード</span>
+      <span class="words-meta">${total}件 / 更新:${wordsData.updated}</span>
+    </div>
+    <div class="words-note">
+      <b>ヤフオク</b>: ボタンでそのまま検索（1円スタート狙い・ストア限定）<br>
+      <b>EcoAuc</b>: 末尾「1円」を除いてコピー → EcoAuc検索ボックスへペースト
+    </div>
+    ${cats.map(cat => {
+      const isExclude = cat.id === 'exclusions';
+      const isOpen = openCats.has(cat.id);
+      return `<div class="words-cat${isExclude ? ' exclude-cat' : ''}">
+        <div class="words-cat-hdr" onclick="toggleCat('${cat.id}')">
+          <span class="words-cat-lbl">${cat.label}</span>
+          <span class="words-cat-meta">${cat.words.length}件</span>
+          <span class="words-cat-arrow${isOpen?' open':''}">▼</span>
+        </div>
+        ${isOpen ? `<div class="words-cat-body">${cat.words.map(w => {
+          if (isExclude) {
+            return `<div class="word-row exclude-row"><span class="word-text">${w}</span></div>`;
+          }
+          const ecoWord = w.replace(/ 1円$/, '');
+          const yahooUrl = 'https://auctions.yahoo.co.jp/search/search?p=' + encodeURIComponent(w) + '&store=1';
+          const safeEco = ecoWord.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+          return `<div class="word-row">
+            <div class="word-text">${w}</div>
+            <div class="word-btns">
+              <a class="word-btn yahoo" href="${yahooUrl}" target="_blank" rel="noopener" onclick="showToast('ヤフオク検索を開きました')">🔎 ヤフオク</a>
+              <button class="word-btn eco" onclick="copyEco('${safeEco}')">📋 EcoAuコピー</button>
+            </div>
+          </div>`;
+        }).join('')}</div>` : ''}
+      </div>`;
+    }).join('')}`;
+}
+
+function copyEco(word) {
+  const done = () => showToast('コピー: ' + word);
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(word).then(done).catch(() => fallbackCopy(word, done));
+  } else {
+    fallbackCopy(word, done);
+  }
+}
+function fallbackCopy(text, cb) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0';
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  try { document.execCommand('copy'); } catch(e){}
+  document.body.removeChild(ta);
+  if (cb) cb();
+}
+
+let toastTimer;
+function showToast(msg) {
+  let toast = document.getElementById('copy-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'copy-toast';
+    toast.className = 'copy-toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
 }
 
 (async () => {
