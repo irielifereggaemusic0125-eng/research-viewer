@@ -345,15 +345,18 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   .app{max-width:1360px}
   /* 上部コントロールは中央寄せの帯 */
   .date-bar,.filter-panel,.legend,.summary,.alert-banner{max-width:900px;margin-left:auto;margin-right:auto}
-  /* 候補カードを複数カラムグリッドに */
-  #cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
-  #cards .card{margin-bottom:0}
-  #cards .empty{grid-column:1/-1}
+  /* 候補(list)タブのみ複数カラムグリッド。他タブは中央寄せの単一コンテナ */
+  #cards[data-tab="list"]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+  #cards[data-tab="list"] .card{margin-bottom:0}
+  #cards[data-tab="list"] .empty{grid-column:1/-1}
+  /* 抽選/ワード/領収書/在庫タブ: 左右中央・読みやすい幅に固定（右寄り崩れ防止） */
+  #cards[data-tab="lottery"],#cards[data-tab="words"],#cards[data-tab="receipts"],#cards[data-tab="inventory"]{
+    max-width:760px;margin-left:auto;margin-right:auto;display:block}
   .card-name{font-size:15px}
   .row{font-size:12.5px}
 }
 @media(min-width:1160px){
-  #cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #cards[data-tab="list"]{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 </style>
 </head>
@@ -709,6 +712,7 @@ function buildItemLinks(c){
 
 function setTab(tab) {
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  const cardsEl=document.getElementById('cards'); if(cardsEl) cardsEl.dataset.tab=tab;  // PCレイアウト: gridはlistのみ
   if (tab==='list') { document.querySelectorAll('.nav-btn')[0].classList.add('active'); render(); }
   else if (tab==='lottery') {
     document.querySelectorAll('.nav-btn')[1].classList.add('active');
@@ -771,10 +775,10 @@ function lotDeadlineHours(dl){
 }
 function lotDeadlineLabel(dl){
   const h=lotDeadlineHours(dl);
-  if(h===null) return '締切未定';
+  if(h===null) return '日程未定';
   if(h<0) return '締切済';
-  if(h<24) return `⚠️残り${h}h`;
-  return `残り${Math.ceil(h/24)}日`;
+  if(h<24) return `⚠️あと${h}時間`;
+  return `あと${Math.ceil(h/24)}日`;
 }
 function lotId(c){ return c.name+'|'+(c.deadline||''); }
 function toggleLotStatus(id){
@@ -1255,6 +1259,7 @@ function renderInventory(){
 }
 
 (async () => {
+  const cardsEl=document.getElementById('cards'); if(cardsEl) cardsEl.dataset.tab='list';
   currentDate = '2026-06-06';
   buildDateBar();
   await loadDate(currentDate);
