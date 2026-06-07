@@ -74,6 +74,31 @@ h1{font-size:17px;margin-bottom:6px}
 <a class="btn" href="https://auctions.yahoo.co.jp/">テスト6を開く</a>
 </div>
 
+<h1 style="margin-top:24px">📦 個別商品ページ アプリ起動テスト</h1>
+<p class="sub">商品ID: <span class="kw">s1232316100</span>（個別オークション）。どれかでアプリが<b style="color:var(--text)">その商品ページ</b>を開けば成功。</p>
+
+<div class="test">
+<div class="test-no">item-A: yjauctions://item?auctionId=【ID】</div>
+<a class="btn scheme" href="yjauctions://item?auctionId=s1232316100">item-Aを開く</a>
+</div>
+<div class="test">
+<div class="test-no">item-B: yjauctions://auction?aID=【ID】</div>
+<a class="btn scheme" href="yjauctions://auction?aID=s1232316100">item-Bを開く</a>
+</div>
+<div class="test">
+<div class="test-no">item-C: yjauctions://detail?aID=【ID】</div>
+<a class="btn scheme" href="yjauctions://detail?aID=s1232316100">item-Cを開く</a>
+</div>
+<div class="test">
+<div class="test-no">item-D: yjauctions://item/【ID】（パス形式）</div>
+<a class="btn scheme" href="yjauctions://item/s1232316100">item-Dを開く</a>
+</div>
+<div class="test">
+<div class="test-no">item-E: ユニバーサルリンク（個別ページURL）</div>
+<div class="test-href">https://page.auctions.yahoo.co.jp/jp/auction/s1232316100</div>
+<a class="btn" href="https://page.auctions.yahoo.co.jp/jp/auction/s1232316100">item-Eを開く</a>
+</div>
+
 <div class="note">
 <b>判定のコツ</b><br>
 ・「ヤフオクで開きますか？」のバナーが出たら「開く」を選ぶ<br>
