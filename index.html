@@ -171,6 +171,20 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   #lottery-area #lot-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 
+/* ===== ③ UI改善 2026-06-07 ===== */
+/* メトリクスグリッド（指値/実勢/粗利/回転を4マス表示） */
+.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:8px 0 6px}
+.metric{background:var(--surface2);border-radius:8px;padding:6px 6px;text-align:center}
+.metric-lbl{font-size:9px;color:var(--muted);margin-bottom:3px;font-weight:600;letter-spacing:.02em}
+.metric-val{font-size:13px;font-weight:700;color:var(--text);line-height:1.2}
+.metric-val.green{color:var(--profit)}
+.metric-val.orange{color:var(--t3)}
+.metric-sub{font-size:9px;color:var(--muted2);margin-top:2px;line-height:1.2}
+/* ⚠️ 警告カード強調（noteに⚠️含む） */
+.card.warn-card{border-color:rgba(255,181,71,.6)}
+.warn-flag{display:inline-flex;align-items:center;gap:2px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:8px;background:rgba(255,92,92,.2);color:var(--alert);margin-left:auto;flex-shrink:0;white-space:nowrap}
+/* スモールスクリーン：メトリクスを2×2 */
+@media(max-width:360px){.metrics-grid{grid-template-columns:repeat(2,1fr)}}
 /* ===== PC（≥768px）: グリッド表示 ===== */
 @media(min-width:768px){
   body{padding:18px 20px 70px}
@@ -468,11 +482,13 @@ function render() {
     const hrs = hoursLeft(c.end);
     const endBadge = hrs ? `<span class="ending-badge">残り${hrs}h</span>` : '';
     const noteClass = c.note && (c.note.includes('⚠️手動')||c.note.includes('⚠️目視')) ? 'danger' : (c.note ? 'warn' : '');
+    const isWarnCard = c.note && c.note.includes('⚠️');
     return `
-    <div class="card ${tc}">
+    <div class="card ${tc}${isWarnCard?' warn-card':''}">
       <div class="tier-strip ${tc}">
         ${TIER_ICON[c.tier]} ${TIER_JP[c.tier]||c.tier}
         <span class="ts-desc">─ ${TIER_DESC[c.tier]||''}</span>
+        ${isWarnCard?`<span class="warn-flag">⚠️ 要確認</span>`:''}
       </div>
       <div class="card-header">
         <div class="card-title">
@@ -491,10 +507,12 @@ function render() {
         <div class="row"><span class="row-lbl">ソース</span><span class="row-val">${c.source}</span></div>
         ${c.current_price!=null?`<div class="row"><span class="row-lbl">現在価格</span><span class="row-val">${yen(c.current_price)}</span></div>`:''}
         ${c.end&&c.end!=='—'?`<div class="row"><span class="row-lbl">終了日時</span><span class="row-val ${hrs&&hrs<24?'red':''}">${c.end}</span></div>`:''}
-        <div class="row"><span class="row-lbl">入札上限(指値)</span><span class="row-val green">Eco${yen(c.eco_shitene)} / Y${yen(c.yahoo_shitene)}</span></div>
-        <div class="row"><span class="row-lbl">実勢売値</span><span class="row-val">${yen(c.jissei)}</span></div>
-        <div class="row"><span class="row-lbl">予想粗利</span><span class="row-val green">${yen(c.profit_eco)}</span></div>
-        <div class="row"><span class="row-lbl">回転日数</span><span class="row-val">${c.kaiten}日</span></div>
+        <div class="metrics-grid">
+          <div class="metric"><div class="metric-lbl">Eco指値</div><div class="metric-val green">${yen(c.eco_shitene)}</div><div class="metric-sub">Y${yen(c.yahoo_shitene)}</div></div>
+          <div class="metric"><div class="metric-lbl">実勢</div><div class="metric-val">${yen(c.jissei)}</div></div>
+          <div class="metric"><div class="metric-lbl">粗利</div><div class="metric-val green">${yen(c.profit_eco)}</div></div>
+          <div class="metric"><div class="metric-lbl">回転</div><div class="metric-val">${c.kaiten}<span style="font-size:10px;font-weight:500">日</span></div></div>
+        </div>
         <div class="row"><span class="row-lbl">整合性</span><span class="row-val">${c.coherence}</span></div>
         <div class="row"><span class="row-lbl">サンプル</span><span class="row-val">n=${c.n40}件${c.n90?` / 90日n=${c.n90}件`:''}</span></div>
         ${c.note?`<div class="note-box ${noteClass}">${c.note}</div>`:''}
