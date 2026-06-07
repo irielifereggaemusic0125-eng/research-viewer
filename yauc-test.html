@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヤフオク アプリ起動テスト</title>
+<style>
+:root{--bg:#161616;--surface:#1f1f1f;--line:#333;--text:#e8e8e8;--muted:#9a9a9a;--t1:#2ed47a;--t2:#4d9fff;--alert:#ff5c5c}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);padding:16px;line-height:1.6;max-width:560px;margin:0 auto}
+h1{font-size:17px;margin-bottom:6px}
+.sub{font-size:12px;color:var(--muted);margin-bottom:16px}
+.kw{font-size:12px;color:var(--t1);font-weight:700}
+.test{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:13px;margin-bottom:12px}
+.test-no{font-size:11px;font-weight:800;color:var(--t2);margin-bottom:3px}
+.test-desc{font-size:12px;color:var(--muted);margin-bottom:9px}
+.test-href{font-size:10px;color:#666;word-break:break-all;margin-bottom:9px;font-family:ui-monospace,monospace}
+.btn{display:block;text-align:center;min-height:48px;line-height:48px;border-radius:10px;background:var(--t2);color:#06182e;font-size:15px;font-weight:800;text-decoration:none}
+.btn.scheme{background:#ffb547;color:#2a1c00}
+.note{font-size:11px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px;margin-top:8px;line-height:1.8}
+.note b{color:var(--alert)}
+.howto{background:rgba(46,212,122,.08);border:1px solid rgba(46,212,122,.3);border-radius:10px;padding:11px;margin-bottom:16px;font-size:12px;line-height:1.8}
+</style>
+</head>
+<body>
+<h1>🔬 ヤフオク アプリ起動テスト</h1>
+<p class="sub">検索キーワード: <span class="kw">ルイヴィトン</span>（1円・ストア限定）</p>
+
+<div class="howto">
+<b style="color:var(--t1)">使い方</b><br>
+各ボタンをiPhoneでタップし、<b style="color:var(--text)">「ヤフオクアプリが開いて検索結果が出るか」</b>を1つずつ確認してください。<br>
+→ どの番号が ①アプリで開く ②Safariで開く ③エラー/何も起きない かをメモして教えてください。勝ちパターンで本実装します。
+</div>
+
+<div class="test">
+<div class="test-no">テスト1: ユニバーサルリンク（同じタブ・推奨候補）</div>
+<div class="test-desc">通常リンク。アプリ導入済みなら開く可能性が最も高い。</div>
+<div class="test-href">https://auctions.yahoo.co.jp/search/search?p=ルイヴィトン&store=1</div>
+<a class="btn" href="https://auctions.yahoo.co.jp/search/search?p=%E3%83%AB%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3&store=1">テスト1を開く</a>
+</div>
+
+<div class="test">
+<div class="test-no">テスト2: ユニバーサルリンク（新規タブ＝現在の挙動）</div>
+<div class="test-desc">今アプリで使っている形式。これがSafari止まりになる想定。</div>
+<div class="test-href">target="_blank" 付き</div>
+<a class="btn" href="https://auctions.yahoo.co.jp/search/search?p=%E3%83%AB%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3&store=1" target="_blank" rel="noopener">テスト2を開く</a>
+</div>
+
+<div class="test">
+<div class="test-no">テスト3: カスタムスキーム yjauctions://（推測）</div>
+<div class="test-desc">公式非公開・命名則からの推測。エラーなら×。</div>
+<div class="test-href">yjauctions://search?p=ルイヴィトン</div>
+<a class="btn scheme" href="yjauctions://search?p=%E3%83%AB%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3">テスト3を開く</a>
+</div>
+
+<div class="test">
+<div class="test-no">テスト4: カスタムスキーム yauction://（推測）</div>
+<div class="test-desc">別候補。エラーなら×。</div>
+<div class="test-href">yauction://search?p=ルイヴィトン</div>
+<a class="btn scheme" href="yauction://search?p=%E3%83%AB%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3">テスト4を開く</a>
+</div>
+
+<div class="test">
+<div class="test-no">テスト5: カスタムスキーム yahooauc://（推測）</div>
+<div class="test-desc">別候補。エラーなら×。</div>
+<div class="test-href">yahooauc://search?p=ルイヴィトン</div>
+<a class="btn scheme" href="yahooauc://search?p=%E3%83%AB%E3%82%A4%E3%83%B4%E3%82%A3%E3%83%88%E3%83%B3">テスト5を開く</a>
+</div>
+
+<div class="test">
+<div class="test-no">テスト6: ユニバーサルリンク（トップページ）</div>
+<div class="test-desc">検索結果が無理でもトップなら開くか（フォールバック候補）。</div>
+<div class="test-href">https://auctions.yahoo.co.jp/</div>
+<a class="btn" href="https://auctions.yahoo.co.jp/">テスト6を開く</a>
+</div>
+
+<div class="note">
+<b>判定のコツ</b><br>
+・「ヤフオクで開きますか？」のバナーが出たら「開く」を選ぶ<br>
+・アプリ起動＝成功（ログイン済みでウォッチ/入札可）<br>
+・テスト3〜5で「アドレスが無効」等が出たらそのスキームは×<br>
+・一度Safariで開くとユニバーサルリンクが一時無効化される場合あり→アプリ長押しメニューや再訪で再判定
+</div>
+
+</body>
+</html>
