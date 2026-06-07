@@ -246,6 +246,34 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .wf-exclude{margin-top:14px;border:1.5px solid rgba(255,92,92,.5);border-radius:12px;overflow:hidden}
 .wf-exclude-hdr{background:rgba(255,92,92,.12);color:var(--alert);font-size:12px;font-weight:700;padding:9px 12px}
 .wf-exclude-row{padding:7px 12px;font-size:11px;color:var(--alert);border-top:.5px solid rgba(255,92,92,.2)}
+/* ===== 領収書タブ ===== */
+.rc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.rc-title{font-size:14px;font-weight:700;color:var(--text)}
+.rc-monthbar{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:9px 12px;margin-bottom:12px}
+.rc-monthbar label{font-size:11px;color:var(--muted);font-weight:600}
+.rc-month-input{flex:1;background:var(--surface2);border:1px solid var(--line);border-radius:8px;color:var(--text);font-size:13px;font-weight:600;padding:8px 10px;min-height:40px;font-family:inherit}
+.rc-fetchall{width:100%;min-height:48px;border-radius:12px;border:none;background:var(--t1);color:#0b1a12;font-size:14px;font-weight:800;cursor:pointer;margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:6px}
+.rc-fetchall:active{background:var(--t1d)}
+.rc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+.rc-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 12px;display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center}
+.rc-card.placeholder{border:1.5px dashed var(--line);background:transparent;opacity:.5;justify-content:center;min-height:150px}
+.rc-card-ico{font-size:30px;line-height:1}
+.rc-card-name{font-size:13px;font-weight:700;color:var(--text)}
+.rc-status{font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px}
+.rc-status.none{background:var(--surface2);color:var(--muted)}
+.rc-status.ok{background:rgba(46,212,122,.16);color:var(--t1)}
+.rc-status.err{background:rgba(255,92,92,.16);color:var(--alert)}
+.rc-fetch-btn{width:100%;min-height:40px;border-radius:9px;border:1.5px solid var(--t2);background:rgba(77,159,255,.12);color:var(--t2);font-size:12px;font-weight:700;cursor:pointer}
+.rc-fetch-btn:active{background:rgba(77,159,255,.26)}
+.rc-ph-text{font-size:11px;color:var(--muted2);font-weight:600}
+.rc-log-wrap{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.rc-log-hdr{font-size:11px;font-weight:700;color:var(--muted);padding:9px 12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.rc-log-clear{font-size:10px;color:var(--muted2);background:none;border:none;cursor:pointer;text-decoration:underline}
+.rc-log{max-height:180px;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:8px 12px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;line-height:1.7;color:var(--muted)}
+.rc-log-line{padding:1px 0;word-break:break-all}
+.rc-log-line .lt{color:var(--muted2)}
+.rc-log-empty{color:var(--muted2);font-style:italic}
+@media(max-width:360px){.rc-grid{grid-template-columns:1fr}}
 /* ===== PC（≥768px）: グリッド表示 ===== */
 @media(min-width:768px){
   body{padding:18px 20px 70px}
@@ -348,6 +376,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   <div class="nav-btn active" onclick="setTab('list')"><span class="nav-icon">📋</span>候補</div>
   <div class="nav-btn" onclick="setTab('lottery')"><span class="nav-icon">🎯</span>抽選</div>
   <div class="nav-btn" onclick="setTab('words')"><span class="nav-icon">🔍</span>ワード</div>
+  <div class="nav-btn" onclick="setTab('receipts')"><span class="nav-icon">🧾</span>領収書</div>
   <div class="nav-btn" onclick="setTab('archive')"><span class="nav-icon">📅</span>日別</div>
   <div class="nav-btn" onclick="setTab('help')"><span class="nav-icon">ℹ️</span>使い方</div>
 </div>
@@ -623,11 +652,15 @@ function setTab(tab) {
     document.querySelectorAll('.nav-btn')[2].classList.add('active');
     showWords();
   }
-  else if (tab==='archive') {
+  else if (tab==='receipts') {
     document.querySelectorAll('.nav-btn')[3].classList.add('active');
+    showReceipts();
+  }
+  else if (tab==='archive') {
+    document.querySelectorAll('.nav-btn')[4].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="empty"><div style="font-size:32px;margin-bottom:8px">📅</div><div>日別アーカイブ</div><div style="font-size:11px;margin-top:4px">上の日付バーで日を選んでください</div></div>`;
   } else if (tab==='help') {
-    document.querySelectorAll('.nav-btn')[4].classList.add('active');
+    document.querySelectorAll('.nav-btn')[5].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="card"><div class="card-body" style="padding:14px">
       <div style="font-size:13px;font-weight:700;margin-bottom:10px">確信度の見方</div>
       <div style="font-size:12px;line-height:1.9;color:#555">
@@ -925,6 +958,89 @@ function showToast(msg) {
   toast.classList.add('show');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+}
+
+// ===== 領収書タブ（スキャフォルド・取得処理は1Password CLI連携後に実装） =====
+const RC_SITES = [
+  { id:'ecoauc', icon:'🌿', name:'エコオク' },
+  { id:'yahoo',  icon:'🔨', name:'ヤフオク' },
+];
+let rcMonth = '';            // "YYYY-MM"
+let rcStatus = {};           // siteId → 'none'|'ok'|'err'
+let rcLog = [];              // ログ行
+
+function rcDefaultMonth(){
+  // 既知の最新日付ベース（new Date()不可環境を考慮しdataの日付/2026-06を既定）
+  const base = (wordsData && wordsData.updated) || '2026-06-07';
+  return base.slice(0,7);
+}
+function rcPushLog(msg){
+  rcLog.push({ t: (new Date()).toLocaleTimeString ? rcNow() : '', m: msg });
+  const el = document.getElementById('rc-log');
+  if (el) { rcRenderLog(); el.scrollTop = el.scrollHeight; }
+}
+function rcNow(){
+  try { const d=new Date(); return d.toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit',second:'2-digit'}); }
+  catch(e){ return ''; }
+}
+function rcRenderLog(){
+  const el = document.getElementById('rc-log');
+  if (!el) return;
+  el.innerHTML = rcLog.length
+    ? rcLog.map(l=>`<div class="rc-log-line"><span class="lt">${l.t?`[${l.t}] `:''}</span>${l.m}</div>`).join('')
+    : '<div class="rc-log-empty">ログはまだありません</div>';
+}
+function rcClearLog(){ rcLog=[]; rcRenderLog(); }
+
+function rcFetch(siteId){
+  const site = RC_SITES.find(s=>s.id===siteId);
+  if (!site) return;
+  rcPushLog(`${site.icon} ${site.name}（${rcMonth}）取得リクエスト → 準備中（1Password CLI連携後に実装）`);
+  showToast('準備中です');
+}
+function rcFetchAll(){
+  rcPushLog(`▶ 全サイト一括取得（${rcMonth}）→ 準備中`);
+  RC_SITES.forEach(s=>rcPushLog(`　${s.icon} ${s.name} → 準備中`));
+  showToast('準備中です');
+}
+function rcSetMonth(v){ rcMonth = v; rcPushLog(`対象月を ${v} に変更`); }
+
+function showReceipts(){
+  if (!rcMonth) rcMonth = rcDefaultMonth();
+  RC_SITES.forEach(s=>{ if(!(s.id in rcStatus)) rcStatus[s.id]='none'; });
+  const main = document.getElementById('cards');
+  const statusLabel = { none:'未取得', ok:'取得済み ✓', err:'エラー ×' };
+  const siteCards = RC_SITES.map(s=>{
+    const st = rcStatus[s.id]||'none';
+    return `<div class="rc-card">
+      <div class="rc-card-ico">${s.icon}</div>
+      <div class="rc-card-name">${s.name}</div>
+      <div class="rc-status ${st}">${statusLabel[st]}</div>
+      <button class="rc-fetch-btn" onclick="rcFetch('${s.id}')">取得</button>
+    </div>`;
+  }).join('');
+  // 将来追加枠（点線）×2
+  const placeholders = [0,1].map(()=>`<div class="rc-card placeholder">
+      <div class="rc-card-ico">＋</div>
+      <div class="rc-ph-text">追加予定</div>
+    </div>`).join('');
+
+  main.innerHTML = `
+    <div class="rc-header"><span class="rc-title">🧾 領収書 取得</span></div>
+    <div class="rc-monthbar">
+      <label>対象月</label>
+      <input class="rc-month-input" type="month" value="${rcMonth}" onchange="rcSetMonth(this.value)">
+    </div>
+    <button class="rc-fetchall" onclick="rcFetchAll()">⬇ 全サイト一括取得</button>
+    <div class="rc-grid">
+      ${siteCards}
+      ${placeholders}
+    </div>
+    <div class="rc-log-wrap">
+      <div class="rc-log-hdr"><span>📋 取得ログ</span><button class="rc-log-clear" onclick="rcClearLog()">クリア</button></div>
+      <div class="rc-log" id="rc-log"></div>
+    </div>`;
+  rcRenderLog();
 }
 
 (async () => {
