@@ -124,7 +124,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .ending-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;background:var(--alert-bg);color:var(--alert);margin-left:4px}
 
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom));z-index:100}
-.nav-btn{font-size:10px;color:var(--muted);text-align:center;cursor:pointer;padding:4px 7px}
+.nav-btn{font-size:9.5px;color:var(--muted);text-align:center;cursor:pointer;padding:4px 5px}
 .nav-btn.active{color:var(--t1)}
 .nav-icon{font-size:20px;display:block;margin-bottom:2px}
 
@@ -274,6 +274,43 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .rc-log-line .lt{color:var(--muted2)}
 .rc-log-empty{color:var(--muted2);font-style:italic}
 @media(max-width:360px){.rc-grid{grid-template-columns:1fr}}
+/* ===== 在庫タブ ===== */
+.iv-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px}
+.iv-title{font-size:14px;font-weight:700;color:var(--text)}
+.iv-meta{font-size:10px;color:var(--muted2)}
+.iv-filter{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.iv-fg{margin-bottom:9px}
+.iv-fg:last-child{margin-bottom:0}
+.iv-fl{font-size:10px;font-weight:700;color:var(--t1);letter-spacing:.05em;margin-bottom:6px}
+.iv-chips{display:flex;gap:6px;flex-wrap:wrap}
+.iv-chip{padding:6px 11px;border-radius:16px;border:1.5px solid var(--line);font-size:11px;font-weight:600;cursor:pointer;background:var(--surface2);color:var(--muted);-webkit-tap-highlight-color:transparent}
+.iv-chip.on{background:var(--t2);border-color:var(--t2);color:#08182e}
+.iv-chip.danger.on{background:var(--alert);border-color:var(--alert);color:#fff}
+.iv-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.iv-count{font-size:12px;font-weight:700;color:var(--text)}
+.iv-count b{color:var(--t1);font-size:15px}
+.iv-sum{font-size:10px;color:var(--muted2)}
+/* 在庫カード（経過日数で色分け） */
+.iv-card{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--muted2);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.iv-card.warn{border-left-color:var(--t3)}
+.iv-card.alert{border-left-color:var(--alert)}
+.iv-card-top{display:flex;align-items:center;gap:8px;padding:10px 12px 4px}
+.iv-card-no{font-size:10px;font-weight:700;color:var(--muted2);background:var(--surface2);border-radius:6px;padding:2px 7px;flex-shrink:0}
+.iv-card-cat{font-size:9px;font-weight:600;color:var(--muted);margin-left:auto;flex-shrink:0}
+.iv-days{font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;flex-shrink:0}
+.iv-days.ok{background:var(--surface2);color:var(--muted)}
+.iv-days.warn{background:rgba(255,181,71,.18);color:var(--t3)}
+.iv-days.alert{background:rgba(255,92,92,.2);color:var(--alert)}
+.iv-name{font-size:13px;font-weight:700;color:var(--text);padding:2px 12px 8px;line-height:1.4}
+.iv-rows{padding:0 12px}
+.iv-row{display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:.5px solid var(--line)}
+.iv-row:last-child{border-bottom:none}
+.iv-rl{color:var(--muted)}
+.iv-rv{font-weight:600;color:var(--text)}
+.iv-rv.loss{color:var(--t3)}
+.iv-merc{display:block;margin:9px 12px 11px;min-height:42px;border-radius:9px;background:#ff5061;color:#fff;font-size:12px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:5px}
+.iv-merc.disabled{background:var(--surface2);color:var(--muted)}
+.iv-merc:active{opacity:.85}
 /* ===== PC（≥768px）: グリッド表示 ===== */
 @media(min-width:768px){
   body{padding:18px 20px 70px}
@@ -377,6 +414,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   <div class="nav-btn" onclick="setTab('lottery')"><span class="nav-icon">🎯</span>抽選</div>
   <div class="nav-btn" onclick="setTab('words')"><span class="nav-icon">🔍</span>ワード</div>
   <div class="nav-btn" onclick="setTab('receipts')"><span class="nav-icon">🧾</span>領収書</div>
+  <div class="nav-btn" onclick="setTab('inventory')"><span class="nav-icon">📦</span>在庫</div>
   <div class="nav-btn" onclick="setTab('archive')"><span class="nav-icon">📅</span>日別</div>
   <div class="nav-btn" onclick="setTab('help')"><span class="nav-icon">ℹ️</span>使い方</div>
 </div>
@@ -656,11 +694,15 @@ function setTab(tab) {
     document.querySelectorAll('.nav-btn')[3].classList.add('active');
     showReceipts();
   }
-  else if (tab==='archive') {
+  else if (tab==='inventory') {
     document.querySelectorAll('.nav-btn')[4].classList.add('active');
+    showInventory();
+  }
+  else if (tab==='archive') {
+    document.querySelectorAll('.nav-btn')[5].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="empty"><div style="font-size:32px;margin-bottom:8px">📅</div><div>日別アーカイブ</div><div style="font-size:11px;margin-top:4px">上の日付バーで日を選んでください</div></div>`;
   } else if (tab==='help') {
-    document.querySelectorAll('.nav-btn')[5].classList.add('active');
+    document.querySelectorAll('.nav-btn')[6].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="card"><div class="card-body" style="padding:14px">
       <div style="font-size:13px;font-weight:700;margin-bottom:10px">確信度の見方</div>
       <div style="font-size:12px;line-height:1.9;color:#555">
@@ -1041,6 +1083,100 @@ function showReceipts(){
       <div class="rc-log" id="rc-log"></div>
     </div>`;
   rcRenderLog();
+}
+
+// ===== 在庫タブ =====
+let inventoryData = null;
+const ivCats = new Set();     // カテゴリフィルタ（複数）
+let ivStaleOnly = false;      // 60日以上のみ
+
+const IV_CAT_ORDER = ['財布','アクセ','バッグ','その他'];
+
+function ivDays(buyDate){
+  if(!buyDate) return null;
+  const d = new Date(buyDate);
+  if(isNaN(d)) return null;
+  return Math.floor((new Date() - d) / 86400000);
+}
+function ivLevel(days){
+  if(days===null) return 'ok';
+  if(days>=60) return 'alert';
+  if(days>=30) return 'warn';
+  return 'ok';
+}
+function ivYen(n){ return (n && n>0) ? '¥'+n.toLocaleString('ja-JP') : '—'; }
+
+async function showInventory(){
+  const main = document.getElementById('cards');
+  if(!inventoryData){
+    main.innerHTML = '<div class="empty"><div style="font-size:28px;margin-bottom:8px">📦</div><div>読み込み中…</div></div>';
+    try{
+      const r = await fetch('data/inventory.json?t=' + Date.now(), {cache:'no-store'});
+      if(!r.ok) throw new Error();
+      inventoryData = await r.json();
+    }catch(e){
+      main.innerHTML = '<div class="empty">在庫データを取得できませんでした</div>';
+      return;
+    }
+  }
+  renderInventory();
+}
+
+function ivToggleCat(c){ ivCats.has(c)?ivCats.delete(c):ivCats.add(c); renderInventory(); }
+function ivToggleStale(){ ivStaleOnly=!ivStaleOnly; renderInventory(); }
+function ivClear(){ ivCats.clear(); ivStaleOnly=false; renderInventory(); }
+
+function renderInventory(){
+  const main = document.getElementById('cards');
+  if(!inventoryData) return;
+  let items = inventoryData.items.map(it => ({...it, days: ivDays(it.buy_date)}));
+  if(ivCats.size) items = items.filter(it => ivCats.has(it.category));
+  if(ivStaleOnly) items = items.filter(it => it.days!==null && it.days>=60);
+  // 経過日数の長い順（滞留が上）
+  items.sort((a,b)=>(b.days??-1)-(a.days??-1));
+
+  const catChips = IV_CAT_ORDER.map(c =>
+    `<button class="iv-chip${ivCats.has(c)?' on':''}" onclick="ivToggleCat('${c}')">${c}</button>`).join('');
+  const totalBuy = items.reduce((s,it)=>s+(it.buy_price||0),0);
+
+  main.innerHTML = `
+    <div class="iv-header">
+      <span class="iv-title">📦 在庫</span>
+      <span class="iv-meta">全${inventoryData.count}件 / 更新:${inventoryData.updated_at}</span>
+    </div>
+    <div class="iv-filter">
+      <div class="iv-fg"><div class="iv-fl">📦 カテゴリ</div><div class="iv-chips">${catChips}</div></div>
+      <div class="iv-fg"><div class="iv-fl">⏱ 滞留</div><div class="iv-chips">
+        <button class="iv-chip danger${ivStaleOnly?' on':''}" onclick="ivToggleStale()">🔴 60日以上のみ</button>
+      </div></div>
+    </div>
+    <div class="iv-bar">
+      <span class="iv-count">表示: <b>${items.length}</b>件</span>
+      <span class="iv-sum">仕入計 ${ivYen(totalBuy)}　<button class="wf-clear" onclick="ivClear()" style="margin-left:6px">✕ クリア</button></span>
+    </div>
+    ${items.length ? items.map(it=>{
+      const lv = ivLevel(it.days);
+      const daysLabel = it.days===null ? '日付不明' : `${it.days}日`;
+      const mid = it.mercari_id || '';
+      const mercUrl = mid ? `https://jp.mercari.com/item/${mid}` : '';
+      return `<div class="iv-card ${lv}">
+        <div class="iv-card-top">
+          <span class="iv-card-no">${it.kanri_no||'—'}</span>
+          <span class="iv-days ${lv}">${daysLabel}</span>
+          <span class="iv-card-cat">${it.category||''}</span>
+        </div>
+        <div class="iv-name">${it.name||'(品名なし)'}</div>
+        <div class="iv-rows">
+          <div class="iv-row"><span class="iv-rl">仕入日</span><span class="iv-rv">${it.buy_date||'—'}</span></div>
+          <div class="iv-row"><span class="iv-rl">仕入金額</span><span class="iv-rv">${ivYen(it.buy_price)}</span></div>
+          <div class="iv-row"><span class="iv-rl">損切りライン</span><span class="iv-rv loss">${ivYen(it.loss_cut)}</span></div>
+          <div class="iv-row"><span class="iv-rl">出品価格</span><span class="iv-rv">${ivYen(it.list_price)}</span></div>
+        </div>
+        ${mercUrl
+          ? `<a class="iv-merc" href="${mercUrl}" target="_blank" rel="noopener">🛒 メルカリで見る</a>`
+          : `<span class="iv-merc disabled">メルカリURL未登録</span>`}
+      </div>`;
+    }).join('') : '<div class="empty">該当する在庫なし<br>フィルタを変えてください</div>'}`;
 }
 
 (async () => {
