@@ -215,6 +215,37 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 /* トースト通知 */
 .copy-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(12px);background:rgba(20,20,20,.96);color:var(--text);font-size:12px;font-weight:600;padding:10px 18px;border-radius:24px;border:1px solid var(--line);opacity:0;transition:opacity .2s,transform .2s;z-index:300;white-space:nowrap;pointer-events:none;max-width:calc(100vw - 40px);text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.4)}
 .copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* 絞り込みフィルター */
+.wf-panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:11px 12px;margin-bottom:12px}
+.wf-group{margin-bottom:10px}
+.wf-group:last-child{margin-bottom:0}
+.wf-glabel{font-size:10px;font-weight:700;color:var(--t1);letter-spacing:.06em;margin-bottom:6px;display:flex;align-items:center;gap:4px}
+.wf-chips{display:flex;gap:6px;flex-wrap:wrap}
+.wf-chip{padding:6px 11px;border-radius:16px;border:1.5px solid var(--line);font-size:11px;font-weight:600;cursor:pointer;background:var(--surface2);color:var(--muted);transition:.12s;-webkit-tap-highlight-color:transparent}
+.wf-chip.on{background:var(--t2);border-color:var(--t2);color:#08182e}
+.wf-chip.prio.on{background:var(--t1);border-color:var(--t1);color:#0b1a12}
+.wf-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.wf-count{font-size:12px;font-weight:700;color:var(--text)}
+.wf-count b{color:var(--t1);font-size:15px}
+.wf-clear{min-height:34px;padding:6px 14px;border-radius:18px;border:1.5px solid var(--alert);background:rgba(255,92,92,.1);color:var(--alert);font-size:11px;font-weight:700;cursor:pointer}
+.wf-clear:active{background:rgba(255,92,92,.22)}
+/* フラットなワード行 */
+.wf-list{display:flex;flex-direction:column;gap:8px}
+.wf-item{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:9px 11px;display:flex;align-items:center;gap:8px}
+.wf-item-main{flex:1;min-width:0}
+.wf-item-word{font-size:12.5px;font-weight:600;color:var(--text);line-height:1.4;word-break:break-all}
+.wf-item-tags{display:flex;gap:5px;margin-top:3px;flex-wrap:wrap}
+.wf-tag{font-size:9px;font-weight:600;color:var(--muted2);background:var(--surface2);border-radius:6px;padding:1px 6px}
+.wf-tag.axis{color:var(--t1);background:rgba(46,212,122,.12)}
+.wf-btns{display:flex;gap:6px;flex-shrink:0}
+.wf-btn{width:38px;height:40px;border-radius:9px;border:none;font-size:14px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.wf-btn.y{background:rgba(77,159,255,.16);color:var(--t2);border:1.5px solid rgba(77,159,255,.4)}
+.wf-btn.y:active{background:rgba(77,159,255,.3)}
+.wf-btn.e{background:rgba(46,212,122,.14);color:var(--t1);border:1.5px solid rgba(46,212,122,.4)}
+.wf-btn.e:active{background:rgba(46,212,122,.28)}
+.wf-exclude{margin-top:14px;border:1.5px solid rgba(255,92,92,.5);border-radius:12px;overflow:hidden}
+.wf-exclude-hdr{background:rgba(255,92,92,.12);color:var(--alert);font-size:12px;font-weight:700;padding:9px 12px}
+.wf-exclude-row{padding:7px 12px;font-size:11px;color:var(--alert);border-top:.5px solid rgba(255,92,92,.2)}
 /* ===== PC（≥768px）: グリッド表示 ===== */
 @media(min-width:768px){
   body{padding:18px 20px 70px}
@@ -731,9 +762,45 @@ async function showLottery(){
   renderLottery();
 }
 
-// ===== 検索ワードタブ =====
+// ===== 検索ワードタブ（絞り込みフィルター対応） =====
 let wordsData = null;
-const openCats = new Set();
+let wordsFlat = [];               // 除外を除く全ワード（派生属性付き）
+const wfBrands = new Set();       // 選択中ブランド（複数）
+const wfCats = new Set();         // 選択中カテゴリ（複数）
+let wfPriority = 'all';           // 優先度（単一）
+
+const BRAND_DEFS = [
+  ['ロンワンズ', ['ロンワンズ','LONE ONES']],
+  ['レナードカムフォート', ['レナードカムフォート','Leonard Kamhout','LEONARD KAMHOUT']],
+  ['ルイヴィトン', ['ルイヴィトン']],
+  ['エルメス', ['エルメス']],
+  ['シャネル', ['シャネル']],
+  ['ディオール', ['ディオール','DIOR']],
+  ['ティファニー', ['ティファニー']],
+  ['フェンディ', ['フェンディ','FENDI']],
+  ['グッチ', ['グッチ']],
+  ['プラダ', ['プラダ']],
+  ['カルティエ', ['カルティエ']],
+];
+const BRAND_ORDER = [...BRAND_DEFS.map(b=>b[0]), 'その他'];
+const CAT_DEFS = [
+  ['ネックレス', ['ネックレス']],
+  ['リング', ['リング']],
+  ['ピアス', ['ピアス']],
+  ['ブレスレット', ['ブレスレット']],
+  ['財布', ['財布','ポルトフォイユ','ジッピー','コインケース','ウォレット','二つ折']],
+  ['バッグ', ['バッグ','ショルダー','ポシェット','ポーチ']],
+];
+const CAT_ORDER = [...CAT_DEFS.map(c=>c[0]), 'その他'];
+
+function deriveBrand(w){
+  for (const [name, kws] of BRAND_DEFS) if (kws.some(k=>w.includes(k))) return name;
+  return 'その他';
+}
+function deriveCat(w){
+  for (const [name, kws] of CAT_DEFS) if (kws.some(k=>w.includes(k))) return name;
+  return 'その他';
+}
 
 async function showWords() {
   const main = document.getElementById('cards');
@@ -747,56 +814,83 @@ async function showWords() {
       main.innerHTML = '<div class="empty">検索ワードデータを取得できませんでした</div>';
       return;
     }
+    // フラット化（除外カテゴリ以外）＋派生属性付与
+    wordsFlat = [];
+    wordsData.categories.forEach(cat => {
+      if (cat.id === 'exclusions') return;
+      cat.words.forEach(w => {
+        wordsFlat.push({ word: w, catId: cat.id, brand: deriveBrand(w), cat: deriveCat(w) });
+      });
+    });
   }
   renderWords();
 }
 
-function toggleCat(id) {
-  if (openCats.has(id)) openCats.delete(id);
-  else openCats.add(id);
-  renderWords();
+function wfToggleBrand(b){ wfBrands.has(b)?wfBrands.delete(b):wfBrands.add(b); renderWords(); }
+function wfToggleCat(c){ wfCats.has(c)?wfCats.delete(c):wfCats.add(c); renderWords(); }
+function wfSetPriority(p){ wfPriority = p; renderWords(); }
+function wfClearAll(){ wfBrands.clear(); wfCats.clear(); wfPriority='all'; renderWords(); }
+
+function wfMatch(it){
+  if (wfBrands.size && !wfBrands.has(it.brand)) return false;
+  if (wfCats.size && !wfCats.has(it.cat)) return false;
+  if (wfPriority==='main' && it.catId!=='main_axis') return false;
+  if (wfPriority==='tier1' && it.catId!=='tier1') return false;
+  if (wfPriority==='tier2' && it.catId!=='tier2') return false;
+  return true;
 }
 
 function renderWords() {
   const main = document.getElementById('cards');
   if (!wordsData) return;
-  const cats = wordsData.categories;
-  const total = cats.reduce((s,c)=>s+c.words.length, 0);
+  const filtered = wordsFlat.filter(wfMatch);
+  const excludeCat = wordsData.categories.find(c=>c.id==='exclusions');
+
+  const brandChips = BRAND_ORDER.map(b =>
+    `<button class="wf-chip${wfBrands.has(b)?' on':''}" onclick="wfToggleBrand('${b}')">${b}</button>`).join('');
+  const catChips = CAT_ORDER.map(c =>
+    `<button class="wf-chip${wfCats.has(c)?' on':''}" onclick="wfToggleCat('${c}')">${c}</button>`).join('');
+  const prioDefs = [['all','全て'],['main','主軸のみ'],['tier1','Tier1のみ'],['tier2','Tier2のみ']];
+  const prioChips = prioDefs.map(([v,l]) =>
+    `<button class="wf-chip prio${wfPriority===v?' on':''}" onclick="wfSetPriority('${v}')">${l}</button>`).join('');
+
   main.innerHTML = `
     <div class="words-header">
       <span class="words-title">🔍 検索ワード</span>
-      <span class="words-meta">${total}件 / 更新:${wordsData.updated}</span>
+      <span class="words-meta">全${wordsFlat.length}件 / 更新:${wordsData.updated}</span>
     </div>
-    <div class="words-note">
-      <b>ヤフオク</b>: ボタンでそのまま検索（1円スタート狙い・ストア限定）<br>
-      <b>EcoAuc</b>: 末尾「1円」を除いてコピー → EcoAuc検索ボックスへペースト
+    <div class="wf-panel">
+      <div class="wf-group"><div class="wf-glabel">🏷 ブランド（複数選択可）</div><div class="wf-chips">${brandChips}</div></div>
+      <div class="wf-group"><div class="wf-glabel">📦 カテゴリ（複数選択可）</div><div class="wf-chips">${catChips}</div></div>
+      <div class="wf-group"><div class="wf-glabel">⭐ 優先度</div><div class="wf-chips">${prioChips}</div></div>
     </div>
-    ${cats.map(cat => {
-      const isExclude = cat.id === 'exclusions';
-      const isOpen = openCats.has(cat.id);
-      return `<div class="words-cat${isExclude ? ' exclude-cat' : ''}">
-        <div class="words-cat-hdr" onclick="toggleCat('${cat.id}')">
-          <span class="words-cat-lbl">${cat.label}</span>
-          <span class="words-cat-meta">${cat.words.length}件</span>
-          <span class="words-cat-arrow${isOpen?' open':''}">▼</span>
-        </div>
-        ${isOpen ? `<div class="words-cat-body">${cat.words.map(w => {
-          if (isExclude) {
-            return `<div class="word-row exclude-row"><span class="word-text">${w}</span></div>`;
-          }
-          const ecoWord = w.replace(/ 1円$/, '');
-          const yahooUrl = 'https://auctions.yahoo.co.jp/search/search?p=' + encodeURIComponent(w) + '&store=1';
-          const safeEco = ecoWord.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-          return `<div class="word-row">
-            <div class="word-text">${w}</div>
-            <div class="word-btns">
-              <a class="word-btn yahoo" href="${yahooUrl}" target="_blank" rel="noopener" onclick="showToast('ヤフオク検索を開きました')">🔎 ヤフオク</a>
-              <button class="word-btn eco" onclick="copyEco('${safeEco}')">📋 EcoAuコピー</button>
-            </div>
-          </div>`;
-        }).join('')}</div>` : ''}
-      </div>`;
-    }).join('')}`;
+    <div class="wf-bar">
+      <span class="wf-count">絞り込み結果: <b>${filtered.length}</b>件</span>
+      <button class="wf-clear" onclick="wfClearAll()">✕ 全てクリア</button>
+    </div>
+    <div class="wf-list">
+      ${filtered.length ? filtered.map(it => {
+        const w = it.word;
+        const ecoWord = w.replace(/ 1円$/, '');
+        const yahooUrl = 'https://auctions.yahoo.co.jp/search/search?p=' + encodeURIComponent(w) + '&store=1';
+        const safeEco = ecoWord.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+        const axisTag = it.catId==='main_axis' ? '<span class="wf-tag axis">主軸</span>' : '';
+        return `<div class="wf-item">
+          <div class="wf-item-main">
+            <div class="wf-item-word">${w}</div>
+            <div class="wf-item-tags">${axisTag}<span class="wf-tag">${it.brand}</span><span class="wf-tag">${it.cat}</span></div>
+          </div>
+          <div class="wf-btns">
+            <a class="wf-btn y" href="${yahooUrl}" target="_blank" rel="noopener" onclick="showToast('ヤフオク検索を開きました')" title="ヤフオク検索">Y</a>
+            <button class="wf-btn e" onclick="copyEco('${safeEco}')" title="EcoAuc用にコピー">E</button>
+          </div>
+        </div>`;
+      }).join('') : '<div class="empty">該当ワードなし<br>条件を変えてください</div>'}
+    </div>
+    ${excludeCat ? `<div class="wf-exclude">
+      <div class="wf-exclude-hdr">${excludeCat.label}</div>
+      ${excludeCat.words.map(w=>`<div class="wf-exclude-row">${w}</div>`).join('')}
+    </div>` : ''}`;
 }
 
 function copyEco(word) {
