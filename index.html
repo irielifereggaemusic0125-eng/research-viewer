@@ -130,6 +130,16 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 .empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:13px}
 
+/* ③ 候補タブ専用UI: 他タブでは非表示（各タブは自分の機能だけ表示） */
+.app:not([data-tab="list"]) .summary,
+.app:not([data-tab="list"]) .legend,
+.app:not([data-tab="list"]) .filter-panel,
+.app:not([data-tab="list"]) #alert-area{display:none !important}
+/* 日付バーは候補(list)と日別(archive)のみ */
+.app:not([data-tab="list"]):not([data-tab="archive"]) .date-bar{display:none !important}
+/* 更新ボタン(updated-bar)は候補・日別で表示（list系データ用）。他タブは隠す */
+.app:not([data-tab="list"]):not([data-tab="archive"]) .updated-bar{display:none !important}
+
 /* ===== 抽選タブ ===== */
 #lottery-area{padding:0}
 .lot-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
@@ -240,6 +250,14 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .word-btn.eco:active{background:rgba(46,212,122,.24)}
 .exclude-row{padding:8px 14px;display:flex;align-items:center;gap:6px}
 .exclude-row .word-text{font-size:12px;color:var(--alert);font-weight:600}
+/* 実績ランクセクション */
+.wr-sec{margin-bottom:14px}
+.wr-sec-hdr{font-size:12px;font-weight:700;color:var(--text);padding:8px 4px 6px;border-bottom:1.5px solid var(--line);margin-bottom:8px;display:flex;align-items:center;justify-content:space-between}
+.wr-sec-n{font-size:10px;color:var(--muted2);font-weight:600}
+.wr-perf{display:flex;gap:5px;margin-top:4px;flex-wrap:wrap}
+.wr-badge{font-size:9px;font-weight:700;padding:1px 7px;border-radius:7px}
+.wr-badge.k{background:rgba(77,159,255,.14);color:var(--t2)}
+.wr-badge.r{background:rgba(46,212,122,.14);color:var(--t1)}
 /* トースト通知 */
 .copy-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(12px);background:rgba(20,20,20,.96);color:var(--text);font-size:12px;font-weight:600;padding:10px 18px;border-radius:24px;border:1px solid var(--line);opacity:0;transition:opacity .2s,transform .2s;z-index:300;white-space:nowrap;pointer-events:none;max-width:calc(100vw - 40px);text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.4)}
 .copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -713,6 +731,7 @@ function buildItemLinks(c){
 function setTab(tab) {
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
   const cardsEl=document.getElementById('cards'); if(cardsEl) cardsEl.dataset.tab=tab;  // PCレイアウト: gridはlistのみ
+  const appEl=document.querySelector('.app'); if(appEl) appEl.dataset.tab=tab;          // ③ 候補専用UIの表示制御
   if (tab==='list') { document.querySelectorAll('.nav-btn')[0].classList.add('active'); render(); }
   else if (tab==='lottery') {
     document.querySelectorAll('.nav-btn')[1].classList.add('active');
@@ -916,45 +935,8 @@ async function showLottery(){
   renderLottery();
 }
 
-// ===== 検索ワードタブ（絞り込みフィルター対応） =====
+// ===== 検索ワードタブ（実績ランク制・1円先頭） =====
 let wordsData = null;
-let wordsFlat = [];               // 除外を除く全ワード（派生属性付き）
-const wfBrands = new Set();       // 選択中ブランド（複数）
-const wfCats = new Set();         // 選択中カテゴリ（複数）
-let wfPriority = 'all';           // 優先度（単一）
-
-const BRAND_DEFS = [
-  ['ロンワンズ', ['ロンワンズ','LONE ONES']],
-  ['レナードカムフォート', ['レナードカムフォート','Leonard Kamhout','LEONARD KAMHOUT']],
-  ['ルイヴィトン', ['ルイヴィトン']],
-  ['エルメス', ['エルメス']],
-  ['シャネル', ['シャネル']],
-  ['ディオール', ['ディオール','DIOR']],
-  ['ティファニー', ['ティファニー']],
-  ['フェンディ', ['フェンディ','FENDI']],
-  ['グッチ', ['グッチ']],
-  ['プラダ', ['プラダ']],
-  ['カルティエ', ['カルティエ']],
-];
-const BRAND_ORDER = [...BRAND_DEFS.map(b=>b[0]), 'その他'];
-const CAT_DEFS = [
-  ['ネックレス', ['ネックレス']],
-  ['リング', ['リング']],
-  ['ピアス', ['ピアス']],
-  ['ブレスレット', ['ブレスレット']],
-  ['財布', ['財布','ポルトフォイユ','ジッピー','コインケース','ウォレット','二つ折']],
-  ['バッグ', ['バッグ','ショルダー','ポシェット','ポーチ']],
-];
-const CAT_ORDER = [...CAT_DEFS.map(c=>c[0]), 'その他'];
-
-function deriveBrand(w){
-  for (const [name, kws] of BRAND_DEFS) if (kws.some(k=>w.includes(k))) return name;
-  return 'その他';
-}
-function deriveCat(w){
-  for (const [name, kws] of CAT_DEFS) if (kws.some(k=>w.includes(k))) return name;
-  return 'その他';
-}
 
 async function showWords() {
   const main = document.getElementById('cards');
@@ -968,82 +950,61 @@ async function showWords() {
       main.innerHTML = '<div class="empty">検索ワードデータを取得できませんでした</div>';
       return;
     }
-    // フラット化（除外カテゴリ以外）＋派生属性付与
-    wordsFlat = [];
-    wordsData.categories.forEach(cat => {
-      if (cat.id === 'exclusions') return;
-      cat.words.forEach(w => {
-        wordsFlat.push({ word: w, catId: cat.id, brand: deriveBrand(w), cat: deriveCat(w) });
-      });
-    });
   }
   renderWords();
 }
 
-function wfToggleBrand(b){ wfBrands.has(b)?wfBrands.delete(b):wfBrands.add(b); renderWords(); }
-function wfToggleCat(c){ wfCats.has(c)?wfCats.delete(c):wfCats.add(c); renderWords(); }
-function wfSetPriority(p){ wfPriority = p; renderWords(); }
-function wfClearAll(){ wfBrands.clear(); wfCats.clear(); wfPriority='all'; renderWords(); }
-
-function wfMatch(it){
-  if (wfBrands.size && !wfBrands.has(it.brand)) return false;
-  if (wfCats.size && !wfCats.has(it.cat)) return false;
-  if (wfPriority==='main' && it.catId!=='main_axis') return false;
-  if (wfPriority==='tier1' && it.catId!=='tier1') return false;
-  if (wfPriority==='tier2' && it.catId!=='tier2') return false;
-  return true;
-}
+// 先頭の「1円 」を除去（EcoAuc用）
+function stripIchien(w){ return w.replace(/^1円\s+/, ''); }
 
 function renderWords() {
   const main = document.getElementById('cards');
   if (!wordsData) return;
-  const filtered = wordsFlat.filter(wfMatch);
-  const excludeCat = wordsData.categories.find(c=>c.id==='exclusions');
+  const cats = wordsData.categories;
+  const realCount = cats.filter(c=>c.id!=='exclusions').reduce((s,c)=>s+c.words.length,0);
+  const excludeCat = cats.find(c=>c.id==='exclusions');
 
-  const brandChips = BRAND_ORDER.map(b =>
-    `<button class="wf-chip${wfBrands.has(b)?' on':''}" onclick="wfToggleBrand('${b}')">${b}</button>`).join('');
-  const catChips = CAT_ORDER.map(c =>
-    `<button class="wf-chip${wfCats.has(c)?' on':''}" onclick="wfToggleCat('${c}')">${c}</button>`).join('');
-  const prioDefs = [['all','全て'],['main','主軸のみ'],['tier1','Tier1のみ'],['tier2','Tier2のみ']];
-  const prioChips = prioDefs.map(([v,l]) =>
-    `<button class="wf-chip prio${wfPriority===v?' on':''}" onclick="wfSetPriority('${v}')">${l}</button>`).join('');
-
-  main.innerHTML = `
-    <div class="words-header">
-      <span class="words-title">🔍 検索ワード</span>
-      <span class="words-meta">全${wordsFlat.length}件 / 更新:${wordsData.updated}</span>
-    </div>
-    <div class="wf-panel">
-      <div class="wf-group"><div class="wf-glabel">🏷 ブランド（複数選択可）</div><div class="wf-chips">${brandChips}</div></div>
-      <div class="wf-group"><div class="wf-glabel">📦 カテゴリ（複数選択可）</div><div class="wf-chips">${catChips}</div></div>
-      <div class="wf-group"><div class="wf-glabel">⭐ 優先度</div><div class="wf-chips">${prioChips}</div></div>
-    </div>
-    <div class="wf-bar">
-      <span class="wf-count">絞り込み結果: <b>${filtered.length}</b>件</span>
-      <button class="wf-clear" onclick="wfClearAll()">✕ 全てクリア</button>
-    </div>
-    <div class="wf-list">
-      ${filtered.length ? filtered.map(it => {
-        const w = it.word;
-        const ecoWord = w.replace(/ 1円$/, '');
+  const sections = cats.filter(c=>c.id!=='exclusions').map(cat => `
+    <div class="wr-sec">
+      <div class="wr-sec-hdr">${cat.label}<span class="wr-sec-n">${cat.words.length}件</span></div>
+      ${cat.words.map(item => {
+        const w = item.word;
+        const eco = stripIchien(w);
         const yahooUrl = 'https://auctions.yahoo.co.jp/search/search?p=' + encodeURIComponent(w) + '&store=1';
-        const safeEco = ecoWord.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-        const axisTag = it.catId==='main_axis' ? '<span class="wf-tag axis">主軸</span>' : '';
+        const safeEco = eco.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+        // 実績バッジ
+        let perf = '';
+        if (item.kaiten!=null || item.rieki!=null){
+          const k = item.kaiten!=null ? `回転${item.kaiten}日` : '';
+          const r = item.rieki!=null ? `粗利${item.rieki}%` : '';
+          perf = `<div class="wr-perf">${k?`<span class="wr-badge k">${k}</span>`:''}${r?`<span class="wr-badge r">${r}</span>`:''}</div>`;
+        }
         return `<div class="wf-item">
           <div class="wf-item-main">
             <div class="wf-item-word">${w}</div>
-            <div class="wf-item-tags">${axisTag}<span class="wf-tag">${it.brand}</span><span class="wf-tag">${it.cat}</span></div>
+            ${perf}
           </div>
           <div class="wf-btns">
-            <a class="wf-btn y" href="${yahooUrl}" target="_blank" rel="noopener" onclick="showToast('ヤフオク検索を開きました')" title="ヤフオク検索">Y</a>
-            <button class="wf-btn e" onclick="copyEco('${safeEco}')" title="EcoAuc用にコピー">E</button>
+            <a class="wf-btn y" href="${yahooUrl}" target="_blank" rel="noopener" onclick="showToast('ヤフオク検索を開きました')" title="ヤフオクで検索(1円先頭そのまま)">Y</a>
+            <button class="wf-btn e" onclick="copyEco('${safeEco}')" title="EcoAuc用にコピー(先頭1円を除去)">E</button>
           </div>
         </div>`;
-      }).join('') : '<div class="empty">該当ワードなし<br>条件を変えてください</div>'}
+      }).join('')}
+    </div>`).join('');
+
+  main.innerHTML = `
+    <div class="words-header">
+      <span class="words-title">🔍 検索ワード（実績順）</span>
+      <span class="words-meta">${realCount}件 / 更新:${wordsData.updated}</span>
     </div>
+    <div class="words-note">
+      <b>Y</b>: ヤフオク検索（「1円」先頭のまま・ストア限定）<br>
+      <b>E</b>: 先頭「1円 」を除いてコピー → EcoAuc検索へペースト
+    </div>
+    ${sections}
     ${excludeCat ? `<div class="wf-exclude">
       <div class="wf-exclude-hdr">${excludeCat.label}</div>
-      ${excludeCat.words.map(w=>`<div class="wf-exclude-row">${w}</div>`).join('')}
+      ${excludeCat.words.map(x=>`<div class="wf-exclude-row">${x.word||x}</div>`).join('')}
     </div>` : ''}`;
 }
 
@@ -1260,6 +1221,7 @@ function renderInventory(){
 
 (async () => {
   const cardsEl=document.getElementById('cards'); if(cardsEl) cardsEl.dataset.tab='list';
+  const appEl0=document.querySelector('.app'); if(appEl0) appEl0.dataset.tab='list';
   currentDate = '2026-06-06';
   buildDateBar();
   await loadDate(currentDate);
