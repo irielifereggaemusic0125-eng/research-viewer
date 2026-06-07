@@ -163,6 +163,34 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .lot-url-btn.disabled{background:var(--surface2);color:var(--muted);cursor:default}
 .lot-status-btn{min-width:90px;min-height:44px;border-radius:10px;border:1.5px solid var(--line);font-size:11px;font-weight:700;cursor:pointer;background:var(--surface2);color:var(--muted);transition:.15s}
 .lot-status-btn.applied{background:rgba(46,212,122,.14);border-color:var(--t1);color:var(--t1)}
+/* フェーズ別ストリップ色 */
+.lot-strip.phase-entry{background:rgba(255,92,92,.2);color:var(--alert)}
+.lot-strip.phase-preview{background:rgba(77,159,255,.18);color:var(--t2)}
+.lot-strip.phase-order{background:rgba(255,181,71,.18);color:var(--t3)}
+.lot-strip.phase-wait{background:var(--surface2);color:var(--muted)}
+.lot-strip.phase-end{background:var(--surface2);color:var(--muted2)}
+.lot-card.phase-entry{border-color:var(--alert)}
+.lot-card.phase-end{opacity:.6}
+.lot-phase-badge{font-size:9px;font-weight:800;padding:1px 7px;border-radius:9px}
+.lot-premium{font-size:9px;font-weight:700;padding:1px 6px;border-radius:8px;margin-left:4px}
+.lot-premium.hi{background:rgba(255,92,92,.18);color:var(--alert)}
+.lot-premium.mid{background:rgba(255,181,71,.16);color:var(--t3)}
+.lot-premium.lo{background:var(--surface2);color:var(--muted)}
+/* 応募先(routes)リスト */
+.lot-routes{margin:6px 0 4px;border-top:.5px solid var(--line);padding-top:6px}
+.lot-routes-ttl{font-size:9px;font-weight:700;color:var(--muted2);margin-bottom:5px;letter-spacing:.04em}
+.lot-route{display:flex;align-items:center;gap:6px;padding:5px 0;border-bottom:.5px solid var(--line)}
+.lot-route:last-child{border-bottom:none}
+.lot-route-main{flex:1;min-width:0}
+.lot-route-store{font-size:11px;font-weight:700;color:var(--text)}
+.lot-route-period{font-size:9px;color:var(--muted2);margin-top:1px}
+.lot-route-ph{font-size:8px;font-weight:800;padding:1px 6px;border-radius:7px;flex-shrink:0}
+.lot-route-ph.phase-entry{background:rgba(255,92,92,.2);color:var(--alert)}
+.lot-route-ph.phase-preview{background:rgba(77,159,255,.18);color:var(--t2)}
+.lot-route-ph.phase-order{background:rgba(255,181,71,.18);color:var(--t3)}
+.lot-route-ph.phase-wait{background:var(--surface2);color:var(--muted)}
+.lot-route-ph.phase-end{background:var(--surface2);color:var(--muted2)}
+.lot-route-link{font-size:14px;text-decoration:none;flex-shrink:0;padding:4px 6px}
 @media(min-width:768px){
   #lottery-area #lot-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
   #lottery-area #lot-cards .lot-card{margin-bottom:0}
@@ -760,41 +788,88 @@ function setLotCat(cat){
   renderLottery();
 }
 
+// フェーズ定義（優先度順・色クラス・ラベル）
+const PHASE_DEF = {
+  '受付中':   {rank:0, cls:'phase-entry',   icon:'🔴'},
+  '予告':     {rank:1, cls:'phase-preview', icon:'🔵'},
+  '注文中':   {rank:2, cls:'phase-order',   icon:'🟠'},
+  '案内待ち': {rank:3, cls:'phase-wait',    icon:'⚪'},
+  '終了':     {rank:4, cls:'phase-end',     icon:'✓'},
+};
+function lotPhase(c){
+  if(c.phase && PHASE_DEF[c.phase]) return c.phase;
+  // 旧スキーマ: deadline未来=受付中扱い・過去=終了
+  const h=lotDeadlineHours(c.deadline);
+  if(h===null) return '予告';
+  return h>=0 ? '受付中' : '終了';
+}
+function premiumClass(lv){ return lv==='高'?'hi':lv==='中'?'mid':'lo'; }
+
 function renderLottery(){
   const area=document.getElementById('lot-cards');
   if(!area) return;
   if(!lotteryData){area.innerHTML='<div class="empty">データなし</div>';return;}
   let items=[...lotteryData.candidates];
   if(lotCatFilter!=='all') items=items.filter(c=>c.category===lotCatFilter);
-  // 締切昇順(未定は後ろ)
+  // フェーズ優先→締切昇順
   items.sort((a,b)=>{
-    const ha=lotDeadlineHours(a.deadline)??99999, hb=lotDeadlineHours(b.deadline)??99999;
-    return ha-hb;
+    const pa=PHASE_DEF[lotPhase(a)].rank, pb=PHASE_DEF[lotPhase(b)].rank;
+    if(pa!==pb) return pa-pb;
+    return (lotDeadlineHours(a.deadline)??99999)-(lotDeadlineHours(b.deadline)??99999);
   });
   if(!items.length){area.innerHTML='<div class="empty">該当なし</div>';return;}
   area.innerHTML=items.map(c=>{
     const id=lotId(c);
     const status=lotStatuses[id]||c.status||'未応募';
     const hrs=lotDeadlineHours(c.deadline);
-    const urgent=hrs!==null&&hrs>=0&&hrs<DEADLINE_SOON_DAYS*24;
+    const phase=lotPhase(c);
+    const pd=PHASE_DEF[phase];
     const isWatch=c.note&&(c.note.includes('WATCH')||c.note.includes('Watch'));
-    const stripCls=urgent?'urgent':(isWatch?'watch':'normal');
     const dlLabel=lotDeadlineLabel(c.deadline);
     const profit=c.profit_max||0;
-    return `<div class="lot-card ${urgent?'urgent':(isWatch?'watch':'')}">
-  <div class="lot-strip ${stripCls}">
-    <span>${CAT_NAMES[c.category]||c.category} / ${isWatch?'🔭WATCH':profit>=3000?`想定利益¥${profit.toLocaleString('ja-JP')}+`:'相場検証待ち'}</span>
-    <span class="${urgent?'deadline-soon':''}">${dlLabel}</span>
+    // プレ値率
+    let premHtml='';
+    if(c.premium_level){
+      const rate=c.premium_rate?`${(+c.premium_rate).toFixed(2)}倍`:'';
+      premHtml=`<span class="lot-premium ${premiumClass(c.premium_level)}">プレ値${rate} ${c.premium_level}</span>`;
+    }
+    // routes[]
+    let routesHtml='';
+    if(Array.isArray(c.routes)&&c.routes.length){
+      routesHtml=`<div class="lot-routes"><div class="lot-routes-ttl">📍 応募先 ${c.routes.length}件</div>`+
+        c.routes.map(r=>{
+          const rp=PHASE_DEF[r.phase]||PHASE_DEF['予告'];
+          let period='';
+          if(r.entry_open||r.entry_deadline){
+            const fmt=d=>d?new Date(d).toLocaleDateString('ja-JP',{month:'numeric',day:'numeric'}):'';
+            period=`受付 ${fmt(r.entry_open)}〜${fmt(r.entry_deadline)}`;
+          }
+          return `<div class="lot-route">
+            <span class="lot-route-ph ${rp.cls}">${rp.icon}${r.phase||'予告'}</span>
+            <div class="lot-route-main">
+              <div class="lot-route-store">${r.store||''}</div>
+              ${period?`<div class="lot-route-period">${period}${r.note?' ・'+r.note:''}</div>`:(r.note?`<div class="lot-route-period">${r.note}</div>`:'')}
+            </div>
+            ${r.url?`<a class="lot-route-link" href="${r.url}" target="_blank" rel="noopener" title="開く">🔗</a>`:''}
+          </div>`;
+        }).join('')+`</div>`;
+    }
+    return `<div class="lot-card ${pd.cls}">
+  <div class="lot-strip ${pd.cls}">
+    <span>${pd.icon}${phase} ・ ${CAT_NAMES[c.category]||c.category}${premHtml}</span>
+    <span class="${hrs!==null&&hrs>=0&&hrs<24?'deadline-soon':''}">${dlLabel}</span>
   </div>
   <div class="lot-body">
     <div class="lot-name">${c.name}</div>
     <div class="lot-brand">${c.brand}</div>
     <div class="lot-rows">
       <div class="lot-row"><span class="lot-lbl">定価</span><span class="lot-val">${c.price>0?'¥'+c.price.toLocaleString('ja-JP'):'未定'}</span></div>
-      ${c.deadline?`<div class="lot-row"><span class="lot-lbl">申込締切</span><span class="lot-val ${urgent?'deadline-soon':''}">${new Date(c.deadline).toLocaleString('ja-JP',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}</span></div>`:''}
+      ${c.jissei>0?`<div class="lot-row"><span class="lot-lbl">実勢</span><span class="lot-val">¥${(+c.jissei).toLocaleString('ja-JP')}</span></div>`:''}
+      ${c.deadline?`<div class="lot-row"><span class="lot-lbl">直近締切</span><span class="lot-val ${hrs!==null&&hrs>=0&&hrs<24?'deadline-soon':''}">${new Date(c.deadline).toLocaleString('ja-JP',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}</span></div>`:''}
       ${profit>0?`<div class="lot-row"><span class="lot-lbl">想定最大利益</span><span class="lot-val profit">+¥${profit.toLocaleString('ja-JP')}</span></div>`:''}
       ${c.best_route&&c.best_route!=='未判定（発売前）'&&c.best_route!=='発売後実機検証待ち'?`<div class="lot-row"><span class="lot-lbl">推奨販路</span><span class="lot-val">${c.best_route}</span></div>`:''}
     </div>
+    ${routesHtml}
     ${c.note?`<div class="lot-note">${c.note}</div>`:''}
     <div class="lot-actions">
       ${c.url?`<a class="lot-url-btn" href="${c.url}" target="_blank" rel="noopener">🔗 応募ページを開く</a>`:`<span class="lot-url-btn disabled">URL未取得</span>`}

@@ -1,37 +1,144 @@
 {
-  "updated_at": "2026-06-07 21:35",
+  "updated_at": "2026-06-08 06:10",
+  "schema": "v2",
   "candidates": [
+    {
+      "name": "RICOH GR IV Monochrome",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 283800,
+      "jissei": 420000,
+      "premium_rate": 1.48,
+      "premium_level": "中",
+      "profit_max": 110000,
+      "best_route": "メルカリ個人売却",
+      "phase": "受付中",
+      "deadline": "2026-06-15T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO(原宿・来店必須)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "2026-05-28T00:00:00+09:00",
+          "entry_deadline": "2026-06-15T23:59:00+09:00",
+          "result_date": "2026-06-19T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "来店本人確認必須・当落6/19・受取6/20-29"
+        },
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "月2-3回サイクル・次回受付は随時更新(要X監視)"
+        }
+      ],
+      "note": "★Monochromeは最も利幅大。実勢は次回巡回でMercari個人売切検証。プレ値率は暫定。"
+    },
     {
       "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
       "price": 232600,
-      "deadline": "2026-06-11T23:59:00+09:00",
-      "open_at": "",
-      "result_at": "2026-06-09T00:00:00+09:00",
-      "url": "https://ricohimagingstore.com/",
-      "mercari_net": 0,
-      "kaitori_net": 55800,
-      "best_route": "るでや買取",
+      "jissei": 290000,
+      "premium_rate": 1.25,
+      "premium_level": "中",
       "profit_max": 55800,
+      "best_route": "るでや買取",
+      "phase": "受付中",
+      "deadline": "2026-06-15T23:59:00+09:00",
       "status": "未応募",
-      "note": "公式抽選 第1回:当落通知6/9→注文締切6/11 23:59 / 第2回:通知6/22→締切6/24。お一人様1台。買取額は当選時にるでや/マップカメラで再確認(SKILL記録2026-05-05)。カメラ枠最優先⭐⭐⭐"
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO(原宿・来店必須)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "2026-05-28T00:00:00+09:00",
+          "entry_deadline": "2026-06-15T23:59:00+09:00",
+          "result_date": "2026-06-19T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "来店必須・当落6/19"
+        },
+        {
+          "store": "リコーイメージングストア(第2回)",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-06-22T00:00:00+09:00",
+          "order_deadline": "2026-06-24T23:59:00+09:00",
+          "note": "第1回受付(5/27-29)終了・当落6/22→注文締切6/24"
+        }
+      ],
+      "note": "公式抽選お一人様1台。買取は当選時にるでや/マップで再確認。カメラ枠最優先★★★"
     },
     {
       "name": "RICOH GR IV HDF",
       "brand": "RICOH",
       "category": "カメラ",
       "price": 244000,
-      "deadline": "2026-06-12T23:59:00+09:00",
-      "open_at": "",
-      "result_at": "2026-06-10T00:00:00+09:00",
-      "url": "https://ricohimagingstore.com/",
-      "mercari_net": 0,
-      "kaitori_net": 13000,
-      "best_route": "るでや買取",
+      "jissei": 257000,
+      "premium_rate": 1.05,
+      "premium_level": "低",
       "profit_max": 13000,
+      "best_route": "るでや買取",
+      "phase": "案内待ち",
+      "deadline": "2026-06-24T23:59:00+09:00",
       "status": "未応募",
-      "note": "公式抽選 第1回:当落通知6/10→注文締切6/12 23:59 / 第2回:通知6/22→締切6/24。お一人様1台。買取額は当選時に再確認⭐⭐"
+      "routes": [
+        {
+          "store": "リコーイメージングストア(第2回)",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-06-22T00:00:00+09:00",
+          "order_deadline": "2026-06-24T23:59:00+09:00",
+          "note": "第1回(5/27-29)終了・当落6/22→締切6/24"
+        }
+      ],
+      "note": "HDFは最も出回りやすく利幅小(プレ値率低)。買取は当選時に再確認★★"
+    },
+    {
+      "name": "RICOH GR IIIx Urban Edition",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 187000,
+      "jissei": 235000,
+      "premium_rate": 1.26,
+      "premium_level": "中",
+      "profit_max": 38000,
+      "best_route": "るでや買取",
+      "phase": "予告",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "GR IVと同一エントリーで応募できる回あり(要規約確認)"
+        },
+        {
+          "store": "フジヤカメラ(WEB抽選・連番URL)",
+          "url": "https://www.fujiya-camera.co.jp/shop/g/gC4549212311291/",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "穴場・専用URLが毎回連番変化(_3→_4)・転売クエスト/Xで都度確認"
+        }
+      ],
+      "note": "Urban Edition等の限定色はプレ値乗りやすい。次回受付をX@GR_RICOHで先回り。"
     }
   ]
 }
