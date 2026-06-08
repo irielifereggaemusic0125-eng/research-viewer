@@ -742,11 +742,14 @@ function buildItemLinks(c){
     CARTIER:'カルティエ',CELINE:'セリーヌ',GUCCI:'グッチ',PRADA:'プラダ',DIOR:'ディオール',
     FENDI:'フェンディ',MARGIELA:'マルジェラ',YSL:'サンローラン',BALENCIAGA:'バレンシアガ',VERSACE:'ヴェルサーチ'};
   const brandKw = c.brand_jp || BRAND_JP[c.brand] || c.brand;
-  const kw = encodeURIComponent([brandKw, c.model].filter(Boolean).join(' '));
+  const baseKw = [brandKw, c.model].filter(Boolean).join(' ');
+  const kw = encodeURIComponent(baseKw);                 // EcoAuc用(1円なし)
+  const kwY = encodeURIComponent('1円 ' + baseKw);       // ①ヤフオク用(1円先頭・ワードタブと同形式)
   links.push({cls: listed?'search':'primary', label:'🔍 ヤフオク1円', sub:'ストア限定で確認', onclick:'return yahooLink(this)',
-    href:`https://auctions.yahoo.co.jp/search/search?p=${kw}&aucminprice=1&aucmaxprice=1&istatus=2&n=50&s1=new&o1=d`});
-  links.push({cls:'search', label:'🔍 EcoAuc', sub:'下見で探す',
-    href:`https://www.ecoauc.com/client/auctions/inspect?q=${kw}&master_item_ranks[]=2&master_item_ranks[]=3&master_item_ranks[]=4`});
+    href:`https://auctions.yahoo.co.jp/search/search?p=${kwY}&store=1`});
+  // ②EcoAuc下見(出品前・競り前)。確認済URL形式・1円不要・iPhone同タブ(ログイン維持)
+  links.push({cls:'search', label:'🔍 下見(EcoAuc)', sub:'出品前を探す', onclick:'return yahooLink(this)',
+    href:`https://www.ecoauc.com/client/auctions/inspect?q=${kw}&limit=50&tableType=grid&page=1`});
   return {links, listed};
 }
 
