@@ -1065,39 +1065,17 @@ function showToast(msg) {
   toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
 }
 
-// ===== ヤフオク アプリ起動（iOSのみアプリ・他はWeb） =====
+// ===== デバイス判定 =====
 function isIOS(){
   const ua = navigator.userAgent || '';
   return /iPhone|iPod|iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
 }
-// アプリ(スキーム)起動を試行し、開かなければWebへフォールバック
-function appOrWeb(scheme, webUrl){
-  let switched = false;
-  const onHide = () => { switched = true; };
-  document.addEventListener('visibilitychange', onHide, {once:true});
-  window.addEventListener('pagehide', onHide, {once:true});
-  setTimeout(() => {
-    document.removeEventListener('visibilitychange', onHide);
-    window.removeEventListener('pagehide', onHide);
-    if (!switched && !document.hidden) { window.location.href = webUrl; } // アプリ未起動→Web
-  }, 1200);
-  window.location.href = scheme; // スキーム起動試行
-}
-// ヤフオクリンクのクリック処理。iOSならアプリ、PC/Androidは通常Web(returnでデフォルト続行)
+// ヤフオクリンク: iPhoneは同タブ(ログイン維持)・PC/Androidは新規タブ。
+// ※yjauctions://アプリ起動は廃止(検索条件が引き継がれず使えなかった・2026-06-08)
 function yahooLink(el){
-  const href = el.href;
-  if (!isIOS()) return true;                         // PC/Android: 従来通りWeb
-  // 検索リンク → アプリ内検索(テスト3確定: yjauctions://search?p=)
-  if (href.indexOf('/search/search') !== -1){
-    try{
-      const u = new URL(href);
-      const p = u.searchParams.get('p') || '';
-      appOrWeb('yjauctions://search?p=' + encodeURIComponent(p), href);
-      return false;
-    }catch(e){ return true; }
-  }
-  // 個別商品ページ → アプリ形式が未確定のため現状はWeb(確認後に配線)
-  return true;
+  if (!isIOS()) return true;            // PC/Android: 従来通り(新規タブWeb)
+  window.location.href = el.href;       // iPhone: 同タブで開きログイン維持
+  return false;
 }
 
 // ===== 領収書タブ（スキャフォルド・取得処理は1Password CLI連携後に実装） =====
