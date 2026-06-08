@@ -1,191 +1,178 @@
 {
-  "updated_at": "2026-06-08 06:40",
   "schema": "v2",
+  "updated_at": "2026-06-09T04:49:41+09:00",
   "candidates": [
     {
-      "name": "RICOH GR IV",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 175320,
-      "jissei": 250000,
-      "premium_rate": 1.43,
-      "premium_level": "中",
-      "profit_max": 60000,
-      "best_route": "メルカリ個人/るでや買取",
+      "name": "ポケカ MEGAドリームex BOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 5500,
+      "jissei": 15500,
+      "premium_rate": 2.82,
+      "premium_level": "高",
+      "profit_max": 7850,
+      "best_route": "メルカリ",
       "phase": "受付中",
-      "deadline": "2026-06-08T18:00:00+09:00",
+      "deadline": "2026-06-10T18:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "フジヤカメラ WEB抽選",
-          "url": "https://www.fujiya-camera.co.jp/shop/pages/c-evlottery260606.aspx",
+          "store": "晴れる屋2 秋葉原タワー店",
+          "url": "https://nyuka-now.com/archives/2459",
           "phase": "受付中",
-          "entry_open": "2026-06-06T10:00:00+09:00",
-          "entry_deadline": "2026-06-08T18:00:00+09:00",
-          "result_date": "2026-06-11T18:00:00+09:00",
-          "order_deadline": "2026-06-14T23:59:00+09:00",
-          "note": "本日18:00締切!1次当落6/11→注文6/11-14・2次当落6/18→注文6/18-20。専用URLは毎回連番変化(_次回は別ページ)"
-        },
-        {
-          "store": "GR SPACE TOKYO(原宿・来店必須)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "2026-05-28T00:00:00+09:00",
-          "entry_deadline": "2026-06-15T23:59:00+09:00",
-          "result_date": "2026-06-19T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "来店本人確認必須・当落6/19・受取6/20-29"
-        },
-        {
-          "store": "リコーイメージングストア(第2回)",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "案内待ち",
           "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "2026-06-22T00:00:00+09:00",
-          "order_deadline": "2026-06-24T23:59:00+09:00",
-          "note": "第1回受付(5/27-29)終了・当落6/22→注文締切6/24"
+          "entry_deadline": "2026-06-10T18:00:00+09:00",
+          "result_date": "2026-06-11T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "シュリンク付未開封BOX中央値¥15,500・当選後早期売却推奨"
         }
       ],
-      "note": "★フジヤで本日18:00まで受付中!公式ルートは案内待ち。お一人様1台。カメラ枠最優先★★★"
+      "note": "MEGAドリームex BOX抽選・粗利¥7,850"
     },
     {
-      "name": "Canon PowerShot G7 X Mark III 30th Anniversary",
-      "brand": "Canon",
-      "category": "カメラ",
-      "price": 148500,
-      "jissei": 220000,
-      "premium_rate": 1.48,
-      "premium_level": "中",
-      "profit_max": 55000,
-      "best_route": "メルカリ個人売却",
+      "name": "ワンピースカード 決戦の刻 OP-16 BOX",
+      "brand": "ONE PIECEカード",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 15000,
+      "premium_rate": 2.84,
+      "premium_level": "高",
+      "profit_max": 7620,
+      "best_route": "メルカリ",
       "phase": "受付中",
-      "deadline": "2026-06-08T18:00:00+09:00",
+      "deadline": "2026-06-10T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "フジヤカメラ WEB抽選",
-          "url": "https://www.fujiya-camera.co.jp/shop/pages/c-evlottery260606.aspx",
+          "store": "ヤマダデンキ",
+          "url": "https://nyuka-now.com/archives/97393",
           "phase": "受付中",
-          "entry_open": "2026-06-06T10:00:00+09:00",
-          "entry_deadline": "2026-06-08T18:00:00+09:00",
-          "result_date": "2026-06-11T18:00:00+09:00",
-          "order_deadline": "2026-06-14T23:59:00+09:00",
-          "note": "本日18:00締切!1次当落6/11・2次当落6/18。30周年限定・品薄プレ値"
-        },
-        {
-          "store": "キヤノンオンラインショップ(公式)",
-          "url": "https://store.canon.jp/online/secure/cos_g7xmk3_30th.aspx",
-          "phase": "終了",
-          "entry_open": "2026-03-03T00:00:00+09:00",
-          "entry_deadline": "2026-03-16T23:59:00+09:00",
-          "result_date": "",
+          "entry_open": "2026-06-09T10:00:00+09:00",
+          "entry_deadline": "2026-06-10T23:59:00+09:00",
+          "result_date": "2026-06-23T00:00:00+09:00",
           "order_deadline": "",
-          "note": "公式抽選は3/3-16で終了済(発売4/24)。現在はフジヤ経由のみ"
+          "note": "アプリ抽選・当選後店頭受取・テープ付未開封¥15,000"
         }
       ],
-      "note": "★30周年記念限定・フジヤで本日18:00まで受付中!実勢¥20-30万(要Mercari検証)"
+      "note": "OP-16 BOX抽選・粗利¥7,620・海軍三大将コミパラ/TR収録"
     },
     {
-      "name": "RICOH GR IV Monochrome",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 283800,
-      "jissei": 420000,
-      "premium_rate": 1.48,
-      "premium_level": "中",
-      "profit_max": 110000,
-      "best_route": "メルカリ個人売却",
+      "name": "ポケカ アビスアイ BOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 6000,
+      "jissei": 14000,
+      "premium_rate": 2.33,
+      "premium_level": "高",
+      "profit_max": 6000,
+      "best_route": "メルカリ",
       "phase": "受付中",
-      "deadline": "2026-06-15T23:59:00+09:00",
+      "deadline": "2026-06-14T20:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "GR SPACE TOKYO(原宿・来店必須)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "store": "イエローサブマリン各店",
+          "url": "https://nyuka-now.com/archives/2459",
           "phase": "受付中",
-          "entry_open": "2026-05-28T00:00:00+09:00",
-          "entry_deadline": "2026-06-15T23:59:00+09:00",
-          "result_date": "2026-06-19T00:00:00+09:00",
+          "entry_open": "",
+          "entry_deadline": "2026-06-14T20:00:00+09:00",
+          "result_date": "2026-06-18T00:00:00+09:00",
           "order_deadline": "",
-          "note": "来店本人確認必須・当落6/19・受取6/20-29"
+          "note": "スタデ100バトコレ併売だが粗利¥1,530で対象外"
         },
         {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "store": "ドラゴンスター各店",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-06-14T23:59:00+09:00",
+          "result_date": "2026-06-17T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "2店併願可"
+        }
+      ],
+      "note": "アビスアイ BOX抽選・粗利¥6,000・流通少なめ高騰傾向"
+    },
+    {
+      "name": "ポケカ 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 6200,
+      "jissei": 0,
+      "premium_rate": 0.0,
+      "premium_level": "低",
+      "profit_max": 0,
+      "best_route": "発売前(検知のみ)",
+      "phase": "受付中",
+      "deadline": "2026-06-21T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ファミマオンライン",
+          "url": "https://www.30th.pokemon-card.com/",
+          "phase": "受付中",
+          "entry_open": "2026-06-08T00:00:00+09:00",
+          "entry_deadline": "2026-06-21T23:59:00+09:00",
+          "result_date": "2026-06-23T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "名指WATCH・発売前(9/16系)so相場判定保留・ノーリスク応募"
+        }
+      ],
+      "note": "30周年名指WATCH・25周年前例で上振れ期待・当選なら確保推奨"
+    },
+    {
+      "name": "ポケカ 30th CELEBRATION BOX/各種(ポケセンオンライン)",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 7200,
+      "jissei": 0,
+      "premium_rate": 0.0,
+      "premium_level": "低",
+      "profit_max": 0,
+      "best_route": "発売前(検知のみ)",
+      "phase": "予告",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ポケモンセンターオンライン",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260608",
           "phase": "予告",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "月2-3回サイクル・次回受付は随時更新(X@GR_RICOH監視)"
+          "note": "BOX¥7,200/FUTURISTIC¥27,500/デッキ¥6,200/カードセット¥10,800・申込日程7月以降告知・マイナンバー認証優遇"
         }
       ],
-      "note": "★Monochromeは最も利幅大。実勢は次回巡回でMercari検証。"
+      "note": "30周年本命・9/16世界同時発売・継続巡回"
     },
     {
-      "name": "RICOH GR IIIx Urban Edition",
+      "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 187000,
-      "jissei": 235000,
-      "premium_rate": 1.26,
+      "price": 232600,
+      "jissei": 290000,
+      "premium_rate": 1.25,
       "premium_level": "中",
-      "profit_max": 38000,
+      "profit_max": 56800,
       "best_route": "るでや買取",
-      "phase": "予告",
+      "phase": "案内待ち",
       "deadline": "",
       "status": "未応募",
       "routes": [
         {
           "store": "リコーイメージングストア",
           "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "GR IVと同一エントリーで応募できる回あり(要規約確認)"
-        },
-        {
-          "store": "フジヤカメラ(WEB抽選・連番URL)",
-          "url": "https://www.fujiya-camera.co.jp/shop/pages/",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "専用URLは毎回連番変化・親ページ+X@GR_RICOHで都度確認"
-        }
-      ],
-      "note": "Urban Edition等の限定色はプレ値乗りやすい。次回受付をX先回り捕捉。"
-    },
-    {
-      "name": "RICOH GR IV HDF",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 244000,
-      "jissei": 257000,
-      "premium_rate": 1.05,
-      "premium_level": "低",
-      "profit_max": 13000,
-      "best_route": "るでや買取",
-      "phase": "案内待ち",
-      "deadline": "2026-06-24T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "リコーイメージングストア(第2回)",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
           "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "",
-          "result_date": "2026-06-22T00:00:00+09:00",
-          "order_deadline": "2026-06-24T23:59:00+09:00",
-          "note": "第1回(5/27-29)終了・当落6/22→締切6/24"
+          "result_date": "",
+          "order_deadline": "",
+          "note": "6月抽選は受付終了・次回日程未定→継続監視"
         }
       ],
-      "note": "HDFは最も出回りやすく利幅小(プレ値率低)。当選時に買取再確認★★"
+      "note": "GR IV抽選・るでや+¥56,800・次回エントリー待ち"
     }
   ]
 }
