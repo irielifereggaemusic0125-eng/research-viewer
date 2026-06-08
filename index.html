@@ -381,6 +381,10 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-merc:active{opacity:.85}
 /* 下見: 粗利¥5,000以上の強調(緑系) */
 .iv-card.ins-hi{border-left-color:var(--t1);border-color:rgba(46,212,122,.45);background:linear-gradient(0deg,rgba(46,212,122,.05),rgba(46,212,122,.05)),var(--surface)}
+/* 在庫: 価格バッジ */
+.iv-badge-down{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;background:rgba(255,92,92,.18);color:var(--alert);margin-left:4px}
+.iv-badge-na{font-size:9px;font-weight:700;padding:1px 6px;border-radius:7px;background:var(--surface2);color:var(--muted2);margin-left:4px}
+.iv-card.iv-eco{border-left-color:var(--t3)}
 /* ===== PC（≥768px）: グリッド表示 ===== */
 @media(min-width:768px){
   body{padding:18px 20px 70px}
@@ -1229,6 +1233,7 @@ async function showInventory(){
 function ivToggleCat(c){ ivCats.has(c)?ivCats.delete(c):ivCats.add(c); renderInventory(); }
 function ivToggleStale(){ ivStaleOnly=!ivStaleOnly; renderInventory(); }
 function ivClear(){ ivCats.clear(); ivStaleOnly=false; renderInventory(); }
+async function ivRefresh(){ inventoryData=null; await showInventory(); }
 
 function renderInventory(){
   const main = document.getElementById('cards');
@@ -1246,7 +1251,7 @@ function renderInventory(){
   main.innerHTML = `
     <div class="iv-header">
       <span class="iv-title">📦 在庫</span>
-      <span class="iv-meta">全${inventoryData.count}件 / 更新:${inventoryData.updated_at}</span>
+      <span class="iv-meta">全${inventoryData.count}件 / 更新:${inventoryData.updated_at} <button class="wf-clear" style="margin-left:6px;min-height:28px;padding:3px 10px" onclick="ivRefresh()">⟳ 更新</button></span>
     </div>
     <div class="iv-filter">
       <div class="iv-fg"><div class="iv-fl">📦 カテゴリ</div><div class="iv-chips">${catChips}</div></div>
@@ -1263,22 +1268,39 @@ function renderInventory(){
       const daysLabel = it.days===null ? '日付不明' : `${it.days}日`;
       const mid = it.mercari_id || '';
       const mercUrl = mid ? `https://jp.mercari.com/item/${mid}` : '';
-      return `<div class="iv-card ${lv}">
+      // 価格表示ロジック: EcoAuc出品中 > 実価格(値下げ中判定) > 確認不可
+      const eco = it.ecoauc_listed;
+      const ap = it.actual_price, lp = it.list_price;
+      let priceRow;
+      if (eco) {
+        priceRow = `<div class="iv-row"><span class="iv-rl">販売状況</span><span class="iv-rv" style="color:#c47f12">🔭 EcoAuc出品中</span></div>
+          <div class="iv-row"><span class="iv-rl">出品価格(初期)</span><span class="iv-rv">${ivYen(lp)}</span></div>`;
+      } else if (ap) {
+        const down = lp && lp > ap;
+        priceRow = `<div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv" style="font-weight:800">${ivYen(ap)}${down?` <span class="iv-badge-down">値下げ中</span>`:''}</span></div>`
+          + (down ? `<div class="iv-row"><span class="iv-rl">初期出品</span><span class="iv-rv" style="color:var(--muted);text-decoration:line-through">${ivYen(lp)}</span></div>` : '')
+          + (it.price_updated_at ? `<div class="iv-row"><span class="iv-rl">価格取得</span><span class="iv-rv" style="font-size:10px;color:var(--muted2)">${it.price_updated_at}</span></div>` : '');
+      } else {
+        priceRow = `<div class="iv-row"><span class="iv-rl">出品価格(初期)</span><span class="iv-rv">${ivYen(lp)} <span class="iv-badge-na">確認不可</span></span></div>`;
+      }
+      return `<div class="iv-card ${lv}${eco?' iv-eco':''}">
         <div class="iv-card-top">
           <span class="iv-card-no">${it.kanri_no||'—'}</span>
           <span class="iv-days ${lv}">${daysLabel}</span>
-          <span class="iv-card-cat">${it.category||''}</span>
+          <span class="iv-card-cat">${eco?'🔭 EcoAuc出品中':it.category||''}</span>
         </div>
         <div class="iv-name">${it.name||'(品名なし)'}</div>
         <div class="iv-rows">
           <div class="iv-row"><span class="iv-rl">仕入日</span><span class="iv-rv">${it.buy_date||'—'}</span></div>
           <div class="iv-row"><span class="iv-rl">仕入金額</span><span class="iv-rv">${ivYen(it.buy_price)}</span></div>
           <div class="iv-row"><span class="iv-rl">損切りライン</span><span class="iv-rv loss">${ivYen(it.loss_cut)}</span></div>
-          <div class="iv-row"><span class="iv-rl">出品価格</span><span class="iv-rv">${ivYen(it.list_price)}</span></div>
+          ${priceRow}
         </div>
-        ${mercUrl
-          ? `<a class="iv-merc" href="${mercUrl}" target="_blank" rel="noopener">🛒 メルカリで見る</a>`
-          : `<span class="iv-merc disabled">メルカリURL未登録</span>`}
+        ${eco
+          ? `<span class="iv-merc disabled">EcoAuc出品中（メルカリ取下げ済）</span>`
+          : (mercUrl
+            ? `<a class="iv-merc" href="${mercUrl}" target="_blank" rel="noopener">🛒 メルカリで見る</a>`
+            : `<span class="iv-merc disabled">メルカリURL未登録</span>`)}
       </div>`;
     }).join('') : '<div class="empty">該当する在庫なし<br>フィルタを変えてください</div>'}`;
 }
