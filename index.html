@@ -258,6 +258,14 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .wr-badge{font-size:9px;font-weight:700;padding:1px 7px;border-radius:7px}
 .wr-badge.k{background:rgba(77,159,255,.14);color:var(--t2)}
 .wr-badge.r{background:rgba(46,212,122,.14);color:var(--t1)}
+/* アコーディオン（カテゴリ開閉） */
+.wr-acc{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:9px;overflow:hidden}
+.wr-acc-hdr{display:flex;align-items:center;gap:8px;padding:12px 13px;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+.wr-acc-hdr:active{background:var(--surface2)}
+.wr-acc-lbl{flex:1;font-size:12.5px;font-weight:700;color:var(--text)}
+.wr-acc-arrow{font-size:11px;color:var(--muted2);transition:transform .2s;flex-shrink:0}
+.wr-acc-arrow.open{transform:rotate(180deg)}
+.wr-acc-body{padding:4px 11px 11px;border-top:1px solid var(--line)}
 /* 4ボタン(Y/E/M/G) 横並び・スマホ崩れ防止 */
 .wf-item{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 11px;margin-bottom:9px}
 .wf-item-word{font-size:12.5px;font-weight:600;color:var(--text);line-height:1.4;word-break:break-all}
@@ -968,8 +976,14 @@ async function showWords() {
   renderWords();
 }
 
-// 先頭の「1円 」を除去（EcoAuc用）
+// 先頭の「1円 」を除去（EcoAuc/メルカリ/Google用）
 function stripIchien(w){ return w.replace(/^1円\s+/, ''); }
+// アコーディオン開閉状態（主軸は既定で開く）
+const openWordCats = new Set(['main_axis']);
+function toggleWordCat(id){
+  openWordCats.has(id) ? openWordCats.delete(id) : openWordCats.add(id);
+  renderWords();
+}
 
 function renderWords() {
   const main = document.getElementById('cards');
@@ -981,39 +995,43 @@ function renderWords() {
   // iPhone=Safari同タブ(ログイン維持) / PC・Android=新規タブ
   const TGT = isIOS() ? '' : ' target="_blank" rel="noopener"';
 
-  const sections = cats.filter(c=>c.id!=='exclusions').map(cat => `
-    <div class="wr-sec">
-      <div class="wr-sec-hdr">${cat.label}<span class="wr-sec-n">${cat.words.length}件</span></div>
-      ${cat.words.map(item => {
-        const w = item.word;                       // 「1円 ブランド 商品名」
-        const eco = stripIchien(w);                // 先頭「1円 」除去
-        const eW = encodeURIComponent(w);
-        const eEco = encodeURIComponent(eco);
-        // ①Y=ヤフオク(1円先頭そのまま・store限定) ②E=EcoAuc下見検索(1円除去)
-        // ③M=メルカリSOLD(1円除去) ④G=Google画像検索(1円除去)
-        const yahooUrl  = `https://auctions.yahoo.co.jp/search/search?p=${eW}&store=1`;
-        const ecoUrl    = `https://www.ecoauc.com/client/auctions/inspect?q=${eEco}`;
-        const mercUrl   = `https://jp.mercari.com/search?keyword=${eEco}&status=sold_out`;
-        const googleUrl = `https://www.google.com/search?tbm=isch&q=${eEco}`;
-        // 実績バッジ
-        let perf = '';
-        if (item.kaiten!=null || item.rieki!=null){
-          const k = item.kaiten!=null ? `回転${item.kaiten}日` : '';
-          const r = item.rieki!=null ? `粗利${item.rieki}%` : '';
-          perf = `<div class="wr-perf">${k?`<span class="wr-badge k">${k}</span>`:''}${r?`<span class="wr-badge r">${r}</span>`:''}</div>`;
-        }
-        return `<div class="wf-item">
-          <div class="wf-item-word">${w}</div>
-          ${perf}
-          <div class="wf-btns4">
-            <a class="wf-btn4 y" href="${yahooUrl}"${TGT} title="ヤフオク検索(1円先頭)">Y<span class="b4-sub">ヤフオク</span></a>
-            <a class="wf-btn4 e" href="${ecoUrl}"${TGT} title="EcoAuc下見検索">E<span class="b4-sub">エコオク</span></a>
-            <a class="wf-btn4 m" href="${mercUrl}"${TGT} title="メルカリSOLD相場">M<span class="b4-sub">メルカリ</span></a>
-            <a class="wf-btn4 g" href="${googleUrl}"${TGT} title="Google画像検索">G<span class="b4-sub">画像</span></a>
-          </div>
-        </div>`;
-      }).join('')}
-    </div>`).join('');
+  const sections = cats.filter(c=>c.id!=='exclusions').map(cat => {
+    const open = openWordCats.has(cat.id);
+    const body = cat.words.map(item => {
+      const w = (typeof item === 'string') ? item : (item.word || '');   // 文字列/オブジェクト両対応
+      const eco = stripIchien(w);
+      const eW = encodeURIComponent(w);
+      const eEco = encodeURIComponent(eco);
+      const yahooUrl  = `https://auctions.yahoo.co.jp/search/search?p=${eW}&store=1`;
+      const ecoUrl    = `https://www.ecoauc.com/client/auctions/inspect?q=${eEco}`;
+      const mercUrl   = `https://jp.mercari.com/search?keyword=${eEco}&status=sold_out`;
+      const googleUrl = `https://www.google.com/search?tbm=isch&q=${eEco}`;
+      let perf = '';
+      if (item && typeof item==='object' && (item.kaiten!=null || item.rieki!=null)){
+        const k = item.kaiten!=null ? `回転${item.kaiten}日` : '';
+        const r = item.rieki!=null ? `粗利${item.rieki}%` : '';
+        perf = `<div class="wr-perf">${k?`<span class="wr-badge k">${k}</span>`:''}${r?`<span class="wr-badge r">${r}</span>`:''}</div>`;
+      }
+      return `<div class="wf-item">
+        <div class="wf-item-word">${w}</div>
+        ${perf}
+        <div class="wf-btns4">
+          <a class="wf-btn4 y" href="${yahooUrl}"${TGT} title="ヤフオク検索(1円先頭)">Y<span class="b4-sub">ヤフオク</span></a>
+          <a class="wf-btn4 e" href="${ecoUrl}"${TGT} title="EcoAuc下見検索">E<span class="b4-sub">エコオク</span></a>
+          <a class="wf-btn4 m" href="${mercUrl}"${TGT} title="メルカリSOLD相場">M<span class="b4-sub">メルカリ</span></a>
+          <a class="wf-btn4 g" href="${googleUrl}"${TGT} title="Google画像検索">G<span class="b4-sub">画像</span></a>
+        </div>
+      </div>`;
+    }).join('');
+    return `<div class="wr-acc">
+      <div class="wr-acc-hdr" onclick="toggleWordCat('${cat.id}')">
+        <span class="wr-acc-lbl">${cat.label}</span>
+        <span class="wr-sec-n">${cat.words.length}件</span>
+        <span class="wr-acc-arrow${open?' open':''}">▼</span>
+      </div>
+      ${open ? `<div class="wr-acc-body">${body}</div>` : ''}
+    </div>`;
+  }).join('');
 
   main.innerHTML = `
     <div class="words-header">
@@ -1021,13 +1039,13 @@ function renderWords() {
       <span class="words-meta">${realCount}件 / 更新:${wordsData.updated}</span>
     </div>
     <div class="words-note">
-      <b>Y</b>ヤフオク（1円先頭・store）／<b>E</b>エコオク下見／<b>M</b>メルカリSOLD相場／<b>G</b>Google画像<br>
-      E・M・Gは先頭「1円 」を自動除去。${isIOS()?'iPhoneは同じタブで開きログイン維持。':'PCは新規タブで開きます。'}
+      <b>Y</b>ヤフオク（1円先頭・store）／<b>E</b>エコオク下見／<b>M</b>メルカリSOLD／<b>G</b>Google画像<br>
+      E・M・Gは先頭「1円 」を自動除去。${isIOS()?'iPhoneは同じタブで開きログイン維持。':'PCは新規タブ。'}　タップでカテゴリ開閉。
     </div>
     ${sections}
     ${excludeCat ? `<div class="wf-exclude">
       <div class="wf-exclude-hdr">${excludeCat.label}</div>
-      ${excludeCat.words.map(x=>`<div class="wf-exclude-row">${x.word||x}</div>`).join('')}
+      ${excludeCat.words.map(x=>`<div class="wf-exclude-row">${(typeof x==='string')?x:(x.word||'')}</div>`).join('')}
     </div>` : ''}`;
 }
 
