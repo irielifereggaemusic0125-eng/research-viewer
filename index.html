@@ -379,6 +379,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-merc{display:block;margin:9px 12px 11px;min-height:42px;border-radius:9px;background:#ff5061;color:#fff;font-size:12px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:5px}
 .iv-merc.disabled{background:var(--surface2);color:var(--muted)}
 .iv-merc:active{opacity:.85}
+/* 下見: 粗利¥5,000以上の強調(緑系) */
+.iv-card.ins-hi{border-left-color:var(--t1);border-color:rgba(46,212,122,.45);background:linear-gradient(0deg,rgba(46,212,122,.05),rgba(46,212,122,.05)),var(--surface)}
 /* ===== PC（≥768px）: グリッド表示 ===== */
 @media(min-width:768px){
   body{padding:18px 20px 70px}
@@ -390,7 +392,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   #cards[data-tab="list"] .card{margin-bottom:0}
   #cards[data-tab="list"] .empty{grid-column:1/-1}
   /* 抽選/ワード/領収書/在庫タブ: 左右中央・読みやすい幅に固定（右寄り崩れ防止） */
-  #cards[data-tab="lottery"],#cards[data-tab="words"],#cards[data-tab="receipts"],#cards[data-tab="inventory"]{
+  #cards[data-tab="lottery"],#cards[data-tab="words"],#cards[data-tab="receipts"],#cards[data-tab="inventory"],#cards[data-tab="inspect"]{
     max-width:760px;margin-left:auto;margin-right:auto;display:block}
   .card-name{font-size:15px}
   .row{font-size:12.5px}
@@ -486,6 +488,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   <div class="nav-btn" onclick="setTab('words')"><span class="nav-icon">🔍</span>ワード</div>
   <div class="nav-btn" onclick="setTab('receipts')"><span class="nav-icon">🧾</span>領収書</div>
   <div class="nav-btn" onclick="setTab('inventory')"><span class="nav-icon">📦</span>在庫</div>
+  <div class="nav-btn" onclick="setTab('inspect')"><span class="nav-icon">🔭</span>下見</div>
   <div class="nav-btn" onclick="setTab('archive')"><span class="nav-icon">📅</span>日別</div>
   <div class="nav-btn" onclick="setTab('help')"><span class="nav-icon">ℹ️</span>使い方</div>
 </div>
@@ -774,11 +777,15 @@ function setTab(tab) {
     document.querySelectorAll('.nav-btn')[4].classList.add('active');
     showInventory();
   }
-  else if (tab==='archive') {
+  else if (tab==='inspect') {
     document.querySelectorAll('.nav-btn')[5].classList.add('active');
+    showInspect();
+  }
+  else if (tab==='archive') {
+    document.querySelectorAll('.nav-btn')[6].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="empty"><div style="font-size:32px;margin-bottom:8px">📅</div><div>日別アーカイブ</div><div style="font-size:11px;margin-top:4px">上の日付バーで日を選んでください</div></div>`;
   } else if (tab==='help') {
-    document.querySelectorAll('.nav-btn')[6].classList.add('active');
+    document.querySelectorAll('.nav-btn')[7].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="card"><div class="card-body" style="padding:14px">
       <div style="font-size:13px;font-weight:700;margin-bottom:10px">確信度の見方</div>
       <div style="font-size:12px;line-height:1.9;color:#555">
@@ -1274,6 +1281,96 @@ function renderInventory(){
           : `<span class="iv-merc disabled">メルカリURL未登録</span>`}
       </div>`;
     }).join('') : '<div class="empty">該当する在庫なし<br>フィルタを変えてください</div>'}`;
+}
+
+// ===== 下見タブ（EcoAuc下見・ecoauc_inspect.json） =====
+let inspectData = null;
+const insBrands = new Set();   // ブランドフィルタ(複数)
+const insCats = new Set();      // カテゴリフィルタ(複数)
+let insPrice = 'all';           // 価格帯(単一)
+
+const INS_PRICE_DEFS = [['all','すべて',0,Infinity],['p5','〜5千',0,5000],['p10','〜1万',0,10000],['p30','〜3万',0,30000],['p30over','3万超',30000,Infinity]];
+
+function insDeadlineLabel(dl){
+  if(!dl) return '締切未定';
+  const d=new Date(dl); if(isNaN(d)) return '締切未定';
+  const h=Math.round((d-new Date())/3600000);
+  if(h<0) return '締切済';
+  if(h<24) return `⚠️あと${h}時間`;
+  return `あと${Math.ceil(h/24)}日`;
+}
+function insHours(dl){ if(!dl)return null; const d=new Date(dl); return isNaN(d)?null:Math.round((d-new Date())/3600000); }
+
+async function showInspect(){
+  const main=document.getElementById('cards');
+  if(!inspectData){
+    main.innerHTML='<div class="empty"><div style="font-size:28px;margin-bottom:8px">🔭</div><div>読み込み中…</div></div>';
+    try{
+      const r=await fetch('data/ecoauc_inspect.json?t='+Date.now(),{cache:'no-store'});
+      if(!r.ok) throw new Error();
+      inspectData=await r.json();
+    }catch(e){
+      main.innerHTML='<div class="empty"><div style="font-size:28px;margin-bottom:8px">🔭</div><div>下見データがまだありません</div><div style="font-size:11px;margin-top:6px;color:var(--muted2)">「ecoauc-inspect-fetch」を手動発火すると表示されます</div></div>';
+      return;
+    }
+  }
+  renderInspect();
+}
+function insToggleBrand(b){ insBrands.has(b)?insBrands.delete(b):insBrands.add(b); renderInspect(); }
+function insToggleCat(c){ insCats.has(c)?insCats.delete(c):insCats.add(c); renderInspect(); }
+function insSetPrice(p){ insPrice=p; renderInspect(); }
+function insClear(){ insBrands.clear(); insCats.clear(); insPrice='all'; renderInspect(); }
+
+function renderInspect(){
+  const main=document.getElementById('cards');
+  if(!inspectData) return;
+  const all=inspectData.items||[];
+  const brands=[...new Set(all.map(i=>i.brand).filter(Boolean))];
+  const cats=[...new Set(all.map(i=>i.category).filter(Boolean))];
+  const pdef=INS_PRICE_DEFS.find(p=>p[0]===insPrice)||INS_PRICE_DEFS[0];
+
+  let items=all.filter(i=>{
+    if(insBrands.size && !insBrands.has(i.brand)) return false;
+    if(insCats.size && !insCats.has(i.category)) return false;
+    const pr=i.current_price||0;
+    if(!(pr>=pdef[2] && pr<pdef[3])) return false;
+    return true;
+  });
+  items.sort((a,b)=>((insHours(a.deadline)??99999)-(insHours(b.deadline)??99999)));
+
+  const brandChips=brands.map(b=>`<button class="iv-chip${insBrands.has(b)?' on':''}" onclick="insToggleBrand('${b.replace(/'/g,"&apos;")}')">${b}</button>`).join('');
+  const catChips=cats.map(c=>`<button class="iv-chip${insCats.has(c)?' on':''}" onclick="insToggleCat('${c.replace(/'/g,"&apos;")}')">${c}</button>`).join('');
+  const priceChips=INS_PRICE_DEFS.map(p=>`<button class="iv-chip${insPrice===p[0]?' on':''}" onclick="insSetPrice('${p[0]}')">${p[1]}</button>`).join('');
+  const TGT=isIOS()?'':' target="_blank" rel="noopener"';
+
+  main.innerHTML=`
+    <div class="iv-header"><span class="iv-title">🔭 EcoAuc下見</span><span class="iv-meta">全${all.length}件 / 更新:${inspectData.updated_at||'-'}</span></div>
+    <div class="iv-filter">
+      <div class="iv-fg"><div class="iv-fl">🏷 ブランド</div><div class="iv-chips">${brandChips||'<span style="font-size:11px;color:var(--muted2)">データなし</span>'}</div></div>
+      <div class="iv-fg"><div class="iv-fl">📦 カテゴリ</div><div class="iv-chips">${catChips}</div></div>
+      <div class="iv-fg"><div class="iv-fl">💴 価格帯</div><div class="iv-chips">${priceChips}</div></div>
+    </div>
+    <div class="iv-bar"><span class="iv-count">表示: <b>${items.length}</b>件</span>
+      <span class="iv-sum"><button class="wf-clear" onclick="insClear()">✕ クリア</button></span></div>
+    ${items.length?items.map(it=>{
+      const hi=!!it.highlight;          // 粗利¥5,000以上
+      const hrs=insHours(it.deadline);
+      const dueCls=hrs!==null&&hrs>=0&&hrs<24?'alert':(hrs!==null&&hrs<48?'warn':'ok');
+      return `<div class="iv-card ${hi?'ins-hi':''}">
+        <div class="iv-card-top">
+          ${it.tier?`<span class="iv-card-no">${it.tier}</span>`:''}
+          <span class="iv-days ${dueCls}">${insDeadlineLabel(it.deadline)}</span>
+          <span class="iv-card-cat">${it.brand||''}${it.category?' / '+it.category:''}</span>
+        </div>
+        <div class="iv-name">${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}</div>
+        <div class="iv-rows">
+          <div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv">${it.current_price?'¥'+(+it.current_price).toLocaleString('ja-JP'):'—'}</span></div>
+          ${it.jissei?`<div class="iv-row"><span class="iv-rl">実勢</span><span class="iv-rv">¥${(+it.jissei).toLocaleString('ja-JP')}</span></div>`:''}
+          ${it.profit?`<div class="iv-row"><span class="iv-rl">想定粗利</span><span class="iv-rv ${hi?'':''}" style="color:${hi?'var(--profit)':'var(--text)'};font-weight:${hi?'800':'600'}">+¥${(+it.profit).toLocaleString('ja-JP')}${hi?' ★':''}</span></div>`:''}
+        </div>
+        ${it.url?`<a class="iv-merc" style="background:#1558b0" href="${it.url}"${TGT}>🔭 下見ページを開く</a>`:`<span class="iv-merc disabled">URL無し</span>`}
+      </div>`;
+    }).join(''):'<div class="empty">該当なし<br>フィルタを変えてください</div>'}`;
 }
 
 (async () => {

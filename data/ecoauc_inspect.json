@@ -1,0 +1,32 @@
+{
+  "updated_at": "2026-06-09 06:30 (seed)",
+  "count": 2,
+  "items": [
+    {
+      "name": "ロンワンズ シルクリング",
+      "brand": "ロンワンズ",
+      "category": "リング",
+      "current_price": 8000,
+      "deadline": "2026-06-11T20:00:00+09:00",
+      "url": "https://www.ecoauc.com/client/auctions/inspect?q=%E3%83%AD%E3%83%B3%E3%83%AF%E3%83%B3%E3%82%BA&limit=50&tableType=grid&page=1",
+      "jissei": 31000,
+      "profit": 18000,
+      "highlight": true,
+      "rank": "AB",
+      "tier": "S"
+    },
+    {
+      "name": "プラダ サフィアーノ 二つ折財布",
+      "brand": "プラダ",
+      "category": "財布",
+      "current_price": 4000,
+      "deadline": "2026-06-13T20:00:00+09:00",
+      "url": "https://www.ecoauc.com/client/auctions/inspect?q=%E3%83%97%E3%83%A9%E3%83%80%20%E3%82%B5%E3%83%95%E3%82%A3%E3%82%A2%E3%83%BC%E3%83%8E%20%E8%B2%A1%E5%B8%83&limit=50&tableType=grid&page=1",
+      "jissei": 12000,
+      "profit": 4500,
+      "highlight": false,
+      "rank": "A",
+      "tier": "S"
+    }
+  ]
+}
