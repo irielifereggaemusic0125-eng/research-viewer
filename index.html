@@ -123,7 +123,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 .ending-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;background:var(--alert-bg);color:var(--alert);margin-left:4px}
 
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom));z-index:100}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--line);display:flex;justify-content:space-between;padding:8px 4px calc(8px + env(safe-area-inset-bottom));z-index:100;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.nav-btn{flex-shrink:0}
 .nav-btn{font-size:9.5px;color:var(--muted);text-align:center;cursor:pointer;padding:4px 5px}
 .nav-btn.active{color:var(--t1)}
 .nav-icon{font-size:20px;display:block;margin-bottom:2px}
@@ -385,6 +386,17 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-badge-down{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;background:rgba(255,92,92,.18);color:var(--alert);margin-left:4px}
 .iv-badge-na{font-size:9px;font-weight:700;padding:1px 6px;border-radius:7px;background:var(--surface2);color:var(--muted2);margin-left:4px}
 .iv-card.iv-eco{border-left-color:var(--t3)}
+/* 成果物タブ */
+.art-date{font-size:11px;font-weight:700;color:var(--t1);letter-spacing:.04em;margin:12px 2px 7px;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.art-card{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--t2);border-radius:11px;padding:10px 12px;margin-bottom:9px}
+.art-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:4px}
+.art-type{font-size:10px;font-weight:700;color:var(--t2)}
+.art-time{font-size:9px;color:var(--muted2)}
+.art-name{font-size:13px;font-weight:700;color:var(--text);line-height:1.4}
+.art-sum{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.6}
+.art-link{display:inline-block;margin-top:8px;min-height:38px;line-height:38px;padding:0 14px;border-radius:9px;background:rgba(77,159,255,.14);color:var(--t2);font-size:12px;font-weight:700;text-decoration:none}
+.art-link.disabled{background:var(--surface2);color:var(--muted2)}
+.art-link:active{opacity:.85}
 /* NGワード: 除外グレーアウト・警告・バッジ（候補/下見共通） */
 .ng-flag{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;margin-right:4px;white-space:nowrap}
 .ng-flag.ex{background:rgba(150,150,150,.22);color:var(--muted)}
@@ -402,7 +414,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   #cards[data-tab="list"] .card{margin-bottom:0}
   #cards[data-tab="list"] .empty{grid-column:1/-1}
   /* 抽選/ワード/領収書/在庫タブ: 左右中央・読みやすい幅に固定（右寄り崩れ防止） */
-  #cards[data-tab="lottery"],#cards[data-tab="words"],#cards[data-tab="receipts"],#cards[data-tab="inventory"],#cards[data-tab="inspect"]{
+  #cards[data-tab="lottery"],#cards[data-tab="words"],#cards[data-tab="receipts"],#cards[data-tab="inventory"],#cards[data-tab="inspect"],#cards[data-tab="artifacts"]{
     max-width:760px;margin-left:auto;margin-right:auto;display:block}
   .card-name{font-size:15px}
   .row{font-size:12.5px}
@@ -500,6 +512,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   <div class="nav-btn" onclick="setTab('receipts')"><span class="nav-icon">🧾</span>領収書</div>
   <div class="nav-btn" onclick="setTab('inventory')"><span class="nav-icon">📦</span>在庫</div>
   <div class="nav-btn" onclick="setTab('inspect')"><span class="nav-icon">🔭</span>下見</div>
+  <div class="nav-btn" onclick="setTab('artifacts')"><span class="nav-icon">📄</span>成果物</div>
   <div class="nav-btn" onclick="setTab('archive')"><span class="nav-icon">📅</span>日別</div>
   <div class="nav-btn" onclick="setTab('help')"><span class="nav-icon">ℹ️</span>使い方</div>
 </div>
@@ -799,11 +812,15 @@ function setTab(tab) {
     document.querySelectorAll('.nav-btn')[5].classList.add('active');
     showInspect();
   }
-  else if (tab==='archive') {
+  else if (tab==='artifacts') {
     document.querySelectorAll('.nav-btn')[6].classList.add('active');
+    showArtifacts();
+  }
+  else if (tab==='archive') {
+    document.querySelectorAll('.nav-btn')[7].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="empty"><div style="font-size:32px;margin-bottom:8px">📅</div><div>日別アーカイブ</div><div style="font-size:11px;margin-top:4px">上の日付バーで日を選んでください</div></div>`;
   } else if (tab==='help') {
-    document.querySelectorAll('.nav-btn')[7].classList.add('active');
+    document.querySelectorAll('.nav-btn')[8].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="card"><div class="card-body" style="padding:14px">
       <div style="font-size:13px;font-weight:700;margin-bottom:10px">確信度の見方</div>
       <div style="font-size:12px;line-height:1.9;color:#555">
@@ -1445,6 +1462,51 @@ function renderInspect(){
         ${it.url?`<a class="iv-merc" style="background:#1558b0" href="${it.url}"${TGT}>🔭 下見ページを開く</a>`:`<span class="iv-merc disabled">URL無し</span>`}
       </div>`;
     }).join(''):'<div class="empty">該当なし<br>フィルタを変えてください</div>'}`;
+}
+
+// ===== 成果物タブ（クロコの成果物一覧・artifacts.json） =====
+let artifactsData = null;
+const ART_TYPE_ICON = {'検算':'🧮','リサーチ':'🔍','分析':'📊','CSV':'📑','レポート':'📄','JSON':'🗂','その他':'📌'};
+async function showArtifacts(){
+  const main=document.getElementById('cards');
+  if(!artifactsData){
+    main.innerHTML='<div class="empty"><div style="font-size:28px;margin-bottom:8px">📄</div><div>読み込み中…</div></div>';
+    try{
+      const r=await fetch('data/artifacts.json?t='+Date.now(),{cache:'no-store'});
+      if(!r.ok) throw new Error();
+      artifactsData=await r.json();
+    }catch(e){
+      main.innerHTML='<div class="empty"><div style="font-size:28px;margin-bottom:8px">📄</div><div>成果物がまだありません</div><div style="font-size:11px;margin-top:6px;color:var(--muted2)">クロコが publish_artifact で書き出すと一覧に出ます</div></div>';
+      return;
+    }
+  }
+  renderArtifacts();
+}
+async function artRefresh(){ artifactsData=null; await showArtifacts(); }
+function artGroupDate(d){ return d&&d.length>=8 ? `${d.slice(0,4)}/${d.slice(4,6)}/${d.slice(6,8)}` : (d||'日付不明'); }
+function renderArtifacts(){
+  const main=document.getElementById('cards');
+  if(!artifactsData) return;
+  const items=artifactsData.items||[];
+  // 日付ごとにグループ（新しい順・itemsは既に新しい順）
+  const groups={}; const order=[];
+  items.forEach(it=>{ const d=it.date||''; if(!(d in groups)){groups[d]=[];order.push(d);} groups[d].push(it); });
+  const TGT=isIOS()?'':' target="_blank" rel="noopener"';
+  main.innerHTML=`
+    <div class="iv-header"><span class="iv-title">📄 クロコの成果物</span>
+      <span class="iv-meta">${items.length}件 / 更新:${artifactsData.updated_at||'-'} <button class="wf-clear" style="margin-left:6px;min-height:28px;padding:3px 10px" onclick="artRefresh()">⟳</button></span></div>
+    ${items.length? order.map(d=>`
+      <div class="art-date">${artGroupDate(d)}</div>
+      ${groups[d].map(it=>{
+        const ic=ART_TYPE_ICON[it.type]||'📌';
+        return `<div class="art-card">
+          <div class="art-top"><span class="art-type">${ic} ${it.type||''}</span><span class="art-time">${it.created_at||''}</span></div>
+          <div class="art-name">${it.title||it.name||''}</div>
+          ${it.summary?`<div class="art-sum">${it.summary}</div>`:''}
+          ${it.drive_url?`<a class="art-link" href="${it.drive_url}"${TGT}>📂 Driveで開く</a>`:`<span class="art-link disabled">Drive未保存</span>`}
+        </div>`;
+      }).join('')}
+    `).join('') : '<div class="empty">成果物がまだありません</div>'}`;
 }
 
 (async () => {
