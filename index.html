@@ -1004,8 +1004,17 @@ async function showWords() {
   renderWords();
 }
 
-// 先頭の「1円 」を除去（EcoAuc/メルカリ/Google用）
+// 先頭の「1円 」を除去（メルカリ/Google用＝ブランド+商品名そのまま）
 function stripIchien(w){ return w.replace(/^1円\s+/, ''); }
+// E(EcoAuc)専用ワード生成：メジャー=ブランド名除去(型番/商品名のみ)・マイナー=ブランド名のみ
+const ECO_MINOR_BRANDS = ['ロンワンズ','LONE ONES','レナードカムフォート','Leonard Kamhout','LEONARD KAMHOUT'];
+const ECO_MAJOR_BRANDS = ['ルイヴィトン','シャネル','エルメス','プラダ','グッチ','ディオール','DIOR','フェンディ','FENDI','バレンシアガ','セリーヌ','カルティエ','ティファニー','ジミーチュウ','ヴェルサーチ','サンローラン','ジルサンダー'];
+function ecoKeyword(w){
+  let s = stripIchien(w).trim();
+  for(const m of ECO_MINOR_BRANDS){ if(s.startsWith(m)) return m; }        // マイナー→ブランド名のみ
+  for(const b of ECO_MAJOR_BRANDS){ if(s.startsWith(b)) return s.slice(b.length).trim() || b; } // メジャー→ブランド除去
+  return s;
+}
 // アコーディオン開閉状態（主軸は既定で開く）
 const openWordCats = new Set(['main_axis']);
 function toggleWordCat(id){
@@ -1027,11 +1036,13 @@ function renderWords() {
     const open = openWordCats.has(cat.id);
     const body = cat.words.map(item => {
       const w = (typeof item === 'string') ? item : (item.word || '');   // 文字列/オブジェクト両対応
-      const eco = stripIchien(w);
+      const eco = stripIchien(w);            // M/G用: ブランド+商品名(1円のみ除去)
+      const ecoE = ecoKeyword(w);            // E用: メジャー=ブランド除去/マイナー=ブランドのみ
       const eW = encodeURIComponent(w);
       const eEco = encodeURIComponent(eco);
+      const eEcoE = encodeURIComponent(ecoE);
       const yahooUrl  = `https://auctions.yahoo.co.jp/search/search?p=${eW}&store=1`;
-      const ecoUrl    = `https://www.ecoauc.com/client/auctions/inspect?q=${eEco}`;
+      const ecoUrl    = `https://www.ecoauc.com/client/auctions/inspect?q=${eEcoE}&limit=50&tableType=grid&page=1`;
       const mercUrl   = `https://jp.mercari.com/search?keyword=${eEco}&status=sold_out`;
       const googleUrl = `https://www.google.com/search?tbm=isch&q=${eEco}`;
       let perf = '';
