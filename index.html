@@ -385,6 +385,12 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-badge-down{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;background:rgba(255,92,92,.18);color:var(--alert);margin-left:4px}
 .iv-badge-na{font-size:9px;font-weight:700;padding:1px 6px;border-radius:7px;background:var(--surface2);color:var(--muted2);margin-left:4px}
 .iv-card.iv-eco{border-left-color:var(--t3)}
+/* NGワード: 除外グレーアウト・警告・バッジ（候補/下見共通） */
+.ng-flag{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;margin-right:4px;white-space:nowrap}
+.ng-flag.ex{background:rgba(150,150,150,.22);color:var(--muted)}
+.ng-flag.wn{background:rgba(255,181,71,.18);color:var(--t3)}
+.card.ng-excluded,.iv-card.ng-excluded{opacity:.5;filter:grayscale(.6)}
+.card.ng-warned,.iv-card.ng-warned{border-color:rgba(255,181,71,.5)}
 /* ===== PC（≥768px）: グリッド表示 ===== */
 @media(min-width:768px){
   body{padding:18px 20px 70px}
@@ -464,6 +470,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
       <div class="fchips">
         <button class="fchip" id="chip-alert" onclick="toggleAlert()">⏰終了間近<span class="fc-sub">24h以内</span></button>
         <button class="fchip" id="chip-coherence" onclick="toggleCoherence()">✅整合のみ<span class="fc-sub">両回一致</span></button>
+        <button class="fchip on" id="chip-nghide" onclick="toggleNgHide();this.classList.toggle('on',ngHideExcluded)">🚫除外を隠す<span class="fc-sub">NGワード</span></button>
       </div>
     </div>
     <!-- 並び替え -->
@@ -653,6 +660,8 @@ function render() {
   if (filters.tier !== 'all') candidates = candidates.filter(c => c.tier === filters.tier);
   if (filters.alert) candidates = candidates.filter(c => isEndingSoon(c.end));
   if (filters.coherence) candidates = candidates.filter(c => c.coherence && c.coherence.startsWith('✅'));
+  // NGワード除外（タイトルベース・トグルON時は除外カードを隠す）
+  if (ngHideExcluded) candidates = candidates.filter(c => ngCheck(c.name)?.level !== 'exclude');
 
   // 出品中のみ表示時は終了が近い順を優先（入札判断に直行）
   let sort = filters.sort;
@@ -690,12 +699,17 @@ function render() {
     const endBadge = hrs ? `<span class="ending-badge">残り${hrs}h</span>` : '';
     const noteClass = c.note && (c.note.includes('⚠️手動')||c.note.includes('⚠️目視')) ? 'danger' : (c.note ? 'warn' : '');
     const isWarnCard = c.note && c.note.includes('⚠️');
+    const ng = ngCheck(c.name);   // NGワード判定(タイトルベース)
+    const ngCls = ng ? (ng.level==='exclude'?' ng-excluded':' ng-warned') : '';
+    const ngBadge = ng ? (ng.level==='exclude'
+      ? `<span class="ng-flag ex">🚫 除外:${ng.word}</span>`
+      : `<span class="ng-flag wn">⚠️ ${ng.word}</span>`) : '';
     return `
-    <div class="card ${tc}${isWarnCard?' warn-card':''}">
+    <div class="card ${tc}${isWarnCard?' warn-card':''}${ngCls}">
       <div class="tier-strip ${tc}">
         ${TIER_ICON[c.tier]} ${TIER_JP[c.tier]||c.tier}
         <span class="ts-desc">─ ${TIER_DESC[c.tier]||''}</span>
-        ${isWarnCard?`<span class="warn-flag">⚠️ 要確認</span>`:''}
+        ${ngBadge}${isWarnCard?`<span class="warn-flag">⚠️ 要確認</span>`:''}
       </div>
       <div class="card-header">
         <div class="card-title">
@@ -1110,6 +1124,28 @@ function yahooLink(el){
   return false;
 }
 
+// ===== NGワードチェック（候補/下見タブ共通・タイトルベース） =====
+let ngWords = { exclude: [], warn: [] };
+let ngHideExcluded = true;   // デフォルトON=除外を非表示
+async function loadNgWords(){
+  try{
+    const r = await fetch('data/ng_words.json?t='+Date.now(), {cache:'no-store'});
+    if(r.ok){ const d = await r.json(); ngWords = { exclude: d.exclude||[], warn: d.warn||[] }; }
+  }catch(e){ /* fail-soft: NG無し扱い */ }
+}
+// テキストを判定 → {level:'exclude'|'warn', word} or null（allowは何もしない＝除外/警告に入れない）
+function ngCheck(text){
+  if(!text) return null;
+  for(const w of ngWords.exclude){ if(w && text.includes(w)) return {level:'exclude', word:w}; }
+  for(const w of ngWords.warn){ if(w && text.includes(w)) return {level:'warn', word:w}; }
+  return null;
+}
+function toggleNgHide(){
+  ngHideExcluded = !ngHideExcluded;
+  const tab = document.querySelector('.app')?.dataset.tab;
+  if(tab==='inspect') renderInspect(); else render();
+}
+
 // ===== 領収書タブ（スキャフォルド・取得処理は1Password CLI連携後に実装） =====
 const RC_SITES = [
   { id:'ecoauc', icon:'🌿', name:'エコオク' },
@@ -1356,6 +1392,7 @@ function renderInspect(){
     if(insCats.size && !insCats.has(i.category)) return false;
     const pr=i.current_price||0;
     if(!(pr>=pdef[2] && pr<pdef[3])) return false;
+    if(ngHideExcluded && ngCheck(i.name)?.level==='exclude') return false;   // NG除外
     return true;
   });
   items.sort((a,b)=>((insHours(a.deadline)??99999)-(insHours(b.deadline)??99999)));
@@ -1371,6 +1408,7 @@ function renderInspect(){
       <div class="iv-fg"><div class="iv-fl">🏷 ブランド</div><div class="iv-chips">${brandChips||'<span style="font-size:11px;color:var(--muted2)">データなし</span>'}</div></div>
       <div class="iv-fg"><div class="iv-fl">📦 カテゴリ</div><div class="iv-chips">${catChips}</div></div>
       <div class="iv-fg"><div class="iv-fl">💴 価格帯</div><div class="iv-chips">${priceChips}</div></div>
+      <div class="iv-fg"><div class="iv-fl">🚫 NGワード</div><div class="iv-chips"><button class="iv-chip${ngHideExcluded?' on':''}" onclick="toggleNgHide()">除外を隠す</button></div></div>
     </div>
     <div class="iv-bar"><span class="iv-count">表示: <b>${items.length}</b>件</span>
       <span class="iv-sum"><button class="wf-clear" onclick="insClear()">✕ クリア</button></span></div>
@@ -1378,11 +1416,14 @@ function renderInspect(){
       const hi=!!it.highlight;          // 粗利¥5,000以上
       const hrs=insHours(it.deadline);
       const dueCls=hrs!==null&&hrs>=0&&hrs<24?'alert':(hrs!==null&&hrs<48?'warn':'ok');
-      return `<div class="iv-card ${hi?'ins-hi':''}">
+      const ng=ngCheck(it.name);
+      const ngCls=ng?(ng.level==='exclude'?' ng-excluded':' ng-warned'):'';
+      const ngBadge=ng?(ng.level==='exclude'?`<span class="ng-flag ex">🚫${ng.word}</span>`:`<span class="ng-flag wn">⚠️${ng.word}</span>`):'';
+      return `<div class="iv-card ${hi?'ins-hi':''}${ngCls}">
         <div class="iv-card-top">
           ${it.tier?`<span class="iv-card-no">${it.tier}</span>`:''}
           <span class="iv-days ${dueCls}">${insDeadlineLabel(it.deadline)}</span>
-          <span class="iv-card-cat">${it.brand||''}${it.category?' / '+it.category:''}</span>
+          <span class="iv-card-cat">${ngBadge}${it.brand||''}${it.category?' / '+it.category:''}</span>
         </div>
         <div class="iv-name">${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}</div>
         <div class="iv-rows">
@@ -1398,6 +1439,7 @@ function renderInspect(){
 (async () => {
   const cardsEl=document.getElementById('cards'); if(cardsEl) cardsEl.dataset.tab='list';
   const appEl0=document.querySelector('.app'); if(appEl0) appEl0.dataset.tab='list';
+  await loadNgWords();
   currentDate = '2026-06-06';
   buildDateBar();
   await loadDate(currentDate);
