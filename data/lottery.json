@@ -1,44 +1,74 @@
 {
   "schema": "v2",
-  "updated_at": "2026-06-09T04:49:41+09:00",
+  "updated_at": "2026-06-09T21:55:21+09:00",
   "candidates": [
     {
-      "name": "ポケカ MEGAドリームex BOX",
+      "name": "ポケカ アビスアイ BOX",
       "brand": "ポケモンカード",
       "category": "トレカ",
-      "price": 5500,
-      "jissei": 15500,
-      "premium_rate": 2.82,
+      "price": 6000,
+      "jissei": 14000,
+      "premium_rate": 2.33,
       "premium_level": "高",
-      "profit_max": 7850,
-      "best_route": "メルカリ",
+      "profit_max": 6000,
+      "best_route": "メルカリ売却",
       "phase": "受付中",
-      "deadline": "2026-06-10T18:00:00+09:00",
+      "deadline": "2026-06-10T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "晴れる屋2 秋葉原タワー店",
+          "store": "ヤマダデンキ",
           "url": "https://nyuka-now.com/archives/2459",
           "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-06-10T18:00:00+09:00",
-          "result_date": "2026-06-11T00:00:00+09:00",
+          "entry_open": "2026-06-09T10:00:00+09:00",
+          "entry_deadline": "2026-06-10T23:59:00+09:00",
+          "result_date": "2026-06-23T00:00:00+09:00",
           "order_deadline": "",
-          "note": "シュリンク付未開封BOX中央値¥15,500・当選後早期売却推奨"
+          "note": "アビスアイ/スタートデッキ100"
+        },
+        {
+          "store": "ホビーステーション",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "2026-06-09T12:00:00+09:00",
+          "entry_deadline": "2026-06-11T23:59:00+09:00",
+          "result_date": "2026-06-18T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "アビスアイ"
+        },
+        {
+          "store": "ドラゴンスター各店",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "2026-06-07T22:00:00+09:00",
+          "entry_deadline": "2026-06-14T23:59:00+09:00",
+          "result_date": "2026-06-17T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "アビスアイ/スタートデッキ100"
+        },
+        {
+          "store": "イエローサブマリン各店",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "2026-06-08T12:00:00+09:00",
+          "entry_deadline": "2026-06-14T20:00:00+09:00",
+          "result_date": "2026-06-18T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "アビスアイ/スタートデッキ100"
         }
       ],
-      "note": "MEGAドリームex BOX抽選・粗利¥7,850"
+      "note": "定価¥6,000→Mercari封入済1BOX売切~¥14,000(シュリンク付)。BOX期待値¥13,338。流通少・当選後早期売却推奨"
     },
     {
-      "name": "ワンピースカード 決戦の刻 OP-16 BOX",
-      "brand": "ONE PIECEカード",
+      "name": "ワンピース OP-16 決戦の刻 BOX",
+      "brand": "ワンピースカード",
       "category": "トレカ",
       "price": 5280,
       "jissei": 15000,
       "premium_rate": 2.84,
       "premium_level": "高",
       "profit_max": 7620,
-      "best_route": "メルカリ",
+      "best_route": "メルカリ売却",
       "phase": "受付中",
       "deadline": "2026-06-10T23:59:00+09:00",
       "status": "未応募",
@@ -51,128 +81,37 @@
           "entry_deadline": "2026-06-10T23:59:00+09:00",
           "result_date": "2026-06-23T00:00:00+09:00",
           "order_deadline": "",
-          "note": "アプリ抽選・当選後店頭受取・テープ付未開封¥15,000"
+          "note": "OP-16決戦の刻"
         }
       ],
-      "note": "OP-16 BOX抽選・粗利¥7,620・海軍三大将コミパラ/TR収録"
-    },
-    {
-      "name": "ポケカ アビスアイ BOX",
-      "brand": "ポケモンカード",
-      "category": "トレカ",
-      "price": 6000,
-      "jissei": 14000,
-      "premium_rate": 2.33,
-      "premium_level": "高",
-      "profit_max": 6000,
-      "best_route": "メルカリ",
-      "phase": "受付中",
-      "deadline": "2026-06-14T20:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "イエローサブマリン各店",
-          "url": "https://nyuka-now.com/archives/2459",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-06-14T20:00:00+09:00",
-          "result_date": "2026-06-18T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "スタデ100バトコレ併売だが粗利¥1,530で対象外"
-        },
-        {
-          "store": "ドラゴンスター各店",
-          "url": "https://nyuka-now.com/archives/2459",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-06-14T23:59:00+09:00",
-          "result_date": "2026-06-17T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "2店併願可"
-        }
-      ],
-      "note": "アビスアイ BOX抽選・粗利¥6,000・流通少なめ高騰傾向"
-    },
-    {
-      "name": "ポケカ 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
-      "brand": "ポケモンカード",
-      "category": "トレカ",
-      "price": 6200,
-      "jissei": 0,
-      "premium_rate": 0.0,
-      "premium_level": "低",
-      "profit_max": 0,
-      "best_route": "発売前(検知のみ)",
-      "phase": "受付中",
-      "deadline": "2026-06-21T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ファミマオンライン",
-          "url": "https://www.30th.pokemon-card.com/",
-          "phase": "受付中",
-          "entry_open": "2026-06-08T00:00:00+09:00",
-          "entry_deadline": "2026-06-21T23:59:00+09:00",
-          "result_date": "2026-06-23T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "名指WATCH・発売前(9/16系)so相場判定保留・ノーリスク応募"
-        }
-      ],
-      "note": "30周年名指WATCH・25周年前例で上振れ期待・当選なら確保推奨"
-    },
-    {
-      "name": "ポケカ 30th CELEBRATION BOX/各種(ポケセンオンライン)",
-      "brand": "ポケモンカード",
-      "category": "トレカ",
-      "price": 7200,
-      "jissei": 0,
-      "premium_rate": 0.0,
-      "premium_level": "低",
-      "profit_max": 0,
-      "best_route": "発売前(検知のみ)",
-      "phase": "予告",
-      "deadline": "",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ポケモンセンターオンライン",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260608",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "BOX¥7,200/FUTURISTIC¥27,500/デッキ¥6,200/カードセット¥10,800・申込日程7月以降告知・マイナンバー認証優遇"
-        }
-      ],
-      "note": "30周年本命・9/16世界同時発売・継続巡回"
+      "note": "定価¥5,280→Mercariテープ付未開封~¥15,000(¥14-16k)。定価の2-3倍維持。当選後早期売却推奨"
     },
     {
       "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
       "price": 232600,
-      "jissei": 290000,
-      "premium_rate": 1.25,
+      "jissei": 289400,
+      "premium_rate": 1.24,
       "premium_level": "中",
       "profit_max": 56800,
       "best_route": "るでや買取",
-      "phase": "案内待ち",
-      "deadline": "",
+      "phase": "受付中",
+      "deadline": "2026-06-15T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "",
+          "store": "GR SPACE TOKYO(店頭抽選)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "2026-06-06T00:00:00+09:00",
+          "entry_deadline": "2026-06-15T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "6月抽選は受付終了・次回日程未定→継続監視"
+          "note": "店頭抽選・要店頭本人確認(東京)。Web各店は受付終了"
         }
       ],
-      "note": "GR IV抽選・るでや+¥56,800・次回エントリー待ち"
+      "note": "るでや買取で定価+¥56,800のノーリスク。ただしGR SPACE TOKYOは店頭抽選(東京)のみ・Web各店は受付終了"
     }
   ]
 }
