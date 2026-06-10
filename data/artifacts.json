@@ -1,6 +1,16 @@
 {
-  "updated_at": "2026-06-10 07:41",
+  "updated_at": "2026-06-11 07:45",
   "items": [
+    {
+      "date": "20260611",
+      "type": "レポート",
+      "title": "現状棚卸し",
+      "name": "20260611_レポート_現状棚卸し",
+      "summary": "稼働16タスク/停止多数を全件棚卸し。Fable5戦略相談用。課題=落札率10%・8月無人運用(発火信頼性/1Password/死活監視)・クレジット最適化。",
+      "drive_id": "1FX0VwFvvfxAKo-ogOVyXYUghO4atb_Dn3d9_qjeKE_s",
+      "drive_url": "https://docs.google.com/document/d/1FX0VwFvvfxAKo-ogOVyXYUghO4atb_Dn3d9_qjeKE_s/edit",
+      "created_at": "2026-06-11 07:45"
+    },
     {
       "date": "20260610",
       "type": "検算",
