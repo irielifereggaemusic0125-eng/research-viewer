@@ -382,6 +382,11 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-merc:active{opacity:.85}
 /* 下見: 粗利¥5,000以上の強調(緑系) */
 .iv-card.ins-hi{border-left-color:var(--t1);border-color:rgba(46,212,122,.45);background:linear-gradient(0deg,rgba(46,212,122,.05),rgba(46,212,122,.05)),var(--surface)}
+/* 下見: 実績バッジ(回転/粗利＝なぜ狙い目か) */
+.ins-perf{display:flex;gap:5px;margin:2px 0 6px;flex-wrap:wrap}
+.ins-pb{font-size:9px;font-weight:800;padding:1px 7px;border-radius:7px}
+.ins-pb.k{background:rgba(77,159,255,.16);color:var(--t2)}
+.ins-pb.r{background:rgba(46,212,122,.16);color:var(--t1)}
 /* 在庫: 価格バッジ */
 .iv-badge-down{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;background:rgba(255,92,92,.18);color:var(--alert);margin-left:4px}
 .iv-badge-na{font-size:9px;font-weight:700;padding:1px 6px;border-radius:7px;background:var(--surface2);color:var(--muted2);margin-left:4px}
@@ -1423,7 +1428,12 @@ function renderInspect(){
     if(ngHideExcluded && ngCheck(i.name)?.level==='exclude') return false;   // NG除外
     return true;
   });
-  items.sort((a,b)=>((insHours(a.deadline)??99999)-(insHours(b.deadline)??99999)));
+  // 回転実績の高い順（priority昇順→回転日数昇順→締切昇順）
+  items.sort((a,b)=>{
+    const pa=a.priority??99, pb=b.priority??99; if(pa!==pb) return pa-pb;
+    const ka=a.kaiten??999, kb=b.kaiten??999; if(ka!==kb) return ka-kb;
+    return (insHours(a.deadline)??99999)-(insHours(b.deadline)??99999);
+  });
 
   const brandChips=brands.map(b=>`<button class="iv-chip${insBrands.has(b)?' on':''}" onclick="insToggleBrand('${b.replace(/'/g,"&apos;")}')">${b}</button>`).join('');
   const catChips=cats.map(c=>`<button class="iv-chip${insCats.has(c)?' on':''}" onclick="insToggleCat('${c.replace(/'/g,"&apos;")}')">${c}</button>`).join('');
@@ -1447,6 +1457,13 @@ function renderInspect(){
       const ng=ngCheck(it.name);
       const ngCls=ng?(ng.level==='exclude'?' ng-excluded':' ng-warned'):'';
       const ngBadge=ng?(ng.level==='exclude'?`<span class="ng-flag ex">🚫${ng.word}</span>`:`<span class="ng-flag wn">⚠️${ng.word}</span>`):'';
+      // 実績バッジ（回転日数/粗利率＝なぜ狙い目か）
+      let perfBadge='';
+      if(it.kaiten!=null||it.rieki!=null){
+        const k=it.kaiten!=null?`回転${it.kaiten}日`:'';
+        const r=it.rieki!=null?`粗利${it.rieki}%`:'';
+        perfBadge=`<div class="ins-perf">${k?`<span class="ins-pb k">${k}</span>`:''}${r?`<span class="ins-pb r">${r}</span>`:''}</div>`;
+      }
       return `<div class="iv-card ${hi?'ins-hi':''}${ngCls}">
         <div class="iv-card-top">
           ${it.tier?`<span class="iv-card-no">${it.tier}</span>`:''}
@@ -1454,6 +1471,7 @@ function renderInspect(){
           <span class="iv-card-cat">${ngBadge}${it.brand||''}${it.category?' / '+it.category:''}</span>
         </div>
         <div class="iv-name">${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}</div>
+        ${perfBadge}
         <div class="iv-rows">
           <div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv">${it.current_price?'¥'+(+it.current_price).toLocaleString('ja-JP'):'—'}</span></div>
           ${it.jissei?`<div class="iv-row"><span class="iv-rl">実勢</span><span class="iv-rv">¥${(+it.jissei).toLocaleString('ja-JP')}</span></div>`:''}

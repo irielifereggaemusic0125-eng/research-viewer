@@ -126,5 +126,50 @@
         "除外(全般): 風 / 互換 / ノーブランド / コピー / レプリカ"
       ]
     }
+  ],
+  "ecoauc_note": "EcoAuc下見の巡回ターゲット。ecoauc-inspect-fetchが参照（別ファイルは持たない＝共通化）。回転実績(回転日数/粗利率)の高い順=priority昇順。minor=ワードにブランド名必要(EcoAucブランドUIに無い)・major=EcoAucブランド選択UI(ecoauc_brand)で絞り商品名(q_product)で検索。rank S/SA/A/AB/Bのみ・単品(まとめ除外)・開始価格¥3,000以上。",
+  "ecoauc_filter": {
+    "ranks": ["S", "SA", "A", "AB", "B"],
+    "min_start_price": 3000,
+    "exclude_bulk_words": ["おまとめ", "纏め", "まとめ", "セット", "等", "*", "２点", "2点"]
+  },
+  "ecoauc_targets": [
+    {
+      "priority": 1, "tier": "S/主軸", "minor": true,
+      "q": "ロンワンズ", "brand": "ロンワンズ",
+      "aliases": ["カムホート", "Leonard Kamhout", "LONE ONES"],
+      "kaiten": 6, "rieki": 26,
+      "note": "主軸最優先・ロンワンズ/レナードカムフォート(EcoAuc表記=カムホート)を内包。自社実証 回転6日/粗利26%"
+    },
+    {
+      "priority": 2, "tier": "S", "minor": false,
+      "q": "プラダ サフィアーノ", "brand": "プラダ", "ecoauc_brand": "PRADA", "q_product": "サフィアーノ 財布",
+      "kaiten": 4, "rieki": 47,
+      "note": "S級・自社実証 回転4日/粗利47%。メジャーso EcoAucブランドUI(PRADA)+商品名で絞る"
+    },
+    {
+      "priority": 3, "tier": "S", "minor": false,
+      "q": "ルイヴィトン アンプラント 財布", "brand": "ルイヴィトン", "ecoauc_brand": "LOUIS VUITTON", "q_product": "アンプラント 財布",
+      "kaiten": 2, "rieki": 19.8,
+      "note": "S級・自社実証 回転2日/粗利19.8%。LVブランドUI+アンプラント財布で絞る"
+    },
+    {
+      "priority": 4, "tier": "A", "minor": false,
+      "q": "カルティエ サントス", "brand": "カルティエ", "ecoauc_brand": "Cartier", "q_product": "サントス",
+      "kaiten": 25, "rieki": 39,
+      "note": "A級・回転25日/粗利39%。カルティエUI+サントス"
+    },
+    {
+      "priority": 5, "tier": "A", "minor": false,
+      "q": "バレンシアガ 財布", "brand": "バレンシアガ", "ecoauc_brand": "BALENCIAGA", "q_product": "財布",
+      "kaiten": 3, "rieki": 25,
+      "note": "A級・回転3日/粗利25%。バレンシアガUI+財布"
+    },
+    {
+      "priority": 6, "tier": "A", "minor": false,
+      "q": "ジルサンダー", "brand": "ジルサンダー", "ecoauc_brand": "JIL SANDER", "q_product": "",
+      "kaiten": 3, "rieki": null,
+      "note": "A級・回転3日。ジルサンダーUIで絞る(クロスボディ等)"
+    }
   ]
 }
