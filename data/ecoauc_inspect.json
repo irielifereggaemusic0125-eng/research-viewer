@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-06-10 22:55",
   "model": "ecoauc-inspect-fetch (共通ワード・回転実績順)",
-  "note": "得意分野巡回・ロンワンズ/カムホート(=レナードカムフォート)3件。実勢はカテゴリ推定(個別Mercari未検証)。回転実績の高い順にソート・実績バッジ付き。",
+  "note": "得意分野巡回・ロンワンズ/カムホート(=レナードカムフォート)3件。実勢はカテゴリ推定(個別Mercari未検証)。回転実績の高い順にソート・実績バッジ付き。 / 個別URL(client/items)は404のため下見検索URLに修正(2026-06-11)",
   "count": 3,
   "items": [
     {
@@ -10,7 +10,7 @@
       "category": "ネックレス",
       "current_price": 13000,
       "deadline": "2026-06-12T10:00:00+09:00",
-      "url": "https://www.ecoauc.com/client/items/12547_0163",
+      "url": "https://www.ecoauc.com/client/auctions/inspect?q=%E3%83%AD%E3%83%B3%E3%83%AF%E3%83%B3%E3%82%BA%20%E3%83%86%E3%82%A3%E3%82%A2%E3%83%99%E3%83%AB%20%E3%83%8D%E3%83%83%E3%82%AF%E3%83%AC%E3%82%B9&limit=50&tableType=grid&page=1",
       "jissei": 36000,
       "profit": 15000,
       "highlight": true,
@@ -19,7 +19,8 @@
       "kaiten": 6,
       "rieki": 26,
       "priority": 1,
-      "note": "開始¥13,000・大ぶり47g革紐。実勢¥36,000(推定)。粗利~¥15,000・本命。6/12オークション"
+      "note": "開始¥13,000・大ぶり47g革紐。実勢¥36,000(推定)。粗利~¥15,000・本命。6/12オークション",
+      "item_no": "12547_0163"
     },
     {
       "name": "ロンワンズ リング MFR-0108",
@@ -27,7 +28,7 @@
       "category": "リング",
       "current_price": 9000,
       "deadline": "2026-06-12T10:00:00+09:00",
-      "url": "https://www.ecoauc.com/client/items/12547_1679",
+      "url": "https://www.ecoauc.com/client/auctions/inspect?q=%E3%83%AD%E3%83%B3%E3%83%AF%E3%83%B3%E3%82%BA%20%E3%83%AA%E3%83%B3%E3%82%B0&limit=50&tableType=grid&page=1",
       "jissei": 28000,
       "profit": 13000,
       "highlight": true,
@@ -36,7 +37,8 @@
       "kaiten": 6,
       "rieki": 26,
       "priority": 1,
-      "note": "開始¥9,000・型番MFR-0108・ランクAB。実勢¥28,000(推定)。粗利~¥13,000。6/12オークション"
+      "note": "開始¥9,000・型番MFR-0108・ランクAB。実勢¥28,000(推定)。粗利~¥13,000。6/12オークション",
+      "item_no": "12547_1679"
     },
     {
       "name": "ロンワンズ カムホート ティアベル ネックレストップ 約17.7g",
@@ -44,7 +46,7 @@
       "category": "ネックレス",
       "current_price": 0,
       "deadline": "2026-06-12T10:00:00+09:00",
-      "url": "https://www.ecoauc.com/client/items/12547_0161",
+      "url": "https://www.ecoauc.com/client/auctions/inspect?q=%E3%83%AD%E3%83%B3%E3%83%AF%E3%83%B3%E3%82%BA%20%E3%83%86%E3%82%A3%E3%82%A2%E3%83%99%E3%83%AB&limit=50&tableType=grid&page=1",
       "jissei": 20000,
       "profit": 6000,
       "highlight": true,
@@ -53,7 +55,8 @@
       "kaiten": 6,
       "rieki": 26,
       "priority": 1,
-      "note": "開始¥0(新ルールでは¥3,000未満so次回除外対象)・小ぶりトップ17.7g。実勢¥20,000(推定)。粗利~¥6,000。6/12オークション"
+      "note": "開始¥0(新ルールでは¥3,000未満so次回除外対象)・小ぶりトップ17.7g。実勢¥20,000(推定)。粗利~¥6,000。6/12オークション",
+      "item_no": "12547_0161"
     }
   ]
 }

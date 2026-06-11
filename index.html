@@ -387,6 +387,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .ins-pb{font-size:9px;font-weight:800;padding:1px 7px;border-radius:7px}
 .ins-pb.k{background:rgba(77,159,255,.16);color:var(--t2)}
 .ins-pb.r{background:rgba(46,212,122,.16);color:var(--t1)}
+.ins-itemno{font-size:9px;color:var(--muted2);margin:4px 0 2px;letter-spacing:.03em}
 /* 在庫: 価格バッジ */
 .iv-badge-down{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;background:rgba(255,92,92,.18);color:var(--alert);margin-left:4px}
 .iv-badge-na{font-size:9px;font-weight:700;padding:1px 6px;border-radius:7px;background:var(--surface2);color:var(--muted2);margin-left:4px}
@@ -1477,7 +1478,8 @@ function renderInspect(){
           ${it.jissei?`<div class="iv-row"><span class="iv-rl">実勢</span><span class="iv-rv">¥${(+it.jissei).toLocaleString('ja-JP')}</span></div>`:''}
           ${it.profit?`<div class="iv-row"><span class="iv-rl">想定粗利</span><span class="iv-rv ${hi?'':''}" style="color:${hi?'var(--profit)':'var(--text)'};font-weight:${hi?'800':'600'}">+¥${(+it.profit).toLocaleString('ja-JP')}${hi?' ★':''}</span></div>`:''}
         </div>
-        ${it.url?`<a class="iv-merc" style="background:#1558b0" href="${it.url}"${TGT}>🔭 下見ページを開く</a>`:`<span class="iv-merc disabled">URL無し</span>`}
+        ${it.item_no?`<div class="ins-itemno">商品番号 ${it.item_no}</div>`:''}
+        ${it.url?`<a class="iv-merc" style="background:#1558b0" href="${it.url}"${TGT}>🔭 EcoAuc下見で探す<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">検索で開く</span></a>`:`<span class="iv-merc disabled">URL無し</span>`}
       </div>`;
     }).join(''):'<div class="empty">該当なし<br>フィルタを変えてください</div>'}`;
 }
