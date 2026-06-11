@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banshee Image Studio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#09090f;--sur:#111118;--bdr:#1d1d28;--bdr2:#272736;
+  --gold:#d4aa60;--txt:#ccc8be;--muted:#50506a;--side:256px;
+}
+html{background:var(--bg);}
+body{min-height:100vh;background:var(--bg);color:var(--txt);
+  font-family:'Helvetica Neue','Hiragino Sans',sans-serif;
+  display:flex;flex-direction:column;}
+
+/* ── Header ── */
+header{display:flex;align-items:center;gap:12px;padding:10px 16px;
+  border-bottom:1px solid var(--bdr);flex-shrink:0;}
+.logo{font-family:Georgia,serif;font-size:17px;letter-spacing:.22em;color:var(--gold);}
+.logo-sub{font-size:9px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;}
+.spacer{flex:1;}
+.hbtn{padding:8px 18px;border-radius:7px;font-size:10px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;cursor:pointer;
+  transition:opacity .15s,transform .1s;border:none;}
+.hbtn:active{transform:scale(.97);}
+.hbtn-gold{background:linear-gradient(135deg,var(--gold),#a07830);color:#08080e;}
+.hbtn-green{background:transparent;border:1px solid #1c3c1c;color:#5cad5c;display:none;}
+.hbtn:hover{opacity:.85;}
+
+/* ── Mode switch ── */
+.mode-switch{display:flex;gap:0;margin-right:12px;border:1px solid var(--bdr2);
+  border-radius:8px;overflow:hidden;}
+.msw{padding:8px 16px;background:transparent;border:none;color:var(--muted);
+  font-size:10px;font-weight:700;letter-spacing:.08em;cursor:pointer;
+  transition:all .15s;text-transform:uppercase;}
+.msw-on{background:linear-gradient(135deg,var(--gold),#a07830);color:#08080e;}
+
+/* ── Collage mode ── */
+.collage-body{display:none;flex:1;height:calc(100vh - 45px);overflow:hidden;}
+.collage-body.active{display:flex;}
+.body.hidden{display:none;}
+
+.col-sidebar{width:var(--side);flex-shrink:0;border-right:1px solid var(--bdr);
+  overflow-y:auto;padding:12px 11px 40px;}
+.col-sidebar::-webkit-scrollbar{width:3px;}
+.col-sidebar::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:2px;}
+
+/* layout picker */
+.lay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:4px;}
+.lay-btn{aspect-ratio:1;background:var(--bg);border:1px solid var(--bdr2);
+  border-radius:7px;cursor:pointer;padding:5px;transition:all .15s;
+  display:flex;align-items:center;justify-content:center;}
+.lay-btn:hover{border-color:var(--gold);}
+.lay-btn.on{border-color:var(--gold);background:rgba(212,170,96,.08);}
+.lay-btn svg{width:100%;height:100%;}
+.lay-btn svg rect{fill:none;stroke:var(--muted);stroke-width:3;}
+.lay-btn.on svg rect{stroke:var(--gold);}
+
+/* collage preview */
+.col-prev-area{flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;padding:14px;overflow:hidden;background:var(--bg);}
+.col-stage{position:relative;background:#fff;border-radius:4px;overflow:hidden;
+  box-shadow:0 8px 40px rgba(0,0,0,.5);}
+.col-cell{position:absolute;overflow:hidden;background:#16161e;
+  border:1px solid #fff;}
+.col-cell img{position:absolute;top:0;left:0;transform-origin:0 0;
+  cursor:grab;user-select:none;-webkit-user-drag:none;max-width:none;}
+.col-cell.dragging img{cursor:grabbing;}
+.col-cell.sel{outline:2px solid var(--gold);outline-offset:-2px;z-index:5;}
+.col-cell-empty{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:6px;pointer-events:none;}
+.col-cell-empty .ico{font-size:24px;opacity:.25;}
+.col-cell-empty .txt{font-size:10px;color:#888;letter-spacing:.05em;}
+.col-cell .cell-file{position:absolute;inset:0;opacity:0;cursor:pointer;z-index:2;}
+.col-cell.has-img .cell-file{display:none;}
+
+.col-hint{font-size:9px;color:#2a2a38;letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:8px;}
+
+/* selected cell controls */
+.cell-ctrl{margin-top:10px;}
+.cell-ctrl.dim{opacity:.3;pointer-events:none;}
+
+.hbtn-template-only{}
+
+/* ── Body ── */
+.body{display:flex;height:calc(100vh - 45px);overflow:hidden;}
+
+/* ── Sidebar ── */
+.sidebar{width:var(--side);flex-shrink:0;border-right:1px solid var(--bdr);
+  overflow-y:auto;padding:12px 11px 40px;}
+.sidebar::-webkit-scrollbar{width:3px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:2px;}
+.card{background:var(--sur);border:1px solid var(--bdr);border-radius:10px;
+  padding:12px;margin-bottom:10px;}
+.sl{font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:10px;display:block;}
+
+/* brand input */
+.bi{width:100%;padding:8px 10px;background:var(--bg);border:1px solid var(--bdr2);
+  border-radius:7px;color:#f0ece0;font-size:17px;font-weight:600;
+  font-family:Georgia,serif;outline:none;transition:border-color .2s;}
+.bi:focus{border-color:var(--gold);}
+.presets{display:flex;flex-wrap:wrap;gap:4px;margin-top:9px;}
+.pb{padding:3px 9px;background:transparent;border:1px solid var(--bdr2);
+  border-radius:20px;color:var(--muted);font-size:10px;font-family:Georgia,serif;
+  cursor:pointer;transition:all .15s;}
+.pb:hover{border-color:var(--gold);color:var(--gold);}
+
+/* upload zone */
+.up{border:1px dashed var(--bdr2);border-radius:8px;padding:14px 10px;
+  text-align:center;transition:all .2s;position:relative;overflow:hidden;}
+.up input[type=file]{position:absolute;inset:0;width:100%;height:100%;
+  opacity:0;cursor:pointer;z-index:10;}
+.up:hover,.up.over{border-color:var(--gold);background:rgba(212,170,96,.04);}
+.up-icon{font-size:22px;opacity:.3;margin-bottom:6px;}
+.up p{font-size:10px;color:var(--muted);line-height:1.6;pointer-events:none;}
+.up p b{color:var(--gold);font-weight:500;}
+#thumb{max-width:100%;max-height:64px;border-radius:5px;margin-top:8px;
+  display:none;border:1px solid var(--bdr);pointer-events:none;}
+
+/* row 2 */
+.r2{display:flex;gap:8px;}
+.r2>div{flex:1;}
+.fl{font-size:9px;color:var(--muted);letter-spacing:.09em;margin-bottom:5px;display:block;}
+select{width:100%;padding:7px 8px;background:var(--bg);border:1px solid var(--bdr2);
+  border-radius:7px;color:#bbb;font-size:11px;outline:none;cursor:pointer;}
+
+/* sliders */
+.sv{display:flex;flex-direction:column;gap:8px;}
+.si{display:flex;align-items:center;gap:7px;}
+.si>span:first-child{font-size:10px;color:var(--muted);flex:1;}
+input[type=range]{width:80px;height:3px;-webkit-appearance:none;
+  background:var(--bdr2);border-radius:2px;outline:none;cursor:pointer;flex-shrink:0;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;
+  background:var(--gold);border-radius:50%;cursor:pointer;}
+.sv-val{font-size:10px;color:var(--gold);min-width:28px;text-align:right;}
+
+/* colors */
+.cr{display:flex;flex-direction:column;gap:7px;}
+.ci{display:flex;align-items:center;justify-content:space-between;}
+.ci span{font-size:10px;color:var(--muted);}
+.ci input[type=color]{width:30px;height:19px;border:1px solid var(--bdr2);
+  border-radius:4px;background:none;cursor:pointer;padding:1px;}
+
+/* toggles */
+.tr{display:flex;gap:14px;flex-wrap:wrap;}
+.tg{display:flex;align-items:center;gap:5px;cursor:pointer;font-size:10px;color:var(--muted);}
+.tg input{accent-color:var(--gold);cursor:pointer;}
+
+/* ── Preview area ── */
+.prev-area{flex:1;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:14px;overflow:hidden;background:var(--bg);}
+.prev-hint{font-size:9px;color:#2a2a38;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
+
+.pw{position:relative;overflow:hidden;border-radius:10px;
+  background:#ffffff;box-shadow:0 4px 24px rgba(0,0,0,.3);}
+
+/* background image */
+#bg-img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:50% 50%;
+  display:none;cursor:move;z-index:0;transform-origin:center center;}
+
+/* placeholders */
+.bg-ph{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:8px;z-index:0;}
+.bg-ph-icon{font-size:28px;opacity:.1;}
+.bg-ph-txt{font-size:11px;color:#2a2a3a;letter-spacing:.08em;}
+
+/* frame svg */
+.fsv{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;}
+
+/* ── crop overlay ── */
+#crop-overlay{position:absolute;inset:0;z-index:15;display:none;cursor:crosshair;}
+#crop-rect{
+  position:absolute;
+  border:2px solid rgba(255,255,255,.9);
+  box-shadow:0 0 0 9999px rgba(0,0,0,.55);
+  cursor:move;box-sizing:border-box;
+}
+.ch{position:absolute;width:11px;height:11px;background:#fff;
+  border:1px solid rgba(0,0,0,.4);border-radius:2px;z-index:1;}
+.ch[data-c=tl]{top:-6px;left:-6px;cursor:nwse-resize;}
+.ch[data-c=tr]{top:-6px;right:-6px;cursor:nesw-resize;}
+.ch[data-c=bl]{bottom:-6px;left:-6px;cursor:nesw-resize;}
+.ch[data-c=br]{bottom:-6px;right:-6px;cursor:nwse-resize;}
+.ch[data-c=t]{top:-6px;left:50%;transform:translateX(-50%);cursor:ns-resize;}
+.ch[data-c=b]{bottom:-6px;left:50%;transform:translateX(-50%);cursor:ns-resize;}
+.ch[data-c=l]{left:-6px;top:50%;transform:translateY(-50%);cursor:ew-resize;}
+.ch[data-c=r]{right:-6px;top:50%;transform:translateY(-50%);cursor:ew-resize;}
+.crop-active-btn{background:linear-gradient(135deg,#3a7a5a,#2a5a3a)!important;color:#8effc8!important;}
+
+/* draggable text elements */
+.de{position:absolute;z-index:3;cursor:grab;user-select:none;}
+.de:hover{outline:1px dashed rgba(212,170,96,.55);}
+.de.dr{cursor:grabbing;outline:1px dashed rgba(212,170,96,.9);z-index:10;}
+#el-brand{font-family:Georgia,'Times New Roman',serif;font-weight:700;
+  color:#f5f0e0;white-space:nowrap;line-height:1;
+  text-shadow:0 0 8px rgba(0,0,0,.95),0 2px 4px rgba(0,0,0,.95),
+    0 4px 18px rgba(0,0,0,.85),-1px -1px 0 rgba(0,0,0,.6),1px 1px 0 rgba(0,0,0,.6);}
+.sk-badge{font-family:'Hiragino Mincho ProN','Yu Mincho',Georgia,serif;font-weight:700;
+  color:var(--gold);white-space:nowrap;padding:.2em .55em;
+  border:1px solid rgba(212,170,96,.75);background:rgba(6,5,2,.82);
+  border-radius:3px;letter-spacing:.06em;box-shadow:0 2px 12px rgba(0,0,0,.6);}
+#el-bansee{font-family:Georgia,'Times New Roman',serif;font-weight:300;
+  letter-spacing:.22em;white-space:nowrap;
+  text-shadow:0 0 6px rgba(0,0,0,.95),0 2px 8px rgba(0,0,0,.85),
+    -1px -1px 0 rgba(0,0,0,.5),1px 1px 0 rgba(0,0,0,.5);}
+#dl-canvas{display:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">Banshee</div>
+    <div class="logo-sub">Image Studio</div>
+  </div>
+  <div style="width:1px;height:16px;background:var(--bdr2)"></div>
+  <span class="logo-sub" id="mode-label">商品画像テンプレート</span>
+  <div class="spacer"></div>
+  <div class="mode-switch">
+    <button class="msw msw-on" id="msw-template" onclick="setMode('template')">テンプレート</button>
+    <button class="msw" id="msw-collage" onclick="setMode('collage')">コラージュ</button>
+  </div>
+  <button class="hbtn hbtn-green" id="dl-btn" style="display:none">↓ Download PNG</button>
+  <button class="hbtn hbtn-gold" id="gen-btn">↓ Generate &amp; Save</button>
+</header>
+
+<div class="body" id="template-body">
+
+  <!-- ── Sidebar ── -->
+  <div class="sidebar">
+
+    <!-- Brand -->
+    <div class="card">
+      <span class="sl">ブランド名</span>
+      <input class="bi" id="brand-input" value="Louis Vuitton">
+      <div class="presets">
+        <button class="pb" data-b="Louis Vuitton">Louis Vuitton</button>
+        <button class="pb" data-b="Hermès">Hermès</button>
+        <button class="pb" data-b="P R A D A">P R A D A</button>
+        <button class="pb" data-b="Tiffany &amp; Co.">Tiffany &amp; Co.</button>
+        <button class="pb" data-b="CHANEL">CHANEL</button>
+        <button class="pb" data-b="GUCCI">GUCCI</button>
+        <button class="pb" data-b="Burberry">Burberry</button>
+        <button class="pb" data-b="Coach">Coach</button>
+      </div>
+    </div>
+
+    <!-- Image upload -->
+    <div class="card">
+      <span class="sl">商品画像</span>
+      <div class="up" id="up-zone">
+        <input type="file" id="file-input" accept="image/*">
+        <div class="up-icon">⬆</div>
+        <p>クリック or ドロップ<br><b>画像を選択</b></p>
+        <img id="thumb" alt="">
+      </div>
+      <!-- zoom & reset – hidden until image loaded -->
+      <div id="img-ctrl" style="display:none;">
+        <div class="si" style="margin-top:10px;">
+          <span style="font-size:10px;color:var(--muted);flex:1;">ズーム</span>
+          <input type="range" id="sl-zoom" min="50" max="300" step="1" value="100">
+          <span class="sv-val" id="vl-zoom">1.0×</span>
+        </div>
+        <button id="img-reset"
+          style="margin-top:8px;width:100%;padding:6px;background:transparent;
+          border:1px solid var(--bdr2);border-radius:6px;color:var(--muted);
+          font-size:10px;cursor:pointer;">位置・ズームをリセット</button>
+
+        <!-- 白抜き -->
+        <div style="margin-top:10px;border-top:1px solid var(--bdr);padding-top:10px;">
+          <span class="fl">背景の白抜き</span>
+          <div class="si" style="margin-bottom:8px;">
+            <span style="font-size:10px;color:var(--muted);flex:1;">しきい値</span>
+            <input type="range" id="sl-thresh" min="100" max="254" step="1" value="230">
+            <span class="sv-val" id="vl-thresh">230</span>
+          </div>
+          <div style="display:flex;gap:6px;">
+            <button id="btn-bg-remove"
+              style="flex:1;padding:7px 0;background:linear-gradient(135deg,#4a2a8a,#6a3aaa);
+              border:none;border-radius:7px;color:#e8d8ff;font-size:11px;font-weight:700;
+              cursor:pointer;letter-spacing:.04em;">🪄 白抜きする</button>
+            <button id="btn-bg-restore"
+              style="flex:1;padding:7px 0;background:transparent;
+              border:1px solid var(--bdr2);border-radius:7px;color:var(--muted);
+              font-size:11px;cursor:pointer;">元に戻す</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Output -->
+    <div class="card">
+      <span class="sl">出力設定</span>
+      <div class="r2">
+        <div>
+          <span class="fl">サイズ</span>
+          <select id="sel-size">
+            <option value="1080">1080px</option>
+            <option value="800">800px</option>
+            <option value="1200">1200px</option>
+          </select>
+        </div>
+        <div>
+          <span class="fl">フォーマット</span>
+          <select id="sel-fmt">
+            <option value="png">PNG</option>
+            <option value="jpg">JPG</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="r2" style="margin-top:8px;">
+        <div>
+          <span class="fl">フレーム型</span>
+          <select id="sel-frame">
+            <option value="double">ダブル</option>
+            <option value="single">シングル</option>
+            <option value="corner">コーナー</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- トリミング -->
+      <div style="margin-top:10px;border-top:1px solid var(--bdr);padding-top:10px;">
+        <span class="fl">トリミング</span>
+        <div style="display:flex;gap:6px;">
+          <button id="btn-crop"
+            style="flex:1;padding:8px 0;background:transparent;border:1px solid var(--bdr2);
+            border-radius:7px;color:var(--muted);font-size:11px;font-weight:700;
+            cursor:pointer;letter-spacing:.04em;transition:all .18s;">✂️ トリミング ON</button>
+          <button id="btn-crop-reset"
+            style="flex:1;padding:8px 0;background:transparent;border:1px solid var(--bdr2);
+            border-radius:7px;color:var(--muted);font-size:11px;cursor:pointer;">リセット</button>
+        </div>
+        <p style="font-size:10px;color:var(--muted);margin-top:6px;line-height:1.5;">
+          ONにするとプレビュー上で<br>ドラッグして範囲を指定できます</p>
+      </div>
+    </div>
+
+    <!-- Frame sliders -->
+    <div class="card">
+      <span class="sl">フレーム調整</span>
+      <div class="sv">
+        <div class="si">
+          <span>外枠余白</span>
+          <input type="range" id="sl-inset" min="0.4" max="6" step="0.1" value="1.8">
+          <span class="sv-val" id="vl-inset">1.8</span>
+        </div>
+        <div class="si">
+          <span>二重線間隔</span>
+          <input type="range" id="sl-gap" min="0.3" max="2.5" step="0.1" value="1.2">
+          <span class="sv-val" id="vl-gap">1.2</span>
+        </div>
+        <div class="si">
+          <span>線の太さ</span>
+          <input type="range" id="sl-lw" min="0.3" max="4.0" step="0.1" value="2.0">
+          <span class="sv-val" id="vl-lw">2.0</span>
+        </div>
+        <div class="si">
+          <span>コーナー飾り</span>
+          <input type="range" id="sl-corner" min="0.6" max="3.5" step="0.1" value="1.8">
+          <span class="sv-val" id="vl-corner">1.8</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Colors -->
+    <div class="card">
+      <span class="sl">カラー</span>
+      <div class="cr">
+        <div class="ci"><span>フレーム / 正規品</span><input type="color" id="col-gold" value="#C8921A"></div>
+        <div class="ci"><span>Bansheeロゴ</span><input type="color" id="col-bansee" value="#ffffff"></div>
+        <div class="ci"><span>ブランド名</span><input type="color" id="col-brand" value="#ffffff"></div>
+      </div>
+      <div class="tr" style="margin-top:11px;">
+        <label class="tg"><input type="checkbox" id="tog-seiki" checked> 正規品</label>
+        <label class="tg"><input type="checkbox" id="tog-bansee" checked> Banshee</label>
+        <input type="checkbox" id="tog-custom" style="display:none">
+      </div>
+
+      <div style="margin-top:12px;border-top:1px solid var(--bdr);padding-top:10px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+          <span class="fl" style="margin-bottom:0;">コメントバッジ</span>
+          <button id="btn-custom-toggle"
+            onclick="toggleCustom()"
+            style="padding:3px 12px;border-radius:20px;font-size:10px;font-weight:700;
+            letter-spacing:.08em;cursor:pointer;border:none;transition:all .18s;
+            background:#2a1a1a;color:#8a4a4a;">OFF</button>
+        </div>
+        <input id="custom-text" value="新品"
+          style="width:100%;padding:7px 10px;background:var(--bg);border:1px solid var(--bdr2);
+          border-radius:7px;color:#f0ece0;font-size:14px;outline:none;opacity:0.35;
+          font-family:Georgia,serif;transition:border-color .2s;pointer-events:none;"
+          placeholder="新品 / 型番 / コメントなど">
+      </div>
+    </div>
+
+  </div><!-- /sidebar -->
+
+  <!-- ── Preview ── -->
+  <div class="prev-area" id="prev-area">
+    <p class="prev-hint">▸ 画像をドラッグで移動 / テキストもドラッグで移動</p>
+    <div class="pw" id="preview">
+      <img id="bg-img" alt="">
+      <div class="bg-ph" id="bg-ph">
+        <div class="bg-ph-icon">📷</div>
+        <div class="bg-ph-txt">画像をアップロード</div>
+      </div>
+      <svg class="fsv" id="frame-svg" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+      <div class="de" id="el-brand" data-drag="brand">Louis Vuitton</div>
+      <div class="de" id="el-seiki" data-drag="seiki"><div class="sk-badge">正規品</div></div>
+      <div class="de" id="el-custom" data-drag="custom"><div class="sk-badge">新品</div></div>
+      <div class="de" id="el-bansee" data-drag="bansee">Banshee</div>
+      <!-- crop overlay -->
+      <div id="crop-overlay">
+        <div id="crop-rect">
+          <div class="ch" data-c="tl"></div>
+          <div class="ch" data-c="t"></div>
+          <div class="ch" data-c="tr"></div>
+          <div class="ch" data-c="l"></div>
+          <div class="ch" data-c="r"></div>
+          <div class="ch" data-c="bl"></div>
+          <div class="ch" data-c="b"></div>
+          <div class="ch" data-c="br"></div>
+        </div>
+      </div>
+    </div>
+    <p class="prev-hint" style="margin-top:8px;">Generate & Save → 下に生成画像が表示 → 右クリック保存</p>
+  </div>
+
+</div>
+
+<!-- ════════ COLLAGE MODE ════════ -->
+<div class="collage-body" id="collage-body">
+  <div class="col-sidebar">
+    <div class="card">
+      <span class="sl">レイアウト</span>
+      <div class="lay-grid" id="lay-grid">
+        <button class="lay-btn on" data-lay="2h" title="左右2分割">
+          <svg viewBox="0 0 100 100"><rect x="3" y="3" width="44" height="94"/><rect x="53" y="3" width="44" height="94"/></svg>
+        </button>
+        <button class="lay-btn" data-lay="2v" title="上下2分割">
+          <svg viewBox="0 0 100 100"><rect x="3" y="3" width="94" height="44"/><rect x="3" y="53" width="94" height="44"/></svg>
+        </button>
+        <button class="lay-btn" data-lay="3h" title="横3分割">
+          <svg viewBox="0 0 100 100"><rect x="3" y="3" width="28" height="94"/><rect x="36" y="3" width="28" height="94"/><rect x="69" y="3" width="28" height="94"/></svg>
+        </button>
+        <button class="lay-btn" data-lay="4" title="4分割">
+          <svg viewBox="0 0 100 100"><rect x="3" y="3" width="44" height="44"/><rect x="53" y="3" width="44" height="44"/><rect x="3" y="53" width="44" height="44"/><rect x="53" y="53" width="44" height="44"/></svg>
+        </button>
+        <button class="lay-btn" data-lay="3l" title="左1大+右2小">
+          <svg viewBox="0 0 100 100"><rect x="3" y="3" width="55" height="94"/><rect x="64" y="3" width="33" height="44"/><rect x="64" y="53" width="33" height="44"/></svg>
+        </button>
+        <button class="lay-btn" data-lay="6" title="6分割">
+          <svg viewBox="0 0 100 100"><rect x="3" y="3" width="28" height="44"/><rect x="36" y="3" width="28" height="44"/><rect x="69" y="3" width="28" height="44"/><rect x="3" y="53" width="28" height="44"/><rect x="36" y="53" width="28" height="44"/><rect x="69" y="53" width="28" height="44"/></svg>
+        </button>
+      </div>
+      <div style="margin-top:10px;position:relative;overflow:hidden;border-radius:7px;">
+        <input type="file" id="bulk-files" accept="image/*" multiple
+          style="position:absolute;inset:0;opacity:0;cursor:pointer;z-index:5;width:100%;height:100%;">
+        <div style="padding:9px;text-align:center;border:1px dashed var(--bdr2);border-radius:7px;
+          color:var(--muted);font-size:10px;letter-spacing:.05em;pointer-events:none;">
+          📷 写真をまとめて追加（複数選択）</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="sl">枠の設定</span>
+      <div class="sv">
+        <div class="si">
+          <span>枠線の太さ</span>
+          <input type="range" id="col-border" min="0" max="20" step="1" value="4">
+          <span class="sv-val" id="col-border-v">4</span>
+        </div>
+        <div class="si">
+          <span>角丸</span>
+          <input type="range" id="col-radius" min="0" max="40" step="1" value="0">
+          <span class="sv-val" id="col-radius-v">0</span>
+        </div>
+      </div>
+      <div class="ci" style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-size:10px;color:var(--muted);">枠線の色</span>
+        <input type="color" id="col-border-color" value="#ffffff"
+          style="width:30px;height:19px;border:1px solid var(--bdr2);border-radius:4px;background:none;cursor:pointer;padding:1px;">
+      </div>
+    </div>
+
+    <div class="card cell-ctrl dim" id="cell-ctrl">
+      <span class="sl">選択中の写真</span>
+      <p style="font-size:10px;color:var(--muted);line-height:1.6;margin-bottom:10px;" id="cell-ctrl-hint">
+        写真をタップして選択<br>ドラッグで位置・スライダーで拡大</p>
+      <div class="sv" id="cell-ctrl-sliders" style="display:none;">
+        <div class="si">
+          <span>拡大</span>
+          <input type="range" id="cell-zoom" min="100" max="400" step="1" value="100">
+          <span class="sv-val" id="cell-zoom-v">1.0×</span>
+        </div>
+        <div class="si">
+          <span>傾き微調整</span>
+          <input type="range" id="cell-fine" min="-45" max="45" step="1" value="0">
+          <span class="sv-val" id="cell-fine-v">0°</span>
+        </div>
+        <div style="display:flex;gap:6px;margin-top:4px;">
+          <button id="cell-rot-l" style="flex:1;padding:8px 0;background:transparent;
+            border:1px solid var(--bdr2);border-radius:7px;color:var(--txt);
+            font-size:14px;cursor:pointer;" title="左に90度回転">↺ 90°</button>
+          <button id="cell-rot-r" style="flex:1;padding:8px 0;background:transparent;
+            border:1px solid var(--bdr2);border-radius:7px;color:var(--txt);
+            font-size:14px;cursor:pointer;" title="右に90度回転">90° ↻</button>
+        </div>
+      </div>
+      <button id="cell-reset" style="display:none;margin-top:10px;width:100%;padding:7px;
+        background:transparent;border:1px solid var(--bdr2);border-radius:6px;
+        color:var(--muted);font-size:10px;cursor:pointer;">位置・拡大をリセット</button>
+      <button id="cell-swap" style="display:none;margin-top:7px;width:100%;padding:7px;
+        background:transparent;border:1px solid var(--bdr2);border-radius:6px;
+        color:var(--txt);font-size:10px;cursor:pointer;">⇄ 次の写真と入れ替え</button>
+      <button id="cell-clear" style="display:none;margin-top:7px;width:100%;padding:7px;
+        background:transparent;border:1px solid #3a1a1a;border-radius:6px;
+        color:#8a4a4a;font-size:10px;cursor:pointer;">この写真を削除</button>
+    </div>
+
+    <div class="card">
+      <span class="sl">出力</span>
+      <div class="r2">
+        <div>
+          <span class="fl">サイズ</span>
+          <select id="col-size">
+            <option value="1080">1080px</option>
+            <option value="1200">1200px</option>
+            <option value="1440">1440px</option>
+          </select>
+        </div>
+        <div>
+          <span class="fl">形式</span>
+          <select id="col-fmt">
+            <option value="jpg">JPG</option>
+            <option value="png">PNG</option>
+          </select>
+        </div>
+      </div>
+      <button id="col-gen" class="hbtn hbtn-gold" style="width:100%;margin-top:12px;padding:11px;">
+        ↓ 画像を生成して保存</button>
+      <button id="col-clear-all" style="width:100%;margin-top:8px;padding:8px;
+        background:transparent;border:1px solid var(--bdr2);border-radius:7px;
+        color:var(--muted);font-size:10px;cursor:pointer;">全部クリア</button>
+    </div>
+  </div>
+
+  <div class="col-prev-area">
+    <p class="col-hint">▸ 各枠をタップで写真を追加 / 写真をドラッグで移動</p>
+    <div class="col-stage" id="col-stage"></div>
+    <p class="col-hint" style="margin-top:8px;">生成して保存 → 下に画像表示 → 長押し/右クリックで保存</p>
+  </div>
+</div>
+<div id="output-area"
+  style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);
+  z-index:100;overflow-y:auto;padding:20px;box-sizing:border-box;">
+  <div style="max-width:560px;margin:0 auto;">
+    <button onclick="document.getElementById('output-area').style.display='none'"
+      style="display:block;margin-bottom:12px;padding:6px 16px;
+      background:transparent;border:1px solid #555;border-radius:6px;
+      color:#aaa;font-size:11px;cursor:pointer;">✕ 閉じる</button>
+    <div id="output-inner"></div>
+  </div>
+</div>
+
+<canvas id="dl-canvas"></canvas>
+
+<script>
+// ════════════════════════════════════════
+//  MODE SWITCH (template ⇄ collage)
+// ════════════════════════════════════════
+function setMode(m){
+  var tb = document.getElementById('template-body');
+  var cb = document.getElementById('collage-body');
+  var mt = document.getElementById('msw-template');
+  var mc = document.getElementById('msw-collage');
+  var lbl= document.getElementById('mode-label');
+  var genBtn = document.getElementById('gen-btn');
+  if(m==='collage'){
+    tb.classList.add('hidden');
+    cb.classList.add('active');
+    mt.classList.remove('msw-on'); mc.classList.add('msw-on');
+    lbl.textContent='状態写真コラージュ';
+    genBtn.style.display='none';
+    if(!window.__collageInit){ initCollage(); window.__collageInit=true; }
+  }else{
+    cb.classList.remove('active');
+    tb.classList.remove('hidden');
+    mc.classList.remove('msw-on'); mt.classList.add('msw-on');
+    lbl.textContent='商品画像テンプレート';
+    genBtn.style.display='';
+  }
+}
+
+// ════════════════════════════════════════
+//  COLLAGE ENGINE
+// ════════════════════════════════════════
+var COL = {
+  layout: '2h',
+  border: 4,
+  radius: 0,
+  borderColor: '#ffffff',
+  cells: [],          // {img, ox, oy, zoom, baseScale, el, imgEl}
+  selected: -1,
+  stageSize: 0,
+};
+
+// レイアウト定義（相対座標 0-1）
+var LAYOUTS = {
+  '2h': [[0,0,.5,1],[.5,0,.5,1]],
+  '2v': [[0,0,1,.5],[0,.5,1,.5]],
+  '3h': [[0,0,1/3,1],[1/3,0,1/3,1],[2/3,0,1/3,1]],
+  '4':  [[0,0,.5,.5],[.5,0,.5,.5],[0,.5,.5,.5],[.5,.5,.5,.5]],
+  '3l': [[0,0,.6,1],[.6,0,.4,.5],[.6,.5,.4,.5]],
+  '6':  [[0,0,1/3,.5],[1/3,0,1/3,.5],[2/3,0,1/3,.5],[0,.5,1/3,.5],[1/3,.5,1/3,.5],[2/3,.5,1/3,.5]],
+};
+
+function CG(id){ return document.getElementById(id); }
+
+function initCollage(){
+  // レイアウトボタン
+  document.querySelectorAll('.lay-btn').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.lay-btn').forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on');
+      COL.layout = b.dataset.lay;
+      buildStage();
+    });
+  });
+  // スライダー
+  CG('col-border').addEventListener('input', function(e){
+    COL.border = +e.target.value; CG('col-border-v').textContent = COL.border;
+    applyFrameStyle();
+  });
+  CG('col-radius').addEventListener('input', function(e){
+    COL.radius = +e.target.value; CG('col-radius-v').textContent = COL.radius;
+    applyFrameStyle();
+  });
+  CG('col-border-color').addEventListener('input', function(e){
+    COL.borderColor = e.target.value; applyFrameStyle();
+  });
+  // セル拡大スライダー
+  CG('cell-zoom').addEventListener('input', function(e){
+    if(COL.selected<0) return;
+    var c = COL.cells[COL.selected];
+    if(!c.img) return;
+    c.zoom = +e.target.value/100;
+    CG('cell-zoom-v').textContent = c.zoom.toFixed(1)+'×';
+    clampAndRender(c);
+  });
+  CG('cell-fine').addEventListener('input', function(e){
+    if(COL.selected<0) return;
+    var c = COL.cells[COL.selected];
+    if(!c.img) return;
+    c.fine = +e.target.value;
+    CG('cell-fine-v').textContent = c.fine+'°';
+    centerKeep(c); clampAndRender(c);
+  });
+  CG('cell-rot-l').addEventListener('click', function(){
+    if(COL.selected<0) return;
+    var c = COL.cells[COL.selected];
+    if(!c.img) return;
+    c.rot = ((c.rot - 90) % 360 + 360) % 360;
+    centerImg(c); clampAndRender(c);
+  });
+  CG('cell-rot-r').addEventListener('click', function(){
+    if(COL.selected<0) return;
+    var c = COL.cells[COL.selected];
+    if(!c.img) return;
+    c.rot = (c.rot + 90) % 360;
+    centerImg(c); clampAndRender(c);
+  });
+  CG('cell-reset').addEventListener('click', function(){
+    if(COL.selected<0) return;
+    var c = COL.cells[COL.selected];
+    c.zoom=1; c.ox=0; c.oy=0; c.rot=0; c.fine=0;
+    centerImg(c); clampAndRender(c);
+    CG('cell-zoom').value=100; CG('cell-zoom-v').textContent='1.0×';
+    CG('cell-fine').value=0; CG('cell-fine-v').textContent='0°';
+  });
+  CG('cell-clear').addEventListener('click', function(){
+    if(COL.selected<0) return;
+    clearCell(COL.selected);
+  });
+  CG('col-clear-all').addEventListener('click', function(){
+    COL.cells.forEach(function(_,i){ clearCell(i); });
+    selectCell(-1);
+  });
+  CG('col-gen').addEventListener('click', generateCollage);
+  // 一括追加: 選んだ順に空きセルへ流し込む
+  CG('bulk-files').addEventListener('change', function(e){
+    var files = Array.from(e.target.files||[]);
+    if(!files.length) return;
+    var fi = 0;
+    COL.cells.forEach(function(c, idx){
+      if(fi >= files.length) return;
+      if(!c.img){ loadImageToCell(idx, files[fi]); fi++; }
+    });
+    e.target.value = '';
+  });
+  // 入れ替え: 選択セルと「次の写真があるセル」を交換
+  CG('cell-swap').addEventListener('click', function(){
+    if(COL.selected<0) return;
+    var i = COL.selected;
+    var n = COL.cells.length;
+    // 次の画像入りセルを探す（なければ次の空きでも交換=移動）
+    for(var k=1;k<n;k++){
+      var j=(i+k)%n;
+      if(COL.cells[j].img || k===n-1){ swapCells(i,j); selectCell(j); break; }
+    }
+  });
+  // ステージのリサイズ対応
+  window.addEventListener('resize', function(){
+    if(CG('collage-body').classList.contains('active')) buildStage();
+  });
+  buildStage();
+}
+
+function buildStage(){
+  var stage = CG('col-stage');
+  var area = stage.parentElement;
+  // 正方形ステージ：利用可能領域に収める
+  var maxW = area.clientWidth - 28;
+  var maxH = area.clientHeight - 70;
+  var size = Math.min(maxW, maxH, 720);
+  size = Math.max(size, 200);
+  COL.stageSize = size;
+  stage.style.width = size+'px';
+  stage.style.height = size+'px';
+
+  // 既存セルの画像データを保持
+  var prevImgs = COL.cells.map(function(c){
+    return c.img ? {img:c.img, ox:c.ox, oy:c.oy, zoom:c.zoom, rot:c.rot, fine:c.fine} : null;
+  });
+
+  stage.innerHTML='';
+  COL.cells = [];
+  var defs = LAYOUTS[COL.layout];
+  defs.forEach(function(d, i){
+    var cell = document.createElement('div');
+    cell.className = 'col-cell';
+    cell.style.left   = (d[0]*size)+'px';
+    cell.style.top    = (d[1]*size)+'px';
+    cell.style.width  = (d[2]*size)+'px';
+    cell.style.height = (d[3]*size)+'px';
+
+    var empty = document.createElement('div');
+    empty.className='col-cell-empty';
+    empty.innerHTML='<div class="ico">＋</div><div class="txt">写真を追加</div>';
+    cell.appendChild(empty);
+
+    var fileInput = document.createElement('input');
+    fileInput.type='file'; fileInput.accept='image/*';
+    fileInput.className='cell-file';
+    cell.appendChild(fileInput);
+
+    stage.appendChild(cell);
+
+    var cObj = {img:null, ox:0, oy:0, zoom:1, rot:0, fine:0, baseScale:1, el:cell, imgEl:null, def:d};
+    COL.cells.push(cObj);
+
+    fileInput.addEventListener('change', function(e){
+      var f = e.target.files[0];
+      if(f) loadImageToCell(i, f);
+    });
+    cell.addEventListener('mousedown', function(){ if(cObj.img) selectCell(i); });
+    cell.addEventListener('touchstart', function(){ if(cObj.img) selectCell(i); }, {passive:true});
+
+    // 以前の画像を復元（レイアウト変更時）
+    if(prevImgs[i]){
+      restoreImageToCell(i, prevImgs[i]);
+    }
+  });
+  applyFrameStyle();
+  selectCell(-1);
+}
+
+function applyFrameStyle(){
+  var stage = CG('col-stage');
+  stage.style.background = COL.borderColor;
+  stage.style.borderRadius = COL.radius+'px';
+  var b = COL.border;
+  COL.cells.forEach(function(c){
+    var d = c.def, s = COL.stageSize;
+    // 枠線分の隙間
+    c.el.style.left   = (d[0]*s + b/2)+'px';
+    c.el.style.top    = (d[1]*s + b/2)+'px';
+    c.el.style.width  = (d[2]*s - b)+'px';
+    c.el.style.height = (d[3]*s - b)+'px';
+    c.el.style.borderWidth = '0px';
+    c.el.style.borderRadius = Math.max(0, COL.radius-b)+'px';
+    if(c.img){ centerKeep(c); clampAndRender(c); }
+  });
+}
+
+function loadImageToCell(i, file){
+  var reader = new FileReader();
+  reader.onload = function(ev){
+    var img = new Image();
+    img.onload = function(){
+      var c = COL.cells[i];
+      setupCellImage(c, img);
+      selectCell(i);
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function restoreImageToCell(i, saved){
+  var img = new Image();
+  img.onload = function(){
+    var c = COL.cells[i];
+    setupCellImage(c, img);
+    c.zoom = saved.zoom; c.ox = saved.ox; c.oy = saved.oy;
+    c.rot = saved.rot||0; c.fine = saved.fine||0;
+    centerImg(c); clampAndRender(c);
+  };
+  img.src = saved.img.src;
+}
+
+function setupCellImage(c, img){
+  c.img = img;
+  c.el.classList.add('has-img');
+  // 空表示を消す
+  var empty = c.el.querySelector('.col-cell-empty');
+  if(empty) empty.style.display='none';
+  // img要素
+  if(!c.imgEl){
+    c.imgEl = document.createElement('img');
+    c.el.appendChild(c.imgEl);
+    attachDrag(c);
+  }
+  c.imgEl.src = img.src;
+  c.zoom = 1; c.ox = 0; c.oy = 0; c.rot = 0; c.fine = 0;
+  centerImg(c);
+  clampAndRender(c);
+}
+
+// 総回転角（度）
+function totalRot(c){ return (c.rot||0) + (c.fine||0); }
+
+// 回転後のバウンディングボックス寸法（単位スケール）
+function rotatedBox(iw, ih, deg){
+  var r = deg*Math.PI/180;
+  var cos=Math.abs(Math.cos(r)), sin=Math.abs(Math.sin(r));
+  return { w: iw*cos + ih*sin, h: iw*sin + ih*cos };
+}
+
+// セルを埋める基準スケール（回転を考慮し隙間ゼロ）
+// 手法: セル矩形の4頂点を -deg 逆回転した座標系で、
+//       画像中心からの最大の必要範囲を求める
+function coverScale(c){
+  var cw = c.el.clientWidth, ch = c.el.clientHeight;
+  var deg = totalRot(c);
+  var r = -deg*Math.PI/180;  // 逆回転
+  var cos=Math.cos(r), sin=Math.sin(r);
+  // セル中心基準の4頂点
+  var hw=cw/2, hh=ch/2;
+  var corners=[[-hw,-hh],[hw,-hh],[hw,hh],[-hw,hh]];
+  var maxX=0, maxY=0;
+  corners.forEach(function(p){
+    // 逆回転して画像のローカル軸に変換
+    var lx = p[0]*cos - p[1]*sin;
+    var ly = p[0]*sin + p[1]*cos;
+    maxX = Math.max(maxX, Math.abs(lx));
+    maxY = Math.max(maxY, Math.abs(ly));
+  });
+  // 画像half(natural)がこの範囲を覆う必要がある
+  var needScaleX = (maxX*2) / c.img.naturalWidth;
+  var needScaleY = (maxY*2) / c.img.naturalHeight;
+  return Math.max(needScaleX, needScaleY);
+}
+
+// ox/oy は「セル中心からの画像中心オフセット」
+function centerImg(c){
+  c.baseScale = coverScale(c);
+  c.ox = 0; c.oy = 0;
+}
+
+// 枠サイズ変更・回転微調整時：baseScale再計算（中心維持）
+function centerKeep(c){
+  if(!c.img) return;
+  c.baseScale = coverScale(c);
+}
+
+function clampAndRender(c){
+  if(!c.img) return;
+  var cw = c.el.clientWidth, ch = c.el.clientHeight;
+  var scale = c.baseScale * c.zoom;
+  var deg = totalRot(c);
+  // 画像をlocal軸で見た半サイズ（スケール適用後）
+  var halfW = c.img.naturalWidth * scale / 2;
+  var halfH = c.img.naturalHeight * scale / 2;
+  // セル頂点を逆回転して必要範囲を測り、余白分だけオフセット可動
+  var r = -deg*Math.PI/180, cos=Math.cos(r), sin=Math.sin(r);
+  var hw=cw/2, hh=ch/2;
+  var needX=0, needY=0;
+  [[-hw,-hh],[hw,-hh],[hw,hh],[-hw,hh]].forEach(function(p){
+    var lx=p[0]*cos - p[1]*sin, ly=p[0]*sin + p[1]*cos;
+    needX=Math.max(needX,Math.abs(lx)); needY=Math.max(needY,Math.abs(ly));
+  });
+  // local軸での余白 → これをワールド軸のox/oy可動に戻す
+  var slackX = Math.max(0, halfW - needX);
+  var slackY = Math.max(0, halfH - needY);
+  // local余白をワールドのoffset範囲へ（回転で軸が回るため両方に効く）
+  var fwd = deg*Math.PI/180, fcos=Math.abs(Math.cos(fwd)), fsin=Math.abs(Math.sin(fwd));
+  var maxX = slackX*fcos + slackY*fsin;
+  var maxY = slackX*fsin + slackY*fcos;
+  c.ox = Math.max(-maxX, Math.min(maxX, c.ox));
+  c.oy = Math.max(-maxY, Math.min(maxY, c.oy));
+  // 描画：natural×scale を中心基準で回転＋オフセット
+  var dispW = c.img.naturalWidth * scale;
+  var dispH = c.img.naturalHeight * scale;
+  var cx = cw/2 + c.ox, cy = ch/2 + c.oy;
+  c.imgEl.style.width = dispW+'px';
+  c.imgEl.style.height = dispH+'px';
+  c.imgEl.style.transformOrigin = 'center center';
+  c.imgEl.style.transform =
+    'translate('+(cx - dispW/2)+'px,'+(cy - dispH/2)+'px) rotate('+deg+'deg)';
+}
+
+function attachDrag(c){
+  var dragging=false, sx=0, sy=0, ox0=0, oy0=0;
+  function start(px,py){
+    if(!c.img) return;
+    dragging=true; sx=px; sy=py; ox0=c.ox; oy0=c.oy;
+    c.el.classList.add('dragging');
+  }
+  function move(px,py){
+    if(!dragging) return;
+    c.ox = ox0 + (px-sx);
+    c.oy = oy0 + (py-sy);
+    clampAndRender(c);
+  }
+  function end(){ dragging=false; c.el.classList.remove('dragging'); }
+
+  c.imgEl.addEventListener('mousedown', function(e){
+    e.preventDefault(); selectCellByObj(c); start(e.clientX, e.clientY);
+  });
+  window.addEventListener('mousemove', function(e){ move(e.clientX, e.clientY); });
+  window.addEventListener('mouseup', end);
+
+  c.imgEl.addEventListener('touchstart', function(e){
+    selectCellByObj(c);
+    var t=e.touches[0]; start(t.clientX, t.clientY);
+  }, {passive:true});
+  c.imgEl.addEventListener('touchmove', function(e){
+    if(!dragging) return;
+    e.preventDefault();
+    var t=e.touches[0]; move(t.clientX, t.clientY);
+  }, {passive:false});
+  c.imgEl.addEventListener('touchend', end);
+}
+
+function selectCellByObj(c){
+  var i = COL.cells.indexOf(c);
+  selectCell(i);
+}
+
+function selectCell(i){
+  COL.selected = i;
+  COL.cells.forEach(function(c,idx){
+    c.el.classList.toggle('sel', idx===i && !!c.img);
+  });
+  var ctrl = CG('cell-ctrl');
+  var sliders = CG('cell-ctrl-sliders');
+  var reset = CG('cell-reset');
+  var clear = CG('cell-clear');
+  var swap = CG('cell-swap');
+  var hint = CG('cell-ctrl-hint');
+  if(i>=0 && COL.cells[i].img){
+    var c = COL.cells[i];
+    ctrl.classList.remove('dim');
+    sliders.style.display='';
+    reset.style.display='';
+    clear.style.display='';
+    swap.style.display='';
+    hint.style.display='none';
+    CG('cell-zoom').value = Math.round(c.zoom*100);
+    CG('cell-zoom-v').textContent = c.zoom.toFixed(1)+'×';
+    CG('cell-fine').value = c.fine||0;
+    CG('cell-fine-v').textContent = (c.fine||0)+'°';
+  }else{
+    ctrl.classList.add('dim');
+    sliders.style.display='none';
+    reset.style.display='none';
+    clear.style.display='none';
+    swap.style.display='none';
+    hint.style.display='';
+  }
+}
+
+function clearCell(i){
+  var c = COL.cells[i];
+  if(c.imgEl){ c.imgEl.remove(); c.imgEl=null; }
+  c.img=null; c.zoom=1; c.ox=0; c.oy=0; c.rot=0; c.fine=0;
+  c.el.classList.remove('has-img','sel');
+  var empty = c.el.querySelector('.col-cell-empty');
+  if(empty) empty.style.display='';
+  if(COL.selected===i) selectCell(-1);
+}
+
+// 2セルの画像と編集状態を交換
+function swapCells(i, j){
+  var a = COL.cells[i], b = COL.cells[j];
+  var sa = a.img ? {img:a.img, zoom:a.zoom, ox:a.ox, oy:a.oy, rot:a.rot, fine:a.fine} : null;
+  var sb = b.img ? {img:b.img, zoom:b.zoom, ox:b.ox, oy:b.oy, rot:b.rot, fine:b.fine} : null;
+  clearCell(i); clearCell(j);
+  if(sb){ restoreSaved(i, sb); }
+  if(sa){ restoreSaved(j, sa); }
+}
+function restoreSaved(i, s){
+  var c = COL.cells[i];
+  setupCellImage(c, s.img);
+  c.zoom=s.zoom; c.rot=s.rot; c.fine=s.fine;
+  centerKeep(c);
+  c.ox=s.ox; c.oy=s.oy;
+  clampAndRender(c);
+}
+
+// ── 生成（高解像度出力）──
+function generateCollage(){
+  var out = +CG('col-size').value;
+  var fmt = CG('col-fmt').value;
+  var canvas = document.createElement('canvas');
+  canvas.width = out; canvas.height = out;
+  var ctx = canvas.getContext('2d');
+
+  // 背景（枠線色）
+  ctx.fillStyle = COL.borderColor;
+  ctx.fillRect(0,0,out,out);
+
+  var scale = out / COL.stageSize;  // プレビュー→出力の倍率
+  var b = COL.border * scale;
+  var rad = COL.radius * scale;
+
+  COL.cells.forEach(function(c){
+    var d = c.def;
+    var cx = d[0]*out + b/2;
+    var cy = d[1]*out + b/2;
+    var cw = d[2]*out - b;
+    var ch = d[3]*out - b;
+
+    ctx.save();
+    // 角丸クリップ
+    var r = Math.max(0, rad - b);
+    roundRectPath(ctx, cx, cy, cw, ch, r);
+    ctx.clip();
+
+    if(c.img){
+      // プレビューと同じ比率で描画
+      var pScale = (c.el.clientWidth>0) ? (cw / c.el.clientWidth) : 1;
+      var scale = c.baseScale * c.zoom * pScale;
+      var dispW = c.img.naturalWidth * scale;
+      var dispH = c.img.naturalHeight * scale;
+      var deg = totalRot(c);
+      // セル中心 + オフセット に画像中心を合わせて回転
+      var ccx = cx + cw/2 + c.ox * pScale;
+      var ccy = cy + ch/2 + c.oy * pScale;
+      ctx.translate(ccx, ccy);
+      ctx.rotate(deg * Math.PI/180);
+      ctx.drawImage(c.img, -dispW/2, -dispH/2, dispW, dispH);
+    }else{
+      ctx.fillStyle = '#16161e';
+      ctx.fillRect(cx, cy, cw, ch);
+    }
+    ctx.restore();
+  });
+
+  var mime = fmt==='png' ? 'image/png' : 'image/jpeg';
+  var quality = fmt==='png' ? undefined : 0.94;
+  var dataUrl = canvas.toDataURL(mime, quality);
+  showCollageOutput(dataUrl, fmt);
+}
+
+function roundRectPath(ctx,x,y,w,h,r){
+  if(r<=0){ ctx.beginPath(); ctx.rect(x,y,w,h); return; }
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);
+  ctx.arcTo(x+w,y,x+w,y+h,r);
+  ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r);
+  ctx.arcTo(x,y,x+w,y,r);
+  ctx.closePath();
+}
+
+function showCollageOutput(dataUrl, fmt){
+  var ts = new Date();
+  var pad=function(n){return ('0'+n).slice(-2);};
+  var fn = 'banshee_collage_'+ts.getFullYear()+pad(ts.getMonth()+1)+pad(ts.getDate())+
+           '_'+pad(ts.getHours())+pad(ts.getMinutes())+pad(ts.getSeconds())+'.'+fmt;
+  var inner = document.getElementById('output-inner');
+  inner.innerHTML =
+    '<p style="color:#d4aa60;font-size:12px;margin-bottom:10px;letter-spacing:.05em;">'+
+    '✓ コラージュを生成しました（長押し / 右クリックで保存）</p>'+
+    '<img src="'+dataUrl+'" style="width:100%;border-radius:8px;display:block;margin-bottom:12px;">'+
+    '<a href="'+dataUrl+'" download="'+fn+'" '+
+    'style="display:block;text-align:center;padding:12px;background:linear-gradient(135deg,#d4aa60,#a07830);'+
+    'color:#08080e;border-radius:8px;font-weight:700;font-size:12px;text-decoration:none;letter-spacing:.08em;">'+
+    '↓ '+fn+' を保存</a>';
+  document.getElementById('output-area').style.display='block';
+}
+</script>
+
+<script>
+// ════════════════════════════════════════
+//  STATE
+// ════════════════════════════════════════
+var ST = {
+  img: null, imgOrigData: null,
+  imgOX: 0, imgOY: 0, imgZoom: 1,
+  crop: { on: false, x: 0.05, y: 0.05, w: 0.9, h: 0.9 },
+  pos: {
+    brand:  { x:.04,  y:.045 },
+    seiki:  { x:.04,  y:.866 },
+    custom: { x:.04,  y:.76  },
+    bansee: { x:.962, y:.932 },
+  }
+};
+
+// ════════════════════════════════════════
+//  ELEMENT REFS
+// ════════════════════════════════════════
+function G(id){ return document.getElementById(id); }
+var preview   = G('preview');
+var prevArea  = G('prev-area');
+var bgImg     = G('bg-img');
+var frameSvg  = G('frame-svg');
+var elBrand   = G('el-brand');
+var elSeiki   = G('el-seiki');
+var elCustom  = G('el-custom');
+var elBansee  = G('el-bansee');
+
+// ════════════════════════════════════════
+//  PREVIEW SIZING
+// ════════════════════════════════════════
+function sizePreview(){
+  var aw = prevArea.clientWidth  - 28;
+  var ah = prevArea.clientHeight - 50;
+  var sz = Math.min(aw, ah, 800);
+  preview.style.width  = sz + 'px';
+  preview.style.height = sz + 'px';
+  syncFonts(sz);
+  applyPos();
+}
+
+function syncFonts(sz){
+  sz = sz || preview.offsetWidth || 480;
+  elBrand.style.fontSize  = (sz * .077) + 'px';
+  G('el-seiki').querySelector('.sk-badge').style.fontSize  = (sz * .041) + 'px';
+  G('el-custom').querySelector('.sk-badge').style.fontSize = (sz * .041) + 'px';
+  elBansee.style.fontSize = (sz * .031) + 'px';
+}
+
+// ════════════════════════════════════════
+//  TEXT ELEMENT POSITIONS
+// ════════════════════════════════════════
+function pct(v){ return (v * 100).toFixed(3) + '%'; }
+
+function applyPos(){
+  elBrand.style.left = pct(ST.pos.brand.x);
+  elBrand.style.top  = pct(ST.pos.brand.y);
+  elBrand.style.transform = '';
+
+  elSeiki.style.left = pct(ST.pos.seiki.x);
+  elSeiki.style.top  = pct(ST.pos.seiki.y);
+  elSeiki.style.transform = 'translateY(-50%)';
+
+  elCustom.style.left = pct(ST.pos.custom.x);
+  elCustom.style.top  = pct(ST.pos.custom.y);
+  elCustom.style.transform = 'translateY(-50%)';
+
+  elBansee.style.left = pct(ST.pos.bansee.x);
+  elBansee.style.top  = pct(ST.pos.bansee.y);
+  elBansee.style.transform = 'translate(-100%,-50%)';
+}
+
+// ════════════════════════════════════════
+//  IMAGE DISPLAY — translate + scale (works on any aspect ratio)
+// ════════════════════════════════════════
+function applyImgDisplay(){
+  if(!ST.img) return;
+  // translate(X%, Y%) moves relative to element size (= container size since inset:0 w/h:100%)
+  // scale() zooms from center (transform-origin: center center)
+  bgImg.style.transform =
+    'translate(' + (ST.imgOX * 100) + '%, ' + (ST.imgOY * 100) + '%) scale(' + ST.imgZoom + ')';
+}
+
+// ════════════════════════════════════════
+//  IMAGE UPLOAD
+// ════════════════════════════════════════
+G('file-input').onchange = function(){
+  var file = this.files && this.files[0];
+  if(!file) return;
+  var reader = new FileReader();
+  reader.onload = function(e){
+    var dataUrl = e.target.result;
+    // Show in preview
+    bgImg.src = dataUrl;
+    bgImg.style.display = 'block';
+    bgImg.style.transform = 'translate(0%,0%) scale(1)';
+    ST.imgOrigData = dataUrl;   // 元画像を保存（白抜き後に戻せる）
+    G('bg-ph').style.display = 'none';
+    // Thumbnail
+    G('thumb').src = dataUrl;
+    G('thumb').style.display = 'block';
+    // Show controls
+    G('img-ctrl').style.display = 'block';
+    G('sl-zoom').value = '100';
+    G('vl-zoom').textContent = '1.0×';
+    // Store Image object for canvas export
+    var img = new Image();
+    img.onload = function(){ ST.img = img; };
+    img.src = dataUrl;
+  };
+  reader.readAsDataURL(file);
+};
+
+// Drag-drop on upload zone
+var uz = G('up-zone');
+uz.addEventListener('dragover',  function(e){ e.preventDefault(); uz.classList.add('over'); });
+uz.addEventListener('dragleave', function(){  uz.classList.remove('over'); });
+uz.addEventListener('drop', function(e){
+  e.preventDefault(); uz.classList.remove('over');
+  var file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+  if(!file) return;
+  G('file-input').onchange.call({ files:[file] });
+});
+
+// Zoom slider
+G('sl-zoom').oninput = function(){
+  ST.imgZoom = parseInt(this.value) / 100;
+  G('vl-zoom').textContent = ST.imgZoom.toFixed(1) + '×';
+  applyImgDisplay();
+};
+G('sl-thresh').oninput = function(){
+  G('vl-thresh').textContent = this.value;
+};
+
+// Reset button
+G('img-reset').onclick = function(){
+  ST.imgOX = 0; ST.imgOY = 0; ST.imgZoom = 1;
+  G('sl-zoom').value = '100';
+  G('vl-zoom').textContent = '1.0×';
+  bgImg.style.transform = 'translate(0%,0%) scale(1)';
+};
+
+// ── 背景白抜き ──────────────────────────────────────────────
+G('btn-bg-remove').onclick = function(){
+  if(!bgImg.naturalWidth) { alert('先に画像を挿入してください'); return; }
+  var thresh = parseInt(G('sl-thresh').value);
+
+  // bgImg から直接ピクセル処理
+  var oc  = document.createElement('canvas');
+  oc.width  = bgImg.naturalWidth;
+  oc.height = bgImg.naturalHeight;
+  var oc2 = oc.getContext('2d');
+  oc2.drawImage(bgImg, 0, 0);
+
+  var id = oc2.getImageData(0, 0, oc.width, oc.height);
+  var d  = id.data;
+  for(var i = 0; i < d.length; i += 4){
+    var r=d[i], g=d[i+1], b=d[i+2];
+    // 白・明るいグレー系を透明化
+    if(r >= thresh && g >= thresh && b >= thresh){
+      d[i+3] = 0;
+    } else {
+      // しきい値周辺はなめらかにフェード
+      var brightness = (r*0.299 + g*0.587 + b*0.114);
+      if(brightness > thresh - 40){
+        var ratio = (brightness - (thresh - 40)) / 40;
+        d[i+3] = Math.round(255 * (1 - ratio));
+      }
+    }
+  }
+  oc2.putImageData(id, 0, 0);
+  var newDataUrl = oc.toDataURL('image/png');
+
+  // プレビューに反映
+  bgImg.src = newDataUrl;
+};
+
+G('btn-bg-restore').onclick = function(){
+  if(!ST.imgOrigData) { alert('元画像がありません'); return; }
+  bgImg.src = ST.imgOrigData;
+};
+
+// Mouse wheel zoom on preview
+preview.addEventListener('wheel', function(e){
+  if(!bgImg.naturalWidth) return;
+  e.preventDefault();
+  ST.imgZoom = Math.max(0.5, Math.min(3.0, ST.imgZoom + (e.deltaY > 0 ? -0.08 : 0.08)));
+  G('sl-zoom').value = Math.round(ST.imgZoom * 100);
+  G('vl-zoom').textContent = ST.imgZoom.toFixed(1) + '×';
+  applyImgDisplay();
+}, { passive: false });
+
+// ════════════════════════════════════════
+//  CROP
+// ════════════════════════════════════════
+var cropOverlay = G('crop-overlay');
+var cropRect    = G('crop-rect');
+
+function applyCropRect(){
+  var c = ST.crop;
+  cropRect.style.left   = (c.x * 100) + '%';
+  cropRect.style.top    = (c.y * 100) + '%';
+  cropRect.style.width  = (c.w * 100) + '%';
+  cropRect.style.height = (c.h * 100) + '%';
+}
+
+G('btn-crop').onclick = function(){
+  ST.crop.on = !ST.crop.on;
+  if(ST.crop.on){
+    cropOverlay.style.display = 'block';
+    this.textContent = '✂️ トリミング OFF';
+    this.classList.add('crop-active-btn');
+    applyCropRect();
+  } else {
+    cropOverlay.style.display = 'none';
+    this.textContent = '✂️ トリミング ON';
+    this.classList.remove('crop-active-btn');
+  }
+};
+
+G('btn-crop-reset').onclick = function(){
+  ST.crop.x = 0.05; ST.crop.y = 0.05; ST.crop.w = 0.9; ST.crop.h = 0.9;
+  applyCropRect();
+};
+
+// Crop drag logic
+var cropDrag = null; // { type: 'move'|handle, startX, startY, startCrop }
+
+cropRect.addEventListener('mousedown', function(e){
+  if(e.target.classList.contains('ch')){
+    cropDrag = { type: e.target.dataset.c, startX:e.clientX, startY:e.clientY, startCrop:{...ST.crop} };
+  } else {
+    cropDrag = { type:'move', startX:e.clientX, startY:e.clientY, startCrop:{...ST.crop} };
+  }
+  e.preventDefault(); e.stopPropagation();
+});
+
+window.addEventListener('mousemove', function(e){
+  if(!cropDrag) return;
+  var pw = preview.offsetWidth, ph = preview.offsetHeight;
+  var dx = (e.clientX - cropDrag.startX) / pw;
+  var dy = (e.clientY - cropDrag.startY) / ph;
+  var sc = cropDrag.startCrop;
+  var MIN = 0.05;
+  var c = ST.crop;
+
+  if(cropDrag.type === 'move'){
+    c.x = Math.max(0, Math.min(1 - sc.w, sc.x + dx));
+    c.y = Math.max(0, Math.min(1 - sc.h, sc.y + dy));
+  } else {
+    var t = cropDrag.type;
+    var nx=sc.x, ny=sc.y, nw=sc.w, nh=sc.h;
+    if(t==='tl'||t==='l'||t==='bl'){ nx=sc.x+dx; nw=sc.w-dx; }
+    if(t==='tr'||t==='r'||t==='br'){ nw=sc.w+dx; }
+    if(t==='tl'||t==='t'||t==='tr'){ ny=sc.y+dy; nh=sc.h-dy; }
+    if(t==='bl'||t==='b'||t==='br'){ nh=sc.h+dy; }
+    if(nw < MIN) nw = MIN;
+    if(nh < MIN) nh = MIN;
+    if(nx < 0){ nw+=nx; nx=0; }
+    if(ny < 0){ nh+=ny; ny=0; }
+    if(nx+nw > 1) nw = 1-nx;
+    if(ny+nh > 1) nh = 1-ny;
+    c.x=nx; c.y=ny; c.w=nw; c.h=nh;
+  }
+  applyCropRect();
+});
+
+window.addEventListener('mouseup', function(){ cropDrag = null; });
+
+// Touch crop
+cropRect.addEventListener('touchstart', function(e){
+  var t = e.touches[0];
+  if(e.target.classList.contains('ch')){
+    cropDrag = { type:e.target.dataset.c, startX:t.clientX, startY:t.clientY, startCrop:{...ST.crop} };
+  } else {
+    cropDrag = { type:'move', startX:t.clientX, startY:t.clientY, startCrop:{...ST.crop} };
+  }
+  e.preventDefault(); e.stopPropagation();
+},{ passive:false });
+window.addEventListener('touchmove', function(e){
+  if(!cropDrag || !ST.crop.on) return;
+  var t=e.touches[0];
+  var me = { clientX:t.clientX, clientY:t.clientY };
+  // reuse mouse handler logic
+  var pw=preview.offsetWidth, ph=preview.offsetHeight;
+  var dx=(t.clientX-cropDrag.startX)/pw, dy=(t.clientY-cropDrag.startY)/ph;
+  var sc=cropDrag.startCrop, MIN=0.05, c=ST.crop;
+  if(cropDrag.type==='move'){
+    c.x=Math.max(0,Math.min(1-sc.w,sc.x+dx));
+    c.y=Math.max(0,Math.min(1-sc.h,sc.y+dy));
+  } else {
+    var tp=cropDrag.type;
+    var nx=sc.x,ny=sc.y,nw=sc.w,nh=sc.h;
+    if(tp==='tl'||tp==='l'||tp==='bl'){nx=sc.x+dx;nw=sc.w-dx;}
+    if(tp==='tr'||tp==='r'||tp==='br'){nw=sc.w+dx;}
+    if(tp==='tl'||tp==='t'||tp==='tr'){ny=sc.y+dy;nh=sc.h-dy;}
+    if(tp==='bl'||tp==='b'||tp==='br'){nh=sc.h+dy;}
+    if(nw<MIN)nw=MIN; if(nh<MIN)nh=MIN;
+    if(nx<0){nw+=nx;nx=0;} if(ny<0){nh+=ny;ny=0;}
+    if(nx+nw>1)nw=1-nx; if(ny+nh>1)nh=1-ny;
+    c.x=nx;c.y=ny;c.w=nw;c.h=nh;
+  }
+  applyCropRect();
+},{ passive:false });
+window.addEventListener('touchend', function(){ cropDrag=null; });
+
+// ════════════════════════════════════════
+//  FRAME SVG
+// ════════════════════════════════════════
+function updateFrame(){
+  var ftype  = G('sel-frame').value;
+  var gold   = G('col-gold').value;
+  var inset  = parseFloat(G('sl-inset').value);
+  var gap    = parseFloat(G('sl-gap').value);
+  var lw     = parseFloat(G('sl-lw').value);
+  var cSize  = parseFloat(G('sl-corner').value);
+  var i1 = inset, i2 = inset + gap;
+  var lw2 = lw * .55;
+  var lwW = lw * .32;
+  var iW = 0.5;
+  var goldA = hexRgba(gold, .48);
+  var white  = 'rgba(255,255,255,0.75)';
+  var whiteI = 'rgba(255,255,255,0.42)';
+
+  function diam(x,y){
+    var s = cSize, s2 = cSize * 1.28;
+    return '<polygon points="' + x + ',' + (y-s2) + ' ' + (x+s2) + ',' + y + ' ' + x + ',' + (y+s2) + ' ' + (x-s2) + ',' + y + '" fill="' + white + '"/>'
+         + '<polygon points="' + x + ',' + (y-s)  + ' ' + (x+s)  + ',' + y + ' ' + x + ',' + (y+s)  + ' ' + (x-s)  + ',' + y + '" fill="' + gold  + '"/>';
+  }
+  var corners = [[i1,i1],[100-i1,i1],[i1,100-i1],[100-i1,100-i1]];
+
+  function rect(x,y,w,h,col,w2){
+    return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="none" stroke="'+col+'" stroke-width="'+w2+'"/>';
+  }
+
+  var p = '';
+  if(ftype === 'double'){
+    p += rect(i1-iW,i1-iW,100-(i1-iW)*2,100-(i1-iW)*2,white,lwW);
+    p += rect(i1,i1,100-i1*2,100-i1*2,gold,lw);
+    p += rect(i1+iW,i1+iW,100-(i1+iW)*2,100-(i1+iW)*2,whiteI,lwW*.7);
+    p += rect(i2,i2,100-i2*2,100-i2*2,goldA,lw2);
+    p += rect(i2+iW,i2+iW,100-(i2+iW)*2,100-(i2+iW)*2,whiteI,lwW*.5);
+    corners.forEach(function(c){ p += diam(c[0],c[1]); });
+  } else if(ftype === 'corner'){
+    var cl = 14;
+    corners.forEach(function(c){
+      var x=c[0],y=c[1],hd=x<50?1:-1,vd=y<50?1:-1;
+      p += '<polyline points="'+(x+hd*cl)+','+y+' '+x+','+y+' '+x+','+(y+vd*cl)+'" fill="none" stroke="'+gold+'" stroke-width="'+lw+'"/>';
+      p += '<polyline points="'+(x+hd*(cl*.6))+','+(y+vd*gap)+' '+(x+hd*gap)+','+(y+vd*gap)+' '+(x+hd*gap)+','+(y+vd*(cl*.6+gap))+'" fill="none" stroke="'+goldA+'" stroke-width="'+lw2+'"/>';
+      p += diam(x,y);
+    });
+  } else {
+    p += rect(i1-iW,i1-iW,100-(i1-iW)*2,100-(i1-iW)*2,white,lwW);
+    p += rect(i1,i1,100-i1*2,100-i1*2,gold,lw);
+    p += rect(i1+iW,i1+iW,100-(i1+iW)*2,100-(i1+iW)*2,whiteI,lwW*.7);
+    corners.forEach(function(c){ p += diam(c[0],c[1]); });
+  }
+
+  frameSvg.innerHTML = p;
+}
+
+// ════════════════════════════════════════
+//  COLORS & LABELS
+// ════════════════════════════════════════
+function updateColors(){
+  elBrand.style.color = G('col-brand').value;
+  var g = G('col-gold').value;
+  var badge = G('el-seiki').querySelector('.sk-badge');
+  badge.style.color = g;
+  badge.style.borderColor = hexRgba(g,.75);
+  var cbadge = G('el-custom').querySelector('.sk-badge');
+  cbadge.style.color = g;
+  cbadge.style.borderColor = hexRgba(g,.75);
+  elBansee.style.color = G('col-bansee').value;
+  elSeiki.style.display  = G('tog-seiki').checked  ? '' : 'none';
+  elCustom.style.display = G('tog-custom').checked ? '' : 'none';
+  elBansee.style.display = G('tog-bansee').checked ? '' : 'none';
+}
+
+function updateCustomText(){
+  var txt = G('custom-text').value || '';
+  G('el-custom').querySelector('.sk-badge').textContent = txt;
+}
+
+function updateBrand(){
+  elBrand.textContent = G('brand-input').value || 'Brand';
+}
+
+function refresh(){
+  sizePreview();
+  updateFrame();
+  updateColors();
+  updateBrand();
+}
+
+// ════════════════════════════════════════
+//  SLIDER LABELS
+// ════════════════════════════════════════
+[ ['sl-inset','vl-inset'],['sl-gap','vl-gap'],
+  ['sl-lw','vl-lw'],['sl-corner','vl-corner'] ]
+  .forEach(function(pair){
+    var sl=G(pair[0]), vl=G(pair[1]);
+    if(!sl) return;
+    function upd(){ vl.textContent = parseFloat(sl.value).toFixed(1); updateFrame(); }
+    sl.oninput = upd; upd();
+  });
+
+// ════════════════════════════════════════
+//  CONTROL LISTENERS
+// ════════════════════════════════════════
+G('brand-input').oninput = updateBrand;
+G('custom-text').oninput = updateCustomText;
+
+function toggleCustom(){
+  var cb  = G('tog-custom');
+  var btn = G('btn-custom-toggle');
+  var inp = G('custom-text');
+  cb.checked = !cb.checked;
+  if(cb.checked){
+    btn.textContent = 'ON';
+    btn.style.background = '#1a3a1a';
+    btn.style.color = '#6ec06e';
+    inp.style.opacity = '1';
+    inp.style.pointerEvents = '';
+  } else {
+    btn.textContent = 'OFF';
+    btn.style.background = '#2a1a1a';
+    btn.style.color = '#8a4a4a';
+    inp.style.opacity = '0.35';
+    inp.style.pointerEvents = 'none';
+  }
+  updateColors();
+}
+document.querySelectorAll('.pb').forEach(function(b){
+  b.onclick = function(){ G('brand-input').value = b.dataset.b; updateBrand(); };
+});
+['sel-frame','col-gold','col-bansee','col-brand',
+ 'tog-seiki','tog-bansee','tog-custom']
+  .forEach(function(id){ var el=G(id); if(el){ el.onchange=refresh; el.oninput=refresh; } });
+
+// ════════════════════════════════════════
+//  DRAG – TEXT ELEMENTS
+// ════════════════════════════════════════
+var dragging=null, dragStart=null, posStart=null;
+
+function startTextDrag(key, cx, cy){
+  dragging = key;
+  document.querySelector('[data-drag="'+key+'"]').classList.add('dr');
+  var r = preview.getBoundingClientRect();
+  dragStart = { x:cx, y:cy, rw:r.width, rh:r.height };
+  posStart  = { x:ST.pos[key].x, y:ST.pos[key].y };
+}
+function moveTextDrag(cx, cy){
+  if(!dragging) return;
+  var dx = (cx - dragStart.x) / dragStart.rw;
+  var dy = (cy - dragStart.y) / dragStart.rh;
+  ST.pos[dragging].x = Math.max(0, Math.min(1, posStart.x + dx));
+  ST.pos[dragging].y = Math.max(0, Math.min(1, posStart.y + dy));
+  applyPos();
+}
+function endTextDrag(){
+  if(!dragging) return;
+  document.querySelector('[data-drag="'+dragging+'"]').classList.remove('dr');
+  dragging = null;
+}
+
+// ════════════════════════════════════════
+//  DRAG – BACKGROUND IMAGE
+// ════════════════════════════════════════
+var imgDrag=false, imgDragStart=null, imgPosStart=null;
+
+function startImgDrag(cx, cy){
+  imgDrag = true;
+  var r = preview.getBoundingClientRect();
+  imgDragStart = { x:cx, y:cy, rw:r.width, rh:r.height };
+  imgPosStart  = { x:ST.imgOX, y:ST.imgOY };
+  bgImg.style.cursor = 'grabbing';
+}
+function moveImgDrag(cx, cy){
+  if(!imgDrag) return;
+  ST.imgOX = imgPosStart.x + (cx - imgDragStart.x) / imgDragStart.rw;
+  ST.imgOY = imgPosStart.y + (cy - imgDragStart.y) / imgDragStart.rh;
+  applyImgDisplay();
+}
+function endImgDrag(){
+  if(!imgDrag) return;
+  imgDrag = false;
+  bgImg.style.cursor = 'move';
+}
+
+// ── Mouse events ──
+preview.addEventListener('mousedown', function(e){
+  var el = e.target.closest('[data-drag]');
+  if(el){ startTextDrag(el.dataset.drag, e.clientX, e.clientY); e.preventDefault(); return; }
+  if(ST.img){ startImgDrag(e.clientX, e.clientY); e.preventDefault(); }
+});
+window.addEventListener('mousemove', function(e){
+  moveTextDrag(e.clientX, e.clientY);
+  moveImgDrag(e.clientX, e.clientY);
+});
+window.addEventListener('mouseup', function(){ endTextDrag(); endImgDrag(); });
+
+// ── Touch events ──
+preview.addEventListener('touchstart', function(e){
+  if(e.touches.length === 1){
+    var el = e.target.closest('[data-drag]');
+    var t = e.touches[0];
+    if(el){ startTextDrag(el.dataset.drag, t.clientX, t.clientY); e.preventDefault(); return; }
+    if(ST.img){ startImgDrag(t.clientX, t.clientY); e.preventDefault(); }
+  }
+},{ passive:false });
+window.addEventListener('touchmove', function(e){
+  if(e.touches.length === 1){
+    var t = e.touches[0];
+    moveTextDrag(t.clientX, t.clientY);
+    moveImgDrag(t.clientX, t.clientY);
+  }
+},{ passive:false });
+window.addEventListener('touchend', function(){ endTextDrag(); endImgDrag(); });
+
+// Pinch zoom
+var lastPinch = null;
+preview.addEventListener('touchstart', function(e){
+  if(e.touches.length===2) lastPinch = pinchD(e);
+},{ passive:true });
+preview.addEventListener('touchmove', function(e){
+  if(e.touches.length===2 && lastPinch){
+    var d = pinchD(e);
+    ST.imgZoom = Math.max(.5, Math.min(3, ST.imgZoom * d/lastPinch));
+    lastPinch = d;
+    G('sl-zoom').value = Math.round(ST.imgZoom*100);
+    G('vl-zoom').textContent = ST.imgZoom.toFixed(1)+'×';
+    applyImgDisplay();
+  }
+},{ passive:true });
+preview.addEventListener('touchend', function(){ lastPinch=null; },{ passive:true });
+function pinchD(e){ var dx=e.touches[0].clientX-e.touches[1].clientX,dy=e.touches[0].clientY-e.touches[1].clientY; return Math.sqrt(dx*dx+dy*dy); }
+
+// ════════════════════════════════════════
+//  CANVAS EXPORT
+// ════════════════════════════════════════
+function hexRgba(h,a){
+  var r=parseInt(h.slice(1,3),16),g2=parseInt(h.slice(3,5),16),b=parseInt(h.slice(5,7),16);
+  return 'rgba('+r+','+g2+','+b+','+a+')';
+}
+
+function renderCanvas(){
+  var size   = parseInt(G('sel-size').value);
+  var ftype  = G('sel-frame').value;
+  var gold   = G('col-gold').value;
+  var bCol   = G('col-bansee').value;
+  var brCol  = G('col-brand').value;
+  var brand  = G('brand-input').value || 'Brand';
+  var showS  = G('tog-seiki').checked;
+  var showB  = G('tog-bansee').checked;
+  var showC  = G('tog-custom') && G('tog-custom').checked;
+  var customTxt = (G('custom-text') && G('custom-text').value) || '';
+  var insetP = parseFloat(G('sl-inset').value) / 100;
+  var gapP   = parseFloat(G('sl-gap').value)   / 100;
+  var lwBase = parseFloat(G('sl-lw').value);
+  var cSzP   = parseFloat(G('sl-corner').value) / 100;
+
+  var cv = G('dl-canvas');
+  cv.width = cv.height = size;
+  var ctx = cv.getContext('2d');
+
+  // background — 白
+  ctx.fillStyle = '#ffffff'; ctx.fillRect(0,0,size,size);
+
+  // image — bgImgを直接使う（既にロード済みで確実）
+  if(bgImg.naturalWidth > 0){
+    var iw = bgImg.naturalWidth;
+    var ih = bgImg.naturalHeight;
+    var base = Math.max(size/iw, size/ih);
+    var sc   = base * ST.imgZoom;
+    var dw   = iw * sc, dh = ih * sc;
+    var dx   = (size - dw)/2 + ST.imgOX * size;
+    var dy   = (size - dh)/2 + ST.imgOY * size;
+    ctx.drawImage(bgImg, dx, dy, dw, dh);
+  }
+
+  // frame
+  var i1=size*insetP, i2=size*(insetP+gapP);
+  var lw1=Math.max(1.5,lwBase*(size/1080)*2.2), lw2=lw1*.55, lwW=Math.max(.8,lw1*.35);
+  var iWpx=size*.006, cSz=size*cSzP;
+  var goldA=hexRgba(gold,.50);
+  var white='rgba(255,255,255,0.75)', whiteI='rgba(255,255,255,0.45)';
+
+  function dd(x,y){
+    ctx.fillStyle='rgba(255,255,255,0.75)';
+    ctx.beginPath(); ctx.moveTo(x,y-cSz*1.3); ctx.lineTo(x+cSz*1.3,y); ctx.lineTo(x,y+cSz*1.3); ctx.lineTo(x-cSz*1.3,y); ctx.closePath(); ctx.fill();
+    ctx.fillStyle=gold;
+    ctx.beginPath(); ctx.moveTo(x,y-cSz); ctx.lineTo(x+cSz,y); ctx.lineTo(x,y+cSz); ctx.lineTo(x-cSz,y); ctx.closePath(); ctx.fill();
+  }
+  function sr(x,y,w,h,col,lw){ ctx.strokeStyle=col; ctx.lineWidth=lw; ctx.strokeRect(x,y,w,h); }
+  var cs=[[i1,i1],[size-i1,i1],[i1,size-i1],[size-i1,size-i1]];
+
+  ctx.save();
+  if(ftype==='double'){
+    sr(i1-iWpx,i1-iWpx,size-(i1-iWpx)*2,size-(i1-iWpx)*2,white,lwW);
+    sr(i1,i1,size-i1*2,size-i1*2,gold,lw1);
+    sr(i1+iWpx,i1+iWpx,size-(i1+iWpx)*2,size-(i1+iWpx)*2,whiteI,lwW*.65);
+    sr(i2,i2,size-i2*2,size-i2*2,goldA,lw2);
+    sr(i2+iWpx,i2+iWpx,size-(i2+iWpx)*2,size-(i2+iWpx)*2,whiteI,lwW*.5);
+    cs.forEach(function(c){ dd(c[0],c[1]); });
+  } else if(ftype==='corner'){
+    var cl=size*.11;
+    cs.forEach(function(c){
+      var x=c[0],y=c[1],hd=x<size/2?1:-1,vd=y<size/2?1:-1;
+      ctx.strokeStyle=white; ctx.lineWidth=lwW;
+      ctx.beginPath(); ctx.moveTo(x+hd*cl,y-vd*iWpx); ctx.lineTo(x-hd*iWpx,y-vd*iWpx); ctx.lineTo(x-hd*iWpx,y+vd*cl); ctx.stroke();
+      ctx.strokeStyle=gold; ctx.lineWidth=lw1;
+      ctx.beginPath(); ctx.moveTo(x+hd*cl,y); ctx.lineTo(x,y); ctx.lineTo(x,y+vd*cl); ctx.stroke();
+      ctx.strokeStyle=goldA; ctx.lineWidth=lw2;
+      var g2=size*gapP;
+      ctx.beginPath(); ctx.moveTo(x+hd*(cl*.6),y+vd*g2); ctx.lineTo(x+hd*g2,y+vd*g2); ctx.lineTo(x+hd*g2,y+vd*(cl*.6+g2)); ctx.stroke();
+      dd(x,y);
+    });
+  } else {
+    sr(i1-iWpx,i1-iWpx,size-(i1-iWpx)*2,size-(i1-iWpx)*2,white,lwW);
+    sr(i1,i1,size-i1*2,size-i1*2,gold,lw1);
+    sr(i1+iWpx,i1+iWpx,size-(i1+iWpx)*2,size-(i1+iWpx)*2,whiteI,lwW*.65);
+    cs.forEach(function(c){ dd(c[0],c[1]); });
+  }
+  ctx.restore();
+
+  // brand name
+  var bx=ST.pos.brand.x*size, by=ST.pos.brand.y*size, bfs=size*.077;
+  ctx.save();
+  ctx.font='700 '+bfs+'px Georgia,"Times New Roman",serif';
+  ctx.textAlign='left'; ctx.textBaseline='top'; ctx.lineJoin='round';
+  ctx.strokeStyle='rgba(0,0,0,.85)'; ctx.lineWidth=Math.max(5,size*.006); ctx.strokeText(brand,bx,by);
+  ctx.strokeStyle=gold; ctx.lineWidth=Math.max(2.5,size*.003); ctx.strokeText(brand,bx,by);
+  ctx.fillStyle=brCol; ctx.fillText(brand,bx,by);
+  var tw=ctx.measureText(brand).width, ulY=by+bfs*1.08;
+  ctx.strokeStyle='rgba(255,255,255,0.55)'; ctx.lineWidth=Math.max(1.5,size*.002);
+  ctx.beginPath(); ctx.moveTo(bx,ulY); ctx.lineTo(bx+tw,ulY); ctx.stroke();
+  ctx.strokeStyle=gold; ctx.beginPath(); ctx.moveTo(bx,ulY-1); ctx.lineTo(bx+tw,ulY-1); ctx.stroke();
+  ctx.restore();
+
+  // 正規品
+  if(showS){
+    var sx=ST.pos.seiki.x*size, sy=ST.pos.seiki.y*size, sfs=size*.041;
+    ctx.save();
+    ctx.font='700 '+sfs+'px "Hiragino Mincho ProN","Yu Mincho",Georgia,serif';
+    var tw2=ctx.measureText('正規品').width, bw=tw2+sfs*1.1, bh=sfs*1.55, bby=sy-bh/2;
+    ctx.beginPath(); rrect(ctx,sx,bby,bw,bh,bh*.18);
+    ctx.fillStyle='rgba(6,5,2,.76)'; ctx.fill();
+    ctx.strokeStyle=gold; ctx.lineWidth=Math.max(.8,size*.0014); ctx.stroke();
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillStyle=gold; ctx.shadowColor=hexRgba(gold,.5); ctx.shadowBlur=size*.008;
+    ctx.fillText('正規品',sx+bw/2,sy);
+    ctx.restore();
+  }
+
+  // カスタムバッジ
+  if(showC && customTxt){
+    var cx2=ST.pos.custom.x*size, cy2=ST.pos.custom.y*size, cfs=size*.041;
+    ctx.save();
+    ctx.font='700 '+cfs+'px "Hiragino Mincho ProN","Yu Mincho",Georgia,serif';
+    var ctw=ctx.measureText(customTxt).width, cbw=ctw+cfs*1.1, cbh=cfs*1.55, cbby=cy2-cbh/2;
+    ctx.beginPath(); rrect(ctx,cx2,cbby,cbw,cbh,cbh*.18);
+    ctx.fillStyle='rgba(6,5,2,.76)'; ctx.fill();
+    ctx.strokeStyle=gold; ctx.lineWidth=Math.max(.8,size*.0014); ctx.stroke();
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillStyle=gold; ctx.shadowColor=hexRgba(gold,.5); ctx.shadowBlur=size*.008;
+    ctx.fillText(customTxt,cx2+cbw/2,cy2);
+    ctx.restore();
+  }
+
+  // Banshee
+  if(showB){
+    var bx2=ST.pos.bansee.x*size, by2=ST.pos.bansee.y*size, bfs2=size*.028;
+    ctx.save();
+    ctx.font='300 '+bfs2+'px Georgia,"Times New Roman",serif';
+    ctx.textAlign='right'; ctx.textBaseline='middle'; ctx.lineJoin='round';
+    ctx.strokeStyle='rgba(0,0,0,.85)'; ctx.lineWidth=Math.max(3,size*.004); ctx.strokeText('Banshee',bx2,by2);
+    ctx.strokeStyle=gold; ctx.lineWidth=Math.max(1.5,size*.002); ctx.strokeText('Banshee',bx2,by2);
+    ctx.fillStyle=bCol; ctx.fillText('Banshee',bx2,by2);
+    ctx.restore();
+  }
+
+  // ── cropを適用して切り出し ──
+  if(ST.crop.on){
+    var cx  = Math.round(ST.crop.x * size);
+    var cy  = Math.round(ST.crop.y * size);
+    var cw  = Math.round(ST.crop.w * size);
+    var ch  = Math.round(ST.crop.h * size);
+    var cc  = document.createElement('canvas');
+    cc.width = cw; cc.height = ch;
+    cc.getContext('2d').drawImage(cv, cx, cy, cw, ch, 0, 0, cw, ch);
+    // crop結果をdl-canvasに書き戻す
+    cv.width = cw; cv.height = ch;
+    cv.getContext('2d').drawImage(cc, 0, 0);
+  }
+}
+
+function rrect(ctx,x,y,w,h,r){
+  ctx.beginPath(); ctx.moveTo(x+r,y); ctx.lineTo(x+w-r,y); ctx.arcTo(x+w,y,x+w,y+r,r);
+  ctx.lineTo(x+w,y+h-r); ctx.arcTo(x+w,y+h,x+w-r,y+h,r);
+  ctx.lineTo(x+r,y+h); ctx.arcTo(x,y+h,x,y+h-r,r);
+  ctx.lineTo(x,y+r); ctx.arcTo(x,y,x+r,y,r); ctx.closePath();
+}
+
+  G('gen-btn').onclick = function(){
+  var modal = G('output-area');
+  var inner = G('output-inner');
+  modal.style.display = 'block';
+  inner.innerHTML = '<p style="color:#d4aa60;text-align:center;font-size:14px;padding:40px 0;">生成中...</p>';
+
+  setTimeout(function(){
+    try {
+      renderCanvas();
+      var cv        = G('dl-canvas');
+      var fmt       = G('sel-fmt') ? G('sel-fmt').value : 'png';
+      var mimeType  = fmt === 'jpg' ? 'image/jpeg' : 'image/png';
+      var quality   = fmt === 'jpg' ? 0.92 : undefined;
+      var brandName = (G('brand-input').value || 'item').replace(/[\s\/]+/g, '_');
+      var filename  = 'Banshee_' + brandName + '.' + fmt;
+      var dataUrl   = quality !== undefined ? cv.toDataURL(mimeType, quality) : cv.toDataURL(mimeType);
+
+      inner.innerHTML =
+        '<div style="text-align:center;margin-bottom:16px;">' +
+        '<a href="' + dataUrl + '" download="' + filename + '" ' +
+        'style="display:inline-block;padding:14px 36px;' +
+        'background:linear-gradient(135deg,#d4aa60,#a07830);' +
+        'color:#08080e;font-size:15px;font-weight:800;' +
+        'letter-spacing:.1em;text-decoration:none;border-radius:10px;">' +
+        '↓ クリックして保存（' + fmt.toUpperCase() + '）</a>' +
+        '</div>' +
+        '<img src="' + dataUrl + '" ' +
+        'style="width:100%;border-radius:10px;display:block;">';
+
+    } catch(err) {
+      inner.innerHTML = '<p style="color:#f87;text-align:center;font-size:12px;padding:20px;">' +
+        'エラー: ' + err.message + '</p>';
+      console.error(err);
+    }
+  }, 30);
+};
+
+// ════════════════════════════════════════
+//  INIT
+// ════════════════════════════════════════
+new ResizeObserver(sizePreview).observe(prevArea);
+refresh();
+</script>
+</body>
+</html>
