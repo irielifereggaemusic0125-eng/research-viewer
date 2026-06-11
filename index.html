@@ -388,6 +388,11 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .ins-pb.k{background:rgba(77,159,255,.16);color:var(--t2)}
 .ins-pb.r{background:rgba(46,212,122,.16);color:var(--t1)}
 .ins-itemno{font-size:9px;color:var(--muted2);margin:4px 0 2px;letter-spacing:.03em}
+/* ③ 価格バンドの信頼度バッジ */
+.band-conf{font-size:8px;font-weight:700;padding:0 5px;border-radius:6px;margin-left:4px;vertical-align:middle}
+.band-conf.高{background:rgba(46,212,122,.18);color:var(--t1)}
+.band-conf.中{background:rgba(255,181,71,.18);color:var(--t3)}
+.band-conf.低{background:rgba(255,92,92,.16);color:var(--alert)}
 /* 在庫: 価格バッジ */
 .iv-badge-down{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;background:rgba(255,92,92,.18);color:var(--alert);margin-left:4px}
 .iv-badge-na{font-size:9px;font-weight:700;padding:1px 6px;border-radius:7px;background:var(--surface2);color:var(--muted2);margin-left:4px}
@@ -749,7 +754,7 @@ function render() {
         ${c.end&&c.end!=='—'?`<div class="row"><span class="row-lbl">終了日時</span><span class="row-val ${hrs&&hrs<24?'red':''}">${c.end}</span></div>`:''}
         <div class="metrics-grid">
           <div class="metric"><div class="metric-lbl">Eco指値</div><div class="metric-val green">${yen(c.eco_shitene)}</div><div class="metric-sub">Y${yen(c.yahoo_shitene)}</div></div>
-          <div class="metric"><div class="metric-lbl">実勢</div><div class="metric-val">${yen(c.jissei)}</div></div>
+          <div class="metric"><div class="metric-lbl">実勢${c.confidence?`<span class="band-conf ${c.confidence}">${c.confidence}</span>`:''}</div><div class="metric-val" style="font-size:${(c.jissei_low&&c.jissei_high)?'11px':'13px'}">${(c.jissei_low&&c.jissei_high)?`¥${(+c.jissei_low).toLocaleString('ja-JP')}〜${(+c.jissei_high).toLocaleString('ja-JP')}`:yen(c.jissei)}</div></div>
           <div class="metric"><div class="metric-lbl">粗利</div><div class="metric-val green">${yen(c.profit_eco)}</div></div>
           <div class="metric"><div class="metric-lbl">回転</div><div class="metric-val">${c.kaiten}<span style="font-size:10px;font-weight:500">日</span></div></div>
         </div>
@@ -1475,7 +1480,7 @@ function renderInspect(){
         ${perfBadge}
         <div class="iv-rows">
           <div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv">${it.current_price?'¥'+(+it.current_price).toLocaleString('ja-JP'):'—'}</span></div>
-          ${it.jissei?`<div class="iv-row"><span class="iv-rl">実勢</span><span class="iv-rv">¥${(+it.jissei).toLocaleString('ja-JP')}</span></div>`:''}
+          ${it.jissei?`<div class="iv-row"><span class="iv-rl">実勢${it.confidence?`<span class="band-conf ${it.confidence}">信頼度${it.confidence}</span>`:''}</span><span class="iv-rv">${(it.jissei_low&&it.jissei_high)?`¥${(+it.jissei_low).toLocaleString('ja-JP')}〜¥${(+it.jissei_high).toLocaleString('ja-JP')}`:'¥'+(+it.jissei).toLocaleString('ja-JP')}</span></div>`:''}
           ${it.profit?`<div class="iv-row"><span class="iv-rl">想定粗利</span><span class="iv-rv ${hi?'':''}" style="color:${hi?'var(--profit)':'var(--text)'};font-weight:${hi?'800':'600'}">+¥${(+it.profit).toLocaleString('ja-JP')}${hi?' ★':''}</span></div>`:''}
         </div>
         ${it.item_no?`<div class="ins-itemno">商品番号 ${it.item_no}</div>`:''}
