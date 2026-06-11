@@ -393,6 +393,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .band-conf.高{background:rgba(46,212,122,.18);color:var(--t1)}
 .band-conf.中{background:rgba(255,181,71,.18);color:var(--t3)}
 .band-conf.低{background:rgba(255,92,92,.16);color:var(--alert)}
+/* ⑤ 狙い目フラグ */
+.sniper-flag{font-size:9px;font-weight:800;padding:1px 7px;border-radius:8px;background:linear-gradient(90deg,rgba(255,181,71,.28),rgba(255,92,92,.22));color:#ffcf6b;margin-left:4px;white-space:nowrap}
 /* 在庫: 価格バッジ */
 .iv-badge-down{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;background:rgba(255,92,92,.18);color:var(--alert);margin-left:4px}
 .iv-badge-na{font-size:9px;font-weight:700;padding:1px 6px;border-radius:7px;background:var(--surface2);color:var(--muted2);margin-left:4px}
@@ -733,7 +735,7 @@ function render() {
       <div class="tier-strip ${tc}">
         ${TIER_ICON[c.tier]} ${TIER_JP[c.tier]||c.tier}
         <span class="ts-desc">─ ${TIER_DESC[c.tier]||''}</span>
-        ${ngBadge}${isWarnCard?`<span class="warn-flag">⚠️ 要確認</span>`:''}
+        ${sniperBadge(c)}${ngBadge}${isWarnCard?`<span class="warn-flag">⚠️ 要確認</span>`:''}
       </div>
       <div class="card-header">
         <div class="card-title">
@@ -1185,6 +1187,29 @@ function toggleNgHide(){
   if(tab==='inspect') renderInspect(); else render();
 }
 
+// ⑤ 狙い目フラグ（競争が少なく安く取れる可能性）。sniper_flag.py のJS版
+const SNIPER_MINOR=['カムホート','カムフォート','ロンワン','ローンワンズ','羽根','鶴ベル','しずくベル','ヴィトン','シャネル風'];
+const SNIPER_EN=['LOUIS VUITTON','CHANEL','HERMES','PRADA','GUCCI','LONE ONES','Leonard'];
+function sniperFlag(it){
+  const name=(it.name||it.model||'')+''; const sigs=[]; let s=0;
+  const ic=it.image_count;
+  if(ic!=null && ic<=2){sigs.push('写真少');s+=2;}
+  if(it.image_dark){sigs.push('暗い');s+=1;}
+  const hasKata=/[A-Z]{1,3}[-_ ]?\d{3,}|M\d{5}|US\d/.test(name);
+  const hasEn=SNIPER_EN.some(b=>name.includes(b));
+  if(!hasKata&&!hasEn&&name.length<22){sigs.push('雑タイトル');s+=2;}
+  const es=(it.deadline||it.end||'')+''; const hm=es.match(/[T ](\d{1,2}):/); const h=hm?+hm[1]:null;
+  if(h!=null&&h>=0&&h<=6){sigs.push('深夜終了');s+=2;}
+  const nm=SNIPER_MINOR.filter(w=>name.includes(w));
+  if(nm.length){sigs.push('表記ゆれ');s+=2;}
+  if(it.bids===0){sigs.push('入札0');s+=1;}
+  return {sniper:s>=3, score:s, signals:sigs};
+}
+function sniperBadge(it){
+  const f=sniperFlag(it);
+  return f.sniper?`<span class="sniper-flag" title="競争少・安く取れる可能性: ${f.signals.join('・')}">🎯狙い目</span>`:'';
+}
+
 // ===== 領収書タブ（スキャフォルド・取得処理は1Password CLI連携後に実装） =====
 const RC_SITES = [
   { id:'ecoauc', icon:'🌿', name:'エコオク' },
@@ -1477,7 +1502,7 @@ function renderInspect(){
           <span class="iv-card-cat">${ngBadge}${it.brand||''}${it.category?' / '+it.category:''}</span>
         </div>
         <div class="iv-name">${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}</div>
-        ${perfBadge}
+        ${perfBadge}${sniperBadge(it)}
         <div class="iv-rows">
           <div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv">${it.current_price?'¥'+(+it.current_price).toLocaleString('ja-JP'):'—'}</span></div>
           ${it.jissei?`<div class="iv-row"><span class="iv-rl">実勢${it.confidence?`<span class="band-conf ${it.confidence}">信頼度${it.confidence}</span>`:''}</span><span class="iv-rv">${(it.jissei_low&&it.jissei_high)?`¥${(+it.jissei_low).toLocaleString('ja-JP')}〜¥${(+it.jissei_high).toLocaleString('ja-JP')}`:'¥'+(+it.jissei).toLocaleString('ja-JP')}</span></div>`:''}
