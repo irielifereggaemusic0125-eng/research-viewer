@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-11 21:53",
+  "updated_at": "2026-06-13 04:04",
   "count": 25,
   "items": [
     {
@@ -311,34 +311,6 @@
       "ecoauc_listed": false
     },
     {
-      "kanri_no": "i095-991230",
-      "name": "iPhone 17 Pro 256GB ディープブルー オレンジ　シルバー　３台",
-      "category": "その他",
-      "category_raw": "iPhone",
-      "buy_date": "",
-      "buy_price": null,
-      "loss_cut": null,
-      "list_price": null,
-      "actual_price": null,
-      "price_updated_at": null,
-      "mercari_id": "",
-      "ecoauc_listed": false
-    },
-    {
-      "kanri_no": "i096-991230",
-      "name": "iPhone 17 Pro 256GB ディープブルー オレンジ　シルバー　３台",
-      "category": "その他",
-      "category_raw": "iPhone",
-      "buy_date": "",
-      "buy_price": null,
-      "loss_cut": null,
-      "list_price": null,
-      "actual_price": null,
-      "price_updated_at": null,
-      "mercari_id": "",
-      "ecoauc_listed": false
-    },
-    {
       "kanri_no": "B097-260610",
       "name": "Cartier カルティエ マストライン レザー ハンドバッグ ボルドー",
       "category": "その他",
@@ -346,6 +318,34 @@
       "buy_date": "2026-06-10",
       "buy_price": 29910,
       "loss_cut": 33790,
+      "list_price": null,
+      "actual_price": null,
+      "price_updated_at": null,
+      "mercari_id": "m63897727905",
+      "ecoauc_listed": false
+    },
+    {
+      "kanri_no": "W098-260612",
+      "name": "PRADA プラダ サフィアーノレザー ヤシの木 ラウンドファスナー 長財布 イエロー系×マルチカラー",
+      "category": "財布",
+      "category_raw": "W 財布",
+      "buy_date": "2026-06-12",
+      "buy_price": 12975,
+      "loss_cut": 14980,
+      "list_price": null,
+      "actual_price": null,
+      "price_updated_at": null,
+      "mercari_id": "",
+      "ecoauc_listed": false
+    },
+    {
+      "kanri_no": "W099-260612",
+      "name": "LOUIS VUITTON ルイヴィトン M60775 モノグラムアンプラント ジッピーウォレット ラウンドファスナー 長財布 アプリコ",
+      "category": "財布",
+      "category_raw": "W 財布",
+      "buy_date": "2026-06-12",
+      "buy_price": 12975,
+      "loss_cut": 14980,
       "list_price": null,
       "actual_price": null,
       "price_updated_at": null,
