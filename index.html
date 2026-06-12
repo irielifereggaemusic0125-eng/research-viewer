@@ -438,6 +438,9 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-badge-down{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;background:rgba(255,92,92,.18);color:var(--alert);margin-left:4px}
 .iv-badge-na{font-size:9px;font-weight:700;padding:1px 6px;border-radius:7px;background:var(--surface2);color:var(--muted2);margin-left:4px}
 .iv-card.iv-eco{border-left-color:var(--t3)}
+/* ⑤ 候補カードの実勢/入札入力ラッパ */
+.cand-input-wrap{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+.cand-input-hint{font-size:10px;font-weight:700;color:var(--muted);margin-bottom:4px}
 /* 下見: 手入力実勢・入札額 */
 .iv-input-row{display:flex;gap:8px;margin:8px 0 2px;flex-wrap:wrap}
 .iv-input-grp{display:flex;flex:1;min-width:128px;align-items:center;gap:5px;background:var(--surface2);border:1.5px solid var(--line);border-radius:9px;padding:6px 10px}
@@ -809,8 +812,13 @@ function render() {
 
   const cards = document.getElementById('cards');
   if (!candidates.length) { cards.innerHTML = '<div class="empty">該当候補なし<br>絞り込み条件を変えてください</div>'; return; }
+  const candEdits = candEditsLoad();
   cards.innerHTML = candidates.map(c => {
     const tc = TIER_CLASS[c.tier] || '';
+    const ck = candKey(c);
+    const ce = candEdits[ck]||{};
+    const ceJ = ce.jissei?ce.jissei.toLocaleString('ja-JP'):'';
+    const ceB = ce.bid?ce.bid.toLocaleString('ja-JP'):'';
     const hrs = hoursLeft(c.end);
     const ended = isEnded(c.end);   // ④ 終了済み
     const endBadge = ended ? `<span class="ended-badge">🔚 終了</span>` : (hrs ? `<span class="ending-badge">残り${hrs}h</span>` : '');
@@ -854,12 +862,54 @@ function render() {
         <div class="row"><span class="row-lbl">整合性</span><span class="row-val">${c.coherence}</span></div>
         <div class="row"><span class="row-lbl">サンプル</span><span class="row-val">n=${c.n40}件${c.n90?` / 90日n=${c.n90}件`:''}</span></div>
         ${c.note?`<div class="note-box ${noteClass}">${c.note}</div>`:''}
+        ${ended?'':`<div class="cand-input-wrap">
+          <div class="cand-input-hint">📝 実勢・入札を記録（検算機予測と突合して学習）</div>
+          <div class="iv-input-row">
+            <div class="iv-input-grp"><span class="iv-input-lbl">実勢 ¥</span>
+              <input class="iv-input" type="text" inputmode="numeric" placeholder="未入力" value="${ceJ}"
+                oninput="candSetField('${ck}','jissei',this.value);insFormatInput(this)"></div>
+            <div class="iv-input-grp"><span class="iv-input-lbl">入札 ¥</span>
+              <input class="iv-input" type="text" inputmode="numeric" placeholder="未入力" value="${ceB}"
+                oninput="candSetField('${ck}','bid',this.value);insFormatInput(this)"></div>
+          </div>
+          <div class="iv-calc-row" id="cand-calc-${ck}"></div>
+        </div>`}
       </div>
     </div>`;
   }).join('');
+  // 入力済みの粗利計算を反映
+  Object.keys(candEditsLoad()).forEach(k=>candUpdateCalc(k));
 }
 
 function yen(n){ return n && n>0 ? '¥'+n.toLocaleString('ja-JP') : '—'; }
+
+// ⑤ 候補(ヤフオク/Eco)の実勢¥・入札¥手入力（localStorage永続・下見と同仕様）
+function _candHash(s){let h=0;for(let i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))|0;}return (h>>>0).toString(36);}
+function candKey(c){ return 'c_'+_candHash((c.aucid||'')+'|'+(c.url||'')+'|'+(c.brand||'')+'|'+(c.model||'')+'|'+(c.name||'')); }
+const CAND_EDITS_KEY='cand_edits_v1';
+function candEditsLoad(){try{return JSON.parse(localStorage.getItem(CAND_EDITS_KEY)||'{}');}catch(e){return{};}}
+function candEditsSave(d){localStorage.setItem(CAND_EDITS_KEY,JSON.stringify(d));}
+function candSetField(key,field,raw){
+  const d=candEditsLoad(); if(!d[key])d[key]={};
+  const v=parseInt(raw.replace(/[^\d]/g,''),10);
+  if(v>0)d[key][field]=v; else delete d[key][field];
+  if(!Object.keys(d[key]).length)delete d[key];
+  candEditsSave(d); candUpdateCalc(key);
+}
+function candUpdateCalc(key){
+  const el=document.getElementById('cand-calc-'+key); if(!el)return;
+  const e=(candEditsLoad()[key])||{};
+  const j=e.jissei||0,b=e.bid||0;
+  if(!j&&!b){el.innerHTML='';return;}
+  let html='';
+  if(j&&b){
+    const profit=Math.round(j*0.9-b),ratio=Math.round(b/j*100);
+    const cls=profit>=0?'pos':'neg',sign=profit>=0?'+':'-';
+    html=`<span class="iv-calc-${cls}">粗利 ${sign}¥${Math.abs(profit).toLocaleString('ja-JP')}</span><span style="color:var(--line);margin:0 4px">·</span><span class="iv-calc-ratio">入札/実勢 ${ratio}%</span>`;
+  }else if(j){ html=`<span class="iv-calc-pos">売値×0.9 = ¥${Math.round(j*0.9).toLocaleString('ja-JP')}</span>`; }
+  else{ html=`<span class="iv-calc-ratio">入札 ¥${b.toLocaleString('ja-JP')}</span>`; }
+  el.innerHTML=html;
+}
 
 // ★現物リンク生成: 出品中(個別商品URL)＝商品ページ直行 / 待ち受け中＝検索ページ＋明記
 function buildItemLinks(c){
