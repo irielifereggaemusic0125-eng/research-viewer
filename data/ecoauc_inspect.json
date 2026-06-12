@@ -1206,5 +1206,5 @@
   ],
   "url_format_note": "url=商品ページ直リンク(auction-items/view/{view_id}/Auctions/inspect)。search_url=item_no検索フォールバック。product_no=13桁等の商品番号(URL変更時の検索キー)。2026-06-13 backfill。",
   "tax_corrected_at": "2026-06-13",
-  "tax_note": "profit/shitene を消費税対応式で再計算(落札×1.1+手数料階層×1.1+自宅送料/粗利=実勢×0.9-フリマ送料-仕入総額)。落札見込は旧profitから逆算。次回fetchで完全再生成。"
+  "tax_note": "profit/shitene=利益計算ツールと同一式(落札×1.1+手数料6階層×1.1+自宅送料/粗利=実勢×0.9-フリマ送料-仕入総額)。落札見込=旧profit逆算。次回fetchで再生成。2026-06-13"
 }

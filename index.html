@@ -1799,8 +1799,10 @@ function skipModalConfirm(){
 // 落札手数料(税抜): 1万まで500 / 1.1万〜4.9万 1,000 / 5万以上 2,000
 // 粗利 = 実勢×0.9(フリマ手数料) − フリマ送料 − 仕入れ総額
 const ECO_SHIIRE_SOURYO=1500, FURIMA_SOURYO=700;
-function ecoRakusatsuTesuryo(p){ p=p||0; if(p<=10000)return 500; if(p<50000)return 1000; return 2000; }
-function ecoTotalCost(bid, shiireSouryo){ bid=bid||0; shiireSouryo=(shiireSouryo==null?ECO_SHIIRE_SOURYO:shiireSouryo); return Math.round(bid*1.1 + ecoRakusatsuTesuryo(bid)*1.1 + shiireSouryo); }
+// 落札手数料(税抜)：profit_calculator.html の ecoBuyFeeBase と完全一致（全6階層）
+function ecoRakusatsuTesuryo(p){ p=p||0; if(p<=10000)return 500; if(p<=49999)return 1000; if(p<=99999)return 2000; if(p<=499999)return 4000; if(p<=999999)return 8000; return 10000; }
+// 仕入総額：ツールの ecoBuyTotalCost と同じく税込落札・税込手数料を個別四捨五入して合算＋送料
+function ecoTotalCost(bid, shiireSouryo){ bid=bid||0; shiireSouryo=(shiireSouryo==null?ECO_SHIIRE_SOURYO:shiireSouryo); return Math.round(bid*1.1) + Math.round(ecoRakusatsuTesuryo(bid)*1.1) + shiireSouryo; }
 function ecoProfit(jissei, bid, furimaSouryo, shiireSouryo){ jissei=jissei||0; furimaSouryo=(furimaSouryo==null?FURIMA_SOURYO:furimaSouryo); return Math.round(jissei*0.9 - furimaSouryo - ecoTotalCost(bid, shiireSouryo)); }
 
 // ===== 下見タブ: 手入力実勢・入札額（localStorage永続） =====
