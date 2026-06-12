@@ -1426,7 +1426,7 @@ function renderInventory(){
 }
 
 // ===== 下見タブ: GO/見送り判断（localhost:8765リレー経由） =====
-const RELAY_URL='http://localhost:8765';
+const RELAY_URL='http://127.0.0.1:8765';
 const INS_DECS_KEY='ins_decisions_v1';
 const insItemMap={};
 function insDecsLoad(){try{return JSON.parse(localStorage.getItem(INS_DECS_KEY)||'{}');}catch(e){return{};}}
