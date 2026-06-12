@@ -813,9 +813,11 @@ function render() {
   const cards = document.getElementById('cards');
   if (!candidates.length) { cards.innerHTML = '<div class="empty">該当候補なし<br>絞り込み条件を変えてください</div>'; return; }
   const candEdits = candEditsLoad();
+  Object.keys(candMeta).forEach(k=>delete candMeta[k]);
   cards.innerHTML = candidates.map(c => {
     const tc = TIER_CLASS[c.tier] || '';
     const ck = candKey(c);
+    candMeta[ck]={brand:c.brand,model:c.model,name:c.name,jissei:c.jissei,source:c.source};
     const ce = candEdits[ck]||{};
     const ceJ = ce.jissei?ce.jissei.toLocaleString('ja-JP'):'';
     const ceB = ce.bid?ce.bid.toLocaleString('ja-JP'):'';
@@ -867,10 +869,10 @@ function render() {
           <div class="iv-input-row">
             <div class="iv-input-grp"><span class="iv-input-lbl">実勢 ¥</span>
               <input class="iv-input" type="text" inputmode="numeric" placeholder="未入力" value="${ceJ}"
-                oninput="candSetField('${ck}','jissei',this.value);insFormatInput(this)"></div>
+                oninput="candSetField('${ck}','jissei',this.value);insFormatInput(this)" onblur="candPredict('${ck}')"></div>
             <div class="iv-input-grp"><span class="iv-input-lbl">入札 ¥</span>
               <input class="iv-input" type="text" inputmode="numeric" placeholder="未入力" value="${ceB}"
-                oninput="candSetField('${ck}','bid',this.value);insFormatInput(this)"></div>
+                oninput="candSetField('${ck}','bid',this.value);insFormatInput(this)" onblur="candPredict('${ck}')"></div>
           </div>
           <div class="iv-calc-row" id="cand-calc-${ck}"></div>
         </div>`}
@@ -909,6 +911,16 @@ function candUpdateCalc(key){
   }else if(j){ html=`<span class="iv-calc-pos">売値×0.9 = ¥${Math.round(j*0.9).toLocaleString('ja-JP')}</span>`; }
   else{ html=`<span class="iv-calc-ratio">入札 ¥${b.toLocaleString('ja-JP')}</span>`; }
   el.innerHTML=html;
+}
+// ⑤ 候補のメタ情報（学習送信用・検算機予測実勢など）。renderで毎回再構築
+const candMeta={};
+// ①⑤ 候補の手入力実勢/入札を学習に流す（入力欄blur時）
+function candPredict(ck){
+  const m=candMeta[ck]; if(!m) return;
+  const e=candEditsLoad()[ck]||{};
+  if(!e.jissei) return;
+  predictRecord({key:'yh_'+ck, item_no:'', brand:m.brand||'', model:m.model||'', name:m.name||'',
+    predicted_jissei:m.jissei||null, manual_jissei:e.jissei, bid:e.bid||null, source:'yahoo_candidate'});
 }
 
 // ★現物リンク生成: 出品中(個別商品URL)＝商品ページ直行 / 待ち受け中＝検索ページ＋明記
@@ -1558,7 +1570,7 @@ const _relayWaiters={};
 let _relayReady=false;
 window.addEventListener('message',(e)=>{
   if(!e.data||e.source!==window) return;
-  if(e.data.type==='banshee_relay_ready') _relayReady=true;
+  if(e.data.type==='banshee_relay_ready'){ _relayReady=true; predictFlushQueue(); }  // 接続できたら退避分を再送
   if(e.data.type==='banshee_relay_result'){
     const cb=_relayWaiters[e.data.reqId];
     if(cb){delete _relayWaiters[e.data.reqId]; cb(e.data.result);}
@@ -1573,6 +1585,35 @@ function relayPost(action,payload){
       if(_relayWaiters[reqId]){delete _relayWaiters[reqId]; resolve(null);}
     },5000);
   });
+}
+
+// ===== ①⑤ 学習経路: 手入力実勢/入札 → prediction_ledger（送信キュー＋localStorageバックアップ） =====
+// Mac起動中はTampermonkey経由で即送信。非起動/失敗時はキューに退避→接続できたら自動再送（渡航中の取りこぼし防止）。
+const PREDICT_QUEUE_KEY='predict_queue_v1';
+function predictQueueLoad(){try{return JSON.parse(localStorage.getItem(PREDICT_QUEUE_KEY)||'[]');}catch(e){return[];}}
+function predictQueueSave(q){localStorage.setItem(PREDICT_QUEUE_KEY,JSON.stringify(q));}
+let _predictFlushing=false;
+// 入力レコードを必ずキューにupsert（消失防止）→ 即フラッシュ試行
+function predictRecord(rec){
+  if(!rec||!rec.key||!rec.manual_jissei) return;
+  const q=predictQueueLoad();
+  const i=q.findIndex(r=>r.key===rec.key);
+  if(i>=0)q[i]=rec; else q.push(rec);
+  predictQueueSave(q);
+  predictFlushQueue();
+}
+async function predictFlushQueue(){
+  if(_predictFlushing) return;
+  let q=predictQueueLoad(); if(!q.length) return;
+  _predictFlushing=true;
+  try{
+    const remain=[];
+    for(const rec of q){
+      const r=await relayPost('predict',rec);
+      if(!(r&&r.ok)) remain.push(rec);  // 未送信は残す（Mac非起動/エラー）
+    }
+    predictQueueSave(remain);
+  } finally { _predictFlushing=false; }
 }
 
 // ③ 見送り理由のタグ判定（judgment_log.py の REASON_TAGS と対応）
@@ -1680,6 +1721,14 @@ function insUpdateCalc(key){
     html=`<span class="iv-calc-ratio">入札 ¥${b.toLocaleString('ja-JP')}</span>`;
   }
   el.innerHTML=html;
+}
+// ①⑤ 下見の手入力実勢/入札を学習に流す（入力欄blur時）
+function insPredict(itemNo){
+  const m=insItemMap[itemNo]; if(!m) return;
+  const e=insEditsLoad()[itemNo]||{};
+  if(!e.jissei) return;  // 手入力実勢が無ければ送らない
+  predictRecord({key:'eco_'+itemNo, item_no:itemNo, brand:m.brand||'', model:'', name:m.name||'',
+    predicted_jissei:m.jissei||null, manual_jissei:e.jissei, bid:e.bid||null, source:'ecoauc_inspect'});
 }
 
 // ===== 下見タブ（EcoAuc下見・ecoauc_inspect.json） =====
@@ -1825,12 +1874,12 @@ function renderInspect(){
           <div class="iv-input-grp">
             <span class="iv-input-lbl">実勢 ¥</span>
             <input class="iv-input" type="text" inputmode="numeric" placeholder="未入力" value="${sJ}"
-              oninput="insSetField('${it.item_no}','jissei',this.value);insFormatInput(this)">
+              oninput="insSetField('${it.item_no}','jissei',this.value);insFormatInput(this)" onblur="insPredict('${it.item_no}')">
           </div>
           <div class="iv-input-grp">
             <span class="iv-input-lbl">入札 ¥</span>
             <input class="iv-input" type="text" inputmode="numeric" placeholder="未入力" value="${sB}"
-              oninput="insSetField('${it.item_no}','bid',this.value);insFormatInput(this)">
+              oninput="insSetField('${it.item_no}','bid',this.value);insFormatInput(this)" onblur="insPredict('${it.item_no}')">
           </div>
         </div>
         <div class="iv-calc-row" id="ins-calc-${it.item_no}"></div>
@@ -1908,6 +1957,7 @@ function renderArtifacts(){
   currentDate = '2026-06-06';
   buildDateBar();
   await loadDate(currentDate);
+  setTimeout(predictFlushQueue, 1500);  // ①⑤ 起動時に未送信の学習データを再送（TM ready取りこぼし対策）
 })();
 </script>
 </body>
