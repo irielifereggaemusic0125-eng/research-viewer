@@ -1425,12 +1425,34 @@ function renderInventory(){
     }).join('') : '<div class="empty">該当する在庫なし<br>フィルタを変えてください</div>'}`;
 }
 
-// ===== 下見タブ: GO/見送り判断（localhost:8765リレー経由） =====
-const RELAY_URL='http://127.0.0.1:8765';
+// ===== 下見タブ: GO/見送り判断（Tampermonkeyブリッジ経由） =====
 const INS_DECS_KEY='ins_decisions_v1';
 const insItemMap={};
 function insDecsLoad(){try{return JSON.parse(localStorage.getItem(INS_DECS_KEY)||'{}');}catch(e){return{};}}
 function insDecsSave(d){localStorage.setItem(INS_DECS_KEY,JSON.stringify(d));}
+
+// Tampermonkeyブリッジ: postMessage → GM.xmlhttpRequest → localhost:8765
+let _relayId=0;
+const _relayWaiters={};
+let _relayReady=false;
+window.addEventListener('message',(e)=>{
+  if(!e.data||e.source!==window) return;
+  if(e.data.type==='banshee_relay_ready') _relayReady=true;
+  if(e.data.type==='banshee_relay_result'){
+    const cb=_relayWaiters[e.data.reqId];
+    if(cb){delete _relayWaiters[e.data.reqId]; cb(e.data.result);}
+  }
+});
+function relayPost(action,payload){
+  return new Promise((resolve)=>{
+    const reqId=++_relayId;
+    _relayWaiters[reqId]=resolve;
+    window.postMessage({type:'banshee_relay',action,payload,reqId},'*');
+    setTimeout(()=>{
+      if(_relayWaiters[reqId]){delete _relayWaiters[reqId]; resolve(null);}
+    },5000);
+  });
+}
 
 async function insJudge(itemNo,decision){
   if(!insItemMap[itemNo]) return;
@@ -1450,19 +1472,15 @@ async function insJudge(itemNo,decision){
     jissei,bid,profit,deadline:it.deadline,current_price:it.current_price,
     reason:decision==='go'?`下見GO bid=¥${bid.toLocaleString('ja-JP')}`:'下見見送り'};
 
-  let server_ok=false;
-  try{
-    const r=await fetch(RELAY_URL+'/'+decision,{method:'POST',
-      headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-    const j=await r.json(); server_ok=!!j.ok;
-  }catch(err){server_ok=null;}
+  const result=await relayPost(decision,payload);
+  const server_ok=result?!!result.ok:null;
 
   const decs=insDecsLoad();
   decs[itemNo]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok};
   insDecsSave(decs);
 
-  const goLabel=server_ok===null?'GO(未送信)':server_ok?'GO済 ✓':'GO エラー';
-  const skipLabel=server_ok===null?'見送り(未送信)':server_ok?'見送り済 ✓':'見送り エラー';
+  const goLabel=server_ok===null?'GO(TM未導入)':server_ok?'GO済 ✓':'GO エラー';
+  const skipLabel=server_ok===null?'見送り(TM未導入)':server_ok?'見送り済 ✓':'見送り エラー';
   if(btnGo){
     btnGo.classList.remove('loading');
     if(decision==='go'){btnGo.textContent=goLabel;btnGo.classList.add('done');}
