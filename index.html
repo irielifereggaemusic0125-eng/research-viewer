@@ -107,6 +107,9 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .status-line{font-size:10px;font-weight:700;padding:6px 8px;border-radius:8px;margin:8px 0 6px;line-height:1.4}
 .status-line.listed{background:rgba(46,212,122,.14);color:var(--t1)}
 .status-line.waiting{background:var(--surface2);color:var(--muted)}
+.status-line.ended{background:rgba(120,120,130,.18);color:var(--muted2)}
+.card-ended{opacity:.62}
+.ended-badge{font-size:9px;font-weight:800;padding:2px 7px;border-radius:8px;background:rgba(120,120,130,.22);color:var(--muted2);margin-left:4px}
 .store-note{font-size:9px;color:var(--t3);background:rgba(255,181,71,.1);border-radius:8px;padding:5px 8px;margin:2px 0 6px;line-height:1.5}
 .store-note b{font-weight:700}
 .actions{display:flex;gap:8px;margin:0 0 4px}
@@ -388,7 +391,9 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .ins-pb{font-size:9px;font-weight:800;padding:1px 7px;border-radius:7px}
 .ins-pb.k{background:rgba(77,159,255,.16);color:var(--t2)}
 .ins-pb.r{background:rgba(46,212,122,.16);color:var(--t1)}
-.ins-itemno{font-size:9px;color:var(--muted2);margin:4px 0 2px;letter-spacing:.03em}
+.ins-itemno{font-size:15px;font-weight:800;color:var(--text);margin:8px 0 4px;letter-spacing:.04em;background:var(--surface2);border:1.5px solid var(--line);border-radius:8px;padding:6px 10px;display:flex;align-items:center;gap:6px}
+.ins-itemno .lbl{font-size:10px;font-weight:700;color:var(--muted);flex-shrink:0}
+.ins-itemno .no{font-variant-numeric:tabular-nums;user-select:all}
 /* ③ 価格バンドの信頼度バッジ */
 .band-conf{font-size:8px;font-weight:700;padding:0 5px;border-radius:6px;margin-left:4px;vertical-align:middle}
 .band-conf.高{background:rgba(46,212,122,.18);color:var(--t1)}
@@ -515,6 +520,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
         <button class="fchip" id="chip-alert" onclick="toggleAlert()">⏰終了間近<span class="fc-sub">24h以内</span></button>
         <button class="fchip" id="chip-coherence" onclick="toggleCoherence()">✅整合のみ<span class="fc-sub">両回一致</span></button>
         <button class="fchip on" id="chip-nghide" onclick="toggleNgHide();this.classList.toggle('on',ngHideExcluded)">🚫除外を隠す<span class="fc-sub">NGワード</span></button>
+        <button class="fchip" id="chip-ended" onclick="toggleEnded()">🔚終了も表示<span class="fc-sub" id="ended-sub">進行中のみ</span></button>
       </div>
     </div>
     <!-- 並び替え -->
@@ -556,7 +562,7 @@ let currentDate = '';
 let lotteryData = null;
 let lotCatFilter = 'all';
 let lotStatuses = {};  // id(name+deadline) → status override ('未応募'|'応募済')
-let filters = { tier: 'all', alert: false, coherence: false, sort: 'tier', stock: 'all' };
+let filters = { tier: 'all', alert: false, coherence: false, sort: 'tier', stock: 'all', showEnded: false };
 
 // 出品中判定: JSONのstatus='listed'を主・無ければ個別商品URL有無で代用
 function isListed(c){
@@ -657,6 +663,12 @@ function hoursLeft(endStr) {
   const hrs = Math.round((end - new Date())/3600000);
   return hrs > 0 ? hrs : null;
 }
+// ④ 終了判定：終了日時が解析でき、かつ現在より過去ならオークション終了
+function isEnded(endStr) {
+  const end = parseEnd(endStr);
+  if (!end || isNaN(end)) return false;   // 日付不明(—/要確認)は終了扱いにしない
+  return (end - new Date()) <= 0;
+}
 
 function setTier(val) {
   filters.tier = val;
@@ -674,6 +686,13 @@ function setTier(val) {
 function toggleAlert() {
   filters.alert = !filters.alert;
   document.getElementById('chip-alert').classList.toggle('on-warn', filters.alert);
+  render();
+}
+function toggleEnded() {
+  filters.showEnded = !filters.showEnded;
+  document.getElementById('chip-ended').classList.toggle('on', filters.showEnded);
+  const sub = document.getElementById('ended-sub');
+  if (sub) sub.textContent = filters.showEnded ? '終了も表示中' : '進行中のみ';
   render();
 }
 function toggleCoherence() {
@@ -706,6 +725,11 @@ function render() {
   if (filters.tier !== 'all') candidates = candidates.filter(c => c.tier === filters.tier);
   if (filters.alert) candidates = candidates.filter(c => isEndingSoon(c.end));
   if (filters.coherence) candidates = candidates.filter(c => c.coherence && c.coherence.startsWith('✅'));
+  // ④ 終了したヤフオク商品はデフォルト非表示（「終了も表示」ONで処理済みとして見返せる）
+  const endedCount = data.candidates.filter(c => isEnded(c.end)).length;
+  if (!filters.showEnded) candidates = candidates.filter(c => !isEnded(c.end));
+  const endedSub = document.getElementById('ended-sub');
+  if (endedSub) endedSub.textContent = filters.showEnded ? '終了も表示中' : (endedCount ? `${endedCount}件を非表示` : '進行中のみ');
   // NGワード除外（タイトルベース・トグルON時は除外カードを隠す）
   if (ngHideExcluded) candidates = candidates.filter(c => ngCheck(c.name)?.level !== 'exclude');
 
@@ -742,7 +766,8 @@ function render() {
   cards.innerHTML = candidates.map(c => {
     const tc = TIER_CLASS[c.tier] || '';
     const hrs = hoursLeft(c.end);
-    const endBadge = hrs ? `<span class="ending-badge">残り${hrs}h</span>` : '';
+    const ended = isEnded(c.end);   // ④ 終了済み
+    const endBadge = ended ? `<span class="ended-badge">🔚 終了</span>` : (hrs ? `<span class="ending-badge">残り${hrs}h</span>` : '');
     const noteClass = c.note && (c.note.includes('⚠️手動')||c.note.includes('⚠️目視')) ? 'danger' : (c.note ? 'warn' : '');
     const isWarnCard = c.note && c.note.includes('⚠️');
     const ng = ngCheck(c.name);   // NGワード判定(タイトルベース)
@@ -751,7 +776,7 @@ function render() {
       ? `<span class="ng-flag ex">🚫 除外:${ng.word}</span>`
       : `<span class="ng-flag wn">⚠️ ${ng.word}</span>`) : '';
     return `
-    <div class="card ${tc}${isWarnCard?' warn-card':''}${ngCls}">
+    <div class="card ${tc}${isWarnCard?' warn-card':''}${ngCls}${ended?' card-ended':''}">
       <div class="tier-strip ${tc}">
         ${TIER_ICON[c.tier]} ${TIER_JP[c.tier]||c.tier}
         <span class="ts-desc">─ ${TIER_DESC[c.tier]||''}</span>
@@ -766,7 +791,7 @@ function render() {
       </div>
       <div class="card-body">
         ${(()=>{const r=buildItemLinks(c);return `
-        <div class="status-line ${r.listed?'listed':'waiting'}">${r.listed?'🟢 出品中 ─ この1点の商品ページへ直行できます':'⏳ 待ち受け中 ─ 現在この型番の出品なし（検索で探す）'}</div>
+        <div class="status-line ${ended?'ended':(r.listed?'listed':'waiting')}">${ended?'🔚 終了 ─ このオークションは終了しました（処理済み）':(r.listed?'🟢 出品中 ─ この1点の商品ページへ直行できます':'⏳ 待ち受け中 ─ 現在この型番の出品なし（検索で探す）')}</div>
         <div class="actions">
           ${r.links.map(l=>`<a class="act-btn ${l.cls}" href="${l.href}" target="_blank" rel="noopener"${l.onclick?` onclick="${l.onclick}"`:''}>${l.label}<span class="ab-sub">${l.sub}</span></a>`).join('')}
         </div>
@@ -1661,7 +1686,7 @@ function renderInspect(){
             ${dec==='skip'?'見送り済 ✓':'見送り'}
           </button>
         </div>`:''}
-        ${it.item_no?`<div class="ins-itemno">商品番号 ${it.item_no}</div>`:''}
+        ${it.item_no?`<div class="ins-itemno"><span class="lbl">商品番号</span><span class="no">${it.item_no}</span></div>`:''}
         ${ecoURL?`<a class="iv-merc" style="background:#1558b0" href="${ecoURL}" target="_blank" rel="noopener">🔭 EcoAuc下見で探す<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">商品を探す</span></a>`:`<span class="iv-merc disabled">URL無し</span>`}
       </div>`;
     }).join(''):'<div class="empty">該当なし<br>フィルタを変えてください</div>'}`;
