@@ -411,6 +411,13 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-calc-pos{color:var(--profit);font-weight:800}
 .iv-calc-neg{color:var(--alert);font-weight:800}
 .iv-calc-ratio{color:var(--t3);font-weight:700}
+/* 下見: GO/見送りボタン */
+.iv-judge-row{display:flex;gap:8px;margin:6px 0 4px}
+.iv-judge-btn{flex:1;min-height:42px;border-radius:10px;font-size:13px;font-weight:800;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent;border:none}
+.iv-judge-btn.go{background:rgba(46,212,122,.15);color:var(--profit);border:1.5px solid rgba(46,212,122,.3)}
+.iv-judge-btn.skip{background:rgba(255,92,92,.12);color:var(--alert);border:1.5px solid rgba(255,92,92,.25)}
+.iv-judge-btn.done{opacity:.7;cursor:default}
+.iv-judge-btn.loading{opacity:.5}
 /* 成果物タブ */
 .art-date{font-size:11px;font-weight:700;color:var(--t1);letter-spacing:.04em;margin:12px 2px 7px;padding-bottom:4px;border-bottom:1px solid var(--line)}
 .art-card{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--t2);border-radius:11px;padding:10px 12px;margin-bottom:9px}
@@ -1418,6 +1425,56 @@ function renderInventory(){
     }).join('') : '<div class="empty">該当する在庫なし<br>フィルタを変えてください</div>'}`;
 }
 
+// ===== 下見タブ: GO/見送り判断（localhost:8765リレー経由） =====
+const RELAY_URL='http://localhost:8765';
+const INS_DECS_KEY='ins_decisions_v1';
+const insItemMap={};
+function insDecsLoad(){try{return JSON.parse(localStorage.getItem(INS_DECS_KEY)||'{}');}catch(e){return{};}}
+function insDecsSave(d){localStorage.setItem(INS_DECS_KEY,JSON.stringify(d));}
+
+async function insJudge(itemNo,decision){
+  if(!insItemMap[itemNo]) return;
+  const btnGo=document.getElementById('ins-go-'+itemNo);
+  const btnSkip=document.getElementById('ins-skip-'+itemNo);
+  const btn=decision==='go'?btnGo:btnSkip;
+  if(btn){btn.textContent='…';btn.classList.add('loading');btn.disabled=true;}
+  if(decision==='go'&&btnSkip){btnSkip.disabled=true;}
+  if(decision==='skip'&&btnGo){btnGo.disabled=true;}
+
+  const it=insItemMap[itemNo];
+  const e=(insEditsLoad()[itemNo])||{};
+  const jissei=e.jissei||it.jissei||0;
+  const bid=e.bid||0;
+  const profit=(jissei&&bid)?Math.round(jissei*0.9-bid):(it.profit||0);
+  const payload={item_no:itemNo,name:it.name,brand:it.brand,tier:it.tier,
+    jissei,bid,profit,deadline:it.deadline,current_price:it.current_price,
+    reason:decision==='go'?`下見GO bid=¥${bid.toLocaleString('ja-JP')}`:'下見見送り'};
+
+  let server_ok=false;
+  try{
+    const r=await fetch(RELAY_URL+'/'+decision,{method:'POST',
+      headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const j=await r.json(); server_ok=!!j.ok;
+  }catch(err){server_ok=null;}
+
+  const decs=insDecsLoad();
+  decs[itemNo]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok};
+  insDecsSave(decs);
+
+  const goLabel=server_ok===null?'GO(未送信)':server_ok?'GO済 ✓':'GO エラー';
+  const skipLabel=server_ok===null?'見送り(未送信)':server_ok?'見送り済 ✓':'見送り エラー';
+  if(btnGo){
+    btnGo.classList.remove('loading');
+    if(decision==='go'){btnGo.textContent=goLabel;btnGo.classList.add('done');}
+    else{btnGo.textContent='GO';btnGo.disabled=false;}
+  }
+  if(btnSkip){
+    btnSkip.classList.remove('loading');
+    if(decision==='skip'){btnSkip.textContent=skipLabel;btnSkip.classList.add('done');}
+    else{btnSkip.textContent='見送り';btnSkip.disabled=false;}
+  }
+}
+
 // ===== 下見タブ: 手入力実勢・入札額（localStorage永続） =====
 const INS_EDITS_KEY='ins_edits_v1';
 function insEditsLoad(){try{return JSON.parse(localStorage.getItem(INS_EDITS_KEY)||'{}');}catch(e){return {};}}
@@ -1512,6 +1569,8 @@ function renderInspect(){
   });
 
   const edits=insEditsLoad();
+  const decs=insDecsLoad();
+  Object.keys(insItemMap).forEach(k=>delete insItemMap[k]);
   const brandChips=brands.map(b=>`<button class="iv-chip${insBrands.has(b)?' on':''}" onclick="insToggleBrand('${b.replace(/'/g,"&apos;")}')">${b}</button>`).join('');
   const catChips=cats.map(c=>`<button class="iv-chip${insCats.has(c)?' on':''}" onclick="insToggleCat('${c.replace(/'/g,"&apos;")}')">${c}</button>`).join('');
   const priceChips=INS_PRICE_DEFS.map(p=>`<button class="iv-chip${insPrice===p[0]?' on':''}" onclick="insSetPrice('${p[0]}')">${p[1]}</button>`).join('');
@@ -1531,6 +1590,8 @@ function renderInspect(){
       const e=edits[it.item_no]||{};
       const sJ=e.jissei?e.jissei.toLocaleString('ja-JP'):'';
       const sB=e.bid?e.bid.toLocaleString('ja-JP'):'';
+      insItemMap[it.item_no]={name:it.name,brand:it.brand,tier:it.tier,jissei:it.jissei||0,profit:it.profit||0,deadline:it.deadline,current_price:it.current_price||0};
+      const dec=(decs[it.item_no]||{}).decision;
       const hi=!!it.highlight;          // 粗利¥5,000以上
       const hrs=insHours(it.deadline);
       const dueCls=hrs!==null&&hrs>=0&&hrs<24?'alert':(hrs!==null&&hrs<48?'warn':'ok');
@@ -1570,6 +1631,16 @@ function renderInspect(){
           </div>
         </div>
         <div class="iv-calc-row" id="ins-calc-${it.item_no}"></div>
+        ${it.item_no?`<div class="iv-judge-row">
+          <button class="iv-judge-btn go${dec==='go'?' done':''}" id="ins-go-${it.item_no}"
+            ${dec?'disabled':''} onclick="insJudge('${it.item_no}','go')">
+            ${dec==='go'?'GO済 ✓':'GO'}
+          </button>
+          <button class="iv-judge-btn skip${dec==='skip'?' done':''}" id="ins-skip-${it.item_no}"
+            ${dec?'disabled':''} onclick="insJudge('${it.item_no}','skip')">
+            ${dec==='skip'?'見送り済 ✓':'見送り'}
+          </button>
+        </div>`:''}
         ${it.item_no?`<div class="ins-itemno">商品番号 ${it.item_no}</div>`:''}
         ${it.url?`<a class="iv-merc" style="background:#1558b0" href="${it.url}"${TGT}>🔭 EcoAuc下見で探す<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">検索で開く</span></a>`:`<span class="iv-merc disabled">URL無し</span>`}
       </div>`;
