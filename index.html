@@ -394,6 +394,39 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .ins-itemno{font-size:15px;font-weight:800;color:var(--text);margin:8px 0 4px;letter-spacing:.04em;background:var(--surface2);border:1.5px solid var(--line);border-radius:8px;padding:6px 10px;display:flex;align-items:center;gap:6px}
 .ins-itemno .lbl{font-size:10px;font-weight:700;color:var(--muted);flex-shrink:0}
 .ins-itemno .no{font-variant-numeric:tabular-nums;user-select:all}
+/* ③ ステータス絞り込みバー（未判断/入札中/処理済み） */
+.iv-status-bar{display:flex;gap:6px;margin:10px 0 4px;padding:0 2px}
+.iv-stchip{flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;padding:8px 4px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface2);color:var(--muted);font-size:11px;font-weight:700;cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.iv-stchip .iv-stnum{font-size:16px;font-weight:800;color:var(--text)}
+.iv-stchip.on.pending{border-color:var(--t2);background:rgba(77,159,255,.14);color:var(--t2)}
+.iv-stchip.on.bidding{border-color:#ffcf6b;background:rgba(255,181,71,.16);color:#ffcf6b}
+.iv-stchip.on.done{border-color:var(--muted);background:rgba(120,120,130,.18);color:var(--text)}
+.iv-stchip.on .iv-stnum{color:inherit}
+/* ③ カード上部のステータスバッジ */
+.iv-stbadge{font-size:9px;font-weight:800;padding:1px 7px;border-radius:7px;white-space:nowrap}
+.iv-stbadge.bidding{background:rgba(255,181,71,.2);color:#ffcf6b}
+.iv-stbadge.skip{background:rgba(255,92,92,.14);color:var(--alert)}
+.iv-stbadge.ended{background:rgba(120,120,130,.2);color:var(--muted2)}
+/* ③ カード状態の見た目 */
+.iv-card.ins-bidding{border-left-color:#ffcf6b;border-color:rgba(255,181,71,.4)}
+.iv-card.ins-done{opacity:.66}
+.iv-judge-btn.undo{flex:0 0 92px;background:var(--surface2);color:var(--muted);border:1.5px solid var(--line)}
+.iv-judge-btn.ended{background:rgba(120,120,130,.14);color:var(--muted2)}
+/* ③ 見送り理由モーダル */
+.ins-modal-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:200;align-items:center;justify-content:center;padding:18px}
+.ins-modal{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;width:100%;max-width:420px;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+.ins-modal-hd{font-size:15px;font-weight:800;color:var(--text);margin-bottom:12px}
+.ins-modal-sub{font-size:11px;font-weight:500;color:var(--muted);margin-top:3px;line-height:1.3}
+.ins-rc-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px}
+.ins-rc{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--text);background:var(--surface2);border:1.5px solid var(--line);border-radius:9px;padding:9px 10px;cursor:pointer}
+.ins-rc input{width:16px;height:16px;accent-color:var(--alert);flex-shrink:0}
+.ins-rc:has(input:checked){border-color:var(--alert);background:rgba(255,92,92,.1)}
+.ins-modal-note{width:100%;box-sizing:border-box;background:var(--surface2);border:1.5px solid var(--line);border-radius:9px;padding:10px;font-size:13px;color:var(--text);outline:none;margin-bottom:14px}
+.ins-modal-note:focus{border-color:var(--accent)}
+.ins-modal-btns{display:flex;gap:8px}
+.ins-modal-btn{flex:1;min-height:44px;border-radius:11px;font-size:13px;font-weight:800;cursor:pointer;border:none}
+.ins-modal-btn.cancel{background:var(--surface2);color:var(--muted);border:1.5px solid var(--line)}
+.ins-modal-btn.ok{background:rgba(255,92,92,.16);color:var(--alert);border:1.5px solid rgba(255,92,92,.35)}
 /* ③ 価格バンドの信頼度バッジ */
 .band-conf{font-size:8px;font-weight:700;padding:0 5px;border-radius:6px;margin-left:4px;vertical-align:middle}
 .band-conf.高{background:rgba(46,212,122,.18);color:var(--t1)}
@@ -540,6 +573,19 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
   <!-- 候補リスト -->
   <div id="cards"></div>
+</div>
+
+<!-- ③ 見送り理由チェックリスト モーダル -->
+<div id="ins-skip-modal" class="ins-modal-ov">
+  <div class="ins-modal">
+    <div class="ins-modal-hd">見送り理由を選択<div class="ins-modal-sub" id="ins-skip-title"></div></div>
+    <div class="ins-rc-grid" id="ins-skip-checks"></div>
+    <input id="ins-skip-note" class="ins-modal-note" type="text" placeholder="補足メモ（任意）">
+    <div class="ins-modal-btns">
+      <button class="ins-modal-btn cancel" onclick="insSkipCancel()">キャンセル</button>
+      <button class="ins-modal-btn ok" onclick="insSkipConfirm()">見送り確定</button>
+    </div>
+  </div>
 </div>
 
 <!-- 底部ナビ -->
@@ -1479,43 +1525,79 @@ function relayPost(action,payload){
   });
 }
 
-async function insJudge(itemNo,decision){
+// ③ 見送り理由のタグ判定（judgment_log.py の REASON_TAGS と対応）
+const INS_REASON_TAGS=[
+  [/色落ち|変色|くすみ|黒ずみ/,'色/変色'],[/傷|スレ|擦れ|ダメージ/,'傷/スレ'],
+  [/金具|留め具|クラスプ|バネ/,'金具'],[/真贋|偽物|本物|怪しい|ギャラ無/,'真贋懸念'],
+  [/高い|高値|指値|予算|利幅|薄利/,'価格/利幅'],[/状態|ランク|程度/,'状態'],
+  [/写真|画像|暗い|見えな/,'写真不足'],[/サイズ|号数|大き|小さ/,'サイズ'],
+  [/人気|不人気|回転|売れ/,'需要/回転'],[/付属|箱|保証|ギャラ/,'付属品'],
+];
+function insTagReason(reason){
+  const t=[]; for(const[re,name]of INS_REASON_TAGS){ if(re.test(reason||'')) t.push(name); }
+  return t.length?t:['その他'];
+}
+// ③ 見送り理由チェックリスト（label=表示, kw=タグ判定に使うキーワード）
+const INS_SKIP_REASONS=[
+  ['変色・色落ち','変色'],['傷・スレ','傷スレ'],['金具の難','金具'],['真贋が怪しい','真贋'],
+  ['利幅が薄い','利幅'],['状態・ランク不安','状態'],['写真が不足','写真'],['サイズ不安','サイズ'],
+  ['回転が悪い','回転'],['付属品なし','付属'],
+];
+
+async function insJudge(itemNo,decision,reasonOverride){
   if(!insItemMap[itemNo]) return;
   const btnGo=document.getElementById('ins-go-'+itemNo);
   const btnSkip=document.getElementById('ins-skip-'+itemNo);
   const btn=decision==='go'?btnGo:btnSkip;
   if(btn){btn.textContent='…';btn.classList.add('loading');btn.disabled=true;}
-  if(decision==='go'&&btnSkip){btnSkip.disabled=true;}
-  if(decision==='skip'&&btnGo){btnGo.disabled=true;}
+  if(btnGo)btnGo.disabled=true; if(btnSkip)btnSkip.disabled=true;
 
   const it=insItemMap[itemNo];
   const e=(insEditsLoad()[itemNo])||{};
   const jissei=e.jissei||it.jissei||0;
   const bid=e.bid||0;
   const profit=(jissei&&bid)?Math.round(jissei*0.9-bid):(it.profit||0);
+  const reason=reasonOverride||(decision==='go'?`下見GO bid=¥${bid.toLocaleString('ja-JP')}`:'下見見送り');
+  const reason_tags=decision==='skip'?insTagReason(reason):[];
   const payload={item_no:itemNo,name:it.name,brand:it.brand,tier:it.tier,
-    jissei,bid,profit,deadline:it.deadline,current_price:it.current_price,
-    reason:decision==='go'?`下見GO bid=¥${bid.toLocaleString('ja-JP')}`:'下見見送り'};
+    jissei,bid,profit,deadline:it.deadline,current_price:it.current_price,reason};
 
   const result=await relayPost(decision,payload);
   const server_ok=result?!!result.ok:null;
 
   const decs=insDecsLoad();
-  decs[itemNo]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok};
+  decs[itemNo]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags};
   insDecsSave(decs);
+  // ステータスが変わるので再描画→未判断ビューから自動的に消える
+  renderInspect();
+}
 
-  const goLabel=server_ok===null?'GO(TM未導入)':server_ok?'GO済 ✓':'GO エラー';
-  const skipLabel=server_ok===null?'見送り(TM未導入)':server_ok?'見送り済 ✓':'見送り エラー';
-  if(btnGo){
-    btnGo.classList.remove('loading');
-    if(decision==='go'){btnGo.textContent=goLabel;btnGo.classList.add('done');}
-    else{btnGo.textContent='GO';btnGo.disabled=false;}
-  }
-  if(btnSkip){
-    btnSkip.classList.remove('loading');
-    if(decision==='skip'){btnSkip.textContent=skipLabel;btnSkip.classList.add('done');}
-    else{btnSkip.textContent='見送り';btnSkip.disabled=false;}
-  }
+// ③ 判断を取り消して未判断に戻す（再リサーチ可能に）
+function insUndo(itemNo){
+  const decs=insDecsLoad(); delete decs[itemNo]; insDecsSave(decs);
+  renderInspect();
+}
+
+// ③ 見送り理由チェックリストのモーダルを開く
+function insSkipPrompt(itemNo){
+  const it=insItemMap[itemNo]; if(!it) return;
+  const ov=document.getElementById('ins-skip-modal');
+  document.getElementById('ins-skip-title').textContent=(it.name||'').slice(0,40);
+  document.getElementById('ins-skip-checks').innerHTML=INS_SKIP_REASONS.map((r,i)=>
+    `<label class="ins-rc"><input type="checkbox" value="${r[1]}"> ${r[0]}</label>`).join('');
+  document.getElementById('ins-skip-note').value='';
+  ov.dataset.itemNo=itemNo;
+  ov.style.display='flex';
+}
+function insSkipCancel(){ document.getElementById('ins-skip-modal').style.display='none'; }
+function insSkipConfirm(){
+  const ov=document.getElementById('ins-skip-modal');
+  const itemNo=ov.dataset.itemNo;
+  const kws=[...ov.querySelectorAll('#ins-skip-checks input:checked')].map(c=>c.value);
+  const note=document.getElementById('ins-skip-note').value.trim();
+  const reason='見送り: '+([...kws,note].filter(Boolean).join(', ')||'理由未記入');
+  ov.style.display='none';
+  insJudge(itemNo,'skip',reason);
 }
 
 // ===== 下見タブ: 手入力実勢・入札額（localStorage永続） =====
@@ -1555,6 +1637,7 @@ let inspectData = null;
 const insBrands = new Set();   // ブランドフィルタ(複数)
 const insCats = new Set();      // カテゴリフィルタ(複数)
 let insPrice = 'all';           // 価格帯(単一)
+let insStatusFilter = 'pending'; // ③ ステータス絞り込み: pending(未判断)|bidding(入札中)|done(処理済み)
 
 const INS_PRICE_DEFS = [['all','すべて',0,Infinity],['p5','〜5千',0,5000],['p10','〜1万',0,10000],['p30','〜3万',0,30000],['p30over','3万超',30000,Infinity]];
 
@@ -1567,6 +1650,17 @@ function insDeadlineLabel(dl){
   return `あと${Math.ceil(h/24)}日`;
 }
 function insHours(dl){ if(!dl)return null; const d=new Date(dl); return isNaN(d)?null:Math.round((d-new Date())/3600000); }
+// ③ 締切が過去なら終了(処理済み扱い)
+function insIsEnded(dl){ if(!dl)return false; const d=new Date(dl); return isNaN(d)?false:(d-new Date())<=0; }
+// ③ 商品のステータス: done(見送り or 終了) / bidding(GO・進行中) / pending(未判断)
+function insItemStatus(it){
+  const dec=(insDecsLoad()[it.item_no]||{}).decision;
+  if(dec==='skip') return 'done';
+  if(insIsEnded(it.deadline)) return 'done';
+  if(dec==='go') return 'bidding';
+  return 'pending';
+}
+function insSetStatus(s){ insStatusFilter=s; renderInspect(); }
 
 async function showInspect(){
   const main=document.getElementById('cards');
@@ -1596,7 +1690,7 @@ function renderInspect(){
   const cats=[...new Set(all.map(i=>i.category).filter(Boolean))];
   const pdef=INS_PRICE_DEFS.find(p=>p[0]===insPrice)||INS_PRICE_DEFS[0];
 
-  let items=all.filter(i=>{
+  let baseItems=all.filter(i=>{
     if(insBrands.size && !insBrands.has(i.brand)) return false;
     if(insCats.size && !insCats.has(i.category)) return false;
     const pr=i.current_price||0;
@@ -1604,6 +1698,11 @@ function renderInspect(){
     if(ngHideExcluded && ngCheck(i.name)?.level==='exclude') return false;   // NG除外
     return true;
   });
+  // ③ ステータス別件数（ブランド/価格絞り込み後・ステータス絞り込み前）
+  const statusCount={pending:0,bidding:0,done:0};
+  baseItems.forEach(i=>{ statusCount[insItemStatus(i)]++; });
+  // ③ ステータス絞り込み（デフォルト=未判断＝今アクションが必要なものだけ）
+  let items=baseItems.filter(i=>insItemStatus(i)===insStatusFilter);
   // 回転実績の高い順（priority昇順→回転日数昇順→締切昇順）
   items.sort((a,b)=>{
     const pa=a.priority??99, pb=b.priority??99; if(pa!==pb) return pa-pb;
@@ -1617,24 +1716,32 @@ function renderInspect(){
   const brandChips=brands.map(b=>`<button class="iv-chip${insBrands.has(b)?' on':''}" onclick="insToggleBrand('${b.replace(/'/g,"&apos;")}')">${b}</button>`).join('');
   const catChips=cats.map(c=>`<button class="iv-chip${insCats.has(c)?' on':''}" onclick="insToggleCat('${c.replace(/'/g,"&apos;")}')">${c}</button>`).join('');
   const priceChips=INS_PRICE_DEFS.map(p=>`<button class="iv-chip${insPrice===p[0]?' on':''}" onclick="insSetPrice('${p[0]}')">${p[1]}</button>`).join('');
+  const STATUS_DEFS=[['pending','📋 未判断','今アクション要'],['bidding','🎯 入札中','GO済・進行中'],['done','✅ 処理済み','見送り・終了']];
+  const statusChips=STATUS_DEFS.map(s=>`<button class="iv-stchip${insStatusFilter===s[0]?' on '+s[0]:''}" onclick="insSetStatus('${s[0]}')">${s[1]}<span class="iv-stnum">${statusCount[s[0]]}</span></button>`).join('');
   const TGT=isIOS()?'':' target="_blank" rel="noopener"';
 
   main.innerHTML=`
     <div class="iv-header"><span class="iv-title">🔭 EcoAuc下見</span><span class="iv-meta">全${all.length}件 / 更新:${inspectData.updated_at||'-'}</span></div>
+    <div class="iv-status-bar">${statusChips}</div>
     <div class="iv-filter">
       <div class="iv-fg"><div class="iv-fl">🏷 ブランド</div><div class="iv-chips">${brandChips||'<span style="font-size:11px;color:var(--muted2)">データなし</span>'}</div></div>
       <div class="iv-fg"><div class="iv-fl">📦 カテゴリ</div><div class="iv-chips">${catChips}</div></div>
       <div class="iv-fg"><div class="iv-fl">💴 価格帯</div><div class="iv-chips">${priceChips}</div></div>
       <div class="iv-fg"><div class="iv-fl">🚫 NGワード</div><div class="iv-chips"><button class="iv-chip${ngHideExcluded?' on':''}" onclick="toggleNgHide()">除外を隠す</button></div></div>
     </div>
-    <div class="iv-bar"><span class="iv-count">表示: <b>${items.length}</b>件</span>
+    <div class="iv-bar"><span class="iv-count">${STATUS_DEFS.find(s=>s[0]===insStatusFilter)[1]}: <b>${items.length}</b>件</span>
       <span class="iv-sum"><button class="wf-clear" onclick="insClear()">✕ クリア</button></span></div>
     ${items.length?items.map(it=>{
       const e=edits[it.item_no]||{};
       const sJ=e.jissei?e.jissei.toLocaleString('ja-JP'):'';
       const sB=e.bid?e.bid.toLocaleString('ja-JP'):'';
       insItemMap[it.item_no]={name:it.name,brand:it.brand,tier:it.tier,jissei:it.jissei||0,profit:it.profit||0,deadline:it.deadline,current_price:it.current_price||0};
-      const dec=(decs[it.item_no]||{}).decision;
+      const decRec=decs[it.item_no]||{};
+      const dec=decRec.decision;
+      const st=insItemStatus(it);   // ③ pending|bidding|done
+      const ended=insIsEnded(it.deadline);
+      const stBadge=st==='bidding'?`<span class="iv-stbadge bidding">🎯入札中</span>`
+        :(st==='done'?(dec==='skip'?`<span class="iv-stbadge skip">見送り</span>`:`<span class="iv-stbadge ended">🔚終了</span>`):'');
       const _ecoQ=[(it.brand||''),(it.name||'').slice(0,30)].filter(Boolean).join(' ');
       const ecoURL=_ecoQ?'https://www.ecoauc.com/client/auctions/inspect?q='+encodeURIComponent(_ecoQ)+'&limit=50&tableType=grid&page=1':null;
       const hi=!!it.highlight;          // 粗利¥5,000以上
@@ -1650,10 +1757,11 @@ function renderInspect(){
         const r=it.rieki!=null?`粗利${it.rieki}%`:'';
         perfBadge=`<div class="ins-perf">${k?`<span class="ins-pb k">${k}</span>`:''}${r?`<span class="ins-pb r">${r}</span>`:''}</div>`;
       }
-      return `<div class="iv-card ${hi?'ins-hi':''}${ngCls}">
+      return `<div class="iv-card ${hi?'ins-hi':''}${ngCls}${st==='bidding'?' ins-bidding':''}${st==='done'?' ins-done':''}">
         <div class="iv-card-top">
           ${it.tier?`<span class="iv-card-no">${it.tier}</span>`:''}
           <span class="iv-days ${dueCls}">${insDeadlineLabel(it.deadline)}</span>
+          ${stBadge}
           <span class="iv-card-cat">${ngBadge}${it.brand||''}${it.category?' / '+it.category:''}</span>
         </div>
         <div class="iv-name">${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}</div>
@@ -1676,20 +1784,25 @@ function renderInspect(){
           </div>
         </div>
         <div class="iv-calc-row" id="ins-calc-${it.item_no}"></div>
-        ${it.item_no?`<div class="iv-judge-row">
-          <button class="iv-judge-btn go${dec==='go'?' done':''}" id="ins-go-${it.item_no}"
-            ${dec?'disabled':''} onclick="insJudge('${it.item_no}','go')">
-            ${dec==='go'?'GO済 ✓':'GO'}
-          </button>
-          <button class="iv-judge-btn skip${dec==='skip'?' done':''}" id="ins-skip-${it.item_no}"
-            ${dec?'disabled':''} onclick="insJudge('${it.item_no}','skip')">
-            ${dec==='skip'?'見送り済 ✓':'見送り'}
-          </button>
-        </div>`:''}
+        ${it.item_no?(
+          st==='pending'?`<div class="iv-judge-row">
+            <button class="iv-judge-btn go" id="ins-go-${it.item_no}" onclick="insJudge('${it.item_no}','go')">GO</button>
+            <button class="iv-judge-btn skip" id="ins-skip-${it.item_no}" onclick="insSkipPrompt('${it.item_no}')">見送り</button>
+          </div>`
+          :st==='bidding'?`<div class="iv-judge-row">
+            <button class="iv-judge-btn go done" disabled>🎯 入札中（GO済）</button>
+            <button class="iv-judge-btn undo" onclick="insUndo('${it.item_no}')">↩ 戻す</button>
+          </div>`
+          :(dec==='skip'?`<div class="iv-judge-row">
+            <button class="iv-judge-btn skip done" disabled>見送り済 ✓${(decRec.reason_tags&&decRec.reason_tags.length)?'（'+decRec.reason_tags.join('・')+'）':''}</button>
+            <button class="iv-judge-btn undo" onclick="insUndo('${it.item_no}')">↩ 戻す</button>
+          </div>`
+          :`<div class="iv-judge-row"><button class="iv-judge-btn ended done" disabled>🔚 終了（処理済み）</button></div>`)
+        ):''}
         ${it.item_no?`<div class="ins-itemno"><span class="lbl">商品番号</span><span class="no">${it.item_no}</span></div>`:''}
         ${ecoURL?`<a class="iv-merc" style="background:#1558b0" href="${ecoURL}" target="_blank" rel="noopener">🔭 EcoAuc下見で探す<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">商品を探す</span></a>`:`<span class="iv-merc disabled">URL無し</span>`}
       </div>`;
-    }).join(''):'<div class="empty">該当なし<br>フィルタを変えてください</div>'}`;
+    }).join(''):`<div class="empty">${insStatusFilter==='pending'?'✅ 未判断の商品はありません<br><span style="font-size:11px;color:var(--muted2)">全てGO/見送り済み。お疲れさまです</span>':(insStatusFilter==='bidding'?'入札中（GO済）の商品はありません':'処理済み（見送り・終了）の商品はありません')}</div>`}`;
   Object.keys(insEditsLoad()).forEach(k=>insUpdateCalc(k));
 }
 
