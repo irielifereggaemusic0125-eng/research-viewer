@@ -1606,14 +1606,24 @@ async function predictFlushQueue(){
   if(_predictFlushing) return;
   let q=predictQueueLoad(); if(!q.length) return;
   _predictFlushing=true;
+  let anySuccess=false;
   try{
-    const remain=[];
     for(const rec of q){
       const r=await relayPost('predict',rec);
-      if(!(r&&r.ok)) remain.push(rec);  // 未送信は残す（Mac非起動/エラー）
+      if(r&&r.ok){
+        anySuccess=true;
+        // 成功分のみ「現在の」キューから除去（await中の新しい編集を上書きしない）
+        const cur=predictQueueLoad();
+        const i=cur.findIndex(x=>x.key===rec.key);
+        if(i>=0 && cur[i].manual_jissei===rec.manual_jissei && (cur[i].bid||null)===(rec.bid||null)){
+          cur.splice(i,1); predictQueueSave(cur);
+        }
+      }
+      // 失敗(null)は何もしない＝キューに残置（Mac非起動/エラー）
     }
-    predictQueueSave(remain);
   } finally { _predictFlushing=false; }
+  // await中に新規編集が入っていたら再送（成功時のみ・relay down時の無限ループ回避）
+  if(anySuccess && predictQueueLoad().length) setTimeout(predictFlushQueue, 800);
 }
 
 // ③ 見送り理由のタグ判定（judgment_log.py の REASON_TAGS と対応）
