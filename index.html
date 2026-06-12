@@ -1610,6 +1610,8 @@ function renderInspect(){
       const sB=e.bid?e.bid.toLocaleString('ja-JP'):'';
       insItemMap[it.item_no]={name:it.name,brand:it.brand,tier:it.tier,jissei:it.jissei||0,profit:it.profit||0,deadline:it.deadline,current_price:it.current_price||0};
       const dec=(decs[it.item_no]||{}).decision;
+      const _ecoQ=[(it.brand||''),(it.name||'').slice(0,30)].filter(Boolean).join(' ');
+      const ecoURL=_ecoQ?'https://www.ecoauc.com/client/auctions/inspect?q='+encodeURIComponent(_ecoQ)+'&limit=50&tableType=grid&page=1':null;
       const hi=!!it.highlight;          // 粗利¥5,000以上
       const hrs=insHours(it.deadline);
       const dueCls=hrs!==null&&hrs>=0&&hrs<24?'alert':(hrs!==null&&hrs<48?'warn':'ok');
@@ -1660,7 +1662,7 @@ function renderInspect(){
           </button>
         </div>`:''}
         ${it.item_no?`<div class="ins-itemno">商品番号 ${it.item_no}</div>`:''}
-        ${it.url?`<a class="iv-merc" style="background:#1558b0" href="${it.url}"${TGT}>🔭 EcoAuc下見で探す<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">検索で開く</span></a>`:`<span class="iv-merc disabled">URL無し</span>`}
+        ${ecoURL?`<a class="iv-merc" style="background:#1558b0" href="${ecoURL}" target="_blank" rel="noopener">🔭 EcoAuc下見で探す<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">商品を探す</span></a>`:`<span class="iv-merc disabled">URL無し</span>`}
       </div>`;
     }).join(''):'<div class="empty">該当なし<br>フィルタを変えてください</div>'}`;
   Object.keys(insEditsLoad()).forEach(k=>insUpdateCalc(k));
