@@ -530,6 +530,9 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
     </div>
   </div>
 
+  <!-- ② ステータス絞り込み（未判断/入札中/処理済み）-->
+  <div class="iv-status-bar" id="cand-status-bar"></div>
+
   <!-- フィルタパネル（機能別グループ） -->
   <div class="filter-panel">
     <!-- 在庫状態（出品中/待ち受け） -->
@@ -558,7 +561,6 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
         <button class="fchip" id="chip-alert" onclick="toggleAlert()">⏰終了間近<span class="fc-sub">24h以内</span></button>
         <button class="fchip" id="chip-coherence" onclick="toggleCoherence()">✅整合のみ<span class="fc-sub">両回一致</span></button>
         <button class="fchip on" id="chip-nghide" onclick="toggleNgHide();this.classList.toggle('on',ngHideExcluded)">🚫除外を隠す<span class="fc-sub">NGワード</span></button>
-        <button class="fchip" id="chip-ended" onclick="toggleEnded()">🔚終了も表示<span class="fc-sub" id="ended-sub">進行中のみ</span></button>
       </div>
     </div>
     <!-- 並び替え -->
@@ -588,7 +590,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
     <input id="ins-skip-note" class="ins-modal-note" type="text" placeholder="補足メモ（任意）">
     <div class="ins-modal-btns">
       <button class="ins-modal-btn cancel" onclick="insSkipCancel()">キャンセル</button>
-      <button class="ins-modal-btn ok" onclick="insSkipConfirm()">見送り確定</button>
+      <button class="ins-modal-btn ok" onclick="skipModalConfirm()">見送り確定</button>
     </div>
   </div>
 </div>
@@ -739,13 +741,6 @@ function toggleAlert() {
   document.getElementById('chip-alert').classList.toggle('on-warn', filters.alert);
   render();
 }
-function toggleEnded() {
-  filters.showEnded = !filters.showEnded;
-  document.getElementById('chip-ended').classList.toggle('on', filters.showEnded);
-  const sub = document.getElementById('ended-sub');
-  if (sub) sub.textContent = filters.showEnded ? '終了も表示中' : '進行中のみ';
-  render();
-}
 function toggleCoherence() {
   filters.coherence = !filters.coherence;
   document.getElementById('chip-coherence').classList.toggle('on', filters.coherence);
@@ -776,13 +771,12 @@ function render() {
   if (filters.tier !== 'all') candidates = candidates.filter(c => c.tier === filters.tier);
   if (filters.alert) candidates = candidates.filter(c => isEndingSoon(c.end));
   if (filters.coherence) candidates = candidates.filter(c => c.coherence && c.coherence.startsWith('✅'));
-  // ④ 終了したヤフオク商品はデフォルト非表示（「終了も表示」ONで処理済みとして見返せる）
-  const endedCount = data.candidates.filter(c => isEnded(c.end)).length;
-  if (!filters.showEnded) candidates = candidates.filter(c => !isEnded(c.end));
-  const endedSub = document.getElementById('ended-sub');
-  if (endedSub) endedSub.textContent = filters.showEnded ? '終了も表示中' : (endedCount ? `${endedCount}件を非表示` : '進行中のみ');
   // NGワード除外（タイトルベース・トグルON時は除外カードを隠す）
   if (ngHideExcluded) candidates = candidates.filter(c => ngCheck(c.name)?.level !== 'exclude');
+  // ②③④ ステータス絞り込み（未判断/入札中/処理済み）。終了=処理済み・見送り=処理済み（下見と統一）
+  const candStatusCount={pending:0,bidding:0,done:0};
+  candidates.forEach(c=>{ candStatusCount[candItemStatus(c)]++; });
+  candidates = candidates.filter(c => candItemStatus(c) === candStatusFilter);
 
   // 出品中のみ表示時は終了が近い順を優先（入札判断に直行）
   let sort = filters.sort;
@@ -812,14 +806,27 @@ function render() {
       </div>`).join('')}
     </div>` : '';
 
+  // ② ステータスバー（未判断/入札中/処理済み・件数付き）
+  const CAND_ST_DEFS=[['pending','📋 未判断','今アクション要'],['bidding','🎯 入札中','GO済・進行中'],['done','✅ 処理済み','見送り・終了']];
+  const candStatusBar=document.getElementById('cand-status-bar');
+  if(candStatusBar) candStatusBar.innerHTML=CAND_ST_DEFS.map(s=>`<button class="iv-stchip${candStatusFilter===s[0]?' on '+s[0]:''}" onclick="candSetStatus('${s[0]}')">${s[1]}<span class="iv-stnum">${candStatusCount[s[0]]}</span></button>`).join('');
+
   const cards = document.getElementById('cards');
-  if (!candidates.length) { cards.innerHTML = '<div class="empty">該当候補なし<br>絞り込み条件を変えてください</div>'; return; }
+  const candDecs = candDecsLoad();
+  if (!candidates.length) {
+    cards.innerHTML = `<div class="empty">${candStatusFilter==='pending'?'✅ 未判断の候補はありません<br><span style="font-size:11px;color:var(--muted2)">フィルタ変更 or 全てGO/見送り済み</span>':(candStatusFilter==='bidding'?'入札中（GO済）の候補はありません':'処理済み（見送り・終了）の候補はありません')}</div>`;
+    return;
+  }
   const candEdits = candEditsLoad();
   Object.keys(candMeta).forEach(k=>delete candMeta[k]);
   cards.innerHTML = candidates.map(c => {
     const tc = TIER_CLASS[c.tier] || '';
     const ck = candKey(c);
-    candMeta[ck]={brand:c.brand,model:c.model,name:c.name,jissei:c.jissei,source:c.source};
+    candMeta[ck]={brand:c.brand,model:c.model,name:c.name,jissei:c.jissei,source:c.source,
+      aucid:c.aucid,end:c.end,current_price:c.current_price,shitene:c.yahoo_shitene,tier:c.tier,url:c.url};
+    const cdec=(candDecs[ck]||{});
+    const cst=candItemStatus(c);   // pending|bidding|done
+    const cstBadge=cst==='bidding'?'<span class="iv-stbadge bidding">🎯入札中</span>':(cst==='done'?(cdec.decision==='skip'?'<span class="iv-stbadge skip">見送り</span>':'<span class="iv-stbadge ended">🔚終了</span>'):'');
     const ce = candEdits[ck]||{};
     const ceJ = ce.jissei?ce.jissei.toLocaleString('ja-JP'):'';
     const ceB = ce.bid?ce.bid.toLocaleString('ja-JP'):'';
@@ -838,7 +845,7 @@ function render() {
       <div class="tier-strip ${tc}">
         ${TIER_ICON[c.tier]} ${TIER_JP[c.tier]||c.tier}
         <span class="ts-desc">─ ${TIER_DESC[c.tier]||''}</span>
-        ${sniperBadge(c)}${ngBadge}${isWarnCard?`<span class="warn-flag">⚠️ 要確認</span>`:''}
+        ${cstBadge}${sniperBadge(c)}${ngBadge}${isWarnCard?`<span class="warn-flag">⚠️ 要確認</span>`:''}
       </div>
       <div class="card-header">
         <div class="card-title">
@@ -866,7 +873,7 @@ function render() {
         <div class="row"><span class="row-lbl">整合性</span><span class="row-val">${c.coherence}</span></div>
         <div class="row"><span class="row-lbl">サンプル</span><span class="row-val">n=${c.n40}件${c.n90?` / 90日n=${c.n90}件`:''}</span></div>
         ${c.note?`<div class="note-box ${noteClass}">${c.note}</div>`:''}
-        ${ended?'':`<div class="cand-input-wrap">
+        ${cst==='done'?'':`<div class="cand-input-wrap">
           <div class="cand-input-hint">📝 実勢・入札を記録（検算機予測と突合して学習）</div>
           <div class="iv-input-row">
             <div class="iv-input-grp"><span class="iv-input-lbl">実勢 ¥</span>
@@ -878,6 +885,20 @@ function render() {
           </div>
           <div class="iv-calc-row" id="cand-calc-${ck}"></div>
         </div>`}
+        ${cst==='pending'?`<div class="iv-judge-row">
+            <button class="iv-judge-btn go" onclick="candJudge('${ck}','go')">GO（入札対象に登録）</button>
+            <button class="iv-judge-btn skip" onclick="candSkipPrompt('${ck}')">見送り</button>
+          </div>`
+          :cst==='bidding'?`<div class="iv-judge-row">
+            <button class="iv-judge-btn go done" disabled>🎯 入札中（GO済）</button>
+            <button class="iv-judge-btn undo" onclick="candUndo('${ck}')">↩ 戻す</button>
+          </div>`
+          :(cdec.decision==='skip'?`<div class="iv-judge-row">
+            <button class="iv-judge-btn skip done" disabled>見送り済 ✓${(cdec.reason_tags&&cdec.reason_tags.length)?'（'+cdec.reason_tags.join('・')+'）':''}</button>
+            <button class="iv-judge-btn undo" onclick="candUndo('${ck}')">↩ 戻す</button>
+          </div>`
+          :`<div class="iv-judge-row"><button class="iv-judge-btn ended done" disabled>🔚 終了（処理済み）</button></div>`)}
+        ${(c.aucid||c.url)?`<div class="ins-itemno"><span class="lbl">${c.aucid?'オークションID':'型番'}</span><span class="no">${c.aucid||c.model||'—'}</span></div>`:''}
       </div>
     </div>`;
   }).join('');
@@ -923,6 +944,57 @@ function candPredict(ck){
   if(!e.jissei) return;
   predictRecord({key:'yh_'+ck, item_no:'', brand:m.brand||'', model:m.model||'', name:m.name||'',
     predicted_jissei:m.jissei||null, manual_jissei:e.jissei, bid:e.bid||null, source:'yahoo_candidate'});
+}
+
+// ===== ② 候補タブ: GO/見送り判断＋ステータス（下見と同仕様・platform=yahoo） =====
+let _skipModalCtx=null;   // 見送りモーダルの対象（{type:'ins'|'cand', key}）
+const CAND_DECS_KEY='cand_decisions_v1';
+let candStatusFilter='pending';   // pending(未判断)|bidding(入札中)|done(処理済み)
+function candDecsLoad(){try{return JSON.parse(localStorage.getItem(CAND_DECS_KEY)||'{}');}catch(e){return{};}}
+function candDecsSave(d){localStorage.setItem(CAND_DECS_KEY,JSON.stringify(d));}
+function candItemStatus(c){
+  const ck=candKey(c);
+  const dec=(candDecsLoad()[ck]||{}).decision;
+  if(dec==='skip') return 'done';
+  if(isEnded(c.end)) return 'done';      // 終了=処理済み
+  if(dec==='go') return 'bidding';
+  return 'pending';
+}
+function candSetStatus(s){ candStatusFilter=s; render(); }
+// GO/見送り実行（relay /go,/skip に platform=yahoo で送信）
+async function candJudge(ck,decision,reasonOverride){
+  const m=candMeta[ck]; if(!m) return;
+  const e=candEditsLoad()[ck]||{};
+  const jissei=e.jissei||m.jissei||0;
+  const bid=e.bid||m.shitene||0;
+  const profit=(jissei&&bid)?Math.round(jissei*0.9-bid):(m.profit||0);
+  // 監視ID: ヤフオクはaucid（無ければck）。GOで auction_watch own_target に登録
+  const watchId=m.aucid||ck;
+  const reason=reasonOverride||(decision==='go'?`候補GO bid=¥${bid.toLocaleString('ja-JP')}`:'候補見送り');
+  const reason_tags=decision==='skip'?insTagReason(reason):[];
+  const payload={item_no:watchId, platform:'yahoo', name:m.name, brand:m.brand, model:m.model,
+    tier:m.tier||'Tier2', jissei, bid, profit, deadline:m.end||'', current_price:m.current_price||0, reason};
+  const result=await relayPost(decision,payload);
+  const server_ok=result?!!result.ok:null;
+  const decs=candDecsLoad();
+  decs[ck]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags,watchId};
+  candDecsSave(decs);
+  render();
+}
+function candUndo(ck){ const d=candDecsLoad(); delete d[ck]; candDecsSave(d); render(); }
+// 見送り理由（ヤフオク向け・状態悪い/開始価格高い/利幅薄い/競争激しい等）
+const CAND_SKIP_REASONS=[
+  ['状態が悪い','状態'],['開始価格が高い','高値'],['利幅が薄い','利幅'],['競争が激しい','競争'],
+  ['真贋が怪しい','真贋'],['傷・スレ','傷スレ'],['付属品なし','付属'],['回転が悪い','回転'],
+];
+function candSkipPrompt(ck){
+  const m=candMeta[ck]; if(!m) return;
+  _skipModalCtx={type:'cand',key:ck};
+  document.getElementById('ins-skip-title').textContent=(m.name||'').slice(0,40);
+  document.getElementById('ins-skip-checks').innerHTML=CAND_SKIP_REASONS.map(r=>
+    `<label class="ins-rc"><input type="checkbox" value="${r[1]}"> ${r[0]}</label>`).join('');
+  document.getElementById('ins-skip-note').value='';
+  document.getElementById('ins-skip-modal').style.display='flex';
 }
 
 // ★現物リンク生成: 出品中(個別商品URL)＝商品ページ直行 / 待ち受け中＝検索ページ＋明記
@@ -1636,6 +1708,7 @@ const INS_REASON_TAGS=[
   [/写真|画像|暗い|見えな/,'写真不足'],[/サイズ|号数|大き|小さ/,'サイズ'],
   [/人気|不人気|回転|売れ/,'需要/回転'],[/付属|箱|保証|ギャラ/,'付属品'],
   [/イニシャル|ホットスタンプ|刻印入/,'イニシャル刻印'],
+  [/競争|高騰|入札多|競り上/,'競争過熱'],
 ];
 function insTagReason(reason){
   const t=[]; for(const[re,name]of INS_REASON_TAGS){ if(re.test(reason||'')) t.push(name); }
@@ -1685,23 +1758,25 @@ function insUndo(itemNo){
 // ③ 見送り理由チェックリストのモーダルを開く
 function insSkipPrompt(itemNo){
   const it=insItemMap[itemNo]; if(!it) return;
-  const ov=document.getElementById('ins-skip-modal');
+  _skipModalCtx={type:'ins',key:itemNo};
   document.getElementById('ins-skip-title').textContent=(it.name||'').slice(0,40);
   document.getElementById('ins-skip-checks').innerHTML=INS_SKIP_REASONS.map((r,i)=>
     `<label class="ins-rc"><input type="checkbox" value="${r[1]}"> ${r[0]}</label>`).join('');
   document.getElementById('ins-skip-note').value='';
-  ov.dataset.itemNo=itemNo;
-  ov.style.display='flex';
+  document.getElementById('ins-skip-modal').style.display='flex';
 }
 function insSkipCancel(){ document.getElementById('ins-skip-modal').style.display='none'; }
-function insSkipConfirm(){
+// 汎用見送り確定（下見=ins / 候補=cand を _skipModalCtx で振り分け）
+function skipModalConfirm(){
   const ov=document.getElementById('ins-skip-modal');
-  const itemNo=ov.dataset.itemNo;
+  const ctx=_skipModalCtx;
   const kws=[...ov.querySelectorAll('#ins-skip-checks input:checked')].map(c=>c.value);
   const note=document.getElementById('ins-skip-note').value.trim();
   const reason='見送り: '+([...kws,note].filter(Boolean).join(', ')||'理由未記入');
   ov.style.display='none';
-  insJudge(itemNo,'skip',reason);
+  if(!ctx) return;
+  if(ctx.type==='cand') candJudge(ctx.key,'skip',reason);
+  else insJudge(ctx.key,'skip',reason);
 }
 
 // ===== 下見タブ: 手入力実勢・入札額（localStorage永続） =====
