@@ -822,8 +822,9 @@ function render() {
   cards.innerHTML = candidates.map(c => {
     const tc = TIER_CLASS[c.tier] || '';
     const ck = candKey(c);
+    const _aucid=candAucid(c);
     candMeta[ck]={brand:c.brand,model:c.model,name:c.name,jissei:c.jissei,source:c.source,
-      aucid:c.aucid,end:c.end,current_price:c.current_price,shitene:c.yahoo_shitene,tier:c.tier,url:c.url};
+      aucid:_aucid,end:c.end,current_price:c.current_price,shitene:c.yahoo_shitene,tier:c.tier,url:c.url};
     const cdec=(candDecs[ck]||{});
     const cst=candItemStatus(c);   // pending|bidding|done
     const cstBadge=cst==='bidding'?'<span class="iv-stbadge bidding">🎯入札中</span>':(cst==='done'?(cdec.decision==='skip'?'<span class="iv-stbadge skip">見送り</span>':'<span class="iv-stbadge ended">🔚終了</span>'):'');
@@ -898,7 +899,7 @@ function render() {
             <button class="iv-judge-btn undo" onclick="candUndo('${ck}')">↩ 戻す</button>
           </div>`
           :`<div class="iv-judge-row"><button class="iv-judge-btn ended done" disabled>🔚 終了（処理済み）</button></div>`)}
-        ${(c.aucid||c.url)?`<div class="ins-itemno"><span class="lbl">${c.aucid?'オークションID':'型番'}</span><span class="no">${c.aucid||c.model||'—'}</span></div>`:''}
+        ${(_aucid||c.model)?`<div class="ins-itemno"><span class="lbl">${_aucid?'オークションID':'型番'}</span><span class="no">${_aucid||c.model}</span></div>`:''}
       </div>
     </div>`;
   }).join('');
@@ -911,6 +912,18 @@ function yen(n){ return n && n>0 ? '¥'+n.toLocaleString('ja-JP') : '—'; }
 // ⑤ 候補(ヤフオク/Eco)の実勢¥・入札¥手入力（localStorage永続・下見と同仕様）
 function _candHash(s){let h=0;for(let i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))|0;}return (h>>>0).toString(36);}
 function candKey(c){ return 'c_'+_candHash((c.aucid||'')+'|'+(c.url||'')+'|'+(c.brand||'')+'|'+(c.model||'')+'|'+(c.name||'')); }
+// ③ ヤフオクのオークションIDを取得（明示aucid優先・無ければURL `/jp/auction/{ID}` から抽出）
+function candAucid(c){
+  if(c.aucid) return c.aucid;
+  const m=(c.url||'').match(/\/auction\/([a-zA-Z]?\d+)/);
+  return m?m[1]:'';
+}
+// ③ ヤフオク商品ページURL（aucidから再構築・URL変更に追従）
+function candYahooUrl(c){
+  const id=candAucid(c);
+  if(id) return 'https://page.auctions.yahoo.co.jp/jp/auction/'+id;
+  return c.url||'';
+}
 const CAND_EDITS_KEY='cand_edits_v1';
 function candEditsLoad(){try{return JSON.parse(localStorage.getItem(CAND_EDITS_KEY)||'{}');}catch(e){return{};}}
 function candEditsSave(d){localStorage.setItem(CAND_EDITS_KEY,JSON.stringify(d));}
@@ -1001,10 +1014,12 @@ function candSkipPrompt(ck){
 function buildItemLinks(c){
   const links = [];
   // 個別商品URLがあるか（出品中＝その1点が存在）
+  // ③ ヤフオクは aucid（明示 or URL抽出）から正規URLを再構築＝URL形式変更に追従
   let itemUrl = '';
-  if (c.url && c.url.startsWith('http')) itemUrl = c.url;
+  const _yid = candAucid(c);
+  if (_yid) itemUrl = `https://page.auctions.yahoo.co.jp/jp/auction/${_yid}`;
   else if (c.shohin_no && /ecoauc/i.test(c.source||'')) itemUrl = `https://www.ecoauc.com/client/items/${c.shohin_no}`;
-  else if (c.aucid) itemUrl = `https://page.auctions.yahoo.co.jp/jp/auction/${c.aucid}`;
+  else if (c.url && c.url.startsWith('http')) itemUrl = c.url;
   const listed = !!itemUrl;
 
   if (listed) {
