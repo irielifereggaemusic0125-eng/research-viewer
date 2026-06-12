@@ -384,6 +384,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-merc{display:block;margin:9px 12px 11px;min-height:42px;border-radius:9px;background:#ff5061;color:#fff;font-size:12px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:5px}
 .iv-merc.disabled{background:var(--surface2);color:var(--muted)}
 .iv-merc:active{opacity:.85}
+.iv-merc-sub{display:flex;align-items:center;justify-content:center;margin:-4px 12px 11px;min-height:34px;border-radius:9px;background:var(--surface2);border:1.5px solid var(--line);color:var(--muted);font-size:11px;font-weight:700;text-decoration:none}
+.iv-merc-sub:active{opacity:.85}
 /* 下見: 粗利¥5,000以上の強調(緑系) */
 .iv-card.ins-hi{border-left-color:var(--t1);border-color:rgba(46,212,122,.45);background:linear-gradient(0deg,rgba(46,212,122,.05),rgba(46,212,122,.05)),var(--surface)}
 /* 下見: 実績バッジ(回転/粗利＝なぜ狙い目か) */
@@ -1852,8 +1854,11 @@ function renderInspect(){
       const ended=insIsEnded(it.deadline);
       const stBadge=st==='bidding'?`<span class="iv-stbadge bidding">🎯入札中</span>`
         :(st==='done'?(dec==='skip'?`<span class="iv-stbadge skip">見送り</span>`:`<span class="iv-stbadge ended">🔚終了</span>`):'');
-      const _ecoQ=[(it.brand||''),(it.name||'').slice(0,30)].filter(Boolean).join(' ');
-      const ecoURL=_ecoQ?'https://www.ecoauc.com/client/auctions/inspect?q='+encodeURIComponent(_ecoQ)+'&limit=50&tableType=grid&page=1':null;
+      // リンク優先順: ①商品ページ直リンク(view_url) ②item_no/商品番号で下見検索(search_url) ③ブランド+名で検索
+      const _ecoSearchKey=it.product_no||it.item_no;
+      const _ecoSearchURL=it.search_url||(_ecoSearchKey?'https://www.ecoauc.com/client/auctions/inspect?q='+encodeURIComponent(_ecoSearchKey)+'&limit=50&tableType=grid&page=1':(it.brand?'https://www.ecoauc.com/client/auctions/inspect?q='+encodeURIComponent([(it.brand||''),(it.name||'').slice(0,30)].filter(Boolean).join(' '))+'&limit=50&tableType=grid&page=1':null));
+      const _ecoViewURL=it.view_url||(it.view_id?'https://www.ecoauc.com/client/auction-items/view/'+it.view_id+'/Auctions/inspect':null);
+      const ecoURL=_ecoViewURL||_ecoSearchURL;
       const hi=!!it.highlight;          // 粗利¥5,000以上
       const hrs=insHours(it.deadline);
       const dueCls=hrs!==null&&hrs>=0&&hrs<24?'alert':(hrs!==null&&hrs<48?'warn':'ok');
@@ -1910,7 +1915,7 @@ function renderInspect(){
           :`<div class="iv-judge-row"><button class="iv-judge-btn ended done" disabled>🔚 終了（処理済み）</button></div>`)
         ):''}
         ${it.item_no?`<div class="ins-itemno"><span class="lbl">商品番号</span><span class="no">${it.item_no}</span></div>`:''}
-        ${ecoURL?`<a class="iv-merc" style="background:#1558b0" href="${ecoURL}" target="_blank" rel="noopener">🔭 EcoAuc下見で探す<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">商品を探す</span></a>`:`<span class="iv-merc disabled">URL無し</span>`}
+        ${_ecoViewURL?`<a class="iv-merc" style="background:#1558b0" href="${_ecoViewURL}" target="_blank" rel="noopener">🔭 商品ページへ直行<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">EcoAuc下見</span></a>${_ecoSearchURL?`<a class="iv-merc-sub" href="${_ecoSearchURL}" target="_blank" rel="noopener">🔍 検索で開く（番号 ${it.product_no||it.item_no}）</a>`:''}`:(_ecoSearchURL?`<a class="iv-merc" style="background:#1558b0" href="${_ecoSearchURL}" target="_blank" rel="noopener">🔍 EcoAuc下見で探す<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">番号 ${it.product_no||it.item_no}</span></a>`:`<span class="iv-merc disabled">URL無し</span>`)}
       </div>`;
     }).join(''):`<div class="empty">${insStatusFilter==='pending'?'✅ 未判断の商品はありません<br><span style="font-size:11px;color:var(--muted2)">全てGO/見送り済み。お疲れさまです</span>':(insStatusFilter==='bidding'?'入札中（GO済）の商品はありません':'処理済み（見送り・終了）の商品はありません')}</div>`}`;
   Object.keys(insEditsLoad()).forEach(k=>insUpdateCalc(k));
