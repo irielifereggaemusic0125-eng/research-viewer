@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-06-11T21:33:29+09:00",
+  "updated_at": "2026-06-13T06:04:17+09:00",
   "candidates": [
     {
       "name": "ワンピースカード OP-16 決戦の刻 BOX",
@@ -28,6 +28,53 @@
         }
       ],
       "note": "OP-16決戦の刻・粗利¥7,620(粗利率59%)・定価¥5,280→実勢¥15,000"
+    },
+    {
+      "name": "RICOH GR IV",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 194800,
+      "jissei": 250000,
+      "premium_rate": 1.28,
+      "premium_level": "中",
+      "profit_max": 40000,
+      "best_route": "るでや買取/フリマ",
+      "phase": "受付中",
+      "deadline": "2026-06-15T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO(店頭抽選)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-06-15T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "GR IV対象・店頭での事前本人確認が必要(東京来店)・6/15まで(2026-06-13転売クエスト確認)"
+        },
+        {
+          "store": "リコーイメージングストア(Web抽選)",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-06-22T00:00:00+09:00",
+          "order_deadline": "2026-06-24T23:59:00+09:00",
+          "note": "現エントリー受付終了・2次当選発表6/22(注文6/22-24)・次回エントリー未告知so@GR_RICOH要監視"
+        },
+        {
+          "store": "監視ソース(@GR_RICOH/転売クエスト)",
+          "url": "https://x.com/GR_RICOH",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "次回Web抽選エントリー告知を監視(転売クエスト https://tenbaiquest.com/resale/ricoh-2 が全店集約)"
+        }
+      ],
+      "note": "るでや買取GR IV+¥40k前後(価格/実勢は2026-06-13時点・要再検証)・GR SPACE TOKYOは店頭本人確認要(東京)・Web抽選は次回案内待ち。【復旧】6/11のlottery更新で脱落→2026-06-13復元"
     },
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
