@@ -1794,6 +1794,15 @@ function skipModalConfirm(){
   else insJudge(ctx.key,'skip',reason);
 }
 
+// ===== EcoAuc仕入れ採算（消費税対応・2026-06-13確定・scripts/ecoauc_cost.pyと同一式） =====
+// 仕入れ総額 = 落札×1.1(消費税) + 落札手数料(階層)×1.1 + 自宅送料(エコオク月割¥1,500)
+// 落札手数料(税抜): 1万まで500 / 1.1万〜4.9万 1,000 / 5万以上 2,000
+// 粗利 = 実勢×0.9(フリマ手数料) − フリマ送料 − 仕入れ総額
+const ECO_SHIIRE_SOURYO=1500, FURIMA_SOURYO=700;
+function ecoRakusatsuTesuryo(p){ p=p||0; if(p<=10000)return 500; if(p<50000)return 1000; return 2000; }
+function ecoTotalCost(bid, shiireSouryo){ bid=bid||0; shiireSouryo=(shiireSouryo==null?ECO_SHIIRE_SOURYO:shiireSouryo); return Math.round(bid*1.1 + ecoRakusatsuTesuryo(bid)*1.1 + shiireSouryo); }
+function ecoProfit(jissei, bid, furimaSouryo, shiireSouryo){ jissei=jissei||0; furimaSouryo=(furimaSouryo==null?FURIMA_SOURYO:furimaSouryo); return Math.round(jissei*0.9 - furimaSouryo - ecoTotalCost(bid, shiireSouryo)); }
+
 // ===== 下見タブ: 手入力実勢・入札額（localStorage永続） =====
 const INS_EDITS_KEY='ins_edits_v1';
 function insEditsLoad(){try{return JSON.parse(localStorage.getItem(INS_EDITS_KEY)||'{}');}catch(e){return {};}}
@@ -1813,11 +1822,13 @@ function insUpdateCalc(key){
   if(!j&&!b){el.innerHTML='';return;}
   let html='';
   if(j&&b){
-    const profit=Math.round(j*0.9-b);
+    // 消費税対応: 仕入れ総額=入札×1.1+手数料×1.1+自宅送料 / 粗利=実勢×0.9−フリマ送料−仕入総額
+    const cost=ecoTotalCost(b);
+    const profit=ecoProfit(j,b);
     const ratio=Math.round(b/j*100);
     const cls=profit>=0?'pos':'neg';
     const sign=profit>=0?'+':'-';
-    html=`<span class="iv-calc-${cls}">粗利 ${sign}¥${Math.abs(profit).toLocaleString('ja-JP')}</span><span style="color:var(--line);margin:0 4px">·</span><span class="iv-calc-ratio">入札/実勢 ${ratio}%</span>`;
+    html=`<span class="iv-calc-${cls}">粗利 ${sign}¥${Math.abs(profit).toLocaleString('ja-JP')}</span><span style="color:var(--line);margin:0 4px">·</span><span class="iv-calc-ratio">仕入総額¥${cost.toLocaleString('ja-JP')}(税込)</span><span style="color:var(--line);margin:0 4px">·</span><span class="iv-calc-ratio">入札/実勢 ${ratio}%</span>`;
   }else if(j){
     html=`<span class="iv-calc-pos">売値×0.9 = ¥${Math.round(j*0.9).toLocaleString('ja-JP')}</span>`;
   }else{
