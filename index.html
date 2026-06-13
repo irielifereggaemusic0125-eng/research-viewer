@@ -691,7 +691,7 @@ async function loadDate(date) {
 
 function getAvailableDates() {
   const dates = [];
-  const today = new Date('2026-06-06');
+  const today = new Date(currentDate || new Date().toISOString().slice(0,10));
   for (let i = 0; i < 14; i++) {
     const d = new Date(today);
     d.setDate(today.getDate() - i);
@@ -2202,7 +2202,11 @@ function renderArtifacts(){
   await loadNgWords();
   await loadServerDecisions();   // ① サーバー記録(decisions.json)を先に読み込む→各タブで判断/入力を復元
   loadResearchInfo();            // 🔬 リサーチ時情報(research_info.json)を先読み（在庫タブ用・非ブロッキング）
-  currentDate = '2026-06-06';
+  // 候補データは latest.json の date を採用（固定日付を廃止＝常に最新を開く）
+  let _latest=null;
+  try{ const r=await fetch('data/banshee_research_latest.json?t='+Date.now(),{cache:'no-store'}); if(r.ok) _latest=await r.json(); }catch(e){}
+  currentDate = (_latest && _latest.date) ? _latest.date : (new Date().toISOString().slice(0,10));
+  if(_latest){ allData[currentDate] = _latest; }
   buildDateBar();
   await loadDate(currentDate);
   setTimeout(()=>{ predictFlushQueue(); decisionFlushQueue(); }, 1500);  // 起動時に未送信の学習データ・判断を再送
