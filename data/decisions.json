@@ -1,0 +1,29 @@
+{
+  "updated_at": "2026-06-13T09:22:08+09:00",
+  "items": {
+    "ecoauc:12547_0161": {
+      "platform": "ecoauc",
+      "id": "12547_0161",
+      "decision": null,
+      "reason_tags": [],
+      "bid": 30000,
+      "jissei": 44000
+    },
+    "ecoauc:12547_0163": {
+      "platform": "ecoauc",
+      "id": "12547_0163",
+      "decision": null,
+      "reason_tags": [],
+      "bid": 33000,
+      "jissei": 47000
+    },
+    "ecoauc:12547_1679": {
+      "platform": "ecoauc",
+      "id": "12547_1679",
+      "decision": null,
+      "reason_tags": [],
+      "bid": 51000,
+      "jissei": 67000
+    }
+  }
+}

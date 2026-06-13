@@ -763,8 +763,8 @@ function setSort(val) {
 function render() {
   if (!currentDate || !allData[currentDate]) return;
   const data = allData[currentDate];
-  // ① 旧キー入力→新安定キーへ移行（フィルタ前に全候補で実施・判断ステータスが新キー参照のため）
-  data.candidates.forEach(candMigrate);
+  // ① 旧キー入力→新安定キーへ移行＋サーバー記録から復元（フィルタ前に全候補で実施・判断ステータスが新キー参照のため）
+  data.candidates.forEach(c=>{ candMigrate(c); candRestore(c); });
   let candidates = [...data.candidates];
 
   // 在庫状態フィルタ（出品中/待ち受け）
@@ -1733,6 +1733,46 @@ async function predictFlushQueue(){
   if(anySuccess && predictQueueLoad().length) setTimeout(predictFlushQueue, 800);
 }
 
+// ===== ① サーバー記録(decisions.json)からの状態復元（localStorage消失・端末変更・再取得でも判断/入力を回復） =====
+// judgment_log/auction_watch/prediction_ledgerから生成された decisions.json を読み、
+// localStorageに無いものだけギャップ補完（ローカル下書きは上書きしない）。id=item_no(下見)/aucid(候補)。
+let serverDecisions={};   // id(item_no or aucid) → {platform,decision,reason_tags,bid,jissei}
+async function loadServerDecisions(){
+  try{
+    const r=await fetch('data/decisions.json?t='+Date.now(),{cache:'no-store'});
+    if(!r.ok) return;
+    const d=await r.json();
+    serverDecisions={};
+    Object.values(d.items||{}).forEach(v=>{ if(v.id) serverDecisions[v.id]=v; });
+  }catch(e){ /* fail-soft */ }
+}
+// 下見アイテムの復元（key=item_no）
+function insRestore(itemNo){
+  const sv=serverDecisions[itemNo]; if(!sv) return;
+  if(sv.decision){
+    const decs=insDecsLoad();
+    if(!decs[itemNo]){ decs[itemNo]={decision:sv.decision,reason:'(サーバー復元)',reason_tags:sv.reason_tags||[],bid:sv.bid||0,jissei:sv.jissei||0,server_ok:true,restored:true}; insDecsSave(decs); }
+  }
+  if(sv.jissei||sv.bid){
+    const e=insEditsLoad();
+    if(!e[itemNo]){ e[itemNo]={}; if(sv.jissei)e[itemNo].jissei=sv.jissei; if(sv.bid)e[itemNo].bid=sv.bid; insEditsSave(e); }
+  }
+}
+// 候補アイテムの復元（key=candKey・id=aucid）
+function candRestore(c){
+  const id=candAucid(c); if(!id) return;
+  const sv=serverDecisions[id]; if(!sv||sv.platform!=='yahoo') return;
+  const ck=candKey(c);
+  if(sv.decision){
+    const d=candDecsLoad();
+    if(!d[ck]){ d[ck]={decision:sv.decision,reason:'(サーバー復元)',reason_tags:sv.reason_tags||[],bid:sv.bid||0,jissei:sv.jissei||0,server_ok:true,restored:true}; candDecsSave(d); }
+  }
+  if(sv.jissei||sv.bid){
+    const e=candEditsLoad();
+    if(!e[ck]){ e[ck]={}; if(sv.jissei)e[ck].jissei=sv.jissei; if(sv.bid)e[ck].bid=sv.bid; candEditsSave(e); }
+  }
+}
+
 // ③ 見送り理由のタグ判定（judgment_log.py の REASON_TAGS と対応）
 const INS_REASON_TAGS=[
   [/色落ち|変色|くすみ|黒ずみ/,'色/変色'],[/傷|スレ|擦れ|ダメージ/,'傷/スレ'],
@@ -1919,6 +1959,7 @@ function renderInspect(){
   const main=document.getElementById('cards');
   if(!inspectData) return;
   const all=inspectData.items||[];
+  all.forEach(i=>{ if(i.item_no) insRestore(i.item_no); });   // ① サーバー記録から復元（判断ステータス計算前）
   const brands=[...new Set(all.map(i=>i.brand).filter(Boolean))];
   const cats=[...new Set(all.map(i=>i.category).filter(Boolean))];
   const pdef=INS_PRICE_DEFS.find(p=>p[0]===insPrice)||INS_PRICE_DEFS[0];
@@ -2091,6 +2132,7 @@ function renderArtifacts(){
   const cardsEl=document.getElementById('cards'); if(cardsEl) cardsEl.dataset.tab='list';
   const appEl0=document.querySelector('.app'); if(appEl0) appEl0.dataset.tab='list';
   await loadNgWords();
+  await loadServerDecisions();   // ① サーバー記録(decisions.json)を先に読み込む→各タブで判断/入力を復元
   currentDate = '2026-06-06';
   buildDateBar();
   await loadDate(currentDate);
