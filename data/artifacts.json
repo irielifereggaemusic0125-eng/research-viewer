@@ -1,6 +1,16 @@
 {
-  "updated_at": "2026-06-11 07:45",
+  "updated_at": "2026-06-13 18:28",
   "items": [
+    {
+      "date": "20260613",
+      "type": "棚卸し",
+      "title": "アプリ構成棚卸し",
+      "name": "20260613_棚卸し_アプリ構成棚卸し",
+      "summary": "箱は良いが出口(可視化)が無い。配管詰まり2件発見=judgment_log0件・ledger突合0件。iv-input14pxでiOSズーム。📊振り返りタブ提案。",
+      "drive_id": "1BZxX5rLo_okwIfMP2stRV-ct6uzfIm-N69XRh--Qlao",
+      "drive_url": "https://docs.google.com/document/d/1BZxX5rLo_okwIfMP2stRV-ct6uzfIm-N69XRh--Qlao/edit",
+      "created_at": "2026-06-13 18:28"
+    },
     {
       "date": "20260611",
       "type": "レポート",
