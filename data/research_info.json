@@ -1,0 +1,83 @@
+{
+  "updated_at": "2026-06-14 05:49",
+  "count": 25,
+  "items": {
+    "W015-251028": {
+      "recommend_min": 66200
+    },
+    "A020-251102": {
+      "recommend_min": 44800
+    },
+    "A021-251107": {
+      "recommend_min": 19800
+    },
+    "W025-251120": {
+      "recommend_min": 16400
+    },
+    "W029-251127": {
+      "recommend_min": 15200
+    },
+    "W044-251223": {
+      "recommend_min": 107500
+    },
+    "W054-260126": {
+      "recommend_min": 25700
+    },
+    "W056-260130": {
+      "recommend_min": 13900
+    },
+    "W057-260202": {
+      "recommend_min": 14600
+    },
+    "W061-260212": {
+      "recommend_min": 23500
+    },
+    "W066-260303": {
+      "recommend_min": 23000
+    },
+    "W067-260309": {
+      "recommend_min": 55200
+    },
+    "A068-260309": {
+      "recommend_min": 57500
+    },
+    "B069-260318": {
+      "recommend_min": 16800
+    },
+    "A070-260319": {
+      "recommend_min": 26700
+    },
+    "A072-260319": {
+      "recommend_min": 22900
+    },
+    "A073-260319": {
+      "recommend_min": 21100
+    },
+    "B075-260330": {
+      "recommend_min": 9500
+    },
+    "B079-260415": {
+      "recommend_min": 25600
+    },
+    "O080-260420": {
+      "recommend_min": 18000
+    },
+    "B081-260420": {
+      "recommend_min": 29600
+    },
+    "B086-260426": {
+      "recommend_min": 27500
+    },
+    "B097-260610": {
+      "recommend_min": 39600
+    },
+    "W098-260612": {
+      "jissei": 15000,
+      "recommend_min": 20800,
+      "profit_at_jissei": -175
+    },
+    "W099-260612": {
+      "recommend_min": 20800
+    }
+  }
+}

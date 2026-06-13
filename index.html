@@ -440,6 +440,9 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-badge-down{font-size:9px;font-weight:800;padding:1px 6px;border-radius:7px;background:rgba(255,92,92,.18);color:var(--alert);margin-left:4px}
 .iv-badge-na{font-size:9px;font-weight:700;padding:1px 6px;border-radius:7px;background:var(--surface2);color:var(--muted2);margin-left:4px}
 .iv-card.iv-eco{border-left-color:var(--t3)}
+/* 🔬 在庫カードのリサーチ時情報ブロック */
+.iv-research{margin-top:8px;padding:8px 10px;border-radius:9px;background:rgba(46,212,122,.07);border:1px solid rgba(46,212,122,.22)}
+.iv-research-hd{font-size:10px;font-weight:800;color:var(--t1);margin-bottom:4px;letter-spacing:.02em}
 /* ⑤ 候補カードの実勢/入札入力ラッパ */
 .cand-input-wrap{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
 .cand-input-hint{font-size:10px;font-weight:700;color:var(--muted);margin-bottom:4px}
@@ -1575,6 +1578,16 @@ function ivLevel(days){
 }
 function ivYen(n){ return (n && n>0) ? '¥'+n.toLocaleString('ja-JP') : '—'; }
 
+// 🔬 リサーチ時情報（research_info.json・kanri_no→{jissei,bid,won_price,go_reason,recommend_min,profit_at_jissei}）
+let researchInfo={};
+async function loadResearchInfo(){
+  try{
+    const r=await fetch('data/research_info.json?t='+Date.now(),{cache:'no-store'});
+    if(!r.ok) return;
+    const d=await r.json();
+    researchInfo=d.items||{};
+  }catch(e){ /* fail-soft */ }
+}
 async function showInventory(){
   const main = document.getElementById('cards');
   if(!inventoryData){
@@ -1588,7 +1601,24 @@ async function showInventory(){
       return;
     }
   }
+  if(!Object.keys(researchInfo).length) await loadResearchInfo();
   renderInventory();
+}
+// 🔬 在庫カード用 リサーチ情報ブロックを生成（kanri_noで引く・無ければ空文字）
+function ivResearchBlock(kanri){
+  const r=researchInfo[kanri]; if(!r) return '';
+  const yen=n=>(n&&n>0)?'¥'+n.toLocaleString('ja-JP'):'—';
+  const rows=[];
+  if(r.jissei) rows.push(`<div class="iv-row"><span class="iv-rl">リサーチ実勢</span><span class="iv-rv" style="font-weight:800;color:var(--t1)">${yen(r.jissei)}</span></div>`);
+  if(r.bid||r.won_price) rows.push(`<div class="iv-row"><span class="iv-rl">入札 / 落札</span><span class="iv-rv">${yen(r.bid)} / ${yen(r.won_price)}</span></div>`);
+  if(r.recommend_min) rows.push(`<div class="iv-row"><span class="iv-rl">推奨出品(最低)</span><span class="iv-rv" style="font-weight:800;color:#2980e8">${yen(r.recommend_min)}<span class="ab-sub" style="font-size:9px;color:var(--muted2)"> 粗利¥5,000</span></span></div>`);
+  if(typeof r.profit_at_jissei==='number'){
+    const neg=r.profit_at_jissei<5000;
+    rows.push(`<div class="iv-row"><span class="iv-rl">実勢で出品時粗利</span><span class="iv-rv" style="color:${neg?'var(--alert)':'var(--t1)'}">${r.profit_at_jissei>=0?'+':''}${yen(Math.abs(r.profit_at_jissei)).replace('¥',r.profit_at_jissei<0?'−¥':'¥')}${neg?' <span class="iv-badge-down">¥5,000未達</span>':''}</span></div>`);
+  }
+  if(r.go_reason) rows.push(`<div class="iv-row"><span class="iv-rl">GO理由</span><span class="iv-rv" style="font-size:10px;color:var(--muted)">${r.go_reason}</span></div>`);
+  if(!rows.length) return '';
+  return `<div class="iv-research"><div class="iv-research-hd">🔬 リサーチ時情報</div>${rows.join('')}</div>`;
 }
 
 function ivToggleCat(c){ ivCats.has(c)?ivCats.delete(c):ivCats.add(c); renderInventory(); }
@@ -1657,6 +1687,7 @@ function renderInventory(){
           <div class="iv-row"><span class="iv-rl">損切りライン</span><span class="iv-rv loss">${ivYen(it.loss_cut)}</span></div>
           ${priceRow}
         </div>
+        ${ivResearchBlock(it.kanri_no)}
         ${eco
           ? `<span class="iv-merc disabled">EcoAuc出品中（メルカリ取下げ済）</span>`
           : (mercUrl
@@ -2163,6 +2194,7 @@ function renderArtifacts(){
   const appEl0=document.querySelector('.app'); if(appEl0) appEl0.dataset.tab='list';
   await loadNgWords();
   await loadServerDecisions();   // ① サーバー記録(decisions.json)を先に読み込む→各タブで判断/入力を復元
+  loadResearchInfo();            // 🔬 リサーチ時情報(research_info.json)を先読み（在庫タブ用・非ブロッキング）
   currentDate = '2026-06-06';
   buildDateBar();
   await loadDate(currentDate);
