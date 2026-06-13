@@ -126,12 +126,21 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 .ending-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;background:var(--alert-bg);color:var(--alert);margin-left:4px}
 
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--line);display:flex;justify-content:space-between;padding:8px 4px calc(8px + env(safe-area-inset-bottom));z-index:100;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.nav-btn{flex-shrink:0}
-.nav-btn{font-size:9.5px;color:var(--muted);text-align:center;cursor:pointer;padding:4px 5px}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:100}
+.nav-btn{flex:1;font-size:11px;font-weight:600;color:var(--muted);text-align:center;cursor:pointer;padding:5px 2px;min-height:48px;border-radius:10px;-webkit-tap-highlight-color:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .nav-btn.active{color:var(--t1)}
-.nav-icon{font-size:20px;display:block;margin-bottom:2px}
-.nav-btn-link{text-decoration:none;border-left:1px solid var(--line);margin-left:2px;padding-left:7px;color:var(--accent, #7c6ff7) !important}
+.nav-btn#nav-more.active{color:var(--accent, #7c6ff7)}
+.nav-icon{font-size:21px;display:block;margin-bottom:2px}
+/* ② その他メニュー（ポップアップ） */
+.more-backdrop{position:fixed;inset:0;z-index:110;display:none}
+.more-backdrop.open{display:block}
+.more-menu{position:fixed;right:8px;bottom:calc(64px + env(safe-area-inset-bottom));z-index:120;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;box-shadow:0 10px 36px rgba(0,0,0,.45);padding:6px;display:none;min-width:172px}
+.more-menu.open{display:block;animation:moreIn .14s ease}
+@keyframes moreIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.more-hd{font-size:10px;font-weight:800;color:var(--muted2);padding:6px 12px 4px;letter-spacing:.04em}
+.more-item{display:flex;align-items:center;gap:10px;padding:12px 14px;font-size:14px;font-weight:700;color:var(--text);border-radius:10px;cursor:pointer;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.more-item span{font-size:18px;width:22px;text-align:center}
+.more-item:active,.more-item:hover{background:var(--surface2)}
 
 .empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:13px}
 
@@ -598,19 +607,25 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   </div>
 </div>
 
-<!-- 底部ナビ -->
+<!-- 底部ナビ（常時表示5＋その他） -->
 <div class="bottom-nav">
-  <div class="nav-btn active" onclick="setTab('list')"><span class="nav-icon">📋</span>候補</div>
-  <div class="nav-btn" onclick="setTab('lottery')"><span class="nav-icon">🎯</span>抽選</div>
-  <div class="nav-btn" onclick="setTab('words')"><span class="nav-icon">🔍</span>ワード</div>
-  <div class="nav-btn" onclick="setTab('receipts')"><span class="nav-icon">🧾</span>領収書</div>
-  <div class="nav-btn" onclick="setTab('inventory')"><span class="nav-icon">📦</span>在庫</div>
-  <div class="nav-btn" onclick="setTab('inspect')"><span class="nav-icon">🔭</span>下見</div>
-  <div class="nav-btn" onclick="setTab('artifacts')"><span class="nav-icon">📄</span>成果物</div>
-  <div class="nav-btn" onclick="setTab('archive')"><span class="nav-icon">📅</span>日別</div>
-  <div class="nav-btn" onclick="setTab('help')"><span class="nav-icon">ℹ️</span>使い方</div>
-  <a class="nav-btn nav-btn-link" href="studio.html" target="_blank" rel="noopener"><span class="nav-icon">🎨</span>スタジオ</a>
+  <div class="nav-btn active" data-tab="list" onclick="setTab('list')"><span class="nav-icon">📋</span>候補</div>
+  <div class="nav-btn" data-tab="lottery" onclick="setTab('lottery')"><span class="nav-icon">🎯</span>抽選</div>
+  <div class="nav-btn" data-tab="words" onclick="setTab('words')"><span class="nav-icon">🔍</span>ワード</div>
+  <div class="nav-btn" data-tab="inventory" onclick="setTab('inventory')"><span class="nav-icon">📦</span>在庫</div>
+  <div class="nav-btn" data-tab="inspect" onclick="setTab('inspect')"><span class="nav-icon">🔭</span>下見</div>
+  <div class="nav-btn" id="nav-more" onclick="toggleMoreMenu(event)"><span class="nav-icon">⋯</span>その他</div>
 </div>
+<!-- 「その他」メニュー（たまに使うタブ・タップで展開） -->
+<div class="more-menu" id="more-menu">
+  <div class="more-hd">その他のタブ</div>
+  <div class="more-item" onclick="pickMore('receipts')"><span>🧾</span> 領収書</div>
+  <div class="more-item" onclick="pickMore('artifacts')"><span>📄</span> 成果物</div>
+  <div class="more-item" onclick="pickMore('archive')"><span>📅</span> 日別</div>
+  <div class="more-item" onclick="pickMore('help')"><span>ℹ️</span> 使い方</div>
+  <a class="more-item" href="studio.html" target="_blank" rel="noopener" onclick="closeMoreMenu()"><span>🎨</span> スタジオ</a>
+</div>
+<div class="more-backdrop" id="more-backdrop" onclick="closeMoreMenu()"></div>
 
 <script>
 let allData = {};
@@ -1064,40 +1079,32 @@ function buildItemLinks(c){
   return {links, listed};
 }
 
+// ② その他メニュー（たまに使うタブ）
+const MORE_TABS=['receipts','artifacts','archive','help'];
+function toggleMoreMenu(e){ if(e)e.stopPropagation(); const m=document.getElementById('more-menu'),b=document.getElementById('more-backdrop'); const open=m.classList.toggle('open'); b.classList.toggle('open',open); }
+function closeMoreMenu(){ document.getElementById('more-menu').classList.remove('open'); document.getElementById('more-backdrop').classList.remove('open'); }
+function pickMore(tab){ closeMoreMenu(); setTab(tab); }
+
 function setTab(tab) {
+  closeMoreMenu();
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
   const cardsEl=document.getElementById('cards'); if(cardsEl) cardsEl.dataset.tab=tab;  // PCレイアウト: gridはlistのみ
   const appEl=document.querySelector('.app'); if(appEl) appEl.dataset.tab=tab;          // ③ 候補専用UIの表示制御
-  if (tab==='list') { document.querySelectorAll('.nav-btn')[0].classList.add('active'); render(); }
-  else if (tab==='lottery') {
-    document.querySelectorAll('.nav-btn')[1].classList.add('active');
-    showLottery();
-  }
-  else if (tab==='words') {
-    document.querySelectorAll('.nav-btn')[2].classList.add('active');
-    showWords();
-  }
-  else if (tab==='receipts') {
-    document.querySelectorAll('.nav-btn')[3].classList.add('active');
-    showReceipts();
-  }
-  else if (tab==='inventory') {
-    document.querySelectorAll('.nav-btn')[4].classList.add('active');
-    showInventory();
-  }
-  else if (tab==='inspect') {
-    document.querySelectorAll('.nav-btn')[5].classList.add('active');
-    showInspect();
-  }
-  else if (tab==='artifacts') {
-    document.querySelectorAll('.nav-btn')[6].classList.add('active');
-    showArtifacts();
-  }
+  // アクティブ表示: 常時タブはdata-tab一致・その他タブは「その他」ボタンを点灯
+  let abtn=document.querySelector('.nav-btn[data-tab="'+tab+'"]');
+  if(!abtn && MORE_TABS.includes(tab)) abtn=document.getElementById('nav-more');
+  if(abtn) abtn.classList.add('active');
+
+  if (tab==='list') { render(); }
+  else if (tab==='lottery') { showLottery(); }
+  else if (tab==='words') { showWords(); }
+  else if (tab==='receipts') { showReceipts(); }
+  else if (tab==='inventory') { showInventory(); }
+  else if (tab==='inspect') { showInspect(); }
+  else if (tab==='artifacts') { showArtifacts(); }
   else if (tab==='archive') {
-    document.querySelectorAll('.nav-btn')[7].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="empty"><div style="font-size:32px;margin-bottom:8px">📅</div><div>日別アーカイブ</div><div style="font-size:11px;margin-top:4px">上の日付バーで日を選んでください</div></div>`;
   } else if (tab==='help') {
-    document.querySelectorAll('.nav-btn')[8].classList.add('active');
     document.getElementById('cards').innerHTML = `<div class="card"><div class="card-body" style="padding:14px">
       <div style="font-size:13px;font-weight:700;margin-bottom:10px">確信度の見方</div>
       <div style="font-size:12px;line-height:1.9;color:#555">
