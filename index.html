@@ -763,6 +763,8 @@ function setSort(val) {
 function render() {
   if (!currentDate || !allData[currentDate]) return;
   const data = allData[currentDate];
+  // ① 旧キー入力→新安定キーへ移行（フィルタ前に全候補で実施・判断ステータスが新キー参照のため）
+  data.candidates.forEach(candMigrate);
   let candidates = [...data.candidates];
 
   // 在庫状態フィルタ（出品中/待ち受け）
@@ -821,7 +823,6 @@ function render() {
   Object.keys(candMeta).forEach(k=>delete candMeta[k]);
   cards.innerHTML = candidates.map(c => {
     const tc = TIER_CLASS[c.tier] || '';
-    candMigrate(c);                 // ① 旧キー入力を新安定キーへ引き継ぐ（消えない化）
     const ck = candKey(c);
     const _aucid=candAucid(c);
     candMeta[ck]={brand:c.brand,model:c.model,name:c.name,jissei:c.jissei,source:c.source,
