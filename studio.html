@@ -496,8 +496,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;heigh
         写真をタップして選択<br>ドラッグで位置・スライダーで拡大</p>
       <div class="sv" id="cell-ctrl-sliders" style="display:none;">
         <div class="si">
-          <span>拡大</span>
-          <input type="range" id="cell-zoom" min="100" max="400" step="1" value="100">
+          <span>拡大 / 縮小</span>
+          <input type="range" id="cell-zoom" min="30" max="400" step="1" value="100">
           <span class="sv-val" id="cell-zoom-v">1.0×</span>
         </div>
         <div class="si">
@@ -796,6 +796,8 @@ function applyFrameStyle(){
     c.el.style.height = (d[3]*s - b)+'px';
     c.el.style.borderWidth = '0px';
     c.el.style.borderRadius = Math.max(0, COL.radius-b)+'px';
+    // 縮小時の余白を枠色に合わせる（写真入りセルのみ・空セルはドロップゾーンの暗色を維持）
+    c.el.style.background = c.img ? COL.borderColor : '#16161e';
     if(c.img){ centerKeep(c); clampAndRender(c); }
   });
 }
@@ -829,6 +831,7 @@ function restoreImageToCell(i, saved){
 function setupCellImage(c, img){
   c.img = img;
   c.el.classList.add('has-img');
+  c.el.style.background = COL.borderColor;   // 縮小時の余白を枠色に
   // 空表示を消す
   var empty = c.el.querySelector('.col-cell-empty');
   if(empty) empty.style.display='none';
@@ -907,9 +910,10 @@ function clampAndRender(c){
     var lx=p[0]*cos - p[1]*sin, ly=p[0]*sin + p[1]*cos;
     needX=Math.max(needX,Math.abs(lx)); needY=Math.max(needY,Math.abs(ly));
   });
-  // local軸での余白 → これをワールド軸のox/oy可動に戻す
-  var slackX = Math.max(0, halfW - needX);
-  var slackY = Math.max(0, halfH - needY);
+  // local軸での可動量。画像がセルより大きい時(halfW>needX)=余白分ドラッグ可。
+  // 画像がセルより小さい時(縮小・halfW<needX)=絶対値を採り、画像をセル内で移動可能に（中央固定にしない）。
+  var slackX = Math.abs(halfW - needX);
+  var slackY = Math.abs(halfH - needY);
   // local余白をワールドのoffset範囲へ（回転で軸が回るため両方に効く）
   var fwd = deg*Math.PI/180, fcos=Math.abs(Math.cos(fwd)), fsin=Math.abs(Math.sin(fwd));
   var maxX = slackX*fcos + slackY*fsin;
@@ -1003,6 +1007,7 @@ function clearCell(i){
   if(c.imgEl){ c.imgEl.remove(); c.imgEl=null; }
   c.img=null; c.zoom=1; c.ox=0; c.oy=0; c.rot=0; c.fine=0;
   c.el.classList.remove('has-img','sel');
+  c.el.style.background='#16161e';   // 空セルはドロップゾーンの暗色に戻す
   var empty = c.el.querySelector('.col-cell-empty');
   if(empty) empty.style.display='';
   if(COL.selected===i) selectCell(-1);
