@@ -1,17 +1,63 @@
 {
-  "updated": "2026-06-08",
-  "schema": "v2-genre",
-  "note": "実績ランク制＋ジャンル(小型バッグ・アクセ)拡張。主軸は母数が少ないためブランド名のみ。Yボタンは1円先頭維持、E/M/Gは先頭1円除去。",
+  "updated": "2026-06-13",
+  "schema": "v3-balance",
+  "note": "財布偏りを解消→アクセサリー・LVアクセ(先輩SOLD型番)優先。主軸ロンワンズ/カムホートは全部見る。先輩SOLDはlv_accessories/senior_sold_otherカテゴリで監視。Bランク追加(2026-06-13)。",
   "categories": [
     {
       "id": "main_axis",
-      "label": "🎯 主軸（ブランド名のみ・母数少なく全部見る）",
+      "label": "🎯 主軸最優先（ロンワンズ・カムホート・全部見る）",
       "words": [
         "1円 ロンワンズ",
         "1円 LONE ONES",
         "1円 レナードカムフォート",
         "1円 Leonard Kamhout",
         "1円 LEONARD KAMHOUT"
+      ]
+    },
+    {
+      "id": "lv_accessories",
+      "label": "💠 LVアクセサリー（先輩SOLD鉄板型番）",
+      "words": [
+        "1円 ルイヴィトン M00596",
+        "1円 ルイヴィトン アイコニック ネックレス",
+        "1円 ルイヴィトン M00308",
+        "1円 ルイヴィトン チェーン ブレスレット",
+        "1円 ルイヴィトン M00307",
+        "1円 ルイヴィトン M01880",
+        "1円 ルイヴィトン メタル ネックレス",
+        "1円 ルイヴィトン ネックレス ブレスレット"
+      ]
+    },
+    {
+      "id": "senior_sold_other",
+      "label": "🏆 先輩SOLD型番（GUCCI・バレンシアガ）",
+      "words": [
+        "1円 グッチ 410812",
+        "1円 グッチ ヒグチユウコ",
+        "1円 バレンシアガ 671402",
+        "1円 バレンシアガ チェーン ネックレス"
+      ]
+    },
+    {
+      "id": "accessories",
+      "label": "💎 アクセサリー優先（先輩実績ブランド・拡充）",
+      "words": [
+        "1円 カルティエ トリニティ リング",
+        "1円 カルティエ ラブ リング",
+        "1円 カルティエ ジュストアンクル ブレスレット",
+        "1円 シャネル ココマーク ブローチ",
+        "1円 シャネル ネックレス シルバー",
+        "1円 エルメス クリックH ブレスレット",
+        "1円 エルメス アミュレット",
+        "1円 エルメス シェーヌダンクル ブレスレット",
+        "1円 ティファニー オープンハート",
+        "1円 ティファニー Tスマイル ネックレス",
+        "1円 ヴァンクリーフ ネックレス",
+        "1円 グッチ インターロッキング リング",
+        "1円 グッチ GG ネックレス",
+        "1円 ディオール クレールドリュヌ",
+        "1円 バレンシアガ チェーン ネックレス",
+        "1円 ヴェルサーチ イヤリング"
       ]
     },
     {
@@ -35,7 +81,7 @@
     },
     {
       "id": "lv_models",
-      "label": "🔑 LV型式（ピンポイント検索）",
+      "label": "🔑 LV型式（ピンポイント検索・バッグ系）",
       "words": [
         "1円 ルイヴィトン M60171",
         "1円 ルイヴィトン M85069",
@@ -47,7 +93,7 @@
     },
     {
       "id": "prada_name",
-      "label": "👜 プラダ（商品名・母数広め）",
+      "label": "👜 プラダ（商品名・バッグ・ポーチ重視）",
       "words": [
         "1円 プラダ 巾着 ポーチ",
         "1円 プラダ カナパ トート",
@@ -65,20 +111,17 @@
         "1円 プラダ カナパ ギャランティ",
         "1円 プラダ ナイロン ギャランティ",
         "1円 プラダ サフィアーノ ギャランティ",
-        "1円 プラダ 財布 ギャランティ",
         "1円 プラダ バッグ ギャランティ"
       ]
     },
     {
-      "id": "chanel_wife",
-      "label": "🌸 シャネル財布・バッグ（バッグ重視）",
+      "id": "chanel_bags",
+      "label": "🌸 シャネル（バッグ重視・財布は縮小）",
       "words": [
-        "1円 シャネル マトラッセ チェーンウォレット",
         "1円 シャネル マトラッセ ショルダー",
         "1円 シャネル チェーンショルダー",
         "1円 シャネル ヴァニティ バッグ",
-        "1円 シャネル ココマーク 財布",
-        "1円 シャネル キャビアスキン 財布"
+        "1円 シャネル マトラッセ チェーンウォレット"
       ]
     },
     {
@@ -94,22 +137,8 @@
       ]
     },
     {
-      "id": "accessories",
-      "label": "💎 アクセサリー（先輩実績ブランド）",
-      "words": [
-        "1円 カルティエ トリニティ リング",
-        "1円 シャネル ココマーク ブローチ",
-        "1円 エルメス クリックH ブレスレット",
-        "1円 エルメス アミュレット",
-        "1円 ティファニー オープンハート",
-        "1円 ヴェルサーチ イヤリング",
-        "1円 グッチ GG ネックレス",
-        "1円 ディオール クレールドリュヌ"
-      ]
-    },
-    {
       "id": "rank_b",
-      "label": "🥉 B級・利益は出るが回転やや遅い",
+      "label": "🥉 B級追加許容（写真確認必須・2026-06-13から全ブランドOK）",
       "words": [
         "1円 プラダ ラウンドファスナー 財布",
         "1円 ジミーチュウ 三つ折 財布",
@@ -123,11 +152,12 @@
         "除外: ルイヴィトン高額チェーンネックレス（M01269等・65日・薄利）",
         "除外: LVキーリング系（赤字実績）",
         "除外: 大型バッグ全般（小型バッグのみ対象）",
-        "除外(全般): 風 / 互換 / ノーブランド / コピー / レプリカ"
+        "除外(全般): 風 / 互換 / ノーブランド / コピー / レプリカ",
+        "除外: シャネル財布単品（ブランドバッグに比べ回転遅）"
       ]
     }
   ],
-  "ecoauc_note": "EcoAuc下見の巡回ターゲット。ecoauc-inspect-fetchが参照（別ファイルは持たない＝共通化）。回転実績(回転日数/粗利率)の高い順=priority昇順。minor=ワードにブランド名必要(EcoAucブランドUIに無い)・major=EcoAucブランド選択UI(ecoauc_brand)で絞り商品名(q_product)で検索。rank S/SA/A/AB/Bのみ・単品(まとめ除外)・開始価格¥3,000以上。",
+  "ecoauc_note": "EcoAuc下見の巡回ターゲット。ecoauc-inspect-fetchが参照（別ファイルは持たない＝共通化）。回転実績(回転日数/粗利率)の高い順=priority昇順。minor=ワードにブランド名必要(EcoAucブランドUIに無い)・major=EcoAucブランド選択UI(ecoauc_brand)で絞り商品名(q_product)で検索。rank S/A/AB/B・単品(まとめ除外)・開始価格¥3,000以上。",
   "ecoauc_filter": {
     "ranks": ["S", "SA", "A", "AB", "B"],
     "min_start_price": 3000,
@@ -145,31 +175,66 @@
       "priority": 2, "tier": "S", "minor": false,
       "q": "プラダ サフィアーノ", "brand": "プラダ", "ecoauc_brand": "PRADA", "q_product": "サフィアーノ 財布",
       "kaiten": 4, "rieki": 47,
-      "note": "S級・自社実証 回転4日/粗利47%。メジャーso EcoAucブランドUI(PRADA)+商品名で絞る"
+      "note": "S級・自社実証 回転4日/粗利47%"
     },
     {
       "priority": 3, "tier": "S", "minor": false,
       "q": "ルイヴィトン アンプラント 財布", "brand": "ルイヴィトン", "ecoauc_brand": "LOUIS VUITTON", "q_product": "アンプラント 財布",
       "kaiten": 2, "rieki": 19.8,
-      "note": "S級・自社実証 回転2日/粗利19.8%。LVブランドUI+アンプラント財布で絞る"
+      "note": "S級・自社実証 回転2日/粗利19.8%"
     },
     {
-      "priority": 4, "tier": "A", "minor": false,
+      "priority": 4, "tier": "A/先輩SOLD", "minor": false,
+      "q": "ルイヴィトン ネックレス M00596", "brand": "ルイヴィトン", "ecoauc_brand": "LOUIS VUITTON", "q_product": "アイコニック ネックレス",
+      "kataban": "M00596",
+      "kaiten": 19, "rieki": null,
+      "note": "先輩SOLD鉄板: アイコニックNL ¥60-62k・15-24日。LVブランドUI+アイコニック ネックレス"
+    },
+    {
+      "priority": 5, "tier": "A/先輩SOLD", "minor": false,
+      "q": "ルイヴィトン ブレスレット M00308", "brand": "ルイヴィトン", "ecoauc_brand": "LOUIS VUITTON", "q_product": "チェーン ブレスレット",
+      "kataban": "M00308",
+      "kaiten": 3, "rieki": null,
+      "note": "先輩SOLD鉄板: LVチェーンブレスレット ¥56k・3日。超高回転"
+    },
+    {
+      "priority": 6, "tier": "A/先輩SOLD", "minor": false,
+      "q": "ルイヴィトン ネックレス M00307", "brand": "ルイヴィトン", "ecoauc_brand": "LOUIS VUITTON", "q_product": "メタル ネックレス",
+      "kataban": "M00307/M01880",
+      "kaiten": null, "rieki": null,
+      "note": "先輩SOLD鉄板: LVメタルNL ¥88-114k・M00307/M01880どちらも対象"
+    },
+    {
+      "priority": 7, "tier": "A/先輩SOLD", "minor": false,
+      "q": "グッチ ヒグチユウコ 410812", "brand": "グッチ", "ecoauc_brand": "GUCCI", "q_product": "ヒグチユウコ",
+      "kataban": "410812",
+      "kaiten": 5, "rieki": null,
+      "note": "先輩SOLD鉄板: GUCCIヒグチユウコ ¥99,800・5日。グッチUI+ヒグチユウコ"
+    },
+    {
+      "priority": 8, "tier": "A/先輩SOLD", "minor": false,
+      "q": "バレンシアガ 671402", "brand": "バレンシアガ", "ecoauc_brand": "BALENCIAGA", "q_product": "671402",
+      "kataban": "671402",
+      "kaiten": 16, "rieki": null,
+      "note": "先輩SOLD鉄板: バレンシアガ671402 ¥38,600・16日"
+    },
+    {
+      "priority": 9, "tier": "A", "minor": false,
       "q": "カルティエ サントス", "brand": "カルティエ", "ecoauc_brand": "Cartier", "q_product": "サントス",
       "kaiten": 25, "rieki": 39,
-      "note": "A級・回転25日/粗利39%。カルティエUI+サントス"
+      "note": "A級・回転25日/粗利39%"
     },
     {
-      "priority": 5, "tier": "A", "minor": false,
+      "priority": 10, "tier": "A", "minor": false,
       "q": "バレンシアガ 財布", "brand": "バレンシアガ", "ecoauc_brand": "BALENCIAGA", "q_product": "財布",
       "kaiten": 3, "rieki": 25,
-      "note": "A級・回転3日/粗利25%。バレンシアガUI+財布"
+      "note": "A級・回転3日/粗利25%"
     },
     {
-      "priority": 6, "tier": "A", "minor": false,
+      "priority": 11, "tier": "A", "minor": false,
       "q": "ジルサンダー", "brand": "ジルサンダー", "ecoauc_brand": "JIL SANDER", "q_product": "",
       "kaiten": 3, "rieki": null,
-      "note": "A級・回転3日。ジルサンダーUIで絞る(クロスボディ等)"
+      "note": "A級・回転3日"
     }
   ]
 }
