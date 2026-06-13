@@ -821,6 +821,7 @@ function render() {
   Object.keys(candMeta).forEach(k=>delete candMeta[k]);
   cards.innerHTML = candidates.map(c => {
     const tc = TIER_CLASS[c.tier] || '';
+    candMigrate(c);                 // ① 旧キー入力を新安定キーへ引き継ぐ（消えない化）
     const ck = candKey(c);
     const _aucid=candAucid(c);
     candMeta[ck]={brand:c.brand,model:c.model,name:c.name,jissei:c.jissei,source:c.source,
@@ -911,7 +912,23 @@ function yen(n){ return n && n>0 ? '¥'+n.toLocaleString('ja-JP') : '—'; }
 
 // ⑤ 候補(ヤフオク/Eco)の実勢¥・入札¥手入力（localStorage永続・下見と同仕様）
 function _candHash(s){let h=0;for(let i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))|0;}return (h>>>0).toString(36);}
-function candKey(c){ return 'c_'+_candHash((c.aucid||'')+'|'+(c.url||'')+'|'+(c.brand||'')+'|'+(c.model||'')+'|'+(c.name||'')); }
+// ① 安定キー: aucid > ブランド+型番 > ブランド+名。url/nameの揺れで再取得時に孤立しないように（2026-06-13）
+function candKey(c){
+  const a=candAucid(c);
+  if(a) return 'c_a_'+a;                                            // aucid基準（最安定・URL変わっても不変）
+  const m=(c.model||'').trim();
+  if(m) return 'c_m_'+_candHash((c.brand||'')+'|'+m);              // ブランド+型番
+  return 'c_n_'+_candHash((c.brand||'')+'|'+((c.name||'').replace(/\s+/g,'')));  // 最終手段（空白無視）
+}
+// 旧キー（url/name含む不安定版）— 既存入力を新キーへ移行する用
+function candKeyOld(c){ return 'c_'+_candHash((c.aucid||'')+'|'+(c.url||'')+'|'+(c.brand||'')+'|'+(c.model||'')+'|'+(c.name||'')); }
+// ① 旧キーの入力(編集/判断)を現在表示中の同一商品の新キーへ引き継ぐ（消えない化）
+function candMigrate(c){
+  const nk=candKey(c), ok=candKeyOld(c);
+  if(nk===ok) return;
+  const e=candEditsLoad(); if(e[ok]&&!e[nk]){ e[nk]=e[ok]; delete e[ok]; candEditsSave(e); }
+  const d=candDecsLoad(); if(d[ok]&&!d[nk]){ d[nk]=d[ok]; delete d[ok]; candDecsSave(d); }
+}
 // ③ ヤフオクのオークションIDを取得（明示aucid優先・無ければURL `/jp/auction/{ID}` から抽出）
 function candAucid(c){
   if(c.aucid) return c.aucid;
