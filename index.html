@@ -972,9 +972,9 @@ const candMeta={};
 function candPredict(ck){
   const m=candMeta[ck]; if(!m) return;
   const e=candEditsLoad()[ck]||{};
-  if(!e.jissei) return;
-  predictRecord({key:'yh_'+ck, item_no:'', brand:m.brand||'', model:m.model||'', name:m.name||'',
-    predicted_jissei:m.jissei||null, manual_jissei:e.jissei, bid:e.bid||null, source:'yahoo_candidate'});
+  if(!e.jissei&&!e.bid) return;  // 実勢か入札どちらかあれば送る（bid単独でもサーバーに残す）
+  predictRecord({key:'yh_'+ck, item_no:m.aucid||'', brand:m.brand||'', model:m.model||'', name:m.name||'',
+    predicted_jissei:m.jissei||null, manual_jissei:e.jissei||null, bid:e.bid||null, source:'yahoo_candidate'});
 }
 
 // ===== ② 候補タブ: GO/見送り判断＋ステータス（下見と同仕様・platform=yahoo） =====
@@ -1007,6 +1007,7 @@ async function candJudge(ck,decision,reasonOverride){
     tier:m.tier||'Tier2', jissei, bid, profit, deadline:m.end||'', current_price:m.current_price||0, reason};
   const result=await relayPost(decision,payload);
   const server_ok=result?!!result.ok:null;
+  if(!server_ok) decisionQueuePush(decision,payload);  // relay失敗時にキュー退避→接続復活で自動再送
   const decs=candDecsLoad();
   decs[ck]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags,watchId};
   candDecsSave(decs);
@@ -1677,7 +1678,7 @@ const _relayWaiters={};
 let _relayReady=false;
 window.addEventListener('message',(e)=>{
   if(!e.data||e.source!==window) return;
-  if(e.data.type==='banshee_relay_ready'){ _relayReady=true; predictFlushQueue(); }  // 接続できたら退避分を再送
+  if(e.data.type==='banshee_relay_ready'){ _relayReady=true; predictFlushQueue(); decisionFlushQueue(); }  // 接続できたら退避分を再送
   if(e.data.type==='banshee_relay_result'){
     const cb=_relayWaiters[e.data.reqId];
     if(cb){delete _relayWaiters[e.data.reqId]; cb(e.data.result);}
@@ -1702,7 +1703,7 @@ function predictQueueSave(q){localStorage.setItem(PREDICT_QUEUE_KEY,JSON.stringi
 let _predictFlushing=false;
 // 入力レコードを必ずキューにupsert（消失防止）→ 即フラッシュ試行
 function predictRecord(rec){
-  if(!rec||!rec.key||!rec.manual_jissei) return;
+  if(!rec||!rec.key||(!rec.manual_jissei&&!rec.bid)) return;  // 実勢か入札どちらかあれば送る
   const q=predictQueueLoad();
   const i=q.findIndex(r=>r.key===rec.key);
   if(i>=0)q[i]=rec; else q.push(rec);
@@ -1731,6 +1732,34 @@ async function predictFlushQueue(){
   } finally { _predictFlushing=false; }
   // await中に新規編集が入っていたら再送（成功時のみ・relay down時の無限ループ回避）
   if(anySuccess && predictQueueLoad().length) setTimeout(predictFlushQueue, 800);
+}
+
+// ===== GO/見送り再送キュー（relay失敗時に退避→接続復活時に自動再送・穴①塞ぎ） =====
+// predictQueueと同方式。Mac停止中やrelay未起動でGO/見送りを押した場合に備える。
+const DECISION_QUEUE_KEY='decision_queue_v1';
+function decisionQueueLoad(){try{return JSON.parse(localStorage.getItem(DECISION_QUEUE_KEY)||'[]');}catch(e){return[];}}
+function decisionQueueSave(q){localStorage.setItem(DECISION_QUEUE_KEY,JSON.stringify(q));}
+let _decisionFlushing=false;
+function decisionQueuePush(action,payload){
+  const q=decisionQueueLoad();
+  const i=q.findIndex(r=>r.payload.item_no===payload.item_no);
+  if(i>=0) q[i]={action,payload}; else q.push({action,payload});
+  decisionQueueSave(q);
+}
+async function decisionFlushQueue(){
+  if(_decisionFlushing) return;
+  let q=decisionQueueLoad(); if(!q.length) return;
+  _decisionFlushing=true;
+  try{
+    for(const {action,payload} of q){
+      const r=await relayPost(action,payload);
+      if(r&&r.ok){
+        const cur=decisionQueueLoad();
+        const i=cur.findIndex(x=>x.payload.item_no===payload.item_no);
+        if(i>=0){ cur.splice(i,1); decisionQueueSave(cur); }
+      }
+    }
+  } finally { _decisionFlushing=false; }
 }
 
 // ===== ① サーバー記録(decisions.json)からの状態復元（localStorage消失・端末変更・再取得でも判断/入力を回復） =====
@@ -1814,6 +1843,7 @@ async function insJudge(itemNo,decision,reasonOverride){
 
   const result=await relayPost(decision,payload);
   const server_ok=result?!!result.ok:null;
+  if(!server_ok) decisionQueuePush(decision,payload);  // relay失敗時にキュー退避→接続復活で自動再送
 
   const decs=insDecsLoad();
   decs[itemNo]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags};
@@ -2136,7 +2166,7 @@ function renderArtifacts(){
   currentDate = '2026-06-06';
   buildDateBar();
   await loadDate(currentDate);
-  setTimeout(predictFlushQueue, 1500);  // ①⑤ 起動時に未送信の学習データを再送（TM ready取りこぼし対策）
+  setTimeout(()=>{ predictFlushQueue(); decisionFlushQueue(); }, 1500);  // 起動時に未送信の学習データ・判断を再送
 })();
 </script>
 </body>
