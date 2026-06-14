@@ -1,15 +1,37 @@
 {
-  "updated_at": "2026-06-13T09:34:24+09:00",
+  "updated_at": "2026-06-15T06:28:41+09:00",
   "items": {
-    "ecoauc:12547_TEST": {
-      "platform": "ecoauc",
-      "id": "12547_TEST",
+    "yahoo:kanri:B097-260610": {
+      "platform": "yahoo",
+      "id": "kanri:B097-260610",
       "decision": "go",
-      "reason_tags": [
-        "その他"
-      ],
-      "bid": 30000,
-      "jissei": 44000
+      "reason_tags": [],
+      "bid": 29910,
+      "jissei": null
+    },
+    "yahoo:kanri:W098-260612": {
+      "platform": "yahoo",
+      "id": "kanri:W098-260612",
+      "decision": "go",
+      "reason_tags": [],
+      "bid": 12975,
+      "jissei": 15000
+    },
+    "yahoo:kanri:W099-260612": {
+      "platform": "yahoo",
+      "id": "kanri:W099-260612",
+      "decision": "go",
+      "reason_tags": [],
+      "bid": 12975,
+      "jissei": null
+    },
+    "yahoo:name:ロンワンズLONEONESフローペンダントトップ": {
+      "platform": "yahoo",
+      "id": "name:ロンワンズLONEONESフローペンダントトップ",
+      "decision": "go",
+      "reason_tags": [],
+      "bid": 15760,
+      "jissei": null
     },
     "ecoauc:12547_0161": {
       "platform": "ecoauc",
@@ -34,6 +56,14 @@
       "reason_tags": [],
       "bid": 51000,
       "jissei": 67000
+    },
+    "ecoauc:12578_0490": {
+      "platform": "ecoauc",
+      "id": "12578_0490",
+      "decision": null,
+      "reason_tags": [],
+      "bid": 29000,
+      "jissei": 45000
     }
   }
 }
