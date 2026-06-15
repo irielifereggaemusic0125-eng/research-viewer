@@ -2035,10 +2035,10 @@ function insIsEnded(dl){ if(!dl)return false; const d=new Date(dl); return isNaN
 function insItemStatus(it){
   const dec=(insDecsLoad()[it.item_no]||{}).decision;
   if(dec==='skip') return 'done';
+  // EcoAucマイリスト入札中フラグ（status='bidding'）→ 終了判定より優先（結果待ちを含む）
+  if(it.status==='bidding') return 'bidding';
   if(insIsEnded(it.deadline)) return 'done';
   if(dec==='go') return 'bidding';
-  // EcoAucマイリスト入札中フラグ（status='bidding'）→ 自動的に入札中扱い
-  if(it.status==='bidding') return 'bidding';
   return 'pending';
 }
 function insSetStatus(s){ insStatusFilter=s; renderInspect(); }
