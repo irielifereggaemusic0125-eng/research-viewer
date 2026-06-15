@@ -397,6 +397,15 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-merc-sub:active{opacity:.85}
 /* 下見: 粗利¥5,000以上の強調(緑系) */
 .iv-card.ins-hi{border-left-color:var(--t1);border-color:rgba(46,212,122,.45);background:linear-gradient(0deg,rgba(46,212,122,.05),rgba(46,212,122,.05)),var(--surface)}
+/* 下見: EcoAuc落札相場 */
+.mkt-row{flex-wrap:wrap;gap:4px}
+.mkt-rank{font-size:9px;font-weight:800;background:rgba(77,159,255,.15);color:var(--t2);border-radius:5px;padding:1px 5px;margin-left:4px}
+.mkt-n{font-size:10px;color:var(--muted);margin-left:4px}
+.mkt-judge{font-size:10px;font-weight:800;padding:1px 7px;border-radius:7px;margin-left:4px;white-space:nowrap}
+.mkt-note{font-size:9px;font-weight:600;opacity:.8}
+.mkt-judge.mkt-cheap{background:rgba(46,212,122,.18);color:#2ed47a}
+.mkt-judge.mkt-ok{background:rgba(255,181,71,.18);color:#ffb547}
+.mkt-judge.mkt-high{background:rgba(255,92,92,.14);color:#ff5c5c}
 /* 下見: 実績バッジ(回転/粗利＝なぜ狙い目か) */
 .ins-perf{display:flex;gap:5px;margin:2px 0 6px;flex-wrap:wrap}
 .ins-pb{font-size:9px;font-weight:800;padding:1px 7px;border-radius:7px}
@@ -1973,6 +1982,35 @@ function insPredict(itemNo){
     predicted_jissei:m.jissei||null, manual_jissei:e.jissei, bid:e.bid||null, source:'ecoauc_inspect'});
 }
 
+// ===== EcoAuc落札相場データ（ecoauc_market_prices.json） =====
+let marketPricesData = null;
+
+async function loadMarketPrices() {
+  if (marketPricesData) return marketPricesData;
+  try {
+    const r = await fetch('data/ecoauc_market_prices.json?t=' + Date.now(), {cache: 'no-store'});
+    if (!r.ok) return null;
+    marketPricesData = await r.json();
+    return marketPricesData;
+  } catch(e) { return null; }
+}
+
+// 相場ルックアップ: brand(JP) + rank → {n, median, min, max} or null
+function mktLookup(brandJp, rank) {
+  if (!marketPricesData) return null;
+  const key = `${brandJp}:${rank}`;
+  return marketPricesData.by_brand_rank?.[key] || null;
+}
+
+// vs相場判定（開始価格 vs 相場中央値）
+function mktJudge(currentPrice, median) {
+  if (!median || !currentPrice) return null;
+  const ratio = currentPrice / median;
+  if (ratio < 0.7)  return {cls:'mkt-cheap',   label:'✅ 割安', note:`相場比${Math.round(ratio*100)}%`};
+  if (ratio < 0.9)  return {cls:'mkt-ok',      label:'🟡 やや割安', note:`相場比${Math.round(ratio*100)}%`};
+  return               {cls:'mkt-high',    label:'❌ 割高', note:`相場比${Math.round(ratio*100)}%`};
+}
+
 // ===== 下見タブ（EcoAuc下見・ecoauc_inspect.json） =====
 let inspectData = null;
 const insBrands = new Set();   // ブランドフィルタ(複数)
@@ -1999,6 +2037,8 @@ function insItemStatus(it){
   if(dec==='skip') return 'done';
   if(insIsEnded(it.deadline)) return 'done';
   if(dec==='go') return 'bidding';
+  // EcoAucマイリスト入札中フラグ（status='bidding'）→ 自動的に入札中扱い
+  if(it.status==='bidding') return 'bidding';
   return 'pending';
 }
 function insSetStatus(s){ insStatusFilter=s; renderInspect(); }
@@ -2016,6 +2056,8 @@ async function showInspect(){
       return;
     }
   }
+  // 相場データは fail-soft（なくても下見は表示する）
+  await loadMarketPrices();
   renderInspect();
 }
 function insToggleBrand(b){ insBrands.has(b)?insBrands.delete(b):insBrands.add(b); renderInspect(); }
@@ -2113,8 +2155,16 @@ function renderInspect(){
         ${perfBadge}${sniperBadge(it)}
         <div class="iv-rows">
           <div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv">${it.current_price?'¥'+(+it.current_price).toLocaleString('ja-JP'):'—'}</span></div>
+          ${it.my_bid?`<div class="iv-row"><span class="iv-rl" style="color:#ffcf6b">🎯自分の入札</span><span class="iv-rv" style="color:#ffcf6b;font-weight:800">¥${(+it.my_bid).toLocaleString('ja-JP')}</span></div>`:''}
           ${it.jissei?`<div class="iv-row"><span class="iv-rl">実勢${it.confidence?`<span class="band-conf ${it.confidence}">信頼度${it.confidence}</span>`:''}</span><span class="iv-rv">${(it.jissei_low&&it.jissei_high)?`¥${(+it.jissei_low).toLocaleString('ja-JP')}〜¥${(+it.jissei_high).toLocaleString('ja-JP')}`:'¥'+(+it.jissei).toLocaleString('ja-JP')}</span></div>`:''}
           ${it.profit?`<div class="iv-row"><span class="iv-rl">想定粗利</span><span class="iv-rv ${hi?'':''}" style="color:${hi?'var(--profit)':'var(--text)'};font-weight:${hi?'800':'600'}">+¥${(+it.profit).toLocaleString('ja-JP')}${hi?' ★':''}</span></div>`:''}
+          ${(()=>{
+            const mkt=mktLookup(it.brand, it.rank);
+            if(!mkt||!mkt.median) return '';
+            const judge=mktJudge(it.current_price, mkt.median);
+            const judgeBadge=judge?`<span class="mkt-judge ${judge.cls}">${judge.label} <span class="mkt-note">${judge.note}</span></span>`:'';
+            return `<div class="iv-row mkt-row"><span class="iv-rl">落札相場<span class="mkt-rank">${it.rank}</span></span><span class="iv-rv">¥${mkt.median.toLocaleString('ja-JP')} <span class="mkt-n">n=${mkt.n}</span>${judgeBadge}</span></div>`;
+          })()}
         </div>
         <div class="iv-input-row">
           <div class="iv-input-grp">
