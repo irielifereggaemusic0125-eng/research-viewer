@@ -1031,8 +1031,11 @@ function candStableId(o){
 }
 function candItemStatus(c){
   const ck=candKey(c);
-  let dec=(candDecsLoad()[ck]||{}).decision;
-  if(!dec){ const led=decLedgerGet(candStableId(c)); if(led) dec=led.decision; }  // 安定IDフォールバック(SKIP引き継ぎ)
+  const local=(candDecsLoad()[ck]||{});
+  let dec=local.decision;
+  const sid=candStableId(c);
+  if(dec){ if(!decLedgerGet(sid)) decLedgerSet(sid,{decision:dec,bid:local.bid,jissei:local.jissei,reason:local.reason,reason_tags:local.reason_tags}); }  // 既存判断を台帳へ遅延移行
+  if(!dec){ const led=decLedgerGet(sid); if(led) dec=led.decision; }  // 安定IDフォールバック(SKIP引き継ぎ)
   if(dec==='skip') return 'done';
   if(isEnded(c.end)) return 'done';      // 終了=処理済み
   if(dec==='go') return 'bidding';
@@ -2056,7 +2059,9 @@ function insHours(dl){ if(!dl)return null; const d=new Date(dl); return isNaN(d)
 function insIsEnded(dl){ if(!dl)return false; const d=new Date(dl); return isNaN(d)?false:(d-new Date())<=0; }
 // ③ 商品のステータス: done(見送り or 終了) / bidding(GO・進行中) / pending(未判断)
 function insItemStatus(it){
-  let dec=(insDecsLoad()[it.item_no]||{}).decision;
+  const local=(insDecsLoad()[it.item_no]||{});
+  let dec=local.decision;
+  if(dec){ if(!decLedgerGet('i:'+it.item_no)) decLedgerSet('i:'+it.item_no,{decision:dec,bid:local.bid,jissei:local.jissei,reason:local.reason,reason_tags:local.reason_tags}); }  // 既存判断を台帳へ遅延移行
   if(!dec){ const led=decLedgerGet('i:'+it.item_no); if(led) dec=led.decision; }  // 安定ID台帳フォールバック(SKIP引き継ぎ)
   if(dec==='skip') return 'done';
   // EcoAucマイリスト入札中フラグ（status='bidding'）→ 終了判定より優先（結果待ちを含む）
