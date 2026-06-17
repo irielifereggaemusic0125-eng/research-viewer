@@ -524,6 +524,9 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 <div class="app">
   <h1>仕入リサーチビューア</h1>
   <p class="sub">二重チェック確定候補｜確信度順</p>
+  <div class="imgsearch-bar">
+    <button class="imgsearch-btn" id="imgsearch-btn" onclick="imgSearchOpen()" aria-label="画像で相場検索">📷 画像で相場検索</button>
+  </div>
   <div class="updated-bar">
     <span class="updated" id="updated-label"></span>
     <button class="refresh-btn" id="refresh-btn" onclick="refreshData()" aria-label="更新"><span class="rf-ico" id="rf-ico">⟳</span><span id="rf-txt">更新</span></button>
@@ -636,7 +639,84 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 </div>
 <div class="more-backdrop" id="more-backdrop" onclick="closeMoreMenu()"></div>
 
+<!-- 📷 画像で相場検索モーダル（A': メルカリ画像検索 / B': Google Lens を開く） -->
+<style>
+.imgsearch-bar{display:flex;justify-content:center;margin:6px 0 2px}
+.imgsearch-btn{background:#ff3a6e;color:#fff;border:none;border-radius:999px;padding:9px 18px;font-size:14px;font-weight:800;cursor:pointer;min-height:40px;box-shadow:0 2px 8px rgba(255,58,110,.3)}
+.imgsearch-btn:active{transform:scale(.97)}
+.imgs-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;align-items:center;justify-content:center;padding:16px}
+.imgs-overlay.on{display:flex}
+.imgs-modal{background:#fff;color:#222;border-radius:16px;max-width:420px;width:100%;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,.35);max-height:90vh;overflow:auto}
+.imgs-hd{display:flex;align-items:center;justify-content:space-between;font-size:17px;font-weight:800;margin-bottom:8px}
+.imgs-x{background:#eee;border:none;border-radius:8px;width:32px;height:32px;font-size:15px;cursor:pointer}
+.imgs-desc{font-size:13px;color:#555;line-height:1.5;margin:0 0 12px}
+.imgs-drop{display:block;border:2px dashed #ff3a6e;border-radius:12px;padding:18px;text-align:center;cursor:pointer;background:#fff5f8}
+.imgs-drop.drag{background:#ffe0ea}
+.imgs-drop-inner{display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none}
+.imgs-drop-ico{font-size:30px}
+.imgs-drop-txt{font-size:13px;color:#c81e54;font-weight:700}
+.imgs-drop img{max-width:100%;max-height:160px;border-radius:8px}
+.imgs-hint{font-size:12px;color:#2a8a3e;text-align:center;margin:8px 0 0;min-height:16px;font-weight:700}
+.imgs-actions{display:flex;gap:10px;margin:14px 0 4px}
+.imgs-go{flex:1;border:none;border-radius:10px;padding:13px 8px;font-size:14px;font-weight:800;cursor:pointer;min-height:48px;color:#fff}
+.imgs-go.mer{background:#ff3a6e}
+.imgs-go.lens{background:#4285f4}
+.imgs-go:active{transform:scale(.97)}
+.imgs-note{font-size:11px;color:#888;line-height:1.5;margin:10px 0 0}
+</style>
+<div class="imgs-overlay" id="imgs-overlay" onclick="if(event.target===this)imgSearchClose()">
+  <div class="imgs-modal" role="dialog" aria-label="画像で相場検索">
+    <div class="imgs-hd">📷 画像で相場検索<button class="imgs-x" onclick="imgSearchClose()" aria-label="閉じる">✕</button></div>
+    <p class="imgs-desc">商品画像をドロップ/選択 → メルカリ画像検索 か Google Lens を開いて、その画像で類似のSOLD相場を確認できます。</p>
+    <label class="imgs-drop" id="imgs-drop">
+      <input type="file" id="imgs-file" accept="image/*" onchange="imgSearchPick(this.files[0])" hidden>
+      <div class="imgs-drop-inner" id="imgs-drop-inner">
+        <span class="imgs-drop-ico">🖼️</span>
+        <span class="imgs-drop-txt">タップで写真を選択 / ここにドロップ</span>
+      </div>
+    </label>
+    <p class="imgs-hint" id="imgs-hint"></p>
+    <div class="imgs-actions">
+      <button class="imgs-go mer" onclick="imgSearchGo('mercari')">🛒 メルカリで画像検索</button>
+      <button class="imgs-go lens" onclick="imgSearchGo('lens')">🔍 Google Lens</button>
+    </div>
+    <p class="imgs-note">※メルカリ/Lensが開いたら、カメラ/アップロードで<b>同じ画像</b>を選んでください（各サービスのAIが類似品を表示）。画像をドロップ済みならクリップボードにもコピーするので、Lensでは⌘V/Ctrl+V貼り付けも可。</p>
+  </div>
+</div>
+
 <script>
+// ===== 📷 画像で相場検索（A': メルカリ画像検索 / B': Google Lens） =====
+let imgSearchBlob = null;
+function imgSearchOpen(){ document.getElementById('imgs-overlay').classList.add('on'); }
+function imgSearchClose(){ document.getElementById('imgs-overlay').classList.remove('on'); }
+async function imgSearchPick(file){
+  if(!file) return;
+  imgSearchBlob = file;
+  const inner = document.getElementById('imgs-drop-inner');
+  const url = URL.createObjectURL(file);
+  inner.innerHTML = '<img src="'+url+'" alt="選択画像">';
+  const hint = document.getElementById('imgs-hint');
+  // クリップボードへコピー（Lensで貼り付け可能に・best-effort/iOSは失敗しても無害）
+  try{
+    if(navigator.clipboard && window.ClipboardItem){
+      await navigator.clipboard.write([new ClipboardItem({[file.type]: file})]);
+      hint.textContent = '✓ 画像をクリップボードにコピー（Lensで⌘V/Ctrl+V貼り付け可）';
+    } else { hint.textContent = '✓ 画像を読み込みました'; }
+  }catch(e){ hint.textContent = '✓ 画像を読み込みました'; }
+}
+function imgSearchGo(which){
+  const url = which==='mercari' ? 'https://jp.mercari.com/' : 'https://lens.google.com/';
+  window.open(url, '_blank', 'noopener');
+}
+// ドラッグ&ドロップ
+document.addEventListener('DOMContentLoaded', function(){
+  const drop = document.getElementById('imgs-drop');
+  if(!drop) return;
+  ['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('drag');}));
+  ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('drag');}));
+  drop.addEventListener('drop',e=>{ const f=e.dataTransfer.files&&e.dataTransfer.files[0]; if(f&&/^image\//.test(f.type)) imgSearchPick(f); });
+});
+
 let allData = {};
 let currentDate = '';
 let lotteryData = null;
