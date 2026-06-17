@@ -1010,9 +1010,29 @@ const CAND_DECS_KEY='cand_decisions_v1';
 let candStatusFilter='pending';   // pending(未判断)|bidding(入札中)|done(処理済み)
 function candDecsLoad(){try{return JSON.parse(localStorage.getItem(CAND_DECS_KEY)||'{}');}catch(e){return{};}}
 function candDecsSave(d){localStorage.setItem(CAND_DECS_KEY,JSON.stringify(d));}
+// ===== 安定IDのdecision台帳（relay非依存・GO/SKIP両方を再取得/キー変動/別端末でも引き継ぐ） =====
+// candKey/item_noはキー変動やlocalStorage消失で外れることがある。GOは decisions.json(落札自動ログ)で
+// 救済されるがSKIPは救済経路が無く未判断に戻っていた。安定ID(aucid/型番/品名)で判断を別途保持し、
+// 状態判定のフォールバックに使うことで、GOと同じ仕組みでSKIPも引き継ぐ。
+const DEC_LEDGER_KEY='dec_ledger_v1';
+function decLedgerLoad(){try{return JSON.parse(localStorage.getItem(DEC_LEDGER_KEY)||'{}');}catch(e){return{};}}
+function decLedgerSave(d){localStorage.setItem(DEC_LEDGER_KEY,JSON.stringify(d));}
+function decLedgerSet(sid,rec){ if(!sid)return; const d=decLedgerLoad(); d[sid]={...rec,ts:new Date().toISOString()}; decLedgerSave(d); }
+function decLedgerDelete(sid){ if(!sid)return; const d=decLedgerLoad(); if(d[sid]){delete d[sid]; decLedgerSave(d);} }
+function decLedgerGet(sid){ return sid?(decLedgerLoad()[sid]||null):null; }
+// 候補の安定ID: aucid優先→型番→品名(空白無視)。candMeta(m) / candidate(c) 双方で同値になるよう算出。
+function candStableId(o){
+  if(!o) return '';
+  const a=o.aucid||candAucid(o)||'';
+  if(a) return 'a:'+a;
+  const m=(o.model||'').trim();
+  if(m) return 'm:'+(o.brand||'')+'|'+m;
+  return 'n:'+(o.brand||'')+'|'+((o.name||'').replace(/\s+/g,''));
+}
 function candItemStatus(c){
   const ck=candKey(c);
-  const dec=(candDecsLoad()[ck]||{}).decision;
+  let dec=(candDecsLoad()[ck]||{}).decision;
+  if(!dec){ const led=decLedgerGet(candStableId(c)); if(led) dec=led.decision; }  // 安定IDフォールバック(SKIP引き継ぎ)
   if(dec==='skip') return 'done';
   if(isEnded(c.end)) return 'done';      // 終了=処理済み
   if(dec==='go') return 'bidding';
@@ -1038,9 +1058,10 @@ async function candJudge(ck,decision,reasonOverride){
   const decs=candDecsLoad();
   decs[ck]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags,watchId};
   candDecsSave(decs);
+  decLedgerSet(candStableId(m),{decision,bid,jissei,reason,reason_tags});  // 安定ID台帳にも記録(SKIP引き継ぎ)
   render();
 }
-function candUndo(ck){ const d=candDecsLoad(); delete d[ck]; candDecsSave(d); render(); }
+function candUndo(ck){ const d=candDecsLoad(); const m=candMeta[ck]; delete d[ck]; candDecsSave(d); if(m)decLedgerDelete(candStableId(m)); render(); }
 // 見送り理由（ヤフオク向け・状態悪い/開始価格高い/利幅薄い/競争激しい等）
 const CAND_SKIP_REASONS=[
   ['状態が悪い','状態'],['開始価格が高い','高値'],['利幅が薄い','利幅'],['競争が激しい','競争'],
@@ -1895,6 +1916,7 @@ async function insJudge(itemNo,decision,reasonOverride){
   const decs=insDecsLoad();
   decs[itemNo]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags};
   insDecsSave(decs);
+  decLedgerSet('i:'+itemNo,{decision,bid,jissei,reason,reason_tags});  // 安定ID台帳にも記録(SKIP引き継ぎ)
   // ステータスが変わるので再描画→未判断ビューから自動的に消える
   renderInspect();
 }
@@ -1902,6 +1924,7 @@ async function insJudge(itemNo,decision,reasonOverride){
 // ③ 判断を取り消して未判断に戻す（再リサーチ可能に）
 function insUndo(itemNo){
   const decs=insDecsLoad(); delete decs[itemNo]; insDecsSave(decs);
+  decLedgerDelete('i:'+itemNo);
   renderInspect();
 }
 
@@ -2033,7 +2056,8 @@ function insHours(dl){ if(!dl)return null; const d=new Date(dl); return isNaN(d)
 function insIsEnded(dl){ if(!dl)return false; const d=new Date(dl); return isNaN(d)?false:(d-new Date())<=0; }
 // ③ 商品のステータス: done(見送り or 終了) / bidding(GO・進行中) / pending(未判断)
 function insItemStatus(it){
-  const dec=(insDecsLoad()[it.item_no]||{}).decision;
+  let dec=(insDecsLoad()[it.item_no]||{}).decision;
+  if(!dec){ const led=decLedgerGet('i:'+it.item_no); if(led) dec=led.decision; }  // 安定ID台帳フォールバック(SKIP引き継ぎ)
   if(dec==='skip') return 'done';
   // EcoAucマイリスト入札中フラグ（status='bidding'）→ 終了判定より優先（結果待ちを含む）
   if(it.status==='bidding') return 'bidding';
