@@ -387,6 +387,9 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .iv-rows{padding:0 12px}
 .iv-row{display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:.5px solid var(--line)}
 .iv-row:last-child{border-bottom:none}
+.sc-judge{margin:6px 12px 2px;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:800;text-align:center}
+.sc-judge.go{background:rgba(46,160,67,.18);color:#2ea043;border:1px solid rgba(46,160,67,.4)}
+.sc-judge.no{background:rgba(120,120,120,.12);color:var(--muted2);border:1px solid var(--line)}
 .iv-rl{color:var(--muted)}
 .iv-rv{font-weight:600;color:var(--text)}
 .iv-rv.loss{color:var(--t3)}
@@ -2265,15 +2268,17 @@ function renderInspect(){
         <div class="iv-rows">
           <div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv">${it.current_price?'¥'+(+it.current_price).toLocaleString('ja-JP'):'—'}</span></div>
           ${it.my_bid?`<div class="iv-row"><span class="iv-rl" style="color:#ffcf6b">🎯自分の入札</span><span class="iv-rv" style="color:#ffcf6b;font-weight:800">¥${(+it.my_bid).toLocaleString('ja-JP')}</span></div>`:''}
-          ${it.jissei?`<div class="iv-row"><span class="iv-rl">実勢${it.confidence?`<span class="band-conf ${it.confidence}">信頼度${it.confidence}</span>`:''}</span><span class="iv-rv">${(it.jissei_low&&it.jissei_high)?`¥${(+it.jissei_low).toLocaleString('ja-JP')}〜¥${(+it.jissei_high).toLocaleString('ja-JP')}`:'¥'+(+it.jissei).toLocaleString('ja-JP')}</span></div>`:''}
+          ${it.jissei?`<div class="iv-row"><span class="iv-rl">販売相場<span class="mkt-rank">メルカリ</span>${it.confidence?`<span class="band-conf ${it.confidence}">信頼度${it.confidence}</span>`:''}</span><span class="iv-rv">${(it.jissei_low&&it.jissei_high)?`¥${(+it.jissei_low).toLocaleString('ja-JP')}〜¥${(+it.jissei_high).toLocaleString('ja-JP')}`:'¥'+(+it.jissei).toLocaleString('ja-JP')}</span></div>`:''}
           ${it.profit?`<div class="iv-row"><span class="iv-rl">想定粗利</span><span class="iv-rv ${hi?'':''}" style="color:${hi?'var(--profit)':'var(--text)'};font-weight:${hi?'800':'600'}">+¥${(+it.profit).toLocaleString('ja-JP')}${hi?' ★':''}</span></div>`:''}
           ${(()=>{
             const mkt=mktLookup(it.brand, it.rank);
             if(!mkt||!mkt.median) return '';
             const judge=mktJudge(it.current_price, mkt.median);
             const judgeBadge=judge?`<span class="mkt-judge ${judge.cls}">${judge.label} <span class="mkt-note">${judge.note}</span></span>`:'';
-            return `<div class="iv-row mkt-row"><span class="iv-rl">落札相場<span class="mkt-rank">${it.rank}</span></span><span class="iv-rv">¥${mkt.median.toLocaleString('ja-JP')} <span class="mkt-n">n=${mkt.n}</span>${judgeBadge}</span></div>`;
+            return `<div class="iv-row mkt-row"><span class="iv-rl">落札相場<span class="mkt-rank">EcoAuc ${it.rank}</span></span><span class="iv-rv">¥${mkt.median.toLocaleString('ja-JP')} <span class="mkt-n">n=${mkt.n}</span>${judgeBadge}</span></div>`;
           })()}
+          ${it.max_bid?`<div class="iv-row"><span class="iv-rl">利益が出る上限</span><span class="iv-rv" style="color:var(--profit);font-weight:800">¥${(+it.max_bid).toLocaleString('ja-JP')}</span></div>`:''}
+          ${(it.profit_flag&&it.profit_flag!=='?')?`<div class="sc-judge ${it.profit_flag==='✅'?'go':'no'}">${it.profit_flag==='✅'?'✅ 利益が出る案件（落札相場 ≤ 上限）':'❌ 利益が出ない（落札相場 > 上限）'}${it.exclude_100k?' ／ ⚠️販売相場10万超=除外':''}</div>`:''}
         </div>
         <div class="iv-input-row">
           <div class="iv-input-grp">
