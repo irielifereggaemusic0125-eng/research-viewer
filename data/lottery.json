@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-06-16T21:33:24+09:00",
+  "updated_at": "2026-06-17T21:36:00+09:00",
   "candidates": [
     {
       "name": "ワンピースカード OP-16 決戦の刻 BOX",
@@ -47,44 +47,34 @@
           "note": "事前登録招待制・6/10〜・締切未定"
         }
       ],
-      "note": "OP-16決戦の刻・5/30発売で17日経過し軟化傾向(jissei¥14,000は前日値carry・本日実機未検証)・粗利約¥6,900(粗利率約57%)・HLJ 6/21まで受付中・当選後早期売却推奨"
+      "note": "OP-16決戦の刻・5/30発売で18日経過・本日6/17検索でメルカリ未開封テープ付き¥14,000〜16,000維持を確認(jissei¥14,000で保守採用)・粗利約¥6,900(粗利率約57%)・HLJ 6/21まで受付中・再販で軟化傾向so当選後早期売却推奨"
     },
     {
-      "name": "RICOH GR IV",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 194800,
-      "jissei": 250000,
-      "premium_rate": 1.28,
-      "premium_level": "中",
-      "profit_max": 40000,
-      "best_route": "るでや買取/フリマ",
+      "name": "ポケカ 30th プレミアムデッキセット エーフィ・ブラッキー",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "未確定",
+      "profit_max": 0,
+      "best_route": "発売後判定(box-flip)",
       "phase": "受付中",
-      "deadline": "2026-06-24T23:59:00+09:00",
+      "deadline": "2026-06-21T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "リコーイメージングストア(Web抽選 2次)",
-          "url": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
+          "store": "ファミマオンライン(抽選)",
+          "url": "https://snkrdunk.com/articles/32464/",
           "phase": "受付中",
-          "entry_open": "2026-06-22T00:00:00+09:00",
-          "entry_deadline": "2026-06-24T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "2026-06-24T23:59:00+09:00",
-          "note": "2次エントリー6/22〜6/24正午前後(発送6/11〜30)。お一人様1台・同一名義/住所重複はキャンセル対象。標準/HDF対象"
-        },
-        {
-          "store": "監視ソース(@GR_RICOH/転売クエスト)",
-          "url": "https://tenbaiquest.com/resale/ricoh-2",
-          "phase": "案内待ち",
           "entry_open": "",
-          "entry_deadline": "",
+          "entry_deadline": "2026-06-21T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "次回Web抽選エントリー告知を監視(転売クエストが全店集約)"
+          "note": "30周年プレミアムデッキセット・ファミマオンライン抽選6/21締切・発売前so応募先/締切検知が任務(ノーリスク)・実売相場未確定で粗利保留"
         }
       ],
-      "note": "るでや買取GR IV+¥40k前後(価格/実勢は2026-06-13時点carry・本日新鮮なるでや数値未取得so要再検証)・リコーイメージングストア2次が6/24締切で受付中"
+      "note": "名指しWATCH 30周年枠の派生SKU・エーフィ/ブラッキー収録プレミアムデッキセット・発売前は応募先/締切の検知が任務(ノーリスク応募)・ファミマ6/21締切が直近・実売は発売後にメルカリ検証"
     },
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
@@ -131,7 +121,44 @@
           "note": "招待リクエスト受付中"
         }
       ],
-      "note": "名指しWATCH・2026/9/16世界同時発売・1BOX定価約¥7,200・新レアリティFUR/ピカチュウ30種・発売前は応募先検知が任務(ノーリスク)・抽選詳細7月以降・25th box前例で上振れ期待だが発売後実売で確認"
+      "note": "名指しWATCH・2026/9/16世界同時発売・1BOX定価約¥7,200・新レアリティFUR/ピカチュウ30種・抽選応募詳細は7月以降案内予定・本日6/17時点で公式の受付開始日程は未発表(継続監視)・25th box前例で上振れ期待だが発売後実売で確認"
+    },
+    {
+      "name": "RICOH GR IV",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 194800,
+      "jissei": 250000,
+      "premium_rate": 1.28,
+      "premium_level": "中",
+      "profit_max": 40000,
+      "best_route": "るでや買取/フリマ",
+      "phase": "案内待ち",
+      "deadline": "2026-06-24T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "リコーイメージングストア(Web抽選 2次)",
+          "url": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-06-22T00:00:00+09:00",
+          "order_deadline": "2026-06-24T23:59:00+09:00",
+          "note": "本日6/17検索で確認: 2次抽選は6/22(月)に当選通知→当選者の注文受付6/22〜6/24 23:59(発送〜6/30)。新規エントリー受付は終了済みで現在は案内待ち。お一人様1台・同一名義/住所重複はキャンセル対象"
+        },
+        {
+          "store": "監視ソース(@GR_RICOH/転売クエスト)",
+          "url": "https://tenbaiquest.com/resale/ricoh-2",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "次回Web抽選エントリー告知を監視(転売クエストが全店集約)。次回エントリー受付の新告知が出たら即通知"
+        }
+      ],
+      "note": "常設ウォッチ(カメラ枠carry-forward)。るでや買取GR IV+¥40k前後(価格/実勢は2026-06-13時点carryで本日新鮮なるでや数値未取得so要再検証)。2次抽選は6/22通知→当選者6/24注文締切。新規応募窓口は現在クローズso次回エントリー告知を@GR_RICOH/転売クエストで監視"
     }
   ]
 }
