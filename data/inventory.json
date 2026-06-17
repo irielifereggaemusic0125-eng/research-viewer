@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-16 04:18",
-  "count": 26,
+  "updated_at": "2026-06-17 09:03",
+  "count": 27,
   "items": [
     {
       "kanri_no": "W015-251028",
@@ -12,7 +12,7 @@
       "loss_cut": 60360,
       "list_price": 76985,
       "actual_price": 51100,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m44576831467",
       "ecoauc_listed": false
     },
@@ -26,7 +26,7 @@
       "loss_cut": 38950,
       "list_price": 49458,
       "actual_price": 28500,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m64763668776",
       "ecoauc_listed": false
     },
@@ -40,7 +40,7 @@
       "loss_cut": 14000,
       "list_price": 17378,
       "actual_price": 11890,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m12246649817",
       "ecoauc_listed": false
     },
@@ -82,7 +82,7 @@
       "loss_cut": 101650,
       "list_price": 130072,
       "actual_price": 101650,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m72868581689",
       "ecoauc_listed": false
     },
@@ -96,7 +96,7 @@
       "loss_cut": 19860,
       "list_price": 24915,
       "actual_price": 22400,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m67488304729",
       "ecoauc_listed": false
     },
@@ -110,7 +110,7 @@
       "loss_cut": 8050,
       "list_price": 9735,
       "actual_price": 8800,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m31026593889",
       "ecoauc_listed": false
     },
@@ -124,7 +124,7 @@
       "loss_cut": 8780,
       "list_price": 10668,
       "actual_price": 9600,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m23267334607",
       "ecoauc_listed": false
     },
@@ -138,7 +138,7 @@
       "loss_cut": 17670,
       "list_price": 22100,
       "actual_price": 20900,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m44671397801",
       "ecoauc_listed": false
     },
@@ -152,7 +152,7 @@
       "loss_cut": 17180,
       "list_price": 21473,
       "actual_price": 20400,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m46609658871",
       "ecoauc_listed": false
     },
@@ -166,7 +166,7 @@
       "loss_cut": 49430,
       "list_price": 62929,
       "actual_price": 59800,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m43888809262",
       "ecoauc_listed": false
     },
@@ -180,7 +180,7 @@
       "loss_cut": 51650,
       "list_price": 65786,
       "actual_price": 51650,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m60536638614",
       "ecoauc_listed": false
     },
@@ -194,7 +194,7 @@
       "loss_cut": 10950,
       "list_price": 13458,
       "actual_price": 8000,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m69800140282",
       "ecoauc_listed": false
     },
@@ -208,7 +208,7 @@
       "loss_cut": 20840,
       "list_price": 26172,
       "actual_price": 26600,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m81094010708",
       "ecoauc_listed": false
     },
@@ -222,7 +222,7 @@
       "loss_cut": 17060,
       "list_price": 21315,
       "actual_price": 20800,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m10615810993",
       "ecoauc_listed": false
     },
@@ -236,7 +236,7 @@
       "loss_cut": 15230,
       "list_price": 18959,
       "actual_price": 14800,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m39351376813",
       "ecoauc_listed": false
     },
@@ -250,7 +250,7 @@
       "loss_cut": 3710,
       "list_price": 4152,
       "actual_price": 3500,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m35850667014",
       "ecoauc_listed": false
     },
@@ -264,7 +264,7 @@
       "loss_cut": 19820,
       "list_price": null,
       "actual_price": 29100,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m49711097059",
       "ecoauc_listed": false
     },
@@ -306,7 +306,7 @@
       "loss_cut": 21690,
       "list_price": null,
       "actual_price": 24400,
-      "price_updated_at": "2026-06-15 20:52",
+      "price_updated_at": "2026-06-16 20:45",
       "mercari_id": "m85514902738",
       "ecoauc_listed": false
     },
@@ -333,9 +333,9 @@
       "buy_price": 12975,
       "loss_cut": 14980,
       "list_price": null,
-      "actual_price": null,
-      "price_updated_at": null,
-      "mercari_id": "",
+      "actual_price": 22000,
+      "price_updated_at": "2026-06-16 20:45",
+      "mercari_id": "m38087174221",
       "ecoauc_listed": false
     },
     {
@@ -347,19 +347,33 @@
       "buy_price": 12975,
       "loss_cut": 14980,
       "list_price": null,
+      "actual_price": 24000,
+      "price_updated_at": "2026-06-16 20:45",
+      "mercari_id": "m70818868442",
+      "ecoauc_listed": false
+    },
+    {
+      "kanri_no": "A100-260614",
+      "name": "ロンワンズ LONE ONES フロー ペンダントトップ シルバー",
+      "category": "アクセ",
+      "category_raw": "A アクセサリー",
+      "buy_date": "2026-06-14",
+      "buy_price": 15760,
+      "loss_cut": 18070,
+      "list_price": null,
       "actual_price": null,
       "price_updated_at": null,
       "mercari_id": "",
       "ecoauc_listed": false
     },
     {
-      "kanri_no": "",
-      "name": "ロンワンズ LONE ONES フロー ペンダントトップ シルバー",
+      "kanri_no": "B101-260616",
+      "name": "PRADA プラダ ナイロン ドローストリング ハンドバッグ ポーチ 黒",
       "category": "その他",
-      "category_raw": "",
-      "buy_date": "2026-06-14",
-      "buy_price": 15760,
-      "loss_cut": 18070,
+      "category_raw": "B カバン",
+      "buy_date": "2026-06-16",
+      "buy_price": 14300,
+      "loss_cut": 16450,
       "list_price": null,
       "actual_price": null,
       "price_updated_at": null,
