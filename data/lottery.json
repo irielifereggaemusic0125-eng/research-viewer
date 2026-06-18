@@ -1,127 +1,137 @@
 {
   "schema": "v2",
-  "updated_at": "2026-06-17T21:36:00+09:00",
+  "updated_at": "2026-06-19T03:52:34+09:00",
   "candidates": [
     {
       "name": "ワンピースカード OP-16 決戦の刻 BOX",
-      "brand": "ワンピースカード",
+      "brand": "BANDAI",
       "category": "トレカ",
       "price": 5280,
-      "jissei": 14000,
-      "premium_rate": 2.65,
+      "jissei": 14500,
+      "premium_rate": 2.75,
       "premium_level": "高",
-      "profit_max": 6900,
-      "best_route": "メルカリ売却",
+      "profit_max": 7170,
+      "best_route": "メルカリ",
       "phase": "受付中",
-      "deadline": "2026-06-21T23:59:00+09:00",
+      "deadline": "2026-06-20T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "ホビーリンクジャパン(HLJ web抽選)",
+          "store": "ジョーシン(アプリ)",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-06-20T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "アプリ会員・購入履歴要・当選者店頭受取"
+        },
+        {
+          "store": "ホビーリンクジャパン",
           "url": "https://support.hlj.co.jp/hc/ja/articles/58909692940441",
           "phase": "受付中",
           "entry_open": "2026-06-12T00:00:00+09:00",
           "entry_deadline": "2026-06-21T23:59:00+09:00",
           "result_date": "2026-06-25T00:00:00+09:00",
           "order_deadline": "",
-          "note": "6/12〜6/21 23:59受付・OP-16含む複数弾対象・当選発表6/25"
+          "note": "WEB抽選"
         },
         {
-          "store": "しまむらパーク(アプリ抽選)",
+          "store": "DMM通販",
           "url": "https://nyuka-now.com/archives/97393",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "2026-06-22T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "アプリ抽選・当選発表6/22(月)・当選者にオンライン販売案内"
-        },
-        {
-          "store": "ノジマオンライン(招待制)",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe2tm0oG-L8fBGGdkqdWNJD2NRkl7IHSWxGKKcFoU_u0-K1Ow/viewform",
-          "phase": "受付中",
-          "entry_open": "2026-06-10T00:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "事前登録招待制・6/10〜・締切未定"
-        }
-      ],
-      "note": "OP-16決戦の刻・5/30発売で18日経過・本日6/17検索でメルカリ未開封テープ付き¥14,000〜16,000維持を確認(jissei¥14,000で保守採用)・粗利約¥6,900(粗利率約57%)・HLJ 6/21まで受付中・再販で軟化傾向so当選後早期売却推奨"
-    },
-    {
-      "name": "ポケカ 30th プレミアムデッキセット エーフィ・ブラッキー",
-      "brand": "ポケモンカード",
-      "category": "トレカ",
-      "price": 0,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "未確定",
-      "profit_max": 0,
-      "best_route": "発売後判定(box-flip)",
-      "phase": "受付中",
-      "deadline": "2026-06-21T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ファミマオンライン(抽選)",
-          "url": "https://snkrdunk.com/articles/32464/",
           "phase": "受付中",
           "entry_open": "",
-          "entry_deadline": "2026-06-21T23:59:00+09:00",
-          "result_date": "",
+          "entry_deadline": "2026-06-23T15:00:00+09:00",
+          "result_date": "2026-06-25T00:00:00+09:00",
           "order_deadline": "",
-          "note": "30周年プレミアムデッキセット・ファミマオンライン抽選6/21締切・発売前so応募先/締切検知が任務(ノーリスク)・実売相場未確定で粗利保留"
+          "note": "WEB抽選・当選者にオンライン販売"
         }
       ],
-      "note": "名指しWATCH 30周年枠の派生SKU・エーフィ/ブラッキー収録プレミアムデッキセット・発売前は応募先/締切の検知が任務(ノーリスク応募)・ファミマ6/21締切が直近・実売は発売後にメルカリ検証"
+      "note": "5/30発売・定価¥5,280→メルカリ未開封~¥14,500(2.75倍)→粗利約¥7,170/BOX。再販で軟化傾向so当選後は早期売却推奨"
     },
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
-      "brand": "ポケモンカード",
+      "brand": "Pokemon",
       "category": "トレカ",
-      "price": 7200,
+      "price": 7216,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "未確定",
+      "premium_level": "—",
       "profit_max": 0,
-      "best_route": "発売後判定(box-flip)",
+      "best_route": "メルカリ(発売後)",
       "phase": "受付中",
       "deadline": "",
       "status": "未応募",
       "routes": [
         {
-          "store": "ポケモンセンターオンライン(抽選販売・正式発表済)",
+          "store": "Amazon(招待リクエスト)",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "受付中",
+          "entry_open": "2026-06-02T14:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "招待制・受付中(締切未告知)"
+        },
+        {
+          "store": "ノジマオンライン",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "受付中",
+          "entry_open": "2026-06-10T13:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "シークレットセール・招待制"
+        },
+        {
+          "store": "セブンネットショッピング",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "予告",
+          "entry_open": "2026-06-30T15:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "6/30 15:00頃〜抽選開始予定・応募条件(2025/6/1〜2026/6/14に注文受取履歴)"
+        }
+      ],
+      "note": "9/16世界同時発売・FUR新レア/1パックにピカチュウ1枚確定・定価¥7,200。発売前so粗利判定保留(応募はノーリスク)。25th前例で上振れ期待大→発売後にbox-flip判定切替"
+    },
+    {
+      "name": "ポケカ 30th プレミアムデッキセット エーフィ・ブラッキー",
+      "brand": "Pokemon",
+      "category": "トレカ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "—",
+      "profit_max": 0,
+      "best_route": "メルカリ(発売後)",
+      "phase": "予告",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "セブンネットショッピング",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "予告",
+          "entry_open": "2026-06-30T15:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "6/30 15:00頃〜抽選開始予定・拡張パックBOXと同時"
+        },
+        {
+          "store": "ポケモンセンターオンライン",
           "url": "https://www.pokemoncenter-online.com/news/?id=20260608",
           "phase": "予告",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "6/8抽選販売実施を正式発表・応募詳細7月以降案内予定(本人確認済ユーザー優遇見込)"
-        },
-        {
-          "store": "ノジマオンライン(シークレット販売会)",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe2tm0oG-L8fBGGdkqdWNJD2NRkl7IHSWxGKKcFoU_u0-K1Ow/viewform",
-          "phase": "受付中",
-          "entry_open": "2026-06-10T00:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "6/10〜受付・締切未定・複数IDエントリー無効"
-        },
-        {
-          "store": "Amazon(招待リクエスト)",
-          "url": "https://www.amazon.co.jp/dp/B0GXCRBL5J",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "招待リクエスト受付中"
+          "note": "マイナンバーカード本人確認方式で抽選予定"
         }
       ],
-      "note": "名指しWATCH・2026/9/16世界同時発売・1BOX定価約¥7,200・新レアリティFUR/ピカチュウ30種・抽選応募詳細は7月以降案内予定・本日6/17時点で公式の受付開始日程は未発表(継続監視)・25th box前例で上振れ期待だが発売後実売で確認"
+      "note": "30周年記念デッキセット・発売前so粗利判定保留・応募はノーリスク"
     },
     {
       "name": "RICOH GR IV",
