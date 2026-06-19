@@ -1,125 +1,58 @@
 {
   "schema": "v2",
-  "updated_at": "2026-06-19T03:52:34+09:00",
+  "updated_at": "2026-06-19T21:34:42+09:00",
   "candidates": [
     {
       "name": "ワンピースカード OP-16 決戦の刻 BOX",
-      "brand": "BANDAI",
+      "brand": "バンダイ",
       "category": "トレカ",
       "price": 5280,
-      "jissei": 14500,
-      "premium_rate": 2.75,
+      "jissei": 15000,
+      "premium_rate": 2.84,
       "premium_level": "高",
-      "profit_max": 7170,
+      "profit_max": 7620,
       "best_route": "メルカリ",
       "phase": "受付中",
-      "deadline": "2026-06-20T23:59:00+09:00",
+      "deadline": "2026-06-21T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "ジョーシン(アプリ)",
+          "store": "ホビーリンクジャパン",
           "url": "https://nyuka-now.com/archives/97393",
           "phase": "受付中",
           "entry_open": "",
-          "entry_deadline": "2026-06-20T23:59:00+09:00",
+          "entry_deadline": "2026-06-21T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "アプリ会員・購入履歴要・当選者店頭受取"
+          "note": "WEB抽選・当選者にオンライン販売"
         },
         {
-          "store": "ホビーリンクジャパン",
-          "url": "https://support.hlj.co.jp/hc/ja/articles/58909692940441",
-          "phase": "受付中",
-          "entry_open": "2026-06-12T00:00:00+09:00",
-          "entry_deadline": "2026-06-21T23:59:00+09:00",
-          "result_date": "2026-06-25T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "WEB抽選"
-        },
-        {
-          "store": "DMM通販",
+          "store": "フルコンプ",
           "url": "https://nyuka-now.com/archives/97393",
           "phase": "受付中",
           "entry_open": "",
-          "entry_deadline": "2026-06-23T15:00:00+09:00",
+          "entry_deadline": "2026-06-21T12:00:00+09:00",
           "result_date": "2026-06-25T00:00:00+09:00",
           "order_deadline": "",
-          "note": "WEB抽選・当選者にオンライン販売"
+          "note": "WEB抽選・当選者は店頭販売"
         }
       ],
-      "note": "5/30発売・定価¥5,280→メルカリ未開封~¥14,500(2.75倍)→粗利約¥7,170/BOX。再販で軟化傾向so当選後は早期売却推奨"
+      "note": "テープ付き未開封BOX メルカリ売切¥14-16k(6/15) 粗利約¥7,600/箱・当選後は早期売却推奨"
     },
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
-      "brand": "Pokemon",
+      "brand": "ポケモン",
       "category": "トレカ",
-      "price": 7216,
+      "price": 7200,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "—",
+      "premium_level": "",
       "profit_max": 0,
-      "best_route": "メルカリ(発売後)",
-      "phase": "受付中",
-      "deadline": "",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "Amazon(招待リクエスト)",
-          "url": "https://nyuka-now.com/archives/159770",
-          "phase": "受付中",
-          "entry_open": "2026-06-02T14:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "招待制・受付中(締切未告知)"
-        },
-        {
-          "store": "ノジマオンライン",
-          "url": "https://nyuka-now.com/archives/159770",
-          "phase": "受付中",
-          "entry_open": "2026-06-10T13:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "シークレットセール・招待制"
-        },
-        {
-          "store": "セブンネットショッピング",
-          "url": "https://nyuka-now.com/archives/159770",
-          "phase": "予告",
-          "entry_open": "2026-06-30T15:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "6/30 15:00頃〜抽選開始予定・応募条件(2025/6/1〜2026/6/14に注文受取履歴)"
-        }
-      ],
-      "note": "9/16世界同時発売・FUR新レア/1パックにピカチュウ1枚確定・定価¥7,200。発売前so粗利判定保留(応募はノーリスク)。25th前例で上振れ期待大→発売後にbox-flip判定切替"
-    },
-    {
-      "name": "ポケカ 30th プレミアムデッキセット エーフィ・ブラッキー",
-      "brand": "Pokemon",
-      "category": "トレカ",
-      "price": 0,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "—",
-      "profit_max": 0,
-      "best_route": "メルカリ(発売後)",
+      "best_route": "メルカリ(発売後判定)",
       "phase": "予告",
       "deadline": "",
       "status": "未応募",
       "routes": [
-        {
-          "store": "セブンネットショッピング",
-          "url": "https://nyuka-now.com/archives/159770",
-          "phase": "予告",
-          "entry_open": "2026-06-30T15:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "6/30 15:00頃〜抽選開始予定・拡張パックBOXと同時"
-        },
         {
           "store": "ポケモンセンターオンライン",
           "url": "https://www.pokemoncenter-online.com/news/?id=20260608",
@@ -128,10 +61,47 @@
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "マイナンバーカード本人確認方式で抽選予定"
+          "note": "6/8公式告知・抽選詳細は7月以降に案内予定"
+        },
+        {
+          "store": "公式特設サイト",
+          "url": "https://www.30th.pokemon-card.com",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "9/16世界同時発売・FUR新レアリティ"
         }
       ],
-      "note": "30周年記念デッキセット・発売前so粗利判定保留・応募はノーリスク"
+      "note": "MEGA拡張パック・9/16発売・1BOX定価約¥7,200・現時点で受付店舗なし(7月以降案内)。発売前は応募先検知が任務"
+    },
+    {
+      "name": "ポケカ 30th プレミアムデッキセット エーフィ・ブラッキー",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "",
+      "profit_max": 0,
+      "best_route": "メルカリ(発売後判定)",
+      "phase": "予告",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ポケモンセンターオンライン",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260608",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "30周年記念商品・抽選詳細は7月以降案内予定"
+        }
+      ],
+      "note": "30周年記念・人気イーブイ系・抽選詳細は7月以降。発売後にbox/デッキ相場検証"
     },
     {
       "name": "RICOH GR IV",
