@@ -291,6 +291,14 @@ body {
       仕入れ総支払い：<span class="eco-detail-total" id="ec-total-buy">—</span>
     </div>
 
+    <div class="irow hidden" id="coupon-row">
+      <div class="ilabel">
+        クーポン割引
+        <span class="ilabel-sub">ヤフオク決済時の割引額</span>
+      </div>
+      <input class="ifield" type="text" id="coupon" value="0" inputmode="numeric" oninput="calc()">
+    </div>
+
     <div class="irow">
       <div class="ilabel">
         仕入れ時送料
@@ -613,10 +621,13 @@ function hlSell(p) {
   $(p <= 10000 ? 'st0' : p <= 49999 ? 'st1' : 'st2').className = 'hi';
 }
 
+// ── ユーティリティ ──
+function getCoupon() { return buyC === 'yahoo' ? (parseFloat($('coupon').value) || 0) : 0; }
+
 // ── 最大仕入れ価格逆算 ──
 function calcMaxCost(price, extra, ship, target) {
-  const ecoShip = getEcoShip(), buyShip = getBuyShip();
-  const budget = price - extra - ship - ecoShip - buyShip - getSellFee(price) - target;
+  const ecoShip = getEcoShip(), buyShip = getBuyShip(), coupon = getCoupon();
+  const budget = price - extra - ship - ecoShip - buyShip - getSellFee(price) - target + coupon;
   if (budget <= 0) return null;
   if (buyC === 'yahoo') {
     const m = Math.floor(budget / 1.088);
@@ -654,6 +665,7 @@ function setBuy(c) {
     : '<span class="ico">⚠️</span><span><span class="eco-tag">税抜表示</span>入札金額は税抜で表示<br>実払い = 落札額×1.1 ＋ 手数料×1.1</span>';
   $('cost-sub').style.display = c === 'eco' ? 'block' : 'none';
   c === 'eco' ? show('eco-ship-row') : hide('eco-ship-row');
+  c === 'yahoo' ? show('coupon-row') : hide('coupon-row');
   saveSettings(); calc();
 }
 function setSell(c) {
@@ -714,7 +726,8 @@ function calc() {
       $('ec-total-buy').textContent = fmt(total);
       hlBuy(costInput);
     } else {
-      totalBuy = costInput * 1.088;
+      const coupon = getCoupon();
+      totalBuy = Math.max(0, costInput * 1.088 - coupon);
       hide('eco-cost-detail');
     }
 
@@ -880,6 +893,7 @@ function calc2() {
 // ── リセット ──
 function resetInputs() {
   $('cost').value = '';
+  $('coupon').value = '0';
   $('buy-ship').value = '0';
   if (buyC === 'eco') $('eco-ship').value = '1100';
   $('price').value = '';
