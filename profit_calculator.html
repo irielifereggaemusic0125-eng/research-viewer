@@ -291,12 +291,21 @@ body {
       仕入れ総支払い：<span class="eco-detail-total" id="ec-total-buy">—</span>
     </div>
 
-    <div class="irow hidden" id="coupon-row">
-      <div class="ilabel">
-        クーポン割引
-        <span class="ilabel-sub">ヤフオク決済時の割引額</span>
+    <div class="hidden" id="coupon-row">
+      <div class="irow" style="border-bottom:none; padding-bottom:4px; min-height:auto;">
+        <div class="ilabel">クーポン割引<span class="ilabel-sub">ヤフオク決済時の割引額</span></div>
       </div>
-      <input class="ifield" type="text" id="coupon" value="0" inputmode="numeric" oninput="calc()">
+      <div class="seg" style="margin-bottom:8px; flex-wrap:wrap; gap:4px;">
+        <button class="seg-btn on" id="cpn-none"   style="min-height:38px; font-size:12px; flex:none; padding:0 10px;" onclick="setCoupon('none')">なし</button>
+        <button class="seg-btn"    id="cpn-g1500"  style="min-height:38px; font-size:12px; flex:none; padding:0 10px;" onclick="setCoupon('g1500')">ゴールド¥1,500</button>
+        <button class="seg-btn"    id="cpn-g5000"  style="min-height:38px; font-size:12px; flex:none; padding:0 10px;" onclick="setCoupon('g5000')">ゴールド¥5,000</button>
+        <button class="seg-btn"    id="cpn-5day"   style="min-height:38px; font-size:12px; flex:none; padding:0 10px;" onclick="setCoupon('5day')">5のつく日(10%)</button>
+        <button class="seg-btn"    id="cpn-custom" style="min-height:38px; font-size:12px; flex:none; padding:0 10px;" onclick="setCoupon('custom')">カスタム</button>
+      </div>
+      <div class="irow hidden" id="coupon-custom-row" style="min-height:44px;">
+        <div class="ilabel" style="font-size:12px; color:var(--text3);">割引額（円）</div>
+        <input class="ifield" type="text" id="coupon" value="0" inputmode="numeric" oninput="calc()">
+      </div>
     </div>
 
     <div class="irow">
@@ -622,7 +631,26 @@ function hlSell(p) {
 }
 
 // ── ユーティリティ ──
-function getCoupon() { return buyC === 'yahoo' ? (parseFloat($('coupon').value) || 0) : 0; }
+let couponMode = 'none';
+function setCoupon(mode) {
+  couponMode = mode;
+  ['none','g1500','g5000','5day','custom'].forEach(m => {
+    const el = $('cpn-' + m); if (el) el.classList.toggle('on', m === mode);
+  });
+  mode === 'custom' ? show('coupon-custom-row') : hide('coupon-custom-row');
+  calc();
+}
+function getCoupon() {
+  if (buyC !== 'yahoo') return 0;
+  if (couponMode === 'none')   return 0;
+  if (couponMode === 'g1500')  return 1500;
+  if (couponMode === 'g5000')  return 5000;
+  if (couponMode === '5day') {
+    const cost = parseFloat($('cost').value) || 0;
+    return Math.min(Math.floor(cost * 1.088 * 0.10), 5000);
+  }
+  return parseFloat($('coupon').value) || 0;
+}
 
 // ── 最大仕入れ価格逆算 ──
 function calcMaxCost(price, extra, ship, target) {
@@ -893,7 +921,7 @@ function calc2() {
 // ── リセット ──
 function resetInputs() {
   $('cost').value = '';
-  $('coupon').value = '0';
+  setCoupon('none'); $('coupon').value = '0';
   $('buy-ship').value = '0';
   if (buyC === 'eco') $('eco-ship').value = '1100';
   $('price').value = '';
