@@ -1,7 +1,44 @@
 {
   "schema": "v2",
-  "updated_at": "2026-06-19T21:34:42+09:00",
+  "updated_at": "2026-06-20T21:42:00+09:00",
   "candidates": [
+    {
+      "name": "ポケカ アビスアイ BOX",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 5500,
+      "jissei": 11500,
+      "premium_rate": 2.09,
+      "premium_level": "高",
+      "profit_max": 4250,
+      "best_route": "メルカリ",
+      "phase": "受付中",
+      "deadline": "2026-06-21T12:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "フルコンプ 一部店舗",
+          "url": "https://livepocket.jp/e/jnf5h",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-06-21T12:00:00+09:00",
+          "result_date": "2026-06-25T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "WEB抽選・当選者は店頭販売"
+        },
+        {
+          "store": "イエローサブマリン各店",
+          "url": "https://x.com/YS_INFO/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-06-24T20:00:00+09:00",
+          "result_date": "2026-06-27T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "WEB抽選"
+        }
+      ],
+      "note": "テープ付き未開封BOX シュリンク付きメルカリ売切¥11,000〜12,500(最新¥14,500報告も・6/14-18) BOX期待値¥11,679。粗利約¥4,250/箱(定価¥5,500想定)。発売直後高値so当選後は早期売却推奨。※定価は要現物確認"
+    },
     {
       "name": "ワンピースカード OP-16 決戦の刻 BOX",
       "brand": "バンダイ",
@@ -18,17 +55,17 @@
       "routes": [
         {
           "store": "ホビーリンクジャパン",
-          "url": "https://nyuka-now.com/archives/97393",
+          "url": "https://support.hlj.co.jp/hc/ja/articles/58909692940441",
           "phase": "受付中",
-          "entry_open": "",
+          "entry_open": "2026-06-12T00:00:00+09:00",
           "entry_deadline": "2026-06-21T23:59:00+09:00",
-          "result_date": "",
+          "result_date": "2026-06-25T00:00:00+09:00",
           "order_deadline": "",
-          "note": "WEB抽選・当選者にオンライン販売"
+          "note": "WEB抽選・OP-16/OP-15/EB-03/受け継がれる意志/OP-10/EB-01同時受付"
         },
         {
-          "store": "フルコンプ",
-          "url": "https://nyuka-now.com/archives/97393",
+          "store": "フルコンプ 一部店舗",
+          "url": "https://livepocket.jp/e/zda8j",
           "phase": "受付中",
           "entry_open": "",
           "entry_deadline": "2026-06-21T12:00:00+09:00",
@@ -37,7 +74,34 @@
           "note": "WEB抽選・当選者は店頭販売"
         }
       ],
-      "note": "テープ付き未開封BOX メルカリ売切¥14-16k(6/15) 粗利約¥7,600/箱・当選後は早期売却推奨"
+      "note": "テープ付き未開封BOX メルカリ売切¥14,000〜16,000(6/15-6月・安定) 中央値¥15,000 粗利約¥7,620/箱。海軍三大将収録で人気高。当選後は早期売却推奨"
+    },
+    {
+      "name": "ポケカ 30th プレミアムデッキセット エーフィ・ブラッキー",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 6200,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "",
+      "profit_max": 0,
+      "best_route": "メルカリ(発売後判定)",
+      "phase": "受付中",
+      "deadline": "2026-06-21T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ファミマオンライン",
+          "url": "https://famima-online.family.co.jp",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-06-21T23:59:00+09:00",
+          "result_date": "2026-06-23T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "WEB抽選・9/16発売の早期予約抽選"
+        }
+      ],
+      "note": "定価¥6,200・9/16発売(発売前so実売相場未確定)。ブラッキーex SAR/エーフィex SAR収録で高騰予想・周年記念で需要大。名指しWATCH=応募はノーリスクso受付中は必ず通知。粗利は発売後にメルカリ実機検証で判定"
     },
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
@@ -74,71 +138,44 @@
           "note": "9/16世界同時発売・FUR新レアリティ"
         }
       ],
-      "note": "MEGA拡張パック・9/16発売・1BOX定価約¥7,200・現時点で受付店舗なし(7月以降案内)。発売前は応募先検知が任務"
-    },
-    {
-      "name": "ポケカ 30th プレミアムデッキセット エーフィ・ブラッキー",
-      "brand": "ポケモン",
-      "category": "トレカ",
-      "price": 0,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "",
-      "profit_max": 0,
-      "best_route": "メルカリ(発売後判定)",
-      "phase": "予告",
-      "deadline": "",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ポケモンセンターオンライン",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260608",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "30周年記念商品・抽選詳細は7月以降案内予定"
-        }
-      ],
-      "note": "30周年記念・人気イーブイ系・抽選詳細は7月以降。発売後にbox/デッキ相場検証"
+      "note": "MEGA拡張パック・9/16発売・1BOX定価約¥7,200・現時点で受付店舗なし(7月以降案内)。発売前は応募先検知が任務。25th boxの前例(定価¥5,500→ピーク¥20,000+)so上振れ期待大"
     },
     {
       "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 194800,
-      "jissei": 250000,
-      "premium_rate": 1.28,
+      "price": 232600,
+      "jissei": 290000,
+      "premium_rate": 1.25,
       "premium_level": "中",
       "profit_max": 40000,
-      "best_route": "るでや買取/フリマ",
+      "best_route": "るでや買取",
       "phase": "案内待ち",
-      "deadline": "2026-06-24T23:59:00+09:00",
+      "deadline": "2026-07-25T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "リコーイメージングストア(Web抽選 2次)",
-          "url": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
-          "phase": "案内待ち",
+          "store": "GR SPACE TOKYO",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
           "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "2026-06-22T00:00:00+09:00",
-          "order_deadline": "2026-06-24T23:59:00+09:00",
-          "note": "本日6/17検索で確認: 2次抽選は6/22(月)に当選通知→当選者の注文受付6/22〜6/24 23:59(発送〜6/30)。新規エントリー受付は終了済みで現在は案内待ち。お一人様1台・同一名義/住所重複はキャンセル対象"
+          "entry_deadline": "2026-07-25T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "店頭抽選7/25まで継続(要事前本人確認・来店必須so転売向きでない)"
         },
         {
-          "store": "監視ソース(@GR_RICOH/転売クエスト)",
+          "store": "リコーイメージングストア/フジヤ/マップ",
           "url": "https://tenbaiquest.com/resale/ricoh-2",
-          "phase": "案内待ち",
+          "phase": "終了",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "次回Web抽選エントリー告知を監視(転売クエストが全店集約)。次回エントリー受付の新告知が出たら即通知"
+          "note": "主要Web抽選は2026年3月までに全て受付終了(6/20確認)"
         }
       ],
-      "note": "常設ウォッチ(カメラ枠carry-forward)。るでや買取GR IV+¥40k前後(価格/実勢は2026-06-13時点carryで本日新鮮なるでや数値未取得so要再検証)。2次抽選は6/22通知→当選者6/24注文締切。新規応募窓口は現在クローズso次回エントリー告知を@GR_RICOH/転売クエストで監視"
+      "note": "GR IV抽選・るでや買取で+¥40,000前後。Web抽選は全店終了済・GR SPACE TOKYO店頭抽選のみ7/25まで継続(来店必須)。常設ウォッチ枠so継続監視"
     }
   ]
 }
