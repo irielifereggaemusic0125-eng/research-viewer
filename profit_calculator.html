@@ -2,181 +2,322 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>利益計算ツール</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f2f2f0;
+  --card: #fff;
+  --green: #1D9E75; --green-light: #e4f8f1; --green-dark: #0c6644; --green-border: #9fd9c0;
+  --blue: #2980e8; --blue-light: #e5f0ff; --blue-dark: #1558b0; --blue-border: #9dc4f5;
+  --orange: #e07b00; --orange-light: #fff3d6; --orange-dark: #7a4f00; --orange-border: #f0c87a;
+  --red: #d03030; --red-light: #fdeaea;
+  --text: #1a1a18; --text2: #5a5a58; --text3: #aaa;
+  --border: #ececea; --seg: #ececea;
+}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", sans-serif;
-  background: #f0f0ed; color: #1a1a18; min-height: 100vh; padding: 16px 14px 56px;
-}
-h1 { font-size: 17px; font-weight: 600; text-align: center; margin-bottom: 3px; }
-.sub { font-size: 11px; color: #aaa; text-align: center; margin-bottom: 16px; }
-.app { max-width: 480px; margin: 0 auto; }
-
-.card { background: #fff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-.card-title { font-size: 11px; font-weight: 600; color: #aaa; letter-spacing: .07em; margin-bottom: 12px; }
-
-/* セグメントコントロール */
-.seg-wrap { margin-bottom: 14px; }
-.seg-wrap:last-child { margin-bottom: 0; }
-.seg-label { font-size: 11px; font-weight: 600; color: #aaa; letter-spacing: .06em; margin-bottom: 8px; }
-.seg { display: flex; background: #f0f0ed; border-radius: 10px; padding: 3px; gap: 3px; }
-.seg-btn {
-  flex: 1;
-  min-height: 48px; /* iOSタップ推奨 */
-  padding: 0 6px;
-  font-size: 14px; font-weight: 600; text-align: center;
-  cursor: pointer; border-radius: 8px; border: none; background: transparent;
-  color: #aaa; touch-action: manipulation; user-select: none;
-  transition: background .15s, color .15s, box-shadow .15s;
-  display: flex; align-items: center; justify-content: center;
-}
-.seg-btn.on { background: #fff; color: #1a1a18; box-shadow: 0 1px 5px rgba(0,0,0,0.15); }
-.hint {
-  font-size: 11px; color: #aaa; margin-top: 8px;
-  padding: 7px 10px; background: #f7f7f4; border-radius: 8px; line-height: 1.9;
-}
-.hint b { color: #444; }
-.hint .tag {
-  display: inline-block; background: #faeeda; color: #7a4f00;
-  font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 4px; margin-bottom: 2px;
+  background: var(--bg); color: var(--text);
+  min-height: 100vh; -webkit-tap-highlight-color: transparent;
 }
 
-/* 入力行 */
-.row {
+/* ── ヘッダー ── */
+.header {
+  background: var(--text); padding: 16px 16px 14px;
+  text-align: center; position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+.header-title { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: .02em; }
+.header-sub { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 3px; }
+.ver-badge {
+  display: inline-block; background: var(--blue); color: #fff;
+  font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px;
+  margin-left: 6px; vertical-align: middle; letter-spacing: .04em;
+}
+
+/* ── レイアウト ── */
+.app { max-width: 480px; margin: 0 auto; padding: 14px 13px 80px; }
+
+/* ── カード ── */
+.card {
+  background: var(--card); border-radius: 16px; padding: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 3px 10px rgba(0,0,0,0.05);
+}
+.card-hd {
+  font-size: 10px; font-weight: 700; color: var(--text3);
+  letter-spacing: .1em; margin-bottom: 14px;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0; border-bottom: 0.5px solid #f0f0ed; min-height: 52px;
 }
-.row:last-child { border-bottom: none; }
-.row-label { font-size: 14px; color: #555; flex-shrink: 0; padding: 12px 0; }
-.row-label .sublbl { font-size: 10px; color: #c07800; display: block; margin-top: 2px; }
-.row input {
-  font-size: 17px; font-weight: 600; border: none; background: transparent;
-  color: #1a1a18; text-align: right; flex: 1; min-width: 0;
-  padding: 14px 0 14px 8px; outline: none;
-  -webkit-appearance: none; appearance: none;
+.reset-btn {
+  font-size: 11px; font-weight: 600; color: var(--text3);
+  background: var(--seg); border: none; border-radius: 6px;
+  padding: 4px 10px; cursor: pointer; touch-action: manipulation;
 }
-.row select {
+.reset-btn:active { opacity: 0.7; }
+
+/* ── セグメント ── */
+.seg-group { margin-bottom: 16px; }
+.seg-group:last-child { margin-bottom: 0; }
+.seg-group-label { font-size: 12px; font-weight: 600; color: var(--text2); margin-bottom: 8px; }
+.seg {
+  display: flex; background: var(--seg); border-radius: 10px; padding: 3px; gap: 3px;
+}
+.seg-btn {
+  flex: 1; min-height: 46px; font-size: 14px; font-weight: 600;
+  border: none; background: transparent; color: var(--text3); border-radius: 8px;
+  cursor: pointer; touch-action: manipulation; user-select: none;
+  transition: background .15s, color .15s, box-shadow .15s;
+}
+.seg-btn.on { background: #fff; color: var(--text); box-shadow: 0 1px 5px rgba(0,0,0,0.13); }
+.info-pill {
+  display: flex; align-items: flex-start; gap: 7px; margin-top: 8px;
+  padding: 8px 11px; background: var(--seg); border-radius: 9px;
+  font-size: 12px; color: var(--text2); line-height: 1.7;
+}
+.info-pill .ico { font-size: 13px; flex-shrink: 0; margin-top: 1px; }
+.info-pill b { color: var(--text); }
+.eco-tag {
+  display: inline-block; background: var(--orange-light); color: var(--orange-dark);
+  font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-right: 3px;
+}
+
+/* ── 入力行 ── */
+.irow {
+  display: flex; align-items: center; min-height: 54px;
+  border-bottom: 1px solid var(--border); gap: 10px;
+}
+.irow:last-child { border-bottom: none; }
+.ilabel { font-size: 14px; color: var(--text); flex-shrink: 0; line-height: 1.4; }
+.ilabel-sub { font-size: 10px; color: var(--text3); display: block; margin-top: 2px; }
+.ilabel-sub.accent { color: var(--orange); }
+.ifield {
+  flex: 1; min-width: 0; text-align: right;
+  font-size: 18px; font-weight: 600; color: var(--text);
+  border: none; background: transparent; outline: none;
+  padding: 14px 0; -webkit-appearance: none;
+}
+.ifield::placeholder { color: var(--text3); font-weight: 400; font-size: 15px; }
+.iselect {
   font-size: 14px; font-weight: 500; border: none; background: transparent;
-  color: #1a1a18; text-align: right; max-width: 195px;
-  padding: 14px 0; outline: none;
-  -webkit-appearance: none; appearance: none;
+  color: var(--text); text-align: right; max-width: 200px;
+  padding: 14px 0; outline: none; -webkit-appearance: none;
 }
 
 /* エコオク仕入れ内訳 */
 .eco-detail {
-  margin-top: 8px; padding: 10px 12px; background: #f7f7f4; border-radius: 10px;
-  font-size: 12px; color: #888; line-height: 2.1;
+  margin: 2px 0 8px; padding: 10px 13px;
+  background: var(--seg); border-radius: 10px;
+  font-size: 12px; color: var(--text3); line-height: 2.1;
 }
-.eco-detail b { color: #1a1a18; }
-.eco-total { font-size: 15px; font-weight: 700; color: #1a1a18; }
+.eco-detail b { color: var(--text); font-weight: 600; }
+.eco-detail-total { font-size: 16px; font-weight: 700; color: var(--text); }
 
-/* 理想仕入れボックス */
-.ideal-box { background: #f0f0ed; border-radius: 16px; padding: 14px; margin-bottom: 12px; }
-.ideal-box-title { font-size: 11px; font-weight: 600; color: #888; letter-spacing: .07em; margin-bottom: 10px; }
-.ideal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.ideal-item { background: #fff; border-radius: 12px; padding: 13px 12px 11px; box-shadow: 0 1px 3px rgba(0,0,0,0.07); }
-.ideal-item.c1 { background: #1a1a18; }
-.ideal-item.c2 { background: #3d3d38; }
-.ideal-lbl { font-size: 10px; color: #aaa; margin-bottom: 6px; line-height: 1.4; }
-.ideal-item.c1 .ideal-lbl, .ideal-item.c2 .ideal-lbl { color: #888; }
-.ideal-val { font-size: 21px; font-weight: 700; color: #1a1a18; line-height: 1.1; }
-.ideal-item.c1 .ideal-val, .ideal-item.c2 .ideal-val { color: #fff; }
-.ideal-sub { font-size: 10px; color: #bbb; margin-top: 5px; }
-.ideal-item.c1 .ideal-sub, .ideal-item.c2 .ideal-sub { color: #666; }
-.ideal-na { font-size: 13px; font-weight: 500; color: #ccc; }
-
-/* コスト内訳 */
-.breakdown { font-size: 12px; color: #aaa; line-height: 2.3; }
-.breakdown b { color: #1a1a18; font-weight: 600; }
-.total-line {
-  margin-top: 10px; padding-top: 10px; border-top: 0.5px solid #f0f0ed;
-  font-size: 13px; color: #888; display: flex; justify-content: space-between; align-items: center;
+/* ── 理想仕入れ上限・理想出品価格 ── */
+.pricebox {
+  background: var(--card); border-radius: 16px; padding: 16px; margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 3px 10px rgba(0,0,0,0.05);
 }
-.total-line span { font-size: 19px; font-weight: 700; color: #1a1a18; }
+.pricebox-hd { font-size: 10px; font-weight: 700; color: var(--text3); letter-spacing: .1em; margin-bottom: 12px; }
+.pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pitem {
+  border-radius: 12px; padding: 13px 12px;
+  cursor: pointer; -webkit-tap-highlight-color: transparent;
+  transition: opacity .1s;
+}
+.pitem:active { opacity: 0.75; }
+.pitem.g { background: var(--green-light); border: 1.5px solid var(--green-border); }
+.pitem.b { background: var(--blue-light);  border: 1.5px solid var(--blue-border); }
+.pitem.o { background: var(--orange-light); border: 1.5px solid var(--orange-border); }
+.pitem.w { background: var(--seg); border: 1.5px solid transparent; }
+.pitem.wide { grid-column: span 2; display: flex; align-items: center; justify-content: space-between; }
+.plbl { font-size: 10px; font-weight: 600; margin-bottom: 5px; line-height: 1.4; }
+.g .plbl { color: var(--green-dark); } .b .plbl { color: var(--blue-dark); }
+.o .plbl { color: var(--orange-dark); } .w .plbl { color: var(--text3); }
+.pval { font-size: 22px; font-weight: 700; line-height: 1.1; }
+.g .pval { color: var(--green-dark); } .b .pval { color: var(--blue-dark); }
+.o .pval { color: var(--orange-dark); } .w .pval { color: var(--text); }
+.phint { font-size: 10px; margin-top: 3px; }
+.g .phint { color: var(--green); } .b .phint { color: var(--blue); }
+.o .phint { color: var(--orange); } .w .phint { color: var(--text3); }
+.pprofit-lbl { font-size: 10px; margin-top: 8px; }
+.g .pprofit-lbl { color: var(--green-dark); } .b .pprofit-lbl { color: var(--blue-dark); }
+.pprofit-val { font-size: 14px; font-weight: 700; }
+.g .pprofit-val { color: var(--green-dark); } .b .pprofit-val { color: var(--blue-dark); }
+.pright { text-align: right; }
+.pright-lbl { font-size: 10px; }
+.w .pright-lbl { color: var(--text3); } .o .pright-lbl { color: var(--orange-dark); }
+.pright-val { font-size: 17px; font-weight: 700; }
+.w .pright-val { color: var(--blue); } .o .pright-val { color: var(--orange); }
+.pna { font-size: 13px; color: var(--text3); }
+.copy-hint { font-size: 9px; color: var(--text3); margin-top: 4px; opacity: 0.6; }
 
-/* 結果 */
-.metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 10px; }
-.m { background: #f7f7f4; border-radius: 12px; padding: 12px 8px; text-align: center; }
-.m-lbl { font-size: 10px; color: #aaa; margin-bottom: 4px; }
-.m-val { font-size: 20px; font-weight: 700; color: #1a1a18; }
-
-/* 利益別カラー */
-.col-blue   { color: #1D9E75; }   /* 利益率20%以上 → 緑 */
-.col-orange { color: #2980e8; }   /* 利益率15%以上 / 5000円 → 青 */
-.col-green  { color: #1D9E75; }   /* 達成OK */
-.col-red    { color: #d03030; }   /* 赤字・未達 */
-
-.banner { border-radius: 12px; padding: 12px 14px; font-size: 13px; font-weight: 500; line-height: 1.6; }
-.banner.ok20 { background: #e8f3ff; color: #1558b0; }
-.banner.ok15 { background: #fff3d6; color: #7a4f00; }
-.banner.ng   { background: #fdeaea; color: #a02020; }
-.banner.init { background: #f0f0ed; color: #aaa; }
-
-/* 手数料表 */
-.fee-tbl { width: 100%; font-size: 11px; border-collapse: collapse; margin-top: 4px; }
-.fee-tbl th { color: #bbb; font-weight: 500; padding: 3px 0; border-bottom: 0.5px solid #f0f0ed; text-align: left; }
+/* ── 手数料表 ── */
+.fee-tbl { width: 100%; font-size: 11px; border-collapse: collapse; }
+.fee-tbl th { color: var(--text3); font-weight: 500; padding: 4px 0; border-bottom: 1px solid var(--border); text-align: left; }
 .fee-tbl th:last-child { text-align: right; }
-.fee-tbl td { padding: 5px 0; color: #888; border-bottom: 0.5px solid #f7f7f4; }
-.fee-tbl td:last-child { text-align: right; font-weight: 600; color: #555; }
-.fee-tbl tr.hi td { color: #1D9E75 !important; }
-.note { font-size: 10px; color: #bbb; margin-top: 7px; line-height: 1.7; }
+.fee-tbl td { padding: 6px 0; color: var(--text2); border-bottom: 1px solid var(--seg); }
+.fee-tbl td:last-child { text-align: right; font-weight: 600; color: var(--text); }
+.fee-tbl tr.hi td { color: var(--green) !important; font-weight: 700 !important; }
+.fee-note { font-size: 10px; color: var(--text3); margin-top: 8px; line-height: 1.7; }
+
+/* ── コスト内訳 ── */
+.bdrow {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 7px 0; border-bottom: 1px solid var(--seg);
+}
+.bdrow:last-child { border-bottom: none; }
+.bdlbl { font-size: 12px; color: var(--text3); }
+.bdval { font-size: 13px; font-weight: 600; color: var(--text); }
+.bdtotal {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 10px; padding-top: 10px; border-top: 1.5px solid var(--border);
+}
+.bdtotal-lbl { font-size: 13px; font-weight: 600; color: var(--text2); }
+.bdtotal-val { font-size: 21px; font-weight: 700; color: var(--text); }
+
+/* ── 結果カード ── */
+.result-hero {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 16px; background: var(--seg); border-radius: 14px; margin-bottom: 12px;
+}
+.result-left {}
+.result-lbl { font-size: 10px; font-weight: 700; color: var(--text3); letter-spacing: .08em; margin-bottom: 4px; }
+.result-profit { font-size: 38px; font-weight: 700; line-height: 1; }
+.result-rate { font-size: 14px; font-weight: 600; color: var(--text3); margin-top: 4px; }
+.result-badge {
+  font-size: 22px; font-weight: 800; padding: 10px 16px;
+  border-radius: 12px; text-align: center; min-width: 68px;
+}
+.result-badge.ok { background: var(--green-light); color: var(--green-dark); }
+.result-badge.ng { background: var(--red-light); color: var(--red); }
+
+/* バナー */
+.banner { border-radius: 12px; padding: 12px 14px; font-size: 13px; font-weight: 500; line-height: 1.6; }
+.banner.ok20  { background: var(--green-light); color: var(--green-dark); }
+.banner.ok15  { background: var(--blue-light);  color: var(--blue-dark); }
+.banner.ok5k  { background: var(--orange-light); color: var(--orange-dark); }
+.banner.ng    { background: var(--red-light);    color: var(--red); }
+.banner.gray  { background: var(--seg);          color: var(--text3); }
+
+/* ── 実費計算 ── */
+.r2-hero {
+  text-align: center; padding: 18px 16px 14px;
+  background: var(--seg); border-radius: 14px; margin-bottom: 10px;
+}
+.r2-hero-lbl { font-size: 11px; font-weight: 700; color: var(--text3); letter-spacing: .08em; margin-bottom: 5px; }
+.r2-hero-val { font-size: 40px; font-weight: 700; line-height: 1; }
+.r2-hero-rate { font-size: 14px; font-weight: 600; color: var(--text3); margin-top: 4px; }
+.r2-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+.r2-m { background: var(--seg); border-radius: 12px; padding: 12px 8px; text-align: center; }
+.r2-m-lbl { font-size: 10px; color: var(--text3); margin-bottom: 4px; }
+.r2-m-val { font-size: 17px; font-weight: 700; }
+
+/* ── トースト ── */
+.toast {
+  position: fixed; bottom: 28px; left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: rgba(26,26,24,0.88); color: #fff;
+  font-size: 13px; font-weight: 500; padding: 10px 18px;
+  border-radius: 20px; backdrop-filter: blur(8px);
+  transition: transform .22s cubic-bezier(.34,1.56,.64,1); z-index: 999; white-space: nowrap;
+  pointer-events: none;
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* ── ユーティリティ ── */
+.hidden { display: none !important; }
+.divider { height: 1px; background: var(--border); margin: 12px 0; }
 </style>
 </head>
 <body>
-<div class="app">
-  <h1>利益計算ツール</h1>
-  <p class="sub">ヤフオク・エコオク対応（2025年4月〜手数料）</p>
 
-  <!-- 仕入れ先・販売先（1枚のカードにまとめる） -->
+<!-- トースト -->
+<div class="toast" id="toast">コピーしました</div>
+
+<!-- ヘッダー -->
+<header class="header">
+  <div class="header-title">利益計算ツール <span class="ver-badge">v1.0</span></div>
+  <div class="header-sub">ヤフオク・エコオク対応</div>
+</header>
+
+<main class="app">
+
+  <!-- ① 設定カード -->
   <div class="card">
-    <div class="seg-wrap">
-      <div class="seg-label">仕入れ先</div>
+    <div class="card-hd">設定</div>
+    <div class="seg-group">
+      <div class="seg-group-label">仕入れ先</div>
       <div class="seg">
         <button class="seg-btn on" id="buy-yahoo" onclick="setBuy('yahoo')">ヤフオク</button>
         <button class="seg-btn"   id="buy-eco"   onclick="setBuy('eco')">エコオク</button>
       </div>
-      <div class="hint" id="buy-hint">プレミアム会員　<b>落札手数料 8.8%</b></div>
+      <div class="info-pill" id="buy-hint">
+        <span class="ico">ℹ️</span>
+        <span>プレミアム会員　<b>落札手数料 8.8%</b></span>
+      </div>
     </div>
-    <div class="seg-wrap">
-      <div class="seg-label">販売先</div>
+    <div class="seg-group">
+      <div class="seg-group-label">販売先</div>
       <div class="seg">
         <button class="seg-btn on" id="sell-standard" onclick="setSell('standard')">一般販路</button>
         <button class="seg-btn"   id="sell-eco"      onclick="setSell('eco')">エコオク</button>
       </div>
-      <div class="hint" id="sell-hint">販売手数料　<b>10%</b></div>
+      <div class="info-pill" id="sell-hint">
+        <span class="ico">ℹ️</span>
+        <span>販売手数料　<b>10%</b></span>
+      </div>
     </div>
   </div>
 
-  <!-- 入力（仕入れ価格を最上部に） -->
+  <!-- ② 入力カード -->
   <div class="card">
-    <div class="card-title">入力</div>
+    <div class="card-hd">
+      入力
+      <button class="reset-btn" onclick="resetInputs()">リセット</button>
+    </div>
 
-    <div class="row">
-      <div class="row-label">
-        実際の仕入れ価格
-        <span class="sublbl" id="cost-sub-lbl" style="display:none;">エコオク：税抜金額を入力</span>
+    <div class="irow">
+      <div class="ilabel">
+        仕入れ価格
+        <span class="ilabel-sub accent" id="cost-sub" style="display:none;">エコオク：税抜金額を入力</span>
       </div>
-      <input type="number" id="cost" inputmode="numeric" placeholder="任意" oninput="calc()">
+      <input class="ifield" type="text" id="cost" inputmode="numeric" placeholder="任意" oninput="calc()">
     </div>
 
-    <div class="eco-detail" id="eco-cost-detail" style="display:none;">
+    <div class="eco-detail hidden" id="eco-cost-detail">
       税込落札額：<b id="ec-taxed">—</b>　手数料（税込）：<b id="ec-fee">—</b><br>
-      仕入れ総支払い：<span class="eco-total" id="ec-total-buy">—</span>
+      仕入れ総支払い：<span class="eco-detail-total" id="ec-total-buy">—</span>
     </div>
 
-    <div class="row">
-      <span class="row-label">販売価格</span>
-      <input type="number" id="price" value="12000" inputmode="numeric" oninput="calc()">
+    <div class="irow">
+      <div class="ilabel">
+        仕入れ時送料
+        <span class="ilabel-sub">仕入れ先からの送料</span>
+      </div>
+      <input class="ifield" type="text" id="buy-ship" value="0" inputmode="numeric" oninput="calc()">
     </div>
-    <div class="row">
-      <span class="row-label">梱包・その他経費</span>
-      <input type="number" id="extra" value="100" inputmode="numeric" oninput="calc()">
+
+    <div class="irow hidden" id="eco-ship-row">
+      <div class="ilabel">
+        エコオク送料（概算）
+        <span class="ilabel-sub">逆算に自動で加算</span>
+      </div>
+      <input class="ifield" type="text" id="eco-ship" value="1100" inputmode="numeric" oninput="calc()">
     </div>
-    <div class="row">
-      <span class="row-label">配送方法</span>
-      <select id="size" onchange="calc()">
+
+    <div class="irow">
+      <div class="ilabel">販売価格</div>
+      <input class="ifield" type="text" id="price" value="12000" inputmode="numeric" oninput="calc()">
+    </div>
+    <div class="irow">
+      <div class="ilabel">梱包・その他経費</div>
+      <input class="ifield" type="text" id="extra" value="100" inputmode="numeric" oninput="calc()">
+    </div>
+    <div class="irow">
+      <div class="ilabel">配送方法</div>
+      <select class="iselect" id="size" onchange="calc()">
         <optgroup label="── メール便 ──">
           <option value="nekoposu">ネコポス ¥210</option>
           <option value="yupacketplus_mini">ゆうパケットプラスミニ ¥180</option>
@@ -196,31 +337,73 @@ h1 { font-size: 17px; font-weight: 600; text-align: center; margin-bottom: 3px; 
     </div>
   </div>
 
-  <!-- 理想仕入れ上限（3パターン） -->
-  <div class="ideal-box">
-    <div class="ideal-box-title">理想の仕入れ上限価格</div>
-    <div class="ideal-grid">
-      <div class="ideal-item c1">
-        <div class="ideal-lbl">利益率 20%</div>
-        <div class="ideal-val" id="i-20">—</div>
-        <div class="ideal-sub" id="i-20-sub">以下で仕入れる</div>
+  <!-- ③ 理想の仕入れ上限（販売価格から逆算） -->
+  <div class="pricebox">
+    <div class="pricebox-hd">理想の仕入れ上限価格</div>
+    <div class="pgrid">
+      <div class="pitem g" onclick="copyPval('i-20')">
+        <div class="plbl">利益率 20%</div>
+        <div class="pval" id="i-20">—</div>
+        <div class="phint" id="i-20-hint">以下で仕入れる</div>
+        <div class="pprofit-lbl">利益額</div>
+        <div class="pprofit-val" id="i-20-profit">—</div>
       </div>
-      <div class="ideal-item c2">
-        <div class="ideal-lbl">利益率 15%<br>（落札しやすい）</div>
-        <div class="ideal-val" id="i-15">—</div>
-        <div class="ideal-sub" id="i-15-sub">以下で仕入れる</div>
+      <div class="pitem b" onclick="copyPval('i-15')">
+        <div class="plbl">利益率 15%<br>（落札しやすい）</div>
+        <div class="pval" id="i-15">—</div>
+        <div class="phint" id="i-15-hint">以下で仕入れる</div>
+        <div class="pprofit-lbl">利益額</div>
+        <div class="pprofit-val" id="i-15-profit">—</div>
       </div>
-      <div class="ideal-item" style="grid-column:span 2;">
-        <div class="ideal-lbl">利益 5,000円</div>
-        <div class="ideal-val" id="i-5k" style="font-size:19px;">—</div>
-        <div class="ideal-sub" id="i-5k-sub">以下で仕入れる</div>
+      <div class="pitem w wide" onclick="copyPval('i-5k')">
+        <div>
+          <div class="plbl">利益 5,000円</div>
+          <div class="pval" id="i-5k">—</div>
+          <div class="phint" id="i-5k-hint">以下で仕入れる</div>
+        </div>
+        <div class="pright">
+          <div class="pright-lbl">このときの利益率</div>
+          <div class="pright-val" id="i-5k-rate">—</div>
+        </div>
       </div>
     </div>
+    <div class="copy-hint" style="margin-top:8px;text-align:right;">タップでコピー</div>
   </div>
 
-  <!-- エコオク手数料表 -->
-  <div class="card" id="eco-buy-info" style="display:none;">
-    <div class="card-title">エコオク 落札手数料（税別）</div>
+  <!-- ④ 理想の出品価格（仕入れ価格から逆算） -->
+  <div class="pricebox hidden" id="price-box">
+    <div class="pricebox-hd">理想の出品価格（仕入れ金額から逆算）</div>
+    <div class="pgrid">
+      <div class="pitem g" onclick="copyPval('p-20')">
+        <div class="plbl">利益率 20%</div>
+        <div class="pval" id="p-20">—</div>
+        <div class="phint">以上で出品</div>
+        <div class="pprofit-val" id="p-20-profit" style="margin-top:7px;font-size:12px;">利益 —</div>
+      </div>
+      <div class="pitem b" onclick="copyPval('p-15')">
+        <div class="plbl">利益率 15%</div>
+        <div class="pval" id="p-15">—</div>
+        <div class="phint">以上で出品</div>
+        <div class="pprofit-val" id="p-15-profit" style="margin-top:7px;font-size:12px;">利益 —</div>
+      </div>
+      <div class="pitem o wide" onclick="copyPval('p-5k')">
+        <div>
+          <div class="plbl">利益 5,000円</div>
+          <div class="pval" id="p-5k">—</div>
+          <div class="phint">以上で出品</div>
+        </div>
+        <div class="pright">
+          <div class="pright-lbl">このときの利益率</div>
+          <div class="pright-val" id="p-5k-rate">—</div>
+        </div>
+      </div>
+    </div>
+    <div class="copy-hint" style="margin-top:8px;text-align:right;">タップでコピー</div>
+  </div>
+
+  <!-- ⑤ エコオク手数料表 -->
+  <div class="card hidden" id="eco-buy-info">
+    <div class="card-hd">エコオク 落札手数料（税別）</div>
     <table class="fee-tbl">
       <tr><th>落札金額（税抜表示）</th><th>手数料（税抜）</th></tr>
       <tr id="bt0"><td>〜10,000円</td><td>500円</td></tr>
@@ -230,208 +413,506 @@ h1 { font-size: 17px; font-weight: 600; text-align: center; margin-bottom: 3px; 
       <tr id="bt4"><td>500,000〜999,999円</td><td>8,000円</td></tr>
       <tr id="bt5"><td>1,000,000円〜</td><td>10,000円</td></tr>
     </table>
-    <p class="note">※入札・落札金額は<b>税抜価格</b>で表示。<br>実払い = 落札額×1.1 ＋ 手数料×1.1</p>
+    <p class="fee-note">※入札・落札金額は税抜価格で表示。<br>実払い = 落札額×1.1 ＋ 手数料×1.1　／　緑色が現在の入力価格の該当帯です。</p>
   </div>
-  <div class="card" id="eco-sell-info" style="display:none;">
-    <div class="card-title">エコオク 出品手数料（税別）</div>
+  <div class="card hidden" id="eco-sell-info">
+    <div class="card-hd">エコオク 出品手数料（税別）</div>
     <table class="fee-tbl">
       <tr><th>販売金額</th><th>手数料（税抜）</th></tr>
       <tr id="st0"><td>〜10,000円</td><td>500円</td></tr>
       <tr id="st1"><td>10,001〜49,999円</td><td>1,000円</td></tr>
       <tr id="st2"><td>50,000円〜</td><td>2,000円</td></tr>
     </table>
-    <p class="note">※別途消費税10%がかかります。緑色が現在の販売価格の該当帯です。</p>
+    <p class="fee-note">※別途消費税10%。緑色が現在の販売価格の該当帯です。</p>
   </div>
 
-  <!-- コスト内訳 -->
-  <div class="card" id="breakdown-card" style="display:none;">
-    <div class="card-title">コスト内訳</div>
-    <div class="breakdown">
-      仕入れ総支払：<b id="b-cost">—</b>　送料：<b id="b-ship">—</b>　
-      梱包等：<b id="b-extra">—</b>　販売手数料（<b id="s-rate">—</b>）：<b id="s-fee">—</b>
+  <!-- ⑥ コスト内訳 -->
+  <div class="card hidden" id="breakdown-card">
+    <div class="card-hd">コスト内訳</div>
+    <div class="bdrow"><span class="bdlbl">仕入れ総支払い</span><span class="bdval" id="b-cost">—</span></div>
+    <div class="bdrow"><span class="bdlbl">送料</span><span class="bdval" id="b-ship">—</span></div>
+    <div class="bdrow"><span class="bdlbl">梱包・その他</span><span class="bdval" id="b-extra">—</span></div>
+    <div class="bdrow"><span class="bdlbl">販売手数料（<span id="s-rate">—</span>）</span><span class="bdval" id="s-fee">—</span></div>
+    <div class="bdtotal">
+      <span class="bdtotal-lbl">総コスト</span>
+      <span class="bdtotal-val" id="r-total">—</span>
     </div>
-    <div class="total-line">総コスト<span id="r-total">—</span></div>
   </div>
 
-  <!-- 結果 -->
-  <div id="result-card" style="display:none;">
-    <div class="card">
-      <div class="card-title">結果</div>
-      <div class="metrics">
-        <div class="m"><div class="m-lbl">利益額</div><div class="m-val" id="r-profit">—</div></div>
-        <div class="m"><div class="m-lbl">利益率</div><div class="m-val" id="r-rate">—</div></div>
-        <div class="m"><div class="m-lbl">判定</div><div class="m-val" id="r-ok">—</div></div>
+  <!-- ⑦ 結果カード -->
+  <div class="card hidden" id="result-card">
+    <div class="card-hd">計算結果</div>
+    <div class="result-hero">
+      <div class="result-left">
+        <div class="result-lbl">利益額</div>
+        <div class="result-profit" id="r-profit">—</div>
+        <div class="result-rate" id="r-rate">— %</div>
       </div>
-      <div class="banner init" id="banner">—</div>
+      <div class="result-badge gray" id="r-ok">—</div>
+    </div>
+    <div class="banner gray" id="banner">—</div>
+  </div>
+
+  <!-- ⑧ 実費計算 -->
+  <div class="card" style="margin-top:4px;">
+    <div class="card-hd">実費計算（仕入れ後の本当の利益）</div>
+
+    <div class="seg" style="margin-bottom:14px;">
+      <button class="seg-btn on" id="r2-tab-detail" onclick="setR2Tab('detail')">明細入力</button>
+      <button class="seg-btn"   id="r2-tab-total"  onclick="setR2Tab('total')">総額入力</button>
+    </div>
+
+    <!-- 明細入力 -->
+    <div id="r2-pane-detail">
+      <div class="irow">
+        <div class="ilabel">実際の仕入れ金額</div>
+        <input class="ifield" type="text" id="r2-cost" inputmode="numeric" placeholder="例：5,000" oninput="calc2()">
+      </div>
+      <div class="irow">
+        <div class="ilabel">仕入手数料（落札手数料）</div>
+        <input class="ifield" type="text" id="r2-buyfee" inputmode="numeric" placeholder="例：440" oninput="calc2()">
+      </div>
+      <div class="irow">
+        <div class="ilabel">実際の送料（仕入れ側）</div>
+        <input class="ifield" type="text" id="r2-ship" inputmode="numeric" placeholder="例：800" oninput="calc2()">
+      </div>
+      <div class="irow">
+        <div class="ilabel">販売手数料</div>
+        <input class="ifield" type="text" id="r2-sellfee" inputmode="numeric" placeholder="例：1,200" oninput="calc2()">
+      </div>
+      <div class="irow">
+        <div class="ilabel">その他経費</div>
+        <input class="ifield" type="text" id="r2-other" value="100" inputmode="numeric" oninput="calc2()">
+      </div>
+      <div class="irow">
+        <div class="ilabel">実際の販売金額</div>
+        <input class="ifield" type="text" id="r2-price" inputmode="numeric" placeholder="例：12,000" oninput="calc2()">
+      </div>
+    </div>
+
+    <!-- 総額入力 -->
+    <div id="r2-pane-total" class="hidden">
+      <div class="banner gray" style="margin-bottom:12px;font-size:12px;">
+        送料・手数料をすべて含んだ<b style="color:var(--text);">仕入れ総額</b>を直接入力します。
+      </div>
+      <div class="irow">
+        <div class="ilabel">
+          仕入れ総額
+          <span class="ilabel-sub">送料・手数料込みの総支払い</span>
+        </div>
+        <input class="ifield" type="text" id="r2-total-cost" inputmode="numeric" placeholder="例：6,500" oninput="calc2()">
+      </div>
+      <div class="irow">
+        <div class="ilabel">販売手数料</div>
+        <input class="ifield" type="text" id="r2-sellfee2" inputmode="numeric" placeholder="例：1,200" oninput="calc2()">
+      </div>
+      <div class="irow">
+        <div class="ilabel">その他経費</div>
+        <input class="ifield" type="text" id="r2-other2" value="0" inputmode="numeric" oninput="calc2()">
+      </div>
+      <div class="irow">
+        <div class="ilabel">実際の販売金額</div>
+        <input class="ifield" type="text" id="r2-price2" inputmode="numeric" placeholder="例：12,000" oninput="calc2()">
+      </div>
+    </div>
+
+    <div id="r2-result" class="hidden" style="margin-top:14px;">
+      <div class="divider"></div>
+      <div class="r2-hero">
+        <div class="r2-hero-lbl">実際の利益額</div>
+        <div class="r2-hero-val" id="r2-profit-big">—</div>
+        <div class="r2-hero-rate" id="r2-rate-big">— %</div>
+      </div>
+      <div class="r2-metrics">
+        <div class="r2-m"><div class="r2-m-lbl">総コスト</div><div class="r2-m-val" id="r2-total">—</div></div>
+        <div class="r2-m"><div class="r2-m-lbl">実利益</div><div class="r2-m-val" id="r2-profit">—</div></div>
+        <div class="r2-m"><div class="r2-m-lbl">実利益率</div><div class="r2-m-val" id="r2-rate">—</div></div>
+      </div>
+      <div class="banner gray" id="r2-banner">—</div>
     </div>
   </div>
 
-</div>
+</main>
+
 <script>
-const shipFee={
-  nekoposu:210, yupacketplus_mini:180, yupacketplus:520,
-  60:800,80:1000,100:1200,120:1500,140:1800,160:2100,180:2800,200:3600
+// ── 送料マップ ──
+const SHIP = {
+  nekoposu: 210, yupacketplus_mini: 180, yupacketplus: 520,
+  60: 800, 80: 1000, 100: 1200, 120: 1500, 140: 1800, 160: 2100, 180: 2800, 200: 3600
 };
-let buyC='yahoo', sellC='standard';
 
-function ecoBuyFeeBase(p){
-  if(p<=10000)return 500; if(p<=49999)return 1000;
-  if(p<=99999)return 2000; if(p<=499999)return 4000;
-  if(p<=999999)return 8000; return 10000;
-}
-function ecoBuyTotalCost(px){
-  const tp=Math.round(px*1.1), fb=ecoBuyFeeBase(px), tf=Math.round(fb*1.1);
-  return {taxedPrice:tp, taxedFee:tf, total:tp+tf};
-}
-function ecoSellFee(p){
-  return Math.round((p<=10000?500:p<=49999?1000:2000)*1.1);
-}
-function getSellFee(p){ return sellC==='standard'?p*0.10:ecoSellFee(p); }
+// ── 状態 ──
+let buyC = 'yahoo', sellC = 'standard';
 
-function calcMaxCost(price,extra,ship,target){
-  const budget=price-extra-ship-getSellFee(price)-target;
-  if(budget<=0)return null;
-  if(buyC==='yahoo'){const m=Math.floor(budget/1.088);return m>0?m:null;}
-  let best=null;
-  for(const cap of[10000,49999,99999,499999,999999,9999999]){
-    const c=Math.min(Math.floor(budget/1.1-ecoBuyFeeBase(cap)),cap);
-    if(c>0&&(c+ecoBuyFeeBase(c))*1.1<=budget)best=c;
+// ── ユーティリティ ──
+const $ = id => document.getElementById(id);
+const fmt = n => '¥' + Math.round(n).toLocaleString('ja-JP');
+const show = id => $(id).classList.remove('hidden');
+const hide = id => $(id).classList.add('hidden');
+
+function showToast(msg = 'コピーしました') {
+  const t = $('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._tid);
+  t._tid = setTimeout(() => t.classList.remove('show'), 1700);
+}
+
+function copyPval(id) {
+  const text = $(id).textContent;
+  // 数字のみ抽出
+  const num = text.replace(/[^0-9]/g, '');
+  if (!num) return;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(num).then(() => showToast(text + ' をコピー'));
+  } else {
+    const el = document.createElement('textarea');
+    el.value = num;
+    document.body.appendChild(el);
+    el.select(); document.execCommand('copy');
+    document.body.removeChild(el);
+    showToast(text + ' をコピー');
+  }
+}
+
+// ── エコオク計算 ──
+function ecoBuyFeeBase(p) {
+  if (p <= 10000)  return 500;
+  if (p <= 49999)  return 1000;
+  if (p <= 99999)  return 2000;
+  if (p <= 499999) return 4000;
+  if (p <= 999999) return 8000;
+  return 10000;
+}
+function ecoBuyTotal(px) {
+  const tp = Math.round(px * 1.1);
+  const fb = ecoBuyFeeBase(px);
+  const tf = Math.round(fb * 1.1);
+  return { taxedPrice: tp, taxedFee: tf, total: tp + tf };
+}
+function ecoSellFee(p) {
+  return Math.round((p <= 10000 ? 500 : p <= 49999 ? 1000 : 2000) * 1.1);
+}
+function getSellFee(p) {
+  return sellC === 'standard' ? p * 0.10 : ecoSellFee(p);
+}
+function getEcoShip() {
+  return buyC === 'eco' ? (parseFloat($('eco-ship').value) || 0) : 0;
+}
+function getBuyShip() {
+  return parseFloat($('buy-ship').value) || 0;
+}
+
+// ── テーブルハイライト ──
+function hlBuy(p) {
+  ['bt0','bt1','bt2','bt3','bt4','bt5'].forEach(id => $(id).className = '');
+  $(p <= 10000 ? 'bt0' : p <= 49999 ? 'bt1' : p <= 99999 ? 'bt2' : p <= 499999 ? 'bt3' : p <= 999999 ? 'bt4' : 'bt5').className = 'hi';
+}
+function hlSell(p) {
+  ['st0','st1','st2'].forEach(id => $(id).className = '');
+  $(p <= 10000 ? 'st0' : p <= 49999 ? 'st1' : 'st2').className = 'hi';
+}
+
+// ── 最大仕入れ価格逆算 ──
+function calcMaxCost(price, extra, ship, target) {
+  const ecoShip = getEcoShip(), buyShip = getBuyShip();
+  const budget = price - extra - ship - ecoShip - buyShip - getSellFee(price) - target;
+  if (budget <= 0) return null;
+  if (buyC === 'yahoo') {
+    const m = Math.floor(budget / 1.088);
+    return m > 0 ? m : null;
+  }
+  // エコオク：各帯で最大の落札価格を逆算
+  const brackets = [
+    { max: 10000,   fee: 500   },
+    { max: 49999,   fee: 1000  },
+    { max: 99999,   fee: 2000  },
+    { max: 499999,  fee: 4000  },
+    { max: 999999,  fee: 8000  },
+    { max: 9999999, fee: 10000 }
+  ];
+  let best = null;
+  for (let i = 0; i < brackets.length; i++) {
+    const b = brackets[i];
+    const c = Math.min(Math.floor(budget / 1.1 - b.fee), b.max);
+    const prevMax = i > 0 ? brackets[i - 1].max : 0;
+    if (c > prevMax && c > 0 && (c + b.fee) * 1.1 <= budget) {
+      if (best === null || c > best) best = c;
+    }
   }
   return best;
 }
 
-function hlBuy(p){
-  ['bt0','bt1','bt2','bt3','bt4','bt5'].forEach(id=>document.getElementById(id).className='');
-  document.getElementById(p<=10000?'bt0':p<=49999?'bt1':p<=99999?'bt2':p<=499999?'bt3':p<=999999?'bt4':'bt5').className='hi';
+// ── モード切り替え ──
+function setBuy(c) {
+  buyC = c;
+  $('buy-yahoo').className = 'seg-btn' + (c === 'yahoo' ? ' on' : '');
+  $('buy-eco').className   = 'seg-btn' + (c === 'eco'   ? ' on' : '');
+  c === 'eco' ? show('eco-buy-info') : hide('eco-buy-info');
+  $('buy-hint').innerHTML = c === 'yahoo'
+    ? '<span class="ico">ℹ️</span><span>プレミアム会員　<b>落札手数料 8.8%</b></span>'
+    : '<span class="ico">⚠️</span><span><span class="eco-tag">税抜表示</span>入札金額は税抜で表示<br>実払い = 落札額×1.1 ＋ 手数料×1.1</span>';
+  $('cost-sub').style.display = c === 'eco' ? 'block' : 'none';
+  c === 'eco' ? show('eco-ship-row') : hide('eco-ship-row');
+  saveSettings(); calc();
 }
-function hlSell(p){
-  ['st0','st1','st2'].forEach(id=>document.getElementById(id).className='');
-  document.getElementById(p<=10000?'st0':p<=49999?'st1':'st2').className='hi';
-}
-
-function setBuy(c){
-  buyC=c;
-  document.getElementById('buy-yahoo').className='seg-btn'+(c==='yahoo'?' on':'');
-  document.getElementById('buy-eco').className='seg-btn'+(c==='eco'?' on':'');
-  document.getElementById('eco-buy-info').style.display=c==='eco'?'':'none';
-  document.getElementById('buy-hint').innerHTML=c==='yahoo'
-    ?'プレミアム会員　<b>落札手数料 8.8%</b>'
-    :'<span class="tag">税抜表示</span>　入札金額は税抜で表示<br>実払い = 落札額×1.1 ＋ 手数料×1.1';
-  document.getElementById('cost-sub-lbl').style.display=c==='eco'?'block':'none';
-  calc();
-}
-function setSell(c){
-  sellC=c;
-  document.getElementById('sell-standard').className='seg-btn'+(c==='standard'?' on':'');
-  document.getElementById('sell-eco').className='seg-btn'+(c==='eco'?' on':'');
-  document.getElementById('eco-sell-info').style.display=c==='eco'?'':'none';
-  document.getElementById('sell-hint').innerHTML=c==='standard'
-    ?'販売手数料　<b>10%</b>'
-    :'価格帯による<b>固定金額</b>（税込）　下表参照';
-  calc();
+function setSell(c) {
+  sellC = c;
+  $('sell-standard').className = 'seg-btn' + (c === 'standard' ? ' on' : '');
+  $('sell-eco').className      = 'seg-btn' + (c === 'eco'      ? ' on' : '');
+  c === 'eco' ? show('eco-sell-info') : hide('eco-sell-info');
+  $('sell-hint').innerHTML = c === 'standard'
+    ? '<span class="ico">ℹ️</span><span>販売手数料　<b>10%</b></span>'
+    : '<span class="ico">ℹ️</span><span>価格帯による<b>固定金額</b>（税込）　下表参照</span>';
+  saveSettings(); calc();
 }
 
-const fmt=n=>'¥'+Math.round(n).toLocaleString('ja-JP');
-
-function setIdeal(elId,subId,val){
-  const el=document.getElementById(elId),sub=document.getElementById(subId);
-  if(val!==null&&val>0){
-    el.textContent=fmt(val);
-    el.style.color='';
-    sub.textContent=buyC==='eco'?'以下（税抜）で落札':'以下で仕入れる';
+// ── 理想価格ボックス更新 ──
+function setIdealBuy(valId, hintId, profitId, rateId, val, price, profitAmt) {
+  const hint = buyC === 'eco' ? '以下（税抜）で落札' : '以下で仕入れる';
+  if (val !== null && val > 0) {
+    $(valId).textContent = fmt(val);
+    if (hintId) $(hintId).textContent = hint;
+    if (profitId) $(profitId).textContent = fmt(profitAmt);
+    if (rateId)   $(rateId).textContent   = price > 0 ? (profitAmt / price * 100).toFixed(1) + '%' : '—';
   } else {
-    el.innerHTML='<span class="ideal-na">達成不可</span>';
-    sub.textContent='販売価格が低すぎます';
+    $(valId).innerHTML = '<span class="pna">達成不可</span>';
+    if (hintId) $(hintId).textContent = '販売価格が低すぎます';
+    if (profitId) $(profitId).textContent = '—';
+    if (rateId)   $(rateId).textContent   = '—';
   }
 }
 
-function calc(){
-  const price=parseFloat(document.getElementById('price').value)||0;
-  const extra=parseFloat(document.getElementById('extra').value)||0;
-  const ship=shipFee[document.getElementById('size').value]||0;
-  const cr=document.getElementById('cost').value;
-  const costInput=cr!==''?(parseFloat(cr)||0):null;
+// ── メイン計算 ──
+function calc() {
+  const price     = parseFloat($('price').value) || 0;
+  const extra     = parseFloat($('extra').value) || 0;
+  const ship      = SHIP[$('size').value] || 0;
+  const costRaw   = $('cost').value;
+  const costInput = costRaw !== '' ? (parseFloat(costRaw) || 0) : null;
 
-  if(sellC==='eco')hlSell(price);
-  if(price>0){
-    setIdeal('i-20','i-20-sub',calcMaxCost(price,extra,ship,price*0.20));
-    setIdeal('i-15','i-15-sub',calcMaxCost(price,extra,ship,price*0.15));
-    setIdeal('i-5k','i-5k-sub',calcMaxCost(price,extra,ship,5000));
+  // 販売先エコオク：ハイライト
+  if (sellC === 'eco' && price > 0) hlSell(price);
+
+  // ── 販売価格あり → 理想仕入れ上限を逆算 ──
+  if (price > 0) {
+    const p20 = price * 0.20, p15 = price * 0.15;
+    setIdealBuy('i-20', 'i-20-hint', 'i-20-profit', null,    calcMaxCost(price, extra, ship, p20), price, p20);
+    setIdealBuy('i-15', 'i-15-hint', 'i-15-profit', null,    calcMaxCost(price, extra, ship, p15), price, p15);
+    setIdealBuy('i-5k', 'i-5k-hint', null,           'i-5k-rate', calcMaxCost(price, extra, ship, 5000), price, 5000);
   }
 
-  if(costInput!==null&&costInput>0&&price>0){
+  // ── 仕入れ価格あり → 理想出品価格を逆算 ──
+  if (costInput !== null && costInput > 0) {
     let totalBuy;
-    if(buyC==='eco'){
-      const{taxedPrice,taxedFee,total}=ecoBuyTotalCost(costInput);
-      totalBuy=total;
-      document.getElementById('eco-cost-detail').style.display='';
-      document.getElementById('ec-taxed').textContent=fmt(taxedPrice);
-      document.getElementById('ec-fee').textContent=fmt(taxedFee);
-      document.getElementById('ec-total-buy').textContent=fmt(total);
+    if (buyC === 'eco') {
+      const { taxedPrice, taxedFee, total } = ecoBuyTotal(costInput);
+      totalBuy = total;
+      show('eco-cost-detail');
+      $('ec-taxed').textContent   = fmt(taxedPrice);
+      $('ec-fee').textContent     = fmt(taxedFee);
+      $('ec-total-buy').textContent = fmt(total);
       hlBuy(costInput);
     } else {
-      totalBuy=costInput*1.088;
-      document.getElementById('eco-cost-detail').style.display='none';
+      totalBuy = costInput * 1.088;
+      hide('eco-cost-detail');
     }
 
-    const sellFee=getSellFee(price);
-    const total=totalBuy+extra+ship+sellFee;
-    const profit=price-total;
-    const rate=price>0?(profit/price)*100:0;
+    // 出品価格逆算ボックス
+    show('price-box');
+    const fixed = totalBuy + extra + ship + getEcoShip() + getBuyShip();
 
-    document.getElementById('b-cost').textContent=fmt(totalBuy);
-    document.getElementById('b-ship').textContent=fmt(ship);
-    document.getElementById('b-extra').textContent=fmt(extra);
-    document.getElementById('s-rate').textContent=sellC==='standard'?'10%':'固定';
-    document.getElementById('s-fee').textContent=fmt(sellFee);
-    document.getElementById('r-total').textContent=fmt(total);
+    function setMinSell(valId, profitId, rateId, tRate, tProfit) {
+      let minP = null;
+      for (let p = 100; p <= 9999999; p += 10) {
+        const sf = getSellFee(p);
+        const pr = p - fixed - sf;
+        if (pr >= tProfit && (p > 0 ? pr / p : 0) >= tRate) { minP = p; break; }
+      }
+      if (minP) {
+        $(valId).textContent = fmt(minP);
+        if (profitId) {
+          const ap = minP - fixed - getSellFee(minP);
+          $(profitId).textContent = '利益 ' + fmt(ap);
+        }
+        if (rateId) {
+          const ap = minP - fixed - getSellFee(minP);
+          $(rateId).textContent = (ap / minP * 100).toFixed(1) + '%';
+        }
+      } else {
+        $(valId).textContent = '—';
+        if (profitId) $(profitId).textContent = '利益 —';
+        if (rateId)   $(rateId).textContent   = '—';
+      }
+    }
+    setMinSell('p-20', 'p-20-profit', null,       0.20, 0);
+    setMinSell('p-15', 'p-15-profit', null,       0.15, 0);
+    setMinSell('p-5k', null,          'p-5k-rate', 0,   5000);
 
-    const pE=document.getElementById('r-profit');
-    const rE=document.getElementById('r-rate');
-    const oE=document.getElementById('r-ok');
-    const ok20=rate>=20,ok15=rate>=15,ok5k=profit>=5000,any=ok20||ok15||ok5k;
+    // ── 両方入力あり → 利益計算 ──
+    if (price > 0) {
+      const ecoShip = getEcoShip(), buyShip = getBuyShip();
+      const sellFee = getSellFee(price);
+      const total   = totalBuy + extra + ship + ecoShip + buyShip + sellFee;
+      const profit  = price - total;
+      const rate    = price > 0 ? (profit / price) * 100 : 0;
 
-    pE.textContent=fmt(profit);
-    rE.textContent=rate.toFixed(1)+'%';
+      // コスト内訳
+      $('b-cost').textContent  = fmt(totalBuy);
+      let shipLabel = fmt(ship);
+      if (buyShip > 0) shipLabel += ' ＋ 仕入送料' + fmt(buyShip);
+      if (ecoShip > 0) shipLabel += ' ＋ エコオク送料' + fmt(ecoShip);
+      $('b-ship').textContent  = shipLabel;
+      $('b-extra').textContent = fmt(extra);
+      $('s-rate').textContent  = sellC === 'standard' ? '10%' : '固定';
+      $('s-fee').textContent   = fmt(sellFee);
+      $('r-total').textContent = fmt(total);
 
-    // 利益別カラー：青（20%超）／オレンジ（15%以上）／赤（未達・赤字）
-    if(profit<0){
-      pE.className='m-val col-red'; rE.className='m-val col-red';
-    } else if(ok20){
-      pE.className='m-val col-blue'; rE.className='m-val col-blue';
-    } else if(ok15||ok5k){
-      pE.className='m-val col-orange'; rE.className='m-val col-orange';
+      // 結果表示
+      const ok20 = rate >= 20, ok15 = rate >= 15, ok5k = profit >= 5000;
+      const any  = ok20 || ok15 || ok5k;
+      const C_G = '#1D9E75', C_B = '#2980e8', C_R = '#d03030';
+      const color = profit < 0 ? C_R : ok20 ? C_G : (ok15 || ok5k) ? C_B : C_R;
+
+      $('r-profit').textContent = fmt(profit);
+      $('r-profit').style.color = color;
+      $('r-rate').textContent   = rate.toFixed(1) + '%';
+      $('r-rate').style.color   = color;
+      $('r-ok').textContent     = any ? 'OK' : 'NG';
+      $('r-ok').className       = 'result-badge ' + (any ? 'ok' : 'ng');
+
+      const b = $('banner');
+      if (profit < 0) {
+        b.textContent = '赤字です。仕入れ価格を下げてください。'; b.className = 'banner ng';
+      } else if (ok20 && ok5k) {
+        b.textContent = '利益率20% ・ 利益5,000円　両方達成！'; b.className = 'banner ok20';
+      } else if (ok20) {
+        b.textContent = '利益率20%達成。5,000円まで ' + fmt(5000 - profit) + ' 不足。'; b.className = 'banner ok20';
+      } else if (ok15 && ok5k) {
+        b.textContent = '利益率15% ・ 利益5,000円　両方達成！'; b.className = 'banner ok15';
+      } else if (ok15) {
+        b.textContent = '利益率15%達成。5,000円まで ' + fmt(5000 - profit) + ' 不足。'; b.className = 'banner ok15';
+      } else if (ok5k) {
+        b.textContent = '利益5,000円達成。利益率15%まで ' + (15 - rate).toFixed(1) + '% 不足。'; b.className = 'banner ok5k';
+      } else {
+        b.textContent = '目標未達成。仕入れ価格を下げるか販売価格を上げてください。'; b.className = 'banner ng';
+      }
+
+      show('breakdown-card');
+      show('result-card');
     } else {
-      pE.className='m-val col-red'; rE.className='m-val col-red';
+      // 仕入れのみ：内訳・結果は非表示（エコオク内訳は残す）
+      hide('breakdown-card');
+      hide('result-card');
     }
-    oE.textContent=any?'OK':'NG';
-    oE.className='m-val '+(any?'col-green':'col-red');
-
-    const b=document.getElementById('banner');
-    if(profit<0){
-      b.textContent='赤字です。仕入れ価格を下げてください。';b.className='banner ng';
-    } else if(ok20&&ok5k){
-      b.textContent='利益率20% ・ 利益5,000円、両方達成！';b.className='banner ok20';
-    } else if(ok20){
-      b.textContent='利益率20%達成。5,000円まで '+fmt(5000-profit)+' 不足。';b.className='banner ok20';
-    } else if(ok15&&ok5k){
-      b.textContent='利益率15% ・ 利益5,000円、両方達成！';b.className='banner ok15';
-    } else if(ok15){
-      b.textContent='利益率15%達成。5,000円まで '+fmt(5000-profit)+' 不足。';b.className='banner ok15';
-    } else if(ok5k){
-      b.textContent='利益5,000円達成。利益率15%まで '+(15-rate).toFixed(1)+'% 不足。';b.className='banner ok15';
-    } else {
-      b.textContent='目標未達成。仕入れ価格を下げるか販売価格を上げてください。';b.className='banner ng';
-    }
-
-    document.getElementById('breakdown-card').style.display='';
-    document.getElementById('result-card').style.display='';
   } else {
-    document.getElementById('eco-cost-detail').style.display='none';
-    document.getElementById('breakdown-card').style.display='none';
-    document.getElementById('result-card').style.display='none';
+    // 仕入れ価格なし：全て非表示
+    hide('eco-cost-detail');
+    hide('breakdown-card');
+    hide('result-card');
+    hide('price-box');
   }
 }
+
+// ── 実費計算タブ ──
+let r2Tab = 'detail';
+function setR2Tab(tab) {
+  r2Tab = tab;
+  $('r2-tab-detail').className = 'seg-btn' + (tab === 'detail' ? ' on' : '');
+  $('r2-tab-total').className  = 'seg-btn' + (tab === 'total'  ? ' on' : '');
+  tab === 'detail' ? show('r2-pane-detail') : hide('r2-pane-detail');
+  tab === 'total'  ? show('r2-pane-total')  : hide('r2-pane-total');
+  hide('r2-result');
+  calc2();
+}
+
+function calc2() {
+  let total, price;
+  if (r2Tab === 'total') {
+    const tc  = parseFloat($('r2-total-cost').value) || 0;
+    const sf  = parseFloat($('r2-sellfee2').value)   || 0;
+    const oth = parseFloat($('r2-other2').value)      || 0;
+    price = parseFloat($('r2-price2').value) || 0;
+    if (price <= 0 && tc <= 0) { hide('r2-result'); return; }
+    total = tc + sf + oth;
+  } else {
+    const cost  = parseFloat($('r2-cost').value)    || 0;
+    const bf    = parseFloat($('r2-buyfee').value)  || 0;
+    const ship  = parseFloat($('r2-ship').value)    || 0;
+    const sf    = parseFloat($('r2-sellfee').value) || 0;
+    const oth   = parseFloat($('r2-other').value)   || 0;
+    price = parseFloat($('r2-price').value) || 0;
+    if (price <= 0 && cost <= 0) { hide('r2-result'); return; }
+    total = cost + bf + ship + sf + oth;
+  }
+
+  const profit = price - total;
+  const rate   = price > 0 ? (profit / price) * 100 : 0;
+  const ok20 = rate >= 20, ok15 = rate >= 15, ok5k = profit >= 5000;
+  const C_G = '#1D9E75', C_B = '#2980e8', C_R = '#d03030';
+  const color = profit < 0 ? C_R : ok20 ? C_G : (ok15 || ok5k) ? C_B : C_R;
+
+  $('r2-total').textContent     = fmt(total);
+  $('r2-profit').textContent    = fmt(profit); $('r2-profit').style.color = color;
+  $('r2-rate').textContent      = rate.toFixed(1) + '%'; $('r2-rate').style.color = color;
+  $('r2-profit-big').textContent = fmt(profit); $('r2-profit-big').style.color = color;
+  $('r2-rate-big').textContent  = rate.toFixed(1) + '%'; $('r2-rate-big').style.color = color;
+
+  const b = $('r2-banner');
+  if (profit < 0) {
+    b.textContent = '赤字です。'; b.className = 'banner ng';
+  } else if (ok20 && ok5k) {
+    b.textContent = '利益率20% ・ 5,000円　両方達成！'; b.className = 'banner ok20';
+  } else if (ok20) {
+    b.textContent = '利益率20%達成！5,000円まで ' + fmt(5000 - profit) + ' 不足。'; b.className = 'banner ok20';
+  } else if (ok15 && ok5k) {
+    b.textContent = '利益率15% ・ 5,000円　両方達成！'; b.className = 'banner ok15';
+  } else if (ok15) {
+    b.textContent = '利益率15%達成。5,000円まで ' + fmt(5000 - profit) + ' 不足。'; b.className = 'banner ok15';
+  } else if (ok5k) {
+    b.textContent = '利益5,000円達成。利益率15%まで ' + (15 - rate).toFixed(1) + '% 不足。'; b.className = 'banner ok5k';
+  } else {
+    b.textContent = '目標未達成。'; b.className = 'banner ng';
+  }
+  show('r2-result');
+}
+
+// ── リセット ──
+function resetInputs() {
+  $('cost').value = '';
+  $('buy-ship').value = '0';
+  if (buyC === 'eco') $('eco-ship').value = '1100';
+  $('price').value = '';
+  $('extra').value = '100';
+  $('size').value = '60';
+  calc();
+}
+
+// ── localStorage ──
+function saveSettings() {
+  try { localStorage.setItem('bsc_buy', buyC); localStorage.setItem('bsc_sell', sellC); } catch(e) {}
+}
+function loadSettings() {
+  try {
+    const b = localStorage.getItem('bsc_buy');
+    const s = localStorage.getItem('bsc_sell');
+    if (b && b !== buyC)  setBuy(b);
+    if (s && s !== sellC) setSell(s);
+  } catch(e) {}
+}
+
+// ── 全角→半角変換（キャプチャフェーズでinline handlerより先に実行） ──
+document.addEventListener('input', function(e) {
+  const inp = e.target;
+  if (inp.tagName !== 'INPUT' || inp.inputMode !== 'numeric') return;
+  const v = inp.value
+    .replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0))
+    .replace(/[^0-9]/g, '');
+  if (v !== inp.value) inp.value = v;
+}, true);
+
+// ── 初期化 ──
+loadSettings();
 calc();
 </script>
 </body>
