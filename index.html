@@ -125,6 +125,10 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .note-box.danger{background:var(--alert-bg);color:var(--alert)}
 
 .ending-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;background:var(--alert-bg);color:var(--alert);margin-left:4px}
+.coupon-badge{font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;display:inline-block;}
+.coupon-badge.gold{background:#fff3cd;color:#7a5500;}
+.coupon-badge.day5{background:#fce8f3;color:#8b005e;}
+.coupon-badge.none{background:var(--surface2);color:var(--muted2);}
 
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:100}
 .nav-btn{flex:1;font-size:11px;font-weight:600;color:var(--muted);text-align:center;cursor:pointer;padding:5px 2px;min-height:48px;border-radius:10px;-webkit-tap-highlight-color:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center}
@@ -834,6 +838,15 @@ function isEnded(endStr) {
   return (end - new Date()) <= 0;
 }
 
+function getCouponInfo(endStr) {
+  const end = parseEnd(endStr);
+  if (!end || isNaN(end)) return null;
+  const day = end.getDate();
+  const dow = end.getDay(); // 0=日, 6=土
+  if (dow === 0 || dow === 6) return {cls:'gold', label:'🎟 ゴールドクーポン対象'};
+  if (day === 5 || day === 15 || day === 25) return {cls:'day5', label:'🎟 5のつく日クーポン対象'};
+  return {cls:'none', label:'クーポン対象外'};
+}
 function setTier(val) {
   filters.tier = val;
   document.querySelectorAll('#tier-chips .fchip').forEach(c => {
@@ -977,7 +990,12 @@ function render() {
         <div class="store-note">🏪 ヤフオク仕入＝<b>ストア限定</b>（pleasure / ROGUE / メルキャスト / brand LAQOL）・個人出品は対象外。検索後は該当ストア出品のみ拾う（ルーティンがsellerIDで自動フィルタ）</div>`;})()}
         <div class="row"><span class="row-lbl">ソース</span><span class="row-val">${c.source}</span></div>
         ${c.current_price!=null?`<div class="row"><span class="row-lbl">現在価格</span><span class="row-val">${yen(c.current_price)}</span></div>`:''}
-        ${c.end&&c.end!=='—'?`<div class="row"><span class="row-lbl">終了日時</span><span class="row-val ${hrs&&hrs<24?'red':''}">${c.end}</span></div>`:''}
+        ${(()=>{
+          if (!c.end||c.end==='—') return '';
+          const cpn = getCouponInfo(c.end);
+          const cpnBadge = cpn ? `<span class="coupon-badge ${cpn.cls}">${cpn.label}</span>` : '';
+          return `<div class="row"><span class="row-lbl">終了日時</span><span class="row-val ${hrs&&hrs<24?'red':''}">${c.end} ${cpnBadge}</span></div>`;
+        })()}
         <div class="metrics-grid">
           <div class="metric"><div class="metric-lbl">Eco指値</div><div class="metric-val green">${yen(c.eco_shitene)}</div><div class="metric-sub">Y${yen(c.yahoo_shitene)}</div></div>
           <div class="metric"><div class="metric-lbl">実勢${c.confidence?`<span class="band-conf ${c.confidence}">${c.confidence}</span>`:''}</div><div class="metric-val" style="font-size:${(c.jissei_low&&c.jissei_high)?'11px':'13px'}">${(c.jissei_low&&c.jissei_high)?`¥${(+c.jissei_low).toLocaleString('ja-JP')}〜${(+c.jissei_high).toLocaleString('ja-JP')}`:yen(c.jissei)}</div></div>
