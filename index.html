@@ -109,6 +109,16 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .ideal-diff{font-size:10px;font-weight:700}
 .ideal-diff.pos{color:#6affc0}
 .ideal-diff.neg{color:#ff9e9e}
+/* 📊 見送り集計 */
+.skip-sec{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.skip-sec-hd{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:var(--surface2);font-weight:700;font-size:13px}
+.skip-sec-n{font-size:11px;color:var(--t1);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1px 8px}
+.skip-row{display:flex;align-items:center;gap:8px;padding:7px 12px;border-top:1px solid var(--line);font-size:12px}
+.skip-src{font-size:10px;font-weight:700;border-radius:6px;padding:1px 6px;flex-shrink:0}
+.skip-src.cand{background:#23344a;color:#9ec0ff}
+.skip-src.ins{background:#0a2f3b;color:#6ad8ff}
+.skip-name{flex:1;color:var(--text);line-height:1.35}
+.skip-brand{font-size:10px;color:var(--muted2);flex-shrink:0}
 /* 🔢 バージョンフッター/更新バナー */
 .app-ver-footer{text-align:center;padding:14px 0 8px;margin-bottom:76px;font-size:11px;color:var(--muted2)}
 .app-ver-hdr{font-size:10px;font-weight:700;color:var(--t1);background:var(--surface2);border:1px solid var(--line);border-radius:7px;padding:1px 7px;margin-left:4px;white-space:nowrap}
@@ -661,6 +671,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   <div class="more-item" onclick="pickMore('receipts')"><span>🧾</span> 領収書</div>
   <div class="more-item" onclick="pickMore('artifacts')"><span>📄</span> 成果物</div>
   <div class="more-item" onclick="pickMore('archive')"><span>📅</span> 日別</div>
+  <div class="more-item" onclick="pickMore('skiplog')"><span>📊</span> 見送り集計</div>
   <div class="more-item" onclick="pickMore('help')"><span>ℹ️</span> 使い方</div>
   <a class="more-item" href="studio.html" target="_blank" rel="noopener" onclick="closeMoreMenu()"><span>🎨</span> スタジオ</a>
   <a class="more-item" href="profit_calculator.html" target="_blank" rel="noopener" onclick="closeMoreMenu()"><span>💰</span> 利益計算</a>
@@ -714,7 +725,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 5;
+const APP_VER = 6;
 const APP_VER_DATE = '2026-06-23';
 
 // ===== 🆕 新品アパレルpremium判定（Sランク×新品タグ付き×ハイブランド・¥60k例外） =====
@@ -1206,14 +1217,15 @@ async function candJudge(ck,decision,reasonOverride){
   // 監視ID: ヤフオクはaucid（無ければck）。GOで auction_watch own_target に登録
   const watchId=m.aucid||ck;
   const reason=reasonOverride||(decision==='go'?`候補GO bid=¥${bid.toLocaleString('ja-JP')}`:'候補見送り');
-  const reason_tags=decision==='skip'?insTagReason(reason):[];
+  const reason_tags=decision==='skip'?((window._pendingSkipTags&&window._pendingSkipTags.length)?window._pendingSkipTags.slice():insTagReason(reason)):[];
+  window._pendingSkipTags=null;
   const payload={item_no:watchId, platform:'yahoo', name:m.name, brand:m.brand, model:m.model,
     tier:m.tier||'Tier2', jissei, bid, profit, deadline:m.end||'', current_price:m.current_price||0, reason};
   const result=await relayPost(decision,payload);
   const server_ok=result?!!result.ok:null;
   if(!server_ok) decisionQueuePush(decision,payload);  // relay失敗時にキュー退避→接続復活で自動再送
   const decs=candDecsLoad();
-  decs[ck]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags,watchId};
+  decs[ck]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags,watchId,name:m.name,brand:m.brand};
   candDecsSave(decs);
   decLedgerSet(candStableId(m),{decision,bid,jissei,reason,reason_tags});  // 安定ID台帳にも記録(SKIP引き継ぎ)
   render();
@@ -1268,7 +1280,7 @@ function buildItemLinks(c){
 }
 
 // ② その他メニュー（たまに使うタブ）
-const MORE_TABS=['receipts','artifacts','archive','help'];
+const MORE_TABS=['receipts','artifacts','archive','help','skiplog'];
 function toggleMoreMenu(e){ if(e)e.stopPropagation(); const m=document.getElementById('more-menu'),b=document.getElementById('more-backdrop'); const open=m.classList.toggle('open'); b.classList.toggle('open',open); }
 function closeMoreMenu(){ document.getElementById('more-menu').classList.remove('open'); document.getElementById('more-backdrop').classList.remove('open'); }
 function pickMore(tab){ closeMoreMenu(); setTab(tab); }
@@ -1289,6 +1301,7 @@ function setTab(tab) {
   else if (tab==='receipts') { showReceipts(); }
   else if (tab==='inventory') { showInventory(); }
   else if (tab==='inspect') { showInspect(); }
+  else if (tab==='skiplog') { showSkipReport(); }
   else if (tab==='artifacts') { showArtifacts(); }
   else if (tab==='archive') {
     document.getElementById('cards').innerHTML = `<div class="empty"><div style="font-size:32px;margin-bottom:8px">📅</div><div>日別アーカイブ</div><div style="font-size:11px;margin-top:4px">上の日付バーで日を選んでください</div></div>`;
@@ -2064,7 +2077,8 @@ async function insJudge(itemNo,decision,reasonOverride){
   const bid=e.bid||0;
   const profit=(jissei&&bid)?Math.round(jissei*0.9-bid):(it.profit||0);
   const reason=reasonOverride||(decision==='go'?`下見GO bid=¥${bid.toLocaleString('ja-JP')}`:'下見見送り');
-  const reason_tags=decision==='skip'?insTagReason(reason):[];
+  const reason_tags=decision==='skip'?((window._pendingSkipTags&&window._pendingSkipTags.length)?window._pendingSkipTags.slice():insTagReason(reason)):[];
+  window._pendingSkipTags=null;
   const payload={item_no:itemNo,name:it.name,brand:it.brand,tier:it.tier,
     jissei,bid,profit,deadline:it.deadline,current_price:it.current_price,reason};
 
@@ -2073,7 +2087,7 @@ async function insJudge(itemNo,decision,reasonOverride){
   if(!server_ok) decisionQueuePush(decision,payload);  // relay失敗時にキュー退避→接続復活で自動再送
 
   const decs=insDecsLoad();
-  decs[itemNo]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags};
+  decs[itemNo]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags,name:it.name,brand:it.brand};
   insDecsSave(decs);
   decLedgerSet('i:'+itemNo,{decision,bid,jissei,reason,reason_tags});  // 安定ID台帳にも記録(SKIP引き継ぎ)
   // ステータスが変わるので再描画→未判断ビューから自動的に消える
@@ -2099,12 +2113,42 @@ function insSkipPrompt(itemNo){
 }
 function insSkipCancel(){ document.getElementById('ins-skip-modal').style.display='none'; }
 // 汎用見送り確定（下見=ins / 候補=cand を _skipModalCtx で振り分け）
+// ===== 📊 見送り理由の集計（理由×商品） =====
+const SKIP_TAG_LABEL={'予算超':'予算オーバー','指値超':'理想落札超過','季節外':'季節が合わない','資金':'資金繰り','状態':'状態','高値':'開始価格高い','利幅':'利幅薄い','競争':'競争激しい','真贋':'真贋怪しい','傷スレ':'傷・スレ','付属':'付属品なし','回転':'回転悪い','変色':'変色・色落ち','金具':'金具の難','写真':'写真不足','サイズ':'サイズ不安','イニシャル刻印':'イニシャル刻印'};
+function collectSkips(){
+  const out=[];
+  const cand=JSON.parse(localStorage.getItem('cand_decisions_v1')||'{}');
+  const ins=JSON.parse(localStorage.getItem('ins_decisions_v1')||'{}');
+  for(const[k,v]of Object.entries(cand)) if(v.decision==='skip') out.push({src:'候補',key:k,name:v.name||'',brand:v.brand||'',tags:v.reason_tags||[],reason:v.reason||'',at:v.decided_at||''});
+  for(const[k,v]of Object.entries(ins)) if(v.decision==='skip') out.push({src:'下見',key:k,name:v.name||'',brand:v.brand||'',tags:v.reason_tags||[],reason:v.reason||'',at:v.decided_at||''});
+  return out;
+}
+function showSkipReport(){
+  const main=document.getElementById('cards');
+  const skips=collectSkips();
+  // 理由タグ別に集計（商品リスト付き）
+  const byTag={};
+  skips.forEach(s=>{ (s.tags.length?s.tags:['(理由未記入)']).forEach(t=>{ (byTag[t]=byTag[t]||[]).push(s); }); });
+  const tags=Object.entries(byTag).sort((a,b)=>b[1].length-a[1].length);
+  const noName=skips.filter(s=>!s.name).length;
+  if(!skips.length){ main.innerHTML='<div class="empty"><div style="font-size:28px;margin-bottom:8px">📊</div><div>見送り記録はまだありません</div></div>'; return; }
+  main.innerHTML=`
+    <div class="iv-header"><span class="iv-title">📊 見送り集計</span><span class="iv-meta">全${skips.length}件 / 理由${tags.length}種</span></div>
+    ${noName?`<div class="words-note">⚠️ うち${noName}件は商品名なし（旧データ・候補リスト消去後の見送り）。v6以降の見送りは商品名が残ります。</div>`:''}
+    ${tags.map(([t,list])=>`
+      <div class="skip-sec">
+        <div class="skip-sec-hd"><span class="skip-sec-lbl">${SKIP_TAG_LABEL[t]||t}</span><span class="skip-sec-n">${list.length}件</span></div>
+        ${list.map(s=>`<div class="skip-row"><span class="skip-src ${s.src==='下見'?'ins':'cand'}">${s.src}</span><span class="skip-name">${s.name||('<span style="color:var(--muted2)">(商品名なし) '+s.key+'</span>')}</span>${s.brand?`<span class="skip-brand">${s.brand}</span>`:''}</div>`).join('')}
+      </div>`).join('')}`;
+}
+
 function skipModalConfirm(){
   const ov=document.getElementById('ins-skip-modal');
   const ctx=_skipModalCtx;
   const kws=[...ov.querySelectorAll('#ins-skip-checks input:checked')].map(c=>c.value);
   const note=document.getElementById('ins-skip-note').value.trim();
   const reason='見送り: '+([...kws,note].filter(Boolean).join(', ')||'理由未記入');
+  window._pendingSkipTags = kws.slice();   // 細かい理由タグ(予算超/指値超等)を温存→バケット化を回避
   ov.style.display='none';
   if(!ctx) return;
   if(ctx.type==='cand') candJudge(ctx.key,'skip',reason);
