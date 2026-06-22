@@ -100,6 +100,15 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 /* 🆕 新品アパレルpremiumバッジ */
 .new-prem-flag{display:inline-block;margin-left:6px;font-size:10px;font-weight:700;padding:1px 7px;border-radius:8px;background:#3b2f0a;color:#ffd966;border:1px solid #a87f12;white-space:nowrap}
 .new-prem-flag.s{background:#0a3b2f;color:#6affc0;border-color:#12a87f}
+/* 🏆 価格帯ティアバッジ・理想落札差 */
+.tier-band-flag{font-size:9px;font-weight:700;padding:1px 6px;border-radius:7px;white-space:nowrap}
+.tier-band-flag.prem{background:#3b0a2f;color:#ff9edb;border:1px solid #a8127f}
+.tier-band-flag.p59{background:#0a2f3b;color:#6ad8ff;border:1px solid #1287a8}
+.tier-band-flag.ax{background:#23344a;color:#9ec0ff;border:1px solid #345}
+.tier-band-flag.ex{background:#3b1010;color:#ff9e9e;border:1px solid #a31212}
+.ideal-diff{font-size:10px;font-weight:700}
+.ideal-diff.pos{color:#6affc0}
+.ideal-diff.neg{color:#ff9e9e}
 /* 🔢 バージョンフッター/更新バナー */
 .app-ver-footer{text-align:center;padding:14px 0 8px;font-size:11px;color:var(--muted2)}
 .ver-update-banner{position:fixed;top:0;left:0;right:0;background:#b45309;color:#fff;text-align:center;padding:9px;font-size:13px;font-weight:700;z-index:9999;cursor:pointer}
@@ -704,7 +713,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 2;
+const APP_VER = 3;
 const APP_VER_DATE = '2026-06-23';
 
 // ===== 🆕 新品アパレルpremium判定（Sランク×新品タグ付き×ハイブランド・¥60k例外） =====
@@ -2322,6 +2331,7 @@ function renderInspect(){
           ${it.tier?`<span class="iv-card-no">${it.tier}</span>`:''}
           <span class="iv-days ${dueCls}">${insDeadlineLabel(it.deadline)}</span>
           ${stBadge}
+          ${it.premium_flag?`<span class="tier-band-flag prem">⭐特上</span>`:(it.tier_band&&it.tier_band!=='その他'?`<span class="tier-band-flag ${it.tier_band==='特上5-9万'?'p59':(it.tier_band==='除外10万超'?'ex':'ax')}">${it.tier_band}</span>`:'')}
           <span class="iv-card-cat">${ngBadge}${it.brand||''}${it.category?' / '+it.category:''}</span>
         </div>
         <div class="iv-name">${insThumb(it)}${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}${newTagBadge(it.name,it.rank)}</div>
@@ -2330,7 +2340,8 @@ function renderInspect(){
           <div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv">${it.current_price?'¥'+(+it.current_price).toLocaleString('ja-JP'):'—'}</span></div>
           ${it.my_bid?`<div class="iv-row"><span class="iv-rl" style="color:#ffcf6b">🎯自分の入札</span><span class="iv-rv" style="color:#ffcf6b;font-weight:800">¥${(+it.my_bid).toLocaleString('ja-JP')}</span></div>`:''}
           ${it.jissei?`<div class="iv-row"><span class="iv-rl">販売相場<span class="mkt-rank">メルカリ</span>${it.confidence?`<span class="band-conf ${it.confidence}">信頼度${it.confidence}</span>`:''}</span><span class="iv-rv">${(it.jissei_low&&it.jissei_high)?`¥${(+it.jissei_low).toLocaleString('ja-JP')}〜¥${(+it.jissei_high).toLocaleString('ja-JP')}`:'¥'+(+it.jissei).toLocaleString('ja-JP')}</span></div>`:''}
-          ${it.profit?`<div class="iv-row"><span class="iv-rl">想定粗利</span><span class="iv-rv ${hi?'':''}" style="color:${hi?'var(--profit)':'var(--text)'};font-weight:${hi?'800':'600'}">+¥${(+it.profit).toLocaleString('ja-JP')}${hi?' ★':''}</span></div>`:''}
+          ${it.profit?`<div class="iv-row"><span class="iv-rl">想定粗利${it.profit_rate?`<span class="mkt-rank">${it.profit_rate}%</span>`:''}</span><span class="iv-rv ${hi?'':''}" style="color:${hi?'var(--profit)':'var(--text)'};font-weight:${hi?'800':'600'}">+¥${(+it.profit).toLocaleString('ja-JP')}${hi?' ★':''}</span></div>`:''}
+          ${it.ideal_bid_065?`<div class="iv-row"><span class="iv-rl">理想落札<span class="mkt-rank">手取×0.65</span></span><span class="iv-rv">¥${(+it.ideal_bid_065).toLocaleString('ja-JP')}${it.ideal_vs_current!=null?` <span class="ideal-diff ${it.ideal_vs_current>=0?'pos':'neg'}">現在比${it.ideal_vs_current>=0?'+':'−'}¥${Math.abs(it.ideal_vs_current).toLocaleString('ja-JP')}</span>`:''}</span></div>`:''}
           ${(()=>{
             const mkt=mktLookup(it.brand, it.rank);
             if(!mkt||!mkt.median) return '';
