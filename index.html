@@ -110,7 +110,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .ideal-diff.pos{color:#6affc0}
 .ideal-diff.neg{color:#ff9e9e}
 /* 🔢 バージョンフッター/更新バナー */
-.app-ver-footer{text-align:center;padding:14px 0 8px;font-size:11px;color:var(--muted2)}
+.app-ver-footer{text-align:center;padding:14px 0 8px;margin-bottom:76px;font-size:11px;color:var(--muted2)}
+.app-ver-hdr{font-size:10px;font-weight:700;color:var(--t1);background:var(--surface2);border:1px solid var(--line);border-radius:7px;padding:1px 7px;margin-left:4px;white-space:nowrap}
 .ver-update-banner{position:fixed;top:0;left:0;right:0;background:#b45309;color:#fff;text-align:center;padding:9px;font-size:13px;font-weight:700;z-index:9999;cursor:pointer}
 
 .card-body{padding:0 12px 12px}
@@ -549,7 +550,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 <body>
 <div class="app">
   <h1>仕入リサーチビューア</h1>
-  <p class="sub">二重チェック確定候補｜確信度順</p>
+  <p class="sub">二重チェック確定候補｜確信度順 <span class="app-ver-hdr" id="app-ver-hdr"></span></p>
   <div class="imgsearch-bar">
     <button class="imgsearch-btn" id="imgsearch-btn" onclick="imgSearchOpen()" aria-label="画像で相場検索">📷 画像で相場検索</button>
   </div>
@@ -713,7 +714,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 3;
+const APP_VER = 4;
 const APP_VER_DATE = '2026-06-23';
 
 // ===== 🆕 新品アパレルpremium判定（Sランク×新品タグ付き×ハイブランド・¥60k例外） =====
@@ -2450,9 +2451,12 @@ function renderArtifacts(){
 
 // ===== 🔢 バージョン表示 ＋ 乖離警告（第1層: フッター表示 / 第3層: version.json照合） =====
 function renderVerFooter(){
-  let f=document.getElementById('app-ver-footer');
+  const txt = `v${APP_VER} / ${APP_VER_DATE}`;
+  const h=document.getElementById('app-ver-hdr');   // ヘッダー常時表示
+  if(h) h.textContent = txt;
+  let f=document.getElementById('app-ver-footer');  // フッターも（固定ナビを避ける）
   if(!f){ f=document.createElement('div'); f.id='app-ver-footer'; f.className='app-ver-footer'; document.body.appendChild(f); }
-  f.textContent = `v${APP_VER} / ${APP_VER_DATE}`;
+  f.textContent = txt;
 }
 async function checkVersion(){
   try{
