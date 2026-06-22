@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0f172a">
+<title>買取判定 店頭ツール</title>
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  :root {
+    --bg: #0f172a; --card: #1e293b; --card2: #273449;
+    --txt: #f1f5f9; --sub: #94a3b8; --line: #334155;
+    --go: #22c55e; --gobg: #052e16; --gobd: #16a34a;
+    --no: #ef4444; --nobg: #450a0a; --nobd: #dc2626;
+    --accent: #38bdf8;
+  }
+  body {
+    margin: 0; background: var(--bg); color: var(--txt);
+    font-family: -apple-system, "Hiragino Sans", sans-serif;
+    padding: 12px 12px 80px; line-height: 1.4;
+  }
+  header {
+    text-align: center; padding: 8px 0 14px;
+  }
+  header h1 { font-size: 19px; margin: 0 0 2px; }
+  header .meta { font-size: 12px; color: var(--sub); }
+  .summary {
+    display: flex; gap: 8px; margin-bottom: 14px;
+    font-size: 13px; font-weight: 700;
+  }
+  .summary div {
+    flex: 1; text-align: center; padding: 8px 4px;
+    border-radius: 10px; background: var(--card);
+  }
+  .summary .sgo { color: var(--go); }
+  .summary .sno { color: var(--no); }
+  .summary .spend { color: var(--sub); }
+
+  .card {
+    background: var(--card); border-radius: 14px; padding: 14px;
+    margin-bottom: 12px; border: 2px solid var(--line);
+    transition: border-color .15s, background .15s;
+  }
+  .card.go { border-color: var(--gobd); background: linear-gradient(var(--card), var(--gobg)); }
+  .card.no { border-color: var(--nobd); background: linear-gradient(var(--card), var(--nobg)); }
+
+  .row1 { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .no { font-size: 13px; font-weight: 800; color: var(--accent); white-space: nowrap; }
+  .mgmt { font-size: 11px; color: var(--sub); }
+  .name { font-size: 14px; margin: 6px 0 2px; font-weight: 600; }
+  .cost {
+    font-size: 13px; color: var(--sub); margin-bottom: 10px;
+  }
+  .cost b { color: var(--txt); font-size: 15px; }
+
+  .inputwrap { display: flex; align-items: center; gap: 8px; }
+  .inputwrap .yen { font-size: 20px; color: var(--sub); }
+  input[type="number"] {
+    flex: 1; font-size: 24px; font-weight: 700; padding: 12px 14px;
+    border-radius: 10px; border: 2px solid var(--line);
+    background: var(--card2); color: var(--txt); width: 100%;
+    -moz-appearance: textfield;
+  }
+  input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input:focus { outline: none; border-color: var(--accent); }
+
+  .verdict {
+    margin-top: 10px; display: flex; align-items: center; justify-content: space-between;
+    min-height: 30px;
+  }
+  .badge { font-size: 20px; font-weight: 900; }
+  .badge.go { color: var(--go); }
+  .badge.no { color: var(--no); }
+  .badge.idle { color: var(--sub); font-size: 14px; font-weight: 600; }
+  .diff { font-size: 18px; font-weight: 800; }
+  .diff.go { color: var(--go); }
+  .diff.no { color: var(--no); }
+
+  .bonus {
+    margin-top: 8px; font-size: 12px; color: var(--sub);
+    padding-top: 8px; border-top: 1px dashed var(--line);
+  }
+  .bonus b { color: var(--accent); }
+
+  .toolbar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(15,23,42,.95); backdrop-filter: blur(6px);
+    border-top: 1px solid var(--line); padding: 10px 12px;
+    display: flex; gap: 8px;
+  }
+  .toolbar button {
+    flex: 1; padding: 12px; font-size: 14px; font-weight: 700;
+    border-radius: 10px; border: none; color: var(--txt);
+  }
+  .btn-save { background: var(--accent); color: #06283d; }
+  .btn-clear { background: var(--card2); color: var(--sub); border: 1px solid var(--line); }
+  .saved-note { text-align:center; font-size:12px; color:var(--sub); margin-top:6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🏪 買取判定 店頭ツール</h1>
+  <div class="meta" id="meta"></div>
+</header>
+
+<div class="summary">
+  <div class="sgo">🟢 出す <span id="cgo">0</span></div>
+  <div class="sno">🔴 持帰 <span id="cno">0</span></div>
+  <div class="spend">未入力 <span id="cpend">7</span></div>
+</div>
+
+<div id="list"></div>
+
+<div class="saved-note" id="savednote"></div>
+
+<div class="toolbar">
+  <button class="btn-clear" onclick="clearAll()">全消去</button>
+  <button class="btn-save" onclick="saveNow()">💾 記録を保存</button>
+</div>
+
+<script>
+// ===== データ（管理表 金額列=仕入れ値 / 2026-06-16時点） =====
+const ITEMS = [
+  { no:"No15", mgmt:"W015-251028", name:"シャネル ココマーク キーホルダー バッグチャーム", cost:53819 },
+  { no:"No20", mgmt:"A020-251102", name:"シャネル 06A イミテーションパール ココマーク ハート ネックレス", cost:34550 },
+  { no:"No70", mgmt:"A070-260319", name:"CHANEL ココマーク べっ甲調 サングラス 5365-A", cost:18250 },
+  { no:"No72", mgmt:"A072-260319", name:"PRADA サングラス SPR19W べっ甲調 ブラウン（新品同様）", cost:14850 },
+  { no:"No86", mgmt:"B086-260426", name:"ルイヴィトン ライオン ハンドバッグ M92131 ダミエソバージュ", cost:19020 },
+  { no:"No44", mgmt:"W044-251223", name:"シャネル キャビアスキン マトラッセ コンパクトウォレット", cost:90980 },
+  { no:"No67", mgmt:"W067-260309", name:"シャネル キャビアスキン ボーイシャネル コンパクトウォレット 三つ折り財布", cost:43980 },
+];
+const STORE_KEY = "kaitori_assess_v1";
+
+const yen = n => "¥" + Number(n).toLocaleString("ja-JP");
+const signYen = n => (n>=0?"+":"−") + "¥" + Math.abs(n).toLocaleString("ja-JP");
+
+function loadSaved(){
+  try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; }
+  catch(e){ return {}; }
+}
+let saved = loadSaved();
+
+function render(){
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+  ITEMS.forEach((it, i) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.id = "card-" + i;
+    const val = saved[it.no] != null ? saved[it.no] : "";
+    card.innerHTML = `
+      <div class="row1">
+        <span class="no">${it.no}</span>
+        <span class="mgmt">${it.mgmt}</span>
+      </div>
+      <div class="name">${it.name}</div>
+      <div class="cost">仕入れ値（赤字ライン）: <b>${yen(it.cost)}</b></div>
+      <div class="inputwrap">
+        <span class="yen">¥</span>
+        <input type="number" inputmode="numeric" pattern="[0-9]*"
+          id="in-${i}" value="${val}" placeholder="査定額を入力"
+          oninput="onInput(${i})">
+      </div>
+      <div class="verdict" id="v-${i}">
+        <span class="badge idle">査定額を入力してください</span>
+      </div>
+      <div class="bonus" id="b-${i}"></div>
+    `;
+    list.appendChild(card);
+    evaluate(i, false);
+  });
+  updateSummary();
+  showSavedNote();
+}
+
+function evaluate(i, persist){
+  const it = ITEMS[i];
+  const input = document.getElementById("in-"+i);
+  const card = document.getElementById("card-"+i);
+  const v = document.getElementById("v-"+i);
+  const b = document.getElementById("b-"+i);
+  const raw = input.value.trim();
+
+  if(raw === ""){
+    card.className = "card";
+    v.innerHTML = `<span class="badge idle">査定額を入力してください</span>`;
+    b.innerHTML = "";
+    if(persist){ delete saved[it.no]; persistState(); }
+    return;
+  }
+  const assess = Math.round(Number(raw));
+  const diff = assess - it.cost;
+  const isGo = assess >= it.cost; // 厳格: 仕入れ値以上のみ出す
+
+  card.className = "card " + (isGo ? "go" : "no");
+  v.innerHTML = `
+    <span class="badge ${isGo?'go':'no'}">${isGo?'🟢 出す':'🔴 持ち帰る'}</span>
+    <span class="diff ${isGo?'go':'no'}">${signYen(diff)}</span>
+  `;
+
+  // 26日セカスト買取20%アップ換算（査定額×1.2で再判定するといくらか）
+  const bonus = Math.round(assess * 1.2);
+  const bonusDiff = bonus - it.cost;
+  const bonusGo = bonus >= it.cost;
+  b.innerHTML = `26日(20%UP)換算: <b>${yen(bonus)}</b> → ${bonusGo?'🟢出せる':'🔴まだ赤字'} (${signYen(bonusDiff)})`;
+
+  if(persist){ saved[it.no] = assess; persistState(); }
+}
+
+function onInput(i){
+  evaluate(i, true);
+  updateSummary();
+}
+
+function updateSummary(){
+  let go=0, no=0, pend=0;
+  ITEMS.forEach((it,i)=>{
+    const raw = document.getElementById("in-"+i).value.trim();
+    if(raw===""){ pend++; return; }
+    if(Number(raw) >= it.cost) go++; else no++;
+  });
+  document.getElementById("cgo").textContent = go;
+  document.getElementById("cno").textContent = no;
+  document.getElementById("cpend").textContent = pend;
+}
+
+function persistState(){
+  localStorage.setItem(STORE_KEY, JSON.stringify(saved));
+}
+
+function saveNow(){
+  // 現在の全入力を保存
+  ITEMS.forEach((it,i)=>{
+    const raw = document.getElementById("in-"+i).value.trim();
+    if(raw==="") delete saved[it.no];
+    else saved[it.no] = Math.round(Number(raw));
+  });
+  saved._savedAt = new Date().toISOString();
+  persistState();
+  showSavedNote();
+  const btn = document.querySelector(".btn-save");
+  btn.textContent = "✅ 保存しました";
+  setTimeout(()=>{ btn.textContent = "💾 記録を保存"; }, 1500);
+}
+
+function clearAll(){
+  if(!confirm("入力した査定額を全て消去します。よろしいですか？")) return;
+  saved = {};
+  localStorage.removeItem(STORE_KEY);
+  render();
+}
+
+function showSavedNote(){
+  const note = document.getElementById("savednote");
+  if(saved._savedAt){
+    const d = new Date(saved._savedAt);
+    note.textContent = "最終保存: " + d.toLocaleString("ja-JP", {month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
+  } else {
+    note.textContent = "入力は自動で端末に保存されます（26日の再判定用）";
+  }
+}
+
+// ヘッダー日付（動的）
+(function(){
+  const now = new Date();
+  const ymd = now.getFullYear() + "/" + (now.getMonth()+1) + "/" + now.getDate();
+  document.getElementById("meta").textContent =
+    ymd + " 店頭査定 ／ 判定: 仕入れ値以上のみ🟢出す（厳格）";
+})();
+
+render();
+</script>
+</body>
+</html>
