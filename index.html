@@ -109,6 +109,12 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .ideal-diff{font-size:10px;font-weight:700}
 .ideal-diff.pos{color:#6affc0}
 .ideal-diff.neg{color:#ff9e9e}
+/* 🔄 回転バッジ・回転悪見送り警告 */
+.rot-flag{display:inline-block;margin-left:6px;font-size:10px;font-weight:700;padding:1px 7px;border-radius:8px;white-space:nowrap}
+.rot-flag.fast{background:#0a3b2f;color:#6affc0;border:1px solid #12a87f}
+.rot-flag.mid{background:#3b2f0a;color:#ffd966;border:1px solid #a87f12}
+.rot-flag.slow{background:#3b1010;color:#ff9e9e;border:1px solid #a31212}
+.rot-warn{display:inline-block;margin-left:6px;font-size:10px;font-weight:700;padding:1px 7px;border-radius:8px;background:#3b1010;color:#ffb3b3;border:1px solid #c0392b;white-space:nowrap}
 /* 📊 見送り集計 */
 .skip-sec{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
 .skip-sec-hd{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:var(--surface2);font-weight:700;font-size:13px}
@@ -725,8 +731,37 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 6;
+const APP_VER = 7;
 const APP_VER_DATE = '2026-06-23';
+
+// ===== 🔄 メルカリ回転日数（出品→売却・40日内平均／拡張非依存） =====
+let rotationData=null;
+async function loadRotation(){
+  if(rotationData)return;
+  try{ rotationData=await (await fetch('data/mercari_rotation.json?t='+Date.now(),{cache:'no-store'})).json(); }
+  catch(e){ rotationData={by_keyword:{}}; }
+}
+const ROT_BRAND_ALIAS=[['ルイヴィトン',['louis vuitton','ヴィトン','lv ']],['プラダ',['prada']],['シャネル',['chanel']],['エルメス',['hermes']],['グッチ',['gucci']],['セリーヌ',['celine']],['ロエベ',['loewe']],['カルティエ',['cartier']],['ティファニー',['tiffany']],['バレンシアガ',['balenciaga']]];
+function lookupRotation(name){
+  if(!rotationData||!rotationData.by_keyword)return null;
+  let n=(name||'').toLowerCase();
+  ROT_BRAND_ALIAS.forEach(([jp,als])=>{ if(als.some(a=>n.includes(a)))n+=' '+jp; });  // 英語ブランド→日本語別名補完
+  for(const[kw,v]of Object.entries(rotationData.by_keyword)){
+    const toks=kw.split(/\s+/).filter(t=>t.length>=2);
+    if(toks.length&&toks.every(t=>n.includes(t.toLowerCase())))return v;
+  }
+  return null;
+}
+function rotBadge(name){
+  const r=lookupRotation(name); if(!r||r.avg_kaiten==null)return'';
+  const d=r.avg_kaiten, cls=d<=7?'fast':(d<=20?'mid':'slow');
+  return `<span class="rot-flag ${cls}" title="40日内${r.n_valid}件平均">🔄回転${d}日</span>`;
+}
+// ⚠️ 前回「回転が悪い」で見送った商品を再表示時に警告（dec_ledger安定IDで判定）
+function skipRotWarn(ledgerId){
+  try{ const led=decLedgerGet(ledgerId); if(led&&led.decision==='skip'&&(led.reason_tags||[]).includes('回転'))return `<span class="rot-warn">⚠️前回 回転悪で見送り</span>`; }catch(e){}
+  return '';
+}
 
 // ===== 🆕 新品アパレルpremium判定（Sランク×新品タグ付き×ハイブランド・¥60k例外） =====
 // EcoAuc新品アパレル発掘ロジック(RW211W実証)。新品タグ付きは中古比+20-30%プレミアム。
@@ -1039,7 +1074,7 @@ function render() {
       <div class="card-header">
         ${candThumb(c)}
         <div class="card-title">
-          <div class="card-name">${c.name}${endBadge}${newTagBadge(c.name,c.rank)}</div>
+          <div class="card-name">${c.name}${endBadge}${newTagBadge(c.name,c.rank)}${rotBadge(c.name)}${skipRotWarn(candStableId(c))}</div>
           <div class="card-model">${c.brand} / ${c.model}</div>
         </div>
         <div class="card-rank">ランク${c.rank}</div>
@@ -2288,7 +2323,7 @@ async function showInspect(){
     }
   }
   // 相場データは fail-soft（なくても下見は表示する）
-  await loadMarketPrices();
+  await loadRotation(); await loadMarketPrices();
   renderInspect();
 }
 function insToggleBrand(b){ insBrands.has(b)?insBrands.delete(b):insBrands.add(b); renderInspect(); }
@@ -2388,7 +2423,7 @@ function renderInspect(){
           ${it.premium_flag?`<span class="tier-band-flag prem">⭐特上</span>`:(it.tier_band&&it.tier_band!=='その他'?`<span class="tier-band-flag ${it.tier_band==='特上5-9万'?'p59':(it.tier_band==='除外10万超'?'ex':'ax')}">${it.tier_band}</span>`:'')}
           <span class="iv-card-cat">${ngBadge}${it.brand||''}${it.category?' / '+it.category:''}</span>
         </div>
-        <div class="iv-name">${insThumb(it)}${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}${newTagBadge(it.name,it.rank)}</div>
+        <div class="iv-name">${insThumb(it)}${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}${newTagBadge(it.name,it.rank)}${rotBadge(it.name)}${skipRotWarn('i:'+it.item_no)}</div>
         ${perfBadge}${sniperBadge(it)}
         <div class="iv-rows">
           <div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv">${it.current_price?'¥'+(+it.current_price).toLocaleString('ja-JP'):'—'}</span></div>
@@ -2492,6 +2527,7 @@ function renderArtifacts(){
   await loadNgWords();
   await loadServerDecisions();   // ① サーバー記録(decisions.json)を先に読み込む→各タブで判断/入力を復元
   loadResearchInfo();            // 🔬 リサーチ時情報(research_info.json)を先読み（在庫タブ用・非ブロッキング）
+  await loadRotation();          // 🔄 メルカリ回転日数を先読み（候補/下見の回転バッジ用）
   // 候補データは latest.json の date を採用（固定日付を廃止＝常に最新を開く）
   let _latest=null;
   try{ const r=await fetch('data/banshee_research_latest.json?t='+Date.now(),{cache:'no-store'}); if(r.ok) _latest=await r.json(); }catch(e){}
