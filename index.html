@@ -97,6 +97,9 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .card-header>.card-thumb{width:60px;height:60px;object-fit:cover;border-radius:8px;flex-shrink:0;background:var(--surface2);border:1px solid var(--line);cursor:zoom-in}
 .iv-name>.card-thumb{float:left;width:52px;height:52px;object-fit:cover;border-radius:8px;margin:0 8px 2px 0;background:var(--surface2);border:1px solid var(--line);cursor:zoom-in}
 .card-thumb.thumb-missing{display:none}
+/* 🆕 新品アパレルpremiumバッジ */
+.new-prem-flag{display:inline-block;margin-left:6px;font-size:10px;font-weight:700;padding:1px 7px;border-radius:8px;background:#3b2f0a;color:#ffd966;border:1px solid #a87f12;white-space:nowrap}
+.new-prem-flag.s{background:#0a3b2f;color:#6affc0;border-color:#12a87f}
 /* 🔢 バージョンフッター/更新バナー */
 .app-ver-footer{text-align:center;padding:14px 0 8px;font-size:11px;color:var(--muted2)}
 .ver-update-banner{position:fixed;top:0;left:0;right:0;background:#b45309;color:#fff;text-align:center;padding:9px;font-size:13px;font-weight:700;z-index:9999;cursor:pointer}
@@ -701,8 +704,22 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 1;
+const APP_VER = 2;
 const APP_VER_DATE = '2026-06-23';
+
+// ===== 🆕 新品アパレルpremium判定（Sランク×新品タグ付き×ハイブランド・¥60k例外） =====
+// EcoAuc新品アパレル発掘ロジック(RW211W実証)。新品タグ付きは中古比+20-30%プレミアム。
+const APPAREL_PREMIUM_BRANDS = ['LOUIS VUITTON','ルイヴィトン','ヴィトン','CHANEL','シャネル','HERMES','エルメス'];
+function newTagBadge(name, rank){
+  const n = name || '';
+  const isNew = /新品.*タグ|タグ付.*新品|新品タグ|タグ付き?新品|新品同様.*タグ/.test(n) || /新品.*未使用|未使用.*タグ付/.test(n);
+  if(!isNew) return '';
+  const sRank = (rank==='S'||rank==='SA');
+  const hiBrand = APPAREL_PREMIUM_BRANDS.some(b=>n.includes(b));
+  if(sRank && hiBrand) return `<span class="new-prem-flag s">🆕 Sランク新品プレミアム ¥60k例外可</span>`;
+  if(isNew) return `<span class="new-prem-flag">🆕 新品タグ付(+20-30%)</span>`;
+  return '';
+}
 
 // ===== 📷 商品サムネイル（thumbsブランチ・raw配信／aucid・item_no・mercari_idキー） =====
 // ホットリンク不可(EcoAuc認証/終了で画像URL消失)→圧縮サムネをリポジトリ保存し<img>表示
@@ -1001,7 +1018,7 @@ function render() {
       <div class="card-header">
         ${candThumb(c)}
         <div class="card-title">
-          <div class="card-name">${c.name}${endBadge}</div>
+          <div class="card-name">${c.name}${endBadge}${newTagBadge(c.name,c.rank)}</div>
           <div class="card-model">${c.brand} / ${c.model}</div>
         </div>
         <div class="card-rank">ランク${c.rank}</div>
@@ -2307,7 +2324,7 @@ function renderInspect(){
           ${stBadge}
           <span class="iv-card-cat">${ngBadge}${it.brand||''}${it.category?' / '+it.category:''}</span>
         </div>
-        <div class="iv-name">${insThumb(it)}${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}</div>
+        <div class="iv-name">${insThumb(it)}${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}${newTagBadge(it.name,it.rank)}</div>
         ${perfBadge}${sniperBadge(it)}
         <div class="iv-rows">
           <div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv">${it.current_price?'¥'+(+it.current_price).toLocaleString('ja-JP'):'—'}</span></div>

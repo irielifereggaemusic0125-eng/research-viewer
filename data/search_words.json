@@ -1,7 +1,7 @@
 {
   "updated": "2026-06-23",
-  "schema": "v5-strategy-c",
-  "note": "④戦略C適用(2026-06-23): メルカリ実勢2-4万帯集中/10万超除外、ランクS/A/AB(B条件付)、粗利5000死守。サングラス・ネックレス・キーホルダー類は出口狭く優先度↓(実証済み勝ち型番は維持)。ニッチ(DELVAUX等)はSOLD実績確認までGO不可。Yahoo鑑定付き(SODA)個人出品を新ソース追加(鑑定料¥2,500を入札上限から差引)。 ②カバン・アクセサリー拡大(2026-06-16): ecoauc_targets P12-18追加(グッチ/セリーヌ/ロエベ/シャネルバッグ・カルティエ/エルメス/ティファニーアクセ)。Yahoo small_bags/accessories拡充。③LV財布絞り込み: P3にrank_exclude=Bを追加→Bランク除外。",
+  "schema": "v6-apparel-premium",
+  "note": "⑤新品アパレルpremium枠追加(2026-06-23): EcoAuc Sランク×新品タグ付き×LV/CHANEL/HERMESメインライン アパレル(春夏トップス)。category=8スキャン・理想落札=手取り×0.65・priority A高単価¥60k例外。RW211W実証/第789回横展開成功。 ④戦略C適用(2026-06-23): メルカリ実勢2-4万帯集中/10万超除外、ランクS/A/AB(B条件付)、粗利5000死守。サングラス・ネックレス・キーホルダー類は出口狭く優先度↓(実証済み勝ち型番は維持)。ニッチ(DELVAUX等)はSOLD実績確認までGO不可。Yahoo鑑定付き(SODA)個人出品を新ソース追加(鑑定料¥2,500を入札上限から差引)。 ②カバン・アクセサリー拡大(2026-06-16): ecoauc_targets P12-18追加(グッチ/セリーヌ/ロエベ/シャネルバッグ・カルティエ/エルメス/ティファニーアクセ)。Yahoo small_bags/accessories拡充。③LV財布絞り込み: P3にrank_exclude=Bを追加→Bランク除外。",
   "categories": [
     {
       "id": "win_patterns",
@@ -20,6 +20,17 @@
         "1円 ルイヴィトン M01880",
         "1円 グッチ 410812",
         "1円 バレンシアガ 671402"
+      ]
+    },
+    {
+      "id": "apparel_premium",
+      "label": "🆕 新品アパレルpremium（Sランク×新品タグ付き×LV/CHANEL/HERMES・¥60k例外）",
+      "words": [
+        "1円 ルイヴィトン モノグラム トップス 新品 タグ付",
+        "1円 ルイヴィトン モノグラム Tシャツ 新品 タグ付",
+        "1円 ルイヴィトン モノグラム スウェット 新品",
+        "1円 シャネル トップス 新品 タグ付",
+        "1円 エルメス トップス 新品 タグ付"
       ]
     },
     {
@@ -552,6 +563,21 @@
       "kaiten": null,
       "rieki": null,
       "note": "②追加: ティファニーアクセ(オープンハート/Tスマイル/バイザヤード等)。シルバー系主軸。"
+    },
+    {
+      "priority": 19,
+      "tier": "A/新品アパレル",
+      "minor": false,
+      "q": "モノグラム トップス",
+      "brand": "LOUIS VUITTON",
+      "ecoauc_brand": "LOUIS VUITTON",
+      "q_product": "モノグラム トップス",
+      "category": 8,
+      "new_tag_priority": true,
+      "bid_cap_exception": 60000,
+      "kaiten": null,
+      "rieki": 25,
+      "note": "新品アパレルpremium枠・Sランク新品タグ付き優先・¥60k例外(RW211W実証)"
     }
   ],
   "strategy_c": {
@@ -592,6 +618,29 @@
       "rule": "鑑定料¥2,500を入札上限から差し引いて粗利5000を死守",
       "bid_cap_formula": "入札上限 = 販売実勢×0.9 − フリマ送料 − 鑑定料2500 − 目標粗利5000",
       "note": "SODA鑑定で真贋担保→個人出品も候補化(通常のヤフオク=ストア限定ルールの例外)"
+    },
+    "apparel_premium": {
+      "enabled": true,
+      "ecoauc_category": 8,
+      "scan_ranks": [
+        "S",
+        "SA",
+        "A",
+        "AB"
+      ],
+      "scan_url": "https://www.ecoauc.com/client/auctions/inspect?master_item_categories[]=8&master_item_ranks[]=2&master_item_ranks[]=3&master_item_ranks[]=4&limit=100&sortKey=6",
+      "brands": [
+        "LOUIS VUITTON",
+        "CHANEL",
+        "HERMES"
+      ],
+      "season_filter": "春夏OK(トップス/半袖) / コート・カシミヤ等は除外",
+      "new_tag_premium": "「新品タグ付」=中古比+20-30%相場プレミアム・優先フラグ",
+      "ideal_bid_formula": "手取り(出品×0.9−送料700) × 0.65（目標粗利率35%）",
+      "bid_cap_exception": 60000,
+      "exception_rule": "priority A・新品タグ付きハイブランドモノグラムは¥60,000まで容認(通常の理想落札超過でも可)",
+      "proof": "RW211Wトップス第780回 落札¥57,200→¥69,160 SOLD・第789回スウェット横展開成功",
+      "note": "出口狭いアパレルの例外=Sランク新品タグ付きハイブランドは出口実証ありso狙う(サングラス/ネックレス優先度下げとは別枠)"
     }
   }
 }

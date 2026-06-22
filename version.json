@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-06-23",
-  "note": "商品サムネイル表示を追加(ヤフオク/エコオク/メルカリ)。バージョン管理基盤(フッターver/version.json/乖離警告)を新設。"
+  "note": "新品アパレルpremium枠を追加。EcoAuc Sランク×新品タグ付き×LV/CHANEL/HERMESの🆕バッジ判定・¥60k例外。検索ワードにapparel_premiumカテゴリ+下見P19。"
 }
