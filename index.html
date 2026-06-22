@@ -714,7 +714,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 4;
+const APP_VER = 5;
 const APP_VER_DATE = '2026-06-23';
 
 // ===== 🆕 新品アパレルpremium判定（Sランク×新品タグ付き×ハイブランド・¥60k例外） =====
@@ -1221,8 +1221,9 @@ async function candJudge(ck,decision,reasonOverride){
 function candUndo(ck){ const d=candDecsLoad(); const m=candMeta[ck]; delete d[ck]; candDecsSave(d); if(m)decLedgerDelete(candStableId(m)); render(); }
 // 見送り理由（ヤフオク向け・状態悪い/開始価格高い/利幅薄い/競争激しい等）
 const CAND_SKIP_REASONS=[
-  ['状態が悪い','状態'],['開始価格が高い','高値'],['利幅が薄い','利幅'],['競争が激しい','競争'],
-  ['真贋が怪しい','真贋'],['傷・スレ','傷スレ'],['付属品なし','付属'],['回転が悪い','回転'],
+  ['予算オーバー','予算超'],['理想落札を超過','指値超'],['状態が悪い','状態'],['開始価格が高い','高値'],
+  ['利幅が薄い','利幅'],['競争が激しい','競争'],['真贋が怪しい','真贋'],['傷・スレ','傷スレ'],
+  ['付属品なし','付属'],['回転が悪い','回転'],['季節が合わない','季節外'],['資金繰り・タイミング','資金'],
 ];
 function candSkipPrompt(ck){
   const m=candMeta[ck]; if(!m) return;
@@ -2043,9 +2044,10 @@ function insTagReason(reason){
 }
 // ③ 見送り理由チェックリスト（label=表示, kw=タグ判定に使うキーワード）
 const INS_SKIP_REASONS=[
-  ['変色・色落ち','変色'],['傷・スレ','傷スレ'],['金具の難','金具'],['真贋が怪しい','真贋'],
-  ['利幅が薄い','利幅'],['状態・ランク不安','状態'],['写真が不足','写真'],['サイズ不安','サイズ'],
-  ['回転が悪い','回転'],['付属品なし','付属'],['イニシャル刻印あり','イニシャル刻印'],
+  ['予算オーバー','予算超'],['理想落札を超過','指値超'],['変色・色落ち','変色'],['傷・スレ','傷スレ'],
+  ['金具の難','金具'],['真贋が怪しい','真贋'],['利幅が薄い','利幅'],['状態・ランク不安','状態'],
+  ['写真が不足','写真'],['サイズ不安','サイズ'],['回転が悪い','回転'],['付属品なし','付属'],
+  ['イニシャル刻印あり','イニシャル刻印'],['季節が合わない','季節外'],['資金繰り・タイミング','資金'],
 ];
 
 async function insJudge(itemNo,decision,reasonOverride){
@@ -2195,7 +2197,9 @@ function mktJudge(currentPrice, median) {
 let inspectData = null;
 const insBrands = new Set();   // ブランドフィルタ(複数)
 const insCats = new Set();      // カテゴリフィルタ(複数)
+const insRanks = new Set();     // ランクフィルタ(複数)
 let insPrice = 'all';           // 価格帯(単一)
+const INS_RANK_ORDER = ['S','SA','A','AB','B','BC','C'];
 let insStatusFilter = 'pending'; // ③ ステータス絞り込み: pending(未判断)|bidding(入札中)|done(処理済み)
 
 const INS_PRICE_DEFS = [['all','すべて',0,Infinity],['p5','〜5千',0,5000],['p10','〜1万',0,10000],['p30','〜3万',0,30000],['p30over','3万超',30000,Infinity]];
@@ -2244,9 +2248,10 @@ async function showInspect(){
   renderInspect();
 }
 function insToggleBrand(b){ insBrands.has(b)?insBrands.delete(b):insBrands.add(b); renderInspect(); }
+function insToggleRank(r){ insRanks.has(r)?insRanks.delete(r):insRanks.add(r); renderInspect(); }
 function insToggleCat(c){ insCats.has(c)?insCats.delete(c):insCats.add(c); renderInspect(); }
 function insSetPrice(p){ insPrice=p; renderInspect(); }
-function insClear(){ insBrands.clear(); insCats.clear(); insPrice='all'; renderInspect(); }
+function insClear(){ insBrands.clear(); insCats.clear(); insRanks.clear(); insPrice='all'; renderInspect(); }
 
 function renderInspect(){
   const main=document.getElementById('cards');
@@ -2259,6 +2264,7 @@ function renderInspect(){
 
   let baseItems=all.filter(i=>{
     if(insBrands.size && !insBrands.has(i.brand)) return false;
+    if(insRanks.size && !insRanks.has(i.rank)) return false;
     if(insCats.size && !insCats.has(i.category)) return false;
     const pr=i.current_price||0;
     if(!(pr>=pdef[2] && pr<pdef[3])) return false;
@@ -2282,6 +2288,8 @@ function renderInspect(){
   Object.keys(insItemMap).forEach(k=>delete insItemMap[k]);
   const brandChips=brands.map(b=>`<button class="iv-chip${insBrands.has(b)?' on':''}" onclick="insToggleBrand('${b.replace(/'/g,"&apos;")}')">${b}</button>`).join('');
   const catChips=cats.map(c=>`<button class="iv-chip${insCats.has(c)?' on':''}" onclick="insToggleCat('${c.replace(/'/g,"&apos;")}')">${c}</button>`).join('');
+  const ranksPresent=INS_RANK_ORDER.filter(r=>all.some(i=>i.rank===r));
+  const rankChips=ranksPresent.map(r=>`<button class="iv-chip${insRanks.has(r)?' on':''}" onclick="insToggleRank('${r}')">${r}</button>`).join('');
   const priceChips=INS_PRICE_DEFS.map(p=>`<button class="iv-chip${insPrice===p[0]?' on':''}" onclick="insSetPrice('${p[0]}')">${p[1]}</button>`).join('');
   const STATUS_DEFS=[['pending','📋 未判断','今アクション要'],['bidding','🎯 入札中','GO済・進行中'],['done','✅ 処理済み','見送り・終了']];
   const statusChips=STATUS_DEFS.map(s=>`<button class="iv-stchip${insStatusFilter===s[0]?' on '+s[0]:''}" onclick="insSetStatus('${s[0]}')">${s[1]}<span class="iv-stnum">${statusCount[s[0]]}</span></button>`).join('');
@@ -2293,6 +2301,7 @@ function renderInspect(){
     <div class="iv-filter">
       <div class="iv-fg"><div class="iv-fl">🏷 ブランド</div><div class="iv-chips">${brandChips||'<span style="font-size:11px;color:var(--muted2)">データなし</span>'}</div></div>
       <div class="iv-fg"><div class="iv-fl">📦 カテゴリ</div><div class="iv-chips">${catChips}</div></div>
+      <div class="iv-fg"><div class="iv-fl">🏆 ランク</div><div class="iv-chips">${rankChips||'<span style="font-size:11px;color:var(--muted2)">データなし</span>'}</div></div>
       <div class="iv-fg"><div class="iv-fl">💴 価格帯</div><div class="iv-chips">${priceChips}</div></div>
       <div class="iv-fg"><div class="iv-fl">🚫 NGワード</div><div class="iv-chips"><button class="iv-chip${ngHideExcluded?' on':''}" onclick="toggleNgHide()">除外を隠す</button></div></div>
     </div>
