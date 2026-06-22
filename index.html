@@ -93,6 +93,13 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .card-name{font-size:14px;font-weight:700;color:var(--text)}
 .card-model{font-size:10px;color:var(--muted);margin-top:1px}
 .card-rank{font-size:10px;font-weight:600;padding:2px 7px;border-radius:10px;background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
+/* 📷 商品サムネイル */
+.card-header>.card-thumb{width:60px;height:60px;object-fit:cover;border-radius:8px;flex-shrink:0;background:var(--surface2);border:1px solid var(--line);cursor:zoom-in}
+.iv-name>.card-thumb{float:left;width:52px;height:52px;object-fit:cover;border-radius:8px;margin:0 8px 2px 0;background:var(--surface2);border:1px solid var(--line);cursor:zoom-in}
+.card-thumb.thumb-missing{display:none}
+/* 🔢 バージョンフッター/更新バナー */
+.app-ver-footer{text-align:center;padding:14px 0 8px;font-size:11px;color:var(--muted2)}
+.ver-update-banner{position:fixed;top:0;left:0;right:0;background:#b45309;color:#fff;text-align:center;padding:9px;font-size:13px;font-weight:700;z-index:9999;cursor:pointer}
 
 .card-body{padding:0 12px 12px}
 .row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:.5px solid var(--line);font-size:12px}
@@ -693,6 +700,23 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 </div>
 
 <script>
+// ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
+const APP_VER = 1;
+const APP_VER_DATE = '2026-06-23';
+
+// ===== 📷 商品サムネイル（thumbsブランチ・raw配信／aucid・item_no・mercari_idキー） =====
+// ホットリンク不可(EcoAuc認証/終了で画像URL消失)→圧縮サムネをリポジトリ保存し<img>表示
+const THUMB_BASE = 'https://raw.githubusercontent.com/irielifereggaemusic0125-eng/research-viewer/thumbs/';
+function _thumbImg(key, href){
+  if(!key) return '';
+  const src = THUMB_BASE + key + '.jpg';
+  const oc = href ? `onclick="event.stopPropagation();window.open('${href}','_blank')"` : '';
+  return `<img class="card-thumb" loading="lazy" src="${src}" alt="" ${oc} onerror="this.classList.add('thumb-missing')">`;
+}
+function candThumb(c){ return _thumbImg(c.aucid?('y_'+c.aucid):'', c.url); }
+function insThumb(it){ const k=(it.item_no||'').replace(/[^0-9_]/g,''); return _thumbImg(k?('e_'+k):'', it.view_url||''); }
+function ivThumb(it){ return _thumbImg(it.mercari_id?('m_'+it.mercari_id):'', it.mercari_id?('https://jp.mercari.com/item/'+it.mercari_id):''); }
+
 // ===== 📷 画像で相場検索（A': メルカリ画像検索 / B': Google Lens） =====
 let imgSearchBlob = null;
 function imgSearchOpen(){ document.getElementById('imgs-overlay').classList.add('on'); }
@@ -975,6 +999,7 @@ function render() {
         ${cstBadge}${sniperBadge(c)}${ngBadge}${isWarnCard?`<span class="warn-flag">⚠️ 要確認</span>`:''}
       </div>
       <div class="card-header">
+        ${candThumb(c)}
         <div class="card-title">
           <div class="card-name">${c.name}${endBadge}</div>
           <div class="card-model">${c.brand} / ${c.model}</div>
@@ -1822,7 +1847,7 @@ function renderInventory(){
           <span class="iv-days ${lv}">${daysLabel}</span>
           <span class="iv-card-cat">${eco?'🔭 EcoAuc出品中':it.category||''}</span>
         </div>
-        <div class="iv-name">${it.name||'(品名なし)'}</div>
+        <div class="iv-name">${ivThumb(it)}${it.name||'(品名なし)'}</div>
         <div class="iv-rows">
           <div class="iv-row"><span class="iv-rl">仕入日</span><span class="iv-rv">${it.buy_date||'—'}</span></div>
           <div class="iv-row"><span class="iv-rl">仕入金額</span><span class="iv-rv">${ivYen(it.buy_price)}</span></div>
@@ -2282,7 +2307,7 @@ function renderInspect(){
           ${stBadge}
           <span class="iv-card-cat">${ngBadge}${it.brand||''}${it.category?' / '+it.category:''}</span>
         </div>
-        <div class="iv-name">${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}</div>
+        <div class="iv-name">${insThumb(it)}${it.name||''}${it.rank?` <span style="font-size:10px;color:var(--muted)">[${it.rank}]</span>`:''}</div>
         ${perfBadge}${sniperBadge(it)}
         <div class="iv-rows">
           <div class="iv-row"><span class="iv-rl">現在価格</span><span class="iv-rv">${it.current_price?'¥'+(+it.current_price).toLocaleString('ja-JP'):'—'}</span></div>
@@ -2394,6 +2419,31 @@ function renderArtifacts(){
   await loadDate(currentDate);
   setTimeout(()=>{ predictFlushQueue(); decisionFlushQueue(); }, 1500);  // 起動時に未送信の学習データ・判断を再送
 })();
+
+// ===== 🔢 バージョン表示 ＋ 乖離警告（第1層: フッター表示 / 第3層: version.json照合） =====
+function renderVerFooter(){
+  let f=document.getElementById('app-ver-footer');
+  if(!f){ f=document.createElement('div'); f.id='app-ver-footer'; f.className='app-ver-footer'; document.body.appendChild(f); }
+  f.textContent = `v${APP_VER} / ${APP_VER_DATE}`;
+}
+async function checkVersion(){
+  try{
+    const r=await fetch('version.json?t='+Date.now(),{cache:'no-store'});
+    if(!r.ok) return;
+    const v=await r.json();
+    if(v && typeof v.version==='number' && v.version>APP_VER){
+      let b=document.getElementById('ver-update-banner');
+      if(!b){
+        b=document.createElement('div'); b.id='ver-update-banner'; b.className='ver-update-banner';
+        b.textContent=`🔄 新しいバージョン v${v.version} があります。タップで再読み込み`;
+        b.onclick=()=>location.reload(true);
+        document.body.appendChild(b);
+      }
+    }
+  }catch(e){}
+}
+renderVerFooter();
+checkVersion();
 </script>
 </body>
 </html>
