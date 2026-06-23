@@ -751,7 +751,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 8;
+const APP_VER = 9;
 const APP_VER_DATE = '2026-06-23';
 
 // ===== 🔄 メルカリ回転日数（出品→売却・40日内平均／拡張非依存） =====
@@ -761,7 +761,7 @@ async function loadRotation(){
   try{ rotationData=await (await fetch('data/mercari_rotation.json?t='+Date.now(),{cache:'no-store'})).json(); }
   catch(e){ rotationData={by_keyword:{}}; }
 }
-const ROT_BRAND_ALIAS=[['ルイヴィトン',['louis vuitton','ヴィトン','lv ']],['プラダ',['prada']],['シャネル',['chanel']],['エルメス',['hermes']],['グッチ',['gucci']],['セリーヌ',['celine']],['ロエベ',['loewe']],['カルティエ',['cartier']],['ティファニー',['tiffany']],['バレンシアガ',['balenciaga']]];
+const ROT_BRAND_ALIAS=[['ルイヴィトン',['louis vuitton','ヴィトン','lv ']],['プラダ',['prada']],['シャネル',['chanel']],['エルメス',['hermes']],['グッチ',['gucci']],['セリーヌ',['celine']],['ロエベ',['loewe']],['カルティエ',['cartier']],['ティファニー',['tiffany']],['バレンシアガ',['balenciaga']],['サンローラン',['saint laurent','ysl','イヴサンローラン','yves saint laurent']]];
 function lookupRotation(name){
   if(!rotationData||!rotationData.by_keyword)return null;
   let n=(name||'').toLowerCase();
