@@ -125,6 +125,25 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .skip-src.ins{background:#0a2f3b;color:#6ad8ff}
 .skip-name{flex:1;color:var(--text);line-height:1.35}
 .skip-brand{font-size:10px;color:var(--muted2);flex-shrink:0}
+/* 📋 入札追跡・乖離 */
+.bt-summary{display:flex;gap:8px;margin-bottom:12px}
+.bt-card{flex:1;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 8px;text-align:center}
+.bt-card.hl{border-color:#a87f12;background:linear-gradient(var(--surface),#2a2208)}
+.bt-k{font-size:10px;color:var(--muted2)}
+.bt-v{font-size:19px;font-weight:800;color:var(--text);margin:2px 0}
+.bt-sub{font-size:9px;color:var(--muted)}
+.bt-row{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:9px 12px;margin-bottom:8px}
+.bt-r1{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.bt-out{font-size:10px;font-weight:700;border-radius:7px;padding:1px 7px;flex-shrink:0}
+.bt-out.won{background:#0a3b2f;color:#6affc0}
+.bt-out.lost{background:#3b1010;color:#ff9e9e}
+.bt-out.ryu{background:#23344a;color:#9ec0ff}
+.bt-name{font-size:12px;font-weight:600;line-height:1.3}
+.bt-r2{display:flex;gap:12px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.bt-r2 b{color:var(--text)}
+.bt-gap{color:var(--muted2)}
+.bt-gap.near{color:#ffd966;font-weight:700}
+.bt-note{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.35}
 /* 🔢 バージョンフッター/更新バナー */
 .app-ver-footer{text-align:center;padding:14px 0 8px;margin-bottom:76px;font-size:11px;color:var(--muted2)}
 .app-ver-hdr{font-size:10px;font-weight:700;color:var(--t1);background:var(--surface2);border:1px solid var(--line);border-radius:7px;padding:1px 7px;margin-left:4px;white-space:nowrap}
@@ -678,6 +697,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   <div class="more-item" onclick="pickMore('artifacts')"><span>📄</span> 成果物</div>
   <div class="more-item" onclick="pickMore('archive')"><span>📅</span> 日別</div>
   <div class="more-item" onclick="pickMore('skiplog')"><span>📊</span> 見送り集計</div>
+  <div class="more-item" onclick="pickMore('bidtrack')"><span>📋</span> 入札追跡・乖離</div>
   <div class="more-item" onclick="pickMore('help')"><span>ℹ️</span> 使い方</div>
   <a class="more-item" href="studio.html" target="_blank" rel="noopener" onclick="closeMoreMenu()"><span>🎨</span> スタジオ</a>
   <a class="more-item" href="profit_calculator.html" target="_blank" rel="noopener" onclick="closeMoreMenu()"><span>💰</span> 利益計算</a>
@@ -731,7 +751,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 7;
+const APP_VER = 8;
 const APP_VER_DATE = '2026-06-23';
 
 // ===== 🔄 メルカリ回転日数（出品→売却・40日内平均／拡張非依存） =====
@@ -1315,7 +1335,7 @@ function buildItemLinks(c){
 }
 
 // ② その他メニュー（たまに使うタブ）
-const MORE_TABS=['receipts','artifacts','archive','help','skiplog'];
+const MORE_TABS=['receipts','artifacts','archive','help','skiplog','bidtrack'];
 function toggleMoreMenu(e){ if(e)e.stopPropagation(); const m=document.getElementById('more-menu'),b=document.getElementById('more-backdrop'); const open=m.classList.toggle('open'); b.classList.toggle('open',open); }
 function closeMoreMenu(){ document.getElementById('more-menu').classList.remove('open'); document.getElementById('more-backdrop').classList.remove('open'); }
 function pickMore(tab){ closeMoreMenu(); setTab(tab); }
@@ -1337,6 +1357,7 @@ function setTab(tab) {
   else if (tab==='inventory') { showInventory(); }
   else if (tab==='inspect') { showInspect(); }
   else if (tab==='skiplog') { showSkipReport(); }
+  else if (tab==='bidtrack') { showBidTracking(); }
   else if (tab==='artifacts') { showArtifacts(); }
   else if (tab==='archive') {
     document.getElementById('cards').innerHTML = `<div class="empty"><div style="font-size:32px;margin-bottom:8px">📅</div><div>日別アーカイブ</div><div style="font-size:11px;margin-top:4px">上の日付バーで日を選んでください</div></div>`;
@@ -2175,6 +2196,40 @@ function showSkipReport(){
         <div class="skip-sec-hd"><span class="skip-sec-lbl">${SKIP_TAG_LABEL[t]||t}</span><span class="skip-sec-n">${list.length}件</span></div>
         ${list.map(s=>`<div class="skip-row"><span class="skip-src ${s.src==='下見'?'ins':'cand'}">${s.src}</span><span class="skip-name">${s.name||('<span style="color:var(--muted2)">(商品名なし) '+s.key+'</span>')}</span>${s.brand?`<span class="skip-brand">${s.brand}</span>`:''}</div>`).join('')}
       </div>`).join('')}`;
+}
+
+// ===== 📋 入札追跡・落札乖離（auction_watch own_bid由来） =====
+let bidTrackData=null;
+async function showBidTracking(){
+  const main=document.getElementById('cards');
+  if(!bidTrackData){
+    main.innerHTML='<div class="empty"><div style="font-size:28px;margin-bottom:8px">📋</div><div>読み込み中…</div></div>';
+    try{ bidTrackData=await (await fetch('data/bid_tracking.json?t='+Date.now(),{cache:'no-store'})).json(); }
+    catch(e){ main.innerHTML='<div class="empty">入札追跡データがありません</div>'; return; }
+  }
+  const d=bidTrackData, s=d.summary||{}, items=d.items||[];
+  const yen=n=>(n==null?'—':'¥'+(+n).toLocaleString('ja-JP'));
+  const OUT={won:['✅落札','won'],lost:['❌競り負け','lost'],ryuusatsu:['🔁流札','ryu']};
+  const row=x=>{
+    const o=OUT[x.outcome]||[x.outcome||'?',''];
+    const gapTxt=x.gap==null?'':(x.outcome==='lost'?`<span class="bt-gap near">あと+${yen(x.gap)}で勝てた${x.gap_pct?`(${x.gap_pct}%)`:''}</span>`:`<span class="bt-gap">乖離${x.gap>=0?'+':''}${yen(x.gap)}</span>`);
+    return `<div class="bt-row">
+      <div class="bt-r1"><span class="bt-out ${o[1]}">${o[0]}</span><span class="bt-name">${x.name||''}</span></div>
+      <div class="bt-r2"><span>自分 <b>${yen(x.bid)}</b></span><span>落札 <b>${yen(x.final)}</b></span>${gapTxt}</div>
+      ${x.verdict||x.reason?`<div class="bt-note">${x.verdict?`<b>${x.verdict}</b> `:''}${x.reason||''}</div>`:''}
+    </div>`;
+  };
+  // 惜敗(あと¥3000以内の負け)を上位ハイライト
+  const near=items.filter(x=>x.outcome==='lost'&&x.gap!=null&&x.gap<=3000);
+  main.innerHTML=`
+    <div class="iv-header"><span class="iv-title">📋 入札追跡・落札乖離</span><span class="iv-meta">${s.total}件 / 更新:${d.updated_at}</span></div>
+    <div class="bt-summary">
+      <div class="bt-card"><div class="bt-k">勝率</div><div class="bt-v">${s.win_rate}%</div><div class="bt-sub">${s.won}勝${s.lost}負${s.ryuusatsu?('・'+s.ryuusatsu+'流'):''}</div></div>
+      <div class="bt-card"><div class="bt-k">平均 負け乖離</div><div class="bt-v">¥${(s.avg_lose_gap||0).toLocaleString('ja-JP')}</div><div class="bt-sub">落札−自分の差</div></div>
+      <div class="bt-card hl"><div class="bt-k">惜敗(あと¥3k)</div><div class="bt-v">${s.near_miss_3k}件</div><div class="bt-sub">強気で勝てた</div></div>
+    </div>
+    ${near.length?`<div class="words-note">💡 惜敗${near.length}件はあと¥3,000以内＝強気維持で落札できた案件。ロンワンズ等の回転良好品は強気推奨。</div>`:''}
+    ${items.map(row).join('')}`;
 }
 
 function skipModalConfirm(){
