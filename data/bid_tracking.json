@@ -1,16 +1,31 @@
 {
-  "updated_at": "2026-06-23",
-  "note": "入札商品の落札価格追跡・自分の入札との乖離(auction_watch own_bid由来)",
+  "updated_at": "2026-06-25",
+  "note": "入札商品の落札価格追跡・乖離(auction_watch own_bid由来)",
   "summary": {
-    "total": 15,
-    "won": 4,
+    "total": 16,
+    "won": 5,
     "lost": 10,
     "ryuusatsu": 1,
-    "win_rate": 26.7,
+    "win_rate": 31.2,
     "avg_lose_gap": 13500,
     "near_miss_3k": 5
   },
   "items": [
+    {
+      "name": "Leonard Kamhout レナードカムホート シルクリンク クレーンベル ブレスレット シルバー925",
+      "brand": "レナードカムホート",
+      "platform": "ecoauc",
+      "bid": 83000,
+      "final": 77000,
+      "gap": -6000,
+      "gap_pct": null,
+      "outcome": "won",
+      "verdict": "勝つべくして勝った",
+      "won_if_plus": null,
+      "reason": "指値83kに対し77kで落札(6k余裕で勝利)",
+      "end": "2026-06-24",
+      "recorded_at": "2026-06-25"
+    },
     {
       "name": "Cartier カルティエ マストライン レザー ハンドバッグ ボルドー",
       "brand": "カルティエ",
