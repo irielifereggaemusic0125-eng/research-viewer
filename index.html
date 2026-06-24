@@ -754,7 +754,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 11;
+const APP_VER = 12;
 const APP_VER_DATE = '2026-06-25';
 
 // 全角数字→半角に正規化（金額入力・全角０-９やカンマ／円記号も許容）
@@ -1243,9 +1243,37 @@ function candDecsSave(d){localStorage.setItem(CAND_DECS_KEY,JSON.stringify(d));}
 const DEC_LEDGER_KEY='dec_ledger_v1';
 function decLedgerLoad(){try{return JSON.parse(localStorage.getItem(DEC_LEDGER_KEY)||'{}');}catch(e){return{};}}
 function decLedgerSave(d){localStorage.setItem(DEC_LEDGER_KEY,JSON.stringify(d));}
-function decLedgerSet(sid,rec){ if(!sid)return; const d=decLedgerLoad(); d[sid]={...rec,ts:new Date().toISOString()}; decLedgerSave(d); }
-function decLedgerDelete(sid){ if(!sid)return; const d=decLedgerLoad(); if(d[sid]){delete d[sid]; decLedgerSave(d);} }
+function decLedgerSet(sid,rec){ if(!sid)return; const d=decLedgerLoad(); d[sid]={...rec,ts:new Date().toISOString()}; decLedgerSave(d); cloudPut(sid,d[sid]); }
+function decLedgerDelete(sid){ if(!sid)return; const d=decLedgerLoad(); if(d[sid]){delete d[sid]; decLedgerSave(d);} cloudDel(sid); }
 function decLedgerGet(sid){ return sid?(decLedgerLoad()[sid]||null):null; }
+
+// ===== ☁️ クラウド同期（kvdb.io・端末間で判断/見送りを共有） =====
+// dec_ledger(候補=安定ID/下見=i:item_no)を双方向同期。candItemStatus/insItemStatusの既存フォールバックで反映。
+const KVDB_BUCKET='5QuqfoyPJGHDKSKDxsYHTZ';
+const KVDB_BASE='https://kvdb.io/'+KVDB_BUCKET+'/';
+function _kvKey(sid){ return 'd_'+(sid||'').replace(/[^a-zA-Z0-9]/g,'_'); }
+async function cloudPut(sid,rec){ try{ await fetch(KVDB_BASE+_kvKey(sid),{method:'PUT',body:JSON.stringify({sid,...rec})}); }catch(e){} }
+async function cloudDel(sid){ try{ await fetch(KVDB_BASE+_kvKey(sid),{method:'PUT',body:JSON.stringify({sid,_del:true,ts:new Date().toISOString()})}); }catch(e){} }
+let _cloudPulling=false;
+async function cloudPull(){
+  if(_cloudPulling)return; _cloudPulling=true;
+  try{
+    const r=await fetch(KVDB_BASE+'?format=json&values=true&prefix=d_',{cache:'no-store'});
+    if(r.ok){
+      const rows=await r.json(); const led=decLedgerLoad(); let changed=false;
+      (rows||[]).forEach(row=>{
+        const val=Array.isArray(row)?row[1]:row;
+        let v; try{ v=(typeof val==='string')?JSON.parse(val):val; }catch(e){ return; }
+        if(!v||!v.sid)return;
+        const cur=led[v.sid], vts=v.ts||'';
+        if(v._del){ if(cur && (cur.ts||'')<vts){ delete led[v.sid]; changed=true; } return; }
+        if(!cur || (cur.ts||'')<vts){ const {sid,...rec}=v; led[v.sid]=rec; changed=true; }
+      });
+      if(changed){ decLedgerSave(led); _cloudRerender(); }
+    }
+  }catch(e){} finally{ _cloudPulling=false; }
+}
+function _cloudRerender(){ const t=document.querySelector('.app')?.dataset.tab; if(t==='inspect'){ if(typeof renderInspect==='function')renderInspect(); } else if(typeof render==='function'){ render(); } }
 // 候補の安定ID: aucid優先→型番→品名(空白無視)。candMeta(m) / candidate(c) 双方で同値になるよう算出。
 function candStableId(o){
   if(!o) return '';
@@ -2590,6 +2618,8 @@ function renderArtifacts(){
   await loadServerDecisions();   // ① サーバー記録(decisions.json)を先に読み込む→各タブで判断/入力を復元
   loadResearchInfo();            // 🔬 リサーチ時情報(research_info.json)を先読み（在庫タブ用・非ブロッキング）
   await loadRotation();          // 🔄 メルカリ回転日数を先読み（候補/下見の回転バッジ用）
+  await cloudPull();             // ☁️ クラウド同期: 他端末の判断/見送りを先に取り込む
+  setInterval(cloudPull, 30000); // ☁️ 30秒ごとに他端末の更新をポーリング
   // 候補データは latest.json の date を採用（固定日付を廃止＝常に最新を開く）
   let _latest=null;
   try{ const r=await fetch('data/banshee_research_latest.json?t='+Date.now(),{cache:'no-store'}); if(r.ok) _latest=await r.json(); }catch(e){}
