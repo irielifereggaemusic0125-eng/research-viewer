@@ -754,7 +754,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 12;
+const APP_VER = 13;
 const APP_VER_DATE = '2026-06-25';
 
 // 全角数字→半角に正規化（金額入力・全角０-９やカンマ／円記号も許容）
@@ -1243,31 +1243,44 @@ function candDecsSave(d){localStorage.setItem(CAND_DECS_KEY,JSON.stringify(d));}
 const DEC_LEDGER_KEY='dec_ledger_v1';
 function decLedgerLoad(){try{return JSON.parse(localStorage.getItem(DEC_LEDGER_KEY)||'{}');}catch(e){return{};}}
 function decLedgerSave(d){localStorage.setItem(DEC_LEDGER_KEY,JSON.stringify(d));}
-function decLedgerSet(sid,rec){ if(!sid)return; const d=decLedgerLoad(); d[sid]={...rec,ts:new Date().toISOString()}; decLedgerSave(d); cloudPut(sid,d[sid]); }
-function decLedgerDelete(sid){ if(!sid)return; const d=decLedgerLoad(); if(d[sid]){delete d[sid]; decLedgerSave(d);} cloudDel(sid); }
-function decLedgerGet(sid){ return sid?(decLedgerLoad()[sid]||null):null; }
+function decLedgerSet(sid,rec){ if(!sid)return; const d=decLedgerLoad(); d[sid]={...rec,ts:new Date().toISOString()}; decLedgerSave(d); cloudPublish(); }
+function decLedgerDelete(sid){ if(!sid)return; const d=decLedgerLoad(); if(d[sid]){ d[sid]={_del:true,ts:new Date().toISOString()}; decLedgerSave(d);} cloudPublish(); }
+function decLedgerGet(sid){ if(!sid)return null; const r=decLedgerLoad()[sid]; return (r&&!r._del)?r:null; }
 
-// ===== ☁️ クラウド同期（kvdb.io・端末間で判断/見送りを共有） =====
-// dec_ledger(候補=安定ID/下見=i:item_no)を双方向同期。candItemStatus/insItemStatusの既存フォールバックで反映。
-const KVDB_BUCKET='5QuqfoyPJGHDKSKDxsYHTZ';
-const KVDB_BASE='https://kvdb.io/'+KVDB_BUCKET+'/';
-function _kvKey(sid){ return 'd_'+(sid||'').replace(/[^a-zA-Z0-9]/g,'_'); }
-async function cloudPut(sid,rec){ try{ await fetch(KVDB_BASE+_kvKey(sid),{method:'PUT',body:JSON.stringify({sid,...rec})}); }catch(e){} }
-async function cloudDel(sid){ try{ await fetch(KVDB_BASE+_kvKey(sid),{method:'PUT',body:JSON.stringify({sid,_del:true,ts:new Date().toISOString()})}); }catch(e){} }
+// ===== ☁️ クラウド同期（ntfy.sh・無認証/CORS対応・端末間で判断/見送りを共有） =====
+// dec_ledger(候補=安定ID/下見=i:item_no)を「全台帳スナップショット」として相互配信し、
+// ts新しい者勝ちでマージ。ローカルdec_ledgerが永続正本なので、ntfyの~12hキャッシュ失効は無害。
+// candItemStatus/insItemStatusの既存decLedgerGetフォールバックで画面に反映される。
+const NTFY_TOPIC='banshee_sync_5q7x2025research';   // 端末間共有の秘密トピック
+const NTFY_BASE='https://ntfy.sh/'+NTFY_TOPIC;
+let _ntfyDev=localStorage.getItem('_ntfy_dev')||Math.random().toString(36).slice(2,8);
+localStorage.setItem('_ntfy_dev',_ntfyDev);
+let _cloudPubTimer=null;
+// 自端末の全台帳スナップショットを配信（連続更新はデバウンス）
+function cloudPublish(){
+  if(_cloudPubTimer)clearTimeout(_cloudPubTimer);
+  _cloudPubTimer=setTimeout(async()=>{
+    try{ await fetch(NTFY_BASE,{method:'POST',body:JSON.stringify({type:'ledger',dev:_ntfyDev,entries:decLedgerLoad()})}); }catch(e){}
+  },800);
+}
 let _cloudPulling=false;
 async function cloudPull(){
   if(_cloudPulling)return; _cloudPulling=true;
   try{
-    const r=await fetch(KVDB_BASE+'?format=json&values=true&prefix=d_',{cache:'no-store'});
+    const r=await fetch(NTFY_BASE+'/json?poll=1&since=12h',{cache:'no-store'});
     if(r.ok){
-      const rows=await r.json(); const led=decLedgerLoad(); let changed=false;
-      (rows||[]).forEach(row=>{
-        const val=Array.isArray(row)?row[1]:row;
-        let v; try{ v=(typeof val==='string')?JSON.parse(val):val; }catch(e){ return; }
-        if(!v||!v.sid)return;
-        const cur=led[v.sid], vts=v.ts||'';
-        if(v._del){ if(cur && (cur.ts||'')<vts){ delete led[v.sid]; changed=true; } return; }
-        if(!cur || (cur.ts||'')<vts){ const {sid,...rec}=v; led[v.sid]=rec; changed=true; }
+      const txt=await r.text(); const led=decLedgerLoad(); let changed=false;
+      txt.trim().split('\n').forEach(line=>{
+        if(!line)return;
+        let m; try{ m=JSON.parse(line); }catch(e){ return; }
+        if(m.event!=='message'||!m.message)return;
+        let p; try{ p=JSON.parse(m.message); }catch(e){ return; }
+        if(p.type!=='ledger'||!p.entries)return;
+        for(const [sid,rec] of Object.entries(p.entries)){
+          if(!sid||!rec)continue;
+          const cur=led[sid], cts=(cur&&cur.ts)||'', rts=rec.ts||'';
+          if(!cur || cts<rts){ led[sid]=rec; changed=true; }   // ts新しい者勝ち（削除tombstoneも同様に伝播）
+        }
       });
       if(changed){ decLedgerSave(led); _cloudRerender(); }
     }
@@ -2619,7 +2632,9 @@ function renderArtifacts(){
   loadResearchInfo();            // 🔬 リサーチ時情報(research_info.json)を先読み（在庫タブ用・非ブロッキング）
   await loadRotation();          // 🔄 メルカリ回転日数を先読み（候補/下見の回転バッジ用）
   await cloudPull();             // ☁️ クラウド同期: 他端末の判断/見送りを先に取り込む
+  cloudPublish();                // ☁️ 自端末の全台帳をキャッシュへ配信(失効防止・他端末の初回取得用)
   setInterval(cloudPull, 30000); // ☁️ 30秒ごとに他端末の更新をポーリング
+  setInterval(cloudPublish, 600000); // ☁️ 10分ごとに台帳を再配信し~12hキャッシュ失効を防止
   // 候補データは latest.json の date を採用（固定日付を廃止＝常に最新を開く）
   let _latest=null;
   try{ const r=await fetch('data/banshee_research_latest.json?t='+Date.now(),{cache:'no-store'}); if(r.ok) _latest=await r.json(); }catch(e){}
