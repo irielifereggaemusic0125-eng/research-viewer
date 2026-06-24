@@ -144,6 +144,9 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .bt-gap{color:var(--muted2)}
 .bt-gap.near{color:#ffd966;font-weight:700}
 .bt-note{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.35}
+/* 🛡️ 鑑定付き(SODA)入札上限 */
+.mkt-rank.soda{background:#0a2f3b;color:#6ad8ff;border-color:#1287a8}
+.soda-note{font-size:9px;color:var(--muted2);margin-left:4px}
 /* 🔢 バージョンフッター/更新バナー */
 .app-ver-footer{text-align:center;padding:14px 0 8px;margin-bottom:76px;font-size:11px;color:var(--muted2)}
 .app-ver-hdr{font-size:10px;font-weight:700;color:var(--t1);background:var(--surface2);border:1px solid var(--line);border-radius:7px;padding:1px 7px;margin-left:4px;white-space:nowrap}
@@ -751,8 +754,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 9;
-const APP_VER_DATE = '2026-06-23';
+const APP_VER = 10;
+const APP_VER_DATE = '2026-06-25';
 
 // ===== 🔄 メルカリ回転日数（出品→売却・40日内平均／拡張非依存） =====
 let rotationData=null;
@@ -2493,7 +2496,8 @@ function renderInspect(){
             const judgeBadge=judge?`<span class="mkt-judge ${judge.cls}">${judge.label} <span class="mkt-note">${judge.note}</span></span>`:'';
             return `<div class="iv-row mkt-row"><span class="iv-rl">落札相場<span class="mkt-rank">EcoAuc ${it.rank}</span></span><span class="iv-rv">¥${mkt.median.toLocaleString('ja-JP')} <span class="mkt-n">n=${mkt.n}</span>${judgeBadge}</span></div>`;
           })()}
-          ${it.max_bid?`<div class="iv-row"><span class="iv-rl">利益が出る上限</span><span class="iv-rv" style="color:var(--profit);font-weight:800">¥${(+it.max_bid).toLocaleString('ja-JP')}</span></div>`:''}
+          ${it.max_bid?`<div class="iv-row"><span class="iv-rl">入札上限<span class="mkt-rank">鑑定なし</span></span><span class="iv-rv" style="color:var(--profit);font-weight:800">¥${(+it.max_bid).toLocaleString('ja-JP')}</span></div>`:''}
+          ${it.max_bid_soda?`<div class="iv-row"><span class="iv-rl">入札上限<span class="mkt-rank soda">鑑定付SODA</span></span><span class="iv-rv" style="color:#6ad8ff;font-weight:700">¥${(+it.max_bid_soda).toLocaleString('ja-JP')}<span class="soda-note">鑑定料¥2,500差引</span></span></div>`:''}
           ${(it.profit_flag&&it.profit_flag!=='?')?`<div class="sc-judge ${it.profit_flag==='✅'?'go':'no'}">${it.profit_flag==='✅'?'✅ 利益が出る案件（落札相場 ≤ 上限）':'❌ 利益が出ない（落札相場 > 上限）'}${it.exclude_100k?' ／ ⚠️販売相場10万超=除外':''}</div>`:''}
         </div>
         <div class="iv-input-row">

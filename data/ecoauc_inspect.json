@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23 (第806回6/24下見・戦略C・ストアfetch266→rank/開始価格フィルタ) +戦略C判定 +戦略C判定",
+  "updated_at": "2026-06-23 (第806回6/24下見・戦略C・ストアfetch266→rank/開始価格フィルタ) +戦略C判定 +戦略C判定 +戦略C判定",
   "count": 266,
   "total": 266,
   "note": "ヤフオク同様の同一オリジンfetchでEcoAuc下見18ターゲットを取得。jissei=watch_list照合 or 代表販売相場。enrich前。",
@@ -29,7 +29,8 @@
       "ideal_vs_current": -25130,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12649_1006",
@@ -56,7 +57,8 @@
       "ideal_vs_current": -86130,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12681_0276",
@@ -83,7 +85,8 @@
       "ideal_vs_current": -17130,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12682_0241",
@@ -110,7 +113,8 @@
       "ideal_vs_current": -12130,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12682_0259",
@@ -137,7 +141,8 @@
       "ideal_vs_current": -12130,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12683_0333",
@@ -164,7 +169,8 @@
       "ideal_vs_current": 15870,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12652_0590",
@@ -191,7 +197,8 @@
       "ideal_vs_current": 17700,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 25136
     },
     {
       "item_no": "12652_0592",
@@ -218,7 +225,8 @@
       "ideal_vs_current": 18700,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 25136
     },
     {
       "item_no": "12683_0811",
@@ -245,7 +253,8 @@
       "ideal_vs_current": 9700,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 25136
     },
     {
       "item_no": "12651_0138",
@@ -272,7 +281,8 @@
       "ideal_vs_current": 3490,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12655_0078",
@@ -299,7 +309,8 @@
       "ideal_vs_current": -734510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12656_0223",
@@ -326,7 +337,8 @@
       "ideal_vs_current": -215510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12656_0235",
@@ -353,7 +365,8 @@
       "ideal_vs_current": -240510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12656_0252",
@@ -380,7 +393,8 @@
       "ideal_vs_current": -160510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12655_0240",
@@ -407,7 +421,8 @@
       "ideal_vs_current": -1732510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12655_0243",
@@ -434,7 +449,8 @@
       "ideal_vs_current": -1190510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12656_0560",
@@ -461,7 +477,8 @@
       "ideal_vs_current": -190510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12656_0563",
@@ -488,7 +505,8 @@
       "ideal_vs_current": -327510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12656_0565",
@@ -515,7 +533,8 @@
       "ideal_vs_current": -365510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12683_0409",
@@ -542,7 +561,8 @@
       "ideal_vs_current": 3490,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12648_0460",
@@ -569,7 +589,8 @@
       "ideal_vs_current": -17150,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12649_0415",
@@ -594,9 +615,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -99505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0416",
@@ -621,9 +643,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -29505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0417",
@@ -648,9 +671,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 12495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0418",
@@ -675,9 +699,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -2505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0419",
@@ -702,9 +727,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -8505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0420",
@@ -729,9 +755,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -2505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0421",
@@ -756,9 +783,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -48505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0422",
@@ -783,9 +811,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -9505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0423",
@@ -810,9 +839,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -8505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0424",
@@ -837,9 +867,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -35505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0425",
@@ -864,9 +895,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -5505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0426",
@@ -891,9 +923,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -35505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0427",
@@ -918,9 +951,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 2495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0428",
@@ -945,9 +979,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 29495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0429",
@@ -972,9 +1007,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -13505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0430",
@@ -999,9 +1035,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 31495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0431",
@@ -1026,9 +1063,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -8505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0433",
@@ -1053,9 +1091,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -1505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0434",
@@ -1080,9 +1119,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 18495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0435",
@@ -1107,9 +1147,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 16495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0436",
@@ -1134,9 +1175,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 18495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0437",
@@ -1161,9 +1203,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 25495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0438",
@@ -1188,9 +1231,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 8495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0440",
@@ -1215,9 +1259,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 34495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0441",
@@ -1242,9 +1287,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 29495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0442",
@@ -1269,9 +1315,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -13505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0443",
@@ -1296,9 +1343,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -67505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0444",
@@ -1323,9 +1371,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -2505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0445",
@@ -1350,9 +1399,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 23495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0446",
@@ -1377,9 +1427,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 22495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0447",
@@ -1404,9 +1455,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 34495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0448",
@@ -1431,9 +1483,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 27495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0451",
@@ -1458,9 +1511,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 6495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0452",
@@ -1485,9 +1539,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 20495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0455",
@@ -1512,9 +1567,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -2505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12650_0381",
@@ -1539,9 +1595,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 32495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12650_0383",
@@ -1566,9 +1623,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 30495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12650_0384",
@@ -1593,9 +1651,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": -60505,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12650_0385",
@@ -1620,9 +1679,10 @@
       "ideal_bid_065": 40495,
       "profit_rate": 18.0,
       "ideal_vs_current": 34495,
-      "tier_band": "主軸2-4万",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 47227
     },
     {
       "item_no": "12649_0321",
@@ -1647,9 +1707,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -50280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0323",
@@ -1674,9 +1735,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -82280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0324",
@@ -1701,9 +1763,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -82280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0325",
@@ -1728,9 +1791,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -82280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0326",
@@ -1755,9 +1819,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -44280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0327",
@@ -1782,9 +1847,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -95280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0328",
@@ -1809,9 +1875,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -95280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0329",
@@ -1836,9 +1903,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -95280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0330",
@@ -1863,9 +1931,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -57280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0331",
@@ -1890,9 +1959,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -6280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0332",
@@ -1917,9 +1987,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": 19720,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0334",
@@ -1944,9 +2015,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": 18720,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0335",
@@ -1971,9 +2043,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -3280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0336",
@@ -1998,9 +2071,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -57280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0337",
@@ -2025,9 +2099,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -22280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0338",
@@ -2052,9 +2127,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -18280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0339",
@@ -2079,9 +2155,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": 16720,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0340",
@@ -2106,9 +2183,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": 15720,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0341",
@@ -2133,9 +2211,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -16280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0342",
@@ -2160,9 +2239,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": 12720,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0343",
@@ -2187,9 +2267,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": 19720,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0344",
@@ -2214,9 +2295,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": 13720,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0345",
@@ -2241,9 +2323,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -60280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0346",
@@ -2268,9 +2351,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -8280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0347",
@@ -2295,9 +2379,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -6280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12649_0348",
@@ -2322,9 +2407,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -13280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12650_0308",
@@ -2349,9 +2435,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -38280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12650_0309",
@@ -2376,9 +2463,10 @@
       "ideal_bid_065": 31720,
       "profit_rate": 20.6,
       "ideal_vs_current": -38280,
-      "tier_band": "その他",
+      "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 34954
     },
     {
       "item_no": "12651_0024",
@@ -2403,9 +2491,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": 14020,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0038",
@@ -2430,9 +2519,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -147980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0039",
@@ -2457,9 +2547,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -169980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0040",
@@ -2484,9 +2575,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -214980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0041",
@@ -2511,9 +2603,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -74980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0042",
@@ -2538,9 +2631,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -169980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12652_0015",
@@ -2565,9 +2659,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -169980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12652_0017",
@@ -2592,9 +2687,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -138980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12652_0018",
@@ -2619,9 +2715,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -169980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12652_0021",
@@ -2646,9 +2743,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": 20,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12652_0027",
@@ -2673,9 +2771,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -28980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12652_0028",
@@ -2700,9 +2799,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -169980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12652_0032",
@@ -2727,9 +2827,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -141980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12652_0033",
@@ -2754,9 +2855,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -645980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12658_0009",
@@ -2781,9 +2883,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -1379980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0684",
@@ -2808,9 +2911,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": 9020,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0708",
@@ -2835,9 +2939,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": 9020,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0709",
@@ -2862,9 +2967,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -10980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0720",
@@ -2889,9 +2995,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -30980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0723",
@@ -2916,9 +3023,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -233980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0724",
@@ -2943,9 +3051,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -134980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0725",
@@ -2970,9 +3079,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -144980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0726",
@@ -2997,9 +3107,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -159980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0731",
@@ -3024,9 +3135,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -159980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0732",
@@ -3051,9 +3163,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -169980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0733",
@@ -3078,9 +3191,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -159980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0734",
@@ -3105,9 +3219,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -161980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0735",
@@ -3132,9 +3247,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -1409980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0736",
@@ -3159,9 +3275,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -154980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0739",
@@ -3186,9 +3303,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -144980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0741",
@@ -3213,9 +3331,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -150980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0743",
@@ -3240,9 +3359,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -264980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0745",
@@ -3267,9 +3387,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -149980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0746",
@@ -3294,9 +3415,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -139980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0747",
@@ -3321,9 +3443,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -189980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0748",
@@ -3348,9 +3471,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -179980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0749",
@@ -3375,9 +3499,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -129980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0750",
@@ -3402,9 +3527,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -129980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0752",
@@ -3429,9 +3555,10 @@
       "ideal_bid_065": 20020,
       "profit_rate": 27.7,
       "ideal_vs_current": -259980,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 18590
     },
     {
       "item_no": "12651_0298",
@@ -3456,9 +3583,10 @@
       "ideal_bid_065": 12883,
       "profit_rate": 38.2,
       "ideal_vs_current": 6883,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12651_0299",
@@ -3483,9 +3611,10 @@
       "ideal_bid_065": 12883,
       "profit_rate": 38.2,
       "ideal_vs_current": -8117,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12651_0301",
@@ -3510,9 +3639,10 @@
       "ideal_bid_065": 12883,
       "profit_rate": 38.2,
       "ideal_vs_current": 6883,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12651_0302",
@@ -3537,9 +3667,10 @@
       "ideal_bid_065": 12883,
       "profit_rate": 38.2,
       "ideal_vs_current": 7883,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12651_0315",
@@ -3564,9 +3695,10 @@
       "ideal_bid_065": 12883,
       "profit_rate": 38.2,
       "ideal_vs_current": -9117,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12651_0316",
@@ -3591,9 +3723,10 @@
       "ideal_bid_065": 12883,
       "profit_rate": 38.2,
       "ideal_vs_current": 6883,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12651_0323",
@@ -3618,9 +3751,10 @@
       "ideal_bid_065": 12883,
       "profit_rate": 38.2,
       "ideal_vs_current": 6883,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12651_0376",
@@ -3645,9 +3779,10 @@
       "ideal_bid_065": 12883,
       "profit_rate": 38.2,
       "ideal_vs_current": 7883,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12651_0377",
@@ -3672,9 +3807,10 @@
       "ideal_bid_065": 12883,
       "profit_rate": 38.2,
       "ideal_vs_current": 7883,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12651_0379",
@@ -3699,9 +3835,10 @@
       "ideal_bid_065": 12883,
       "profit_rate": 38.2,
       "ideal_vs_current": 7883,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12651_0296",
@@ -3726,9 +3863,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0310",
@@ -3753,9 +3891,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0312",
@@ -3780,9 +3919,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 2245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0327",
@@ -3807,9 +3947,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 4245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0329",
@@ -3834,9 +3975,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0337",
@@ -3861,9 +4003,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0340",
@@ -3888,9 +4031,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0341",
@@ -3915,9 +4059,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0342",
@@ -3942,9 +4087,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0343",
@@ -3969,9 +4115,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0344",
@@ -3996,9 +4143,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0348",
@@ -4023,9 +4171,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0349",
@@ -4050,9 +4199,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0350",
@@ -4077,9 +4227,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0351",
@@ -4104,9 +4255,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0358",
@@ -4131,9 +4283,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": -1755,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0363",
@@ -4158,9 +4311,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0364",
@@ -4185,9 +4339,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0365",
@@ -4212,9 +4367,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0367",
@@ -4239,9 +4395,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0368",
@@ -4266,9 +4423,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0369",
@@ -4293,9 +4451,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0370",
@@ -4320,9 +4479,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0371",
@@ -4347,9 +4507,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0372",
@@ -4374,9 +4535,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0373",
@@ -4401,9 +4563,10 @@
       "ideal_bid_065": 11245,
       "profit_rate": 39.9,
       "ideal_vs_current": 6245,
-      "tier_band": "その他",
+      "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 6818
     },
     {
       "item_no": "12651_0129",
@@ -4430,7 +4593,8 @@
       "ideal_vs_current": -2510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12651_0328",
@@ -4457,7 +4621,8 @@
       "ideal_vs_current": 9680,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 15318
     },
     {
       "item_no": "12656_0253",
@@ -4484,7 +4649,8 @@
       "ideal_vs_current": -335510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12655_0244",
@@ -4511,7 +4677,8 @@
       "ideal_vs_current": -1945510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12656_0588",
@@ -4538,7 +4705,8 @@
       "ideal_vs_current": -470510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12681_0225",
@@ -4565,7 +4733,8 @@
       "ideal_vs_current": -14130,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12649_0068",
@@ -4592,7 +4761,8 @@
       "ideal_vs_current": -28130,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12653_0195",
@@ -4619,7 +4789,8 @@
       "ideal_vs_current": 15870,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12649_0965",
@@ -4646,7 +4817,8 @@
       "ideal_vs_current": -23130,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12649_0973",
@@ -4673,7 +4845,8 @@
       "ideal_vs_current": -61130,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12649_0976",
@@ -4700,7 +4873,8 @@
       "ideal_vs_current": -8130,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12649_0977",
@@ -4727,7 +4901,8 @@
       "ideal_vs_current": -26130,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12649_0988",
@@ -4754,7 +4929,8 @@
       "ideal_vs_current": -16130,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12649_0992",
@@ -4781,7 +4957,8 @@
       "ideal_vs_current": -36130,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12651_0828",
@@ -4808,7 +4985,8 @@
       "ideal_vs_current": 13870,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12681_0233",
@@ -4835,7 +5013,8 @@
       "ideal_vs_current": -25130,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12683_0290",
@@ -4862,7 +5041,8 @@
       "ideal_vs_current": 16870,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12652_0320",
@@ -4889,7 +5069,8 @@
       "ideal_vs_current": -22510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12683_0738",
@@ -4916,7 +5097,8 @@
       "ideal_vs_current": -3510,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 4363
     },
     {
       "item_no": "12679_0328",
@@ -4943,7 +5125,8 @@
       "ideal_vs_current": 12700,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 25136
     },
     {
       "item_no": "12648_0530",
@@ -4970,7 +5153,8 @@
       "ideal_vs_current": -16254,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": -873
     },
     {
       "item_no": "12651_1030",
@@ -4997,7 +5181,8 @@
       "ideal_vs_current": -9850,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 1090
     },
     {
       "item_no": "12651_1031",
@@ -5024,7 +5209,8 @@
       "ideal_vs_current": -12850,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 1090
     },
     {
       "item_no": "12683_0581",
@@ -5051,7 +5237,8 @@
       "ideal_vs_current": -1850,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 1090
     },
     {
       "item_no": "12683_0582",
@@ -5078,7 +5265,8 @@
       "ideal_vs_current": -7850,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 1090
     },
     {
       "item_no": "12683_0583",
@@ -5105,7 +5293,8 @@
       "ideal_vs_current": -5850,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 1090
     },
     {
       "item_no": "12680_0700",
@@ -5132,7 +5321,8 @@
       "ideal_vs_current": 2115,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 24318
     },
     {
       "item_no": "12647_0133",
@@ -5159,7 +5349,8 @@
       "ideal_vs_current": 9850,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12647_0158",
@@ -5186,7 +5377,8 @@
       "ideal_vs_current": 7850,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12647_0204",
@@ -5213,7 +5405,8 @@
       "ideal_vs_current": -51150,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12647_0481",
@@ -5240,7 +5433,8 @@
       "ideal_vs_current": -16150,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12647_0526",
@@ -5267,7 +5461,8 @@
       "ideal_vs_current": -17150,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12683_0288",
@@ -5294,7 +5489,8 @@
       "ideal_vs_current": -1320,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 15318
     },
     {
       "item_no": "12651_1024",
@@ -5321,7 +5517,8 @@
       "ideal_vs_current": -7850,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 1090
     },
     {
       "item_no": "12651_1025",
@@ -5348,7 +5545,8 @@
       "ideal_vs_current": -7850,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 1090
     },
     {
       "item_no": "12651_0297",
@@ -5375,7 +5573,8 @@
       "ideal_vs_current": 4883,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 8609
     },
     {
       "item_no": "12649_0014",
@@ -5402,7 +5601,8 @@
       "ideal_vs_current": -23130,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12651_0809",
@@ -5429,7 +5629,8 @@
       "ideal_vs_current": 16870,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 26772
     },
     {
       "item_no": "12647_0039",
@@ -5456,7 +5657,8 @@
       "ideal_vs_current": 5115,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 24318
     },
     {
       "item_no": "12647_0023",
@@ -5483,7 +5685,8 @@
       "ideal_vs_current": -18150,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12647_0024",
@@ -5510,7 +5713,8 @@
       "ideal_vs_current": 9850,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12647_0301",
@@ -5537,7 +5741,8 @@
       "ideal_vs_current": -11150,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12647_0377",
@@ -5564,7 +5769,8 @@
       "ideal_vs_current": -47150,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12647_0395",
@@ -5591,7 +5797,8 @@
       "ideal_vs_current": -27150,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12680_0012",
@@ -5618,7 +5825,8 @@
       "ideal_vs_current": -35150,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12647_0002",
@@ -5645,7 +5853,8 @@
       "ideal_vs_current": -22150,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12647_0360",
@@ -5672,7 +5881,8 @@
       "ideal_vs_current": -51150,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": 16954
     },
     {
       "item_no": "12651_0238",
@@ -5698,7 +5908,8 @@
       "ideal_vs_current": null,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12653_0439",
@@ -5724,7 +5935,8 @@
       "ideal_vs_current": null,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12650_1116",
@@ -5750,7 +5962,8 @@
       "ideal_vs_current": null,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12653_1320",
@@ -5776,7 +5989,8 @@
       "ideal_vs_current": null,
       "tier_band": "その他",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0051",
@@ -5802,7 +6016,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0052",
@@ -5828,7 +6043,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0055",
@@ -5854,7 +6070,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0057",
@@ -5880,7 +6097,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0059",
@@ -5906,7 +6124,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0061",
@@ -5932,7 +6151,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0062",
@@ -5958,7 +6178,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0063",
@@ -5984,7 +6205,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0064",
@@ -6010,7 +6232,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0065",
@@ -6036,7 +6259,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0066",
@@ -6062,7 +6286,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0067",
@@ -6088,7 +6313,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0069",
@@ -6114,7 +6340,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0070",
@@ -6140,7 +6367,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0072",
@@ -6166,7 +6394,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0079",
@@ -6192,7 +6421,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0080",
@@ -6218,7 +6448,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0082",
@@ -6244,7 +6475,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0084",
@@ -6270,7 +6502,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0085",
@@ -6296,7 +6529,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0086",
@@ -6322,7 +6556,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0087",
@@ -6348,7 +6583,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0088",
@@ -6374,7 +6610,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0089",
@@ -6400,7 +6637,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12646_0004",
@@ -6426,7 +6664,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0015",
@@ -6452,7 +6691,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0016",
@@ -6478,7 +6718,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0018",
@@ -6504,7 +6745,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0020",
@@ -6530,7 +6772,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0021",
@@ -6556,7 +6799,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0022",
@@ -6582,7 +6826,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0024",
@@ -6608,7 +6853,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0026",
@@ -6634,7 +6880,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0027",
@@ -6660,7 +6907,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0028",
@@ -6686,7 +6934,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0031",
@@ -6712,7 +6961,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0032",
@@ -6738,7 +6988,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0038",
@@ -6764,7 +7015,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0040",
@@ -6790,7 +7042,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0042",
@@ -6816,7 +7069,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0043",
@@ -6842,7 +7096,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0045",
@@ -6868,7 +7123,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0049",
@@ -6894,7 +7150,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12651_0239",
@@ -6920,7 +7177,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12652_0635",
@@ -6946,7 +7204,8 @@
       "ideal_vs_current": null,
       "tier_band": "主軸2-4万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0002",
@@ -6972,7 +7231,8 @@
       "ideal_vs_current": null,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0006",
@@ -6998,7 +7258,8 @@
       "ideal_vs_current": null,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0007",
@@ -7024,7 +7285,8 @@
       "ideal_vs_current": null,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0008",
@@ -7050,7 +7312,8 @@
       "ideal_vs_current": null,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0011",
@@ -7076,7 +7339,8 @@
       "ideal_vs_current": null,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0012",
@@ -7102,7 +7366,8 @@
       "ideal_vs_current": null,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     },
     {
       "item_no": "12645_0014",
@@ -7128,14 +7393,15 @@
       "ideal_vs_current": null,
       "tier_band": "特上5-9万",
       "new_tag": false,
-      "premium_flag": false
+      "premium_flag": false,
+      "max_bid_soda": null
     }
   ],
   "strategy_c": {
     "profitable": 21,
     "over100k": 0,
     "unknown": 202,
-    "enriched_at": "2026-06-23 06:06"
+    "enriched_at": "2026-06-25 04:44"
   },
   "summary": {
     "✅": 163,
