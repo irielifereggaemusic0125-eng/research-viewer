@@ -754,8 +754,11 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 10;
+const APP_VER = 11;
 const APP_VER_DATE = '2026-06-25';
+
+// 全角数字→半角に正規化（金額入力・全角０-９やカンマ／円記号も許容）
+function toHalfWidthNum(s){ return (s||'').replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xFEE0)).replace(/[，､、]/g,','); }
 
 // ===== 🔄 メルカリ回転日数（出品→売却・40日内平均／拡張非依存） =====
 let rotationData=null;
@@ -1197,7 +1200,7 @@ function candEditsLoad(){try{return JSON.parse(localStorage.getItem(CAND_EDITS_K
 function candEditsSave(d){localStorage.setItem(CAND_EDITS_KEY,JSON.stringify(d));}
 function candSetField(key,field,raw){
   const d=candEditsLoad(); if(!d[key])d[key]={};
-  const v=parseInt(raw.replace(/[^\d]/g,''),10);
+  const v=parseInt(toHalfWidthNum(raw).replace(/[^\d]/g,''),10);
   if(v>0)d[key][field]=v; else delete d[key][field];
   if(!Object.keys(d[key]).length)delete d[key];
   candEditsSave(d); candUpdateCalc(key);
@@ -2263,10 +2266,10 @@ function ecoProfit(jissei, bid, furimaSouryo, shiireSouryo){ jissei=jissei||0; f
 const INS_EDITS_KEY='ins_edits_v1';
 function insEditsLoad(){try{return JSON.parse(localStorage.getItem(INS_EDITS_KEY)||'{}');}catch(e){return {};}}
 function insEditsSave(d){localStorage.setItem(INS_EDITS_KEY,JSON.stringify(d));}
-function insFormatInput(el){const r=el.value.replace(/[^\d]/g,'');el.value=r?parseInt(r,10).toLocaleString('ja-JP'):'';}
+function insFormatInput(el){const r=toHalfWidthNum(el.value).replace(/[^\d]/g,'');el.value=r?parseInt(r,10).toLocaleString('ja-JP'):'';}
 function insSetField(key,field,raw){
   const d=insEditsLoad(); if(!d[key])d[key]={};
-  const v=parseInt(raw.replace(/[^\d]/g,''),10);
+  const v=parseInt(toHalfWidthNum(raw).replace(/[^\d]/g,''),10);
   if(v>0)d[key][field]=v; else delete d[key][field];
   if(!Object.keys(d[key]).length)delete d[key];
   insEditsSave(d); insUpdateCalc(key);
