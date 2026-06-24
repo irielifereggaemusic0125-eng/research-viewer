@@ -57,6 +57,12 @@ header{display:flex;align-items:center;gap:12px;padding:10px 16px;
 .lay-btn svg{width:100%;height:100%;}
 .lay-btn svg rect{fill:none;stroke:var(--muted);stroke-width:3;}
 .lay-btn.on svg rect{stroke:var(--gold);}
+/* 枚数に合うおすすめ分割 */
+.lay-btn.rec{border-color:#5aa86a;box-shadow:0 0 0 1px rgba(90,168,106,.4) inset;}
+.lay-btn.rec::after{content:'おすすめ';position:absolute;top:-7px;right:-3px;font-size:7px;
+  background:#5aa86a;color:#fff;padding:1px 4px;border-radius:6px;letter-spacing:.02em;}
+.lay-btn{position:relative;}
+#pool-info{font-size:10px;color:var(--gold);margin-top:8px;min-height:13px;letter-spacing:.02em;}
 
 /* collage preview */
 .col-prev-area{flex:1;display:flex;flex-direction:column;align-items:center;
@@ -439,7 +445,15 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;heigh
 <div class="collage-body" id="collage-body">
   <div class="col-sidebar">
     <div class="card">
-      <span class="sl">レイアウト</span>
+      <span class="sl">① 写真をまとめて選ぶ</span>
+      <div style="margin-top:6px;position:relative;overflow:hidden;border-radius:7px;">
+        <input type="file" id="bulk-files" accept="image/*" multiple
+          style="position:absolute;inset:0;opacity:0;cursor:pointer;z-index:5;width:100%;height:100%;">
+        <div style="padding:11px;text-align:center;border:1px dashed var(--gold);border-radius:7px;
+          color:var(--gold);font-size:11px;letter-spacing:.04em;pointer-events:none;background:rgba(212,170,96,.05);">
+          📷 写真を複数まとめて選択</div>
+      </div>
+      <span class="sl" style="margin-top:14px;display:block;">② 分割の仕方を選ぶ</span>
       <div class="lay-grid" id="lay-grid">
         <button class="lay-btn on" data-lay="2h" title="左右2分割">
           <svg viewBox="0 0 100 100"><rect x="3" y="3" width="44" height="94"/><rect x="53" y="3" width="44" height="94"/></svg>
@@ -460,13 +474,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;heigh
           <svg viewBox="0 0 100 100"><rect x="3" y="3" width="28" height="44"/><rect x="36" y="3" width="28" height="44"/><rect x="69" y="3" width="28" height="44"/><rect x="3" y="53" width="28" height="44"/><rect x="36" y="53" width="28" height="44"/><rect x="69" y="53" width="28" height="44"/></svg>
         </button>
       </div>
-      <div style="margin-top:10px;position:relative;overflow:hidden;border-radius:7px;">
-        <input type="file" id="bulk-files" accept="image/*" multiple
-          style="position:absolute;inset:0;opacity:0;cursor:pointer;z-index:5;width:100%;height:100%;">
-        <div style="padding:9px;text-align:center;border:1px dashed var(--bdr2);border-radius:7px;
-          color:var(--muted);font-size:10px;letter-spacing:.05em;pointer-events:none;">
-          📷 写真をまとめて追加（複数選択）</div>
-      </div>
+      <div id="pool-info"></div>
     </div>
 
     <div class="card">
@@ -608,9 +616,22 @@ var COL = {
   radius: 0,
   borderColor: '#ffffff',
   cells: [],          // {img, ox, oy, zoom, baseScale, el, imgEl}
+  pool: [],           // まとめて選んだ写真(Imageオブジェクト)を選択順に保持。レイアウト変更で流し込み直す
   selected: -1,
   stageSize: 0,
 };
+
+// 各レイアウトの枚数（おすすめ判定用）
+var LAYOUT_CAP = {'2h':2,'2v':2,'3h':3,'3l':3,'4':4,'6':6};
+// 枚数 → おすすめレイアウト（その枚数を過不足なく置けるもの）
+function recommendLayouts(n){
+  if(n<=1) return ['2h','2v'];
+  if(n===2) return ['2h','2v'];
+  if(n===3) return ['3h','3l'];
+  if(n===4) return ['4'];
+  if(n===5) return ['6'];
+  return ['6'];
+}
 
 // レイアウト定義（相対座標 0-1）
 var LAYOUTS = {
@@ -632,6 +653,7 @@ function initCollage(){
       b.classList.add('on');
       COL.layout = b.dataset.lay;
       buildStage();
+      reflowPool();   // 選んだ写真を新レイアウトへ流し込み直す（写真は消えない）
     });
   });
   // スライダー
@@ -687,21 +709,24 @@ function initCollage(){
   });
   CG('cell-clear').addEventListener('click', function(){
     if(COL.selected<0) return;
-    clearCell(COL.selected);
+    var i = COL.selected;
+    clearCell(i);
+    if(i < COL.pool.length){ COL.pool.splice(i,1); reflowPool(); }  // プールからも除去して詰める
   });
   CG('col-clear-all').addEventListener('click', function(){
     COL.cells.forEach(function(_,i){ clearCell(i); });
+    COL.pool = [];      // プールも空に
     selectCell(-1);
+    updatePoolUI();
   });
   CG('col-gen').addEventListener('click', generateCollage);
-  // 一括追加: 選んだ順に空きセルへ流し込む
+  // 一括追加: まず全部プールへ読み込み → 枚数からおすすめ分割を自動選択 → 流し込み
   CG('bulk-files').addEventListener('change', function(e){
     var files = Array.from(e.target.files||[]);
     if(!files.length) return;
-    var fi = 0;
-    COL.cells.forEach(function(c, idx){
-      if(fi >= files.length) return;
-      if(!c.img){ loadImageToCell(idx, files[fi]); fi++; }
+    loadFilesToPool(files, function(){
+      autoPickLayout();   // 枚数に合う分割を自動選択（後から手動で選び直しもOK）
+      reflowPool();
     });
     e.target.value = '';
   });
@@ -810,10 +835,82 @@ function loadImageToCell(i, file){
       var c = COL.cells[i];
       setupCellImage(c, img);
       selectCell(i);
+      COL.pool[i] = img;   // 個別追加もプールにindex対応で記録（レイアウト変更で消えない）
+      updatePoolUI();
     };
     img.src = ev.target.result;
   };
   reader.readAsDataURL(file);
+}
+
+// ── 写真プール（まとめて選択 → 分割を選ぶフロー）───────────────
+// 選んだファイルを順番どおりImage化してプールへ。全部読めたらcb()。
+function loadFilesToPool(files, cb){
+  var imgs = new Array(files.length);
+  var done = 0;
+  files.forEach(function(f, idx){
+    var reader = new FileReader();
+    reader.onload = function(ev){
+      var img = new Image();
+      img.onload = function(){ imgs[idx]=img; if(++done===files.length){ commit(); } };
+      img.onerror = function(){ imgs[idx]=null; if(++done===files.length){ commit(); } };
+      img.src = ev.target.result;
+    };
+    reader.onerror = function(){ imgs[idx]=null; if(++done===files.length){ commit(); } };
+    reader.readAsDataURL(f);
+  });
+  function commit(){
+    imgs.forEach(function(im){ if(im) COL.pool.push(im); });
+    updatePoolUI();
+    if(cb) cb();
+  }
+}
+
+// プールの枚数からおすすめ分割を自動選択
+function autoPickLayout(){
+  var n = COL.pool.length;
+  if(!n) return;
+  var rec = recommendLayouts(n)[0];
+  if(rec && rec !== COL.layout){
+    COL.layout = rec;
+    document.querySelectorAll('.lay-btn').forEach(function(x){
+      x.classList.toggle('on', x.dataset.lay === rec);
+    });
+    buildStage();
+  }
+}
+
+// プールの写真を現在レイアウトのセルへ流し込む。
+// buildStageが既存セルの編集（拡大/位置）を index で復元するので、ここでは
+// 「空きセルだけ」プールから補充し、プール枚数を超えるセルは空にする。あふれ写真はプールに保持。
+function reflowPool(){
+  COL.cells.forEach(function(c, idx){
+    if(idx < COL.pool.length && COL.pool[idx]){
+      if(!c.img) setupCellImage(c, COL.pool[idx]);   // 空きセルのみ補充（編集済みは触らない）
+    } else if(c.img){
+      clearCell(idx);                                 // プール超過分は空に（写真はプールに残る）
+    }
+  });
+  selectCell(-1);
+  updatePoolUI();
+}
+
+// 「選択中◯枚 / このレイアウトは◯枚」表示＋おすすめ枠ハイライト
+function updatePoolUI(){
+  var n = COL.pool.filter(Boolean).length;
+  var cap = LAYOUT_CAP[COL.layout] || COL.cells.length;
+  var info = CG('pool-info');
+  if(info){
+    if(!n){ info.textContent=''; }
+    else {
+      var extra = n > cap ? '（' + (n-cap) + '枚はみ出し）' : (n < cap ? '（あと' + (cap-n) + '枚）' : '');
+      info.textContent = '選択 ' + n + '枚 / この分割 ' + cap + '枚' + extra;
+    }
+  }
+  var rec = recommendLayouts(n);
+  document.querySelectorAll('.lay-btn').forEach(function(b){
+    b.classList.toggle('rec', n>0 && rec.indexOf(b.dataset.lay)!==-1);
+  });
 }
 
 function restoreImageToCell(i, saved){
@@ -1021,6 +1118,9 @@ function swapCells(i, j){
   clearCell(i); clearCell(j);
   if(sb){ restoreSaved(i, sb); }
   if(sa){ restoreSaved(j, sa); }
+  // プールの並びも入れ替えて、レイアウト変更後も順序を維持
+  var pi=COL.pool[i], pj=COL.pool[j];
+  if(pi!==undefined||pj!==undefined){ COL.pool[i]=pj; COL.pool[j]=pi; }
 }
 function restoreSaved(i, s){
   var c = COL.cells[i];
