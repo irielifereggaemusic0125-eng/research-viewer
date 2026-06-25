@@ -1,107 +1,90 @@
 {
   "schema": "v2",
-  "updated_at": "2026-06-20T21:42:00+09:00",
+  "updated_at": "2026-06-26T05:02:18+09:00",
   "candidates": [
     {
-      "name": "ポケカ アビスアイ BOX",
-      "brand": "ポケモン",
+      "name": "ポケカ ストームエメラルダ BOX",
+      "brand": "ポケモンカード",
       "category": "トレカ",
-      "price": 5500,
-      "jissei": 11500,
-      "premium_rate": 2.09,
-      "premium_level": "高",
-      "profit_max": 4250,
-      "best_route": "メルカリ",
-      "phase": "受付中",
-      "deadline": "2026-06-21T12:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "フルコンプ 一部店舗",
-          "url": "https://livepocket.jp/e/jnf5h",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-06-21T12:00:00+09:00",
-          "result_date": "2026-06-25T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "WEB抽選・当選者は店頭販売"
-        },
-        {
-          "store": "イエローサブマリン各店",
-          "url": "https://x.com/YS_INFO/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-06-24T20:00:00+09:00",
-          "result_date": "2026-06-27T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "WEB抽選"
-        }
-      ],
-      "note": "テープ付き未開封BOX シュリンク付きメルカリ売切¥11,000〜12,500(最新¥14,500報告も・6/14-18) BOX期待値¥11,679。粗利約¥4,250/箱(定価¥5,500想定)。発売直後高値so当選後は早期売却推奨。※定価は要現物確認"
-    },
-    {
-      "name": "ワンピースカード OP-16 決戦の刻 BOX",
-      "brand": "バンダイ",
-      "category": "トレカ",
-      "price": 5280,
-      "jissei": 15000,
-      "premium_rate": 2.84,
-      "premium_level": "高",
-      "profit_max": 7620,
-      "best_route": "メルカリ",
-      "phase": "受付中",
-      "deadline": "2026-06-21T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ホビーリンクジャパン",
-          "url": "https://support.hlj.co.jp/hc/ja/articles/58909692940441",
-          "phase": "受付中",
-          "entry_open": "2026-06-12T00:00:00+09:00",
-          "entry_deadline": "2026-06-21T23:59:00+09:00",
-          "result_date": "2026-06-25T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "WEB抽選・OP-16/OP-15/EB-03/受け継がれる意志/OP-10/EB-01同時受付"
-        },
-        {
-          "store": "フルコンプ 一部店舗",
-          "url": "https://livepocket.jp/e/zda8j",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-06-21T12:00:00+09:00",
-          "result_date": "2026-06-25T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "WEB抽選・当選者は店頭販売"
-        }
-      ],
-      "note": "テープ付き未開封BOX メルカリ売切¥14,000〜16,000(6/15-6月・安定) 中央値¥15,000 粗利約¥7,620/箱。海軍三大将収録で人気高。当選後は早期売却推奨"
-    },
-    {
-      "name": "ポケカ 30th プレミアムデッキセット エーフィ・ブラッキー",
-      "brand": "ポケモン",
-      "category": "トレカ",
-      "price": 6200,
+      "price": 6000,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "",
+      "premium_level": "発売前",
       "profit_max": 0,
-      "best_route": "メルカリ(発売後判定)",
+      "best_route": "発売後にメルカリ実売で判定",
       "phase": "受付中",
-      "deadline": "2026-06-21T23:59:00+09:00",
+      "deadline": "2026-06-27T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "ファミマオンライン",
-          "url": "https://famima-online.family.co.jp",
+          "store": "セブンネットショッピング",
+          "url": "https://7net.omni7.jp/",
           "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-06-21T23:59:00+09:00",
-          "result_date": "2026-06-23T00:00:00+09:00",
+          "entry_open": "2026-06-24T00:00:00+09:00",
+          "entry_deadline": "2026-06-27T23:59:00+09:00",
+          "result_date": "2026-07-08T00:00:00+09:00",
           "order_deadline": "",
-          "note": "WEB抽選・9/16発売の早期予約抽選"
+          "note": "⏰締切6/27・当選発表7/8"
+        },
+        {
+          "store": "Amazon(招待リクエスト)",
+          "url": "https://www.amazon.co.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-06-19T14:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "1BOX上限・招待制"
+        },
+        {
+          "store": "ビックカメラ.com",
+          "url": "https://www.biccamera.com/",
+          "phase": "受付中",
+          "entry_open": "2026-06-21T00:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "WEB先着販売"
+        },
+        {
+          "store": "イトーヨーカドー/アリオ",
+          "url": "https://www.itoyokado.co.jp/",
+          "phase": "予告",
+          "entry_open": "2026-07-17T00:00:00+09:00",
+          "entry_deadline": "2026-07-19T23:59:00+09:00",
+          "result_date": "2026-07-25T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "7/17-19申込"
         }
       ],
-      "note": "定価¥6,200・9/16発売(発売前so実売相場未確定)。ブラッキーex SAR/エーフィex SAR収録で高騰予想・周年記念で需要大。名指しWATCH=応募はノーリスクso受付中は必ず通知。粗利は発売後にメルカリ実機検証で判定"
+      "note": "7/31発売・メガレックウザ等メガ収録の本命弾。応募ノーリスク。発売後メルカリ実売で粗利判定"
+    },
+    {
+      "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
+      "brand": "ワンピースカード",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "発売前",
+      "profit_max": 0,
+      "best_route": "発売後にメルカリ実売で判定",
+      "phase": "受付中",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "Amazon(招待リクエスト)",
+          "url": "https://www.amazon.co.jp/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "招待リクエスト受付中。量販店予約は今後展開"
+        }
+      ],
+      "note": "8/22世界同時発売・4周年弾(エルバフ/四皇)。3周年同様サプライズ予定。OP-16決戦の刻は粗利約¥8k実績so期待大。発売後実売で判定"
     },
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
