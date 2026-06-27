@@ -95,6 +95,16 @@
   .btn-save { background: var(--accent); color: #06283d; }
   .btn-clear { background: var(--card2); color: var(--sub); border: 1px solid var(--line); }
   .saved-note { text-align:center; font-size:12px; color:var(--sub); margin-top:6px; }
+  .note { margin-top:8px; font-size:12px; font-weight:700; color:#fbbf24; }
+  .be { font-size:12px; color:var(--sub); margin-top:2px; }
+  .upbar {
+    display:flex; align-items:center; gap:8px; justify-content:center;
+    background:var(--card); border-radius:10px; padding:8px 12px; margin-bottom:14px;
+    font-size:13px; font-weight:700;
+  }
+  .upbar input { width:70px; font-size:18px; font-weight:800; text-align:center;
+    padding:6px 8px; border-radius:8px; border:2px solid var(--line);
+    background:var(--card2); color:var(--accent); }
 </style>
 </head>
 <body>
@@ -103,10 +113,15 @@
   <div class="meta" id="meta"></div>
 </header>
 
+<div class="upbar">
+  店頭買取UP <input type="number" id="upPct" value="0" inputmode="numeric" oninput="onUp()"> %
+  <span style="color:var(--sub);font-weight:600;">（キャンペーン時に入力）</span>
+</div>
+
 <div class="summary">
   <div class="sgo">🟢 出す <span id="cgo">0</span></div>
   <div class="sno">🔴 持帰 <span id="cno">0</span></div>
-  <div class="spend">未入力 <span id="cpend">7</span></div>
+  <div class="spend">未入力 <span id="cpend">18</span></div>
 </div>
 
 <div id="list"></div>
@@ -121,15 +136,26 @@
 <script>
 // ===== データ（管理表 金額列=仕入れ値 / 2026-06-16時点） =====
 const ITEMS = [
-  { no:"No15", mgmt:"W015-251028", name:"シャネル ココマーク キーホルダー バッグチャーム", cost:53819 },
-  { no:"No20", mgmt:"A020-251102", name:"シャネル 06A イミテーションパール ココマーク ハート ネックレス", cost:34550 },
-  { no:"No70", mgmt:"A070-260319", name:"CHANEL ココマーク べっ甲調 サングラス 5365-A", cost:18250 },
-  { no:"No72", mgmt:"A072-260319", name:"PRADA サングラス SPR19W べっ甲調 ブラウン（新品同様）", cost:14850 },
-  { no:"No86", mgmt:"B086-260426", name:"ルイヴィトン ライオン ハンドバッグ M92131 ダミエソバージュ", cost:19020 },
-  { no:"No44", mgmt:"W044-251223", name:"シャネル キャビアスキン マトラッセ コンパクトウォレット", cost:90980 },
-  { no:"No67", mgmt:"W067-260309", name:"シャネル キャビアスキン ボーイシャネル コンパクトウォレット 三つ折り財布", cost:43980 },
+  { no:"No20", mgmt:"A020-251102", name:"シャネル 06A イミテーションパール ココマーク ハート ネックレス", cost:34550, be:49458, note:"" },
+  { no:"No70", mgmt:"A070-260319", name:"CHANEL ココマーク べっ甲調 サングラス 5365-A", cost:18250, be:26172, note:"" },
+  { no:"No72", mgmt:"A072-260319", name:"PRADA 新品同様 サングラス SPR19W べっ甲調 ブラウン", cost:14850, be:21315, note:"" },
+  { no:"No73", mgmt:"A073-260319", name:"TIFFANY 美品 エルサペレッティ ハートリング SV925 約9号", cost:13201, be:18959, note:"" },
+  { no:"No69", mgmt:"B069-260318", name:"PRADA ナイロン⼱着ポーチ", cost:9350, be:13458, note:"" },
+  { no:"No75", mgmt:"B075-260330", name:"ケイトスペード ハンドバッグ ブラック系 ナイロン×レザー", cost:2836, be:4152, note:"" },
+  { no:"No86", mgmt:"B086-260426", name:"ルイヴィトン ライオン ハンドバッグ M92131 ダミエソバージュ", cost:19020, be:0, note:"保留中・委託¥31,460ライン" },
+  { no:"No80", mgmt:"O080-260420", name:"HERMES エルメス アジェンダ オーストリッチ 手帳カバー ブラウン 本革", cost:10450, be:0, note:"" },
+  { no:"No29", mgmt:"W029-251127", name:"グッチ 112521 2888 バンブー GG柄 GGキャンバス×レザー 二つ折り 財布", cost:7975, be:12677, note:"" },
+  { no:"No44", mgmt:"W044-251223", name:"シャネル キャビアスキン マトラッセ コンパクトウォレット", cost:90980, be:130072, note:"eBay出品中($800)・高単価" },
+  { no:"No54", mgmt:"W054-260126", name:"LOUIS VUITTON ルイヴィトン M61182 モノグラムアンプラント ポルトフォイユ サラ 二つ折り 長財布 ノワール ブラック", cost:17370, be:24915, note:"" },
+  { no:"No56", mgmt:"W056-260130", name:"VALENTINO GARAVANI レザー ラウンドファスナー 長財布 黒×ゴールド", cost:6744, be:9735, note:"" },
+  { no:"No57", mgmt:"W057-260202", name:"バレンシアガ 504564 ペーパーミニ レザー 三つ折り 財布", cost:7397, be:10668, note:"" },
+  { no:"No61", mgmt:"W061-260212", name:"LOEWE ロエベ リピート アナグラム フラップ 長財布 ブラック ネイビー", cost:15400, be:22100, note:"" },
+  { no:"No66", mgmt:"W066-260303", name:"BVLGARI ブルガリブルガリ レザー 長財布 ネイビー", cost:14961, be:21473, note:"" },
+  { no:"No67", mgmt:"W067-260309", name:"シャネル キャビアスキン ボーイシャネル コンパクトウォレット 三つ折り財布", cost:43980, be:62929, note:"フリマ深掘り推奨・高単価" },
+  { no:"No98", mgmt:"W098-260612", name:"PRADA プラダ サフィアーノレザー ヤシの木 ラウンドファスナー 長財布 イエロー系×マルチカラー", cost:12975, be:0, note:"" },
+  { no:"No99", mgmt:"W099-260612", name:"LOUIS VUITTON ルイヴィトン M60775 モノグラムアンプラント ジッピーウォレット ラウンドファスナー 長財布 アプリコ", cost:12975, be:0, note:"" },
 ];
-const STORE_KEY = "kaitori_assess_v1";
+const STORE_KEY = "kaitori_assess_v2";
 
 const yen = n => "¥" + Number(n).toLocaleString("ja-JP");
 const signYen = n => (n>=0?"+":"−") + "¥" + Math.abs(n).toLocaleString("ja-JP");
@@ -155,6 +181,8 @@ function render(){
       </div>
       <div class="name">${it.name}</div>
       <div class="cost">仕入れ値（赤字ライン）: <b>${yen(it.cost)}</b></div>
+      ${it.be ? `<div class="be">フリマ手取り分岐: ${yen(it.be)}（これ未満ならセカストが得）</div>` : ``}
+      ${it.note ? `<div class="note">⚠ ${it.note}</div>` : ``}
       <div class="inputwrap">
         <span class="yen">¥</span>
         <input type="number" inputmode="numeric" pattern="[0-9]*"
@@ -189,22 +217,40 @@ function evaluate(i, persist){
     return;
   }
   const assess = Math.round(Number(raw));
-  const diff = assess - it.cost;
-  const isGo = assess >= it.cost; // 厳格: 仕入れ値以上のみ出す
+  const up = getUp();
+  const eff = Math.round(assess * (1 + up/100)); // 買取UP%込みの実額
+  const diff = eff - it.cost;
+  const isGo = eff >= it.cost; // 厳格: 仕入れ値以上のみ出す
 
   card.className = "card " + (isGo ? "go" : "no");
+  const effLabel = up>0 ? `（UP込${yen(eff)}）` : ``;
   v.innerHTML = `
     <span class="badge ${isGo?'go':'no'}">${isGo?'🟢 出す':'🔴 持ち帰る'}</span>
-    <span class="diff ${isGo?'go':'no'}">${signYen(diff)}</span>
+    <span class="diff ${isGo?'go':'no'}">${signYen(diff)}<span style="font-size:11px;color:var(--sub);font-weight:600;"> ${effLabel}</span></span>
   `;
 
-  // 26日セカスト買取20%アップ換算（査定額×1.2で再判定するといくらか）
-  const bonus = Math.round(assess * 1.2);
-  const bonusDiff = bonus - it.cost;
-  const bonusGo = bonus >= it.cost;
-  b.innerHTML = `26日(20%UP)換算: <b>${yen(bonus)}</b> → ${bonusGo?'🟢出せる':'🔴まだ赤字'} (${signYen(bonusDiff)})`;
+  // フリマで売り続けた方が得か？（フリマ手取り分岐 be と比較）
+  if(it.be){
+    const beDiff = eff - it.be;
+    b.innerHTML = beDiff >= 0
+      ? `セカストが<b>フリマ手取り分岐(${yen(it.be)})も上回る</b> → 即現金化が有利 (${signYen(beDiff)})`
+      : `フリマ分岐(${yen(it.be)})には<b>${signYen(beDiff)}</b> → 赤字回避ならフリマ継続も可`;
+  } else {
+    b.innerHTML = `フリマ分岐データなし（仕入れ値のみで判定）`;
+  }
 
   if(persist){ saved[it.no] = assess; persistState(); }
+}
+
+function getUp(){
+  const v = Number(document.getElementById("upPct").value);
+  return (isFinite(v) && v>0) ? v : 0;
+}
+
+function onUp(){
+  ITEMS.forEach((it,i)=>evaluate(i,false));
+  updateSummary();
+  localStorage.setItem("kaitori_up", document.getElementById("upPct").value);
 }
 
 function onInput(i){
@@ -214,10 +260,12 @@ function onInput(i){
 
 function updateSummary(){
   let go=0, no=0, pend=0;
+  const up = getUp();
   ITEMS.forEach((it,i)=>{
     const raw = document.getElementById("in-"+i).value.trim();
     if(raw===""){ pend++; return; }
-    if(Number(raw) >= it.cost) go++; else no++;
+    const eff = Math.round(Number(raw) * (1 + up/100));
+    if(eff >= it.cost) go++; else no++;
   });
   document.getElementById("cgo").textContent = go;
   document.getElementById("cno").textContent = no;
@@ -256,16 +304,22 @@ function showSavedNote(){
     const d = new Date(saved._savedAt);
     note.textContent = "最終保存: " + d.toLocaleString("ja-JP", {month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
   } else {
-    note.textContent = "入力は自動で端末に保存されます（26日の再判定用）";
+    note.textContent = "入力は自動で端末に保存されます";
   }
 }
+
+// 買取UP%を復元
+(function(){
+  const u = localStorage.getItem("kaitori_up");
+  if(u!=null) document.getElementById("upPct").value = u;
+})();
 
 // ヘッダー日付（動的）
 (function(){
   const now = new Date();
   const ymd = now.getFullYear() + "/" + (now.getMonth()+1) + "/" + now.getDate();
   document.getElementById("meta").textContent =
-    ymd + " 店頭査定 ／ 判定: 仕入れ値以上のみ🟢出す（厳格）";
+    ymd + " 店頭査定 ／ 在庫" + ITEMS.length + "件 ／ 仕入れ値以上のみ🟢（買取UP%込で判定）";
 })();
 
 render();
