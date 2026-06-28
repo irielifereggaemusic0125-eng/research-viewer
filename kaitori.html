@@ -73,9 +73,12 @@
   input:focus { outline: none; border-color: var(--accent); }
 
   .verdict {
-    margin-top: 10px; display: flex; align-items: center; justify-content: space-between;
+    margin-top: 10px; display: flex; flex-direction: column; gap: 6px;
     min-height: 30px;
   }
+  .vrow { display: flex; align-items: center; justify-content: space-between; }
+  .vlabel { font-size: 13px; color: var(--sub); font-weight: 600; }
+  .vlabel b { color: var(--txt); font-size: 15px; }
   .badge { font-size: 20px; font-weight: 900; }
   .badge.go { color: var(--go); }
   .badge.no { color: var(--no); }
@@ -123,7 +126,7 @@
 </header>
 
 <div class="upbar">
-  店頭買取UP <input type="number" id="upPct" value="0" inputmode="numeric" oninput="onUp()"> %
+  店頭買取UP <input type="number" id="upPct" value="20" inputmode="numeric" oninput="onUp()"> %
   <span style="color:var(--sub);font-weight:600;">（キャンペーン時に入力）</span>
 </div>
 
@@ -244,21 +247,32 @@ function evaluate(i, persist){
   const assess = Math.round(Number(raw));
   const up = getUp();
   const eff = Math.round(assess * (1 + up/100)); // 買取UP%込みの実額
-  const diff = eff - it.cost;
-  const isGo = eff >= it.cost; // 厳格: 仕入れ値以上のみ出す
 
-  card.className = "card " + (isGo ? "go" : "no");
-  const effLabel = up>0 ? `（UP込${yen(eff)}）` : ``;
+  // そのまま査定での損益
+  const diff0 = assess - it.cost;
+  const go0 = assess >= it.cost;
+  // UP%加算後の損益
+  const diffUp = eff - it.cost;
+  const goUp = eff >= it.cost;
+
+  // カード色は「実際に受け取るUP込」で判定
+  card.className = "card " + (goUp ? "go" : "no");
   v.innerHTML = `
-    <span class="badge ${isGo?'go':'no'}">${isGo?'🟢 出す':'🔴 持ち帰る'}</span>
-    <span class="diff ${isGo?'go':'no'}">${signYen(diff)}<span style="font-size:11px;color:var(--sub);font-weight:600;"> ${effLabel}</span></span>
+    <div class="vrow">
+      <span class="vlabel">そのまま <b>${yen(assess)}</b></span>
+      <span class="diff ${go0?'go':'no'}">${go0?'🟢':'🔴'} ${signYen(diff0)}</span>
+    </div>
+    <div class="vrow">
+      <span class="vlabel">+${up}%加算 <b>${yen(eff)}</b></span>
+      <span class="diff ${goUp?'go':'no'}">${goUp?'🟢':'🔴'} ${signYen(diffUp)}</span>
+    </div>
   `;
 
-  // フリマで売り続けた方が得か？（フリマ手取り分岐 be と比較）
+  // フリマで売り続けた方が得か？（フリマ手取り分岐 be と比較・UP込で比較）
   if(it.be){
     const beDiff = eff - it.be;
     b.innerHTML = beDiff >= 0
-      ? `セカストが<b>フリマ手取り分岐(${yen(it.be)})も上回る</b> → 即現金化が有利 (${signYen(beDiff)})`
+      ? `セカスト(UP込)が<b>フリマ手取り分岐(${yen(it.be)})も上回る</b> → 即現金化が有利 (${signYen(beDiff)})`
       : `フリマ分岐(${yen(it.be)})には<b>${signYen(beDiff)}</b> → 赤字回避ならフリマ継続も可`;
   } else {
     b.innerHTML = `フリマ分岐データなし（仕入れ値のみで判定）`;
