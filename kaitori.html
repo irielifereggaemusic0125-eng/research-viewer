@@ -101,6 +101,7 @@
     border-radius: 10px; border: none; color: var(--txt);
   }
   .btn-save { background: var(--accent); color: #06283d; }
+  .btn-send { background: #22c55e; color: #052e16; }
   .btn-clear { background: var(--card2); color: var(--sub); border: 1px solid var(--line); }
   .saved-note { text-align:center; font-size:12px; color:var(--sub); margin-top:6px; }
   .note { margin-top:8px; font-size:12px; font-weight:700; color:#fbbf24; }
@@ -139,7 +140,8 @@
 
 <div class="toolbar">
   <button class="btn-clear" onclick="clearAll()">全消去</button>
-  <button class="btn-save" onclick="saveNow()">💾 記録を保存</button>
+  <button class="btn-save" onclick="saveNow()">💾 保存</button>
+  <button class="btn-send" onclick="sendToCloud()">📤 Claudeへ送信</button>
 </div>
 
 <script>
@@ -346,6 +348,32 @@ function showSavedNote(){
   } else {
     note.textContent = "入力は自動で端末に保存されます";
   }
+}
+
+// ☁️ Claudeへ送信（ntfy.sh経由・無認証/CORS対応）
+const KAITORI_TOPIC = "banshee_kaitori_5q7x2025";
+async function sendToCloud(){
+  const up = getUp();
+  const rows = ITEMS.map((it,i)=>{
+    const sv = saved[it.no];
+    let state="未入力", assess=null, eff=null;
+    if(sv==="OOR"){ state="基準外"; }
+    else if(sv!=null){
+      assess=Number(sv); eff=Math.round(assess*(1+up/100));
+      state = eff>=it.cost ? "出す" : "持帰";
+    }
+    return {no:it.no, mgmt:it.mgmt, name:it.name, cost:it.cost, be:it.be, assess, eff, state};
+  });
+  const payload = {type:"kaitori", ts:new Date().toISOString(), upPct:up, items:rows};
+  const btn = document.querySelector(".btn-send");
+  btn.textContent = "送信中…";
+  try{
+    await fetch("https://ntfy.sh/"+KAITORI_TOPIC, {method:"POST", body:JSON.stringify(payload)});
+    btn.textContent = "✅ 送信完了";
+  }catch(e){
+    btn.textContent = "❌ 失敗(再試行)";
+  }
+  setTimeout(()=>{ btn.textContent = "📤 Claudeへ送信"; }, 2000);
 }
 
 // 買取UP%を復元
