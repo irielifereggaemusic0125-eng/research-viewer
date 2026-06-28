@@ -43,6 +43,14 @@
   }
   .card.go { border-color: var(--gobd); background: linear-gradient(var(--card), var(--gobg)); }
   .card.no { border-color: var(--nobd); background: linear-gradient(var(--card), var(--nobg)); }
+  .card.oor { border-color: #a855f7; background: linear-gradient(var(--card), #2e1065); opacity:.92; }
+  .badge.oor { color:#c084fc; }
+  .oor-btn {
+    margin-top:10px; width:100%; padding:9px; font-size:12px; font-weight:700;
+    border-radius:9px; border:1px solid var(--line); background:var(--card2); color:var(--sub);
+  }
+  .card.oor .oor-btn { background:#3b0764; border-color:#a855f7; color:#e9d5ff; }
+  .summary .soor { color:#c084fc; }
 
   .row1 { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
   .no { font-size: 13px; font-weight: 800; color: var(--accent); white-space: nowrap; }
@@ -121,6 +129,7 @@
 <div class="summary">
   <div class="sgo">🟢 出す <span id="cgo">0</span></div>
   <div class="sno">🔴 持帰 <span id="cno">0</span></div>
+  <div class="soor">⊘ 基準外 <span id="coor">0</span></div>
   <div class="spend">未入力 <span id="cpend">18</span></div>
 </div>
 
@@ -173,7 +182,8 @@ function render(){
     const card = document.createElement("div");
     card.className = "card";
     card.id = "card-" + i;
-    const val = saved[it.no] != null ? saved[it.no] : "";
+    const sv = saved[it.no];
+    const val = (sv != null && sv !== "OOR") ? sv : "";
     card.innerHTML = `
       <div class="row1">
         <span class="no">${it.no}</span>
@@ -193,6 +203,7 @@ function render(){
         <span class="badge idle">査定額を入力してください</span>
       </div>
       <div class="bonus" id="b-${i}"></div>
+      <button class="oor-btn" id="oor-${i}" onclick="toggleOOR(${i})">基準外（買取不可）にする</button>
     `;
     list.appendChild(card);
     evaluate(i, false);
@@ -207,6 +218,18 @@ function evaluate(i, persist){
   const card = document.getElementById("card-"+i);
   const v = document.getElementById("v-"+i);
   const b = document.getElementById("b-"+i);
+  const oorBtn = document.getElementById("oor-"+i);
+
+  // 基準外（買取不可）状態が最優先
+  if(saved[it.no] === "OOR"){
+    card.className = "card oor";
+    v.innerHTML = `<span class="badge oor">⊘ 基準外（買取不可）→ フリマ販売へ</span>`;
+    b.innerHTML = `セカスト対象外。${it.be?`フリマで分岐${yen(it.be)}以上を狙う`:`フリマ販売継続`}`;
+    if(oorBtn) oorBtn.textContent = "基準外を解除する";
+    return;
+  }
+  if(oorBtn) oorBtn.textContent = "基準外（買取不可）にする";
+
   const raw = input.value.trim();
 
   if(raw === ""){
@@ -253,15 +276,30 @@ function onUp(){
   localStorage.setItem("kaitori_up", document.getElementById("upPct").value);
 }
 
+function toggleOOR(i){
+  const it = ITEMS[i];
+  if(saved[it.no] === "OOR"){
+    delete saved[it.no];
+    const input = document.getElementById("in-"+i);
+    if(input) input.value = "";
+  } else {
+    saved[it.no] = "OOR";
+  }
+  persistState();
+  evaluate(i, false);
+  updateSummary();
+}
+
 function onInput(i){
   evaluate(i, true);
   updateSummary();
 }
 
 function updateSummary(){
-  let go=0, no=0, pend=0;
+  let go=0, no=0, oor=0, pend=0;
   const up = getUp();
   ITEMS.forEach((it,i)=>{
+    if(saved[it.no] === "OOR"){ oor++; return; }
     const raw = document.getElementById("in-"+i).value.trim();
     if(raw===""){ pend++; return; }
     const eff = Math.round(Number(raw) * (1 + up/100));
@@ -269,6 +307,7 @@ function updateSummary(){
   });
   document.getElementById("cgo").textContent = go;
   document.getElementById("cno").textContent = no;
+  document.getElementById("coor").textContent = oor;
   document.getElementById("cpend").textContent = pend;
 }
 
@@ -279,6 +318,7 @@ function persistState(){
 function saveNow(){
   // 現在の全入力を保存
   ITEMS.forEach((it,i)=>{
+    if(saved[it.no] === "OOR") return; // 基準外は維持
     const raw = document.getElementById("in-"+i).value.trim();
     if(raw==="") delete saved[it.no];
     else saved[it.no] = Math.round(Number(raw));
