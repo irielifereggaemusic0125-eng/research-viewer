@@ -754,8 +754,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 13;
-const APP_VER_DATE = '2026-06-25';
+const APP_VER = 14;
+const APP_VER_DATE = '2026-06-29';
 
 // 全角数字→半角に正規化（金額入力・全角０-９やカンマ／円記号も許容）
 function toHalfWidthNum(s){ return (s||'').replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xFEE0)).replace(/[，､、]/g,','); }
@@ -2663,8 +2663,13 @@ async function checkVersion(){
       let b=document.getElementById('ver-update-banner');
       if(!b){
         b=document.createElement('div'); b.id='ver-update-banner'; b.className='ver-update-banner';
-        b.textContent=`🔄 新しいバージョン v${v.version} があります。タップで再読み込み`;
-        b.onclick=()=>location.reload(true);
+        b.textContent=`🔄 新しいバージョン v${v.version} があります。タップで更新`;
+        b.onclick=async()=>{
+          b.textContent='更新中…';
+          try{ if('caches' in window){ const ks=await caches.keys(); await Promise.all(ks.map(k=>caches.delete(k))); } }catch(e){}
+          try{ if('serviceWorker' in navigator){ const rs=await navigator.serviceWorker.getRegistrations(); await Promise.all(rs.map(r=>r.unregister())); } }catch(e){}
+          location.replace(location.pathname.split('?')[0] + '?v=' + Date.now());
+        };
         document.body.appendChild(b);
       }
     }
