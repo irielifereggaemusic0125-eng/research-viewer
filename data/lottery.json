@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-06-27T21:35:28+09:00",
+  "updated_at": "2026-06-30T04:58:00+09:00",
   "candidates": [
     {
       "name": "ポケカ ストームエメラルダ BOX",
@@ -13,19 +13,9 @@
       "profit_max": 0,
       "best_route": "発売後にメルカリ実売で判定",
       "phase": "受付中",
-      "deadline": "2026-06-29T16:59:00+09:00",
+      "deadline": "2026-06-30T15:00:00+09:00",
       "status": "未応募",
       "routes": [
-        {
-          "store": "ポケモンセンターオンライン",
-          "url": "https://www.pokemoncenter-online.com/",
-          "phase": "受付中",
-          "entry_open": "2026-06-26T14:00:00+09:00",
-          "entry_deadline": "2026-06-29T16:59:00+09:00",
-          "result_date": "2026-07-03T15:00:00+09:00",
-          "order_deadline": "",
-          "note": "🆕抽選受付中 6/26 14:00〜6/29 16:59・当選発表7/3 15時以降。応募ノーリスク"
-        },
         {
           "store": "セブンネット",
           "url": "https://7net.omni7.jp/",
@@ -34,7 +24,37 @@
           "entry_deadline": "2026-06-30T15:00:00+09:00",
           "result_date": "2026-07-08T00:00:00+09:00",
           "order_deadline": "",
-          "note": "⏰締切6/30 15:00(訂正)・当選発表7/8"
+          "note": "⏰本日6/30 15:00締切(最緊急)・当選発表7/8。※入荷Now集約では7/10 19時締切の別ラウンド掲載ありso両方確認"
+        },
+        {
+          "store": "イオン北海道eショップ",
+          "url": "https://shop.aeon-hokkaido.jp/",
+          "phase": "予告",
+          "entry_open": "2026-07-01T09:00:00+09:00",
+          "entry_deadline": "2026-07-06T23:59:00+09:00",
+          "result_date": "2026-07-08T10:00:00+09:00",
+          "order_deadline": "",
+          "note": "🔵明日7/1 9:00エントリー開始〜7/6 23:59・店頭受取・当選発表7/8 10時以降"
+        },
+        {
+          "store": "イトーヨーカドー/アリオ",
+          "url": "https://www.itoyokado.co.jp/",
+          "phase": "予告",
+          "entry_open": "2026-07-17T00:00:00+09:00",
+          "entry_deadline": "2026-07-19T20:00:00+09:00",
+          "result_date": "2026-07-25T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "7/17-19申込・店頭販売・当選発表7/25〜8/2"
+        },
+        {
+          "store": "ポケモンセンターオンライン",
+          "url": "https://www.pokemoncenter-online.com/",
+          "phase": "案内待ち",
+          "entry_open": "2026-06-26T14:00:00+09:00",
+          "entry_deadline": "2026-06-29T16:59:00+09:00",
+          "result_date": "2026-07-03T15:00:00+09:00",
+          "order_deadline": "",
+          "note": "抽選受付終了(6/29 16:59)・当選発表7/3 15時以降を待つ"
         },
         {
           "store": "Amazon(招待リクエスト)",
@@ -45,39 +65,76 @@
           "result_date": "",
           "order_deadline": "",
           "note": "1BOX上限・招待制"
+        }
+      ],
+      "note": "7/31発売・メガレックウザ等メガ収録の本命弾。応募ノーリスク。🆕本日6/30はセブンネット15時締切(最緊急)+明日7/1イオン北海道開始の二段構え。発売後メルカリ封入済1BOX売切中央値で粗利判定"
+    },
+    {
+      "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 7200,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "発売前",
+      "profit_max": 0,
+      "best_route": "メルカリ(発売後判定)",
+      "phase": "受付中",
+      "deadline": "2026-07-15T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "セブンネット",
+          "url": "https://7net.omni7.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-06-30T15:00:00+09:00",
+          "entry_deadline": "2026-07-15T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🔴本日6/30 15時頃 抽選応募開始予定〜7/15締切。応募条件あり(購入履歴)"
         },
         {
-          "store": "ビックカメラ.com",
-          "url": "https://www.biccamera.com/",
+          "store": "ノジマオンライン",
+          "url": "https://online.nojima.co.jp/",
           "phase": "受付中",
-          "entry_open": "2026-06-21T00:00:00+09:00",
+          "entry_open": "2026-06-10T13:00:00+09:00",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "WEB先着販売"
+          "note": "随時受付中(入荷Now集約)。応募ノーリスク"
         },
         {
-          "store": "あみあみ",
-          "url": "https://www.amiami.jp/",
-          "phase": "終了",
-          "entry_open": "2026-06-23T00:00:00+09:00",
-          "entry_deadline": "2026-06-25T13:59:00+09:00",
-          "result_date": "2026-06-26T00:00:00+09:00",
+          "store": "Amazon(招待リクエスト)",
+          "url": "https://www.amazon.co.jp/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
           "order_deadline": "",
-          "note": "抽選受付終了(6/25締切)"
+          "note": "招待リクエスト受付中"
         },
         {
-          "store": "イトーヨーカドー/アリオ",
-          "url": "https://www.itoyokado.co.jp/",
+          "store": "ポケモンセンターオンライン",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260608",
           "phase": "予告",
-          "entry_open": "2026-07-17T00:00:00+09:00",
-          "entry_deadline": "2026-07-19T23:59:00+09:00",
-          "result_date": "2026-07-25T00:00:00+09:00",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
           "order_deadline": "",
-          "note": "7/17-19申込"
+          "note": "6/8公式告知・抽選詳細は7月以降案内予定。本人確認済が当選しやすい仕組み"
+        },
+        {
+          "store": "公式特設サイト",
+          "url": "https://www.30th.pokemon-card.com",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "9/16世界同時発売・FUR新レアリティ・1パック全6枚キラ"
         }
       ],
-      "note": "7/31発売・メガレックウザ等メガ収録の本命弾。応募ノーリスク。🆕ポケセン抽選6/29 16:59締切が最緊急(当選発表7/3)。セブンネットは6/30 15:00締切。発売後メルカリ実売で粗利判定"
+      "note": "MEGA拡張パック・9/16発売・1BOX定価約¥7,200。🆕本日6/30 15時セブンネット応募開始(7/15締切)・ノジマ随時受付中。25th box前例(定価¥5,500→ピーク¥20,000+)so上振れ期待大。発売前は応募ノーリスク・実売は発売後判定"
     },
     {
       "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
@@ -101,10 +158,10 @@
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "招待リクエスト受付中。量販店予約は今後展開"
+          "note": "招待販売リクエスト受付中。プレバン/量販店抽選は7月以降本格化(プレバンは当日/前日告知so毎週金曜の公式Xチェック必須)"
         }
       ],
-      "note": "8/22世界同時発売・4周年弾(エルバフ/四皇)。OP-16決戦の刻は粗利約¥8k実績so期待大。発売後実売で判定"
+      "note": "8/22(土)世界同時発売・4周年弾(エルバフ/四皇)24パック入り。OP-16決戦の刻は粗利約¥8k実績so期待大。発売後メルカリ実売で判定"
     },
     {
       "name": "アサシンクリード ブラックフラッグ RE:シンクロ コレクターズED",
@@ -121,74 +178,17 @@
       "status": "未応募",
       "routes": [
         {
-          "store": "Ubisoft Store/各販売店",
+          "store": "エビテン(UBISOFT SHOP)/各販売店",
           "url": "https://www.ubisoft.com/ja-jp/game/assassins-creed/black-flag-resynced/collectors-edition",
           "phase": "予告",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "7/9発売・数量限定・エドワードフィギュア同梱"
+          "note": "7/9発売・数量限定・エドワードフィギュア+スチールブック+布マップ同梱"
         }
       ],
-      "note": "WATCH。CE=利益と即断しない(SKILL警告)。7/9発売後に類似CEでメルカリ実機検証→粗利¥3k超確認できたら通知。現時点は判定保留"
-    },
-    {
-      "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
-      "brand": "ポケモン",
-      "category": "トレカ",
-      "price": 7200,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "発売前",
-      "profit_max": 0,
-      "best_route": "メルカリ(発売後判定)",
-      "phase": "予告",
-      "deadline": "2026-07-15T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "セブンネット",
-          "url": "https://7net.omni7.jp/",
-          "phase": "予告",
-          "entry_open": "2026-06-30T15:00:00+09:00",
-          "entry_deadline": "2026-07-15T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "🆕6/30(火)15時頃 抽選応募開始予定〜7/15締切。応募条件あり(購入履歴)"
-        },
-        {
-          "store": "Amazon(招待リクエスト)",
-          "url": "https://www.amazon.co.jp/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "招待リクエスト受付中"
-        },
-        {
-          "store": "ポケモンセンターオンライン",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260608",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "6/8公式告知・抽選詳細は7月以降案内予定"
-        },
-        {
-          "store": "公式特設サイト",
-          "url": "https://www.30th.pokemon-card.com",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "9/16世界同時発売・FUR新レアリティ"
-        }
-      ],
-      "note": "MEGA拡張パック・9/16発売・1BOX定価約¥7,200。🆕セブンネット6/30 15時応募開始予定が確定(7/15締切)。25th box前例(定価¥5,500→ピーク¥20,000+)so上振れ期待大。発売前は応募ノーリスク"
+      "note": "WATCH。フィギュア同梱の数量限定CE(SKILLの伸びやすい型)だがCE=利益と即断しない。7/9発売後にメルカリ新品未開封売切中央値で粗利¥3k超を確認できたら通知。現時点は判定保留"
     },
     {
       "name": "RICOH GR IV",
@@ -217,15 +217,15 @@
         {
           "store": "リコーイメージングストア/フジヤ/マップ",
           "url": "https://tenbaiquest.com/resale/ricoh-2",
-          "phase": "終了",
+          "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "Web抽選は2次(6/22-24締切)まで終了・出荷6/30まで。7/1に定価改定"
+          "note": "Web抽選は2次(6/22-24締切)まで終了・出荷6/30まで。7/1に定価改定so次回抽選は改定後価格。次回日程未定(@GR_RICOH/リコストア新着で告知待ち)"
         }
       ],
-      "note": "GR IV抽選・るでや買取で+¥40,000前後。Web抽選は全ラウンド終了(2次6/24締切)・7/1価格改定。GR SPACE TOKYO店頭抽選のみ継続(来店必須)。常設ウォッチ枠so継続監視"
+      "note": "GR IV抽選・るでや買取で+¥40,000前後。Web抽選は全ラウンド終了(2次6/24締切)・7/1価格改定。GR SPACE TOKYO店頭抽選のみ継続(来店必須)。常設ウォッチ枠so次回Web抽選日程を継続監視"
     }
   ]
 }
