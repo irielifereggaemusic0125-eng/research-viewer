@@ -1,762 +1,840 @@
 {
-  "updated": "2026-06-25",
-  "schema": "v9-lenakam-soda",
-  "note": "⑧レナカム刻印別枠+鑑定上限表示(2026-06-25): レナードカムホート刻印(.925 USA)=ロンワンズと別カテゴリ・高希少・要証明書/鑑定。鑑定付き入札上限(max_bid-2500)/鑑定なし上限を併記。 ⑦サンローラン(YSL)追加(2026-06-24): カサンドラ財布/カードケース=2-4万回転定番(主軸)・人気バッグ(ニキ/ルー)=5-9万特上候補。SODA対象に追加(鑑定料2500差引)。 ⑥高単価・特上枠追加(2026-06-23): 落札相場5-9万のSランク×新品タグ付き×ハイブランドを特上枠で抽出・理想落札(手取り×0.65)等の判断材料表示。主軸2-4万継続/10万超除外/粗利5000全層共通。 ⑤新品アパレルpremium枠追加(2026-06-23): EcoAuc Sランク×新品タグ付き×LV/CHANEL/HERMESメインライン アパレル(春夏トップス)。category=8スキャン・理想落札=手取り×0.65・priority A高単価¥60k例外。RW211W実証/第789回横展開成功。 ④戦略C適用(2026-06-23): メルカリ実勢2-4万帯集中/10万超除外、ランクS/A/AB(B条件付)、粗利5000死守。サングラス・ネックレス・キーホルダー類は出口狭く優先度↓(実証済み勝ち型番は維持)。ニッチ(DELVAUX等)はSOLD実績確認までGO不可。Yahoo鑑定付き(SODA)個人出品を新ソース追加(鑑定料¥2,500を入札上限から差引)。 ②カバン・アクセサリー拡大(2026-06-16): ecoauc_targets P12-18追加(グッチ/セリーヌ/ロエベ/シャネルバッグ・カルティエ/エルメス/ティファニーアクセ)。Yahoo small_bags/accessories拡充。③LV財布絞り込み: P3にrank_exclude=Bを追加→Bランク除外。",
-  "categories": [
+ "updated": "2026-06-30",
+ "schema": "v9-lenakam-soda+silver-specialist",
+ "note": "⑧レナカム刻印別枠+鑑定上限表示(2026-06-25): レナードカムホート刻印(.925 USA)=ロンワンズと別カテゴリ・高希少・要証明書/鑑定。鑑定付き入札上限(max_bid-2500)/鑑定なし上限を併記。 ⑦サンローラン(YSL)追加(2026-06-24): カサンドラ財布/カードケース=2-4万回転定番(主軸)・人気バッグ(ニキ/ルー)=5-9万特上候補。SODA対象に追加(鑑定料2500差引)。 ⑥高単価・特上枠追加(2026-06-23): 落札相場5-9万のSランク×新品タグ付き×ハイブランドを特上枠で抽出・理想落札(手取り×0.65)等の判断材料表示。主軸2-4万継続/10万超除外/粗利5000全層共通。 ⑤新品アパレルpremium枠追加(2026-06-23): EcoAuc Sランク×新品タグ付き×LV/CHANEL/HERMESメインライン アパレル(春夏トップス)。category=8スキャン・理想落札=手取り×0.65・priority A高単価¥60k例外。RW211W実証/第789回横展開成功。 ④戦略C適用(2026-06-23): メルカリ実勢2-4万帯集中/10万超除外、ランクS/A/AB(B条件付)、粗利5000死守。サングラス・ネックレス・キーホルダー類は出口狭く優先度↓(実証済み勝ち型番は維持)。ニッチ(DELVAUX等)はSOLD実績確認までGO不可。Yahoo鑑定付き(SODA)個人出品を新ソース追加(鑑定料¥2,500を入札上限から差引)。 ②カバン・アクセサリー拡大(2026-06-16): ecoauc_targets P12-18追加(グッチ/セリーヌ/ロエベ/シャネルバッグ・カルティエ/エルメス/ティファニーアクセ)。Yahoo small_bags/accessories拡充。③LV財布絞り込み: P3にrank_exclude=Bを追加→Bランク除外。",
+ "categories": [
+  {
+   "id": "win_patterns",
+   "label": "🔥 勝ちパターン最優先（実証済み・SOLD鉄板型番）",
+   "words": [
     {
-      "id": "win_patterns",
-      "label": "🔥 勝ちパターン最優先（実証済み・SOLD鉄板型番）",
-      "words": [
-        {
-          "word": "1円 ロンワンズ",
-          "kaiten": 6,
-          "rieki": 26
-        },
-        "1円 LONE ONES",
-        "1円 レナードカムフォート",
-        "1円 ルイヴィトン M00596",
-        "1円 ルイヴィトン M00308",
-        "1円 ルイヴィトン M00307",
-        "1円 ルイヴィトン M01880",
-        "1円 グッチ 410812",
-        "1円 バレンシアガ 671402"
-      ]
+     "word": "1円 ロンワンズ",
+     "kaiten": 6,
+     "rieki": 26
     },
-    {
-      "id": "lenakam_stamp",
-      "label": "🔱 レナードカムホート刻印(.925 USA)別枠・高希少 ※ロンワンズと別/証明書推奨",
-      "words": [
-        {
-          "word": "1円 レナードカムホート",
-          "kaiten": 6
-        },
-        "1円 Leonard Kamhout",
-        "1円 カムホート クレーンベル",
-        "1円 カムホート ティアベル",
-        "1円 カムホート シルクリング"
-      ]
-    },
-    {
-      "id": "apparel_premium",
-      "label": "🆕 新品アパレルpremium（Sランク×新品タグ付き×LV/CHANEL/HERMES・¥60k例外）",
-      "words": [
-        "1円 ルイヴィトン モノグラム トップス 新品 タグ付",
-        "1円 ルイヴィトン モノグラム Tシャツ 新品 タグ付",
-        "1円 ルイヴィトン モノグラム スウェット 新品",
-        "1円 シャネル トップス 新品 タグ付",
-        "1円 エルメス トップス 新品 タグ付"
-      ]
-    },
-    {
-      "id": "ysl",
-      "label": "🟡 サンローラン(YSL)・カサンドラ財布(主軸2-4万)＋人気バッグ(特上5-9万)",
-      "words": [
-        "1円 サンローラン カサンドラ 財布",
-        "1円 サンローラン カサンドラ カードケース",
-        "1円 サンローラン カサンドラ コンパクト 財布",
-        "1円 イヴサンローラン メタルロゴ 財布",
-        "1円 サンローラン ニキ バッグ",
-        "1円 サンローラン ルー バッグ"
-      ]
-    },
-    {
-      "id": "main_axis",
-      "label": "🎯 主軸最優先（ロンワンズ・カムホート・全部見る）",
-      "words": [
-        "1円 ロンワンズ",
-        "1円 LONE ONES",
-        "1円 レナードカムフォート",
-        "1円 Leonard Kamhout",
-        "1円 LEONARD KAMHOUT"
-      ]
-    },
-    {
-      "id": "lv_accessories",
-      "label": "💠 LVアクセサリー（先輩SOLD鉄板型番）",
-      "words": [
-        "1円 ルイヴィトン M00596",
-        "1円 ルイヴィトン アイコニック ネックレス",
-        "1円 ルイヴィトン M00308",
-        "1円 ルイヴィトン チェーン ブレスレット",
-        "1円 ルイヴィトン M00307",
-        "1円 ルイヴィトン M01880",
-        "1円 ルイヴィトン メタル ネックレス",
-        "1円 ルイヴィトン ネックレス ブレスレット"
-      ]
-    },
-    {
-      "id": "senior_sold_other",
-      "label": "🏆 先輩SOLD型番（GUCCI・バレンシアガ）",
-      "words": [
-        "1円 グッチ 410812",
-        "1円 グッチ ヒグチユウコ",
-        "1円 バレンシアガ 671402",
-        "1円 バレンシアガ チェーン ネックレス"
-      ]
-    },
-    {
-      "id": "accessories",
-      "label": "💎 アクセサリー優先（先輩実績ブランド・拡充）",
-      "words": [
-        "1円 カルティエ トリニティ リング",
-        "1円 カルティエ ラブ リング",
-        "1円 カルティエ ジュストアンクル ブレスレット",
-        "1円 シャネル ココマーク ブローチ",
-        "1円 シャネル ネックレス シルバー",
-        "1円 エルメス クリックH ブレスレット",
-        "1円 エルメス アミュレット",
-        "1円 エルメス シェーヌダンクル ブレスレット",
-        "1円 ティファニー オープンハート",
-        "1円 ティファニー Tスマイル ネックレス",
-        "1円 ヴァンクリーフ ネックレス",
-        "1円 グッチ インターロッキング リング",
-        "1円 グッチ GG ネックレス",
-        "1円 ディオール クレールドリュヌ",
-        "1円 バレンシアガ チェーン ネックレス",
-        "1円 ヴェルサーチ イヤリング",
-        "1円 ブルガリ ネックレス",
-        "1円 ブルガリ リング",
-        "1円 ブルガリ ブレスレット",
-        "1円 シャネル リング シルバー",
-        "1円 グッチ ブレスレット",
-        "1円 ポメラート ネックレス"
-      ]
-    },
-    {
-      "id": "rank_s",
-      "label": "🥇 S級・最優先（自社実証済み）",
-      "words": [
-        "1円 プラダ サフィアーノ 二つ折",
-        "1円 ルイヴィトン M60171",
-        "1円 ルイヴィトン アンプラント 長財布"
-      ]
-    },
-    {
-      "id": "rank_a",
-      "label": "🥈 A級・好回転×安定（自社実証）",
-      "words": [
-        "1円 カルティエ サントス ネックレス",
-        "1円 バレンシアガ 長財布",
-        "1円 ジルサンダー クロスボディ",
-        "1円 ルイヴィトン M85069"
-      ]
-    },
-    {
-      "id": "lv_models",
-      "label": "🔑 LV型式（ピンポイント検索・バッグ系）",
-      "words": [
-        "1円 ルイヴィトン M60171",
-        "1円 ルイヴィトン M85069",
-        "1円 ルイヴィトン M62630",
-        "1円 ルイヴィトン M81303",
-        "1円 ルイヴィトン M80091",
-        "1円 ルイヴィトン ポシェット アクセソワール"
-      ]
-    },
-    {
-      "id": "prada_name",
-      "label": "👜 プラダ（商品名・バッグ・ポーチ重視）",
-      "words": [
-        "1円 プラダ 巾着 ポーチ",
-        "1円 プラダ カナパ トート",
-        "1円 プラダ ナイロン ショルダー",
-        "1円 プラダ サフィアーノ 財布",
-        "1円 プラダ バッグ"
-      ]
-    },
-    {
-      "id": "prada_guarantee",
-      "label": "📜 プラダ（ギャランティ付き・正規品確度高）",
-      "words": [
-        "1円 プラダ 巾着 ギャランティ",
-        "1円 プラダ ポーチ ギャランティ",
-        "1円 プラダ カナパ ギャランティ",
-        "1円 プラダ ナイロン ギャランティ",
-        "1円 プラダ サフィアーノ ギャランティ",
-        "1円 プラダ バッグ ギャランティ"
-      ]
-    },
-    {
-      "id": "chanel_bags",
-      "label": "🌸 シャネル（バッグ重視・財布は縮小）",
-      "words": [
-        "1円 シャネル マトラッセ ショルダー",
-        "1円 シャネル チェーンショルダー",
-        "1円 シャネル ヴァニティ バッグ",
-        "1円 シャネル マトラッセ チェーンウォレット"
-      ]
-    },
-    {
-      "id": "small_bags",
-      "label": "👝 小型バッグ（先輩実績ブランド）",
-      "words": [
-        "1円 グッチ GGマーモント ショルダー",
-        "1円 セリーヌ トリオンフ ショルダー",
-        "1円 エルメス ポーチ",
-        "1円 カルティエ マストライン バッグ",
-        "1円 サンローラン チェーンショルダー",
-        "1円 ロエベ ミニ バッグ",
-        "1円 ロエベ パズル バッグ",
-        "1円 ボッテガヴェネタ バッグ",
-        "1円 フェンディ バッグ",
-        "1円 エルメス バッグ",
-        "1円 バレンシアガ バッグ"
-      ]
-    },
-    {
-      "id": "rank_b",
-      "label": "🥉 B級追加許容（写真確認必須・2026-06-13から全ブランドOK）",
-      "words": [
-        "1円 プラダ ラウンドファスナー 財布",
-        "1円 ジミーチュウ 三つ折 財布",
-        "1円 グッチ GGマーモント 長財布"
-      ]
-    },
-    {
-      "id": "yahoo_soda",
-      "label": "🛡️ Yahoo鑑定付き(SODA)個人出品 ※鑑定料¥2,500差引・粗利5000死守",
-      "words": [
-        "1円 シャネル マトラッセ",
-        "1円 ルイヴィトン アンプラント 財布",
-        "1円 プラダ サフィアーノ 財布",
-        "1円 グッチ GGマーモント"
-      ]
-    },
-    {
-      "id": "sold_gate",
-      "label": "⚠️ SOLD確認必須ゲート（実績確認までGO不可）",
-      "words": [
-        "DELVAUX（実績ゼロ・SOLD確認まGO不可）",
-        "ニッチ全般（先行競合スズハナ等も扱わない品＝SOLD確認必須）"
-      ]
-    },
-    {
-      "id": "exclusions",
-      "label": "🚫 除外（実績悪・ジャンル外）",
-      "words": [
-        "除外: ルイヴィトン高額チェーンネックレス（M01269等・65日・薄利）",
-        "除外: LVキーリング系（赤字実績）",
-        "除外: 大型バッグ全般（小型バッグのみ対象）",
-        "除外(全般): 風 / 互換 / ノーブランド / コピー / レプリカ",
-        "除外: シャネル財布単品（ブランドバッグに比べ回転遅）",
-        "優先度↓: サングラス・ネックレス・キーホルダー類（買取基準外で出口狭・実証済み勝ち型番は除く）"
-      ]
-    }
-  ],
-  "market_price_queries": [
-    {
-      "q": "LONE ONES",
-      "label": "ロンワンズ"
-    },
-    {
-      "q": "カムホート",
-      "label": "カムホート"
-    },
-    {
-      "q": "Leonard Kamhout",
-      "label": "カムホート(英)"
-    },
-    {
-      "q": "ルイヴィトン アンプラント 財布",
-      "label": "LVアンプラント財布"
-    },
-    {
-      "q": "ルイヴィトン タイガ 財布",
-      "label": "LVタイガ財布"
-    },
-    {
-      "q": "ルイヴィトン モノグラム 財布",
-      "label": "LVモノグラム財布"
-    },
-    {
-      "q": "M60775",
-      "label": "LV M60775"
-    },
-    {
-      "q": "M61182",
-      "label": "LV M61182"
-    },
-    {
-      "q": "M31002",
-      "label": "LV M31002"
-    },
-    {
-      "q": "M60171",
-      "label": "LV M60171"
-    },
-    {
-      "q": "プラダ サフィアーノ 財布",
-      "label": "プラダサフィアーノ財布"
-    },
-    {
-      "q": "プラダ ナイロン バッグ",
-      "label": "プラダナイロンバッグ"
-    },
-    {
-      "q": "M00596",
-      "label": "LV M00596 アイコニックNL"
-    },
-    {
-      "q": "M00308",
-      "label": "LV M00308 チェーンブレス"
-    },
-    {
-      "q": "M00307",
-      "label": "LV M00307 メタルNL"
-    },
-    {
-      "q": "M01880",
-      "label": "LV M01880 メタルNL"
-    },
-    {
-      "q": "410812",
-      "label": "GUCCI 410812 ヒグチユウコ"
-    },
-    {
-      "q": "671402",
-      "label": "バレンシアガ 671402"
-    },
-    {
-      "q": "ルイヴィトン バッグ",
-      "label": "LVバッグ"
-    },
-    {
-      "q": "グッチ バッグ",
-      "label": "グッチバッグ"
-    },
-    {
-      "q": "バレンシアガ バッグ",
-      "label": "バレンシアガバッグ"
-    },
-    {
-      "q": "シャネル アクセサリー",
-      "label": "シャネルアクセ"
-    },
-    {
-      "q": "カルティエ アクセサリー",
-      "label": "カルティエアクセ"
-    },
-    {
-      "q": "ティファニー シルバー",
-      "label": "ティファニーシルバー"
-    }
-  ],
-  "ecoauc_note": "EcoAuc下見の巡回ターゲット。ecoauc-inspect-fetchが参照（別ファイルは持たない＝共通化）。回転実績(回転日数/粗利率)の高い順=priority昇順。minor=ワードにブランド名必要(EcoAucブランドUIに無い)・major=EcoAucブランド選択UI(ecoauc_brand)で絞り商品名(q_product)で検索。rank S/A/AB/B・単品(まとめ除外)・開始価格¥3,000以上。★per-target: rank_exclude=[]があるtargetはそのランクを追加除外(例:P3LV財布はB除外)。",
-  "ecoauc_filter": {
-    "ranks": [
-      "S",
-      "SA",
-      "A",
-      "AB",
-      "B"
-    ],
-    "min_start_price": 3000,
-    "exclude_bulk_words": [
-      "おまとめ",
-      "纏め",
-      "まとめ",
-      "セット",
-      "等",
-      "*",
-      "２点",
-      "2点"
-    ]
+    "1円 LONE ONES",
+    "1円 レナードカムフォート",
+    "1円 ルイヴィトン M00596",
+    "1円 ルイヴィトン M00308",
+    "1円 ルイヴィトン M00307",
+    "1円 ルイヴィトン M01880",
+    "1円 グッチ 410812",
+    "1円 バレンシアガ 671402"
+   ]
   },
-  "ecoauc_targets": [
+  {
+   "id": "lenakam_stamp",
+   "label": "🔱 レナードカムホート刻印(.925 USA)別枠・高希少 ※ロンワンズと別/証明書推奨",
+   "words": [
     {
-      "priority": 1,
-      "tier": "S/主軸",
-      "minor": true,
-      "q": "ロンワンズ",
-      "brand": "ロンワンズ",
-      "aliases": [
-        "カムホート",
-        "Leonard Kamhout",
-        "LONE ONES"
-      ],
-      "kaiten": 6,
-      "rieki": 26,
-      "note": "主軸最優先・ロンワンズ/レナードカムフォート(EcoAuc表記=カムホート)を内包。自社実証 回転6日/粗利26%"
+     "word": "1円 レナードカムホート",
+     "kaiten": 6
     },
-    {
-      "priority": 2,
-      "tier": "S",
-      "minor": false,
-      "q": "プラダ サフィアーノ",
-      "brand": "プラダ",
-      "ecoauc_brand": "PRADA",
-      "q_product": "サフィアーノ 財布",
-      "kaiten": 4,
-      "rieki": 47,
-      "note": "S級・自社実証 回転4日/粗利47%"
-    },
-    {
-      "priority": 3,
-      "tier": "S",
-      "minor": false,
-      "q": "ルイヴィトン アンプラント 財布",
-      "brand": "ルイヴィトン",
-      "ecoauc_brand": "LOUIS VUITTON",
-      "q_product": "アンプラント 財布",
-      "kaiten": 2,
-      "rieki": 19.8,
-      "rank_exclude": [
-        "B"
-      ],
-      "note": "S級・自社実証 回転2日/粗利19.8%。③絞り込み: Bランク除外(rank_exclude=[B])→S/SA/A/ABのみ"
-    },
-    {
-      "priority": 4,
-      "tier": "A/先輩SOLD",
-      "minor": false,
-      "q": "ルイヴィトン ネックレス M00596",
-      "brand": "ルイヴィトン",
-      "ecoauc_brand": "LOUIS VUITTON",
-      "q_product": "アイコニック ネックレス",
-      "kataban": "M00596",
-      "kaiten": 19,
-      "rieki": null,
-      "note": "先輩SOLD鉄板: アイコニックNL ¥60-62k・15-24日。LVブランドUI+アイコニック ネックレス"
-    },
-    {
-      "priority": 5,
-      "tier": "A/先輩SOLD",
-      "minor": false,
-      "q": "ルイヴィトン ブレスレット M00308",
-      "brand": "ルイヴィトン",
-      "ecoauc_brand": "LOUIS VUITTON",
-      "q_product": "チェーン ブレスレット",
-      "kataban": "M00308",
-      "kaiten": 3,
-      "rieki": null,
-      "note": "先輩SOLD鉄板: LVチェーンブレスレット ¥56k・3日。超高回転"
-    },
-    {
-      "priority": 6,
-      "tier": "A/先輩SOLD",
-      "minor": false,
-      "q": "ルイヴィトン ネックレス M00307",
-      "brand": "ルイヴィトン",
-      "ecoauc_brand": "LOUIS VUITTON",
-      "q_product": "メタル ネックレス",
-      "kataban": "M00307/M01880",
-      "kaiten": null,
-      "rieki": null,
-      "note": "先輩SOLD鉄板: LVメタルNL ¥88-114k・M00307/M01880どちらも対象"
-    },
-    {
-      "priority": 7,
-      "tier": "A/先輩SOLD",
-      "minor": false,
-      "q": "グッチ ヒグチユウコ 410812",
-      "brand": "グッチ",
-      "ecoauc_brand": "GUCCI",
-      "q_product": "ヒグチユウコ",
-      "kataban": "410812",
-      "kaiten": 5,
-      "rieki": null,
-      "note": "先輩SOLD鉄板: GUCCIヒグチユウコ ¥99,800・5日。グッチUI+ヒグチユウコ"
-    },
-    {
-      "priority": 8,
-      "tier": "A/先輩SOLD",
-      "minor": false,
-      "q": "バレンシアガ 671402",
-      "brand": "バレンシアガ",
-      "ecoauc_brand": "BALENCIAGA",
-      "q_product": "671402",
-      "kataban": "671402",
-      "kaiten": 16,
-      "rieki": null,
-      "note": "先輩SOLD鉄板: バレンシアガ671402 ¥38,600・16日"
-    },
-    {
-      "priority": 9,
-      "tier": "A",
-      "minor": false,
-      "q": "カルティエ サントス",
-      "brand": "カルティエ",
-      "ecoauc_brand": "Cartier",
-      "q_product": "サントス",
-      "kaiten": 25,
-      "rieki": 39,
-      "note": "A級・回転25日/粗利39%"
-    },
-    {
-      "priority": 10,
-      "tier": "A",
-      "minor": false,
-      "q": "バレンシアガ 財布",
-      "brand": "バレンシアガ",
-      "ecoauc_brand": "BALENCIAGA",
-      "q_product": "財布",
-      "kaiten": 3,
-      "rieki": 25,
-      "note": "A級・回転3日/粗利25%"
-    },
-    {
-      "priority": 11,
-      "tier": "A",
-      "minor": false,
-      "q": "ジルサンダー",
-      "brand": "ジルサンダー",
-      "ecoauc_brand": "JIL SANDER",
-      "q_product": "",
-      "kaiten": 3,
-      "rieki": null,
-      "note": "A級・回転3日"
-    },
-    {
-      "priority": 12,
-      "tier": "A/バッグ",
-      "minor": false,
-      "q": "グッチ GGマーモント バッグ",
-      "brand": "グッチ",
-      "ecoauc_brand": "GUCCI",
-      "q_product": "GGマーモント",
-      "kaiten": null,
-      "rieki": null,
-      "note": "②追加: GUCCIバッグ全般(GGマーモント/ディオニュソス等)。ヒグチユウコはP7で別途。"
-    },
-    {
-      "priority": 13,
-      "tier": "A/バッグ",
-      "minor": false,
-      "q": "セリーヌ バッグ",
-      "brand": "セリーヌ",
-      "ecoauc_brand": "CELINE",
-      "q_product": "バッグ",
-      "kaiten": null,
-      "rieki": null,
-      "note": "②追加: セリーヌバッグ(トリオンフ/ラゲージ/マイクロバッグ等)。回転実績調査中。"
-    },
-    {
-      "priority": 14,
-      "tier": "A/バッグ",
-      "minor": false,
-      "q": "ロエベ バッグ",
-      "brand": "ロエベ",
-      "ecoauc_brand": "LOEWE",
-      "q_product": "バッグ",
-      "kaiten": null,
-      "rieki": null,
-      "note": "②追加: ロエベバッグ(パズル/ハンモック/アナグラム等)。"
-    },
-    {
-      "priority": 15,
-      "tier": "A/バッグ",
-      "minor": false,
-      "q": "シャネル マトラッセ バッグ",
-      "brand": "シャネル",
-      "ecoauc_brand": "CHANEL",
-      "q_product": "マトラッセ",
-      "kaiten": null,
-      "rieki": null,
-      "note": "②追加: シャネルバッグ(マトラッセ/チェーンショルダー等)。高額帯so粗利計算を慎重に。"
-    },
-    {
-      "priority": 16,
-      "tier": "A/アクセ",
-      "minor": false,
-      "q": "カルティエ リング ブレスレット",
-      "brand": "カルティエ",
-      "ecoauc_brand": "Cartier",
-      "q_product": "リング ブレスレット",
-      "kaiten": null,
-      "rieki": null,
-      "note": "②追加: カルティエアクセ全般(トリニティリング/ラブリング/ジュストアンクル等)。サントスはP9で別途。"
-    },
-    {
-      "priority": 17,
-      "tier": "A/アクセ",
-      "minor": false,
-      "q": "エルメス ブレスレット アクセ",
-      "brand": "エルメス",
-      "ecoauc_brand": "HERMES",
-      "q_product": "ブレスレット",
-      "kaiten": null,
-      "rieki": null,
-      "note": "②追加: エルメスアクセ(クリックH/アミュレット/シェーヌダンクル等)。"
-    },
-    {
-      "priority": 18,
-      "tier": "A/アクセ",
-      "minor": false,
-      "q": "ティファニー ネックレス",
-      "brand": "ティファニー",
-      "ecoauc_brand": "TIFFANY&CO.",
-      "q_product": "ネックレス",
-      "kaiten": null,
-      "rieki": null,
-      "note": "②追加: ティファニーアクセ(オープンハート/Tスマイル/バイザヤード等)。シルバー系主軸。"
-    },
-    {
-      "priority": 19,
-      "tier": "A/新品アパレル",
-      "minor": false,
-      "q": "モノグラム トップス",
-      "brand": "LOUIS VUITTON",
-      "ecoauc_brand": "LOUIS VUITTON",
-      "q_product": "モノグラム トップス",
-      "category": 8,
-      "new_tag_priority": true,
-      "bid_cap_exception": 60000,
-      "kaiten": null,
-      "rieki": 25,
-      "note": "新品アパレルpremium枠・Sランク新品タグ付き優先・¥60k例外(RW211W実証)"
-    },
-    {
-      "priority": 20,
-      "tier": "A/主軸2-4万",
-      "minor": false,
-      "q": "カサンドラ 財布",
-      "brand": "SAINT LAURENT",
-      "ecoauc_brand": "SAINT LAURENT",
-      "q_product": "カサンドラ 財布",
-      "kaiten": null,
-      "rieki": null,
-      "note": "YSLカサンドラ財布/カードケース/コンパクト財布・メタルロゴ定番・2-4万回転定番枠"
-    },
-    {
-      "priority": 21,
-      "tier": "A/特上5-9万",
-      "minor": false,
-      "q": "サンローラン バッグ",
-      "brand": "SAINT LAURENT",
-      "ecoauc_brand": "SAINT LAURENT",
-      "q_product": "ニキ ルー バッグ",
-      "premium_band": true,
-      "kaiten": null,
-      "rieki": null,
-      "note": "YSL人気バッグ(ニキ/ルー等)・高単価特上枠5-9万候補"
-    },
-    {
-      "priority": 22,
-      "tier": "S/別枠・高希少",
-      "minor": true,
-      "q": "レナードカムホート",
-      "brand": "レナードカムホート",
-      "aliases": [
-        "Leonard Kamhout",
-        "カムホート",
-        ".925 USA"
-      ],
-      "q_product": "",
-      "separate_from_loneones": true,
-      "require_cert": true,
-      "kaiten": 6,
-      "rieki": null,
-      "note": "レナードカムホート刻印(.925 USA)=ロンワンズ前世代・別カテゴリ管理・高希少。証明書/鑑定推奨。クレーンベル¥77,000落札実証(実勢¥130,000/粗利21.5%)"
-    }
-  ],
-  "strategy_c": {
-    "mercari_price_band": {
-      "focus_min": 20000,
-      "focus_max": 40000,
-      "hard_exclude_above": 100000,
-      "reason": "2-4万帯=回転良/利益出る実証帯。10万超=業者が競る→除外"
-    },
-    "ranks_allowed": [
-      "S",
-      "SA",
-      "A",
-      "AB"
-    ],
-    "rank_b_conditional": "Bは同ランク相場で粗利5000出る時のみ・写真確認必須",
-    "min_margin": 5000,
-    "deprioritize_categories": [
-      "サングラス",
-      "ネックレス",
-      "キーホルダー"
-    ],
-    "deprioritize_reason": "買取基準外になりやすく出口が狭い。ただし実証済み勝ち型番(M00596等)は出口実証ありso維持",
-    "sold_confirm_required": [
-      "DELVAUX",
-      "ニッチ全般(先行競合スズハナ等も扱わない品)"
-    ],
-    "sold_confirm_rule": "SOLD実績を確認してからでないとGO不可",
-    "yahoo_soda_source": {
-      "enabled": true,
-      "brands": [
-        "CHANEL",
-        "LOUIS VUITTON",
-        "PRADA",
-        "GUCCI",
-        "SAINT LAURENT"
-      ],
-      "appraisal_fee": 2500,
-      "rule": "鑑定料¥2,500を入札上限から差し引いて粗利5000を死守",
-      "bid_cap_formula": "入札上限 = 販売実勢×0.9 − フリマ送料 − 鑑定料2500 − 目標粗利5000",
-      "note": "SODA鑑定で真贋担保→個人出品も候補化(通常のヤフオク=ストア限定ルールの例外)"
-    },
-    "apparel_premium": {
-      "enabled": true,
-      "ecoauc_category": 8,
-      "scan_ranks": [
-        "S",
-        "SA",
-        "A",
-        "AB"
-      ],
-      "scan_url": "https://www.ecoauc.com/client/auctions/inspect?master_item_categories[]=8&master_item_ranks[]=2&master_item_ranks[]=3&master_item_ranks[]=4&limit=100&sortKey=6",
-      "brands": [
-        "LOUIS VUITTON",
-        "CHANEL",
-        "HERMES"
-      ],
-      "season_filter": "春夏OK(トップス/半袖) / コート・カシミヤ等は除外",
-      "new_tag_premium": "「新品タグ付」=中古比+20-30%相場プレミアム・優先フラグ",
-      "ideal_bid_formula": "手取り(出品×0.9−送料700) × 0.65（目標粗利率35%）",
-      "bid_cap_exception": 60000,
-      "exception_rule": "priority A・新品タグ付きハイブランドモノグラムは¥60,000まで容認(通常の理想落札超過でも可)",
-      "proof": "RW211Wトップス第780回 落札¥57,200→¥69,160 SOLD・第789回スウェット横展開成功",
-      "note": "出口狭いアパレルの例外=Sランク新品タグ付きハイブランドは出口実証ありso狙う(サングラス/ネックレス優先度下げとは別枠)"
-    },
-    "premium_tier": {
-      "enabled": true,
-      "label": "高単価・特上枠",
-      "rakusatsu_band": {
-        "min": 50000,
-        "max": 90000
-      },
-      "conditions": [
-        "Sランク(S/SA)",
-        "新品タグ付き",
-        "LV/CHANEL/HERMES等ハイブランドのメインライン"
-      ],
-      "seasonal_filter": "春夏OK(トップス/半袖)・コート/カシミヤ等は季節整合確認",
-      "ideal_bid_formula": "理想落札 = 手取り×0.65（手取り=Mercari売切中央値×0.9−送料700・目標粗利率35%）",
-      "decision_materials": [
-        "落札相場",
-        "Mercari売切中央値",
-        "想定粗利/粗利率",
-        "理想落札(×0.65)と現在価格の差",
-        "新品タグフラグ",
-        "ランク",
-        "季節適合"
-      ],
-      "judgment_by": "Shimba（アプリは候補抽出と判断材料表示のみ・自動入札しない）"
-    },
-    "tiers": {
-      "rotation_axis": {
-        "band": [
-          20000,
-          40000
-        ],
-        "note": "回転主軸・数で稼ぐ層・継続"
-      },
-      "premium": {
-        "band": [
-          50000,
-          90000
-        ],
-        "note": "特上枠・Sランク新品ハイブランド・Shimba判断"
-      },
-      "exclude": {
-        "above": 100000,
-        "note": "10万超除外・業者が本気で競る帯"
-      },
-      "margin_floor": 5000
-    }
+    "1円 Leonard Kamhout",
+    "1円 カムホート クレーンベル",
+    "1円 カムホート ティアベル",
+    "1円 カムホート シルクリング"
+   ]
+  },
+  {
+   "id": "apparel_premium",
+   "label": "🆕 新品アパレルpremium（Sランク×新品タグ付き×LV/CHANEL/HERMES・¥60k例外）",
+   "words": [
+    "1円 ルイヴィトン モノグラム トップス 新品 タグ付",
+    "1円 ルイヴィトン モノグラム Tシャツ 新品 タグ付",
+    "1円 ルイヴィトン モノグラム スウェット 新品",
+    "1円 シャネル トップス 新品 タグ付",
+    "1円 エルメス トップス 新品 タグ付"
+   ]
+  },
+  {
+   "id": "ysl",
+   "label": "🟡 サンローラン(YSL)・カサンドラ財布(主軸2-4万)＋人気バッグ(特上5-9万)",
+   "words": [
+    "1円 サンローラン カサンドラ 財布",
+    "1円 サンローラン カサンドラ カードケース",
+    "1円 サンローラン カサンドラ コンパクト 財布",
+    "1円 イヴサンローラン メタルロゴ 財布",
+    "1円 サンローラン ニキ バッグ",
+    "1円 サンローラン ルー バッグ"
+   ]
+  },
+  {
+   "id": "main_axis",
+   "label": "🎯 主軸最優先（ロンワンズ・カムホート・全部見る）",
+   "words": [
+    "1円 ロンワンズ",
+    "1円 LONE ONES",
+    "1円 レナードカムフォート",
+    "1円 Leonard Kamhout",
+    "1円 LEONARD KAMHOUT"
+   ]
+  },
+  {
+   "id": "lv_accessories",
+   "label": "💠 LVアクセサリー（先輩SOLD鉄板型番）",
+   "words": [
+    "1円 ルイヴィトン M00596",
+    "1円 ルイヴィトン アイコニック ネックレス",
+    "1円 ルイヴィトン M00308",
+    "1円 ルイヴィトン チェーン ブレスレット",
+    "1円 ルイヴィトン M00307",
+    "1円 ルイヴィトン M01880",
+    "1円 ルイヴィトン メタル ネックレス",
+    "1円 ルイヴィトン ネックレス ブレスレット"
+   ]
+  },
+  {
+   "id": "senior_sold_other",
+   "label": "🏆 先輩SOLD型番（GUCCI・バレンシアガ）",
+   "words": [
+    "1円 グッチ 410812",
+    "1円 グッチ ヒグチユウコ",
+    "1円 バレンシアガ 671402",
+    "1円 バレンシアガ チェーン ネックレス"
+   ]
+  },
+  {
+   "id": "accessories",
+   "label": "💎 アクセサリー優先（先輩実績ブランド・拡充）",
+   "words": [
+    "1円 カルティエ トリニティ リング",
+    "1円 カルティエ ラブ リング",
+    "1円 カルティエ ジュストアンクル ブレスレット",
+    "1円 シャネル ココマーク ブローチ",
+    "1円 シャネル ネックレス シルバー",
+    "1円 エルメス クリックH ブレスレット",
+    "1円 エルメス アミュレット",
+    "1円 エルメス シェーヌダンクル ブレスレット",
+    "1円 ティファニー オープンハート",
+    "1円 ティファニー Tスマイル ネックレス",
+    "1円 ヴァンクリーフ ネックレス",
+    "1円 グッチ インターロッキング リング",
+    "1円 グッチ GG ネックレス",
+    "1円 ディオール クレールドリュヌ",
+    "1円 バレンシアガ チェーン ネックレス",
+    "1円 ヴェルサーチ イヤリング",
+    "1円 ブルガリ ネックレス",
+    "1円 ブルガリ リング",
+    "1円 ブルガリ ブレスレット",
+    "1円 シャネル リング シルバー",
+    "1円 グッチ ブレスレット",
+    "1円 ポメラート ネックレス"
+   ]
+  },
+  {
+   "id": "rank_s",
+   "label": "🥇 S級・最優先（自社実証済み）",
+   "words": [
+    "1円 プラダ サフィアーノ 二つ折",
+    "1円 ルイヴィトン M60171",
+    "1円 ルイヴィトン アンプラント 長財布"
+   ]
+  },
+  {
+   "id": "rank_a",
+   "label": "🥈 A級・好回転×安定（自社実証）",
+   "words": [
+    "1円 カルティエ サントス ネックレス",
+    "1円 バレンシアガ 長財布",
+    "1円 ジルサンダー クロスボディ",
+    "1円 ルイヴィトン M85069"
+   ]
+  },
+  {
+   "id": "lv_models",
+   "label": "🔑 LV型式（ピンポイント検索・バッグ系）",
+   "words": [
+    "1円 ルイヴィトン M60171",
+    "1円 ルイヴィトン M85069",
+    "1円 ルイヴィトン M62630",
+    "1円 ルイヴィトン M81303",
+    "1円 ルイヴィトン M80091",
+    "1円 ルイヴィトン ポシェット アクセソワール"
+   ]
+  },
+  {
+   "id": "prada_name",
+   "label": "👜 プラダ（商品名・バッグ・ポーチ重視）",
+   "words": [
+    "1円 プラダ 巾着 ポーチ",
+    "1円 プラダ カナパ トート",
+    "1円 プラダ ナイロン ショルダー",
+    "1円 プラダ サフィアーノ 財布",
+    "1円 プラダ バッグ"
+   ]
+  },
+  {
+   "id": "prada_guarantee",
+   "label": "📜 プラダ（ギャランティ付き・正規品確度高）",
+   "words": [
+    "1円 プラダ 巾着 ギャランティ",
+    "1円 プラダ ポーチ ギャランティ",
+    "1円 プラダ カナパ ギャランティ",
+    "1円 プラダ ナイロン ギャランティ",
+    "1円 プラダ サフィアーノ ギャランティ",
+    "1円 プラダ バッグ ギャランティ"
+   ]
+  },
+  {
+   "id": "chanel_bags",
+   "label": "🌸 シャネル（バッグ重視・財布は縮小）",
+   "words": [
+    "1円 シャネル マトラッセ ショルダー",
+    "1円 シャネル チェーンショルダー",
+    "1円 シャネル ヴァニティ バッグ",
+    "1円 シャネル マトラッセ チェーンウォレット"
+   ]
+  },
+  {
+   "id": "small_bags",
+   "label": "👝 小型バッグ（先輩実績ブランド）",
+   "words": [
+    "1円 グッチ GGマーモント ショルダー",
+    "1円 セリーヌ トリオンフ ショルダー",
+    "1円 エルメス ポーチ",
+    "1円 カルティエ マストライン バッグ",
+    "1円 サンローラン チェーンショルダー",
+    "1円 ロエベ ミニ バッグ",
+    "1円 ロエベ パズル バッグ",
+    "1円 ボッテガヴェネタ バッグ",
+    "1円 フェンディ バッグ",
+    "1円 エルメス バッグ",
+    "1円 バレンシアガ バッグ"
+   ]
+  },
+  {
+   "id": "rank_b",
+   "label": "🥉 B級追加許容（写真確認必須・2026-06-13から全ブランドOK）",
+   "words": [
+    "1円 プラダ ラウンドファスナー 財布",
+    "1円 ジミーチュウ 三つ折 財布",
+    "1円 グッチ GGマーモント 長財布"
+   ]
+  },
+  {
+   "id": "yahoo_soda",
+   "label": "🛡️ Yahoo鑑定付き(SODA)個人出品 ※鑑定料¥2,500差引・粗利5000死守",
+   "words": [
+    "1円 シャネル マトラッセ",
+    "1円 ルイヴィトン アンプラント 財布",
+    "1円 プラダ サフィアーノ 財布",
+    "1円 グッチ GGマーモント"
+   ]
+  },
+  {
+   "id": "sold_gate",
+   "label": "⚠️ SOLD確認必須ゲート（実績確認までGO不可）",
+   "words": [
+    "DELVAUX（実績ゼロ・SOLD確認まGO不可）",
+    "ニッチ全般（先行競合スズハナ等も扱わない品＝SOLD確認必須）"
+   ]
+  },
+  {
+   "id": "exclusions",
+   "label": "🚫 除外（実績悪・ジャンル外）",
+   "words": [
+    "除外: ルイヴィトン高額チェーンネックレス（M01269等・65日・薄利）",
+    "除外: LVキーリング系（赤字実績）",
+    "除外: 大型バッグ全般（小型バッグのみ対象）",
+    "除外(全般): 風 / 互換 / ノーブランド / コピー / レプリカ",
+    "除外: シャネル財布単品（ブランドバッグに比べ回転遅）",
+    "優先度↓: サングラス・ネックレス・キーホルダー類（買取基準外で出口狭・実証済み勝ち型番は除く）"
+   ]
+  },
+  {
+   "id": "silver_specialist",
+   "label": "🥈 シルバー専門ブランド（他セラー参考・EcoAuc主軸/ヤフオク補助）",
+   "words": [
+    "1円 クロムハーツ",
+    "1円 Chrome Hearts",
+    "1円 ロンワンズ",
+    "1円 L.ONE",
+    "1円 エルワン",
+    "1円 ガボラトリー",
+    "1円 Gaboratory",
+    "1円 gabor",
+    "1円 クレイジーピッグ",
+    "1円 Crazy Pig",
+    "1円 スターリンギア",
+    "1円 Starlingear",
+    "1円 ロイヤルオーダー",
+    "1円 Royal Order"
+   ]
   }
+ ],
+ "market_price_queries": [
+  {
+   "q": "LONE ONES",
+   "label": "ロンワンズ"
+  },
+  {
+   "q": "カムホート",
+   "label": "カムホート"
+  },
+  {
+   "q": "Leonard Kamhout",
+   "label": "カムホート(英)"
+  },
+  {
+   "q": "ルイヴィトン アンプラント 財布",
+   "label": "LVアンプラント財布"
+  },
+  {
+   "q": "ルイヴィトン タイガ 財布",
+   "label": "LVタイガ財布"
+  },
+  {
+   "q": "ルイヴィトン モノグラム 財布",
+   "label": "LVモノグラム財布"
+  },
+  {
+   "q": "M60775",
+   "label": "LV M60775"
+  },
+  {
+   "q": "M61182",
+   "label": "LV M61182"
+  },
+  {
+   "q": "M31002",
+   "label": "LV M31002"
+  },
+  {
+   "q": "M60171",
+   "label": "LV M60171"
+  },
+  {
+   "q": "プラダ サフィアーノ 財布",
+   "label": "プラダサフィアーノ財布"
+  },
+  {
+   "q": "プラダ ナイロン バッグ",
+   "label": "プラダナイロンバッグ"
+  },
+  {
+   "q": "M00596",
+   "label": "LV M00596 アイコニックNL"
+  },
+  {
+   "q": "M00308",
+   "label": "LV M00308 チェーンブレス"
+  },
+  {
+   "q": "M00307",
+   "label": "LV M00307 メタルNL"
+  },
+  {
+   "q": "M01880",
+   "label": "LV M01880 メタルNL"
+  },
+  {
+   "q": "410812",
+   "label": "GUCCI 410812 ヒグチユウコ"
+  },
+  {
+   "q": "671402",
+   "label": "バレンシアガ 671402"
+  },
+  {
+   "q": "ルイヴィトン バッグ",
+   "label": "LVバッグ"
+  },
+  {
+   "q": "グッチ バッグ",
+   "label": "グッチバッグ"
+  },
+  {
+   "q": "バレンシアガ バッグ",
+   "label": "バレンシアガバッグ"
+  },
+  {
+   "q": "シャネル アクセサリー",
+   "label": "シャネルアクセ"
+  },
+  {
+   "q": "カルティエ アクセサリー",
+   "label": "カルティエアクセ"
+  },
+  {
+   "q": "ティファニー シルバー",
+   "label": "ティファニーシルバー"
+  }
+ ],
+ "ecoauc_note": "EcoAuc下見の巡回ターゲット。ecoauc-inspect-fetchが参照（別ファイルは持たない＝共通化）。回転実績(回転日数/粗利率)の高い順=priority昇順。minor=ワードにブランド名必要(EcoAucブランドUIに無い)・major=EcoAucブランド選択UI(ecoauc_brand)で絞り商品名(q_product)で検索。rank S/A/AB/B・単品(まとめ除外)・開始価格¥3,000以上。★per-target: rank_exclude=[]があるtargetはそのランクを追加除外(例:P3LV財布はB除外)。",
+ "ecoauc_filter": {
+  "ranks": [
+   "S",
+   "SA",
+   "A",
+   "AB",
+   "B"
+  ],
+  "min_start_price": 3000,
+  "exclude_bulk_words": [
+   "おまとめ",
+   "纏め",
+   "まとめ",
+   "セット",
+   "等",
+   "*",
+   "２点",
+   "2点"
+  ]
+ },
+ "ecoauc_targets": [
+  {
+   "priority": 1,
+   "tier": "S/主軸",
+   "minor": true,
+   "q": "ロンワンズ",
+   "brand": "ロンワンズ",
+   "aliases": [
+    "カムホート",
+    "Leonard Kamhout",
+    "LONE ONES"
+   ],
+   "kaiten": 6,
+   "rieki": 26,
+   "note": "主軸最優先・ロンワンズ/レナードカムフォート(EcoAuc表記=カムホート)を内包。自社実証 回転6日/粗利26%"
+  },
+  {
+   "priority": 2,
+   "tier": "S",
+   "minor": false,
+   "q": "プラダ サフィアーノ",
+   "brand": "プラダ",
+   "ecoauc_brand": "PRADA",
+   "q_product": "サフィアーノ 財布",
+   "kaiten": 4,
+   "rieki": 47,
+   "note": "S級・自社実証 回転4日/粗利47%"
+  },
+  {
+   "priority": 3,
+   "tier": "S",
+   "minor": false,
+   "q": "ルイヴィトン アンプラント 財布",
+   "brand": "ルイヴィトン",
+   "ecoauc_brand": "LOUIS VUITTON",
+   "q_product": "アンプラント 財布",
+   "kaiten": 2,
+   "rieki": 19.8,
+   "rank_exclude": [
+    "B"
+   ],
+   "note": "S級・自社実証 回転2日/粗利19.8%。③絞り込み: Bランク除外(rank_exclude=[B])→S/SA/A/ABのみ"
+  },
+  {
+   "priority": 4,
+   "tier": "A/先輩SOLD",
+   "minor": false,
+   "q": "ルイヴィトン ネックレス M00596",
+   "brand": "ルイヴィトン",
+   "ecoauc_brand": "LOUIS VUITTON",
+   "q_product": "アイコニック ネックレス",
+   "kataban": "M00596",
+   "kaiten": 19,
+   "rieki": null,
+   "note": "先輩SOLD鉄板: アイコニックNL ¥60-62k・15-24日。LVブランドUI+アイコニック ネックレス"
+  },
+  {
+   "priority": 5,
+   "tier": "A/先輩SOLD",
+   "minor": false,
+   "q": "ルイヴィトン ブレスレット M00308",
+   "brand": "ルイヴィトン",
+   "ecoauc_brand": "LOUIS VUITTON",
+   "q_product": "チェーン ブレスレット",
+   "kataban": "M00308",
+   "kaiten": 3,
+   "rieki": null,
+   "note": "先輩SOLD鉄板: LVチェーンブレスレット ¥56k・3日。超高回転"
+  },
+  {
+   "priority": 6,
+   "tier": "A/先輩SOLD",
+   "minor": false,
+   "q": "ルイヴィトン ネックレス M00307",
+   "brand": "ルイヴィトン",
+   "ecoauc_brand": "LOUIS VUITTON",
+   "q_product": "メタル ネックレス",
+   "kataban": "M00307/M01880",
+   "kaiten": null,
+   "rieki": null,
+   "note": "先輩SOLD鉄板: LVメタルNL ¥88-114k・M00307/M01880どちらも対象"
+  },
+  {
+   "priority": 7,
+   "tier": "A/先輩SOLD",
+   "minor": false,
+   "q": "グッチ ヒグチユウコ 410812",
+   "brand": "グッチ",
+   "ecoauc_brand": "GUCCI",
+   "q_product": "ヒグチユウコ",
+   "kataban": "410812",
+   "kaiten": 5,
+   "rieki": null,
+   "note": "先輩SOLD鉄板: GUCCIヒグチユウコ ¥99,800・5日。グッチUI+ヒグチユウコ"
+  },
+  {
+   "priority": 8,
+   "tier": "A/先輩SOLD",
+   "minor": false,
+   "q": "バレンシアガ 671402",
+   "brand": "バレンシアガ",
+   "ecoauc_brand": "BALENCIAGA",
+   "q_product": "671402",
+   "kataban": "671402",
+   "kaiten": 16,
+   "rieki": null,
+   "note": "先輩SOLD鉄板: バレンシアガ671402 ¥38,600・16日"
+  },
+  {
+   "priority": 9,
+   "tier": "A",
+   "minor": false,
+   "q": "カルティエ サントス",
+   "brand": "カルティエ",
+   "ecoauc_brand": "Cartier",
+   "q_product": "サントス",
+   "kaiten": 25,
+   "rieki": 39,
+   "note": "A級・回転25日/粗利39%"
+  },
+  {
+   "priority": 10,
+   "tier": "A",
+   "minor": false,
+   "q": "バレンシアガ 財布",
+   "brand": "バレンシアガ",
+   "ecoauc_brand": "BALENCIAGA",
+   "q_product": "財布",
+   "kaiten": 3,
+   "rieki": 25,
+   "note": "A級・回転3日/粗利25%"
+  },
+  {
+   "priority": 11,
+   "tier": "A",
+   "minor": false,
+   "q": "ジルサンダー",
+   "brand": "ジルサンダー",
+   "ecoauc_brand": "JIL SANDER",
+   "q_product": "",
+   "kaiten": 3,
+   "rieki": null,
+   "note": "A級・回転3日"
+  },
+  {
+   "priority": 12,
+   "tier": "A/バッグ",
+   "minor": false,
+   "q": "グッチ GGマーモント バッグ",
+   "brand": "グッチ",
+   "ecoauc_brand": "GUCCI",
+   "q_product": "GGマーモント",
+   "kaiten": null,
+   "rieki": null,
+   "note": "②追加: GUCCIバッグ全般(GGマーモント/ディオニュソス等)。ヒグチユウコはP7で別途。"
+  },
+  {
+   "priority": 13,
+   "tier": "A/バッグ",
+   "minor": false,
+   "q": "セリーヌ バッグ",
+   "brand": "セリーヌ",
+   "ecoauc_brand": "CELINE",
+   "q_product": "バッグ",
+   "kaiten": null,
+   "rieki": null,
+   "note": "②追加: セリーヌバッグ(トリオンフ/ラゲージ/マイクロバッグ等)。回転実績調査中。"
+  },
+  {
+   "priority": 14,
+   "tier": "A/バッグ",
+   "minor": false,
+   "q": "ロエベ バッグ",
+   "brand": "ロエベ",
+   "ecoauc_brand": "LOEWE",
+   "q_product": "バッグ",
+   "kaiten": null,
+   "rieki": null,
+   "note": "②追加: ロエベバッグ(パズル/ハンモック/アナグラム等)。"
+  },
+  {
+   "priority": 15,
+   "tier": "A/バッグ",
+   "minor": false,
+   "q": "シャネル マトラッセ バッグ",
+   "brand": "シャネル",
+   "ecoauc_brand": "CHANEL",
+   "q_product": "マトラッセ",
+   "kaiten": null,
+   "rieki": null,
+   "note": "②追加: シャネルバッグ(マトラッセ/チェーンショルダー等)。高額帯so粗利計算を慎重に。"
+  },
+  {
+   "priority": 16,
+   "tier": "A/アクセ",
+   "minor": false,
+   "q": "カルティエ リング ブレスレット",
+   "brand": "カルティエ",
+   "ecoauc_brand": "Cartier",
+   "q_product": "リング ブレスレット",
+   "kaiten": null,
+   "rieki": null,
+   "note": "②追加: カルティエアクセ全般(トリニティリング/ラブリング/ジュストアンクル等)。サントスはP9で別途。"
+  },
+  {
+   "priority": 17,
+   "tier": "A/アクセ",
+   "minor": false,
+   "q": "エルメス ブレスレット アクセ",
+   "brand": "エルメス",
+   "ecoauc_brand": "HERMES",
+   "q_product": "ブレスレット",
+   "kaiten": null,
+   "rieki": null,
+   "note": "②追加: エルメスアクセ(クリックH/アミュレット/シェーヌダンクル等)。"
+  },
+  {
+   "priority": 18,
+   "tier": "A/アクセ",
+   "minor": false,
+   "q": "ティファニー ネックレス",
+   "brand": "ティファニー",
+   "ecoauc_brand": "TIFFANY&CO.",
+   "q_product": "ネックレス",
+   "kaiten": null,
+   "rieki": null,
+   "note": "②追加: ティファニーアクセ(オープンハート/Tスマイル/バイザヤード等)。シルバー系主軸。"
+  },
+  {
+   "priority": 19,
+   "tier": "A/新品アパレル",
+   "minor": false,
+   "q": "モノグラム トップス",
+   "brand": "LOUIS VUITTON",
+   "ecoauc_brand": "LOUIS VUITTON",
+   "q_product": "モノグラム トップス",
+   "category": 8,
+   "new_tag_priority": true,
+   "bid_cap_exception": 60000,
+   "kaiten": null,
+   "rieki": 25,
+   "note": "新品アパレルpremium枠・Sランク新品タグ付き優先・¥60k例外(RW211W実証)"
+  },
+  {
+   "priority": 20,
+   "tier": "A/主軸2-4万",
+   "minor": false,
+   "q": "カサンドラ 財布",
+   "brand": "SAINT LAURENT",
+   "ecoauc_brand": "SAINT LAURENT",
+   "q_product": "カサンドラ 財布",
+   "kaiten": null,
+   "rieki": null,
+   "note": "YSLカサンドラ財布/カードケース/コンパクト財布・メタルロゴ定番・2-4万回転定番枠"
+  },
+  {
+   "priority": 21,
+   "tier": "A/特上5-9万",
+   "minor": false,
+   "q": "サンローラン バッグ",
+   "brand": "SAINT LAURENT",
+   "ecoauc_brand": "SAINT LAURENT",
+   "q_product": "ニキ ルー バッグ",
+   "premium_band": true,
+   "kaiten": null,
+   "rieki": null,
+   "note": "YSL人気バッグ(ニキ/ルー等)・高単価特上枠5-9万候補"
+  },
+  {
+   "priority": 22,
+   "tier": "S/別枠・高希少",
+   "minor": true,
+   "q": "レナードカムホート",
+   "brand": "レナードカムホート",
+   "aliases": [
+    "Leonard Kamhout",
+    "カムホート",
+    ".925 USA"
+   ],
+   "q_product": "",
+   "separate_from_loneones": true,
+   "require_cert": true,
+   "kaiten": 6,
+   "rieki": null,
+   "note": "レナードカムホート刻印(.925 USA)=ロンワンズ前世代・別カテゴリ管理・高希少。証明書/鑑定推奨。クレーンベル¥77,000落札実証(実勢¥130,000/粗利21.5%)"
+  },
+  {
+   "priority": 2,
+   "tier": "S/シルバー",
+   "minor": true,
+   "q": "クロムハーツ",
+   "brand": "クロムハーツ",
+   "aliases": [
+    "Chrome Hearts",
+    "CH"
+   ],
+   "note": "シルバー専門・銀ペンダント/リング高単価。要真贋"
+  },
+  {
+   "priority": 3,
+   "tier": "A/シルバー",
+   "minor": true,
+   "q": "ガボラトリー",
+   "brand": "ガボラトリー",
+   "aliases": [
+    "Gaboratory",
+    "Gabor",
+    "ガボール"
+   ],
+   "note": "シルバー・スカル系定番"
+  },
+  {
+   "priority": 3,
+   "tier": "A/シルバー",
+   "minor": true,
+   "q": "クレイジーピッグ",
+   "brand": "クレイジーピッグ",
+   "aliases": [
+    "Crazy Pig"
+   ],
+   "note": "英国シルバー・希少"
+  },
+  {
+   "priority": 3,
+   "tier": "A/シルバー",
+   "minor": true,
+   "q": "スターリンギア",
+   "brand": "スターリンギア",
+   "aliases": [
+    "Starlingear"
+   ],
+   "note": "シルバー・希少高単価"
+  },
+  {
+   "priority": 3,
+   "tier": "A/シルバー",
+   "minor": true,
+   "q": "ロイヤルオーダー",
+   "brand": "ロイヤルオーダー",
+   "aliases": [
+    "Royal Order"
+   ],
+   "note": "シルバー・リング/ペンダント"
+  }
+ ],
+ "strategy_c": {
+  "mercari_price_band": {
+   "focus_min": 20000,
+   "focus_max": 40000,
+   "hard_exclude_above": 100000,
+   "reason": "2-4万帯=回転良/利益出る実証帯。10万超=業者が競る→除外"
+  },
+  "ranks_allowed": [
+   "S",
+   "SA",
+   "A",
+   "AB"
+  ],
+  "rank_b_conditional": "Bは同ランク相場で粗利5000出る時のみ・写真確認必須",
+  "min_margin": 5000,
+  "deprioritize_categories": [
+   "サングラス",
+   "ネックレス",
+   "キーホルダー"
+  ],
+  "deprioritize_reason": "買取基準外になりやすく出口が狭い。ただし実証済み勝ち型番(M00596等)は出口実証ありso維持",
+  "sold_confirm_required": [
+   "DELVAUX",
+   "ニッチ全般(先行競合スズハナ等も扱わない品)"
+  ],
+  "sold_confirm_rule": "SOLD実績を確認してからでないとGO不可",
+  "yahoo_soda_source": {
+   "enabled": true,
+   "brands": [
+    "CHANEL",
+    "LOUIS VUITTON",
+    "PRADA",
+    "GUCCI",
+    "SAINT LAURENT"
+   ],
+   "appraisal_fee": 2500,
+   "rule": "鑑定料¥2,500を入札上限から差し引いて粗利5000を死守",
+   "bid_cap_formula": "入札上限 = 販売実勢×0.9 − フリマ送料 − 鑑定料2500 − 目標粗利5000",
+   "note": "SODA鑑定で真贋担保→個人出品も候補化(通常のヤフオク=ストア限定ルールの例外)"
+  },
+  "apparel_premium": {
+   "enabled": true,
+   "ecoauc_category": 8,
+   "scan_ranks": [
+    "S",
+    "SA",
+    "A",
+    "AB"
+   ],
+   "scan_url": "https://www.ecoauc.com/client/auctions/inspect?master_item_categories[]=8&master_item_ranks[]=2&master_item_ranks[]=3&master_item_ranks[]=4&limit=100&sortKey=6",
+   "brands": [
+    "LOUIS VUITTON",
+    "CHANEL",
+    "HERMES"
+   ],
+   "season_filter": "春夏OK(トップス/半袖) / コート・カシミヤ等は除外",
+   "new_tag_premium": "「新品タグ付」=中古比+20-30%相場プレミアム・優先フラグ",
+   "ideal_bid_formula": "手取り(出品×0.9−送料700) × 0.65（目標粗利率35%）",
+   "bid_cap_exception": 60000,
+   "exception_rule": "priority A・新品タグ付きハイブランドモノグラムは¥60,000まで容認(通常の理想落札超過でも可)",
+   "proof": "RW211Wトップス第780回 落札¥57,200→¥69,160 SOLD・第789回スウェット横展開成功",
+   "note": "出口狭いアパレルの例外=Sランク新品タグ付きハイブランドは出口実証ありso狙う(サングラス/ネックレス優先度下げとは別枠)"
+  },
+  "premium_tier": {
+   "enabled": true,
+   "label": "高単価・特上枠",
+   "rakusatsu_band": {
+    "min": 50000,
+    "max": 90000
+   },
+   "conditions": [
+    "Sランク(S/SA)",
+    "新品タグ付き",
+    "LV/CHANEL/HERMES等ハイブランドのメインライン"
+   ],
+   "seasonal_filter": "春夏OK(トップス/半袖)・コート/カシミヤ等は季節整合確認",
+   "ideal_bid_formula": "理想落札 = 手取り×0.65（手取り=Mercari売切中央値×0.9−送料700・目標粗利率35%）",
+   "decision_materials": [
+    "落札相場",
+    "Mercari売切中央値",
+    "想定粗利/粗利率",
+    "理想落札(×0.65)と現在価格の差",
+    "新品タグフラグ",
+    "ランク",
+    "季節適合"
+   ],
+   "judgment_by": "Shimba（アプリは候補抽出と判断材料表示のみ・自動入札しない）"
+  },
+  "tiers": {
+   "rotation_axis": {
+    "band": [
+     20000,
+     40000
+    ],
+    "note": "回転主軸・数で稼ぐ層・継続"
+   },
+   "premium": {
+    "band": [
+     50000,
+     90000
+    ],
+    "note": "特上枠・Sランク新品ハイブランド・Shimba判断"
+   },
+   "exclude": {
+    "above": 100000,
+    "note": "10万超除外・業者が本気で競る帯"
+   },
+   "margin_floor": 5000
+  }
+ }
 }
