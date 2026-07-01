@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15T06:37:51+09:00",
+  "updated_at": "2026-07-02T07:45:06+09:00",
   "items": {
     "yahoo:kanri:B097-260610": {
       "platform": "yahoo",
@@ -31,6 +31,710 @@
       "decision": "go",
       "reason_tags": [],
       "bid": 15760,
+      "jissei": null
+    },
+    "ヤフオク:candidate:f1232903267": {
+      "platform": "ヤフオク",
+      "id": "candidate:f1232903267",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:e1232661112": {
+      "platform": "ヤフオク",
+      "id": "candidate:e1232661112",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:k1232810383": {
+      "platform": "ヤフオク",
+      "id": "candidate:k1232810383",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:w1232802191": {
+      "platform": "ヤフオク",
+      "id": "candidate:w1232802191",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:1232658920": {
+      "platform": "ヤフオク",
+      "id": "candidate:1232658920",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:n1232656592": {
+      "platform": "ヤフオク",
+      "id": "candidate:n1232656592",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:w1232805326": {
+      "platform": "ヤフオク",
+      "id": "candidate:w1232805326",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:m1232659388": {
+      "platform": "ヤフオク",
+      "id": "candidate:m1232659388",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:j1232664403": {
+      "platform": "ヤフオク",
+      "id": "candidate:j1232664403",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:e1232661148": {
+      "platform": "ヤフオク",
+      "id": "candidate:e1232661148",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:w1232660610": {
+      "platform": "ヤフオク",
+      "id": "candidate:w1232660610",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:s1232666710": {
+      "platform": "ヤフオク",
+      "id": "candidate:s1232666710",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:1232661707": {
+      "platform": "ヤフオク",
+      "id": "candidate:1232661707",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:o1232666006": {
+      "platform": "ヤフオク",
+      "id": "candidate:o1232666006",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:l1232662742": {
+      "platform": "ヤフオク",
+      "id": "candidate:l1232662742",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:1232658577": {
+      "platform": "ヤフオク",
+      "id": "candidate:1232658577",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:q1232653374": {
+      "platform": "ヤフオク",
+      "id": "candidate:q1232653374",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:d1232665213": {
+      "platform": "ヤフオク",
+      "id": "candidate:d1232665213",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:l1232659895": {
+      "platform": "ヤフオク",
+      "id": "candidate:l1232659895",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:e1232657947": {
+      "platform": "ヤフオク",
+      "id": "candidate:e1232657947",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:k1232664177": {
+      "platform": "ヤフオク",
+      "id": "candidate:k1232664177",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:v1232664533": {
+      "platform": "ヤフオク",
+      "id": "candidate:v1232664533",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:h1232662257": {
+      "platform": "ヤフオク",
+      "id": "candidate:h1232662257",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:l1232665421": {
+      "platform": "ヤフオク",
+      "id": "candidate:l1232665421",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:m1232662881": {
+      "platform": "ヤフオク",
+      "id": "candidate:m1232662881",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:p1232661075": {
+      "platform": "ヤフオク",
+      "id": "candidate:p1232661075",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:l1232667768": {
+      "platform": "ヤフオク",
+      "id": "candidate:l1232667768",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:o1232668204": {
+      "platform": "ヤフオク",
+      "id": "candidate:o1232668204",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:k1232662192": {
+      "platform": "ヤフオク",
+      "id": "candidate:k1232662192",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:b1232653195": {
+      "platform": "ヤフオク",
+      "id": "candidate:b1232653195",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:c1232745051": {
+      "platform": "ヤフオク",
+      "id": "candidate:c1232745051",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:v1232741641": {
+      "platform": "ヤフオク",
+      "id": "candidate:v1232741641",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:k1232873219": {
+      "platform": "ヤフオク",
+      "id": "candidate:k1232873219",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:s1232875465": {
+      "platform": "ヤフオク",
+      "id": "candidate:s1232875465",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "ヤフオク:candidate:q1232867717": {
+      "platform": "ヤフオク",
+      "id": "candidate:q1232867717",
+      "decision": "snapshot_pending",
+      "reason_tags": [],
+      "bid": 1,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12565_0212": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12565_0212",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 6000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0342": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0342",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0390": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0390",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0399": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0399",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0400": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0400",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0412": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0412",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0416": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0416",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0429": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0429",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0349": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0349",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0369": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0369",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0379": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0379",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0383": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0383",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12578_0108": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12578_0108",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12591_0417": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12591_0417",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12578_0490": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12578_0490",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 19000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12565_0288": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12565_0288",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 15000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12569_0288": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12569_0288",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12569_0289": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12569_0289",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12582_0122": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12582_0122",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12582_0128": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12582_0128",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12582_0129": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12582_0129",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12582_0130": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12582_0130",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12570_0216": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12570_0216",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12593_0461": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12593_0461",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12593_0468": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12593_0468",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12593_0472": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12593_0472",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12593_0473": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12593_0473",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12571_0058": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12571_0058",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12571_0194": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12571_0194",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12572_0266": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12572_0266",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12581_0101": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12581_0101",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 9000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12593_0471": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12593_0471",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12582_0199": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12582_0199",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12583_0211": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12583_0211",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": null,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12582_0200": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12582_0200",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 6000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12565_0290": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12565_0290",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 18000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12578_0115": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12578_0115",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 18000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12584_0492": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12584_0492",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 9000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12569_0311": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12569_0311",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 9000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12581_0102": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12581_0102",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 15000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12565_0100": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12565_0100",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 20000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12579_0111": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12579_0111",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 21000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12570_0218": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12570_0218",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 12000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12581_0103": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12581_0103",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 17000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12565_0006": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12565_0006",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 32000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12565_0007": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12565_0007",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 35000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12565_0104": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12565_0104",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 32000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12565_0002": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12565_0002",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 35000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12578_0120": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12578_0120",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 43000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12566_0055": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12566_0055",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 50000,
+      "jissei": null
+    },
+    "EcoAuc:ecoauc:12565_0291": {
+      "platform": "EcoAuc",
+      "id": "ecoauc:12565_0291",
+      "decision": "snapshot_inspect",
+      "reason_tags": [],
+      "bid": 62000,
+      "jissei": null
+    },
+    "yahoo:kanri:A104-260627": {
+      "platform": "yahoo",
+      "id": "kanri:A104-260627",
+      "decision": "go",
+      "reason_tags": [],
+      "bid": 86900,
+      "jissei": 130000
+    },
+    "yahoo:kanri:A105-260629": {
+      "platform": "yahoo",
+      "id": "kanri:A105-260629",
+      "decision": "go",
+      "reason_tags": [],
+      "bid": 10357,
       "jissei": null
     },
     "ecoauc:12547_0161": {
