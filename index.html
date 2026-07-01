@@ -612,6 +612,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .ex-btns{display:flex;gap:6px;flex-wrap:wrap}
 .ex-btn{background:var(--surface2);border:1px solid var(--line);border-radius:8px;color:var(--text);font-size:11px;padding:6px 9px;cursor:pointer}
 .ex-ng{font-size:10px;color:#e0a030;margin-top:6px}
+.ja-old{color:#ff5c5c;font-size:9px;font-weight:800;margin-left:4px}
+.ja-ok{color:var(--muted2);font-size:9px;margin-left:4px}
 .gc-grp{margin-bottom:10px}.gc-lbl{font-size:11px;font-weight:800;color:var(--muted);margin-bottom:5px}
 .gc-opt{display:flex;margin-bottom:5px}
 .gc-warn{color:#ff5c5c;font-size:11px;font-weight:700;margin:2px 0 4px}
@@ -801,7 +803,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 19;
+const APP_VER = 20;
 const APP_VER_DATE = '2026-07-02';
 
 // 全角数字→半角に正規化（金額入力・全角０-９やカンマ／円記号も許容）
@@ -1175,7 +1177,7 @@ function render() {
         })()}
         <div class="metrics-grid">
           <div class="metric"><div class="metric-lbl">Eco指値</div><div class="metric-val green">${yen(c.eco_shitene)}</div><div class="metric-sub">Y${yen(c.yahoo_shitene)}</div></div>
-          <div class="metric"><div class="metric-lbl">実勢${c.confidence?`<span class="band-conf ${c.confidence}">${c.confidence}</span>`:''}</div><div class="metric-val" style="font-size:${(c.jissei_low&&c.jissei_high)?'11px':'13px'}">${(c.jissei_low&&c.jissei_high)?`¥${(+c.jissei_low).toLocaleString('ja-JP')}〜${(+c.jissei_high).toLocaleString('ja-JP')}`:yen(c.jissei)}</div></div>
+          <div class="metric"><div class="metric-lbl">実勢${c.confidence?`<span class="band-conf ${c.confidence}">${c.confidence}</span>`:''}${jisseiAge(c)}</div><div class="metric-val" style="font-size:${(c.jissei_low&&c.jissei_high)?'11px':'13px'}">${(c.jissei_low&&c.jissei_high)?`¥${(+c.jissei_low).toLocaleString('ja-JP')}〜${(+c.jissei_high).toLocaleString('ja-JP')}`:yen(c.jissei)}</div></div>
           <div class="metric"><div class="metric-lbl">粗利</div><div class="metric-val green">${yen(c.profit_eco)}</div></div>
           <div class="metric"><div class="metric-lbl">回転</div><div class="metric-val">${c.kaiten}<span style="font-size:10px;font-weight:500">日</span></div></div>
         </div>
@@ -1199,7 +1201,7 @@ function render() {
             <button class="iv-judge-btn skip" onclick="candSkipPrompt('${ck}')">見送り</button>
           </div>`
           :cst==='bidding'?`<div class="iv-judge-row">
-            <button class="iv-judge-btn go done" disabled>🎯 入札中（GO済）</button>
+            <button class="iv-judge-btn go done" disabled>🎯 入札中（GO済${(cdec.go_checks&&cdec.go_checks.go_table==='learning')?'・🎓学習枠':''}${(cdec.go_checks&&cdec.go_checks.material==='unknown_metal')?'・⚠️素材不明':''}）</button>
             <button class="iv-judge-btn undo" onclick="candUndo('${ck}')">↩ 戻す</button>
           </div>${biddingBlock('cand',ck)}${resultBlock('cand',ck)}`
           :(cdec.decision==='skip'?`<div class="iv-judge-row">
@@ -2361,6 +2363,13 @@ function skipModalConfirm(){
 }
 
 // ===== v19 共通: 鮮度バッジ / GOチェッカー / 深追い / 結果記録 / 出口判断 (2026-07-02) =====
+function jisseiAge(c){
+  const src=c.jissei_asof||null; if(!src)return'';
+  const d=new Date(String(src).replace(' ','T')); if(isNaN(d))return'';
+  const days=Math.floor((Date.now()-d.getTime())/864e5);
+  if(days>14) return `<span class="ja-old">実勢${days}日前⚠</span>`;
+  return `<span class="ja-ok">実勢${days}日前</span>`;
+}
 function fresh(dt){ if(!dt)return''; const d=new Date(String(dt).replace(' ','T')); if(isNaN(d))return'';
   const days=(Date.now()-d.getTime())/864e5; const c=days<=1.2?'g':(days<=3?'y':'r');
   return `<span class="fr-dot fr-${c}" title="${Math.floor(days)}日前のデータ"></span>`; }
@@ -2775,7 +2784,7 @@ function renderInspect(){
             <button class="iv-judge-btn skip" id="ins-skip-${it.item_no}" onclick="insSkipPrompt('${it.item_no}')">見送り</button>
           </div>`
           :st==='bidding'?`<div class="iv-judge-row">
-            <button class="iv-judge-btn go done" disabled>🎯 入札中（GO済）</button>
+            <button class="iv-judge-btn go done" disabled>🎯 入札中（GO済${(decRec.go_checks&&decRec.go_checks.go_table==='learning')?'・🎓学習枠':''}${(decRec.go_checks&&decRec.go_checks.material==='unknown_metal')?'・⚠️素材不明':''}）</button>
             <button class="iv-judge-btn undo" onclick="insUndo('${it.item_no}')">↩ 戻す</button>
           </div>${biddingBlock('ins',it.item_no)}${resultBlock('ins',it.item_no)}`
           :(dec==='skip'?`<div class="iv-judge-row">
