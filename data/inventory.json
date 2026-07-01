@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-07-02 07:40",
- "count": 26,
+ "updated_at": "2026-07-02 07:41",
+ "count": 25,
  "items": [
   {
    "kanri_no": "A020-251102",
@@ -14,20 +14,6 @@
    "actual_price": 38950,
    "price_updated_at": "2026-07-02 06:06",
    "mercari_id": "m64763668776",
-   "ecoauc_listed": false
-  },
-  {
-   "kanri_no": "A021-251107",
-   "name": "セリーヌ ヴィンテージ バッグモチーフ クリップ式 イヤリング",
-   "category": "アクセ",
-   "buy_date": "2025-11-07",
-   "buy_price": 12094,
-   "loss_cut": 14000,
-   "souryo": 210,
-   "list_price": 17378,
-   "actual_price": 11890,
-   "price_updated_at": "2026-05-27 06:38",
-   "mercari_id": "m12246649817",
    "ecoauc_listed": false
   },
   {
