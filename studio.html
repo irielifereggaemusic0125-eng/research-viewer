@@ -475,6 +475,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;heigh
         </button>
       </div>
       <div id="pool-info"></div>
+      <button id="btn-mercari-set" style="width:100%;margin-top:10px;padding:9px 0;background:rgba(212,170,96,.12);
+        border:1px solid var(--gold);border-radius:7px;color:var(--gold);font-size:11px;font-weight:700;cursor:pointer;
+        letter-spacing:.04em;">📦 メルカリセット一括書き出し（1080角・白余白）</button>
+      <div style="font-size:9px;color:var(--muted);margin-top:4px;line-height:1.5">プールの全写真を1080×1080の正方形（白余白パディング）JPEGで連番保存。1枚目はテンプレートモードで作成→Download。</div>
     </div>
 
     <div class="card">
@@ -730,6 +734,7 @@ function initCollage(){
     });
     e.target.value = '';
   });
+  CG('btn-mercari-set').addEventListener('click', exportMercariSet);
   // 入れ替え: 選択セルと「次の写真があるセル」を交換
   CG('cell-swap').addEventListener('click', function(){
     if(COL.selected<0) return;
@@ -845,6 +850,31 @@ function loadImageToCell(i, file){
 
 // ── 写真プール（まとめて選択 → 分割を選ぶフロー）───────────────
 // 選んだファイルを順番どおりImage化してプールへ。全部読めたらcb()。
+// 📦 メルカリセット一括書き出し（v19 2026-07-02）: プール全画像→1080角白パディングJPEG連番DL
+function exportMercariSet(){
+  var pool = COL.pool.filter(Boolean);
+  if(!pool.length){ alert('先に「写真をまとめて選ぶ」でプールに写真を入れてください'); return; }
+  var SIZE = 1080, i = 0;
+  function one(){
+    if(i >= pool.length) return;
+    var img = pool[i];
+    var cv = document.createElement('canvas'); cv.width = SIZE; cv.height = SIZE;
+    var g = cv.getContext('2d');
+    g.fillStyle = '#ffffff'; g.fillRect(0, 0, SIZE, SIZE);
+    var sc = Math.min(SIZE / img.naturalWidth, SIZE / img.naturalHeight);
+    var w = Math.round(img.naturalWidth * sc), h = Math.round(img.naturalHeight * sc);
+    g.imageSmoothingQuality = 'high';
+    g.drawImage(img, Math.round((SIZE - w) / 2), Math.round((SIZE - h) / 2), w, h);
+    var a = document.createElement('a');
+    a.download = 'mercari_' + String(i + 2).padStart(2, '0') + '.jpg';  // 1枚目はテンプレ想定so 02始まり
+    a.href = cv.toDataURL('image/jpeg', 0.92);
+    document.body.appendChild(a); a.click(); a.remove();
+    i++;
+    setTimeout(one, 450);  // 連続DLブロック回避
+  }
+  one();
+}
+
 function loadFilesToPool(files, cb){
   var imgs = new Array(files.length);
   var done = 0;
