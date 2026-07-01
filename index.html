@@ -583,6 +583,40 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 @media(min-width:1160px){
   #cards[data-tab="list"]{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
+
+/* ===== v19 (2026-07-02) 鮮度/ヒートマップ/GOチェッカー/深追い/結果記録/出口判断/スパークライン ===== */
+.fr-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:middle}
+.fr-g{background:#2ed47a}.fr-y{background:#e0a030}.fr-r{background:#ff5c5c;box-shadow:0 0 6px rgba(255,92,92,.7)}
+.iv-rv.hmv.hm-crit,.iv-rv.hmv.hm-red{color:#ff5c5c;font-weight:800}
+.iv-rv.hmv.hm-yellow{color:#e0a030;font-weight:800}
+.iv-rv.hmv.hm-green{color:#2ed47a;font-weight:800}
+.iv-rv.hm-red{color:#ff5c5c;font-weight:800}.iv-rv.hm-yellow{color:#e0a030;font-weight:700}
+.iv-card.hm-crit{border-color:rgba(255,92,92,.7);animation:hmblink 1.4s infinite}
+@keyframes hmblink{50%{box-shadow:0 0 0 2px rgba(255,92,92,.45)}}
+.iv-card.hm-red{border-color:rgba(255,92,92,.4)}
+.iv-card.hm-yellow{border-color:rgba(224,160,48,.4)}
+.bb-wrap{margin-top:8px;padding:9px 10px;background:var(--surface2);border:1px dashed var(--line);border-radius:10px;font-size:11px}
+.bb-line{margin-bottom:6px}.bb-ok{color:#2ed47a;font-weight:700}.bb-q{color:#e0a030;font-weight:700}
+.bb-warn{color:#ff5c5c;font-weight:800}
+.bb-rev2{display:flex;align-items:center;gap:6px;margin-top:4px}
+.bb-note{font-size:10px;color:var(--muted2);margin-top:4px}
+.rb-wrap{margin-top:8px;padding:9px 10px;background:var(--surface2);border:1px solid var(--line);border-radius:10px;font-size:11px}
+.rb-good{border-color:rgba(46,212,122,.45)}.rb-bad{border-color:rgba(255,92,92,.55)}
+.rb-t{font-weight:800;margin-bottom:6px}.rb-row{display:flex;gap:6px;align-items:center;margin-bottom:6px}
+.rb-sel{background:var(--surface);border:1.5px solid var(--line);border-radius:8px;color:var(--text);min-height:38px;font-size:12px;padding:0 8px}
+.rb-in{flex:1;min-width:70px}.rb-btn{flex:0 0 74px;min-height:38px}
+.rb-v{font-weight:700;line-height:1.5}
+.ex-sec{background:rgba(255,92,92,.07);border:1px solid rgba(255,92,92,.3);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.ex-hd{font-size:12px;font-weight:800;margin-bottom:4px}.ex-meta{font-weight:500;font-size:10px;color:var(--muted);margin-left:6px}
+.ex-row{display:flex;flex-direction:column;gap:4px;padding:6px 0;border-top:.5px solid var(--line);font-size:11px}
+.ex-btns{display:flex;gap:6px;flex-wrap:wrap}
+.ex-btn{background:var(--surface2);border:1px solid var(--line);border-radius:8px;color:var(--text);font-size:11px;padding:6px 9px;cursor:pointer}
+.ex-ng{font-size:10px;color:#e0a030;margin-top:6px}
+.gc-grp{margin-bottom:10px}.gc-lbl{font-size:11px;font-weight:800;color:var(--muted);margin-bottom:5px}
+.gc-opt{display:flex;margin-bottom:5px}
+.gc-warn{color:#ff5c5c;font-size:11px;font-weight:700;margin:2px 0 4px}
+#go-check-ok:disabled{opacity:.4;cursor:not-allowed}
+.spark{display:block}
 </style>
 </head>
 <body>
@@ -637,7 +671,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
     <div class="fgroup">
       <div class="fgroup-label"><span class="ico">🔍</span>絞り込み（確信度で選ぶ）</div>
       <div class="fchips" id="tier-chips">
-        <button class="fchip on" data-tier="all" onclick="setTier('all')">すべて<span class="fc-sub">全件</span></button>
+        <button class="fchip" data-tier="all" onclick="setTier('all')">すべて<span class="fc-sub">全件</span></button>
+        <button class="fchip on" data-tier="core" onclick="setTier('core')">⭐主力<span class="fc-sub">T1+粗利5k</span></button>
         <button class="fchip" data-tier="Tier1" onclick="setTier('Tier1')">🥇確信MAX<span class="fc-sub">完全安全</span></button>
         <button class="fchip" data-tier="Tier2" onclick="setTier('Tier2')">🥈高確信<span class="fc-sub">p25安全</span></button>
         <button class="fchip" data-tier="Tier3" onclick="setTier('Tier3')">🔴要確認<span class="fc-sub">目視推奨</span></button>
@@ -680,6 +715,18 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
     <div class="ins-modal-btns">
       <button class="ins-modal-btn cancel" onclick="insSkipCancel()">キャンセル</button>
       <button class="ins-modal-btn ok" onclick="skipModalConfirm()">見送り確定</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🧾 入札前GOチェッカー（2026-07-02 P0確定版・全項目チェックでGO登録可） -->
+<div id="go-check-modal" class="ins-modal-ov">
+  <div class="ins-modal" style="max-height:82vh;overflow-y:auto">
+    <div class="ins-modal-hd">🧾 入札前GOチェック（全項目必須）<div class="ins-modal-sub" id="go-check-title"></div></div>
+    <div id="go-check-body"></div>
+    <div class="ins-modal-btns">
+      <button class="ins-modal-btn cancel" onclick="goCheckCancel()">キャンセル</button>
+      <button class="ins-modal-btn ok" id="go-check-ok" disabled onclick="goCheckConfirm()" style="background:rgba(46,212,122,.16);color:var(--profit);border:1.5px solid rgba(46,212,122,.35)">GO登録</button>
     </div>
   </div>
 </div>
@@ -754,7 +801,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 18;
+const APP_VER = 19;
 const APP_VER_DATE = '2026-07-02';
 
 // 全角数字→半角に正規化（金額入力・全角０-９やカンマ／円記号も許容）
@@ -855,7 +902,7 @@ let lotCatFilter = 'all';
 // id(name+deadline) → status override ('未応募'|'応募済')。v18: localStorage永続化（リロードで消えるバグ修正 2026-07-02）
 let lotStatuses = (()=>{try{return JSON.parse(localStorage.getItem('lot_statuses_v1')||'{}');}catch(e){return{};}})();
 function lotStatusesSave(){ localStorage.setItem('lot_statuses_v1', JSON.stringify(lotStatuses)); }
-let filters = { tier: 'all', alert: false, coherence: false, sort: 'tier', stock: 'all', showEnded: false };
+let filters = { tier: 'core', alert: false, coherence: false, sort: 'tier', stock: 'all', showEnded: false };
 
 // 出品中判定: JSONのstatus='listed'を主・無ければ個別商品URL有無で代用
 function isListed(c){
@@ -1022,7 +1069,8 @@ function render() {
   // 在庫状態フィルタ（出品中/待ち受け）
   if (filters.stock === 'listed') candidates = candidates.filter(c => isListed(c));
   else if (filters.stock === 'waiting') candidates = candidates.filter(c => !isListed(c));
-  if (filters.tier !== 'all') candidates = candidates.filter(c => c.tier === filters.tier);
+  if (filters.tier === 'core') candidates = candidates.filter(c => c.tier==='Tier1' || (c.profit_eco||0)>=5000);
+  else if (filters.tier !== 'all') candidates = candidates.filter(c => c.tier === filters.tier);
   if (filters.alert) candidates = candidates.filter(c => isEndingSoon(c.end));
   if (filters.coherence) candidates = candidates.filter(c => c.coherence && c.coherence.startsWith('✅'));
   // NGワード除外（タイトルベース・トグルON時は除外カードを隠す）
@@ -1040,7 +1088,7 @@ function render() {
   else if (sort === 'end') candidates.sort((a,b)=>((hoursLeft(a.end)??9999)-(hoursLeft(b.end)??9999)));
   else { const order={'Tier1':0,'Tier2':1,'Tier3':2}; candidates.sort((a,b)=>(order[a.tier]??9)-(order[b.tier]??9)); }
 
-  document.getElementById('updated-label').textContent = `最終更新: ${data.updated_at}`;
+  document.getElementById('updated-label').innerHTML = `最終更新: ${fresh(data.updated_at)}${data.updated_at}`;
 
   const all = data.candidates;
   document.getElementById('summary').innerHTML = `
@@ -1077,7 +1125,7 @@ function render() {
     const tc = TIER_CLASS[c.tier] || '';
     const ck = candKey(c);
     const _aucid=candAucid(c);
-    candMeta[ck]={brand:c.brand,model:c.model,name:c.name,jissei:c.jissei,source:c.source,
+    candMeta[ck]={brand:c.brand,model:c.model,name:c.name,jissei:c.jissei,source:c.source,rank:c.rank,
       aucid:_aucid,end:c.end,current_price:c.current_price,shitene:c.yahoo_shitene,tier:c.tier,url:c.url};
     const cdec=(candDecs[ck]||{});
     const cst=candItemStatus(c);   // pending|bidding|done
@@ -1147,18 +1195,18 @@ function render() {
           <div class="iv-calc-row" id="cand-calc-${ck}"></div>
         </div>`}
         ${cst==='pending'?`<div class="iv-judge-row">
-            <button class="iv-judge-btn go" onclick="candJudge('${ck}','go')">GO（入札対象に登録）</button>
+            <button class="iv-judge-btn go" onclick="goCheckPrompt('cand','${ck}')">GO（入札対象に登録）</button>
             <button class="iv-judge-btn skip" onclick="candSkipPrompt('${ck}')">見送り</button>
           </div>`
           :cst==='bidding'?`<div class="iv-judge-row">
             <button class="iv-judge-btn go done" disabled>🎯 入札中（GO済）</button>
             <button class="iv-judge-btn undo" onclick="candUndo('${ck}')">↩ 戻す</button>
-          </div>`
+          </div>${biddingBlock('cand',ck)}${resultBlock('cand',ck)}`
           :(cdec.decision==='skip'?`<div class="iv-judge-row">
             <button class="iv-judge-btn skip done" disabled>見送り済 ✓${(cdec.reason_tags&&cdec.reason_tags.length)?'（'+cdec.reason_tags.join('・')+'）':''}</button>
             <button class="iv-judge-btn undo" onclick="candUndo('${ck}')">↩ 戻す</button>
           </div>`
-          :`<div class="iv-judge-row"><button class="iv-judge-btn ended done" disabled>🔚 終了（処理済み）</button></div>`)}
+          :`<div class="iv-judge-row"><button class="iv-judge-btn ended done" disabled>🔚 終了（処理済み）</button></div>${resultBlock('cand',ck)}`)}
         ${(_aucid||c.model)?`<div class="ins-itemno"><span class="lbl">${_aucid?'オークションID':'型番'}</span><span class="no">${_aucid||c.model}</span></div>`:''}
       </div>
     </div>`;
@@ -1326,13 +1374,14 @@ async function candJudge(ck,decision,reasonOverride){
   const reason=reasonOverride||(decision==='go'?`候補GO bid=¥${bid.toLocaleString('ja-JP')}`:'候補見送り');
   const reason_tags=decision==='skip'?((window._pendingSkipTags&&window._pendingSkipTags.length)?window._pendingSkipTags.slice():insTagReason(reason)):[];
   window._pendingSkipTags=null;
+  const go_checks=(decision==='go')?(window._pendingGoChecks||null):null; window._pendingGoChecks=(decision==='go')?null:window._pendingGoChecks;
   const payload={item_no:watchId, platform:'yahoo', name:m.name, brand:m.brand, model:m.model,
-    tier:m.tier||'Tier2', jissei, bid, profit, deadline:m.end||'', current_price:m.current_price||0, reason};
+    tier:m.tier||'Tier2', jissei, bid, profit, deadline:m.end||'', current_price:m.current_price||0, reason, go_checks};
   const result=await relayPost(decision,payload);
   const server_ok=result?!!result.ok:null;
   if(!server_ok) decisionQueuePush(decision,payload);  // relay失敗時にキュー退避→接続復活で自動再送
   const decs=candDecsLoad();
-  decs[ck]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags,watchId,name:m.name,brand:m.brand};
+  decs[ck]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags,watchId,name:m.name,brand:m.brand,go_checks};
   candDecsSave(decs);
   decLedgerSet(candStableId(m),{decision,bid,jissei,reason,reason_tags});  // 安定ID台帳にも記録(SKIP引き継ぎ)
   render();
@@ -1586,7 +1635,7 @@ async function showLottery(){
   }
   // メタ
   const meta=document.getElementById('lot-meta');
-  if(meta) meta.textContent=`${lotteryData.candidates.length}件 / 更新:${lotteryData.updated_at}`;
+  if(meta) meta.innerHTML=`${lotteryData.candidates.length}件 / 更新:${fresh(lotteryData.updated_at)}${lotteryData.updated_at}`;
   // カテゴリフィルタ
   const catBar=document.getElementById('lot-cat-bar');
   if(catBar){
@@ -1686,7 +1735,7 @@ function renderWords() {
   main.innerHTML = `
     <div class="words-header">
       <span class="words-title">🔍 検索ワード（実績順）</span>
-      <span class="words-meta">${realCount}件 / 更新:${wordsData.updated}</span>
+      <span class="words-meta">${realCount}件 / 更新:${fresh(wordsData.updated)}${wordsData.updated}</span>
     </div>
     <div class="words-note">
       <b>Y</b>ヤフオク（1円先頭・store）／<b>E</b>エコオク下見／<b>M</b>メルカリSOLD／<b>G</b>Google画像<br>
@@ -1919,6 +1968,8 @@ async function showInventory(){
     }
   }
   if(!Object.keys(researchInfo).length) await loadResearchInfo();
+  if(floorStatus===null){ try{ floorStatus=await (await fetch('data/floor_status.json?t='+Date.now(),{cache:'no-store'})).json(); }catch(e){ floorStatus={}; } }
+  if(priceHistory===null){ try{ priceHistory=await (await fetch('data/price_history.json?t='+Date.now(),{cache:'no-store'})).json(); }catch(e){ priceHistory={}; } }
   renderInventory();
 }
 // 🔬 在庫カード用 リサーチ情報ブロックを生成（kanri_noで引く・無ければ空文字）
@@ -1959,7 +2010,7 @@ function renderInventory(){
   main.innerHTML = `
     <div class="iv-header">
       <span class="iv-title">📦 在庫</span>
-      <span class="iv-meta">全${inventoryData.count}件 / 更新:${inventoryData.updated_at} <button class="wf-clear" style="margin-left:6px;min-height:28px;padding:3px 10px" onclick="ivRefresh()">⟳ 更新</button></span>
+      <span class="iv-meta">全${inventoryData.count}件 / 更新:${fresh(inventoryData.updated_at)}${inventoryData.updated_at} <button class="wf-clear" style="margin-left:6px;min-height:28px;padding:3px 10px" onclick="ivRefresh()">⟳ 更新</button></span>
     </div>
     <div class="iv-filter">
       <div class="iv-fg"><div class="iv-fl">📦 カテゴリ</div><div class="iv-chips">${catChips}</div></div>
@@ -1971,8 +2022,15 @@ function renderInventory(){
       <span class="iv-count">表示: <b>${items.length}</b>件</span>
       <span class="iv-sum">仕入計 ${ivYen(totalBuy)}　<button class="wf-clear" onclick="ivClear()" style="margin-left:6px">✕ クリア</button></span>
     </div>
+    ${exitSection()}
     ${items.length ? items.map(it=>{
       const lv = ivLevel(it.days);
+      // v19 粗利ヒートマップ: 粗利 = 現価×0.9 − 実送料(souryo_table・無ければ850) − 仕入
+      const souryo = (it.souryo!=null)?it.souryo:850;
+      const ap2 = (!it.ecoauc_listed && it.actual_price) ? it.actual_price : null;
+      const arari = (ap2!=null) ? Math.round(ap2*0.9 - souryo - (it.buy_price||0)) : null;
+      const lossDist = (ap2!=null && it.loss_cut) ? (ap2 - it.loss_cut) : null;
+      const hm = arari===null ? '' : (arari<-3000?'hm-crit':(arari<0?'hm-red':(arari<5000?'hm-yellow':'hm-green')));
       const daysLabel = it.days===null ? '日付不明' : `${it.days}日`;
       const mid = it.mercari_id || '';
       const mercUrl = mid ? `https://jp.mercari.com/item/${mid}` : '';
@@ -1991,7 +2049,7 @@ function renderInventory(){
       } else {
         priceRow = `<div class="iv-row"><span class="iv-rl">出品価格(初期)</span><span class="iv-rv">${ivYen(lp)} <span class="iv-badge-na">確認不可</span></span></div>`;
       }
-      return `<div class="iv-card ${lv}${eco?' iv-eco':''}">
+      return `<div class="iv-card ${lv}${eco?' iv-eco':''} ${hm}">
         <div class="iv-card-top">
           <span class="iv-card-no">${it.kanri_no||'—'}</span>
           <span class="iv-days ${lv}">${daysLabel}</span>
@@ -2002,6 +2060,9 @@ function renderInventory(){
           <div class="iv-row"><span class="iv-rl">仕入日</span><span class="iv-rv">${it.buy_date||'—'}</span></div>
           <div class="iv-row"><span class="iv-rl">仕入金額</span><span class="iv-rv">${ivYen(it.buy_price)}</span></div>
           <div class="iv-row"><span class="iv-rl">損切りライン</span><span class="iv-rv loss">${ivYen(it.loss_cut)}</span></div>
+          ${arari!==null?`<div class="iv-row"><span class="iv-rl">粗利(現価・送料¥${souryo}込)</span><span class="iv-rv hmv ${hm}">${arari>=0?'+':'−'}¥${Math.abs(arari).toLocaleString('ja-JP')}</span></div>`:''}
+          ${lossDist!==null?`<div class="iv-row"><span class="iv-rl">床(L)まで</span><span class="iv-rv ${lossDist<=0?'hm-red':(lossDist<=2000?'hm-yellow':'')}">${lossDist<=0?`🧱床割れ −¥${Math.abs(lossDist).toLocaleString('ja-JP')}`:`残り ¥${lossDist.toLocaleString('ja-JP')}`}</span></div>`:''}
+          ${sparkRow(it.mercari_id)}
           ${priceRow}
         </div>
         ${ivResearchBlock(it.kanri_no)}
@@ -2188,15 +2249,16 @@ async function insJudge(itemNo,decision,reasonOverride){
   const reason=reasonOverride||(decision==='go'?`下見GO bid=¥${bid.toLocaleString('ja-JP')}`:'下見見送り');
   const reason_tags=decision==='skip'?((window._pendingSkipTags&&window._pendingSkipTags.length)?window._pendingSkipTags.slice():insTagReason(reason)):[];
   window._pendingSkipTags=null;
+  const go_checks=(decision==='go')?(window._pendingGoChecks||null):null; window._pendingGoChecks=(decision==='go')?null:window._pendingGoChecks;
   const payload={item_no:itemNo,name:it.name,brand:it.brand,tier:it.tier,
-    jissei,bid,profit,deadline:it.deadline,current_price:it.current_price,reason};
+    jissei,bid,profit,deadline:it.deadline,current_price:it.current_price,reason,go_checks};
 
   const result=await relayPost(decision,payload);
   const server_ok=result?!!result.ok:null;
   if(!server_ok) decisionQueuePush(decision,payload);  // relay失敗時にキュー退避→接続復活で自動再送
 
   const decs=insDecsLoad();
-  decs[itemNo]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags,name:it.name,brand:it.brand};
+  decs[itemNo]={decision,decided_at:new Date().toISOString(),bid,jissei,server_ok,reason,reason_tags,name:it.name,brand:it.brand,go_checks};
   insDecsSave(decs);
   decLedgerSet('i:'+itemNo,{decision,bid,jissei,reason,reason_tags});  // 安定ID台帳にも記録(SKIP引き継ぎ)
   // ステータスが変わるので再描画→未判断ビューから自動的に消える
@@ -2275,7 +2337,7 @@ async function showBidTracking(){
   // 惜敗(あと¥3000以内の負け)を上位ハイライト
   const near=items.filter(x=>x.outcome==='lost'&&x.gap!=null&&x.gap<=3000);
   main.innerHTML=`
-    <div class="iv-header"><span class="iv-title">📋 入札追跡・落札乖離</span><span class="iv-meta">${s.total}件 / 更新:${d.updated_at}</span></div>
+    <div class="iv-header"><span class="iv-title">📋 入札追跡・落札乖離</span><span class="iv-meta">${s.total}件 / 更新:${fresh(d.updated_at)}${d.updated_at}</span></div>
     <div class="bt-summary">
       <div class="bt-card"><div class="bt-k">勝率</div><div class="bt-v">${s.win_rate}%</div><div class="bt-sub">${s.won}勝${s.lost}負${s.ryuusatsu?('・'+s.ryuusatsu+'流'):''}</div></div>
       <div class="bt-card"><div class="bt-k">平均 負け乖離</div><div class="bt-v">¥${(s.avg_lose_gap||0).toLocaleString('ja-JP')}</div><div class="bt-sub">落札−自分の差</div></div>
@@ -2296,6 +2358,145 @@ function skipModalConfirm(){
   if(!ctx) return;
   if(ctx.type==='cand') candJudge(ctx.key,'skip',reason);
   else insJudge(ctx.key,'skip',reason);
+}
+
+// ===== v19 共通: 鮮度バッジ / GOチェッカー / 深追い / 結果記録 / 出口判断 (2026-07-02) =====
+function fresh(dt){ if(!dt)return''; const d=new Date(String(dt).replace(' ','T')); if(isNaN(d))return'';
+  const days=(Date.now()-d.getTime())/864e5; const c=days<=1.2?'g':(days<=3?'y':'r');
+  return `<span class="fr-dot fr-${c}" title="${Math.floor(days)}日前のデータ"></span>`; }
+
+// --- 入札前GOチェッカー（全項目チェックでGO登録・judgment_logに記録） ---
+let _goCheckCtx=null;
+const GO_CHECK_DEFS=[
+ {k:'material',label:'① 素材表記',opts:[['stated','素材表記あり・出品情報で確認した'],['unknown_metal','素材不明 → メタル前提の入札上限に落とした']],warn:'unknown_metal',warnMsg:'⚠️ 素材不明。メタル前提の入札上限で。'},
+ {k:'hallmark',label:'② 刻印/シリアル',opts:[['checked','刻印・シリアル確認した（貴金属は純度刻印）'],['na','刻印のない品目（対象外）']]},
+ {k:'jissei',label:'③ 販売実勢',opts:[['checked','SOLD実績を確認した（単一中央値でなくティア認識・14日以内）']]},
+ {k:'bid_cap',label:'④ 入札上限',opts:[['checked','粗利¥5,000ラインで逆算した（鑑定料込みなら−¥2,500）']]},
+ {k:'go_table',label:'⑤ GOテーブル',opts:[['listed','GOテーブル該当'],['learning','新規 ＝「学習枠」として入札']]},
+];
+function goCheckPrompt(type,key){
+  _goCheckCtx={type,key};
+  const m=(type==='cand'?candMeta[key]:insItemMap[key])||{};
+  document.getElementById('go-check-title').textContent=(m.name||'').slice(0,40);
+  document.getElementById('go-check-body').innerHTML=GO_CHECK_DEFS.map(d=>
+    `<div class="gc-grp"><div class="gc-lbl">${d.label}</div>`+
+    d.opts.map(o=>`<label class="ins-rc gc-opt"><input type="radio" name="gc-${d.k}" value="${o[0]}" onchange="goCheckUpdate()"> ${o[1]}</label>`).join('')+
+    (d.warnMsg?`<div class="gc-warn" id="gc-warn-${d.k}" style="display:none">${d.warnMsg}</div>`:'')+`</div>`).join('');
+  goCheckUpdate();
+  document.getElementById('go-check-modal').style.display='flex';
+}
+function goCheckState(){ const st={}; let all=true;
+  GO_CHECK_DEFS.forEach(d=>{const sel=document.querySelector(`input[name="gc-${d.k}"]:checked`); st[d.k]=sel?sel.value:null; if(!sel)all=false;});
+  return {st,all}; }
+function goCheckUpdate(){ const r=goCheckState();
+  GO_CHECK_DEFS.forEach(d=>{ if(d.warn){const w=document.getElementById('gc-warn-'+d.k); if(w)w.style.display=(r.st[d.k]===d.warn)?'block':'none';} });
+  const ok=document.getElementById('go-check-ok'); if(ok)ok.disabled=!r.all; }
+function goCheckCancel(){ _goCheckCtx=null; document.getElementById('go-check-modal').style.display='none'; }
+function goCheckConfirm(){ const r=goCheckState(); if(!r.all)return;
+  r.st.checked_at=new Date().toISOString();
+  const ctx=_goCheckCtx; goCheckCancel(); if(!ctx)return;
+  window._pendingGoChecks=r.st;
+  if(ctx.type==='cand') candJudge(ctx.key,'go'); else insJudge(ctx.key,'go'); }
+
+// --- 入札中: 保存状態・実勢の深追い(rev2・初回実勢は温存) ---
+function biddingBlock(type,key){
+  const isC=(type==='cand');
+  const m=isC?candMeta[key]:insItemMap[key]; if(!m)return'';
+  const dec=((isC?candDecsLoad():insDecsLoad())[key])||{};
+  const e=((isC?candEditsLoad():insEditsLoad())[key])||{};
+  const saved=dec.server_ok===true?'<span class="bb-ok">✅サーバー記録済</span>':'<span class="bb-q">⏳キュー退避中(Mac起動時に自動送信)</span>';
+  const kw=encodeURIComponent([m.brand,m.model||m.name].filter(Boolean).join(' ').slice(0,60));
+  const url=`https://jp.mercari.com/search?keyword=${kw}&status=sold_out&sort=created_time&order=desc`;
+  const end=m.end||m.deadline||'';
+  let hrs=null; if(end){const d=new Date(end); if(!isNaN(d))hrs=(d.getTime()-Date.now())/36e5;}
+  const needDeep=(!e.jissei_rev2)&&hrs!==null&&hrs>0&&hrs<24;
+  return `<div class="bb-wrap">
+    <div class="bb-line">入札 ¥${(dec.bid||0).toLocaleString('ja-JP')} / 実勢 ¥${(dec.jissei||0).toLocaleString('ja-JP')} ${saved} ${needDeep?'<span class="bb-warn">⚠️深追い未実施・終了24h内</span>':''}</div>
+    <div class="bb-line"><a class="act-btn search" style="display:inline-flex;padding:7px 10px" target="_blank" rel="noopener" href="${url}">🔍 実勢を深追い<span class="ab-sub">個人×売切×新しい順</span></a></div>
+    <div class="bb-rev2"><span class="iv-input-lbl">深追い実勢 ¥</span>
+      <input class="iv-input" type="text" inputmode="numeric" placeholder="再検証後の実勢" value="${e.jissei_rev2?(+e.jissei_rev2).toLocaleString('ja-JP'):''}"
+        oninput="${isC?'candSetField':'insSetField'}('${key}','jissei_rev2',this.value);insFormatInput(this)" onblur="rev2Predict('${type}','${key}')"></div>
+    <div class="bb-note">初回実勢は消えません（rev2として別キーでprediction_ledgerへ保存）</div>
+  </div>`;
+}
+function rev2Predict(type,key){
+  const isC=(type==='cand');
+  const m=isC?candMeta[key]:insItemMap[key]; if(!m)return;
+  const e=((isC?candEditsLoad():insEditsLoad())[key])||{}; if(!e.jissei_rev2)return;
+  predictRecord({key:(isC?'yh_':'eco_')+key+':rev2', item_no:(isC?(m.aucid||''):key), brand:m.brand||'', model:m.model||'', name:m.name||'',
+    predicted_jissei:e.jissei||m.jissei||null, manual_jissei:e.jissei_rev2, bid:e.bid||null,
+    source:(isC?'yahoo_candidate_rev2':'ecoauc_inspect_rev2')});
+  showToast('深追い実勢を記録（rev2）');
+}
+
+// --- 終了案件の結果記録（/result → ecoauc_result_record → 負けて正解/悪い負け即判定） ---
+function resultBlock(type,key){
+  const isC=(type==='cand');
+  const m=isC?candMeta[key]:insItemMap[key]; if(!m)return'';
+  const dec=((isC?candDecsLoad():insDecsLoad())[key])||{};
+  if(dec.result){ const r=dec.result;
+    const cls=(r.outcome==='won')?'rb-good':(r.lost_correct===true?'rb-good':(r.lost_correct===false?'rb-bad':''));
+    return `<div class="rb-wrap ${cls}"><div class="rb-v">${r.outcome==='won'?'✅落札':(r.outcome==='ryuusatsu'?'🔁流札':'❌競り負け')}${r.final?` 落札¥${(+r.final).toLocaleString('ja-JP')}`:''}<br>${r.verdict||''}${(r.missed_profit!=null&&r.lost_correct===false)?` <b>逃し粗利+¥${(+r.missed_profit).toLocaleString('ja-JP')}</b>`:''}</div>${r.queued?'<div class="bb-q">⏳サーバー送信待ち（キュー退避）</div>':''}</div>`; }
+  const e=((isC?candEditsLoad():insEditsLoad())[key])||{};
+  const jd=e.jissei_rev2||e.jissei||m.jissei||'';
+  const kid=String(key).replace(/[^\w-]/g,'_');
+  return `<div class="rb-wrap">
+    <div class="rb-t">📥 結果を記録（乖離学習・逃し粗利判定）</div>
+    <div class="rb-row">
+      <select class="rb-sel" id="rb-o-${kid}"><option value="lost">競り負け</option><option value="won">落札できた</option><option value="ryuusatsu">流札</option></select>
+      <input class="iv-input rb-in" id="rb-f-${kid}" type="text" inputmode="numeric" placeholder="落札 ¥" oninput="insFormatInput(this)">
+    </div>
+    <div class="rb-row"><span class="iv-input-lbl">実勢 ¥</span>
+      <input class="iv-input rb-in" id="rb-j-${kid}" type="text" inputmode="numeric" value="${jd?(+jd).toLocaleString('ja-JP'):''}" oninput="insFormatInput(this)">
+      <button class="iv-judge-btn go rb-btn" onclick="recordResult('${type}','${key}')">記録</button></div>
+  </div>`;
+}
+async function recordResult(type,key){
+  const isC=(type==='cand');
+  const m=isC?candMeta[key]:insItemMap[key]; if(!m)return;
+  const kid=String(key).replace(/[^\w-]/g,'_');
+  const nv=s=>{const v=parseInt(toHalfWidthNum(String(s||'')).replace(/[^\d]/g,''),10);return v>0?v:null;};
+  const outcome=document.getElementById('rb-o-'+kid).value;
+  const final=nv(document.getElementById('rb-f-'+kid).value);
+  const jissei=nv(document.getElementById('rb-j-'+kid).value);
+  if(outcome!=='ryuusatsu'&&!final){showToast('落札¥を入力してください');return;}
+  const decsL=isC?candDecsLoad():insDecsLoad(); const dec=decsL[key]||{};
+  const payload={item_no:(isC?(m.aucid||key):key),platform:(isC?'yahoo':'ecoauc'),name:m.name,brand:m.brand||'',rank:m.rank||'',
+    my_bid:dec.bid||null,final_price:final,outcome,hanbai_jissei:jissei};
+  const r=await relayPost('result',payload);
+  const res={outcome,final,at:new Date().toISOString()};
+  if(r&&r.ok&&r.verdict){res.verdict=r.verdict.verdict||'';res.lost_correct=r.verdict.lost_correct;res.missed_profit=r.verdict.missed_profit;}
+  else{decisionQueuePush('result',payload);res.queued=true;}
+  dec.result=res; decsL[key]=dec; (isC?candDecsSave:insDecsSave)(decsL);
+  if(isC)render(); else renderInspect();
+}
+
+// --- 出口判断待ち（UPA床到達品・Discordコマンドをコピー） ---
+let floorStatus=null, priceHistory=null;
+function exitCopy(t){ const done=()=>showToast('コピー: '+t);
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(()=>fallbackCopy(t,done));}
+  else fallbackCopy(t,done); }
+function exitSection(){
+  if(!floorStatus)return'';
+  const fr=floorStatus.floor_reached||[], ng=floorStatus.noguard||[];
+  if(!fr.length&&!ng.length)return'';
+  const rows=fr.map(x=>{
+    const mg=(String(x).match(/\(([A-Za-z0-9\u30fb-]+-\d+)\)/)||[])[1]||'';
+    return `<div class="ex-row"><span class="ex-name">${x}</span><span class="ex-btns">
+      <button class="ex-btn" onclick="exitCopy('!hold ${mg}')">据置 !hold</button>
+      <button class="ex-btn" onclick="exitCopy('${mg} 床L割れのため損切り承認をお願いします（出口判断）')">損切り承認文</button>
+      <button class="ex-btn" onclick="exitCopy('${mg} エコオク委託に回します')">委託文</button></span></div>`;}).join('');
+  return `<div class="ex-sec"><div class="ex-hd">🧱 出口判断待ち（床L到達・自動値下げ停止中）<span class="ex-meta">${fresh(floorStatus.updated_at)}${floorStatus.updated_at||''}</span></div>${rows}
+    ${ng.length?`<div class="ex-ng">🚫 床L不明で値下げ除外: ${ng.join(' / ')}</div>`:''}
+    <div class="bb-note">ボタンでDiscordコマンド/文面をコピー → Discordへ貼り付け（判断はShimba）</div></div>`;
+}
+function sparkRow(mid){
+  const h=(priceHistory&&priceHistory[mid])||[]; if(h.length<2)return'';
+  const pts=h.slice(-12);
+  const vals=pts.map(p=>p.p), min=Math.min(...vals), max=Math.max(...vals);
+  const W=120,H=24;
+  const xy=pts.map((p,i)=>`${(i/(pts.length-1)*W).toFixed(1)},${(max===min?H/2:H-((p.p-min)/(max-min))*H).toFixed(1)}`).join(' ');
+  return `<div class="iv-row"><span class="iv-rl">価格推移(${pts.length}点)</span><span class="iv-rv"><svg class="spark" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><polyline points="${xy}" fill="none" stroke="#e08030" stroke-width="1.5"/></svg></span></div>`;
 }
 
 // ===== EcoAuc仕入れ採算（消費税対応・2026-06-13確定・scripts/ecoauc_cost.pyと同一式） =====
@@ -2488,7 +2689,7 @@ function renderInspect(){
   const TGT=isIOS()?'':' target="_blank" rel="noopener"';
 
   main.innerHTML=`
-    <div class="iv-header"><span class="iv-title">🔭 EcoAuc下見</span><span class="iv-meta">全${all.length}件 / 更新:${inspectData.updated_at||'-'}</span></div>
+    <div class="iv-header"><span class="iv-title">🔭 EcoAuc下見</span><span class="iv-meta">全${all.length}件 / 更新:${fresh(inspectData.updated_at)}${inspectData.updated_at||'-'}</span></div>
     <div class="iv-status-bar">${statusChips}</div>
     <div class="iv-filter">
       <div class="iv-fg"><div class="iv-fl">🏷 ブランド</div><div class="iv-chips">${brandChips||'<span style="font-size:11px;color:var(--muted2)">データなし</span>'}</div></div>
@@ -2570,18 +2771,18 @@ function renderInspect(){
         <div class="iv-calc-row" id="ins-calc-${it.item_no}"></div>
         ${it.item_no?(
           st==='pending'?`<div class="iv-judge-row">
-            <button class="iv-judge-btn go" id="ins-go-${it.item_no}" onclick="insJudge('${it.item_no}','go')">GO</button>
+            <button class="iv-judge-btn go" id="ins-go-${it.item_no}" onclick="goCheckPrompt('ins','${it.item_no}')">GO</button>
             <button class="iv-judge-btn skip" id="ins-skip-${it.item_no}" onclick="insSkipPrompt('${it.item_no}')">見送り</button>
           </div>`
           :st==='bidding'?`<div class="iv-judge-row">
             <button class="iv-judge-btn go done" disabled>🎯 入札中（GO済）</button>
             <button class="iv-judge-btn undo" onclick="insUndo('${it.item_no}')">↩ 戻す</button>
-          </div>`
+          </div>${biddingBlock('ins',it.item_no)}${resultBlock('ins',it.item_no)}`
           :(dec==='skip'?`<div class="iv-judge-row">
             <button class="iv-judge-btn skip done" disabled>見送り済 ✓${(decRec.reason_tags&&decRec.reason_tags.length)?'（'+decRec.reason_tags.join('・')+'）':''}</button>
             <button class="iv-judge-btn undo" onclick="insUndo('${it.item_no}')">↩ 戻す</button>
           </div>`
-          :`<div class="iv-judge-row"><button class="iv-judge-btn ended done" disabled>🔚 終了（処理済み）</button></div>`)
+          :`<div class="iv-judge-row"><button class="iv-judge-btn ended done" disabled>🔚 終了（処理済み）</button></div>${resultBlock('ins',it.item_no)}`)
         ):''}
         ${it.item_no?`<div class="ins-itemno"><span class="lbl">商品番号</span><span class="no">${it.item_no}</span></div>`:''}
         ${_ecoViewURL?`<a class="iv-merc" style="background:#1558b0" href="${_ecoViewURL}" target="_blank" rel="noopener">🔭 商品ページへ直行<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">EcoAuc下見</span></a>${_ecoSearchURL?`<a class="iv-merc-sub" href="${_ecoSearchURL}" target="_blank" rel="noopener">🔍 検索で開く（番号 ${it.product_no||it.item_no}）</a>`:''}`:(_ecoSearchURL?`<a class="iv-merc" style="background:#1558b0" href="${_ecoSearchURL}" target="_blank" rel="noopener">🔍 EcoAuc下見で探す<span style="font-size:9px;font-weight:500;margin-left:4px;opacity:.8">番号 ${it.product_no||it.item_no}</span></a>`:`<span class="iv-merc disabled">URL無し</span>`)}
