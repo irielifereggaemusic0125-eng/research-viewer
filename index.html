@@ -754,8 +754,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 17;
-const APP_VER_DATE = '2026-06-30';
+const APP_VER = 18;
+const APP_VER_DATE = '2026-07-02';
 
 // 全角数字→半角に正規化（金額入力・全角０-９やカンマ／円記号も許容）
 function toHalfWidthNum(s){ return (s||'').replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xFEE0)).replace(/[，､、]/g,','); }
@@ -852,7 +852,9 @@ let allData = {};
 let currentDate = '';
 let lotteryData = null;
 let lotCatFilter = 'all';
-let lotStatuses = {};  // id(name+deadline) → status override ('未応募'|'応募済')
+// id(name+deadline) → status override ('未応募'|'応募済')。v18: localStorage永続化（リロードで消えるバグ修正 2026-07-02）
+let lotStatuses = (()=>{try{return JSON.parse(localStorage.getItem('lot_statuses_v1')||'{}');}catch(e){return{};}})();
+function lotStatusesSave(){ localStorage.setItem('lot_statuses_v1', JSON.stringify(lotStatuses)); }
 let filters = { tier: 'all', alert: false, coherence: false, sort: 'tier', stock: 'all', showEnded: false };
 
 // 出品中判定: JSONのstatus='listed'を主・無ければ個別商品URL有無で代用
@@ -961,12 +963,15 @@ function isEnded(endStr) {
   return (end - new Date()) <= 0;
 }
 
-function getCouponInfo(endStr) {
+function getCouponInfo(endStr, price) {
   const end = parseEnd(endStr);
   if (!end || isNaN(end)) return null;
   const day = end.getDate();
   const dow = end.getDay(); // 0=日, 6=土
-  if (dow === 0 || dow === 6) return {cls:'gold', label:'🎟 ゴールドクーポン対象'};
+  if (dow === 0 || dow === 6) {
+    if (price != null && price < 50000) return {cls:'none', label:'クーポン対象外(ゴールドは¥5万以上)'};
+    return {cls:'gold', label:'🎟 ゴールドクーポン対象(要週末獲得)'};
+  }
   if (day === 5 || day === 15 || day === 25) return {cls:'day5', label:'🎟 5のつく日クーポン対象'};
   return {cls:'none', label:'クーポン対象外'};
 }
@@ -1116,7 +1121,7 @@ function render() {
         ${c.current_price!=null?`<div class="row"><span class="row-lbl">現在価格</span><span class="row-val">${yen(c.current_price)}</span></div>`:''}
         ${(()=>{
           if (!c.end||c.end==='—') return '';
-          const cpn = getCouponInfo(c.end);
+          const cpn = getCouponInfo(c.end, c.jissei || null);
           const cpnBadge = cpn ? `<span class="coupon-badge ${cpn.cls}">${cpn.label}</span>` : '';
           return `<div class="row"><span class="row-lbl">終了日時</span><span class="row-val ${hrs&&hrs<24?'red':''}">${c.end} ${cpnBadge}</span></div>`;
         })()}
@@ -1212,9 +1217,9 @@ function candUpdateCalc(key){
   if(!j&&!b){el.innerHTML='';return;}
   let html='';
   if(j&&b){
-    const profit=Math.round(j*0.9-b),ratio=Math.round(b/j*100);
+    const profit=candProfit(key,j,b),ratio=Math.round(b/j*100);
     const cls=profit>=0?'pos':'neg',sign=profit>=0?'+':'-';
-    html=`<span class="iv-calc-${cls}">粗利 ${sign}¥${Math.abs(profit).toLocaleString('ja-JP')}</span><span style="color:var(--line);margin:0 4px">·</span><span class="iv-calc-ratio">入札/実勢 ${ratio}%</span>`;
+    html=`<span class="iv-calc-${cls}">粗利 ${sign}¥${Math.abs(profit).toLocaleString('ja-JP')}<span style="font-size:9px;opacity:.75">(送料/手数料込)</span></span><span style="color:var(--line);margin:0 4px">·</span><span class="iv-calc-ratio">入札/実勢 ${ratio}%</span>`;
   }else if(j){ html=`<span class="iv-calc-pos">売値×0.9 = ¥${Math.round(j*0.9).toLocaleString('ja-JP')}</span>`; }
   else{ html=`<span class="iv-calc-ratio">入札 ¥${b.toLocaleString('ja-JP')}</span>`; }
   el.innerHTML=html;
@@ -1315,7 +1320,7 @@ async function candJudge(ck,decision,reasonOverride){
   const e=candEditsLoad()[ck]||{};
   const jissei=e.jissei||m.jissei||0;
   const bid=e.bid||m.shitene||0;
-  const profit=(jissei&&bid)?Math.round(jissei*0.9-bid):(m.profit||0);
+  const profit=(jissei&&bid)?candProfit(ck,jissei,bid):(m.profit||0);
   // 監視ID: ヤフオクはaucid（無ければck）。GOで auction_watch own_target に登録
   const watchId=m.aucid||ck;
   const reason=reasonOverride||(decision==='go'?`候補GO bid=¥${bid.toLocaleString('ja-JP')}`:'候補見送り');
@@ -1458,6 +1463,7 @@ function lotId(c){ return c.name+'|'+(c.deadline||''); }
 function toggleLotStatus(id){
   const cur=lotStatuses[id]||'未応募';
   lotStatuses[id]=cur==='未応募'?'応募済':'未応募';
+  lotStatusesSave();
   renderLottery();
 }
 function setLotCat(cat){
@@ -2178,7 +2184,7 @@ async function insJudge(itemNo,decision,reasonOverride){
   const e=(insEditsLoad()[itemNo])||{};
   const jissei=e.jissei||it.jissei||0;
   const bid=e.bid||0;
-  const profit=(jissei&&bid)?Math.round(jissei*0.9-bid):(it.profit||0);
+  const profit=(jissei&&bid)?ecoProfit(jissei,bid):(it.profit||0);
   const reason=reasonOverride||(decision==='go'?`下見GO bid=¥${bid.toLocaleString('ja-JP')}`:'下見見送り');
   const reason_tags=decision==='skip'?((window._pendingSkipTags&&window._pendingSkipTags.length)?window._pendingSkipTags.slice():insTagReason(reason)):[];
   window._pendingSkipTags=null;
@@ -2302,6 +2308,11 @@ function ecoRakusatsuTesuryo(p){ p=p||0; if(p<=10000)return 500; if(p<=49999)ret
 // 仕入総額：ツールの ecoBuyTotalCost と同じく税込落札・税込手数料を個別四捨五入して合算＋送料
 function ecoTotalCost(bid, shiireSouryo){ bid=bid||0; shiireSouryo=(shiireSouryo==null?ECO_SHIIRE_SOURYO:shiireSouryo); return Math.round(bid*1.1) + Math.round(ecoRakusatsuTesuryo(bid)*1.1) + shiireSouryo; }
 function ecoProfit(jissei, bid, furimaSouryo, shiireSouryo){ jissei=jissei||0; furimaSouryo=(furimaSouryo==null?FURIMA_SOURYO:furimaSouryo); return Math.round(jissei*0.9 - furimaSouryo - ecoTotalCost(bid, shiireSouryo)); }
+// v18: 候補タブの手入力粗利を実コスト込みに統一（楽観式 jissei*0.9-bid を廃止・2026-07-02）
+// ヤフオク仕入: 粗利 = 実勢×0.9(フリマ手数料) − フリマ送料700 − 梱包230 − 仕入送料1,200 − 入札額
+const YAHOO_SHIIRE_SOURYO=1200, KONPOU_HI=230;
+function yahooProfit(jissei,bid){ return Math.round((jissei||0)*0.9 - FURIMA_SOURYO - KONPOU_HI - YAHOO_SHIIRE_SOURYO - (bid||0)); }
+function candProfit(ck,jissei,bid){ const src=((candMeta[ck]||{}).source)||''; return /eco/i.test(src)? ecoProfit(jissei,bid) : yahooProfit(jissei,bid); }
 
 // ===== 下見タブ: 手入力実勢・入札額（localStorage永続） =====
 const INS_EDITS_KEY='ins_edits_v1';
