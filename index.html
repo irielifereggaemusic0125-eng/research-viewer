@@ -2370,7 +2370,9 @@ function jisseiAge(c){
   if(days>14) return `<span class="ja-old">実勢${days}日前⚠</span>`;
   return `<span class="ja-ok">実勢${days}日前</span>`;
 }
-function fresh(dt){ if(!dt)return''; const d=new Date(String(dt).replace(' ','T')); if(isNaN(d))return'';
+function fresh(dt){ if(!dt)return'';
+  const m=String(dt).match(/20\d{2}-\d{2}-\d{2}([T ]\d{2}:\d{2})?/); if(!m)return'';
+  const d=new Date(m[0].replace(' ','T')); if(isNaN(d))return'';
   const days=(Date.now()-d.getTime())/864e5; const c=days<=1.2?'g':(days<=3?'y':'r');
   return `<span class="fr-dot fr-${c}" title="${Math.floor(days)}日前のデータ"></span>`; }
 
