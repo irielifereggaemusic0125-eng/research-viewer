@@ -855,13 +855,13 @@ function newTagBadge(name, rank){
 // ===== 📷 商品サムネイル（thumbsブランチ・raw配信／aucid・item_no・mercari_idキー） =====
 // ホットリンク不可(EcoAuc認証/終了で画像URL消失)→圧縮サムネをリポジトリ保存し<img>表示
 const THUMB_BASE = 'https://raw.githubusercontent.com/irielifereggaemusic0125-eng/research-viewer/thumbs/';
-function _thumbImg(key, href){
-  if(!key) return '';
-  const src = THUMB_BASE + key + '.jpg';
+function _thumbImg(key, href, directSrc){
+  if(!key && !directSrc) return '';
+  const src = directSrc || (THUMB_BASE + key + '.jpg');
   const oc = href ? `onclick="event.stopPropagation();window.open('${href}','_blank')"` : '';
-  return `<img class="card-thumb" loading="lazy" src="${src}" alt="" ${oc} onerror="this.classList.add('thumb-missing')">`;
+  return `<img class="card-thumb" loading="lazy" referrerpolicy="no-referrer" src="${src}" alt="" ${oc} onerror="this.classList.add('thumb-missing')">`;
 }
-function candThumb(c){ return _thumbImg(c.aucid?('y_'+c.aucid):'', c.url); }
+function candThumb(c){ return _thumbImg(c.aucid?('y_'+c.aucid):'', c.url, c.img||''); }  // v20: スイープ直取り画像URL優先(thumbsブランチ生成不要)
 function insThumb(it){ const k=(it.item_no||'').replace(/[^0-9_]/g,''); return _thumbImg(k?('e_'+k):'', it.view_url||''); }
 function ivThumb(it){ return _thumbImg(it.mercari_id?('m_'+it.mercari_id):'', it.mercari_id?('https://jp.mercari.com/item/'+it.mercari_id):''); }
 
