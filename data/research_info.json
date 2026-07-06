@@ -1,21 +1,9 @@
 {
-  "updated_at": "2026-06-30 08:22",
-  "count": 27,
+  "updated_at": "2026-07-07 04:31",
+  "count": 24,
   "items": {
-    "W015-251028": {
-      "recommend_min": 66200
-    },
     "A020-251102": {
       "recommend_min": 44800
-    },
-    "A021-251107": {
-      "recommend_min": 19800
-    },
-    "W025-251120": {
-      "recommend_min": 16400
-    },
-    "W029-251127": {
-      "recommend_min": 15200
     },
     "W044-251223": {
       "recommend_min": 107500
@@ -38,9 +26,6 @@
     "W067-260309": {
       "recommend_min": 55200
     },
-    "A068-260309": {
-      "recommend_min": 57500
-    },
     "B069-260318": {
       "recommend_min": 16800
     },
@@ -56,14 +41,8 @@
     "B075-260330": {
       "recommend_min": 9500
     },
-    "B079-260415": {
-      "recommend_min": 25600
-    },
     "O080-260420": {
       "recommend_min": 18000
-    },
-    "B081-260420": {
-      "recommend_min": 29600
     },
     "B086-260426": {
       "recommend_min": 27500
@@ -73,14 +52,6 @@
       "won_price": 29910,
       "go_reason": "落札(シート吸出 2026/6/10) 仕入¥29,910",
       "recommend_min": 39600
-    },
-    "W098-260612": {
-      "jissei": 15000,
-      "bid": 12975,
-      "won_price": 12975,
-      "go_reason": "落札(シート吸出 2026/6/12) 仕入¥12,975",
-      "recommend_min": 20800,
-      "profit_at_jissei": -175
     },
     "W099-260612": {
       "bid": 12975,
@@ -96,6 +67,33 @@
     },
     "B101-260616": {
       "recommend_min": 22300
+    },
+    "B102-260621": {
+      "recommend_min": 75500
+    },
+    "A103-260623": {
+      "jissei": 90000,
+      "bid": 51000,
+      "won_price": 51000,
+      "recommend_min": 71200,
+      "profit_at_jissei": 22000
+    },
+    "A104-260627": {
+      "jissei": 130000,
+      "bid": 77000,
+      "won_price": 77000,
+      "go_reason": "落札(シート吸出 2026/6/27) 仕入¥86,900",
+      "recommend_min": 102900,
+      "profit_at_jissei": 29400
+    },
+    "A105-260629": {
+      "bid": 10357,
+      "won_price": 10357,
+      "go_reason": "落札(シート吸出 2026/6/29) 仕入¥10,357",
+      "recommend_min": 17900
+    },
+    "O106-260704": {
+      "recommend_min": 12400
     }
   }
 }
