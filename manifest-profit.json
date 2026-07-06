@@ -1,0 +1,16 @@
+{
+  "name": "Banshee 利益計算ツール",
+  "short_name": "利益計算",
+  "description": "ヤフオク・エコオク・店舗仕入れ対応 利益計算ツール",
+  "start_url": "./profit_calculator.html",
+  "scope": "./profit_calculator.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f2f2f0",
+  "theme_color": "#f2f2f0",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
