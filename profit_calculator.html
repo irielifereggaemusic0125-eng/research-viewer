@@ -252,6 +252,7 @@ body {
       <div class="seg">
         <button class="seg-btn on" id="buy-yahoo" onclick="setBuy('yahoo')">ヤフオク</button>
         <button class="seg-btn"   id="buy-eco"   onclick="setBuy('eco')">エコオク</button>
+        <button class="seg-btn"   id="buy-store" onclick="setBuy('store')">店舗</button>
       </div>
       <div class="info-pill" id="buy-hint">
         <span class="ico">ℹ️</span>
@@ -308,7 +309,7 @@ body {
       </div>
     </div>
 
-    <div class="irow">
+    <div class="irow" id="buyship-row">
       <div class="ilabel">
         仕入れ時送料
         <span class="ilabel-sub">仕入れ先からの送料</span>
@@ -354,8 +355,28 @@ body {
     </div>
   </div>
 
+  <!-- 店舗クイック判定（店舗モード時のみ・仕入れ値/販売価格/利益を大きく優先表示） -->
+  <div class="card hidden" id="store-quick">
+    <div class="card-hd">店舗クイック判定（税込）</div>
+    <div style="display:flex;gap:10px;margin-bottom:10px;">
+      <div style="flex:1;background:var(--bg);border-radius:12px;padding:11px 8px;text-align:center;">
+        <div style="font-size:10px;color:var(--text3);margin-bottom:4px;">仕入れ値（税込）</div>
+        <div style="font-size:20px;font-weight:700;color:var(--text);" id="sq-cost">¥—</div>
+      </div>
+      <div style="flex:1;background:var(--bg);border-radius:12px;padding:11px 8px;text-align:center;">
+        <div style="font-size:10px;color:var(--text3);margin-bottom:4px;">販売価格</div>
+        <div style="font-size:20px;font-weight:700;color:var(--text);" id="sq-price">¥—</div>
+      </div>
+    </div>
+    <div style="text-align:center;padding:16px 0 12px;background:var(--bg);border-radius:12px;">
+      <div style="font-size:11px;color:var(--text2);margin-bottom:5px;letter-spacing:.06em;font-weight:600;">利益</div>
+      <div id="sq-profit" style="font-size:40px;font-weight:700;line-height:1;color:var(--text);">¥—</div>
+      <div id="sq-rate" style="font-size:15px;font-weight:600;color:var(--text3);margin-top:5px;">— %</div>
+    </div>
+  </div>
+
   <!-- ③ 理想の仕入れ上限（販売価格から逆算） -->
-  <div class="pricebox">
+  <div class="pricebox" id="ideal-buy-box">
     <div class="pricebox-hd">理想の仕入れ上限価格</div>
     <div class="pgrid">
       <div class="pitem g" onclick="copyPval('i-20')">
@@ -617,6 +638,7 @@ function getEcoShip() {
   return buyC === 'eco' ? (parseFloat($('eco-ship').value) || 0) : 0;
 }
 function getBuyShip() {
+  if (buyC === 'store') return 0;   // 店舗：仕入れ送料なし
   return parseFloat($('buy-ship').value) || 0;
 }
 
@@ -657,6 +679,10 @@ function calcMaxCost(price, extra, ship, target) {
   const ecoShip = getEcoShip(), buyShip = getBuyShip(), coupon = getCoupon();
   const budget = price - extra - ship - ecoShip - buyShip - getSellFee(price) - target + coupon;
   if (budget <= 0) return null;
+  if (buyC === 'store') {
+    const m = Math.floor(budget);   // 店舗：手数料なしso予算がそのまま仕入れ上限
+    return m > 0 ? m : null;
+  }
   if (buyC === 'yahoo') {
     const m = Math.floor(budget / 1.088);
     return m > 0 ? m : null;
@@ -687,13 +713,20 @@ function setBuy(c) {
   buyC = c;
   $('buy-yahoo').className = 'seg-btn' + (c === 'yahoo' ? ' on' : '');
   $('buy-eco').className   = 'seg-btn' + (c === 'eco'   ? ' on' : '');
+  $('buy-store').className = 'seg-btn' + (c === 'store' ? ' on' : '');
   c === 'eco' ? show('eco-buy-info') : hide('eco-buy-info');
-  $('buy-hint').innerHTML = c === 'yahoo'
-    ? '<span class="ico">ℹ️</span><span>プレミアム会員　<b>落札手数料 8.8%</b></span>'
-    : '<span class="ico">⚠️</span><span><span class="eco-tag">税抜表示</span>入札金額は税抜で表示<br>実払い = 落札額×1.1 ＋ 手数料×1.1</span>';
-  $('cost-sub').style.display = c === 'eco' ? 'block' : 'none';
+  if (c === 'yahoo') {
+    $('buy-hint').innerHTML = '<span class="ico">ℹ️</span><span>プレミアム会員　<b>落札手数料 8.8%</b></span>';
+  } else if (c === 'eco') {
+    $('buy-hint').innerHTML = '<span class="ico">⚠️</span><span><span class="eco-tag">税抜表示</span>入札金額は税抜で表示<br>実払い = 落札額×1.1 ＋ 手数料×1.1</span>';
+  } else {
+    $('buy-hint').innerHTML = '<span class="ico">🏬</span><span><b>仕入れ手数料なし・仕入れ送料なし</b>（税込価格をそのまま入力）</span>';
+  }
+  $('cost-sub').textContent = c === 'eco' ? 'エコオク：税抜金額を入力' : (c === 'store' ? '店舗：税込価格（支払額）を入力' : '');
+  $('cost-sub').style.display = (c === 'eco' || c === 'store') ? 'block' : 'none';
   c === 'eco' ? show('eco-ship-row') : hide('eco-ship-row');
   c === 'yahoo' ? show('coupon-row') : hide('coupon-row');
+  c === 'store' ? hide('buyship-row') : show('buyship-row');
   saveSettings(); calc();
 }
 function setSell(c) {
@@ -734,12 +767,23 @@ function calc() {
   // 販売先エコオク：ハイライト
   if (sellC === 'eco' && price > 0) hlSell(price);
 
-  // ── 販売価格あり → 理想仕入れ上限を逆算 ──
-  if (price > 0) {
+  // 店舗モード：仕入れ値/販売価格/利益を優先表示する専用パネルに切替え、
+  // 「理想の仕入れ上限」ボックス（販売価格からの逆算）は店舗では使わないので隠す。
+  const isStore = (buyC === 'store');
+  isStore ? hide('ideal-buy-box') : show('ideal-buy-box');
+  isStore ? show('store-quick') : hide('store-quick');
+
+  // ── 販売価格あり → 理想仕入れ上限を逆算（店舗モードでは不要のためスキップ） ──
+  if (price > 0 && !isStore) {
     const p20 = price * 0.20, p15 = price * 0.15;
     setIdealBuy('i-20', 'i-20-hint', 'i-20-profit', null,    calcMaxCost(price, extra, ship, p20), price, p20);
     setIdealBuy('i-15', 'i-15-hint', 'i-15-profit', null,    calcMaxCost(price, extra, ship, p15), price, p15);
     setIdealBuy('i-5k', 'i-5k-hint', null,           'i-5k-rate', calcMaxCost(price, extra, ship, 5000), price, 5000);
+  }
+
+  if (isStore) {
+    $('sq-cost').textContent  = (costInput !== null && costInput > 0) ? fmt(costInput) : '¥—';
+    $('sq-price').textContent = price > 0 ? fmt(price) : '¥—';
   }
 
   // ── 仕入れ価格あり → 理想出品価格を逆算 ──
@@ -753,6 +797,9 @@ function calc() {
       $('ec-fee').textContent     = fmt(taxedFee);
       $('ec-total-buy').textContent = fmt(total);
       hlBuy(costInput);
+    } else if (buyC === 'store') {
+      totalBuy = costInput;   // 店舗：税込価格そのまま・手数料なし
+      hide('eco-cost-detail');
     } else {
       const coupon = getCoupon();
       totalBuy = Math.max(0, costInput * 1.088 - coupon);
@@ -822,6 +869,14 @@ function calc() {
       $('r-ok').textContent     = any ? 'OK' : 'NG';
       $('r-ok').className       = 'result-badge ' + (any ? 'ok' : 'ng');
 
+      // 店舗クイック判定パネルにも同じ利益額・利益率を反映（大表示）
+      if (isStore) {
+        $('sq-profit').textContent = fmt(profit);
+        $('sq-profit').style.color = color;
+        $('sq-rate').textContent   = rate.toFixed(1) + '%';
+        $('sq-rate').style.color   = color;
+      }
+
       const b = $('banner');
       if (profit < 0) {
         b.textContent = '赤字です。仕入れ価格を下げてください。'; b.className = 'banner ng';
@@ -845,6 +900,7 @@ function calc() {
       // 仕入れのみ：内訳・結果は非表示（エコオク内訳は残す）
       hide('breakdown-card');
       hide('result-card');
+      if (isStore) { $('sq-profit').textContent = '¥—'; $('sq-profit').style.color = ''; $('sq-rate').textContent = '— %'; $('sq-rate').style.color = ''; }
     }
   } else {
     // 仕入れ価格なし：全て非表示
@@ -852,6 +908,10 @@ function calc() {
     hide('breakdown-card');
     hide('result-card');
     hide('price-box');
+    if (isStore) {
+      $('sq-cost').textContent = '¥—'; $('sq-price').textContent = price > 0 ? fmt(price) : '¥—';
+      $('sq-profit').textContent = '¥—'; $('sq-profit').style.color = ''; $('sq-rate').textContent = '— %'; $('sq-rate').style.color = '';
+    }
   }
 }
 
