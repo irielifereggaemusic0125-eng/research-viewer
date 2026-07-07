@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-07-05 19:34",
- "count": 24,
+ "updated_at": "2026-07-07 20:31",
+ "count": 22,
  "items": [
   {
    "kanri_no": "A020-251102",
@@ -12,7 +12,7 @@
    "souryo": 210,
    "list_price": 49458,
    "actual_price": 38850,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m64763668776",
    "ecoauc_listed": false
   },
@@ -26,7 +26,7 @@
    "souryo": 450,
    "list_price": 130072,
    "actual_price": 104000,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m72868581689",
    "ecoauc_listed": false
   },
@@ -40,7 +40,7 @@
    "souryo": 450,
    "list_price": 24915,
    "actual_price": 19300,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m67488304729",
    "ecoauc_listed": false
   },
@@ -54,7 +54,7 @@
    "souryo": 210,
    "list_price": 9735,
    "actual_price": 8200,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m31026593889",
    "ecoauc_listed": false
   },
@@ -68,7 +68,7 @@
    "souryo": 210,
    "list_price": 10668,
    "actual_price": 9000,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m23267334607",
    "ecoauc_listed": false
   },
@@ -82,7 +82,7 @@
    "souryo": 450,
    "list_price": 22100,
    "actual_price": 19000,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m44671397801",
    "ecoauc_listed": false
   },
@@ -96,7 +96,7 @@
    "souryo": 450,
    "list_price": 21473,
    "actual_price": 19500,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m46609658871",
    "ecoauc_listed": false
   },
@@ -110,7 +110,7 @@
    "souryo": 210,
    "list_price": 62929,
    "actual_price": 57700,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m43888809262",
    "ecoauc_listed": false
   },
@@ -124,7 +124,7 @@
    "souryo": 450,
    "list_price": 13458,
    "actual_price": 10950,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m69800140282",
    "ecoauc_listed": false
   },
@@ -138,7 +138,7 @@
    "souryo": 450,
    "list_price": 26172,
    "actual_price": 24200,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m81094010708",
    "ecoauc_listed": false
   },
@@ -152,7 +152,7 @@
    "souryo": 450,
    "list_price": 21315,
    "actual_price": 19900,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m10615810993",
    "ecoauc_listed": false
   },
@@ -166,7 +166,7 @@
    "souryo": 210,
    "list_price": 18959,
    "actual_price": 14500,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m39351376813",
    "ecoauc_listed": false
   },
@@ -180,22 +180,8 @@
    "souryo": 750,
    "list_price": 4152,
    "actual_price": 3200,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m35850667014",
-   "ecoauc_listed": false
-  },
-  {
-   "kanri_no": "O080-260420",
-   "name": "HERMES エルメス アジェンダ オーストリッチ 手帳カバー ブラウン 本革",
-   "category": "その他",
-   "buy_date": "2026-04-20",
-   "buy_price": 10450,
-   "loss_cut": 12170,
-   "souryo": 210,
-   "list_price": null,
-   "actual_price": 12170,
-   "price_updated_at": "2026-07-05 19:34",
-   "mercari_id": "m33367126612",
    "ecoauc_listed": false
   },
   {
@@ -208,7 +194,7 @@
    "souryo": 1150,
    "list_price": null,
    "actual_price": 24300,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m85514902738",
    "ecoauc_listed": false
   },
@@ -235,8 +221,8 @@
    "loss_cut": 14980,
    "souryo": 450,
    "list_price": null,
-   "actual_price": 17500,
-   "price_updated_at": "2026-07-05 19:34",
+   "actual_price": 16400,
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m70818868442",
    "ecoauc_listed": false
   },
@@ -250,7 +236,7 @@
    "souryo": 210,
    "list_price": null,
    "actual_price": 24000,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m33956111754",
    "ecoauc_listed": false
   },
@@ -264,7 +250,7 @@
    "souryo": 750,
    "list_price": null,
    "actual_price": 23300,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m71535991913",
    "ecoauc_listed": false
   },
@@ -277,8 +263,8 @@
    "loss_cut": 69670,
    "souryo": 1150,
    "list_price": null,
-   "actual_price": 81400,
-   "price_updated_at": "2026-07-05 19:34",
+   "actual_price": 78400,
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m63193304012",
    "ecoauc_listed": false
   },
@@ -292,7 +278,7 @@
    "souryo": 210,
    "list_price": null,
    "actual_price": 85400,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m44728476306",
    "ecoauc_listed": false
   },
@@ -306,7 +292,7 @@
    "souryo": 210,
    "list_price": null,
    "actual_price": 137500,
-   "price_updated_at": "2026-07-05 19:34",
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m70751428386",
    "ecoauc_listed": false
   },
@@ -319,23 +305,9 @@
    "loss_cut": 12070,
    "souryo": 210,
    "list_price": null,
-   "actual_price": 21300,
-   "price_updated_at": "2026-07-05 19:34",
+   "actual_price": 19900,
+   "price_updated_at": "2026-07-07 20:31",
    "mercari_id": "m12337351246",
-   "ecoauc_listed": false
-  },
-  {
-   "kanri_no": "O106-260704",
-   "name": "THE NORTH FACE GAR NR12665　 L グレーストライプ",
-   "category": "その他",
-   "buy_date": "2026-07-04",
-   "buy_price": 5390,
-   "loss_cut": 6550,
-   "souryo": null,
-   "list_price": null,
-   "actual_price": null,
-   "price_updated_at": "",
-   "mercari_id": "",
    "ecoauc_listed": false
   }
  ]
