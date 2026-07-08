@@ -1,127 +1,78 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-08T21:33:00+09:00",
+  "updated_at": "2026-07-09T05:10:20+09:00",
   "candidates": [
     {
-      "name": "ポケカ ストームエメラルダ BOX",
-      "brand": "Pokemon",
+      "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
+      "brand": "ポケモン",
       "category": "トレカ",
-      "price": 0,
+      "price": 7200,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "未確定",
+      "premium_level": "未確定(発売前)",
       "profit_max": 0,
-      "best_route": "",
-      "phase": "受付中",
-      "deadline": "2026-07-12T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "イオン九州(iAEONアプリ)",
-          "url": "https://nyuka-now.com/archives/2459",
-          "phase": "受付中",
-          "entry_open": "2026-07-04T00:00:00+09:00",
-          "entry_deadline": "2026-07-12T23:59:00+09:00",
-          "result_date": "2026-07-30T12:00:00+09:00",
-          "order_deadline": "",
-          "note": "発売前抽選"
-        },
-        {
-          "store": "フルコンプ一部店舗",
-          "url": "https://livepocket.jp/e/eu9i_",
-          "phase": "受付中",
-          "entry_open": "2026-07-03T13:00:00+09:00",
-          "entry_deadline": "2026-07-17T12:00:00+09:00",
-          "result_date": "2026-07-23T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "発売前抽選"
-        },
-        {
-          "store": "シーガル各店",
-          "url": "https://nyuka-now.com/archives/2459",
-          "phase": "受付中",
-          "entry_open": "2026-07-04T10:00:00+09:00",
-          "entry_deadline": "2026-07-20T20:00:00+09:00",
-          "result_date": "2026-07-24T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "会員限定・発売前抽選"
-        }
-      ],
-      "note": "拡張パック・2026-07-31発売(発売前so実売相場未確定・粗利判定保留)。応募はノーリスクso受付中を追跡。発売後にメルカリ未開封BOX売切で粗利算定へ切替"
-    },
-    {
-      "name": "ポケカ 30th CELEBRATION 30周年記念",
-      "brand": "Pokemon",
-      "category": "トレカ",
-      "price": 0,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "未確定",
-      "profit_max": 0,
-      "best_route": "",
+      "best_route": "発売後に判定(25周年前例¥5,500→¥20,000+)",
       "phase": "受付中",
       "deadline": "2026-07-15T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "あみあみ",
-          "url": "https://form.amiami.jp/draw20260702",
-          "phase": "案内待ち",
-          "entry_open": "2026-07-02T10:00:00+09:00",
-          "entry_deadline": "2026-07-07T13:59:00+09:00",
-          "result_date": "2026-07-09T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "拡張/プレミアムデッキ/カードセット各種・発売前抽選 (7/7 13:59締切→案内待ち・発表7/9)"
-        },
-        {
           "store": "セブンネットショッピング",
-          "url": "https://7net.omni7.jp/general/sp/000000app",
+          "url": "https://www.7net.omni7.jp/",
           "phase": "受付中",
           "entry_open": "2026-06-30T00:00:00+09:00",
           "entry_deadline": "2026-07-15T23:59:00+09:00",
           "result_date": "2026-07-24T19:00:00+09:00",
           "order_deadline": "",
-          "note": "拡張パック30th CELEBRATION(¥7,200)/プレミアムデッキ エーフィ・ブラッキー(¥6,200)。応募条件=2025/6/1〜2026/6/14にセブンネットで税抜1円以上注文&受取履歴。受付中〜7/15 23:59"
+          "note": "要セブンネット購入歴(2025/6/1-2026/6/14)"
         },
         {
-          "store": "Amazon(招待リクエスト)",
-          "url": "https://www.amazon.co.jp/",
-          "phase": "受付中",
+          "store": "あみあみ",
+          "url": "https://www.amiami.jp/",
+          "phase": "終了",
+          "entry_open": "2026-07-02T00:00:00+09:00",
+          "entry_deadline": "2026-07-07T13:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "受付終了"
+        },
+        {
+          "store": "ポケモンセンターオンライン",
+          "url": "https://www.pokemoncenter-online.com/",
+          "phase": "予告",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "招待リクエスト制・抽選継続中"
+          "note": "7月中に日程発表予定・毎晩監視"
+        },
+        {
+          "store": "Amazon",
+          "url": "https://www.amazon.co.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-06-02T14:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "招待リクエスト常時受付"
         }
       ],
-      "note": "★名指しWATCH(爆益候補)。ポケカ初世界同時発売9/16・MEGA拡張・新レアFUR・1BOX定価≈¥7,200。【7/8更新】あみあみ7/7締切(発表7/9)。セブンネット受付中〜7/15 23:59(要購入履歴)・Amazon招待リクエスト継続。発売前so相場判定保留・応募はノーリスクso見つけ次第通知。25th前例(¥5,500→ピーク¥20,000+)=上振れ期待"
+      "note": "9/16世界同時発売・発売前は検知任務(粗利判定保留)・応募ノーリスク"
     },
     {
       "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
       "price": 211800,
-      "jissei": 289400,
-      "premium_rate": 1.37,
-      "premium_level": "中",
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "要再検証(7/1値上げ改定)",
       "profit_max": 56800,
-      "best_route": "るでや買取",
+      "best_route": "るでや買取(改定前実績・現在値要確認)",
       "phase": "受付中",
       "deadline": "2026-07-25T23:59:00+09:00",
       "status": "未応募",
       "routes": [
-        {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
-          "phase": "注文中",
-          "entry_open": "2026-07-03T12:00:00+09:00",
-          "entry_deadline": "2026-07-06T12:00:00+09:00",
-          "result_date": "2026-07-14(1次)/2026-07-21(2次)",
-          "order_deadline": "2026-07-16T23:59:00+09:00",
-          "note": "エントリー7/6正午締切済→当選発表開始(本日7/8〜)。1次当選は購入手続き7/16 23:59まで、2次当選7/21→購入7/23 23:59。出荷7/22〜7/31。HDFは1次注文7/10〜7/13/2次7/17〜7/21。応募済なら当選メール確認を",
-          "product_url": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
-          "method": "抽選販売(先着でない)"
-        },
         {
           "store": "GR SPACE TOKYO",
           "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
@@ -130,128 +81,20 @@
           "entry_deadline": "2026-07-25T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "GR IV/HDF 店頭抽選〜7/25受付中・事前来店本人確認要(東京・渡航前提だと来店難)"
-        }
-      ],
-      "note": "★常設WATCH最優先。定価¥211,800税込・Mercari個人売切中央¥289,400・プレ値1.37倍・るでや買取利益+¥56,800(ノーリスク)。【7/8夜更新】リコイメストアはエントリー締切済→当選発表フェーズ(応募済なら当選メール確認・1次購入〜7/16)。GR SPACE TOKYO店頭抽選が〜7/25受付中(来店本人確認要)。tenbaiquest確認=リコイメストア7/3正午に一部再販売開始/旧GR IIIも一部同時"
-    },
-    {
-      "name": "アサシンクリード ブラックフラッグ RE:シンクロ コレクターズED",
-      "brand": "Ubisoft",
-      "category": "ゲーム",
-      "price": 27940,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "未確定",
-      "profit_max": 0,
-      "best_route": "",
-      "phase": "予告",
-      "deadline": "2026-07-09T00:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "UBISOFT SHOP(エビテン/カドスト)",
-          "url": "https://www.ubisoft.com/ja-jp/game/assassins-creed/black-flag-resynced/collectors-edition",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "数量限定予約・エドワードフィギュア同梱・PS5"
-        }
-      ],
-      "note": "PS5・数量限定CE¥27,940・2026-07-09発売(明日)。エドワードのフィギュア同梱=伸びやすい型。4月開始の数量限定予約(現在ほぼ完売想定)・現行の新規抽選導線なし。発売後に実売でメルカリ検証し粗利¥3k超なら通知へ切替(現時点は相場未確定)"
-    },
-    {
-      "name": "ポケカ MEGAドリームex BOX",
-      "brand": "Pokemon",
-      "category": "トレカ",
-      "price": 5500,
-      "jissei": 14000,
-      "premium_rate": 2.55,
-      "premium_level": "高",
-      "profit_max": 7000,
-      "best_route": "るでや買取(保守)",
-      "phase": "案内待ち",
-      "deadline": "2026-07-05T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ホビーサーチ(1999.co.jp)",
-          "url": "https://www.1999.co.jp/list/3352/7/1",
-          "phase": "案内待ち",
-          "entry_open": "2026-07-03T17:00:00+09:00",
-          "entry_deadline": "2026-07-05T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "WEB抽選・アビスアイと同時・本日締切"
-        }
-      ],
-      "note": "S&Vハイクラスパック・定価¥5,500。メルカリBOX¥16,000(6月)→下降中・買取¥12,500(7/2)。保守粗利=買取¥12,500-定価≈¥7,000。5月¥18,000→下降トレンドso当選後は早期売却推奨。当たりメガゲンガーex SAR約¥75,000 【7/8更新】WEB抽選7/5締切→案内待ち"
-    },
-    {
-      "name": "ポケカ アビスアイ BOX",
-      "brand": "Pokemon",
-      "category": "トレカ",
-      "price": 5500,
-      "jissei": 10500,
-      "premium_rate": 1.91,
-      "premium_level": "中",
-      "profit_max": 3600,
-      "best_route": "るでや買取(保守)",
-      "phase": "案内待ち",
-      "deadline": "2026-07-05T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ホビーサーチ(1999.co.jp)",
-          "url": "https://www.1999.co.jp/list/3352/7/1",
-          "phase": "案内待ち",
-          "entry_open": "2026-07-03T17:00:00+09:00",
-          "entry_deadline": "2026-07-05T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "WEB抽選・MEGAドリームexと同時・本日締切"
-        }
-      ],
-      "note": "⚠️薄利注意。5/22発売・強化拡張パック。フリマ¥10,000-12,000(6/19)→再販増で下落中・買取シュリンクあり¥9,133/なし¥6,797。保守粗利=買取¥9,133-定価≈¥3,600(ギリ¥3k超・下落リスク大)。応募は任意 【7/8更新】WEB抽選7/5締切→案内待ち"
-    },
-    {
-      "name": "ワンピースカード 決戦の刻 OP-16 BOX",
-      "brand": "BANDAI",
-      "category": "トレカ",
-      "price": 5280,
-      "jissei": 16000,
-      "premium_rate": 3.03,
-      "premium_level": "高",
-      "profit_max": 8520,
-      "best_route": "メルカリ/るでや買取",
-      "phase": "案内待ち",
-      "deadline": "2026-07-10T00:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ドラゴンスター通販",
-          "url": "https://dorasuta.membercard.jp/lottery",
-          "phase": "案内待ち",
-          "entry_open": "2026-07-03T22:00:00+09:00",
-          "entry_deadline": "2026-07-05T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "WEB抽選・本日締切"
+          "note": "来店販売・事前本人確認要・東京店頭のみ"
         },
         {
-          "store": "イエローサブマリン各店",
-          "url": "https://nyuka-now.com/archives/97393",
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
           "phase": "案内待ち",
-          "entry_open": "2026-07-04T10:00:00+09:00",
-          "entry_deadline": "2026-07-07T20:00:00+09:00",
-          "result_date": "2026-07-10T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "店頭抽選"
+          "entry_open": "2026-07-03T12:00:00+09:00",
+          "entry_deadline": "2026-07-06T12:00:00+09:00",
+          "result_date": "2026-07-14T00:00:00+09:00",
+          "order_deadline": "2026-07-16T23:59:00+09:00",
+          "note": "1次発表7/14・2次発表7/21(注文〜7/23)"
         }
       ],
-      "note": "5/30発売・未開封BOXフリマ¥16,000/買取¥14,300(7/1)。粗利メルカリ¥16,000×0.9-送料-定価≈¥8,520/買取¥14,300-定価≈¥9,020。発売5週経過で徐々に軟化so当選後は早期売却推奨。当たりは海軍三大将コミパラ(¥40万超) 【7/8更新】各抽選(ドラスタ7/5・イエサブ7/7)締切→案内待ち(イエサブ発表7/10)。粗利¥8,520は維持(未開封BOXフリマ¥16,000/買取¥14,300)"
+      "note": "GR IV HDF発表7/10・Monochrome発表7/8も進行中"
     }
   ]
 }
