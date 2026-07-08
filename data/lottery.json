@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-08T04:29:44+09:00",
+  "updated_at": "2026-07-08T21:33:00+09:00",
   "candidates": [
     {
       "name": "ポケカ ストームエメラルダ BOX",
@@ -95,6 +95,45 @@
         }
       ],
       "note": "★名指しWATCH(爆益候補)。ポケカ初世界同時発売9/16・MEGA拡張・新レアFUR・1BOX定価≈¥7,200。【7/8更新】あみあみ7/7締切(発表7/9)。セブンネット受付中〜7/15 23:59(要購入履歴)・Amazon招待リクエスト継続。発売前so相場判定保留・応募はノーリスクso見つけ次第通知。25th前例(¥5,500→ピーク¥20,000+)=上振れ期待"
+    },
+    {
+      "name": "RICOH GR IV",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 211800,
+      "jissei": 289400,
+      "premium_rate": 1.37,
+      "premium_level": "中",
+      "profit_max": 56800,
+      "best_route": "るでや買取",
+      "phase": "受付中",
+      "deadline": "2026-07-25T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
+          "phase": "注文中",
+          "entry_open": "2026-07-03T12:00:00+09:00",
+          "entry_deadline": "2026-07-06T12:00:00+09:00",
+          "result_date": "2026-07-14(1次)/2026-07-21(2次)",
+          "order_deadline": "2026-07-16T23:59:00+09:00",
+          "note": "エントリー7/6正午締切済→当選発表開始(本日7/8〜)。1次当選は購入手続き7/16 23:59まで、2次当選7/21→購入7/23 23:59。出荷7/22〜7/31。HDFは1次注文7/10〜7/13/2次7/17〜7/21。応募済なら当選メール確認を",
+          "product_url": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
+          "method": "抽選販売(先着でない)"
+        },
+        {
+          "store": "GR SPACE TOKYO",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-25T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "GR IV/HDF 店頭抽選〜7/25受付中・事前来店本人確認要(東京・渡航前提だと来店難)"
+        }
+      ],
+      "note": "★常設WATCH最優先。定価¥211,800税込・Mercari個人売切中央¥289,400・プレ値1.37倍・るでや買取利益+¥56,800(ノーリスク)。【7/8夜更新】リコイメストアはエントリー締切済→当選発表フェーズ(応募済なら当選メール確認・1次購入〜7/16)。GR SPACE TOKYO店頭抽選が〜7/25受付中(来店本人確認要)。tenbaiquest確認=リコイメストア7/3正午に一部再販売開始/旧GR IIIも一部同時"
     },
     {
       "name": "アサシンクリード ブラックフラッグ RE:シンクロ コレクターズED",
@@ -213,45 +252,6 @@
         }
       ],
       "note": "5/30発売・未開封BOXフリマ¥16,000/買取¥14,300(7/1)。粗利メルカリ¥16,000×0.9-送料-定価≈¥8,520/買取¥14,300-定価≈¥9,020。発売5週経過で徐々に軟化so当選後は早期売却推奨。当たりは海軍三大将コミパラ(¥40万超) 【7/8更新】各抽選(ドラスタ7/5・イエサブ7/7)締切→案内待ち(イエサブ発表7/10)。粗利¥8,520は維持(未開封BOXフリマ¥16,000/買取¥14,300)"
-    },
-    {
-      "name": "RICOH GR IV",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 211800,
-      "jissei": 289400,
-      "premium_rate": 1.37,
-      "premium_level": "中",
-      "profit_max": 56800,
-      "best_route": "るでや買取",
-      "phase": "案内待ち",
-      "deadline": "2026-07-16T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
-          "phase": "案内待ち",
-          "entry_open": "2026-07-03T12:00:00+09:00",
-          "entry_deadline": "2026-07-06T12:00:00+09:00",
-          "result_date": "2026-07-14(1次)/2026-07-21(2次)",
-          "order_deadline": "2026-07-16T23:59:00+09:00",
-          "note": "★受付中(7/3正午〜7/6正午締切・7/5 06:40公式X再確認済)。抽選方式(先着でない)。GR IV/HDF/Monochrome/IIIx系も同時受付。1次当選7/14→購入7/16 23:59、2次当選7/21→購入7/23 23:59。出荷7/22〜7/31",
-          "product_url": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
-          "method": "抽選販売(先着でない)"
-        },
-        {
-          "store": "GR SPACE TOKYO",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-07-25T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "GR IV HDF 店頭抽選〜7/25・事前本人確認要"
-        }
-      ],
-      "note": "★常設WATCH最優先。定価¥211,800税込・Mercari個人売切中央¥289,400・プレ値1.37倍・るでや買取利益+¥56,800(ノーリスク)。【7/8更新】エントリー7/6正午締切→本日7/8より当選発表開始。1次当選は7/16 23:59まで購入手続き。応募済なら当選確認を。姉妹機GR IV HDF/Monochrome/GR IIIx系も同期間受付だった"
     }
   ]
 }
