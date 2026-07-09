@@ -1,7 +1,84 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-09T05:10:20+09:00",
+  "updated_at": "2026-07-09T21:41:00+09:00",
   "candidates": [
+    {
+      "name": "ポケカ ストームエメラルダ 拡張パックBOX",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "未確定(発売前・通常拡張パックso薄利懸念)",
+      "profit_max": 0,
+      "best_route": "発売後に実機Mercari検証(封入済1BOX売切中央値)",
+      "phase": "受付中",
+      "deadline": "2026-07-10T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "イオンスタイルオンライン",
+          "url": "https://aeonretail-lottery.com/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-10T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "抽選"
+        },
+        {
+          "store": "平和堂アプリ",
+          "url": "https://www.heiwado.jp/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-14T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "抽選"
+        },
+        {
+          "store": "ゲオオンライン",
+          "url": "https://ec.geo-online.co.jp/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-16T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "抽選"
+        },
+        {
+          "store": "楽天ブックス",
+          "url": "https://books.rakuten.co.jp/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-17T09:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "抽選"
+        },
+        {
+          "store": "トレカプラザ55通販",
+          "url": "https://www.tcplaza55.com/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-21T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "抽選"
+        },
+        {
+          "store": "Amazon",
+          "url": "https://www.amazon.co.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-06-19T14:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "招待リクエスト"
+        }
+      ],
+      "note": "メガレックウザ拡張パック・7/31発売・通常拡張so発売後に封入済1BOX売切で粗利¥3k超か要検証・現時点は応募ノーリスクのWATCH"
+    },
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
       "brand": "ポケモン",
@@ -24,17 +101,7 @@
           "entry_deadline": "2026-07-15T23:59:00+09:00",
           "result_date": "2026-07-24T19:00:00+09:00",
           "order_deadline": "",
-          "note": "要セブンネット購入歴(2025/6/1-2026/6/14)"
-        },
-        {
-          "store": "あみあみ",
-          "url": "https://www.amiami.jp/",
-          "phase": "終了",
-          "entry_open": "2026-07-02T00:00:00+09:00",
-          "entry_deadline": "2026-07-07T13:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "受付終了"
+          "note": "要セブンネット購入歴・当選発表〜7/24"
         },
         {
           "store": "ポケモンセンターオンライン",
@@ -69,10 +136,20 @@
       "premium_level": "要再検証(7/1値上げ改定)",
       "profit_max": 56800,
       "best_route": "るでや買取(改定前実績・現在値要確認)",
-      "phase": "受付中",
-      "deadline": "2026-07-25T23:59:00+09:00",
+      "phase": "案内待ち",
+      "deadline": "2026-07-14T00:00:00+09:00",
       "status": "未応募",
       "routes": [
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "案内待ち",
+          "entry_open": "2026-07-03T12:00:00+09:00",
+          "entry_deadline": "2026-07-06T12:00:00+09:00",
+          "result_date": "2026-07-14T00:00:00+09:00",
+          "order_deadline": "2026-07-16T23:59:00+09:00",
+          "note": "7/3-7/6エントリー終了・GR IV当選発表7/14&21・注文7/14-16(1次)/7/21-23(2次)・次回エントリー未告知"
+        },
         {
           "store": "GR SPACE TOKYO",
           "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
@@ -82,19 +159,9 @@
           "result_date": "",
           "order_deadline": "",
           "note": "来店販売・事前本人確認要・東京店頭のみ"
-        },
-        {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "案内待ち",
-          "entry_open": "2026-07-03T12:00:00+09:00",
-          "entry_deadline": "2026-07-06T12:00:00+09:00",
-          "result_date": "2026-07-14T00:00:00+09:00",
-          "order_deadline": "2026-07-16T23:59:00+09:00",
-          "note": "1次発表7/14・2次発表7/21(注文〜7/23)"
         }
       ],
-      "note": "GR IV HDF発表7/10・Monochrome発表7/8も進行中"
+      "note": "GR IV Monochrome=注文中(発表7/8&15)・HDF発表7/10・IIIx発表7/13。エントリー本体は7/6終了so新規応募枠なし・次回エントリー告知待ち"
     }
   ]
 }
