@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-09T21:41:00+09:00",
+  "updated_at": "2026-07-12T06:46:12+09:00",
   "candidates": [
     {
       "name": "ポケカ ストームエメラルダ 拡張パックBOX",
@@ -13,19 +13,9 @@
       "profit_max": 0,
       "best_route": "発売後に実機Mercari検証(封入済1BOX売切中央値)",
       "phase": "受付中",
-      "deadline": "2026-07-10T23:59:00+09:00",
+      "deadline": "2026-07-14T23:59:00+09:00",
       "status": "未応募",
       "routes": [
-        {
-          "store": "イオンスタイルオンライン",
-          "url": "https://aeonretail-lottery.com/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-07-10T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "抽選"
-        },
         {
           "store": "平和堂アプリ",
           "url": "https://www.heiwado.jp/",
@@ -67,14 +57,14 @@
           "note": "抽選"
         },
         {
-          "store": "Amazon",
-          "url": "https://www.amazon.co.jp/",
-          "phase": "受付中",
-          "entry_open": "2026-06-19T14:00:00+09:00",
-          "entry_deadline": "",
+          "store": "イオンスタイルオンライン",
+          "url": "https://aeonretail-lottery.com/",
+          "phase": "終了",
+          "entry_open": "",
+          "entry_deadline": "2026-07-10T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "招待リクエスト"
+          "note": "抽選・締切済"
         }
       ],
       "note": "メガレックウザ拡張パック・7/31発売・通常拡張so発売後に封入済1BOX売切で粗利¥3k超か要検証・現時点は応募ノーリスクのWATCH"
@@ -86,9 +76,9 @@
       "price": 7200,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "未確定(発売前)",
+      "premium_level": "未確定(発売前・25周年前例¥5,500→¥20,000+で上振れ期待)",
       "profit_max": 0,
-      "best_route": "発売後に判定(25周年前例¥5,500→¥20,000+)",
+      "best_route": "発売後(9/16〜)に封入済1BOX売切中央値で判定",
       "phase": "受付中",
       "deadline": "2026-07-15T23:59:00+09:00",
       "status": "未応募",
@@ -97,11 +87,21 @@
           "store": "セブンネットショッピング",
           "url": "https://www.7net.omni7.jp/",
           "phase": "受付中",
-          "entry_open": "2026-06-30T00:00:00+09:00",
+          "entry_open": "2026-06-30T15:00:00+09:00",
           "entry_deadline": "2026-07-15T23:59:00+09:00",
           "result_date": "2026-07-24T19:00:00+09:00",
           "order_deadline": "",
-          "note": "要セブンネット購入歴・当選発表〜7/24"
+          "note": "アプリから応募"
+        },
+        {
+          "store": "ノジマオンライン",
+          "url": "https://online.nojima.co.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-06-10T00:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "シークレット販売会・終了日未定"
         },
         {
           "store": "ポケモンセンターオンライン",
@@ -111,33 +111,33 @@
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "7月中に日程発表予定・毎晩監視"
+          "note": "7月以降に日程発表予定・マイナンバー本人確認で当選しやすく"
         },
         {
           "store": "Amazon",
           "url": "https://www.amazon.co.jp/",
           "phase": "受付中",
-          "entry_open": "2026-06-02T14:00:00+09:00",
+          "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "招待リクエスト常時受付"
+          "note": "招待リクエスト受付中"
         }
       ],
-      "note": "9/16世界同時発売・発売前は検知任務(粗利判定保留)・応募ノーリスク"
+      "note": "9/16世界同時発売・MEGA拡張/新レアFUR/ピカチュウ30種・1BOX定価≈¥7,200・発売前は応募先検知が任務(ノーリスク)・セブンネット締切7/15"
     },
     {
       "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 211800,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "要再検証(7/1値上げ改定)",
+      "price": 232600,
+      "jissei": 290000,
+      "premium_rate": 1.25,
+      "premium_level": "中",
       "profit_max": 56800,
-      "best_route": "るでや買取(改定前実績・現在値要確認)",
+      "best_route": "るでや買取",
       "phase": "案内待ち",
-      "deadline": "2026-07-14T00:00:00+09:00",
+      "deadline": "2026-07-16T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
@@ -146,22 +146,22 @@
           "phase": "案内待ち",
           "entry_open": "2026-07-03T12:00:00+09:00",
           "entry_deadline": "2026-07-06T12:00:00+09:00",
-          "result_date": "2026-07-14T00:00:00+09:00",
+          "result_date": "2026-07-08T00:00:00+09:00",
           "order_deadline": "2026-07-16T23:59:00+09:00",
-          "note": "7/3-7/6エントリー終了・GR IV当選発表7/14&21・注文7/14-16(1次)/7/21-23(2次)・次回エントリー未告知"
+          "note": "当選発表7/8〜・当選者注文 1次7/14-16/2次7/21-23・配送7/22-31"
         },
         {
           "store": "GR SPACE TOKYO",
           "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
+          "phase": "予告",
           "entry_open": "",
-          "entry_deadline": "2026-07-25T23:59:00+09:00",
+          "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "来店販売・事前本人確認要・東京店頭のみ"
+          "note": "来店販売・都度X確認"
         }
       ],
-      "note": "GR IV Monochrome=注文中(発表7/8&15)・HDF発表7/10・IIIx発表7/13。エントリー本体は7/6終了so新規応募枠なし・次回エントリー告知待ち"
+      "note": "GR IV抽選・るでや+¥56,800・7/3-6抽選済/発表7/8〜/当選者注文7/14-16・次回抽選はX@GR_RICOHで監視継続"
     }
   ]
 }
