@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-12T06:46:12+09:00",
+  "updated_at": "2026-07-12T21:33:15+09:00",
   "candidates": [
     {
       "name": "ポケカ ストームエメラルダ 拡張パックBOX",
@@ -130,13 +130,13 @@
       "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 232600,
+      "price": 211800,
       "jissei": 290000,
       "premium_rate": 1.25,
       "premium_level": "中",
       "profit_max": 56800,
       "best_route": "るでや買取",
-      "phase": "案内待ち",
+      "phase": "受付中",
       "deadline": "2026-07-16T23:59:00+09:00",
       "status": "未応募",
       "routes": [
@@ -153,15 +153,15 @@
         {
           "store": "GR SPACE TOKYO",
           "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "",
-          "entry_deadline": "",
+          "entry_deadline": "2026-07-25T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "来店販売・都度X確認"
+          "note": "来店販売抽選・要店頭事前本人確認・7/25まで受付中(転売クエスト情報)"
         }
       ],
-      "note": "GR IV抽選・るでや+¥56,800・7/3-6抽選済/発表7/8〜/当選者注文7/14-16・次回抽選はX@GR_RICOHで監視継続"
+      "note": "定価7/1改定¥211,800(旧¥232,600)・るでや買取+¥56,800前後・7/3-6抽選済/当選者注文1次7/14-16・GR SPACE TOKYO店頭抽選が7/25まで受付中(要店頭本人確認)・次回抽選はX@GR_RICOHで監視継続"
     }
   ]
 }
