@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-13T21:33:56+09:00",
+  "updated_at": "2026-07-15T04:53:29+09:00",
   "candidates": [
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
@@ -9,32 +9,32 @@
       "price": 7200,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "発売前",
+      "premium_level": "保留",
       "profit_max": 0,
-      "best_route": "発売後box-flip判定",
+      "best_route": "発売後判定(9/16〜)",
       "phase": "受付中",
       "deadline": "2026-07-15T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "セブンネット",
-          "url": "https://nyuka-now.com/",
+          "store": "セブンネットショッピング",
+          "url": "https://7net.omni7.jp/",
           "phase": "受付中",
           "entry_open": "2026-06-30T00:00:00+09:00",
           "entry_deadline": "2026-07-15T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "6/30〜7/15 23:59抽選"
+          "note": "6/30-7/15 23:59抽選受付・本日締切"
         },
         {
-          "store": "エクストレカ",
-          "url": "https://nyuka-now.com/",
+          "store": "Amazon 招待リクエスト",
+          "url": "https://www.amazon.co.jp/",
           "phase": "受付中",
           "entry_open": "",
-          "entry_deadline": "2026-09-15T23:59:00+09:00",
+          "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "9/15 23:59まで"
+          "note": "招待リクエスト制・当選者予約可の報告あり"
         },
         {
           "store": "ポケモンセンターオンライン",
@@ -44,94 +44,84 @@
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "マイナンバー本人確認抽選予定"
+          "note": "マイナンバーカード本人確認方式で抽選予定"
         }
       ],
-      "note": "発売2026-09-16世界同時・BOX定価¥7,200・応募ノーリスクso検知優先。発売後にメルカリ実売でbox-flip判定"
+      "note": "発売2026/9/16・ピカチュウ確定・25th前例で上振れ期待も発売後実売で確認・応募ノーリスクso検知優先"
     },
     {
-      "name": "ポケカ ストームエメラルダ 拡張パックBOX",
+      "name": "ポケカ ストームエメラルダ 拡張パック(ポケセン事前抽選)",
       "brand": "ポケモンカード",
       "category": "トレカ",
-      "price": 6000,
+      "price": 0,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "発売前",
+      "premium_level": "保留",
       "profit_max": 0,
-      "best_route": "発売後box-flip判定",
+      "best_route": "発売後判定(7/31〜)",
       "phase": "受付中",
-      "deadline": "2026-07-19T23:59:00+09:00",
+      "deadline": "2026-07-17T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "三洋堂書店",
-          "url": "https://nyuka-now.com/",
+          "store": "ポケモンセンター(モギリーLite)",
+          "url": "https://shop.pokemon.co.jp/ja/shop/common/news/202607/000393.html",
           "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-07-19T23:59:00+09:00",
-          "result_date": "",
+          "entry_open": "2026-07-15T14:00:00+09:00",
+          "entry_deadline": "2026-07-17T23:59:00+09:00",
+          "result_date": "2026-07-21T12:00:00+09:00",
           "order_deadline": "",
-          "note": "7/19 23:59まで"
+          "note": "期間①7/15 14:00-7/17・対象=ストームエメラルダ(20パック)+スターターex・1店舗のみ応募可"
         },
         {
-          "store": "シーガル",
-          "url": "https://nyuka-now.com/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-07-20T20:00:00+09:00",
-          "result_date": "",
+          "store": "ポケモンセンター(モギリーLite)期間②",
+          "url": "https://shop.pokemon.co.jp/ja/shop/common/news/202607/000393.html",
+          "phase": "予告",
+          "entry_open": "2026-07-22T14:00:00+09:00",
+          "entry_deadline": "2026-07-24T23:59:00+09:00",
+          "result_date": "2026-07-28T12:00:00+09:00",
           "order_deadline": "",
-          "note": "7/20 20:00まで"
+          "note": "期間②7/22 14:00-7/24・期間①②通じて1店舗のみ"
         },
         {
-          "store": "トレカプラザ55通販店",
-          "url": "https://nyuka-now.com/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-07-21T23:59:00+09:00",
+          "store": "ビックカメラ",
+          "url": "https://www.biccamera.com/",
+          "phase": "予告",
+          "entry_open": "2026-07-22T14:00:00+09:00",
+          "entry_deadline": "2026-07-24T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "7/21 23:59まで"
+          "note": "7/22 14:00-7/24 23:59抽選受付"
         }
       ],
-      "note": "MEGA拡張パックM6・メガレックウザ表紙・発売2026-07-31・BOX定価¥6,000・発売後実売で粗利判定"
+      "note": "発売2026/7/31・MEGA拡張パック・発売前so粗利保留・応募ノーリスクso検知優先"
     },
     {
       "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
       "price": 232600,
-      "jissei": 290000,
-      "premium_rate": 1.25,
+      "jissei": 289400,
+      "premium_rate": 1.24,
       "premium_level": "中",
       "profit_max": 56800,
       "best_route": "るでや買取",
-      "phase": "案内待ち",
-      "deadline": "",
+      "phase": "注文中",
+      "deadline": "2026-07-16T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "リコーイメージングストア",
           "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "7/3再販分は経過・次回抽選待ち"
-        },
-        {
-          "store": "X @GR_RICOH（一次ソース）",
-          "url": "https://x.com/GR_RICOH",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "次回受付告知を常時監視"
+          "phase": "注文中",
+          "entry_open": "2026-07-03T12:00:00+09:00",
+          "entry_deadline": "2026-07-06T12:00:00+09:00",
+          "result_date": "2026-07-21T00:00:00+09:00",
+          "order_deadline": "2026-07-23T23:59:00+09:00",
+          "note": "エントリー7/3-7/6は終了・1次当選発表7/14(注文期限7/16 23:59)・2次当選発表7/21(注文期限7/23)・出荷7/22-7/31"
         }
       ],
-      "note": "常設ウォッチ。現在各店抽選は受付終了/完売。次回受付開始を待機中(るでや+¥56,800想定)"
+      "note": "GR IV抽選・るでや買取+¥56,800・次回エントリーは公式X/ストア要監視"
     }
   ]
 }
