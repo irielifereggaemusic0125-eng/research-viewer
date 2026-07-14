@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-15T05:02:08+09:00",
+  "updated_at": "2026-07-15T05:06:29+09:00",
   "candidates": [
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
@@ -100,11 +100,11 @@
       "name": "サントリー 山崎/響/白州 各種(Amazon招待)",
       "brand": "サントリー",
       "category": "ウイスキー",
-      "price": 0,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "保留",
-      "profit_max": 0,
+      "price": 16500,
+      "jissei": 20500,
+      "premium_rate": 1.24,
+      "premium_level": "中",
+      "profit_max": 4000,
       "best_route": "⚠️買取店限定(酒税法)",
       "phase": "受付中",
       "deadline": "",
@@ -121,7 +121,7 @@
           "note": "響30/21年・山崎18/12年等・招待リクエスト12ヶ月有効・一度登録で放置可"
         }
       ],
-      "note": "🚨酒税法: 免許なしフリマ転売NG→出口は買取店のみ・優先度最低(2026-07-15 Shimba指示)・Amazon招待12ヶ月有効so登録後放置・通知は買取価格−当選価格≥¥3kのみ"
+      "note": "🚨酒税法:買取店限定・優先度最低。参考=山崎12年 定価¥16,500→買取箱付¥20,500(+¥4,000)/白州12年→¥20,000(+¥3,500)※2026-04査定額so当選時要再査定。Amazon招待12ヶ月有効so登録後放置"
     },
     {
       "name": "Nike Air Jordan 3 True Blue (2026復刻)",
@@ -186,6 +186,70 @@
         }
       ],
       "note": "GR IV抽選・るでや買取+¥56,800・次回エントリーは公式X/ストア要監視"
+    },
+    {
+      "name": "LABUBU / POP MART PICK UP商品",
+      "brand": "POP MART",
+      "category": "キャラホビー",
+      "price": 2500,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "保留",
+      "profit_max": 0,
+      "best_route": "発売後メルカリ検証(シークレット/限定のみ)",
+      "phase": "案内待ち",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "POP MART公式(LivePocket事前予約抽選)",
+          "url": "https://t.livepocket.jp/event/search?venue=%7BPOP+MART+%E3%82%B9%E3%83%88%E3%82%A2%7D",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "2026-07-15時点で受付中なし・新作時に@POPMARTJapanで告知・LivePocket事前登録推奨"
+        },
+        {
+          "store": "入荷Nowまとめ",
+          "url": "https://nyuka-now.com/archives/153107",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "受付中表記の正ソース"
+        }
+      ],
+      "note": "定価¥1,200-2,500→シークレット実勢¥10-60k・⚠️検索に前年記事混在so年次確認必須・毎晩巡回で受付検知待ち"
+    },
+    {
+      "name": "Tamagotchi Paradise(たまごっちパラダイス)",
+      "brand": "BANDAI",
+      "category": "キャラホビー",
+      "price": 6380,
+      "jissei": 8000,
+      "premium_rate": 1.25,
+      "premium_level": "中",
+      "profit_max": 0,
+      "best_route": "現時点粗利¥3k未満so対象外",
+      "phase": "案内待ち",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "NAMCO Parksオンライン事前抽選",
+          "url": "https://bandainamco-am.co.jp/namco_parks/",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "2026-04から店頭→オンライン事前抽選方式に変更・受付検知待ち"
+        }
+      ],
+      "note": "定価¥6,380・メルカリ新品未開封¥7-9k(2026-04時点)→手取り粗利ほぼゼロでプレ値軟化済み・新色(オレンジトロピクス等7/11発売)の上振れのみ実機検証対象・7/25一番くじはA賞実勢を発売後確認"
     }
   ]
 }
