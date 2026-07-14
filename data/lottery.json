@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-15T04:53:29+09:00",
+  "updated_at": "2026-07-15T04:59:10+09:00",
   "candidates": [
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
@@ -95,6 +95,70 @@
         }
       ],
       "note": "発売2026/7/31・MEGA拡張パック・発売前so粗利保留・応募ノーリスクso検知優先"
+    },
+    {
+      "name": "サントリー 山崎/響/白州 各種(Amazon招待)",
+      "brand": "サントリー",
+      "category": "ウイスキー",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "保留",
+      "profit_max": 0,
+      "best_route": "当選銘柄ごとに判定",
+      "phase": "受付中",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "Amazon 招待リクエスト",
+          "url": "https://nyuka-now.com/archives/834",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "響30/21年・山崎18/12年等・招待リクエスト12ヶ月有効・一度登録で放置可"
+        }
+      ],
+      "note": "定番高粗利枠(山崎12年 定価≈¥10k→実勢2倍前後の実績ジャンル)・応募ノーリスク・当選時に銘柄別実勢検証"
+    },
+    {
+      "name": "Nike Air Jordan 3 True Blue (2026復刻)",
+      "brand": "Nike",
+      "category": "スニーカー",
+      "price": 34650,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "保留",
+      "profit_max": 0,
+      "best_route": "発売後メルカリ/スニダン検証",
+      "phase": "予告",
+      "deadline": "2026-07-18T09:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "Nike SNKRS",
+          "url": "https://www.nike.com/jp/launch",
+          "phase": "予告",
+          "entry_open": "2026-07-18T09:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "7/18発売・SNKRS抽選(DAN)想定・応募無料"
+        },
+        {
+          "store": "atmos等 抽選",
+          "url": "https://www.atmos-tokyo.com/",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "atmos tokyo等ジョーダン取扱店でも抽選見込み"
+        }
+      ],
+      "note": "10年ぶりOG復刻・定価¥34,650・過去リセール$169-583・フルサイズ大量供給so実勢は発売後要検証"
     },
     {
       "name": "RICOH GR IV",
