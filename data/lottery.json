@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-15T05:06:29+09:00",
+  "updated_at": "2026-07-15T21:37:01+09:00",
   "candidates": [
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
@@ -50,6 +50,43 @@
       "note": "発売2026/9/16・ピカチュウ確定・25th前例で上振れ期待も発売後実売で確認・応募ノーリスクso検知優先"
     },
     {
+      "name": "ワンピースカード OP-16 決戦の刻 BOX",
+      "brand": "ONE PIECEカードゲーム",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 13267,
+      "premium_rate": 2.51,
+      "premium_level": "高",
+      "profit_max": 5960,
+      "best_route": "メルカリ(テープ付き未開封1BOX)",
+      "phase": "受付中",
+      "deadline": "2026-07-17T09:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "楽天ブックス",
+          "url": "https://books.rakuten.co.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-07-13T10:00:00+09:00",
+          "entry_deadline": "2026-07-17T09:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "WEB抽選受付 7/13 10:00-7/17 9:59"
+        },
+        {
+          "store": "しまむらパーク(アプリ抽選)",
+          "url": "https://www.shimamura-park.com/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-07-20T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "スタートデッキEXルフィ&エース/受け継がれる意志/神の島の冒険も対象・発表7/20"
+        }
+      ],
+      "note": "実勢=メルカリ テープ付き未開封1BOX 中央値¥13,267(n=4)。SKILL記載の5/31ベンチ¥15-16k→軟化を実測で確認(粗利¥8,000→¥5,960)。発売直後高値so当選後は早期売却推奨"
+    },
+    {
       "name": "ポケカ ストームエメラルダ 拡張パック(ポケセン事前抽選)",
       "brand": "ポケモンカード",
       "category": "トレカ",
@@ -95,6 +132,70 @@
         }
       ],
       "note": "発売2026/7/31・MEGA拡張パック・発売前so粗利保留・応募ノーリスクso検知優先"
+    },
+    {
+      "name": "ワンピースカード EB-03 ヒロインズエディション BOX",
+      "brand": "ONE PIECEカードゲーム",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 19999,
+      "premium_rate": 3.79,
+      "premium_level": "高",
+      "profit_max": 12019,
+      "best_route": "メルカリ(テープ付き未開封1BOX)",
+      "phase": "受付中",
+      "deadline": "2026-07-21T15:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "DMM通販(プレミアホビー抽選)",
+          "url": "https://www.dmm.com/",
+          "phase": "受付中",
+          "entry_open": "2026-07-14T15:00:00+09:00",
+          "entry_deadline": "2026-07-21T15:00:00+09:00",
+          "result_date": "2026-07-23T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "WEB抽選・当選発表7/23から4日以内・EB-03と受け継がれる意志が対象"
+        }
+      ],
+      "note": "発売2025/10/25から9ヶ月経過もプレ値3.8倍継続。実勢=メルカリ テープ付き未開封1BOX 中央値¥19,999(n=3・テープカット/小分けパック/複数BOX除外)。定価は24パック×¥220=¥5,280で確定(検索上の¥22,800は転売価格・誤採用注意)。粗利=19,999×0.9-送料700-5,280"
+    },
+    {
+      "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
+      "brand": "ONE PIECEカードゲーム",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "保留",
+      "profit_max": 0,
+      "best_route": "発売後判定(8/22〜)",
+      "phase": "受付中",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "楽天ブックス",
+          "url": "https://books.rakuten.co.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-07-13T10:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "WEB抽選受付 7/13 10:00〜・締切未記載"
+        },
+        {
+          "store": "Amazon 招待リクエスト",
+          "url": "https://www.amazon.co.jp/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "招待販売リクエスト受付中"
+        }
+      ],
+      "note": "発売2026/8/22・4周年弾(エルバフ/四皇)・定価¥5,280(24パック)。発売前so粗利判定は保留・応募ノーリスクso検知優先"
     },
     {
       "name": "サントリー 山崎/響/白州 各種(Amazon招待)",
