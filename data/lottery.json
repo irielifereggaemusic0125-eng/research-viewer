@@ -1,145 +1,98 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-18T21:35:00+09:00",
+  "updated_at": "2026-07-20T03:35:45+09:00",
   "candidates": [
     {
       "name": "ワンピースカード OP-16 決戦の刻 BOX",
-      "brand": "ONE PIECEカードゲーム",
+      "brand": "BANDAI",
       "category": "トレカ",
       "price": 5280,
-      "jissei": 14000,
-      "premium_rate": 2.65,
+      "jissei": 16000,
+      "premium_rate": 3.03,
       "premium_level": "高",
-      "profit_max": 6700,
-      "best_route": "メルカリ(テープ付き未開封1BOX)",
+      "profit_max": 8520,
+      "best_route": "メルカリ(封入済1BOX売切中央値)",
       "phase": "受付中",
       "deadline": "2026-07-20T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "ONE PIECEカードゲーム公式ショップ",
+          "store": "ONE PIECEオフィシャルショップ/麦わらストア",
           "url": "https://nyuka-now.com/archives/97393",
           "phase": "受付中",
-          "entry_open": "2026-07-18T00:00:00+09:00",
-          "entry_deadline": "2026-07-20T23:59:00+09:00",
-          "result_date": "2026-07-21T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "WEB抽選(当選者は店頭受取) 7/18-7/20 23:59"
-        },
-        {
-          "store": "MUGIWARA STORE各店",
-          "url": "https://mugiwara-store.com/",
-          "phase": "受付中",
-          "entry_open": "2026-07-18T00:00:00+09:00",
-          "entry_deadline": "2026-07-20T23:59:00+09:00",
-          "result_date": "2026-07-22T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "LivePocket会員登録要・発表7/21-22"
-        },
-        {
-          "store": "プレミアムバンダイ(OP-15/14/13)",
-          "url": "https://www.premiumbandai.jp/",
-          "phase": "受付中",
           "entry_open": "",
-          "entry_deadline": "2026-07-23T23:00:00+09:00",
+          "entry_deadline": "2026-07-20T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "OP-16でなくOP-15/14/13の別弾WEB抽選・締切7/23 23:00"
+          "note": "web抽選・当選者は店頭受取(要来店)。⚠️Shimba渡航中の場合は妻代理購入可否を要確認"
         }
       ],
-      "note": "実勢=3日前実測メルカリ中央値¥13,267(n=4)＋7月記事フリマ約¥14-16k→保守的¥14,000採用。粗利¥6,700。発売直後高値軟化傾向so当選後は早期売却推奨"
+      "note": "5/30発売の再販抽選。売切相場7月¥16,000(6月¥14,000から微増)。粗利¥8,520/箱。ただし店頭受取・当選後は早期売却推奨(再販継続で軟化リスク)"
     },
     {
       "name": "ワンピースカード EB-03 ヒロインズエディション BOX",
-      "brand": "ONE PIECEカードゲーム",
+      "brand": "BANDAI",
       "category": "トレカ",
-      "price": 5500,
+      "price": 4400,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "保留",
+      "premium_level": "低",
       "profit_max": 0,
-      "best_route": "発売後実売で判定",
+      "best_route": "メルカリ(要実機検証)",
       "phase": "受付中",
       "deadline": "2026-07-21T15:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "各種WEB抽選(前回巡回時)",
+          "store": "DMMショッピング",
           "url": "https://nyuka-now.com/archives/97393",
           "phase": "受付中",
           "entry_open": "",
           "entry_deadline": "2026-07-21T15:00:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "前回(7/15)巡回で受付中確認・今回は実売再検証未完(¥3k判定保留)"
+          "note": "web抽選・当選後オンライン販売。実勢未検証so粗利判定保留"
         }
       ],
-      "note": "7/15巡回のcarry-forward。実勢再検証未完のため通知保留(粗利判定は次回実売で)"
+      "note": "DMM抽選7/21 15:00締切。メルカリ実勢未検証のため粗利判定保留(通知はOP-16のみ)"
     },
     {
       "name": "サントリー 山崎/響/白州 各種(Amazon招待)",
-      "brand": "サントリー",
-      "category": "ウイスキー",
+      "brand": "SUNTORY",
+      "category": "酒類",
       "price": 0,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "保留",
+      "premium_level": "中",
       "profit_max": 0,
-      "best_route": "買取店ルート限定(酒税法)",
+      "best_route": "⚠️買取店ルート限定(酒税法)",
       "phase": "受付中",
       "deadline": "",
       "status": "未応募",
       "routes": [
         {
-          "store": "Amazon 招待リクエスト",
+          "store": "Amazon招待リクエスト",
           "url": "https://www.amazon.co.jp/",
           "phase": "受付中",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "12ヶ月有効・登録済みなら放置でOK"
+          "note": "招待リクエストは12ヶ月有効・登録済なら放置でOK。⚠️出口は買取店持込のみ(フリマ転売は酒税法違反リスク)"
         }
       ],
-      "note": "⚠️買取店ルート限定(酒税法)・優先度最低・フリマ転売禁止"
-    },
-    {
-      "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
-      "brand": "ONE PIECEカードゲーム",
-      "category": "トレカ",
-      "price": 5280,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "保留",
-      "profit_max": 0,
-      "best_route": "発売後判定(8/22〜)",
-      "phase": "予告",
-      "deadline": "",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "Amazon 招待リクエスト",
-          "url": "https://www.amazon.co.jp/",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "招待リクエスト制で受付・量販/カードショップ抽選は未確認"
-        }
-      ],
-      "note": "2026/8/22発売。現状Amazon招待のみ・締切未定so監視継続"
+      "note": "⚠️低優先・買取店ルート限定(酒税法)。買取価格−当選価格≥¥3k確認時のみ通知"
     },
     {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
-      "brand": "ポケモンカード",
+      "brand": "Pokemon",
       "category": "トレカ",
       "price": 7200,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "保留",
+      "premium_level": "高(前例25th上振れ)",
       "profit_max": 0,
-      "best_route": "発売後判定(9/16〜)",
+      "best_route": "発売後メルカリ検証",
       "phase": "予告",
       "deadline": "",
       "status": "未応募",
@@ -152,57 +105,101 @@
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "マイナンバーカード本人確認方式・7月以降に日程発表予定(未定)"
-        },
-        {
-          "store": "Amazon 招待リクエスト",
-          "url": "https://www.amazon.co.jp/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "招待リクエスト制・当選予約報告あり"
+          "note": "抽選日程は2026年7月以降発表予定(7/18時点未開始)。マイナンバー本人確認済枠が当選大半→転売勢は不利"
         }
       ],
-      "note": "2026/9/16世界同時発売・ピカチュウ確定・25th前例で上振れ期待も発売後実売で確認。応募ノーリスクso受付開始検知を最優先で継続"
+      "note": "🎯名指しWATCH。9/16世界同時発売・MEGA拡張・新レアFUR。BOX定価¥7,200/FUTURISTIC BOX¥27,500。25th前例で上振れ大。抽選開始検知が任務→開始次第即通知。発売前so粗利判定保留"
     },
     {
       "name": "ポケカ ストームエメラルダ 拡張パックBOX",
-      "brand": "ポケモンカード",
+      "brand": "Pokemon",
       "category": "トレカ",
-      "price": 0,
+      "price": 6000,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "保留",
+      "premium_level": "低",
       "profit_max": 0,
-      "best_route": "発売後判定(7/31〜)",
+      "best_route": "発売後メルカリ検証",
       "phase": "予告",
       "deadline": "",
       "status": "未応募",
       "routes": [
         {
-          "store": "量販店/ポケセン抽選",
-          "url": "https://nyuka-now.com/archives/157982",
+          "store": "各量販店",
+          "url": "https://nyuka-now.com/",
           "phase": "予告",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "ポケセン事前抽選round(7/17締切)は終了・次round(量販店等)待ち"
+          "note": "carry-forward"
         }
       ],
-      "note": "2026/7/31発売。次の抽選round検知を継続"
+      "note": "予告枠。発売後実機検証で判定"
+    },
+    {
+      "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "高(新弾初動期待)",
+      "profit_max": 0,
+      "best_route": "発売後メルカリ検証",
+      "phase": "予告",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "各ストア/プレバン",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "新弾BP17弾。8/22発売。抽選開始検知が任務"
+        }
+      ],
+      "note": "🔥新弾BOX。2026-08-22発売。発売直後の初動高値期待(OP-16は初動¥15-16k)。抽選受付開始を毎回検知→開始次第通知"
+    },
+    {
+      "name": "RICOH GR IV 30th Anniversary Edition(仮称)",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "高(6000台限定)",
+      "profit_max": 0,
+      "best_route": "るでや/フリマ(発売後検証)",
+      "phase": "予告",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "リコーイメージング(公式)",
+          "url": "https://news.ricoh-imaging.co.jp/rim_info/2026/20260709_042315.html",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "7/9告知。GR誕生30周年記念・全世界6000台限定・2026年秋発売予定。定価/抽選日程は秋の正式発表待ち"
+        }
+      ],
+      "note": "🆕7/9告知の新規予告。GR1色の30周年特別仕様・世界6000台限定=高プレ値確実。正式発表(秋)で抽選日程を捕捉→即通知"
     },
     {
       "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
       "price": 232600,
-      "jissei": 290000,
-      "premium_rate": 1.25,
+      "jissei": 289400,
+      "premium_rate": 1.24,
       "premium_level": "中",
-      "profit_max": 55800,
+      "profit_max": 56800,
       "best_route": "るでや買取",
       "phase": "案内待ち",
       "deadline": "",
@@ -216,37 +213,37 @@
           "entry_deadline": "2026-07-06T12:00:00+09:00",
           "result_date": "2026-07-21T00:00:00+09:00",
           "order_deadline": "2026-07-23T23:59:00+09:00",
-          "note": "7月round=エントリー7/3-7/6正午で終了済。2次当選案内7/21・2次注文7/21-7/23。次回エントリー日程は未告知"
+          "note": "7月抽選は応募締切済(7/3-7/6)。1次当選発表7/14/注文7/14-16。2次当選発表7/21/注文7/21-23。次回抽選を継続監視"
         }
       ],
-      "note": "常設ウォッチ枠。今回はエントリー受付終了済so新規応募不可。次回エントリー告知(X @GR_RICOH)を継続監視"
+      "note": "常設ウォッチ(carry-forward)。るでや買取で定価比+¥56,800のノーリスク枠。今月分の応募は締切済so次回抽選スケジュールを@GR_RICOH等で監視"
     },
     {
       "name": "LABUBU / POP MART",
       "brand": "POP MART",
       "category": "キャラホビー",
-      "price": 0,
+      "price": 2200,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "保留",
+      "premium_level": "高(シークレット)",
       "profit_max": 0,
-      "best_route": "発売後実売で判定",
+      "best_route": "発売後メルカリ検証",
       "phase": "案内待ち",
       "deadline": "",
       "status": "未応募",
       "routes": [
         {
-          "store": "POP MART公式(LABUBU MINI MARKET)",
-          "url": "https://x.com/POPMARTJapan",
-          "phase": "終了",
-          "entry_open": "2026-07-12T00:00:00+09:00",
-          "entry_deadline": "2026-07-13T23:59:00+09:00",
-          "result_date": "2026-07-16T00:00:00+09:00",
+          "store": "POP MART店舗(MINI MARKET)",
+          "url": "https://nyuka-now.com/archives/153107",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
           "order_deadline": "",
-          "note": "入場購入券抽選(イベント7/18-23)は受付終了。7/22〜先着入場。現在新規抽選受付なし"
+          "note": "MINI MARKET入店購入券抽選が7/30-8/3窓向けに告知(応募開始は~7/24見込)。ただし入店抽選=要来店。年次(前年記事)混入注意"
         }
       ],
-      "note": "次の公式オンライン/店頭抽選の受付開始を継続監視。前年記事混入注意(曜日整合+公式X投稿日で検証済)"
+      "note": "入店購入券抽選ベース。7/30-8/3窓の応募開始を監視。⚠️入店抽選so要来店・Shimba渡航中は実効性低。オンライン新作抽選が出たら優先通知"
     },
     {
       "name": "Tamagotchi Paradise(たまごっちパラダイス)",
@@ -255,25 +252,25 @@
       "price": 6380,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "保留",
+      "premium_level": "中",
       "profit_max": 0,
-      "best_route": "発売後実売で判定",
+      "best_route": "メルカリ(要実機検証)",
       "phase": "案内待ち",
       "deadline": "",
       "status": "未応募",
       "routes": [
         {
-          "store": "量販店/ファミマ等再販",
+          "store": "量販店/ファミマ",
           "url": "https://nyuka-now.com/",
           "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "現在抽選受付なし・Amazon/楽天等に在庫(人気色は品薄プレ値)"
+          "note": "carry-forward。再販/抽選を監視"
         }
       ],
-      "note": "抽選round検知を継続。新品未開封個人売切中央値で粗利¥3k判定"
+      "note": "品薄枠。新品未開封売切中央値で粗利¥3k超確認できたら通知"
     }
   ]
 }
