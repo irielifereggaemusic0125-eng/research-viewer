@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-20T03:35:45+09:00",
+  "updated_at": "2026-07-20T21:35:12+09:00",
   "candidates": [
     {
       "name": "ワンピースカード OP-16 決戦の刻 BOX",
@@ -27,18 +27,85 @@
           "note": "web抽選・当選者は店頭受取(要来店)。⚠️Shimba渡航中の場合は妻代理購入可否を要確認"
         }
       ],
-      "note": "5/30発売の再販抽選。売切相場7月¥16,000(6月¥14,000から微増)。粗利¥8,520/箱。ただし店頭受取・当選後は早期売却推奨(再販継続で軟化リスク)"
+      "note": "5/30発売の再販抽選。売切相場¥16,000。粗利¥8,520/箱。⚠️本日23:59が最終締切(朝の巡回で通知済)。当選は店頭受取"
+    },
+    {
+      "name": "ポケカ ストームエメラルダ 拡張パックBOX",
+      "brand": "Pokemon",
+      "category": "トレカ",
+      "price": 6000,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "未判定(発売前)",
+      "profit_max": 0,
+      "best_route": "発売後メルカリ検証",
+      "phase": "受付中",
+      "deadline": "2026-07-20T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ファミマオンライン",
+          "url": "https://snkrdunk.com/articles/32581/",
+          "phase": "受付中",
+          "entry_open": "2026-07-15T10:00:00+09:00",
+          "entry_deadline": "2026-07-20T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "本日23:59締切"
+        },
+        {
+          "store": "ジョーシン",
+          "url": "https://snkrdunk.com/articles/32581/",
+          "phase": "受付中",
+          "entry_open": "2026-07-17T00:00:00+09:00",
+          "entry_deadline": "2026-07-20T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "本日23:59締切"
+        },
+        {
+          "store": "キデイランド",
+          "url": "https://snkrdunk.com/articles/32581/",
+          "phase": "受付中",
+          "entry_open": "2026-07-20T10:00:00+09:00",
+          "entry_deadline": "2026-07-22T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕本日10:00受付開始"
+        },
+        {
+          "store": "ポケモンセンターオンライン(期間②)",
+          "url": "https://www.pokemoncenter-online.com/",
+          "phase": "予告",
+          "entry_open": "2026-07-22T14:00:00+09:00",
+          "entry_deadline": "2026-07-24T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "7/22 14:00受付開始"
+        },
+        {
+          "store": "ゲームアーク/宝島",
+          "url": "https://snkrdunk.com/articles/32581/",
+          "phase": "受付中",
+          "entry_open": "2026-07-18T00:00:00+09:00",
+          "entry_deadline": "2026-07-26T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "7/26まで継続中"
+        }
+      ],
+      "note": "🆕予告→受付中に格上げ(2026-07-20夜)。7/31発売のMEGA拡張・BOX定価¥6,000。⚠️発売前so実勢が存在せず粗利判定は保留(予約権/オリパ価格は相場参考にしない)。応募自体はノーリスクso受付検知を通知。発売後(7/31〜)にbox-flip判定へ切替"
     },
     {
       "name": "ワンピースカード EB-03 ヒロインズエディション BOX",
       "brand": "BANDAI",
       "category": "トレカ",
       "price": 4400,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "低",
-      "profit_max": 0,
-      "best_route": "メルカリ(要実機検証)",
+      "jissei": 13800,
+      "premium_rate": 3.14,
+      "premium_level": "高",
+      "profit_max": 7320,
+      "best_route": "メルカリ(テープ付き未開封1BOX売切中央値)",
       "phase": "受付中",
       "deadline": "2026-07-21T15:00:00+09:00",
       "status": "未応募",
@@ -51,10 +118,37 @@
           "entry_deadline": "2026-07-21T15:00:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "web抽選・当選後オンライン販売。実勢未検証so粗利判定保留"
+          "note": "web抽選・当選後オンライン販売(店頭受取不要)。実勢検証済み"
         }
       ],
-      "note": "DMM抽選7/21 15:00締切。メルカリ実勢未検証のため粗利判定保留(通知はOP-16のみ)"
+      "note": "✅実勢検証完了(2026-07-20夜): メルカリ売切テープ付き1BOX n=9 中央値¥13,800(レンジ¥11,500-15,555)。粗利=13,800×0.9−送料700−定価4,400=¥7,320。朝の巡回では「保留」だった枠を今回確定。DMM抽選は明日7/21 15:00締切"
+    },
+    {
+      "name": "ワンピースカード OP-15 神の島の冒険 BOX(プレバン)",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 13650,
+      "premium_rate": 2.59,
+      "premium_level": "高",
+      "profit_max": 6305,
+      "best_route": "メルカリ(テープ付き未開封1BOX売切中央値)",
+      "phase": "受付中",
+      "deadline": "2026-07-23T23:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "プレミアムバンダイ",
+          "url": "https://www.premiumbandai.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-07-17T11:00:00+09:00",
+          "entry_deadline": "2026-07-23T23:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "同一抽選でOP-15/OP-14/OP-13の3弾が対象(各¥5,280)。OP-15のみ実勢検証済み・OP-14/13は未検証"
+        }
+      ],
+      "note": "🆕今回検出。実勢検証(2026-07-20夜): メルカリ売切テープ付き1BOX 中央値¥13,650(¥11,000-15,200)。粗利=13,650×0.9−700−5,280=¥6,305。旧弾so再販で軟化リスク→当選後は早期売却"
     },
     {
       "name": "サントリー 山崎/響/白州 各種(Amazon招待)",
@@ -109,33 +203,6 @@
         }
       ],
       "note": "🎯名指しWATCH。9/16世界同時発売・MEGA拡張・新レアFUR。BOX定価¥7,200/FUTURISTIC BOX¥27,500。25th前例で上振れ大。抽選開始検知が任務→開始次第即通知。発売前so粗利判定保留"
-    },
-    {
-      "name": "ポケカ ストームエメラルダ 拡張パックBOX",
-      "brand": "Pokemon",
-      "category": "トレカ",
-      "price": 6000,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "低",
-      "profit_max": 0,
-      "best_route": "発売後メルカリ検証",
-      "phase": "予告",
-      "deadline": "",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "各量販店",
-          "url": "https://nyuka-now.com/",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "carry-forward"
-        }
-      ],
-      "note": "予告枠。発売後実機検証で判定"
     },
     {
       "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
@@ -213,10 +280,10 @@
           "entry_deadline": "2026-07-06T12:00:00+09:00",
           "result_date": "2026-07-21T00:00:00+09:00",
           "order_deadline": "2026-07-23T23:59:00+09:00",
-          "note": "7月抽選は応募締切済(7/3-7/6)。1次当選発表7/14/注文7/14-16。2次当選発表7/21/注文7/21-23。次回抽選を継続監視"
+          "note": "7月分は応募締切済(7/3-7/6正午)。2次当選発表=明日7/21・注文期間7/21〜7/23。8月分スケジュールは公式ページ未掲載(7/2更新のまま)→継続監視"
         }
       ],
-      "note": "常設ウォッチ(carry-forward)。るでや買取で定価比+¥56,800のノーリスク枠。今月分の応募は締切済so次回抽選スケジュールを@GR_RICOH等で監視"
+      "note": "常設ウォッチ。るでや買取で定価比+¥56,800のノーリスク枠。⚠️明日7/21が2次当選発表・当選時は7/23までに注文しないと失効"
     },
     {
       "name": "LABUBU / POP MART",
