@@ -1,0 +1,137 @@
+{
+  "schema": "v2",
+  "updated_at": "2026-07-13T21:33:56+09:00",
+  "candidates": [
+    {
+      "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 7200,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "発売前",
+      "profit_max": 0,
+      "best_route": "発売後box-flip判定",
+      "phase": "受付中",
+      "deadline": "2026-07-15T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "セブンネット",
+          "url": "https://nyuka-now.com/",
+          "phase": "受付中",
+          "entry_open": "2026-06-30T00:00:00+09:00",
+          "entry_deadline": "2026-07-15T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "6/30〜7/15 23:59抽選"
+        },
+        {
+          "store": "エクストレカ",
+          "url": "https://nyuka-now.com/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-15T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "9/15 23:59まで"
+        },
+        {
+          "store": "ポケモンセンターオンライン",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260608",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "マイナンバー本人確認抽選予定"
+        }
+      ],
+      "note": "発売2026-09-16世界同時・BOX定価¥7,200・応募ノーリスクso検知優先。発売後にメルカリ実売でbox-flip判定"
+    },
+    {
+      "name": "ポケカ ストームエメラルダ 拡張パックBOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 6000,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "発売前",
+      "profit_max": 0,
+      "best_route": "発売後box-flip判定",
+      "phase": "受付中",
+      "deadline": "2026-07-19T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "三洋堂書店",
+          "url": "https://nyuka-now.com/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-19T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "7/19 23:59まで"
+        },
+        {
+          "store": "シーガル",
+          "url": "https://nyuka-now.com/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-20T20:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "7/20 20:00まで"
+        },
+        {
+          "store": "トレカプラザ55通販店",
+          "url": "https://nyuka-now.com/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-21T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "7/21 23:59まで"
+        }
+      ],
+      "note": "MEGA拡張パックM6・メガレックウザ表紙・発売2026-07-31・BOX定価¥6,000・発売後実売で粗利判定"
+    },
+    {
+      "name": "RICOH GR IV",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 232600,
+      "jissei": 290000,
+      "premium_rate": 1.25,
+      "premium_level": "中",
+      "profit_max": 56800,
+      "best_route": "るでや買取",
+      "phase": "案内待ち",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "7/3再販分は経過・次回抽選待ち"
+        },
+        {
+          "store": "X @GR_RICOH（一次ソース）",
+          "url": "https://x.com/GR_RICOH",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "次回受付告知を常時監視"
+        }
+      ],
+      "note": "常設ウォッチ。現在各店抽選は受付終了/完売。次回受付開始を待機中(るでや+¥56,800想定)"
+    }
+  ]
+}

@@ -206,15 +206,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 55000,
+   "yahoo_shitene": 30000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "g1237861524",
@@ -324,15 +324,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 55000,
+   "yahoo_shitene": 30000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "o1237876001",
@@ -460,15 +460,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 55000,
+   "yahoo_shitene": 30000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "x1237865054",
@@ -736,15 +736,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 55000,
+   "yahoo_shitene": 30000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "s1237872130",
@@ -1506,15 +1506,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 26900,
-   "yahoo_shitene": 17000,
+   "jissei": 70000,
+   "yahoo_shitene": 40000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 20870,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️アナグラム実勢26,900(n=13)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "1237741713",
@@ -1932,15 +1932,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 26900,
-   "yahoo_shitene": 17000,
+   "jissei": 70000,
+   "yahoo_shitene": 40000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 20870,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️アナグラム実勢26,900(n=13)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "q1237963822",
@@ -2190,15 +2190,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 55000,
+   "yahoo_shitene": 30000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "h1237834121",
@@ -2514,15 +2514,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 20000,
+   "yahoo_shitene": 11100,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️実カテゴリ実勢に補正済(7/23) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%) ⚠️実カテゴリ実勢に補正済(7/23)"
   },
   {
    "id": "l1237840323",
@@ -4856,15 +4856,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 55000,
+   "yahoo_shitene": 30000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "j1237974570",
@@ -5614,15 +5614,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 20000,
+   "yahoo_shitene": 11100,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️実カテゴリ実勢に補正済(7/23) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%) ⚠️実カテゴリ実勢に補正済(7/23)"
   },
   {
    "id": "c1238155670",
@@ -5912,15 +5912,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 55000,
+   "yahoo_shitene": 30000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "v1238152996",
@@ -6258,15 +6258,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 55000,
+   "yahoo_shitene": 30000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "q1238144483",
@@ -8008,11 +8008,11 @@
    "status": "waiting",
    "coherence": "",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": null,
+   "yahoo_shitene": null,
    "tier": "Tier3",
    "tier_detail": "未照合（実勢要確認）",
-   "note": "⚠️実勢要確認（watch_list未登録） ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "⚠️実勢要確認（watch_list未登録）"
   },
   {
    "id": "m1238159803",
@@ -8078,15 +8078,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": 55000,
+   "yahoo_shitene": 30000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 17370,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "u1238157168",
@@ -8398,15 +8398,15 @@
    "status": "waiting",
    "coherence": "✅照合",
    "n40": null,
-   "jissei": 26900,
-   "yahoo_shitene": 17000,
+   "jissei": 70000,
+   "yahoo_shitene": 40000,
    "eco_shitene": null,
    "kaiten": null,
    "profit_eco": 20870,
    "jissei_asof": null,
    "tier": "Tier1",
    "tier_detail": "watch_list照合(KW一致100%)",
-   "note": "リサーチ済(KW一致100%) ⚠️アナグラム実勢26,900(n=13)に補正"
+   "note": "リサーチ済(KW一致100%)"
   },
   {
    "id": "d1238152695",
@@ -9072,11 +9072,11 @@
    "status": "waiting",
    "coherence": "",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": null,
+   "yahoo_shitene": null,
    "tier": "Tier3",
    "tier_detail": "未照合（実勢要確認）",
-   "note": "⚠️実勢要確認（watch_list未登録） ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "⚠️実勢要確認（watch_list未登録）"
   },
   {
    "id": "r1238160863",
@@ -9194,11 +9194,11 @@
    "status": "waiting",
    "coherence": "",
    "n40": null,
-   "jissei": 22245,
-   "yahoo_shitene": 13000,
+   "jissei": null,
+   "yahoo_shitene": null,
    "tier": "Tier3",
    "tier_detail": "未照合（実勢要確認）",
-   "note": "⚠️実勢要確認（watch_list未登録） ⚠️マカダム実勢22,245(n=66)に補正"
+   "note": "⚠️実勢要確認（watch_list未登録）"
   },
   {
    "id": "1238150150",

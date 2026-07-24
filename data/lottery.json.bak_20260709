@@ -1,0 +1,100 @@
+{
+  "schema": "v2",
+  "updated_at": "2026-07-09T05:10:20+09:00",
+  "candidates": [
+    {
+      "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 7200,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "未確定(発売前)",
+      "profit_max": 0,
+      "best_route": "発売後に判定(25周年前例¥5,500→¥20,000+)",
+      "phase": "受付中",
+      "deadline": "2026-07-15T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "セブンネットショッピング",
+          "url": "https://www.7net.omni7.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-06-30T00:00:00+09:00",
+          "entry_deadline": "2026-07-15T23:59:00+09:00",
+          "result_date": "2026-07-24T19:00:00+09:00",
+          "order_deadline": "",
+          "note": "要セブンネット購入歴(2025/6/1-2026/6/14)"
+        },
+        {
+          "store": "あみあみ",
+          "url": "https://www.amiami.jp/",
+          "phase": "終了",
+          "entry_open": "2026-07-02T00:00:00+09:00",
+          "entry_deadline": "2026-07-07T13:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "受付終了"
+        },
+        {
+          "store": "ポケモンセンターオンライン",
+          "url": "https://www.pokemoncenter-online.com/",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "7月中に日程発表予定・毎晩監視"
+        },
+        {
+          "store": "Amazon",
+          "url": "https://www.amazon.co.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-06-02T14:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "招待リクエスト常時受付"
+        }
+      ],
+      "note": "9/16世界同時発売・発売前は検知任務(粗利判定保留)・応募ノーリスク"
+    },
+    {
+      "name": "RICOH GR IV",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 211800,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "要再検証(7/1値上げ改定)",
+      "profit_max": 56800,
+      "best_route": "るでや買取(改定前実績・現在値要確認)",
+      "phase": "受付中",
+      "deadline": "2026-07-25T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-25T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "来店販売・事前本人確認要・東京店頭のみ"
+        },
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "案内待ち",
+          "entry_open": "2026-07-03T12:00:00+09:00",
+          "entry_deadline": "2026-07-06T12:00:00+09:00",
+          "result_date": "2026-07-14T00:00:00+09:00",
+          "order_deadline": "2026-07-16T23:59:00+09:00",
+          "note": "1次発表7/14・2次発表7/21(注文〜7/23)"
+        }
+      ],
+      "note": "GR IV HDF発表7/10・Monochrome発表7/8も進行中"
+    }
+  ]
+}
