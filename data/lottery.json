@@ -1,7 +1,88 @@
 {
   "schema": "v2",
-  "updated_at": "2026-07-27T06:33:03+09:00",
+  "updated_at": "2026-07-27T21:36:30+09:00",
   "candidates": [
+    {
+      "name": "ポケカ ストームエメラルダ 1BOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 6006,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "低",
+      "profit_max": 0,
+      "best_route": "発売後judge(7/31〜)",
+      "phase": "受付中",
+      "deadline": "2026-07-27T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "フルコンプ(対象店舗・WEB抽選/店頭受取)",
+          "url": "https://livepocket.jp/e/1a45e",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-07-27T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🔴本日23:59締切"
+        }
+      ],
+      "note": "2026-07-31(金)発売・メガレックウザex収録。発売前so実勢なし=粗利判定保留(SKILL準拠)。参考シグナル: メルカリ『予約』出品が¥25,800〜33,333(定価¥6,006)で成約=期待は高いが予約権価格so相場採用しない。発売後(7/31〜)に実機再判定"
+    },
+    {
+      "name": "ポケカ メガブレイブ 1BOX(再販抽選)",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 5400,
+      "jissei": 12000,
+      "premium_rate": 2.22,
+      "premium_level": "高",
+      "profit_max": 4800,
+      "best_route": "メルカリ(シュリンク付き未開封1BOX)",
+      "phase": "受付中",
+      "deadline": "2026-08-02T12:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "フルコンプ(対象店舗・WEB抽選/店頭受取)",
+          "url": "https://livepocket.jp/e/im27p",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-02T12:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "★店頭受取必須。遠方/渡航中は実質応募不可so要確認"
+        }
+      ],
+      "note": "2025-08-01発売弾の再販抽選。実勢=メルカリ売切シュリンク付き1BOX中央値¥12,000(n=16・本日実機検証)。粗利=12,000x0.9-送料600-定価5,400=¥4,800"
+    },
+    {
+      "name": "ポケカ メガシンフォニア 1BOX(再販抽選)",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 5400,
+      "jissei": 10500,
+      "premium_rate": 1.94,
+      "premium_level": "高",
+      "profit_max": 3450,
+      "best_route": "メルカリ(シュリンク付き未開封1BOX)",
+      "phase": "受付中",
+      "deadline": "2026-08-02T12:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "フルコンプ(対象店舗・WEB抽選/店頭受取)",
+          "url": "https://livepocket.jp/e/im27p",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-02T12:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "★店頭受取必須。メガブレイブと同一抽選枠"
+        }
+      ],
+      "note": "実勢=メルカリ売切シュリンク付き1BOX中央値¥10,500(n=13・本日実機検証)。粗利=10,500x0.9-600-5,400=¥3,450。メガブレイブより薄い"
+    },
     {
       "name": "ワンピースカード 世界最強の戦士 OP-17 1BOX",
       "brand": "ONE PIECEカードゲーム",
@@ -60,33 +141,6 @@
       "note": "2026-08-22(土)発売・4周年記念弾・リーダースーパーパラレル初登場。⚠️粗利¥7,140は前弾OP-16実績ベンチ(定価¥5,280→メルカリ1BOX¥15-16k=粗利約¥8,000)からの推定。発売前so実勢は未検証=発売後(8/22〜)にメルカリ実機で再判定必須。当選後は早期売却推奨(発売直後が高値・数週で軟化)"
     },
     {
-      "name": "RICOH GR 全6機種 / GR SPACE TOKYO 来店抽選",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 0,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "高",
-      "profit_max": 64340,
-      "best_route": "メルカリ(新品未開封)",
-      "phase": "受付中",
-      "deadline": "2026-08-24T19:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "GR SPACE TOKYO(原宿)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "2026-07-26T11:30:00+09:00",
-          "entry_deadline": "2026-08-24T19:00:00+09:00",
-          "result_date": "2026-09-05T00:00:00+09:00",
-          "order_deadline": "2026-09-20T19:00:00+09:00",
-          "note": "⚠️来店本人確認必須(東京都渋谷区神宮前6-16-19)。火水祝+8/12-19休。受取も来店"
-        }
-      ],
-      "note": "対象=GR IV / IV HDF / IV Monochrome / IIIx / IIIx Urban / IIIx HDF。粗利は最大機種GR IIIx基準。⚠️名古屋圏からは来店2往復必須so実質参加困難=参考情報"
-    },
-    {
       "name": "ポケカ 30th CELEBRATION 拡張パックBOX",
       "brand": "ポケモンカード",
       "category": "トレカ",
@@ -97,9 +151,19 @@
       "profit_max": 0,
       "best_route": "発売後judge",
       "phase": "受付中",
-      "deadline": "",
+      "deadline": "2026-08-09T23:59:00+09:00",
       "status": "未応募",
       "routes": [
+        {
+          "store": "カードラボ(店頭QR抽選)",
+          "url": "https://snkrdunk.com/articles/32425/",
+          "phase": "受付中",
+          "entry_open": "2026-07-27T00:00:00+09:00",
+          "entry_deadline": "2026-08-09T23:59:00+09:00",
+          "result_date": "2026-08-10T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "🆕本日7/27受付開始(夜スイープで新規検知)・店頭QR応募"
+        },
         {
           "store": "Amazon(招待リクエスト)",
           "url": "https://www.amazon.co.jp/dp/B0GXCRBL5J",
@@ -141,7 +205,34 @@
           "note": "BOX＋プレミアムデッキセット エーフィ・ブラッキーが抽選対象と告知済・日程未発表"
         }
       ],
-      "note": "2026-09-16(水)世界同時発売・¥360/パック ¥7,200/BOX・新レアFUR・ピカチュウ30種。発売前so実勢なし=粗利判定保留(SKILL準拠)。25th前例あり上振れ期待。ポケセン/セブンネットの日程発表を毎日監視中"
+      "note": "2026-09-16(水)世界同時発売・¥360/パック ¥7,200/BOX・新レアFUR・ピカチュウ30種。発売前so実勢なし=粗利判定保留(SKILL準拠)。25th前例あり上振れ期待。ポケセン/セブンネットの日程発表を毎日監視中 / 🆕7/27夜: カードラボ受付開始(〜8/9)を検知"
+    },
+    {
+      "name": "RICOH GR 全6機種 / GR SPACE TOKYO 来店抽選",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "高",
+      "profit_max": 64340,
+      "best_route": "メルカリ(新品未開封)",
+      "phase": "受付中",
+      "deadline": "2026-08-24T19:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO(原宿)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "2026-07-26T11:30:00+09:00",
+          "entry_deadline": "2026-08-24T19:00:00+09:00",
+          "result_date": "2026-09-05T00:00:00+09:00",
+          "order_deadline": "2026-09-20T19:00:00+09:00",
+          "note": "⚠️来店本人確認必須(東京都渋谷区神宮前6-16-19)。火水祝+8/12-19休。受取も来店"
+        }
+      ],
+      "note": "対象=GR IV / IV HDF / IV Monochrome / IIIx / IIIx Urban / IIIx HDF。粗利は最大機種GR IIIx基準。⚠️名古屋圏からは来店2往復必須so実質参加困難=参考情報"
     },
     {
       "name": "サントリー 山崎/響/白州 各種(Amazon招待)",
@@ -384,7 +475,7 @@
           "note": "入荷Now 2026-07-27更新で「現在受付中のストアはありません」"
         }
       ],
-      "note": "🚨年跨ぎ罠を2026-07-27に再検知・回避: 検索上位に出た MINI MARKET 入店抽選(7/18-23・7/30-8/3)は曜日照合の結果すべて2025年の投稿(2026年は7/30=木で不一致)→通知せず。受付再開を毎日監視"
+      "note": "2026-07-27夜 入荷Now確認: 『現在受付中のストアはありません』。⚠️Web検索上位に出るMINI MARKET入場抽選(7/18-23・7/30-8/3)はX投稿IDが2025年帯=前年イベント。年次確認ルール適用で不採用。次回受付告知を継続監視"
     }
   ]
 }
