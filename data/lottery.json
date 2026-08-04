@@ -1,73 +1,160 @@
 {
   "schema": "v2",
-  "updated_at": "2026-08-03T21:36:23+09:00",
+  "updated_at": "2026-08-04T21:39:54+09:00",
   "candidates": [
     {
       "name": "ワンピカード OP-17 世界最強の戦士 BOX",
       "brand": "ONE PIECEカードゲーム",
       "category": "トレカ",
-      "price": 5280,
+      "price": 5760,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "未確定",
+      "premium_level": "判定保留",
       "profit_max": 0,
-      "best_route": "未確定(8/22発売後にメルカリ実勢で判定)",
+      "best_route": "メルカリ(発売後判定)",
       "phase": "受付中",
-      "deadline": "2026-08-04T13:59:00+09:00",
+      "deadline": "2026-08-04T23:00:00+09:00",
       "status": "未応募",
       "routes": [
-        {
-          "store": "あみあみ",
-          "url": "https://form.amiami.jp/draw20260730",
-          "phase": "受付中",
-          "entry_open": "2026-07-30T10:00:00+09:00",
-          "entry_deadline": "2026-08-04T13:59:00+09:00",
-          "result_date": "2026-08-05T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "WEB抽選→当選者にオンライン販売"
-        },
         {
           "store": "プレミアムバンダイ",
           "url": "https://p-bandai.jp/item/item-1000255170/",
           "phase": "受付中",
           "entry_open": "2026-07-29T11:00:00+09:00",
           "entry_deadline": "2026-08-04T23:00:00+09:00",
+          "result_date": "2026-08-10T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "本日23:00締切・2次抽選も予定"
+        },
+        {
+          "store": "ゲオ",
+          "url": "https://draw.geo-online.co.jp/lottery/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-06T17:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "無料会員登録要・発表は8月上旬"
+          "note": ""
         },
         {
-          "store": "キッズリパブリック(アプリ)",
-          "url": "https://kidsrepublic.jp/campaign/",
+          "store": "キッズリパブリック(イオン)",
+          "url": "https://www.kidsrepublic.jp/campaign/campaign_detail/20260731onepiececardgame",
           "phase": "受付中",
-          "entry_open": "2026-07-31T11:00:00+09:00",
+          "entry_open": "",
           "entry_deadline": "2026-08-06T19:59:00+09:00",
-          "result_date": "2026-08-21T12:00:00+09:00",
+          "result_date": "",
           "order_deadline": "",
-          "note": "アプリ抽選・当選者は店頭受取"
+          "note": ""
         },
         {
-          "store": "トレカプラザ55オンライン",
-          "url": "https://nyuka-now.com/archives/97393",
+          "store": "カードボックス ブックスジュピター店",
+          "url": "https://shoplottery.e-starbox.com/lottery/entry?code=N8rqPxzYkw",
           "phase": "受付中",
-          "entry_open": "2026-07-31T20:00:00+09:00",
+          "entry_open": "",
+          "entry_deadline": "2026-08-09T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ドラゴンスター各店",
+          "url": "https://dorasuta.membercard.jp/lottery",
+          "phase": "受付中",
+          "entry_open": "",
           "entry_deadline": "2026-08-11T23:59:00+09:00",
-          "result_date": "2026-08-13T00:00:00+09:00",
+          "result_date": "",
           "order_deadline": "",
-          "note": "Googleフォーム応募"
+          "note": ""
         },
         {
-          "store": "シーガル",
-          "url": "https://nyuka-now.com/archives/97393",
+          "store": "トレカプラザ55通販",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSffABPUyiR62_4WCWrJJs3GI7JPee7B9sC8Eh3qqCR9nSo1YA/viewform",
           "phase": "受付中",
-          "entry_open": "2026-08-02T10:00:00+09:00",
-          "entry_deadline": "2026-08-17T20:00:00+09:00",
-          "result_date": "2026-08-19T00:00:00+09:00",
+          "entry_open": "",
+          "entry_deadline": "2026-08-11T23:59:00+09:00",
+          "result_date": "",
           "order_deadline": "",
-          "note": "シーガルモバイル会員要・当選者は店頭販売"
+          "note": ""
+        },
+        {
+          "store": "シーガル各店",
+          "url": "https://x.com/onepiecenyuka/status/2083746237585699260",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-17T20:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "トレカSHOPあんりみてっど / エクストレカ",
+          "url": "https://x.com/unlimited15839/status/2076329781394887102",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-21T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
         }
       ],
-      "note": "未発売so粗利判定保留(SKILL準拠)。前例=OP-16「決戦の刻」定価¥5,280→メルカリ1BOX ¥15,000〜16,000/粗利約¥8,000。当選後は発売直後の早期売却推奨"
+      "note": "発売2026-08-22・4周年記念弾。発売前so実勢は保留(メルカリ¥28,888〜34,999は予約権so不採用)。前弾OP-16実績=定価¥5,280→売切¥15,000〜16,000＝粗利約¥8,000/BOX。応募ノーリスク"
+    },
+    {
+      "name": "ポケカ MEGA拡張パック ストームエメラルダ BOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 6000,
+      "jissei": 19999,
+      "premium_rate": 3.33,
+      "premium_level": "高",
+      "profit_max": 11299,
+      "best_route": "メルカリ",
+      "phase": "受付中",
+      "deadline": "2026-08-04T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "トレカプラザ55通販",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdd4y0UV63q1X_KxjD2-Drf0UFGnd1an-NaANP6ewoFOuLykg/viewform",
+          "phase": "受付中",
+          "entry_open": "2026-07-31T20:00:00+09:00",
+          "entry_deadline": "2026-08-04T23:59:00+09:00",
+          "result_date": "2026-08-06T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "本日締切"
+        },
+        {
+          "store": "ゲオ(アプリ)",
+          "url": "https://geo-online.co.jp/news/774",
+          "phase": "受付中",
+          "entry_open": "2026-08-03T11:00:00+09:00",
+          "entry_deadline": "2026-08-06T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "アプリ応募"
+        },
+        {
+          "store": "バースデイ(しまむら)",
+          "url": "https://www.shop-shimamura.com/disp/itemlist/?q=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89&b=birthday",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-08-10T12:00:00+09:00",
+          "order_deadline": "",
+          "note": "当選発表8/10午前"
+        },
+        {
+          "store": "イエローサブマリン(店舗)",
+          "url": "https://x.com/YS_INFO/",
+          "phase": "予告",
+          "entry_open": "2026-08-05T10:00:00+09:00",
+          "entry_deadline": "2026-08-09T20:00:00+09:00",
+          "result_date": "2026-08-14T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "明日エントリー開始"
+        }
+      ],
+      "note": "発売済7/31・実勢¥19,999(n=7 シュリンク付未開封1BOX)・粗利¥11,299/BOX・発売直後高値so当選後は早期売却"
     },
     {
       "name": "サントリー 山崎 Story of the Distillery 2026",
@@ -84,17 +171,44 @@
       "status": "未応募",
       "routes": [
         {
-          "store": "各種抽選(8/1検知分)",
+          "store": "各社抽選",
           "url": "https://nyuka-now.com/",
           "phase": "受付中",
           "entry_open": "",
           "entry_deadline": "2026-08-09T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "8/1の巡回で検知した内容を据え置き(8/2は再検証せず)"
+          "note": "前回巡回からのcarry-forward"
         }
       ],
-      "note": "⚠️買取店ルート限定(酒税法so フリマ転売禁止)。優先度最低。8/1検証の粗利¥5,760を据え置き ／⚠️2026-08-03は再検証せず前回巡回値を引き継ぎ(酒類は優先度最低)"
+      "note": "⚠️買取店ルート限定(酒税法)・フリマ転売禁止・優先度最低"
+    },
+    {
+      "name": "RICOH GR 全機種(GR IV/IV HDF/IV Mono/IIIx/IIIx Urban/IIIx HDF)",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 190620,
+      "jissei": 260000,
+      "premium_rate": 1.36,
+      "premium_level": "中",
+      "profit_max": 42380,
+      "best_route": "メルカリ",
+      "phase": "受付中",
+      "deadline": "2026-08-24T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO(来店販売抽選)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "2026-07-26T00:00:00+09:00",
+          "entry_deadline": "2026-08-24T23:59:00+09:00",
+          "result_date": "2026-09-05T00:00:00+09:00",
+          "order_deadline": "2026-09-20T23:59:00+09:00",
+          "note": "火水祝休・8/12-19夏季休業。引取9/6〜9/20は東京店頭・事前身分証確認要"
+        }
+      ],
+      "note": "⚠️東京店頭受取so名古屋からの往復コストを差引いて判断（粗利はGR IV基準の参考値）"
     },
     {
       "name": "ポケカ MEGA拡張パック 30th CELEBRATION BOX",
@@ -103,25 +217,25 @@
       "price": 7200,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "未確定",
+      "premium_level": "判定保留",
       "profit_max": 0,
-      "best_route": "未確定(9/16発売後にメルカリ実勢で判定)",
+      "best_route": "メルカリ(発売後判定)",
       "phase": "予告",
       "deadline": "2026-08-14T16:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "ポケモンセンターオンライン",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260803",
+          "url": "https://www.pokemoncenter-online.com/",
           "phase": "予告",
           "entry_open": "2026-08-10T12:00:00+09:00",
           "entry_deadline": "2026-08-14T16:59:00+09:00",
-          "result_date": "2026-08-21T13:00:00+09:00",
-          "order_deadline": "2026-08-25T16:59:00+09:00",
-          "note": "本人認証済み枠/未認証枠の2枠。9/16発売・世界同時"
+          "result_date": "",
+          "order_deadline": "",
+          "note": "当選数の大半が『本人認証済み枠』→ 受付前に本人認証を完了させておく"
         }
       ],
-      "note": "🎯名指しWATCH。2026-08-03に公式が抽選日程を発表。発売前so粗利判定保留(SKILL準拠)。25th ANNIVERSARY BOXの前例=定価¥5,500→ピーク¥20,000+"
+      "note": "発売2026-09-16(世界同時)・ポケカ30周年。発売前so粗利判定は保留。本人認証を8/10までに完了推奨"
     },
     {
       "name": "ポケカ MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
@@ -130,25 +244,25 @@
       "price": 6200,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "未確定",
+      "premium_level": "判定保留",
       "profit_max": 0,
-      "best_route": "未確定(9/16発売後にメルカリ実勢で判定)",
+      "best_route": "メルカリ(発売後判定)",
       "phase": "予告",
       "deadline": "2026-08-14T16:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "ポケモンセンターオンライン",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260803",
+          "url": "https://www.pokemoncenter-online.com/",
           "phase": "予告",
           "entry_open": "2026-08-10T12:00:00+09:00",
           "entry_deadline": "2026-08-14T16:59:00+09:00",
-          "result_date": "2026-08-21T15:00:00+09:00",
-          "order_deadline": "2026-08-25T16:59:00+09:00",
-          "note": "本人認証済み枠/未認証枠の2枠。9/16発売・世界同時"
+          "result_date": "",
+          "order_deadline": "",
+          "note": "当選数の大半が『本人認証済み枠』→ 受付前に本人認証を完了させておく"
         }
       ],
-      "note": "🎯名指しWATCH。2026-08-03に公式が抽選日程を発表。発売前so粗利判定保留(SKILL準拠)。25th ANNIVERSARY BOXの前例=定価¥5,500→ピーク¥20,000+"
+      "note": "発売2026-09-16(世界同時)・ポケカ30周年。発売前so粗利判定は保留。本人認証を8/10までに完了推奨"
     },
     {
       "name": "ポケカ MEGA 30th CELEBRATION FUTURISTIC BOX",
@@ -157,25 +271,25 @@
       "price": 27500,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "未確定",
+      "premium_level": "判定保留",
       "profit_max": 0,
-      "best_route": "未確定(9/16発売後にメルカリ実勢で判定)",
+      "best_route": "メルカリ(発売後判定)",
       "phase": "予告",
       "deadline": "2026-08-14T16:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "ポケモンセンターオンライン",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260803",
+          "url": "https://www.pokemoncenter-online.com/",
           "phase": "予告",
           "entry_open": "2026-08-10T12:00:00+09:00",
           "entry_deadline": "2026-08-14T16:59:00+09:00",
-          "result_date": "2026-08-21T17:00:00+09:00",
-          "order_deadline": "2026-08-25T16:59:00+09:00",
-          "note": "本人認証済み枠/未認証枠の2枠。9/16発売・世界同時"
+          "result_date": "",
+          "order_deadline": "",
+          "note": "当選数の大半が『本人認証済み枠』→ 受付前に本人認証を完了させておく"
         }
       ],
-      "note": "🎯名指しWATCH。2026-08-03に公式が抽選日程を発表。発売前so粗利判定保留(SKILL準拠)。25th ANNIVERSARY BOXの前例=定価¥5,500→ピーク¥20,000+"
+      "note": "発売2026-09-16(世界同時)・ポケカ30周年。発売前so粗利判定は保留。本人認証を8/10までに完了推奨"
     },
     {
       "name": "ポケカ MEGA 30th CELEBRATION カードセット(9種セット)",
@@ -184,206 +298,172 @@
       "price": 10800,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "未確定",
+      "premium_level": "判定保留",
       "profit_max": 0,
-      "best_route": "未確定(9/16発売後にメルカリ実勢で判定)",
+      "best_route": "メルカリ(発売後判定)",
       "phase": "予告",
       "deadline": "2026-08-31T16:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "ポケモンセンターオンライン",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260803",
+          "url": "https://www.pokemoncenter-online.com/",
           "phase": "予告",
           "entry_open": "2026-08-28T12:00:00+09:00",
           "entry_deadline": "2026-08-31T16:59:00+09:00",
-          "result_date": "2026-09-04T15:00:00+09:00",
-          "order_deadline": "2026-09-08T16:59:00+09:00",
-          "note": "本人認証済み枠/未認証枠の2枠。9/16発売・世界同時"
+          "result_date": "",
+          "order_deadline": "",
+          "note": "当選数の大半が『本人認証済み枠』→ 受付前に本人認証を完了させておく"
         }
       ],
-      "note": "🎯名指しWATCH。2026-08-03に公式が抽選日程を発表。発売前so粗利判定保留(SKILL準拠)。25th ANNIVERSARY BOXの前例=定価¥5,500→ピーク¥20,000+"
+      "note": "発売2026-09-16(世界同時)・ポケカ30周年。発売前so粗利判定は保留。本人認証を8/10までに完了推奨"
     },
     {
-      "name": "RICOH GR IIIx",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 187000,
+      "name": "Mini LABUBU(POP MART)",
+      "brand": "POP MART",
+      "category": "ホビー",
+      "price": 0,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "未確定",
+      "premium_level": "判定保留",
       "profit_max": 0,
-      "best_route": "未確定(本日は実勢未検証)",
-      "phase": "注文中",
-      "deadline": "2026-08-03T23:59:00+09:00",
+      "best_route": "メルカリ(発売後判定)",
+      "phase": "予告",
+      "deadline": "",
       "status": "未応募",
       "routes": [
         {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "注文中",
-          "entry_open": "2026-07-22T12:00:00+09:00",
-          "entry_deadline": "2026-07-24T12:00:00+09:00",
-          "result_date": "2026-07-31T00:00:00+09:00",
-          "order_deadline": "2026-08-03T23:59:00+09:00",
-          "note": "1次当選案内7/31・注文期限8/3 23:59(本日) / 2次案内8/17・注文8/17〜8/19 23:59"
+          "store": "POP MART公式オンライン/入荷Now",
+          "url": "https://nyuka-now.com/archives/153107",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "抽選告知は発売1〜2週前so8/15前後に再確認"
         }
       ],
-      "note": "⚠️1次当選していれば注文締切は本日23:59。落選でも2次案内8/17あり"
+      "note": "⚠️年次確認未了: 『8/29 10:00 Mini Labubu販売開始』の出典が2025年記事の可能性あり。公式X @POPMARTJapan の投稿日時で要再確認(SKILL I枠の年次確認ルール)"
     },
     {
       "name": "RICOH GR IV HDF / GR IV Monochrome",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 244000,
-      "jissei": 226500,
-      "premium_rate": 0.93,
-      "premium_level": "低",
-      "profit_max": -41150,
-      "best_route": "該当なし(定価割れ)",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "判定保留",
+      "profit_max": 0,
+      "best_route": "メルカリ",
       "phase": "注文中",
       "deadline": "2026-08-05T23:59:00+09:00",
-      "status": "未応募",
+      "status": "応募済(結果待ち)",
       "routes": [
         {
-          "store": "リコーイメージングストア",
+          "store": "リコーイメージングストア(1次)",
           "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
           "phase": "注文中",
-          "entry_open": "2026-07-22T12:00:00+09:00",
-          "entry_deadline": "2026-07-24T12:00:00+09:00",
+          "entry_open": "",
+          "entry_deadline": "",
           "result_date": "2026-08-03T00:00:00+09:00",
           "order_deadline": "2026-08-05T23:59:00+09:00",
-          "note": "1次当選案内8/3(本日)・注文8/3〜8/5 23:59 / 2次案内8/18・注文8/18〜8/20 23:59"
+          "note": "1次注文期間 8/3〜8/5"
+        },
+        {
+          "store": "リコーイメージングストア(2次)",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-08-18T00:00:00+09:00",
+          "order_deadline": "2026-08-20T23:59:00+09:00",
+          "note": "2次当選案内"
         }
       ],
-      "note": "転売目的では非推奨(実勢が定価を下回る)。実用購入なら当選は活かす価値あり"
+      "note": "メルカリ実勢 HDF¥280,000 / Mono¥238,000 いずれもn=1so参考値・粗利判定保留"
     },
     {
       "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
       "price": 190620,
-      "jissei": 226500,
-      "premium_rate": 1.19,
-      "premium_level": "低",
-      "profit_max": 12230,
-      "best_route": "メルカリ(フジヤ¥190,620で当選した場合のみ)",
-      "phase": "案内待ち",
-      "deadline": "2026-08-04T18:00:00+09:00",
-      "status": "未応募",
+      "jissei": 260000,
+      "premium_rate": 1.36,
+      "premium_level": "中",
+      "profit_max": 42380,
+      "best_route": "メルカリ",
+      "phase": "注文中",
+      "deadline": "2026-08-06T18:00:00+09:00",
+      "status": "応募済(結果待ち)",
       "routes": [
         {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "案内待ち",
-          "entry_open": "2026-07-22T12:00:00+09:00",
-          "entry_deadline": "2026-07-24T12:00:00+09:00",
-          "result_date": "2026-08-04T00:00:00+09:00",
-          "order_deadline": "2026-08-06T23:59:00+09:00",
-          "note": "1次当選案内8/4・注文8/4〜8/6 23:59 / 2次案内8/18・注文8/18〜8/20 23:59"
-        },
-        {
-          "store": "フジヤカメラ",
+          "store": "フジヤカメラ(8月入荷分1次)",
           "url": "https://www.fujiya-camera.co.jp/shop/pages/c-evricohgriv_7.aspx",
-          "phase": "案内待ち",
+          "phase": "注文中",
           "entry_open": "2026-07-31T10:00:00+09:00",
           "entry_deadline": "2026-08-02T17:00:00+09:00",
           "result_date": "2026-08-04T18:00:00+09:00",
           "order_deadline": "2026-08-06T18:00:00+09:00",
-          "note": "8月入荷分¥190,620税込。1次発表8/4 18:00・注文〜8/6 18:00 / 落選者は自動で2次へ・発表8/10 18:00・注文〜8/13 18:00"
+          "note": "販売価格¥190,620税込・当選メール本日18:00〜"
+        },
+        {
+          "store": "フジヤカメラ(8月入荷分2次)",
+          "url": "https://www.fujiya-camera.co.jp/shop/pages/c-evricohgriv_7.aspx",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-08-10T18:00:00+09:00",
+          "order_deadline": "2026-08-13T18:00:00+09:00",
+          "note": "2次抽選"
+        },
+        {
+          "store": "リコーイメージングストア(2次)",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-08-18T00:00:00+09:00",
+          "order_deadline": "2026-08-20T23:59:00+09:00",
+          "note": "2次当選案内"
         }
       ],
-      "note": "🚨2026-08-03 実勢訂正: メルカリ新品/未使用売切 中央¥226,500(n=30)。手取り=226,500×0.9−送料1,000=¥202,850 → フジヤ¥190,620なら+¥12,230だが、リコー定価¥232,600では−¥29,750の赤字。前回までのjissei¥290,000/粗利+¥45,240は今回のメルカリ実勢では裏取りできず(るでや買取¥290,000も本日確認できず)"
+      "note": "実勢¥260,000(メルカリ個人売切 新品未使用 n=20/¥254,999〜264,000)。⚠️SKILL記載の定価¥232,600は実売と乖離→フジヤ実売¥190,620ベースに訂正"
     },
     {
-      "name": "RICOH GR IIIx Urban Edition / GR IIIx HDF",
+      "name": "RICOH GR IIIx / IIIx Urban Edition / IIIx HDF",
       "brand": "RICOH",
       "category": "カメラ",
       "price": 0,
       "jissei": 0,
       "premium_rate": 0,
-      "premium_level": "未確定",
-      "profit_max": 0,
-      "best_route": "未確定",
-      "phase": "案内待ち",
-      "deadline": "2026-08-19T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "案内待ち",
-          "entry_open": "2026-07-22T12:00:00+09:00",
-          "entry_deadline": "2026-07-24T12:00:00+09:00",
-          "result_date": "2026-08-17T00:00:00+09:00",
-          "order_deadline": "2026-08-19T23:59:00+09:00",
-          "note": "1次(7/28案内・7/30注文締切)は終了。2次案内8/17・注文8/17〜8/19 23:59"
-        }
-      ],
-      "note": "次回エントリー(9月以降分)の告知は2026-08-03時点で未掲載"
-    },
-    {
-      "name": "RICOH GR IIIx / GR IIIx Urban Edition",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 187000,
-      "jissei": 0,
-      "premium_rate": 1.11,
-      "premium_level": "低",
+      "premium_level": "判定保留",
       "profit_max": 9800,
-      "best_route": "るでや買取",
+      "best_route": "メルカリ",
       "phase": "案内待ち",
       "deadline": "2026-08-19T23:59:00+09:00",
-      "status": "未応募",
+      "status": "応募済(結果待ち)",
       "routes": [
         {
-          "store": "リコーイメージングストア",
+          "store": "リコーイメージングストア(2次)",
           "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
           "phase": "案内待ち",
-          "entry_open": "2026-07-22T12:00:00+09:00",
-          "entry_deadline": "2026-07-24T12:00:00+09:00",
+          "entry_open": "",
+          "entry_deadline": "",
           "result_date": "2026-08-17T00:00:00+09:00",
           "order_deadline": "2026-08-19T23:59:00+09:00",
-          "note": "★8/2訂正: 1次案内(7/28〜31)・1次注文(7/28〜7/30)は終了済 → 現在は2次待ち。2次案内 8/17(月)・注文 8/17〜8/19。発送 8/4〜8/31"
+          "note": "2次当選案内 8/17・注文 8/17〜8/19"
         }
       ],
-      "note": "8/1検証の粗利+¥9,800(るでや買取)を据え置き。1次は終了so次は2次案内 8/17"
-    },
-    {
-      "name": "RICOH GR IIIx HDF",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 187000,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "未確定",
-      "profit_max": 0,
-      "best_route": "(要検証)",
-      "phase": "案内待ち",
-      "deadline": "2026-08-19T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "案内待ち",
-          "entry_open": "2026-07-22T12:00:00+09:00",
-          "entry_deadline": "2026-07-24T12:00:00+09:00",
-          "result_date": "2026-08-17T00:00:00+09:00",
-          "order_deadline": "2026-08-19T23:59:00+09:00",
-          "note": "2次案内 8/17(月)・注文 8/17〜8/19"
-        }
-      ],
-      "note": "るでや買取価格が未検証so粗利未確定。当選案内が出たら要検証"
+      "note": "1次(7/28・7/31案内)は終了。粗利は前回巡回値のcarry-forward"
     },
     {
       "name": "ポケカ メガブレイブ / メガシンフォニア BOX",
       "brand": "ポケモンカード",
       "category": "トレカ",
-      "price": 5400,
-      "jissei": 11500,
-      "premium_rate": 2.13,
-      "premium_level": "高",
+      "price": 6000,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "低",
       "profit_max": 4400,
       "best_route": "メルカリ",
       "phase": "案内待ち",
@@ -391,17 +471,17 @@
       "status": "未応募",
       "routes": [
         {
-          "store": "各店(受付終了)",
-          "url": "https://nyuka-now.com/archives/2459",
+          "store": "各店(入荷Now横断)",
+          "url": "https://nyuka-now.com/",
           "phase": "案内待ち",
           "entry_open": "",
-          "entry_deadline": "2026-08-02T23:59:00+09:00",
+          "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "2026-08-02で受付終了"
+          "note": "前回巡回から更新なし"
         }
       ],
-      "note": "2026-08-03 メルカリ実機検証: シュリンク付BOX売切 1BOX帯 ¥11,000〜12,000(n=15・中央¥11,500)。2BOXセット¥21,000〜23,000帯と混在so1BOX帯のみ採用。粗利=11,500×0.9−送料550−定価5,400=+¥4,400"
+      "note": "前回巡回(8/3)からのcarry-forward・粗利¥4,400"
     }
   ]
 }
