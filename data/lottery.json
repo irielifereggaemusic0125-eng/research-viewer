@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-08-06T04:00:54+09:00",
+  "updated_at": "2026-08-06T21:50:00+09:00",
   "candidates": [
     {
       "name": "ポケカ MEGA拡張パック ストームエメラルダ BOX",
@@ -13,18 +13,18 @@
       "profit_max": 11310,
       "best_route": "メルカリ",
       "phase": "受付中",
-      "deadline": "2026-08-06T17:59:00+09:00",
+      "deadline": "2026-08-06T22:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "ゲオオンライン",
           "url": "https://geo-online.co.jp/news/774",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "2026-08-06T17:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "本日締切"
+          "note": "本日締切 ※受付終了(2026-08-06確認)"
         },
         {
           "store": "カードボックス京都店",
@@ -48,53 +48,6 @@
         }
       ],
       "note": "実勢検証2026-08-06 メルカリ個人売切 シュリンク付1BOX中央¥19,900(n=14) 定価¥6,000(30パック×¥200)・発売2026-07-31so高値のうちに早期売却推奨"
-    },
-    {
-      "name": "ワンピカード OP-17 世界最強の戦士 BOX",
-      "brand": "ONE PIECEカードゲーム",
-      "category": "トレカ",
-      "price": 0,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "未確定",
-      "profit_max": 0,
-      "best_route": "未確定(発売後判定)",
-      "phase": "受付中",
-      "deadline": "2026-08-06T19:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "キッズリパブリック(アプリ)",
-          "url": "https://nyuka-now.com/archives/97393",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-08-06T19:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "本日締切・アプリ会員登録必須・店頭販売"
-        },
-        {
-          "store": "トレカプラザ55通販",
-          "url": "https://nyuka-now.com/archives/97393",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-08-11T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "WEB抽選・オンライン販売"
-        },
-        {
-          "store": "シーガル各店",
-          "url": "https://nyuka-now.com/archives/97393",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-08-17T20:00:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "シーガルモバイル会員限定・店頭販売"
-        }
-      ],
-      "note": "発売2026-08-22so未発売=実勢なし・粗利保留。参考:メルカリ予約権1BOXが¥28,888で売切(予約権so相場判定には使わない)。発売後にテープ付き未開封1BOX実勢で再判定"
     },
     {
       "name": "ポケカ MEGA拡張パック メガブレイブ / メガシンフォニア BOX",
@@ -218,6 +171,33 @@
       "note": "発売2026-09-16・粗利は発売後にメルカリ実勢で判定"
     },
     {
+      "name": "ワンピカード スタートデッキEX ルフィ＆エース ST-30",
+      "brand": "ONE PIECEカードゲーム",
+      "category": "トレカ",
+      "price": 1980,
+      "jissei": 14900,
+      "premium_rate": 7.53,
+      "premium_level": "高",
+      "profit_max": 5220,
+      "best_route": "メルカリ",
+      "phase": "受付中",
+      "deadline": "2026-08-09T23:45:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "おたから倉庫/Plays",
+          "url": "https://otakarasouko.com",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-09T23:45:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "アプリ抽選・店頭受取"
+        }
+      ],
+      "note": "実勢検証2026-08-06 メルカリ個人売切 単品未開封中央¥14,900(n=15・4〜6月成約)。現在の販売中中央は¥8,500(n=13)と乖離大so粗利は販売中ベースで保守計算¥5,220(売切ベースなら約¥11,000)。発売2026-04-11の再販枠・板が薄い"
+    },
+    {
       "name": "サントリー 山崎 Story of the Distillery 2026",
       "brand": "サントリー",
       "category": "酒類",
@@ -243,6 +223,53 @@
         }
       ],
       "note": "⚠️酒税法so出口は買取店持込/宅配買取のみ・フリマ販路禁止・優先度最低。数値は2026-08-04取得分の引き継ぎ(本日再検証せず)"
+    },
+    {
+      "name": "ワンピカード OP-17 世界最強の戦士 BOX",
+      "brand": "ONE PIECEカードゲーム",
+      "category": "トレカ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "未確定",
+      "profit_max": 0,
+      "best_route": "未確定(発売後判定)",
+      "phase": "受付中",
+      "deadline": "2026-08-11T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "キッズリパブリック(アプリ)",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-08-06T19:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "本日締切・アプリ会員登録必須・店頭販売 ※受付終了(2026-08-06確認)"
+        },
+        {
+          "store": "トレカプラザ55通販",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-11T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "WEB抽選・オンライン販売"
+        },
+        {
+          "store": "シーガル各店",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-17T20:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "シーガルモバイル会員限定・店頭販売"
+        }
+      ],
+      "note": "発売2026-08-22so未発売=実勢なし・粗利保留。参考:メルカリ予約権1BOXが¥28,888で売切(予約権so相場判定には使わない)。発売後にテープ付き未開封1BOX実勢で再判定"
     },
     {
       "name": "ONE PIECEカードゲーム 4th ANNIVERSARY SET",
@@ -427,7 +454,7 @@
       "profit_max": 0,
       "best_route": "メルカリ",
       "phase": "終了",
-      "deadline": "2026-07-24T12:00:00+09:00",
+      "deadline": "2026-08-24T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
