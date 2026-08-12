@@ -1,6 +1,6 @@
 {
  "schema": "v2",
- "updated_at": "2026-08-13T04:12:01+09:00",
+ "updated_at": "2026-08-13T04:17:21+09:00",
  "candidates": [
   {
    "name": "ポケカ MEGA拡張パック ストームエメラルダ BOX",
@@ -536,7 +536,68 @@
    "note": "倍率3.27倍と高いが単価が低く1件あたり粗利¥885程度。22種まとめ13,300は@605で定価並so旨味なし。数を捌ける体制なら成立、単発では目標粗利¥5,000に届かない",
    "source": "nyuka-now #156722",
    "verified": "2026-08-07"
+  },
+  {
+   "name": "JJJJound × New Balance 740 (発売8/7)",
+   "brand": "New Balance",
+   "category": "スニーカー",
+   "price": 18920,
+   "jissei": 36500,
+   "premium_rate": 1.93,
+   "premium_level": "高",
+   "status": "★勝ち筋の型・次回JJJJound枠は要応募",
+   "n": 19,
+   "turnover": "発売6日で19件成約＝超高回転",
+   "note": "粗利¥12,730/足。JJJJoundは高プレミア常連ブランド。同枠が出たら最優先で応募",
+   "source": "snkrdunk 8月カレンダー",
+   "verified": "2026-08-13"
+  },
+  {
+   "name": "Kith × Salomon XT-EVO (発売8/7)",
+   "brand": "Salomon",
+   "category": "スニーカー",
+   "price": 32500,
+   "jissei": 16000,
+   "premium_rate": 0.49,
+   "premium_level": "なし",
+   "status": "✗除外・定価割れ",
+   "n": 2,
+   "turnover": "薄い",
+   "note": "定価32,500に対し実勢14,000-18,000。同じ8/7発売コラボでもJJJJoundとは真逆。コラボ=儲かるは誤り",
+   "source": "snkrdunk",
+   "verified": "2026-08-13"
+  },
+  {
+   "name": "Nike Kobe 5 Protro (8/15 ドジャース)",
+   "brand": "Nike",
+   "category": "スニーカー",
+   "price": 22000,
+   "jissei": 19500,
+   "premium_rate": 0.89,
+   "premium_level": "なし",
+   "status": "✗見送り・既存カラーが定価割れ",
+   "n": 2,
+   "turnover": "薄い",
+   "note": "既存カラーの実勢¥19,500(0.89倍)。ドジャース版のみ跳ねる可能性は残るが根拠なしso見送り",
+   "source": "snkrdunk",
+   "verified": "2026-08-13"
+  },
+  {
+   "name": "New Balance 991v2 (8/14 ブラウン)",
+   "brand": "New Balance",
+   "category": "スニーカー",
+   "price": 39600,
+   "jissei": 23450,
+   "premium_rate": 0.59,
+   "premium_level": "なし",
+   "status": "✗見送り・定価割れ",
+   "n": 4,
+   "turnover": "薄い",
+   "note": "既存991v2の実勢¥23,450(0.59倍)。定価39,600は高すぎ",
+   "source": "snkrdunk",
+   "verified": "2026-08-13"
   }
  ],
- "sweep_note": "2026-08-13 全ジャンル横断: 入荷Now抽選15カテゴリ走査。ポケカ6ストア・ワンピ4ストアが受付中。カメラ/GPU/Switch2/PS5/たまごっち/ロルカナ/LABUBU/MTG/ガンダムABは受付なし"
+ "sweep_note": "2026-08-13 全ジャンル横断: 入荷Now抽選15カテゴリ走査。ポケカ6ストア・ワンピ4ストアが受付中。カメラ/GPU/Switch2/PS5/たまごっち/ロルカナ/LABUBU/MTG/ガンダムABは受付なし",
+ "genre_note_20260813": "アパレル(スニーカー)を初検証: 銘柄で天地。JJJJound=1.93倍/粗利12,730 vs Kith×Salomon=0.49倍・NB991v2=0.59倍・Kobe5=0.89倍。「コラボだから化ける」は誤り。化粧品は抽選文化が薄くクリスマスコフレ(11-12月)が主戦場so現在オフシーズン"
 }
