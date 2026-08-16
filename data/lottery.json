@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-08-16T22:10:00+09:00",
+  "updated_at": "2026-08-16T22:20:00+09:00",
   "candidates": [
     {
       "name": "ポケカ MEGA拡張パック 30th CELEBRATION BOX",
@@ -252,6 +252,73 @@
         }
       ],
       "note": "実勢再検証 2026-08-16 21:57 JST (n=23・テープ付未開封1BOXのみ/シングル・マーカー・複数BOX除外)。中央値¥25,000=前日¥28,500から−¥3,500の軟化。粗利=25,000×0.9−送料700−定価6,600。⚠️TCG暴落則so当選後2週以内に売却"
+    },
+    {
+      "name": "ポケカ MEGA拡張パック ストームエメラルダ BOX",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 6000,
+      "jissei": 17000,
+      "premium_rate": 2.83,
+      "premium_level": "高",
+      "profit_max": 8750,
+      "best_route": "メルカリ",
+      "phase": "受付中",
+      "deadline": "2026-08-16T23:00:00+09:00",
+      "status": "🔴受付中: TSUTAYA佐野店(23:00)/エディオン・トレカキャピタル各店(23:59)/カードボックス通販CBトレコロ(23:59)/エクストレカ(今月末・数量限定)。★本日2番手の粗利",
+      "routes": [
+        {
+          "store": "TSUTAYA佐野店",
+          "url": "https://x.com/T_sanoTCG/status/2088289535453249932",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-16T23:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕2026-08-16検出"
+        },
+        {
+          "store": "エディオン・トレカキャピタル各店",
+          "url": "https://edion-cp.com/pokeca082801",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-16T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕2026-08-16検出"
+        },
+        {
+          "store": "カードボックス通販(CBトレコロ)",
+          "url": "https://www.torecolo.jp/shop/t/t19294/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-08-16T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕2026-08-16検出"
+        },
+        {
+          "store": "エクストレカ",
+          "url": "https://cardchusen.com/pokeka/storm-emeralda",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "数量限定・今月末まで"
+        },
+        {
+          "store": "カードボックス松阪店",
+          "url": "https://x.com/CARD_MATSUSAKA/status/2088117130659340318",
+          "phase": "終了",
+          "entry_open": "",
+          "entry_deadline": "2026-08-16T22:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "22:00締切・本実行時点で経過"
+        }
+      ],
+      "note": "実勢検証 2026-08-16 22:18 JST (n=21・シュリンク付未開封1BOXのみ/シングル・PSA同梱・複数BOX除外・中央値¥17,000)。粗利=17,000×0.9−送料550−定価6,000。cardchusen掲載で計34件が並行受付中so他店も応募余地あり。⚠️TCG暴落則so当選後2週以内に売却"
     },
     {
       "name": "DBFW DUAL EVOLUTION [FB-09] BOX",
