@@ -139,6 +139,13 @@ textarea{min-height:64px;resize:vertical;line-height:1.5}
 <div id="paneM">
   <div class="note" id="needBox" style="margin-top:10px"></div>
   <div class="prof" id="profBox"></div>
+  <div class="out-h">🤖 AIに書かせる<button class="copy" onclick="cp('outP')">プロンプトをコピー</button></div>
+  <div class="note" style="margin:0 0 6px">短い説明文や断片からちゃんとした本文を書くのは<b>AIの仕事</b>です。
+  下のプロンプトをコピーしてClaudeに貼れば、Bansheeのルール込みで本文が返ります。返ってきた文章は下の「商品説明」欄に貼り直すと文字数と罫線を確認できます。</div>
+  <label style="margin-top:0">材料（短い説明・箇条書き・他セラー文など何でも）</label>
+  <textarea id="srcMemo" placeholder="例: ロンワンズのドーヴ。Lサイズ24cm。116g。傷少し。定価39.6万。箱なし。" oninput="buildPrompt()"></textarea>
+  <textarea id="outP" style="min-height:150px;font-size:11.5px"></textarea>
+
   <div class="out-h">商品タイトル<span class="cnt" id="cT">0 / 40</span><button class="copy" onclick="cp('outT')">コピー</button></div>
   <textarea id="outT" style="min-height:52px"></textarea>
   <div class="note" id="brandWarn"></div>
@@ -161,5 +168,5 @@ textarea{min-height:64px;resize:vertical;line-height:1.5}
 
 <div class="toast" id="toast"></div>
 </div>
-<script src="listing.js?v=20260819f"></script>
+<script src="listing.js?v=20260819g"></script>
 </body></html>
