@@ -619,6 +619,47 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .gc-warn{color:#ff5c5c;font-size:11px;font-weight:700;margin:2px 0 4px}
 #go-check-ok:disabled{opacity:.4;cursor:not-allowed}
 .spark{display:block}
+
+/* ===== 検索ワード管理 v2（Amazon風の整理された見た目・2026-08-19） =====
+   ダークテーマは維持しつつ、Amazonの「明確な階層・余白・琥珀色のプライマリ操作」を採り入れる。 */
+:root{ --amz:#ffa41c; --amz2:#ff8f00; --amz-ink:#1a1300; --amz-line:#3a3a3a; }
+.wz-bar{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 78%,transparent);padding:2px 0 10px}
+.wz-search{position:relative;display:flex;align-items:center}
+.wz-search input{width:100%;min-height:42px;padding:10px 38px 10px 38px;border-radius:10px;border:1.5px solid var(--line);
+  background:var(--surface2);color:var(--text);font-size:14px;outline:none;transition:.15s}
+.wz-search input:focus{border-color:var(--amz);box-shadow:0 0 0 3px rgba(255,164,28,.22)}
+.wz-search .wz-ico{position:absolute;left:12px;font-size:14px;color:var(--muted2);pointer-events:none}
+.wz-search .wz-clr{position:absolute;right:8px;border:none;background:transparent;color:var(--muted2);font-size:17px;
+  cursor:pointer;padding:6px;line-height:1}
+.wz-add{display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:8px}
+.wz-add select{min-height:40px;border-radius:9px;border:1.5px solid var(--line);background:var(--surface2);
+  color:var(--text);font-size:12.5px;padding:0 8px;max-width:100%}
+.wz-add input{min-height:40px;border-radius:9px;border:1.5px solid var(--line);background:var(--surface2);
+  color:var(--text);font-size:13.5px;padding:0 11px;outline:none}
+.wz-add input:focus{border-color:var(--amz);box-shadow:0 0 0 3px rgba(255,164,28,.2)}
+.wz-add-btn{min-height:40px;padding:0 18px;border-radius:9px;border:1px solid var(--amz2);
+  background:linear-gradient(180deg,var(--amz),var(--amz2));color:var(--amz-ink);font-size:13px;font-weight:800;
+  cursor:pointer;white-space:nowrap;transition:.12s}
+.wz-add-btn:active{filter:brightness(.92)}
+.wz-add-btn[disabled]{opacity:.45;cursor:default;filter:none}
+.wz-row2{display:grid;grid-template-columns:auto 1fr;gap:7px;margin-top:7px}
+.wz-hint{font-size:10.5px;color:var(--muted2);margin-top:6px;line-height:1.5}
+.wz-count{font-size:11px;color:var(--muted);margin:2px 2px 8px}
+.wz-count b{color:var(--amz)}
+/* ワード行：Amazonの商品行のような明確な区切りと余白 */
+.wz-item{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:11px 12px;margin-bottom:8px;
+  transition:border-color .15s}
+.wz-item.pend{border-color:var(--amz);background:rgba(255,164,28,.06)}
+.wz-head{display:flex;align-items:flex-start;gap:8px}
+.wz-word{flex:1;font-size:13px;font-weight:700;color:var(--text);line-height:1.45;word-break:break-all}
+.wz-word mark{background:rgba(255,164,28,.3);color:var(--text);border-radius:3px;padding:0 1px}
+.wz-del{flex-shrink:0;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--surface2);
+  color:var(--muted2);font-size:15px;line-height:1;cursor:pointer;transition:.12s}
+.wz-del:active{background:var(--alert-bg);color:var(--alert);border-color:var(--alert)}
+.wz-pend{display:inline-block;margin-left:6px;font-size:9.5px;font-weight:700;color:var(--amz-ink);
+  background:var(--amz);border-radius:4px;padding:2px 6px;vertical-align:2px}
+.wz-empty{text-align:center;color:var(--muted2);font-size:12px;padding:26px 10px}
+
 </style>
 </head>
 <body>
@@ -1684,70 +1725,147 @@ function toggleWordCat(id){
   renderWords();
 }
 
+// ===== 検索ワード管理 v2（絞り込み・追加・削除／2026-08-19） =====
+let wzFilter='';
+const wzPendKey='_wz_pending';
+function wzPendLoad(){ try{return new Set(JSON.parse(localStorage.getItem(wzPendKey)||'[]'));}catch(e){return new Set();} }
+function wzPendSave(s){ try{localStorage.setItem(wzPendKey,JSON.stringify([...s]));}catch(e){} }
+
+// 変更をntfyへ送る。Mac側の apply_search_words.py（cron 15分毎）が拾って
+// search_words.json に反映しGitHub Pagesへpushする。届くまでは「反映待ち」表示。
+async function wzPublish(ops){
+  try{ await fetch(NTFY_BASE,{method:'POST',body:JSON.stringify({type:'searchwords',dev:_ntfyDev,ops})}); return true; }
+  catch(e){ return false; }
+}
+function wzNewId(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
+
+function wzSetFilter(v){ wzFilter=v; renderWords(); const el=document.getElementById('wzq'); if(el){el.focus();
+  el.setSelectionRange(el.value.length,el.value.length);} }
+function wzClear(){ wzFilter=''; renderWords(); }
+
+async function wzAdd(){
+  const cat=document.getElementById('wzcat').value;
+  const inp=document.getElementById('wznew');
+  let w=(inp.value||'').trim();
+  if(!w){ showToast('ワードを入力してください'); return; }
+  if(!/^1円\s/.test(w)) w='1円 '+w;            // ヤフオク1円検索が前提so自動で付ける
+  const cats=wordsData.categories;
+  const c=cats.find(x=>x.id===cat);
+  const words=c.words.map(x=>typeof x==='string'?x:(x.word||''));
+  if(words.includes(w)){ showToast('既に登録済み: '+w); return; }
+  c.words.push(w);                              // 楽観的に即反映
+  const p=wzPendLoad(); p.add(cat+'\u0000'+w); wzPendSave(p);
+  inp.value='';
+  renderWords();
+  const ok=await wzPublish([{id:wzNewId(),op:'add',cat,word:w,ts:new Date().toISOString()}]);
+  showToast(ok?('追加: '+w+'（反映待ち）'):'送信失敗・電波を確認してください');
+}
+
+async function wzDel(cat,encWord){
+  const w=decodeURIComponent(encWord);
+  if(!confirm('削除しますか\n\n'+w)) return;
+  const c=wordsData.categories.find(x=>x.id===cat);
+  c.words=c.words.filter(x=>(typeof x==='string'?x:(x.word||''))!==w);
+  const p=wzPendLoad(); p.add(cat+'\u0000'+w); wzPendSave(p);
+  renderWords();
+  const ok=await wzPublish([{id:wzNewId(),op:'del',cat,word:w,ts:new Date().toISOString()}]);
+  showToast(ok?('削除: '+w+'（反映待ち）'):'送信失敗・電波を確認してください');
+}
+
+function wzEsc(t){ return String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function wzHi(t,q){ const e=wzEsc(t); if(!q) return e;
+  try{ return e.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark>$1</mark>'); }catch(x){ return e; } }
+
+function wzItemHTML(cat,item,TGT,pend){
+  const w=(typeof item==='string')?item:(item.word||'');
+  const eco=stripIchien(w), ecoE=ecoKeyword(w);
+  const eW=encodeURIComponent(w), eEco=encodeURIComponent(eco), eEcoE=encodeURIComponent(ecoE);
+  const isPend=pend.has(cat.id+'\u0000'+w);
+  let perf='';
+  if(item&&typeof item==='object'&&(item.kaiten!=null||item.rieki!=null)){
+    const k=item.kaiten!=null?`回転${item.kaiten}日`:'', r=item.rieki!=null?`粗利${item.rieki}%`:'';
+    perf=`<div class="wr-perf">${k?`<span class="wr-badge k">${k}</span>`:''}${r?`<span class="wr-badge r">${r}</span>`:''}</div>`;
+  }
+  return `<div class="wz-item${isPend?' pend':''}">
+    <div class="wz-head">
+      <div class="wz-word">${wzHi(w,wzFilter)}${isPend?'<span class="wz-pend">反映待ち</span>':''}</div>
+      <button class="wz-del" title="削除" onclick="wzDel('${cat.id}','${eW}')">×</button>
+    </div>
+    ${perf}
+    <div class="wf-btns4">
+      <a class="wf-btn4 y" href="https://auctions.yahoo.co.jp/search/search?p=${eW}&store=1"${TGT}>Y<span class="b4-sub">ヤフオク</span></a>
+      <a class="wf-btn4 e" href="https://www.ecoauc.com/client/auctions/inspect?q=${eEcoE}&limit=50&tableType=grid&page=1"${TGT}>E<span class="b4-sub">エコオク</span></a>
+      <a class="wf-btn4 m" href="https://jp.mercari.com/search?keyword=${eEco}&status=sold_out"${TGT}>M<span class="b4-sub">メルカリ</span></a>
+      <a class="wf-btn4 g" href="https://www.google.com/search?tbm=isch&q=${eEco}"${TGT}>G<span class="b4-sub">画像</span></a>
+    </div>
+  </div>`;
+}
+
 function renderWords() {
-  const main = document.getElementById('cards');
-  if (!wordsData) return;
-  const cats = wordsData.categories;
-  const realCount = cats.filter(c=>c.id!=='exclusions').reduce((s,c)=>s+c.words.length,0);
-  const excludeCat = cats.find(c=>c.id==='exclusions');
+  const main=document.getElementById('cards');
+  if(!wordsData) return;
+  const cats=wordsData.categories;
+  const excludeCat=cats.find(c=>c.id==='exclusions');
+  const live=cats.filter(c=>c.id!=='exclusions');
+  const realCount=live.reduce((s,c)=>s+c.words.length,0);
+  const TGT=isIOS()?'':' target="_blank" rel="noopener"';
+  const pend=wzPendLoad();
+  const q=wzFilter.trim().toLowerCase();
 
-  // iPhone=Safari同タブ(ログイン維持) / PC・Android=新規タブ
-  const TGT = isIOS() ? '' : ' target="_blank" rel="noopener"';
-
-  const sections = cats.filter(c=>c.id!=='exclusions').map(cat => {
-    const open = openWordCats.has(cat.id);
-    const body = cat.words.map(item => {
-      const w = (typeof item === 'string') ? item : (item.word || '');   // 文字列/オブジェクト両対応
-      const eco = stripIchien(w);            // M/G用: ブランド+商品名(1円のみ除去)
-      const ecoE = ecoKeyword(w);            // E用: メジャー=ブランド除去/マイナー=ブランドのみ
-      const eW = encodeURIComponent(w);
-      const eEco = encodeURIComponent(eco);
-      const eEcoE = encodeURIComponent(ecoE);
-      const yahooUrl  = `https://auctions.yahoo.co.jp/search/search?p=${eW}&store=1`;
-      const ecoUrl    = `https://www.ecoauc.com/client/auctions/inspect?q=${eEcoE}&limit=50&tableType=grid&page=1`;
-      const mercUrl   = `https://jp.mercari.com/search?keyword=${eEco}&status=sold_out`;
-      const googleUrl = `https://www.google.com/search?tbm=isch&q=${eEco}`;
-      let perf = '';
-      if (item && typeof item==='object' && (item.kaiten!=null || item.rieki!=null)){
-        const k = item.kaiten!=null ? `回転${item.kaiten}日` : '';
-        const r = item.rieki!=null ? `粗利${item.rieki}%` : '';
-        perf = `<div class="wr-perf">${k?`<span class="wr-badge k">${k}</span>`:''}${r?`<span class="wr-badge r">${r}</span>`:''}</div>`;
-      }
-      return `<div class="wf-item">
-        <div class="wf-item-word">${w}</div>
-        ${perf}
-        <div class="wf-btns4">
-          <a class="wf-btn4 y" href="${yahooUrl}"${TGT} title="ヤフオク検索(1円先頭)">Y<span class="b4-sub">ヤフオク</span></a>
-          <a class="wf-btn4 e" href="${ecoUrl}"${TGT} title="EcoAuc下見検索">E<span class="b4-sub">エコオク</span></a>
-          <a class="wf-btn4 m" href="${mercUrl}"${TGT} title="メルカリSOLD相場">M<span class="b4-sub">メルカリ</span></a>
-          <a class="wf-btn4 g" href="${googleUrl}"${TGT} title="Google画像検索">G<span class="b4-sub">画像</span></a>
+  let body;
+  if(q){
+    const hits=[];
+    live.forEach(c=>c.words.forEach(it=>{
+      const w=(typeof it==='string')?it:(it.word||'');
+      if(w.toLowerCase().includes(q)) hits.push({c,it});
+    }));
+    body = hits.length
+      ? `<div class="wz-count"><b>${hits.length}</b>件が一致</div>`+hits.map(h=>wzItemHTML(h.c,h.it,TGT,pend)).join('')
+      : `<div class="wz-empty">「${wzEsc(wzFilter)}」に一致するワードはありません</div>`;
+  } else {
+    body = live.map(cat=>{
+      const open=openWordCats.has(cat.id);
+      return `<div class="wr-acc">
+        <div class="wr-acc-hdr" onclick="toggleWordCat('${cat.id}')">
+          <span class="wr-acc-lbl">${cat.label}</span>
+          <span class="wr-sec-n">${cat.words.length}件</span>
+          <span class="wr-acc-arrow${open?' open':''}">▼</span>
         </div>
+        ${open?`<div class="wr-acc-body">${cat.words.map(it=>wzItemHTML(cat,it,TGT,pend)).join('')}</div>`:''}
       </div>`;
     }).join('');
-    return `<div class="wr-acc">
-      <div class="wr-acc-hdr" onclick="toggleWordCat('${cat.id}')">
-        <span class="wr-acc-lbl">${cat.label}</span>
-        <span class="wr-sec-n">${cat.words.length}件</span>
-        <span class="wr-acc-arrow${open?' open':''}">▼</span>
-      </div>
-      ${open ? `<div class="wr-acc-body">${body}</div>` : ''}
-    </div>`;
-  }).join('');
+  }
 
-  main.innerHTML = `
+  main.innerHTML=`
     <div class="words-header">
-      <span class="words-title">🔍 検索ワード（実績順）</span>
+      <span class="words-title">🔍 検索ワード</span>
       <span class="words-meta">${realCount}件 / 更新:${fresh(wordsData.updated)}${wordsData.updated}</span>
     </div>
-    <div class="words-note">
-      <b>Y</b>ヤフオク（1円先頭・store）／<b>E</b>エコオク下見／<b>M</b>メルカリSOLD／<b>G</b>Google画像<br>
-      E・M・Gは先頭「1円 」を自動除去。${isIOS()?'iPhoneは同じタブで開きログイン維持。':'PCは新規タブ。'}　タップでカテゴリ開閉。
+    <div class="wz-bar">
+      <div class="wz-search">
+        <span class="wz-ico">🔎</span>
+        <input id="wzq" type="search" placeholder="ワードを絞り込む（例: ロンワンズ）" value="${wzEsc(wzFilter)}"
+               oninput="wzSetFilter(this.value)" autocomplete="off">
+        ${wzFilter?'<button class="wz-clr" onclick="wzClear()" title="クリア">✕</button>':''}
+      </div>
+      <div class="wz-row2">
+        <select id="wzcat">${live.map(c=>`<option value="${c.id}">${wzEsc(c.label.replace(/^[^\s]+\s/,'').slice(0,22))}</option>`).join('')}</select>
+        <input id="wznew" type="text" placeholder="追加するワード" autocomplete="off"
+               onkeydown="if(event.key==='Enter')wzAdd()">
+      </div>
+      <div class="wz-add" style="grid-template-columns:1fr">
+        <button class="wz-add-btn" onclick="wzAdd()">＋ このカテゴリに追加</button>
+      </div>
+      <div class="wz-hint">
+        先頭の「1円 」は自動で付きます。追加・削除はこの端末に即反映され、<b>15分以内</b>にMac側へ取り込まれます（それまで「反映待ち」表示）。<br>
+        <b>Y</b>ヤフオク（1円・store）／<b>E</b>エコオク下見／<b>M</b>メルカリSOLD／<b>G</b>画像。E・M・Gは「1円 」を自動除去。
+      </div>
     </div>
-    ${sections}
-    ${excludeCat ? `<div class="wf-exclude">
+    ${body}
+    ${(!q&&excludeCat)?`<div class="wf-exclude">
       <div class="wf-exclude-hdr">${excludeCat.label}</div>
-      ${excludeCat.words.map(x=>`<div class="wf-exclude-row">${(typeof x==='string')?x:(x.word||'')}</div>`).join('')}
-    </div>` : ''}`;
+      ${excludeCat.words.map(x=>`<div class="wf-exclude-row">${wzEsc((typeof x==='string')?x:(x.word||''))}</div>`).join('')}
+    </div>`:''}`;
 }
 
 function copyEco(word) {
