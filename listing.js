@@ -322,6 +322,31 @@ function gen(){
   }
 }
 
+
+/* ── 拡張機能からの受け取り ──────────────────────────────
+   banshee_listing_grab.user.js が listing.html#d=<base64(JSON)> で開く。
+   hash はサーバに送られないso商品情報が外部に漏れない。 */
+function readHash(){
+  const m = location.hash.match(/[#&]d=([^&]+)/);
+  if(!m) return false;
+  let o;
+  try{ o = JSON.parse(decodeURIComponent(escape(atob(decodeURIComponent(m[1]))))); }
+  catch(e){ try{ o = JSON.parse(atob(m[1])); }catch(e2){ return false; } }
+  const map={bEn:'bEn',bJa:'bJa',name:'name',model:'model',mat:'mat',size:'size',color:'color',
+             acc:'acc',retail:'retail',wt:'wt',meas:'meas',cond:'cond',intro:'intro',price:'price'};
+  let n=0;
+  Object.entries(map).forEach(([k,id])=>{ if(o[k] && $(id) && !v(id)){ $(id).value=o[k]; n++; } });
+  if(o.raw && $('pasteSrc')) $('pasteSrc').value=o.raw;   // 元テキストも残す（あとで手動抽出できるように）
+  if(o.images && o.images.length && $('parseOut')){
+    $('parseOut').innerHTML = `<b style="color:var(--ok)">拡張機能から ${n}項目を受け取りました</b><br>`+
+      `画像 ${o.images.length}枚: `+o.images.slice(0,12).map((u,i)=>`<a href="${u}" target="_blank" style="color:var(--blue)">${i+1}</a>`).join(' ')+
+      `<br>※ 画像は右クリックで保存してください（出品時に必要）`;
+  }
+  history.replaceState(null,'',location.pathname);        // hashを消す（再読込での二重入力防止）
+  if(o.src) toast(o.src+' から取り込みました');
+  return n>0;
+}
+
 /* ── 在庫読み込み ─────────────────────────────────── */
 (async()=>{
   try{
@@ -332,6 +357,7 @@ function gen(){
       o.value=String(i); o.textContent=`${it.kanri_no}  ${(it.name||'').slice(0,22)}`; sel.appendChild(o); });
     $('kanriNote').textContent=`在庫 ${INV.length}件を読み込みました（更新 ${d.updated_at||'-'}）`;
   }catch(e){ $('kanriNote').textContent='在庫データを読み込めませんでした（手入力で使えます）'; }
+  readHash();
   gen();
 })();
 function pickKanri(){
