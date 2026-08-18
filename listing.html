@@ -84,6 +84,16 @@ textarea{min-height:64px;resize:vertical;line-height:1.5}
   <div class="note" id="kanriNote">在庫データを読み込み中…</div>
 </div></div>
 
+<div class="sec"><div class="sec-h" onclick="tg('s9')">📥 他セラーの説明文から取り込む<span class="ar" id="a-s9">▼</span></div>
+<div class="sec-b hide" id="s9">
+  <div class="note">他社の出品文を貼ると、<b>型番・素材・サイズ等の事実情報だけ</b>を抜き出してフォームに入れます。
+  文章はそのまま使わず、Bansheeテンプレで組み直します（丸写しは規約・著作権の問題があるため）。</div>
+  <label>貼り付け</label>
+  <textarea id="pasteSrc" style="min-height:120px" placeholder="他セラーの商品説明をそのまま貼り付け"></textarea>
+  <button class="btn sub2" onclick="parsePaste()">事実情報を抽出してフォームに入れる</button>
+  <div class="note" id="parseOut"></div>
+</div></div>
+
 <div class="sec"><div class="sec-h" onclick="tg('s1')">✏️ 必須項目<span class="ar op" id="a-s1">▼</span></div>
 <div class="sec-b" id="s1">
   <label>テンプレート <span class="req">*</span></label>
@@ -149,5 +159,5 @@ textarea{min-height:64px;resize:vertical;line-height:1.5}
 
 <div class="toast" id="toast"></div>
 </div>
-<script src="listing.js?v=20260819b"></script>
+<script src="listing.js?v=20260819c"></script>
 </body></html>

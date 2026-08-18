@@ -44,10 +44,14 @@ function cp(id){ const e=$(id); e.select(); e.setSelectionRange(0,999999);
    ※ 変えるのは**最後の罫線だけ**。他の罫線は常に RULE のまま。 */
 function grossJP(){ return Math.round(n('price')*0.9) - n('ship') - n('cost'); }
 function indicator(profit){
-  const k = Math.floor(profit/1000);
-  if (k <= 0) return RULE;                       // 利益ゼロ以下は通常罫線（マーカーを出さない）
-  return (k <= 9 ? '─' : '-').repeat(k);
+  // 文字の種類が単位を表す：全角「─」= ¥1,000/本 ／ 半角「-」= ¥5,000/本
+  //   利益 ¥1,000〜9,999  → 全角 ─ を 1〜9本（¥1,000刻み）
+  //   利益 ¥10,000〜      → 半角 - を 2本〜  （¥5,000刻み・高額でも線が伸びすぎない）
+  if (profit < 1000)  return RULE;                       // 利益ゼロ〜999は通常罫線＝マーカー無し
+  if (profit < 10000) return '─'.repeat(Math.floor(profit/1000));
+  return '-'.repeat(Math.floor(profit/5000));
 }
+
 
 /* ── タイトル（40字以内） ─────────────────────────────── */
 function buildTitle(){
@@ -229,6 +233,53 @@ function cpEbay(){
   navigator.clipboard.writeText(t).then(()=>toast('入力ガイドをコピーしました')).catch(()=>toast('コピーできませんでした'));
 }
 
+
+/* ── 他セラー説明文の取り込み ───────────────────────────
+   方針: **事実情報だけ**を抜き、文章は一切流用しない（丸写しは規約・著作権の問題）。
+   抜けるのはラベル付き（「素材：〜」等）の項目。自由文からの推測はしない。 */
+function parsePaste(){
+  const raw=v('pasteSrc');
+  if(!raw){ toast('貼り付けてから押してください'); return; }
+  const txt=raw.replace(/\r/g,'');
+  const grab=(re)=>{ const m=txt.match(re); return m ? m[1].trim().replace(/[　\s]+$/,'').slice(0,60) : ''; };
+  const F={
+    bEn:   grab(/(?:ブランド名?|BRAND|Brand)\s*[:：]\s*([^\n]+)/),
+    name:  grab(/(?:モデル名?|商品名|アイテム名)\s*[:：]\s*([^\n]+)/),
+    model: grab(/(?:型番|品番|型式|モデル番号|参照番号|Ref)\s*[:：]\s*([^\n]+)/),
+    mat:   grab(/(?:素材|材質|マテリアル|Material)\s*[:：]\s*([^\n]+)/),
+    size:  grab(/(?:サイズ|SIZE|Size)\s*[:：]\s*([^\n]+)/),
+    color: grab(/(?:カラー|色|Color)\s*[:：]\s*([^\n]+)/),
+    acc:   grab(/(?:付属品|付属)\s*[:：]\s*([^\n]+)/),
+    retail:grab(/(?:参考定価|定価|新品価格|希望小売価格)\s*[:：]\s*([^\n]+)/),
+    wt:    grab(/(?:重量|重さ|Weight)\s*[:：]\s*([^\n]+)/),
+    meas:  grab(/(?:全長|実寸|実測|縦|横|幅)\s*[:：]\s*([^\n]+)/),
+  };
+  // 状態: 状態語を含む文だけを拾う（最大3文）。他社の言い回しは使わず、参考として状態欄に入れる。
+  const condSent=txt.split(/[。\n]/).map(s=>s.trim())
+    .filter(s=>s && s.length<90 && /(傷|キズ|スレ|擦れ|汚れ|使用感|美品|良品|ダメージ|くすみ|剥がれ|割れ|欠け|目立|状態)/.test(s))
+    .filter(s=>!/^[#＃]/.test(s) && !/古物商|許可証|プロフィール|フォロー|即購入|値下げ|発送|コメント/.test(s))
+    .slice(0,3);
+  let filled=[], skipped=[];
+  Object.entries(F).forEach(([k,val])=>{
+    if(!val) return;
+    if($(k) && !v(k)){ $(k).value=val; filled.push(k); } else if($(k)) skipped.push(k);
+  });
+  if(condSent.length && !v('cond')){ $('cond').value=condSent.join('。')+'。'; filled.push('cond'); }
+  // 注意喚起：相手の店名・許可番号が混ざっていないか
+  const risky=[];
+  if(/古物商|許可証|第\d{10,}号/.test(txt)) risky.push('相手の古物商番号');
+  if(/[#＃]\S{2,}/.test(txt)) risky.push('相手のハッシュタグ');
+  const LBL={bEn:'ブランド英',name:'商品名',model:'型番',mat:'素材',size:'サイズ',color:'カラー',
+             acc:'付属品',retail:'参考定価',wt:'重量',meas:'実測',cond:'状態メモ'};
+  $('parseOut').innerHTML =
+    (filled.length?`<b style="color:var(--ok)">${filled.length}項目を入れました</b>：${filled.map(k=>LBL[k]||k).join('・')}<br>`:'<b style="color:var(--bad)">ラベル付きの項目が見つかりませんでした</b>（「素材：〜」の形式のみ抽出します）<br>')
+    + (skipped.length?`既に入力済soスキップ：${skipped.map(k=>LBL[k]||k).join('・')}<br>`:'')
+    + (risky.length?`<b style="color:var(--warn)">⚠ 貼り付け元に ${risky.join('・')} が含まれています。生成後の本文に混入していないか必ず確認してください。</b>`:'')
+    + '<br>※ 抽出したのは事実情報だけです。文章はBansheeテンプレで組み直されます。';
+  gen();
+  toast(filled.length?`${filled.length}項目を取り込みました`:'抽出できませんでした');
+}
+
 /* ── 生成 ────────────────────────────────────────── */
 function onTpl(){ const A=v('tpl')==='A'; $('useBanshee').checked=A; $('useTag').checked=A; gen(); }
 function gen(){
@@ -237,9 +288,10 @@ function gen(){
   const cT=$('cT'), cD=$('cD');
   cT.textContent=`${t.length} / 40`; cT.className='cnt '+(t.length<=40&&t.length>0?'ok':'ng');
   cD.textContent=`${d.length} / 1000`; cD.className='cnt '+(d.length<=1000?'ok':'ng');
-  const g=grossJP(), k=Math.floor(g/1000);
+  const g=grossJP();
+  const unit = g<10000 ? 1000 : 5000, k = g<1000 ? 0 : Math.floor(g/unit);
   $('profBox').innerHTML=`粗利（売値×0.9 − 送料 − 仕入）= <b>¥${g.toLocaleString()}</b>
-    <div class="ind">末尾の罫線 → ${k>0?`${k}本（${k<=9?'全角─':'半角-'}）`:'利益ゼロ以下so通常罫線'}<br>${indicator(g)}</div>`;
+    <div class="ind">末尾の罫線 → ${k>0?`${k}本 × ¥${unit.toLocaleString()}（${unit===1000?'全角─':'半角-'}）`:'¥1,000未満so通常罫線'}<br>${indicator(g)}</div>`;
   $('catHint').innerHTML='<b>メルカリ カテゴリ候補</b>：'+catHint();
   if (MODE==='ebay'){
     const p=usdPrice(), fx=parseFloat(v('fx'))||159.3, fee=(parseFloat(v('fee'))||15)/100, ish=n('ishp')||4000;
