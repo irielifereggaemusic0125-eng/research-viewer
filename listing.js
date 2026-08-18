@@ -7,6 +7,25 @@ const KOBUTSU = '古物商許可証：愛知県公安委員会 第542652509100�
 const BANSHEE_TXT = '当ショップの商品は全て正規品です。古物商許可のもと、ブランド品を専門に扱う大手古物市場よりお譲りいただいております。';
 let MODE = 'mercari', INV = [];
 
+/* ── 日英変換（eBay用）。英語欄があればそれを最優先。
+      辞書に無い日本語が残る値には ⚠ を付けて、気づかず日本語のまま出品するのを防ぐ。 ── */
+const EN_DICT={'ブレスレット':'Bracelet','ネックレス':'Necklace','ペンダント':'Pendant','リング':'Ring','指輪':'Ring',
+ 'ピアス':'Earrings','イヤリング':'Earrings','バングル':'Bangle','チェーン':'Chain','財布':'Wallet','長財布':'Long Wallet',
+ '三つ折り財布':'Trifold Wallet','二つ折り財布':'Bifold Wallet','バッグ':'Bag','ショルダーバッグ':'Shoulder Bag',
+ 'トートバッグ':'Tote Bag','ポーチ':'Pouch','サングラス':'Sunglasses','スカーフ':'Scarf','ストール':'Stole',
+ 'シルバー925':'Sterling Silver 925','シルバー':'Silver','レザー':'Leather','キャンバス':'Canvas','ナイロン':'Nylon',
+ 'ゴールド':'Gold','ホワイト':'White','ブラック':'Black','美品':'Excellent condition','新品':'New',
+ 'ドーヴ':'Dove','ヘロン':'Heron','クレーンベル':'Crane Bell','シルクリンク':'Silk Link','フロー':'Flow'};
+const HAS_JP=s=>/[぀-ゟ゠-ヿ一-鿿]/.test(String(s));
+function toEn(s){
+  if(!s) return '';
+  let out=String(s);
+  Object.keys(EN_DICT).sort((a,b)=>b.length-a.length).forEach(k=>{ out=out.split(k).join(EN_DICT[k]); });
+  out=out.replace(/\s+/g,' ').trim();
+  return HAS_JP(out) ? '⚠ '+out : out;
+}
+
+
 const $ = id => document.getElementById(id);
 const v = id => ($(id) ? ($(id).value || '').trim() : '');
 const n = id => { const x = parseInt(v(id).replace(/[^\d-]/g, ''), 10); return isNaN(x) ? 0 : x; };
@@ -156,7 +175,7 @@ function ebayRows(){
   const p=usdPrice();
   const fx=parseFloat(v('fx'))||159.3, fee=(parseFloat(v('fee'))||15)/100, ish=n('ishp')||4000;
   const net=Math.round(p.usd*fx*(1-fee)) - ish;
-  const en=[v('bEn'), v('name'), v('mat'), v('model'), v('size')].filter(Boolean).join(' ');
+  const en=[v('bEn'), v('enName')||toEn(v('name')), v('enMat')||toEn(v('mat')), v('model'), v('size')].filter(Boolean).join(' ');
   const title=(en+' Japan').slice(0,80);
   return [
     ['Title', title, `${title.length}/80字。ブランド英を先頭・一般語で埋める`],
@@ -164,8 +183,8 @@ function ebayRows(){
     ['Condition', 'Pre-owned', '新品タグ付きなら New with tags'],
     ['Condition description', v('cond') ? '（日本語の状態メモを英訳して入れる）' : '未入力', '傷・くすみを正直に'],
     ['Brand', v('bEn') || '—', 'Item specifics の最重要項目'],
-    ['Type', v('name') || '—', 'Bracelet / Necklace / Ring 等'],
-    ['Material / Metal', v('mat') || '—', 'Sterling Silver 等。素材の誤りは返品理由になる'],
+    ['Type', v('enName')||toEn(v('name')) || '—', 'Bracelet / Necklace / Ring 等。⚠ が付いたら英語欄に手入力する'],
+    ['Material / Metal', v('enMat')||toEn(v('mat')) || '—', 'Sterling Silver 等。素材の誤りは返品理由になる'],
     ['Metal Purity', /925/.test(v('mat')) ? '925' : '—', ''],
     ['Length', v('meas') || '—', 'cm表記のまま可'],
     ['Total Weight', v('wt') || '—', ''],
@@ -187,10 +206,10 @@ function ebayRows(){
 }
 function ebayHTML(){
   const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-  const rows=[['Brand',v('bEn')],['Model',v('name')],['Material',v('mat')],['Length',v('meas')],
+  const rows=[['Brand',v('bEn')],['Model',v('enName')||toEn(v('name'))],['Material',v('enMat')||toEn(v('mat'))],['Length',v('meas')],
               ['Weight',v('wt')],['Included',v('acc')]].filter(r=>r[1]);
   return `<div style="font-family:Helvetica,Arial,sans-serif;max-width:760px;line-height:1.65;color:#222">
-<h2 style="margin:0 0 4px;font-size:20px">${esc(v('bEn'))} ${esc(v('name'))}</h2>
+<h2 style="margin:0 0 4px;font-size:20px">${esc(v('bEn'))} ${esc(v('enName')||toEn(v('name')))}</h2>
 <p style="margin:0 0 18px;color:#666">Authentic pre-owned item, shipped from Japan.</p>
 <h3 style="font-size:15px;border-bottom:1px solid #ddd;padding-bottom:6px">Details</h3>
 <table style="border-collapse:collapse;font-size:14px">
