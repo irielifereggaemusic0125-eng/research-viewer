@@ -53,6 +53,19 @@ function indicator(profit){
 }
 
 
+
+/* ── 他社ブランド名の混入チェック（仕様書§5）──────────────
+   商品の実ブランドと違うブランド名をタイトルに入れると、メルカリの「誤認を招く表現」に当たる。
+   ハッシュタグの「#クロムハーツ好き」は可so、チェックするのはタイトルのみ。 */
+const BRANDS=['クロムハーツ','CHROME HEARTS','ロンワンズ','LONE ONES','ルイヴィトン','LOUIS VUITTON','シャネル','CHANEL',
+ 'エルメス','HERMES','グッチ','GUCCI','プラダ','PRADA','ティファニー','TIFFANY','カルティエ','CARTIER','ブルガリ','BVLGARI',
+ 'ガボラトリー','Gaboratory','トムウッド','TOM WOOD','ホーセンブース','HOORSENBUHS','ロレックス','ROLEX','バレンシアガ','BALENCIAGA'];
+function brandWarn(title){
+  const mine=(v('bEn')+' '+v('bJa')).toUpperCase();
+  const hits=BRANDS.filter(b=>title.toUpperCase().includes(b.toUpperCase()) && !mine.includes(b.toUpperCase()));
+  return [...new Set(hits)];
+}
+
 /* ── タイトル（40字以内） ─────────────────────────────── */
 function buildTitle(){
   const parts=[v('bEn'), v('bJa'), v('name'), v('model'), v('size'), v('color')].filter(Boolean);
@@ -287,6 +300,11 @@ function gen(){
   $('outT').value=t; $('outD').value=d;
   const cT=$('cT'), cD=$('cD');
   cT.textContent=`${t.length} / 40`; cT.className='cnt '+(t.length<=40&&t.length>0?'ok':'ng');
+  const bw=brandWarn(t);
+  const bwEl=$('brandWarn');
+  if(bwEl) bwEl.innerHTML = bw.length
+    ? `<span class="pill p-ng">⚠ 他社ブランド名</span> タイトルに <b>${bw.join('・')}</b> が入っています。実ブランド（${v('bEn')||'未入力'}）と違う名前は「誤認を招く表現」でメルカリ規約に触れます。ハッシュタグの「#${bw[0]}好き」なら可。`
+    : '';
   cD.textContent=`${d.length} / 1000`; cD.className='cnt '+(d.length<=1000?'ok':'ng');
   const g=grossJP();
   const unit = g<10000 ? 1000 : 5000, k = g<1000 ? 0 : Math.floor(g/unit);
