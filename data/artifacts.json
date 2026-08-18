@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-18 15:36",
+ "updated_at": "2026-08-18 15:38",
  "items": [
   {
    "date": "20260818",
@@ -16,6 +16,13 @@
    "name": "execution_blocklist.md",
    "summary": "作成 2026-08-18 / 機械可読版 `execution_blocklist.json` と同内容",
    "created_at": "05:37"
+  },
+  {
+   "date": "20260818",
+   "type": "要対応",
+   "title": "Remote Control を有効化",
+   "name": "pending_Remote Control を有効化",
+   "summary": "（スマホ→Mac直結・指示の待ち時間 最大60分→ゼロ）対話モードの `claude` ターミナルで `/remote` を実行する。アプリ内やこのセッションからは開けない（terminal-dialog系コマンドのため）。有効化できたか確認する方法＝チャットで「ListAgentsして」と頼み、クラウド/他マシンのセッションが行として並べば接続済み（現在は"
   },
   {
    "date": "20260818",
