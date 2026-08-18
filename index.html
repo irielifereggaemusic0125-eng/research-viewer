@@ -632,7 +632,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 .wz-search .wz-clr{position:absolute;right:8px;border:none;background:transparent;color:var(--muted2);font-size:17px;
   cursor:pointer;padding:6px;line-height:1}
 .wz-add{display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:8px}
-.wz-add select{min-height:40px;border-radius:9px;border:1.5px solid var(--line);background:var(--surface2);
+.wz-add select{min-height:40px;text-overflow:ellipsis;border-radius:9px;border:1.5px solid var(--line);background:var(--surface2);
   color:var(--text);font-size:12.5px;padding:0 8px;max-width:100%}
 .wz-add input{min-height:40px;border-radius:9px;border:1.5px solid var(--line);background:var(--surface2);
   color:var(--text);font-size:13.5px;padding:0 11px;outline:none}
@@ -642,7 +642,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   cursor:pointer;white-space:nowrap;transition:.12s}
 .wz-add-btn:active{filter:brightness(.92)}
 .wz-add-btn[disabled]{opacity:.45;cursor:default;filter:none}
-.wz-row2{display:grid;grid-template-columns:auto 1fr;gap:7px;margin-top:7px}
+.wz-row2{display:grid;grid-template-columns:1fr;gap:7px;margin-top:8px}
+@media(min-width:430px){.wz-row2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .wz-hint{font-size:10.5px;color:var(--muted2);margin-top:6px;line-height:1.5}
 .wz-count{font-size:11px;color:var(--muted);margin:2px 2px 8px}
 .wz-count b{color:var(--amz)}
