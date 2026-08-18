@@ -54,6 +54,20 @@ function indicator(profit){
 
 
 
+
+/* 商品名の先頭ブランド語からブランド欄を推定する。inventory.json はブランド列を持たないso補う。 */
+const BRAND_PAIR=[['シャネル','CHANEL'],['ルイヴィトン','LOUIS VUITTON'],['エルメス','HERMES'],['グッチ','GUCCI'],
+ ['プラダ','PRADA'],['ロエベ','LOEWE'],['セリーヌ','CELINE'],['バレンシアガ','BALENCIAGA'],['フェンディ','FENDI'],
+ ['ブルガリ','BVLGARI'],['カルティエ','CARTIER'],['ティファニー','TIFFANY & CO.'],['ヴェルサーチ','VERSACE'],
+ ['サンローラン','SAINT LAURENT'],['ボッテガヴェネタ','BOTTEGA VENETA'],['ジミーチュウ','JIMMY CHOO'],
+ ['ロンワンズ','LONE ONES'],['ガボラトリー','GABORATORY'],['トムウッド','TOM WOOD'],['ケイトスペード','kate spade'],
+ ['バーバリー','BURBERRY'],['ディオール','DIOR'],['コーチ','COACH'],['ミュウミュウ','MIU MIU']];
+function guessBrand(name){
+  for(const [ja,en] of BRAND_PAIR){ if(name.includes(ja)) return {ja,en,rest:name.replace(ja,'').trim()}; }
+  for(const [ja,en] of BRAND_PAIR){ if(name.toUpperCase().includes(en)) return {ja,en,rest:name.replace(new RegExp(en,'i'),'').trim()}; }
+  return null;
+}
+
 /* ── 他社ブランド名の混入チェック（仕様書§5）──────────────
    商品の実ブランドと違うブランド名をタイトルに入れると、メルカリの「誤認を招く表現」に当たる。
    ハッシュタグの「#クロムハーツ好き」は可so、チェックするのはタイトルのみ。 */
@@ -61,6 +75,7 @@ const BRANDS=['クロムハーツ','CHROME HEARTS','ロンワンズ','LONE ONES'
  'エルメス','HERMES','グッチ','GUCCI','プラダ','PRADA','ティファニー','TIFFANY','カルティエ','CARTIER','ブルガリ','BVLGARI',
  'ガボラトリー','Gaboratory','トムウッド','TOM WOOD','ホーセンブース','HOORSENBUHS','ロレックス','ROLEX','バレンシアガ','BALENCIAGA'];
 function brandWarn(title){
+  if(!v('bEn') && !v('bJa')) return [];        // ブランド未入力のうちは判定しない（誤発火する）
   const mine=(v('bEn')+' '+v('bJa')).toUpperCase();
   const hits=BRANDS.filter(b=>title.toUpperCase().includes(b.toUpperCase()) && !mine.includes(b.toUpperCase()));
   return [...new Set(hits)];
@@ -311,6 +326,18 @@ function gen(){
   $('profBox').innerHTML=`粗利（売値×0.9 − 送料 − 仕入）= <b>¥${g.toLocaleString()}</b>
     <div class="ind">末尾の罫線 → ${k>0?`${k}本 × ¥${unit.toLocaleString()}（${unit===1000?'全角─':'半角-'}）`:'¥1,000未満so通常罫線'}<br>${indicator(g)}</div>`;
   $('catHint').innerHTML='<b>メルカリ カテゴリ候補</b>：'+catHint();
+  // 何が足りなくて説明文が薄いのかを明示する
+  const NEED=[['bEn','ブランド英'],['name','商品名'],['cond','状態メモ'],['price','出品価格'],['cost','仕入値']];
+  const WANT=[['intro','紹介文'],['mat','素材'],['size','サイズ'],['meas','実測'],['acc','付属品'],['tags','ハッシュタグ']];
+  const miss=NEED.filter(([id])=>!v(id)).map(x=>x[1]);
+  const want=WANT.filter(([id])=>!v(id)).map(x=>x[1]);
+  const el=$('needBox');
+  if(el) el.innerHTML = (miss.length||want.length)
+    ? (miss.length?`<span class="pill p-ng">必須が未入力</span> ${miss.join('・')}<br>`:'')
+      + (want.length?`<span class="pill p-wa">未入力so説明文が薄くなります</span> ${want.join('・')}<br>`:'')
+      + `<span style="color:var(--muted2)">※ 在庫データ(inventory.json)は価格と仕入値しか持っていません。素材・サイズ・状態は
+         <b>メルカリの自分の出品ページで拡張機能の「📝 出品文へ」</b>を押すと一括で入ります（再出品はこれが最速）。</span>`
+    : '<span class="pill p-ok">必要な項目は揃っています</span>';
   if (MODE==='ebay'){
     const p=usdPrice(), fx=parseFloat(v('fx'))||159.3, fee=(parseFloat(v('fee'))||15)/100, ish=n('ishp')||4000;
     const net=Math.round(p.usd*fx*(1-fee))-ish;
@@ -363,7 +390,9 @@ function readHash(){
 function pickKanri(){
   const i=$('kanri').value; if(i==='') return;
   const it=INV[+i]; if(!it) return;
-  $('name').value=it.name||'';
+  const g=guessBrand(it.name||'');
+  if(g){ $('bJa').value=g.ja; $('bEn').value=g.en; $('name').value=g.rest||it.name; }
+  else  { $('name').value=it.name||''; }
   $('price').value=it.actual_price||it.list_price||'';
   $('cost').value=it.buy_price||'';
   if(it.souryo) $('ship').value=it.souryo;
