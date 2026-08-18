@@ -1,6 +1,97 @@
 {
- "updated_at": "2026-08-18 15:38",
+ "updated_at": "2026-08-19 07:49",
  "items": [
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "Remote Control を有効化",
+   "name": "pending_Remote Control を有効化",
+   "summary": "（スマホ→Mac直結・指示の待ち時間 最大60分→ゼロ）対話モードの `claude` ターミナルで `/remote` を実行する。アプリ内やこのセッションからは開けない（terminal-dialog系コマンドのため）。有効化できたか確認する方法＝チャットで「ListAgentsして」と頼み、クラウド/他マシンのセッションが行として並べば接続済み（現在は"
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "W044 CHANELマトラッセ ナノ 委託売却の承認",
+   "name": "pending_W044 CHANELマトラッセ ナノ 委託売却",
+   "summary": "（−¥9,980の損切り確定・キャッシュ¥81,000回収）→ 損切り線超えso自動実行禁止・Shimba承認待ち"
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "W067 ボーイシャネル 買い戻し実行",
+   "name": "pending_W067 ボーイシャネル 買い戻し実行",
+   "summary": "（いいね26・実勢中央¥70,000に対し出品¥54,700・フリマ継続で +¥5,040）"
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "A133「25.5cm」表記を24cmへ修正",
+   "name": "pending_A133「25.5cm」表記を24cmへ修正",
+   "summary": "（実測24cm・メルカリ/ラクマ/ヤフフリ/BASEの説明文2箇所ずつ）。eBayは24cmで出しているso現状は販路間で不整合"
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "ドーヴブレス4販路の価格統一",
+   "name": "pending_ドーヴブレス4販路の価格統一",
+   "summary": "（ラクマ¥178,000 / メルカリ¥158,000 / BASE¥148,900 / ヤフフリ¥130,000 ＝¥48,000差）※hold品soShimba専管"
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "CHANELサングラス ラクマ重複出品の解消",
+   "name": "pending_CHANELサングラス ラクマ重複出品の解消",
+   "summary": "（`da7833471f…` ¥27,100 と `1061d2a780…` ¥23,500）"
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "セントマイケルXL の実物在庫確認",
+   "name": "pending_セントマイケルXL の実物在庫確認",
+   "summary": "（メルカリSOLD済だがラクマ¥11,000・ヤフフリ¥11,000で販売中。O117/O119という別個体の可能性）"
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "A133/A134 の Country of Origin 現物刻印確認",
+   "name": "pending_A133/A134 の Country of O",
+   "summary": "（eBay Specifics は United States で出品済・要裏取り）"
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "既存active在庫（約20品）のタイトルを DEAREST 文法へ改訂",
+   "name": "pending_既存active在庫（約20品）のタイトルを D",
+   "summary": ""
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "説明文に「他サイトでも販売・売り切れ次第削除」の一文を追加（二重販売の予防線）",
+   "name": "pending_説明文に「他サイトでも販売・売り切れ次第削除」の",
+   "summary": ""
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "BASE に Google 商品連携App を設定（Shops再申請用の実売実績づくり）",
+   "name": "pending_BASE に Google 商品連携App を設",
+   "summary": ""
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "VO（バーチャルオフィス）許可取得後にメルカリShops申請を再開",
+   "name": "pending_VO（バーチャルオフィス）許可取得後にメルカリS",
+   "summary": ""
+  },
+  {
+   "date": "20260819",
+   "type": "要対応",
+   "title": "知人買取 ¥35,000 の提示（内訳確定済：HomePod¥11,100 / MX ERGO S¥4,900 / CF",
+   "name": "pending_知人買取 ¥35,000 の提示（内訳確定済：H",
+   "summary": ""
+  },
   {
    "date": "20260818",
    "type": "レポート",
@@ -16,97 +107,6 @@
    "name": "execution_blocklist.md",
    "summary": "作成 2026-08-18 / 機械可読版 `execution_blocklist.json` と同内容",
    "created_at": "05:37"
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "Remote Control を有効化",
-   "name": "pending_Remote Control を有効化",
-   "summary": "（スマホ→Mac直結・指示の待ち時間 最大60分→ゼロ）対話モードの `claude` ターミナルで `/remote` を実行する。アプリ内やこのセッションからは開けない（terminal-dialog系コマンドのため）。有効化できたか確認する方法＝チャットで「ListAgentsして」と頼み、クラウド/他マシンのセッションが行として並べば接続済み（現在は"
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "W044 CHANELマトラッセ ナノ 委託売却の承認",
-   "name": "pending_W044 CHANELマトラッセ ナノ 委託売却",
-   "summary": "（−¥9,980の損切り確定・キャッシュ¥81,000回収）→ 損切り線超えso自動実行禁止・Shimba承認待ち"
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "W067 ボーイシャネル 買い戻し実行",
-   "name": "pending_W067 ボーイシャネル 買い戻し実行",
-   "summary": "（いいね26・実勢中央¥70,000に対し出品¥54,700・フリマ継続で +¥5,040）"
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "A133「25.5cm」表記を24cmへ修正",
-   "name": "pending_A133「25.5cm」表記を24cmへ修正",
-   "summary": "（実測24cm・メルカリ/ラクマ/ヤフフリ/BASEの説明文2箇所ずつ）。eBayは24cmで出しているso現状は販路間で不整合"
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "ドーヴブレス4販路の価格統一",
-   "name": "pending_ドーヴブレス4販路の価格統一",
-   "summary": "（ラクマ¥178,000 / メルカリ¥158,000 / BASE¥148,900 / ヤフフリ¥130,000 ＝¥48,000差）※hold品soShimba専管"
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "CHANELサングラス ラクマ重複出品の解消",
-   "name": "pending_CHANELサングラス ラクマ重複出品の解消",
-   "summary": "（`da7833471f…` ¥27,100 と `1061d2a780…` ¥23,500）"
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "セントマイケルXL の実物在庫確認",
-   "name": "pending_セントマイケルXL の実物在庫確認",
-   "summary": "（メルカリSOLD済だがラクマ¥11,000・ヤフフリ¥11,000で販売中。O117/O119という別個体の可能性）"
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "A133/A134 の Country of Origin 現物刻印確認",
-   "name": "pending_A133/A134 の Country of O",
-   "summary": "（eBay Specifics は United States で出品済・要裏取り）"
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "既存active在庫（約20品）のタイトルを DEAREST 文法へ改訂",
-   "name": "pending_既存active在庫（約20品）のタイトルを D",
-   "summary": ""
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "説明文に「他サイトでも販売・売り切れ次第削除」の一文を追加（二重販売の予防線）",
-   "name": "pending_説明文に「他サイトでも販売・売り切れ次第削除」の",
-   "summary": ""
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "BASE に Google 商品連携App を設定（Shops再申請用の実売実績づくり）",
-   "name": "pending_BASE に Google 商品連携App を設",
-   "summary": ""
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "VO（バーチャルオフィス）許可取得後にメルカリShops申請を再開",
-   "name": "pending_VO（バーチャルオフィス）許可取得後にメルカリS",
-   "summary": ""
-  },
-  {
-   "date": "20260818",
-   "type": "要対応",
-   "title": "知人買取 ¥35,000 の提示（内訳確定済：HomePod¥11,100 / MX ERGO S¥4,900 / CF",
-   "name": "pending_知人買取 ¥35,000 の提示（内訳確定済：H",
-   "summary": ""
   },
   {
    "date": "20260817",
