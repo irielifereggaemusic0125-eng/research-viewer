@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Banshee 出品情報グラバー
 // @namespace    https://banshee.local/
-// @version      1.0.0
-// @description  メルカリ/ラクマ/ヤフフリ/ヤフオクの商品ページから型番・素材・サイズ等の事実情報と画像URLを拾い、Banshee出品文ジェネレーターへ渡す
-// @match        https://jp.mercari.com/item/*
-// @match        https://fril.jp/item/*
+// @version      1.1.0
+// @description  メルカリ/ラクマ/ヤフフリ/ヤフオクの商品ページから型番・素材・サイズ等の事実情報と画像URLを拾い、Banshee出品文ジェネレーターへ渡す（SPA遷移対応）
+// @match        https://jp.mercari.com/*
+// @match        https://fril.jp/*
 // @match        https://item.fril.jp/*
-// @match        https://paypayfleamarket.yahoo.co.jp/item/*
-// @match        https://auctions.yahoo.co.jp/jp/auction/*
+// @match        https://paypayfleamarket.yahoo.co.jp/*
+// @match        https://auctions.yahoo.co.jp/*
 // @updateURL    https://irielifereggaemusic0125-eng.github.io/research-viewer/banshee_listing_grab.user.js
 // @downloadURL  https://irielifereggaemusic0125-eng.github.io/research-viewer/banshee_listing_grab.user.js
 // @grant        none
@@ -133,6 +133,32 @@
     document.body.appendChild(wrap);
   }
 
-  ui();
-  new MutationObserver(() => ui()).observe(document.body, { childList: true, subtree: false });
+  /* SPA対応: これらのサイトは画面遷移で再読み込みが起きないので、
+     @match をドメイン全体にしたうえで URL を見張り、商品ページの時だけボタンを出す。
+     （1.0.0 は @match を /item/* に限っていたため、ホームやブックマークから入ると起動しなかった） */
+  const ITEM_RE = {
+    'jp.mercari.com':                 /^\/item\//,
+    'fril.jp':                        /^\/item\//,
+    'item.fril.jp':                   /^\/[0-9a-f]{16,}/i,
+    'paypayfleamarket.yahoo.co.jp':   /^\/item\//,
+    'auctions.yahoo.co.jp':           /^\/jp\/auction\//
+  };
+  const onItemPage = () => {
+    const re = ITEM_RE[location.hostname];
+    return !!re && re.test(location.pathname);
+  };
+  function removeUI(){ const e = document.getElementById('bs-grab'); if (e) e.remove(); }
+  function sync(){ onItemPage() ? ui() : removeUI(); }
+
+  let lastUrl = location.href;
+  setInterval(() => {
+    if (location.href !== lastUrl) { lastUrl = location.href; setTimeout(sync, 700); }
+    else if (onItemPage() && !document.getElementById('bs-grab')) { ui(); }   // 描画差し替えで消えた時の復帰
+  }, 700);
+  ['pushState','replaceState'].forEach(k => {                                  // 遷移直後に素早く反応させる
+    const orig = history[k];
+    history[k] = function(){ const r = orig.apply(this, arguments); setTimeout(sync, 700); return r; };
+  });
+  window.addEventListener('popstate', () => setTimeout(sync, 700));
+  sync();
 })();
