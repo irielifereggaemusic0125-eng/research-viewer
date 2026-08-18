@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Banshee 出品文ジェネレーター</title>
+<link rel="icon" href="favicon.svg">
+<style>
+:root{--bg:#161616;--surface:#1f1f1f;--surface2:#262626;--line:#333;--text:#e8e8e8;--muted:#9a9a9a;
+ --muted2:#6f6f6f;--ok:#2ed47a;--warn:#ffb547;--bad:#ff5c5c;--amz:#ffa41c;--amz2:#ff8f00;--ink:#1a1300;--blue:#4d9fff}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);
+ padding:10px 10px 40px;font-size:14px;line-height:1.5}
+.app{max-width:560px;margin:0 auto}
+h1{font-size:15px;font-weight:800;text-align:center;margin-bottom:2px}
+.sub{font-size:10.5px;color:var(--muted2);text-align:center;margin-bottom:10px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px}
+.tab{min-height:40px;border-radius:9px;border:1.5px solid var(--line);background:var(--surface2);color:var(--muted);
+ font-size:13px;font-weight:700;cursor:pointer}
+.tab.on{background:linear-gradient(180deg,var(--amz),var(--amz2));color:var(--ink);border-color:var(--amz2)}
+.sec{background:var(--surface);border:1px solid var(--line);border-radius:11px;margin-bottom:9px;overflow:hidden}
+.sec-h{display:flex;align-items:center;gap:8px;padding:11px 12px;cursor:pointer;font-size:12.5px;font-weight:700}
+.sec-h:active{background:var(--surface2)}
+.sec-h .ar{margin-left:auto;font-size:10px;color:var(--muted2);transition:.2s}
+.sec-h .ar.op{transform:rotate(180deg)}
+.sec-b{padding:4px 12px 12px;border-top:1px solid var(--line)}
+label{display:block;font-size:10.5px;color:var(--muted);margin:9px 0 3px;font-weight:600}
+label .req{color:var(--bad)}
+input,textarea,select{width:100%;background:var(--surface2);border:1.5px solid var(--line);border-radius:8px;
+ color:var(--text);font-size:13.5px;padding:9px 10px;outline:none;font-family:inherit}
+input:focus,textarea:focus,select:focus{border-color:var(--amz);box-shadow:0 0 0 3px rgba(255,164,28,.18)}
+textarea{min-height:64px;resize:vertical;line-height:1.5}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.tg{display:flex;align-items:center;gap:8px;padding:9px 10px;background:var(--surface2);border:1.5px solid var(--line);
+ border-radius:8px;margin-top:8px;cursor:pointer;font-size:12.5px;font-weight:600}
+.tg input{width:auto;margin:0;accent-color:var(--amz)}
+.btn{width:100%;min-height:46px;border-radius:10px;border:1px solid var(--amz2);
+ background:linear-gradient(180deg,var(--amz),var(--amz2));color:var(--ink);font-size:14.5px;font-weight:800;cursor:pointer;margin-top:12px}
+.btn:active{filter:brightness(.92)}
+.btn.sub2{background:var(--surface2);color:var(--text);border-color:var(--line);font-weight:700;min-height:38px;font-size:12.5px}
+.out{margin-top:10px}
+.out-h{display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;margin:14px 0 5px}
+.cnt{margin-left:auto;font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:5px;background:var(--surface2);color:var(--muted)}
+.cnt.ok{background:rgba(46,212,122,.16);color:var(--ok)}
+.cnt.ng{background:rgba(255,92,92,.16);color:var(--bad)}
+.copy{border:1px solid var(--line);background:var(--surface2);color:var(--text);border-radius:7px;
+ font-size:11px;font-weight:700;padding:5px 11px;cursor:pointer}
+.copy:active{background:var(--amz);color:var(--ink)}
+.note{font-size:10.5px;color:var(--muted2);line-height:1.55;margin-top:6px}
+.pill{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;margin:2px 3px 0 0}
+.p-ok{background:rgba(46,212,122,.16);color:var(--ok)}
+.p-wa{background:rgba(255,181,71,.16);color:var(--warn)}
+.p-ng{background:rgba(255,92,92,.16);color:var(--bad)}
+.prof{background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:10px 11px;margin-top:10px;font-size:12px}
+.prof b{color:var(--amz);font-size:14px}
+.ind{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--warn);word-break:break-all;margin-top:5px}
+.eb{counter-reset:eb}
+.eb-row{display:flex;gap:9px;padding:10px 0;border-bottom:1px solid var(--line)}
+.eb-row:last-child{border-bottom:none}
+.eb-n{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--amz);color:var(--ink);
+ font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.eb-b{flex:1;min-width:0}
+.eb-f{font-size:11px;color:var(--muted);font-weight:700}
+.eb-v{font-size:13px;font-weight:600;word-break:break-word;margin-top:2px}
+.eb-v.mono{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--warn)}
+.eb-hint{font-size:10px;color:var(--muted2);margin-top:3px;line-height:1.5}
+.hide{display:none}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#000;color:#fff;padding:10px 18px;
+ border-radius:20px;font-size:12.5px;z-index:99;opacity:0;transition:.25s;pointer-events:none}
+.toast.on{opacity:.94}
+</style></head><body><div class="app">
+
+<h1>Banshee 出品文ジェネレーター</h1>
+<div class="sub">入力 → 生成 → コピー ／ 利益インジケーター自動計算</div>
+
+<div class="tabs">
+  <button class="tab on" id="tabM" onclick="setMode('mercari')">メルカリ</button>
+  <button class="tab" id="tabE" onclick="setMode('ebay')">eBay</button>
+</div>
+
+<div class="sec"><div class="sec-h" onclick="tg('s0')">📦 管理番号から読み込む<span class="ar op" id="a-s0">▼</span></div>
+<div class="sec-b" id="s0">
+  <label>在庫から選ぶ（inventory.json）</label>
+  <select id="kanri" onchange="pickKanri()"><option value="">— 手入力する —</option></select>
+  <div class="note" id="kanriNote">在庫データを読み込み中…</div>
+</div></div>
+
+<div class="sec"><div class="sec-h" onclick="tg('s1')">✏️ 必須項目<span class="ar op" id="a-s1">▼</span></div>
+<div class="sec-b" id="s1">
+  <label>テンプレート <span class="req">*</span></label>
+  <select id="tpl" onchange="onTpl()">
+    <option value="A">A フルテンプレ（ハイブランド小物・アクセ・時計・シルバー等）</option>
+    <option value="B">B 軽量テンプレ（アパレル・古着・家電・カー用品等）</option>
+  </select>
+  <div class="tg" onclick="event.stopPropagation()"><input type="checkbox" id="useBanshee" checked onchange="gen()"><span>【Bansheeについて】＋古物商番号を入れる</span></div>
+  <div class="tg" onclick="event.stopPropagation()"><input type="checkbox" id="useTag" checked onchange="gen()"><span>#全商品Banshee タグを入れる</span></div>
+  <div class="note">妻アカウントからの買取品出品など、Banshee名義を出さない場合は両方オフ。</div>
+  <div class="g2"><div><label>ブランド英 <span class="req">*</span></label><input id="bEn" placeholder="LONE ONES" oninput="gen()"></div>
+  <div><label>ブランド カナ</label><input id="bJa" placeholder="ロンワンズ" oninput="gen()"></div></div>
+  <label>商品名 <span class="req">*</span></label><input id="name" placeholder="ドーヴ ブレスレット" oninput="gen()">
+  <label>状態メモ（日本語・正直に） <span class="req">*</span></label>
+  <textarea id="cond" placeholder="使用に伴う擦れ小・くすみ小はございますが、大きなダメージはなく気持ちよくお使いいただけます。" oninput="gen()"></textarea>
+  <div class="g3"><div><label>出品価格 <span class="req">*</span></label><input id="price" type="number" inputmode="numeric" oninput="gen()"></div>
+  <div><label>仕入値 <span class="req">*</span></label><input id="cost" type="number" inputmode="numeric" oninput="gen()"></div>
+  <div><label>送料</label><input id="ship" type="number" inputmode="numeric" value="750" oninput="gen()"></div></div>
+</div></div>
+
+<div class="sec"><div class="sec-h" onclick="tg('s2')">➕ 任意項目<span class="ar" id="a-s2">▼</span></div>
+<div class="sec-b hide" id="s2">
+  <div class="g2"><div><label>型番・品番</label><input id="model" placeholder="MFB-0019-LK" oninput="gen()"></div>
+  <div><label>デザイナー</label><input id="designer" oninput="gen()"></div></div>
+  <div class="g2"><div><label>素材</label><input id="mat" placeholder="シルバー925" oninput="gen()"></div>
+  <div><label>カラー</label><input id="color" oninput="gen()"></div></div>
+  <div class="g3"><div><label>サイズ</label><input id="size" placeholder="L" oninput="gen()"></div>
+  <div><label>実測（長さ等）</label><input id="meas" placeholder="約24cm" oninput="gen()"></div>
+  <div><label>重量</label><input id="wt" placeholder="約116.4g" oninput="gen()"></div></div>
+  <label>付属品</label><input id="acc" placeholder="画像内のものが全て" oninput="gen()">
+  <label>参考定価</label><input id="retail" placeholder="396,000円（税込）" oninput="gen()">
+  <label>紹介文（2〜4文・特徴/魅力/使用シーン）</label>
+  <textarea id="intro" placeholder="LONE ONES を代表するドーヴ（鳩）モチーフのブレスレットです。…" oninput="gen()"></textarea>
+  <label>補足（希少性・適合情報など／断定できないことは書かない）</label><textarea id="extra" oninput="gen()"></textarea>
+  <label>英語1行サマリー</label><input id="enSum" placeholder="LONE ONES Dove Bracelet, SV925." oninput="gen()">
+  <label>英語1行（状態）</label><input id="enCond" placeholder="Pre-owned, minor wear." oninput="gen()">
+  <label>ハッシュタグ（スペース区切り・#不要）</label><textarea id="tags" placeholder="ロンワンズ LONEONES ブレスレット SV925" oninput="gen()"></textarea>
+  <div class="tg" onclick="event.stopPropagation()"><input type="checkbox" id="isAppa" onchange="gen()"><span>アパレル（平置き実寸の注記を入れる）</span></div>
+</div></div>
+
+<div id="paneM">
+  <div class="prof" id="profBox"></div>
+  <div class="out-h">商品タイトル<span class="cnt" id="cT">0 / 40</span><button class="copy" onclick="cp('outT')">コピー</button></div>
+  <textarea id="outT" style="min-height:52px"></textarea>
+  <div class="out-h">商品説明<span class="cnt" id="cD">0 / 1000</span><button class="copy" onclick="cp('outD')">コピー</button></div>
+  <textarea id="outD" style="min-height:400px"></textarea>
+  <button class="btn sub2" onclick="compress()">1000字を超えている場合：優先順位に沿って自動圧縮</button>
+  <div class="note" id="catHint"></div>
+</div>
+
+<div id="paneE" class="hide">
+  <div class="g3"><div><label>USD/JPY</label><input id="fx" type="number" value="159.3" step="0.1" oninput="gen()"></div>
+  <div><label>eBay手数料%</label><input id="fee" type="number" value="15" oninput="gen()"></div>
+  <div><label>国際送料¥</label><input id="ishp" type="number" value="4000" oninput="gen()"></div></div>
+  <div class="prof" id="profE"></div>
+  <div class="out-h">eBay 入力ガイド（フォームの上から順）<button class="copy" onclick="cpEbay()">全部コピー</button></div>
+  <div class="sec"><div class="sec-b eb" id="ebList" style="border-top:none"></div></div>
+  <div class="out-h">Description（HTML・貼付用）<span class="cnt" id="cH"></span><button class="copy" onclick="cp('outH')">コピー</button></div>
+  <textarea id="outH" style="min-height:220px;font-family:ui-monospace,Menlo,monospace;font-size:11px"></textarea>
+</div>
+
+<div class="toast" id="toast"></div>
+</div>
+<script src="listing.js"></script>
+</body></html>
