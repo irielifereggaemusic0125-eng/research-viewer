@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-19 07:49",
-  "count": 29,
+  "updated_at": "2026-08-20 07:37",
+  "count": 27,
   "items": {
     "A020-251102": {
       "recommend_min": 44800
@@ -88,12 +88,6 @@
       "won_price": 80300,
       "go_reason": "落札(シート吸出 2026/6/29) 仕入¥10,357",
       "recommend_min": 95600
-    },
-    "O135-260817": {
-      "recommend_min": 19200
-    },
-    "O136-260817": {
-      "recommend_min": 11900
     },
     "O137-260817": {
       "recommend_min": 21400
