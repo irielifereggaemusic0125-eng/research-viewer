@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-22 07:36",
+ "updated_at": "2026-08-22 07:42",
  "items": [
   {
    "date": "20260822",
@@ -149,9 +149,9 @@
   {
    "date": "20260822",
    "type": "要対応",
-   "title": "daily_handoff.py 差分肥大は 2026-08-20 も再現",
+   "title": "daily_handoff.py 差分肥大は 2026-08-22 も再現＝4日連続",
    "name": "pending_daily_handoff.py 差分肥大は 2",
-   "summary": "（178KB / 省略対象658行）：上の対策は未着手。Drive版はこのセッションで候補全件列挙を省略して5.5KBに圧縮して上げた（ローカルの handoff_latest.md は全件あり）"
+   "summary": "（08-19:180KB / 08-20:178KB / 08-21:82KB / 08-22:158KB。フルの handoff_latest.md は117KBso依然「差分>フル」）：対策は未着手。Drive版は毎朝、候補全件列挙を省略した圧縮版を上げている（ローカルの handoff_latest.md は全件あり）"
   },
   {
    "date": "20260822",
