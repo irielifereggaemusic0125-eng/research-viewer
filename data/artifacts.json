@@ -1,6 +1,155 @@
 {
- "updated_at": "2026-08-22 07:42",
+ "updated_at": "2026-08-23 07:38",
  "items": [
+  {
+   "date": "20260823",
+   "type": "レポート",
+   "title": "Banshee 実行ガード（ブロックリスト）",
+   "name": "execution_blocklist.md",
+   "summary": "作成 2026-08-18 / 機械可読版 `execution_blocklist.json` と同内容",
+   "created_at": "05:52"
+  },
+  {
+   "date": "20260823",
+   "type": "レポート",
+   "title": "帳簿 科目修正 実施記録 — 2026-08-23 05:30",
+   "name": "keiri_fix_20260823.md",
+   "summary": "四半期監査（zeirishi_audit_20260822）で挙がった未対応8件を修正。",
+   "created_at": "05:42"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "Remote Control を有効化",
+   "name": "pending_Remote Control を有効化",
+   "summary": "（スマホ→Mac直結・指示の待ち時間 最大60分→ゼロ）対話モードの `claude` ターミナルで `/remote` を実行する。アプリ内やこのセッションからは開けない（terminal-dialog系コマンドのため）。有効化できたか確認する方法＝チャットで「ListAgentsして」と頼み、クラウド/他マシンのセッションが行として並べば接続済み（現在は"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "W044(=No44) CHANELマトラッセ ナノ 買い戻し — ブランドジェイソンの返信待ち",
+   "name": "pending_W044(=No44) CHANELマトラッセ ",
+   "summary": "（2026-08-21 04:xx Shimbaが買い戻し希望DM送信済）"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "W067 ボーイシャネル 買い戻し実行",
+   "name": "pending_W067 ボーイシャネル 買い戻し実行",
+   "summary": "（いいね26・実勢中央¥70,000に対し出品¥54,700・フリマ継続で +¥5,040）"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "A133「25.5cm」表記を24cmへ修正",
+   "name": "pending_A133「25.5cm」表記を24cmへ修正",
+   "summary": "（実測24cm・メルカリ/ラクマ/ヤフフリ/BASEの説明文2箇所ずつ）。eBayは24cmで出しているso現状は販路間で不整合"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "ドーヴブレス4販路の価格統一",
+   "name": "pending_ドーヴブレス4販路の価格統一",
+   "summary": "（ラクマ¥178,000 / メルカリ¥158,000 / BASE¥148,900 / ヤフフリ¥130,000 ＝¥48,000差）※hold品soShimba専管"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "CHANELサングラス ラクマ重複出品の解消",
+   "name": "pending_CHANELサングラス ラクマ重複出品の解消",
+   "summary": "（`da7833471f…` ¥27,100 と `1061d2a780…` ¥23,500）"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "セントマイケルXL の実物在庫確認",
+   "name": "pending_セントマイケルXL の実物在庫確認",
+   "summary": "（メルカリSOLD済だがラクマ¥11,000・ヤフフリ¥11,000で販売中。O117/O119という別個体の可能性）"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "A133/A134 の Country of Origin 現物刻印確認",
+   "name": "pending_A133/A134 の Country of O",
+   "summary": "（eBay Specifics は United States で出品済・要裏取り）"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "既存active在庫（約20品）のタイトルを DEAREST 文法へ改訂",
+   "name": "pending_既存active在庫（約20品）のタイトルを D",
+   "summary": ""
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "説明文に「他サイトでも販売・売り切れ次第削除」の一文を追加（二重販売の予防線）",
+   "name": "pending_説明文に「他サイトでも販売・売り切れ次第削除」の",
+   "summary": ""
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "BASE に Google 商品連携App を設定（Shops再申請用の実売実績づくり）",
+   "name": "pending_BASE に Google 商品連携App を設",
+   "summary": ""
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "VO（バーチャルオフィス）許可取得後にメルカリShops申請を再開",
+   "name": "pending_VO（バーチャルオフィス）許可取得後にメルカリS",
+   "summary": ""
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "知人買取 ¥35,000 の提示（内訳確定済：HomePod¥11,100 / MX ERGO S¥4,900 / CF",
+   "name": "pending_知人買取 ¥35,000 の提示（内訳確定済：H",
+   "summary": ""
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "daily_handoff.py の差分が肥大（数KB設計→176KB）",
+   "name": "pending_daily_handoff.py の差分が肥大（",
+   "summary": "：候補のキーがオークションのタイトル(`c[\"name\"]`)soヤフオク・ストアの日次再出品で662件中455件が「＋新規」444件が「－消滅」＝実際の入替であってIDバグではない。ただし全件列挙soフルの136KBより差分の方が大きい。しかも新規行は全て「Eco指値未算出 実勢未算出」＝判断材料ゼロ。対策案＝候補章は件数サマリ＋Tier1/2かつ指値算出"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "Drive「Banshee_引継書_最新」が毎日新規作成され同名ファイルが約55本堆積",
+   "name": "pending_Drive「Banshee_引継書_最新」が毎日",
+   "summary": "（2026-06-05〜）：Driveコネクタに本文更新APIが無く create しかできないため、daily-handoff-save が毎朝“固定ファイル”ではなく新規ドキュメントを作っている。出先で「引継書読んで」と頼んだとき古い版を掴むリスク。2026-08-20時点で直近5本（08/15〜08/19分）は `Banshee_引継書_YYYYMMD"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "daily_handoff.py 差分肥大は 2026-08-22 も再現＝4日連続",
+   "name": "pending_daily_handoff.py 差分肥大は 2",
+   "summary": "（08-19:180KB / 08-20:178KB / 08-21:82KB / 08-22:158KB。フルの handoff_latest.md は117KBso依然「差分>フル」）：対策は未着手。Drive版は毎朝、候補全件列挙を省略した圧縮版を上げている（ローカルの handoff_latest.md は全件あり）"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "🚨**No103 HERMES ヒストリーリングは「返品」であり売上ではない**（2026-08-21 判明・PDF実読",
+   "name": "pending_🚨**No103 HERMES ヒストリーリング",
+   "summary": ""
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "買取ルデヤ（株式会社ノア商社）の買取履歴を照合",
+   "name": "pending_買取ルデヤ（株式会社ノア商社）の買取履歴を照合",
+   "summary": "（2026-08-21 着手・ログイン待ち）"
+  },
+  {
+   "date": "20260823",
+   "type": "要対応",
+   "title": "⏸**家事按分の設計（保留中・期限12月末）** — 2026-08-22 Shimba判断で資料収集待ち",
+   "name": "pending_⏸**家事按分の設計（保留中・期限12月末）**",
+   "summary": ""
+  },
   {
    "date": "20260822",
    "type": "レポート",
@@ -42,153 +191,12 @@
    "created_at": "04:56"
   },
   {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "Remote Control を有効化",
-   "name": "pending_Remote Control を有効化",
-   "summary": "（スマホ→Mac直結・指示の待ち時間 最大60分→ゼロ）対話モードの `claude` ターミナルで `/remote` を実行する。アプリ内やこのセッションからは開けない（terminal-dialog系コマンドのため）。有効化できたか確認する方法＝チャットで「ListAgentsして」と頼み、クラウド/他マシンのセッションが行として並べば接続済み（現在は"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "W044(=No44) CHANELマトラッセ ナノ 買い戻し — ブランドジェイソンの返信待ち",
-   "name": "pending_W044(=No44) CHANELマトラッセ ",
-   "summary": "（2026-08-21 04:xx Shimbaが買い戻し希望DM送信済）"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "W067 ボーイシャネル 買い戻し実行",
-   "name": "pending_W067 ボーイシャネル 買い戻し実行",
-   "summary": "（いいね26・実勢中央¥70,000に対し出品¥54,700・フリマ継続で +¥5,040）"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "A133「25.5cm」表記を24cmへ修正",
-   "name": "pending_A133「25.5cm」表記を24cmへ修正",
-   "summary": "（実測24cm・メルカリ/ラクマ/ヤフフリ/BASEの説明文2箇所ずつ）。eBayは24cmで出しているso現状は販路間で不整合"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "ドーヴブレス4販路の価格統一",
-   "name": "pending_ドーヴブレス4販路の価格統一",
-   "summary": "（ラクマ¥178,000 / メルカリ¥158,000 / BASE¥148,900 / ヤフフリ¥130,000 ＝¥48,000差）※hold品soShimba専管"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "CHANELサングラス ラクマ重複出品の解消",
-   "name": "pending_CHANELサングラス ラクマ重複出品の解消",
-   "summary": "（`da7833471f…` ¥27,100 と `1061d2a780…` ¥23,500）"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "セントマイケルXL の実物在庫確認",
-   "name": "pending_セントマイケルXL の実物在庫確認",
-   "summary": "（メルカリSOLD済だがラクマ¥11,000・ヤフフリ¥11,000で販売中。O117/O119という別個体の可能性）"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "A133/A134 の Country of Origin 現物刻印確認",
-   "name": "pending_A133/A134 の Country of O",
-   "summary": "（eBay Specifics は United States で出品済・要裏取り）"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "既存active在庫（約20品）のタイトルを DEAREST 文法へ改訂",
-   "name": "pending_既存active在庫（約20品）のタイトルを D",
-   "summary": ""
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "説明文に「他サイトでも販売・売り切れ次第削除」の一文を追加（二重販売の予防線）",
-   "name": "pending_説明文に「他サイトでも販売・売り切れ次第削除」の",
-   "summary": ""
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "BASE に Google 商品連携App を設定（Shops再申請用の実売実績づくり）",
-   "name": "pending_BASE に Google 商品連携App を設",
-   "summary": ""
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "VO（バーチャルオフィス）許可取得後にメルカリShops申請を再開",
-   "name": "pending_VO（バーチャルオフィス）許可取得後にメルカリS",
-   "summary": ""
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "知人買取 ¥35,000 の提示（内訳確定済：HomePod¥11,100 / MX ERGO S¥4,900 / CF",
-   "name": "pending_知人買取 ¥35,000 の提示（内訳確定済：H",
-   "summary": ""
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "daily_handoff.py の差分が肥大（数KB設計→176KB）",
-   "name": "pending_daily_handoff.py の差分が肥大（",
-   "summary": "：候補のキーがオークションのタイトル(`c[\"name\"]`)soヤフオク・ストアの日次再出品で662件中455件が「＋新規」444件が「－消滅」＝実際の入替であってIDバグではない。ただし全件列挙soフルの136KBより差分の方が大きい。しかも新規行は全て「Eco指値未算出 実勢未算出」＝判断材料ゼロ。対策案＝候補章は件数サマリ＋Tier1/2かつ指値算出"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "Drive「Banshee_引継書_最新」が毎日新規作成され同名ファイルが約55本堆積",
-   "name": "pending_Drive「Banshee_引継書_最新」が毎日",
-   "summary": "（2026-06-05〜）：Driveコネクタに本文更新APIが無く create しかできないため、daily-handoff-save が毎朝“固定ファイル”ではなく新規ドキュメントを作っている。出先で「引継書読んで」と頼んだとき古い版を掴むリスク。2026-08-20時点で直近5本（08/15〜08/19分）は `Banshee_引継書_YYYYMMD"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "daily_handoff.py 差分肥大は 2026-08-22 も再現＝4日連続",
-   "name": "pending_daily_handoff.py 差分肥大は 2",
-   "summary": "（08-19:180KB / 08-20:178KB / 08-21:82KB / 08-22:158KB。フルの handoff_latest.md は117KBso依然「差分>フル」）：対策は未着手。Drive版は毎朝、候補全件列挙を省略した圧縮版を上げている（ローカルの handoff_latest.md は全件あり）"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "🚨**No103 HERMES ヒストリーリングは「返品」であり売上ではない**（2026-08-21 判明・PDF実読",
-   "name": "pending_🚨**No103 HERMES ヒストリーリング",
-   "summary": ""
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "買取ルデヤ（株式会社ノア商社）の買取履歴を照合",
-   "name": "pending_買取ルデヤ（株式会社ノア商社）の買取履歴を照合",
-   "summary": "（2026-08-21 着手・ログイン待ち）"
-  },
-  {
-   "date": "20260822",
-   "type": "要対応",
-   "title": "⏸**家事按分の設計（保留中・期限12月末）** — 2026-08-22 Shimba判断で資料収集待ち",
-   "name": "pending_⏸**家事按分の設計（保留中・期限12月末）**",
-   "summary": ""
-  },
-  {
    "date": "20260821",
    "type": "レポート",
    "title": "エコオク下見リサーチ 2026-08-21 03:5x JST",
    "name": "ecoauc_research_20260821.md",
    "summary": "取得: 14クエリ / 338件（重複除去後）/ 開始価格あり 210件",
    "created_at": "03:53"
-  },
-  {
-   "date": "20260821",
-   "type": "レポート",
-   "title": "Banshee 実行ガード（ブロックリスト）",
-   "name": "execution_blocklist.md",
-   "summary": "作成 2026-08-18 / 機械可読版 `execution_blocklist.json` と同内容",
-   "created_at": "04:22"
   },
   {
    "date": "20260821",
