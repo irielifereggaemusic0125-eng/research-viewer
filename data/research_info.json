@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-22 07:36",
-  "count": 27,
+  "updated_at": "2026-08-23 07:38",
+  "count": 26,
   "items": {
     "A020-251102": {
       "recommend_min": 44800
@@ -70,9 +70,6 @@
     },
     "O126-260728": {
       "recommend_min": 8400
-    },
-    "O130-260803": {
-      "recommend_min": 25300
     },
     "A131-260803": {
       "recommend_min": 128600
