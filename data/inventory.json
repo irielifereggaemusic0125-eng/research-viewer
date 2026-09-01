@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-01 07:38",
-  "count": 26,
+  "updated_at": "2026-09-02 07:38",
+  "count": 25,
   "items": [
     {
       "kanri_no": "A020-251102",
@@ -140,20 +140,6 @@
       "actual_price": 3000,
       "price_updated_at": "2026-08-31 19:08",
       "mercari_id": "m35850667014",
-      "ecoauc_listed": false
-    },
-    {
-      "kanri_no": "B086-260426",
-      "name": "ルイヴィトン ライオン ハンドバッグ M92131 ダミエソバージュ",
-      "category": "その他",
-      "category_raw": "B カバン",
-      "buy_date": "2026-04-26",
-      "buy_price": 19020,
-      "loss_cut": 22530,
-      "list_price": 24000,
-      "actual_price": 24000,
-      "price_updated_at": "2026-08-30 19:08",
-      "mercari_id": "m85514902738",
       "ecoauc_listed": false
     },
     {
