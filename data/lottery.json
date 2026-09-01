@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-08-31T21:34:58+09:00",
+  "updated_at": "2026-09-01T21:35:45+09:00",
   "candidates": [
     {
       "name": "ポケカ MEGA拡張パック 30th CELEBRATION BOX",
@@ -13,28 +13,38 @@
       "profit_max": 0,
       "best_route": "メルカリ(発売後判定)",
       "phase": "受付中",
-      "deadline": "2026-09-01T10:59:00+09:00",
+      "deadline": "2026-09-01T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "ヨドバシ・ドット・コム",
-          "url": "https://limited.yodobashi.com/entry/shared/",
+          "store": "イオン北海道 eショップ",
+          "url": "https://es.aeon-hokkaido.jp/eshop/",
           "phase": "受付中",
-          "entry_open": "2026-08-31T11:00:00+09:00",
-          "entry_deadline": "2026-09-01T10:59:00+09:00",
-          "result_date": "2026-09-02T10:00:00+09:00",
+          "entry_open": "2026-09-01T09:00:00+09:00",
+          "entry_deadline": "2026-09-03T23:59:00+09:00",
+          "result_date": "2026-09-15T08:00:00+09:00",
           "order_deadline": "",
-          "note": "⏰締切24h以内"
+          "note": "🆕本日9/1 9:00受付開始・発表9/15"
         },
         {
-          "store": "トレカプラザ55通販",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf5-j-fCgi5uKbpASwrukL_fx0jgwefIRMhaqDalSYBQ1hoCA/viewform",
+          "store": "シーガル(ガルモバ)",
+          "url": "https://seagullonline.jp/gullmoba/",
           "phase": "受付中",
-          "entry_open": "2026-08-26T20:00:00+09:00",
-          "entry_deadline": "2026-09-01T23:59:00+09:00",
-          "result_date": "2026-09-03T00:00:00+09:00",
+          "entry_open": "2026-09-01T10:00:00+09:00",
+          "entry_deadline": "2026-09-06T20:00:00+09:00",
+          "result_date": "2026-09-13T00:00:00+09:00",
           "order_deadline": "",
-          "note": "発表9/3〜9/4"
+          "note": "🆕本日9/1 10:00受付開始・発表9/13"
+        },
+        {
+          "store": "竜のしっぽ",
+          "url": "https://ryuunoshippo.membercard.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-08-31T10:00:00+09:00",
+          "entry_deadline": "2026-09-06T23:59:00+09:00",
+          "result_date": "2026-09-09T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "🆕新規検知・発表9/9"
         },
         {
           "store": "三洋堂書店",
@@ -44,7 +54,27 @@
           "entry_deadline": "2026-09-01T23:59:00+09:00",
           "result_date": "2026-09-11T00:00:00+09:00",
           "order_deadline": "",
-          "note": "発表9/11"
+          "note": "⏰本日23:59締切"
+        },
+        {
+          "store": "トレカプラザ55通販",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf5-j-fCgi5uKbpASwrukL_fx0jgwefIRMhaqDalSYBQ1hoCA/viewform",
+          "phase": "受付中",
+          "entry_open": "2026-08-26T20:00:00+09:00",
+          "entry_deadline": "2026-09-01T23:59:00+09:00",
+          "result_date": "2026-09-03T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "⏰本日23:59締切・発表9/3〜9/4"
+        },
+        {
+          "store": "ゲオ(アプリ)",
+          "url": "https://geo-online.co.jp/news/779",
+          "phase": "受付中",
+          "entry_open": "2026-08-31T11:00:00+09:00",
+          "entry_deadline": "2026-09-03T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "✅昨日の『小分け疑い』解消: 対象=30th BOX＋デッキセット(torecamap 9/1確認)・店舗受取"
         },
         {
           "store": "駿河屋",
@@ -74,37 +104,47 @@
           "entry_deadline": "2026-09-03T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "🔵9/2エントリー開始"
+          "note": "🔵明日9/2 10:00エントリー開始"
+        },
+        {
+          "store": "Amazon(招待リクエスト)",
+          "url": "https://www.amazon.co.jp/dp/B0GXCRBL5J",
+          "phase": "受付中",
+          "entry_open": "2026-06-02T14:00:00+09:00",
+          "entry_deadline": "2026-09-15T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "招待制・登録のみでノーリスク(12ヶ月有効)"
         },
         {
           "store": "ノジマオンライン",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe2tm0oG-L8fBGGdkqdWNJJ2NRkl7IHSWxGKKcFoU_u0-K1Ow/viewform",
+          "url": "https://online.nojima.co.jp/",
           "phase": "受付中",
-          "entry_open": "",
+          "entry_open": "2026-06-10T13:00:00+09:00",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
           "note": "招待制販売・登録のみ"
         },
         {
-          "store": "ゲオ",
-          "url": "https://geo-online.co.jp/news/779",
-          "phase": "受付中",
-          "entry_open": "2026-08-31T11:00:00+09:00",
-          "entry_deadline": "2026-09-03T17:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "⚠️要確認: ゲオは小分けパック販売の実績ありso内容未確認(BOXなら応募価値あり)"
-        },
-        {
           "store": "ポケモンセンターオンライン(追加抽選)",
           "url": "https://www.pokemoncenter-online.com/lottery/landing-page.html",
-          "phase": "終了",
+          "phase": "案内待ち",
           "entry_open": "2026-08-28T12:00:00+09:00",
           "entry_deadline": "2026-08-31T16:59:00+09:00",
           "result_date": "2026-09-04T00:00:00+09:00",
           "order_deadline": "2026-09-08T23:59:00+09:00",
-          "note": "本日16:59締切済・当選なら注文9/4〜9/8"
+          "note": "締切済→発表9/4・当選なら注文期限9/8(取り逃し注意)"
+        },
+        {
+          "store": "ヨドバシ・ドット・コム",
+          "url": "https://limited.yodobashi.com/entry/shared/",
+          "phase": "案内待ち",
+          "entry_open": "2026-08-31T11:00:00+09:00",
+          "entry_deadline": "2026-09-01T10:59:00+09:00",
+          "result_date": "2026-09-02T10:00:00+09:00",
+          "order_deadline": "",
+          "note": "本日10:59締切済→発表9/2 10:00"
         },
         {
           "store": "イトーヨーカドー各店",
@@ -114,10 +154,10 @@
           "entry_deadline": "2026-08-31T20:00:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "店頭QR抽選・本日20:00締切済"
+          "note": "店頭QR抽選・8/31 20:00締切済"
         }
       ],
-      "note": "9/16世界同時発売・1BOX定価¥7,200。発売前so実勢無し=粗利判定保留(応募はノーリスク)。発売後にメルカリ『テープ付き未開封1BOX』でbox-flip判定へ切替"
+      "note": "9/16世界同時発売・1BOX定価¥7,200。発売前so実勢無し=粗利判定保留(応募はノーリスク)。応募先14窓口/受付中10窓口。発売後にメルカリ『テープ付き未開封1BOX』でbox-flip判定へ切替"
     },
     {
       "name": "ポケカ 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
@@ -130,28 +170,38 @@
       "profit_max": 0,
       "best_route": "メルカリ(発売後判定)",
       "phase": "受付中",
-      "deadline": "2026-09-01T10:59:00+09:00",
+      "deadline": "2026-09-01T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "ヨドバシ・ドット・コム",
-          "url": "https://limited.yodobashi.com/entry/shared/",
+          "store": "イオン北海道 eショップ",
+          "url": "https://es.aeon-hokkaido.jp/eshop/",
           "phase": "受付中",
-          "entry_open": "2026-08-31T11:00:00+09:00",
-          "entry_deadline": "2026-09-01T10:59:00+09:00",
-          "result_date": "2026-09-02T10:00:00+09:00",
+          "entry_open": "2026-09-01T09:00:00+09:00",
+          "entry_deadline": "2026-09-03T23:59:00+09:00",
+          "result_date": "2026-09-15T08:00:00+09:00",
           "order_deadline": "",
-          "note": "⏰締切24h以内"
+          "note": "🆕本日受付開始"
         },
         {
-          "store": "トレカプラザ55通販",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf5-j-fCgi5uKbpASwrukL_fx0jgwefIRMhaqDalSYBQ1hoCA/viewform",
+          "store": "シーガル(ガルモバ)",
+          "url": "https://seagullonline.jp/gullmoba/",
           "phase": "受付中",
-          "entry_open": "2026-08-26T20:00:00+09:00",
-          "entry_deadline": "2026-09-01T23:59:00+09:00",
-          "result_date": "2026-09-03T00:00:00+09:00",
+          "entry_open": "2026-09-01T10:00:00+09:00",
+          "entry_deadline": "2026-09-06T20:00:00+09:00",
+          "result_date": "2026-09-13T00:00:00+09:00",
           "order_deadline": "",
-          "note": ""
+          "note": "🆕本日受付開始"
+        },
+        {
+          "store": "竜のしっぽ",
+          "url": "https://ryuunoshippo.membercard.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-08-31T10:00:00+09:00",
+          "entry_deadline": "2026-09-06T23:59:00+09:00",
+          "result_date": "2026-09-09T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "🆕新規検知"
         },
         {
           "store": "三洋堂書店",
@@ -161,7 +211,27 @@
           "entry_deadline": "2026-09-01T23:59:00+09:00",
           "result_date": "2026-09-11T00:00:00+09:00",
           "order_deadline": "",
-          "note": ""
+          "note": "⏰本日23:59締切"
+        },
+        {
+          "store": "トレカプラザ55通販",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf5-j-fCgi5uKbpASwrukL_fx0jgwefIRMhaqDalSYBQ1hoCA/viewform",
+          "phase": "受付中",
+          "entry_open": "2026-08-26T20:00:00+09:00",
+          "entry_deadline": "2026-09-01T23:59:00+09:00",
+          "result_date": "2026-09-03T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "⏰本日23:59締切"
+        },
+        {
+          "store": "ゲオ(アプリ)",
+          "url": "https://geo-online.co.jp/news/779",
+          "phase": "受付中",
+          "entry_open": "2026-08-31T11:00:00+09:00",
+          "entry_deadline": "2026-09-03T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "対象確認済(デッキセット含む)"
         },
         {
           "store": "ドラゴンスター各店",
@@ -181,47 +251,20 @@
           "entry_deadline": "2026-09-03T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "🔵9/2エントリー開始"
-        }
-      ],
-      "note": "定価¥6,200・9/16発売。発売前so粗利判定保留"
-    },
-    {
-      "name": "ワンピースカード OP-17 世界最強の戦士 BOX(24パック)",
-      "brand": "BANDAI",
-      "category": "トレカ",
-      "price": 5760,
-      "jissei": 14800,
-      "premium_rate": 2.57,
-      "premium_level": "高",
-      "profit_max": 6860,
-      "best_route": "メルカリ",
-      "phase": "受付中",
-      "deadline": "2026-09-01T21:30:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ヤマシロヤ オンラインショップ",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdeXxQytWsjRDU-bEPnlHm8l1CLgAu_7O5RC_4fEeEy8GpUfA/viewform",
-          "phase": "受付中",
-          "entry_open": "2026-08-30T21:30:00+09:00",
-          "entry_deadline": "2026-09-01T21:30:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "⏰締切24h以内(9/1 21:30)"
+          "note": "🔵明日9/2 10:00開始"
         },
         {
-          "store": "ゲオ",
-          "url": "https://geo-online.co.jp/news/781",
-          "phase": "受付中",
+          "store": "ヨドバシ・ドット・コム",
+          "url": "https://limited.yodobashi.com/entry/shared/",
+          "phase": "案内待ち",
           "entry_open": "2026-08-31T11:00:00+09:00",
-          "entry_deadline": "2026-09-03T17:59:00+09:00",
-          "result_date": "",
+          "entry_deadline": "2026-09-01T10:59:00+09:00",
+          "result_date": "2026-09-02T10:00:00+09:00",
           "order_deadline": "",
-          "note": "🚫見送り: 6パック小分け(定価¥1,440)・粗利約¥1,850で基準¥3,000未満"
+          "note": "本日10:59締切済→発表9/2"
         }
       ],
-      "note": "実勢=2026-08-30検証値(メルカリ個人売切 テープ付き1BOX ¥14,800〜15,555/n=9・2BOX¥31,000)。本日は実機再検証せず前回値を流用。8/22発売so早期売却推奨"
+      "note": "定価¥6,200・9/16発売。発売前so粗利判定保留。応募先9窓口/受付中7窓口"
     },
     {
       "name": "ONE PIECEカードゲーム プレミアムカードコレクション -ONE PIECE DAY'26-",
@@ -248,7 +291,7 @@
           "note": "当選発表2026年9月中旬"
         }
       ],
-      "note": "締切まで1週間・粗利未検証(発売前)"
+      "note": "締切まで6日・粗利未検証(発売前)"
     },
     {
       "name": "RICOH GR各モデル(GR SPACE TOKYO 店頭抽選)",
@@ -278,6 +321,33 @@
       "note": "店頭受取前提so遠隔応募不可・参考掲載"
     },
     {
+      "name": "RICOH GR 2次(繰上)エントリー ※日程未告知",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0.0,
+      "premium_level": "低",
+      "profit_max": 0,
+      "best_route": "るでや買取",
+      "phase": "予告",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-09-14T00:00:00+09:00",
+          "order_deadline": "2026-09-17T23:59:00+09:00",
+          "note": "2次は1次エントリー者からの繰上・新規受付告知は未確認"
+        }
+      ],
+      "note": "全6モデルの2次(繰上)発表が9/14〜9/15・注文期限9/16〜9/17。新規エントリー枠が出るか毎晩監視"
+    },
+    {
       "name": "RICOH GR IIIx HDF",
       "brand": "RICOH",
       "category": "カメラ",
@@ -299,10 +369,10 @@
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-08-31T00:00:00+09:00",
           "order_deadline": "2026-09-02T23:59:00+09:00",
-          "note": "1次発表2026-08-31→注文期限2026-09-02 / 2次(繰上)発表2026-09-14→注文期限2026-09-16"
+          "note": "1次発表8/31→注文期限9/2 23:59 / 2次発表9/14→注文期限9/16"
         }
       ],
-      "note": "⭐⭐要検証・るでや買取利益は2026-08-23検証値"
+      "note": "⭐⭐利益未検証。注文期限が明日9/2 23:59so当選メール確認を優先"
     },
     {
       "name": "RICOH GR IV Monochrome",
@@ -326,10 +396,10 @@
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-08-31T00:00:00+09:00",
           "order_deadline": "2026-09-02T23:59:00+09:00",
-          "note": "1次発表2026-08-31→注文期限2026-09-02 / 2次(繰上)発表2026-09-14→注文期限2026-09-16"
+          "note": "1次発表8/31→注文期限9/2 23:59 / 2次発表9/14→注文期限9/16"
         }
       ],
-      "note": "🚫応募不要(赤字)・るでや買取利益は2026-08-23検証値"
+      "note": "🚫転売目的では注文不要(粗利−¥20,200の赤字)・るでや買取は2026-08-23検証値"
     },
     {
       "name": "RICOH GR IV HDF",
@@ -341,22 +411,22 @@
       "premium_level": "低",
       "profit_max": 20300,
       "best_route": "るでや買取",
-      "phase": "案内待ち",
+      "phase": "注文中",
       "deadline": "2026-09-03T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "リコーイメージングストア",
           "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "案内待ち",
+          "phase": "注文中",
           "entry_open": "2026-08-24T12:00:00+09:00",
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-09-01T00:00:00+09:00",
           "order_deadline": "2026-09-03T23:59:00+09:00",
-          "note": "1次発表2026-09-01→注文期限2026-09-03 / 2次(繰上)発表2026-09-14→注文期限2026-09-16"
+          "note": "🔔本日9/1が1次当選発表→注文期限9/3 23:59 / 2次(繰上)発表9/14→注文期限9/16"
         }
       ],
-      "note": "⭐⭐⭐最優先・るでや買取利益は2026-08-23検証値"
+      "note": "⭐⭐⭐最優先(利益+¥20,300)・るでや買取は2026-08-23検証値(本日kaitori-rudeya.comから機種別価格取得不可so流用)"
     },
     {
       "name": "RICOH GR IIIx Urban Edition",
@@ -368,22 +438,22 @@
       "premium_level": "低",
       "profit_max": 0,
       "best_route": "るでや買取",
-      "phase": "案内待ち",
+      "phase": "注文中",
       "deadline": "2026-09-03T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "リコーイメージングストア",
           "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "案内待ち",
+          "phase": "注文中",
           "entry_open": "2026-08-24T12:00:00+09:00",
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-09-01T00:00:00+09:00",
           "order_deadline": "2026-09-03T23:59:00+09:00",
-          "note": "1次発表2026-09-01→注文期限2026-09-03 / 2次(繰上)発表2026-09-14→注文期限2026-09-16"
+          "note": "🔔本日9/1が1次当選発表→注文期限9/3 23:59 / 2次発表9/14→注文期限9/16"
         }
       ],
-      "note": "⭐⭐要検証・るでや買取利益は2026-08-23検証値"
+      "note": "⭐⭐利益未検証(定価・るでや買取とも未取得)。当選していたら注文前に買取価格を要確認"
     },
     {
       "name": "RICOH GR IIIx",
@@ -407,10 +477,10 @@
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-09-07T00:00:00+09:00",
           "order_deadline": "2026-09-09T23:59:00+09:00",
-          "note": "1次発表2026-09-07→注文期限2026-09-09 / 2次(繰上)発表2026-09-15→注文期限2026-09-17"
+          "note": "1次発表9/7→注文期限9/9 / 2次発表9/15→注文期限9/17"
         }
       ],
-      "note": "⭐⭐⭐最優先・るでや買取利益は2026-08-23検証値"
+      "note": "⭐⭐⭐最優先(利益+¥21,200)・るでや買取は2026-08-23検証値"
     },
     {
       "name": "RICOH GR IV",
@@ -434,10 +504,47 @@
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-09-08T00:00:00+09:00",
           "order_deadline": "2026-09-10T23:59:00+09:00",
-          "note": "1次発表2026-09-08→注文期限2026-09-10 / 2次(繰上)発表2026-09-15→注文期限2026-09-17"
+          "note": "1次発表9/8→注文期限9/10 / 2次発表9/15→注文期限9/17"
         }
       ],
-      "note": "🚫応募不要(粗利¥1,100・基準未満)・るでや買取利益は2026-08-23検証値"
+      "note": "🚫応募不要(粗利¥1,100・基準未満/7月の¥17,000値上げで妙味消滅)・るでや買取は2026-08-23検証値"
+    },
+    {
+      "name": "ワンピースカード OP-17 世界最強の戦士 BOX(24パック)",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 14800,
+      "premium_rate": 2.57,
+      "premium_level": "高",
+      "profit_max": 6860,
+      "best_route": "メルカリ",
+      "phase": "終了",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ヤマシロヤ オンラインショップ",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdeXxQytWsjRDU-bEPnlHm8l1CLgAu_7O5RC_4fEeEy8GpUfA/viewform",
+          "phase": "終了",
+          "entry_open": "2026-08-30T21:30:00+09:00",
+          "entry_deadline": "2026-09-01T21:30:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "9/1 21:30締切済"
+        },
+        {
+          "store": "ゲオ",
+          "url": "https://geo-online.co.jp/news/781",
+          "phase": "受付中",
+          "entry_open": "2026-08-31T11:00:00+09:00",
+          "entry_deadline": "2026-09-03T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🚫見送り: 6パック小分け(定価¥1,440)・粗利約¥1,850で基準¥3,000未満"
+        }
+      ],
+      "note": "実勢=2026-08-30検証値(メルカリ個人売切 テープ付き1BOX ¥14,800〜15,555/n=9)。9/1 21:30でヤマシロヤ(BOX)締切→応募可能な窓口は残ゲオのみだが6パック小分け(粗利¥1,850<基準¥3,000)so見送り。実質クローズ。メルカリ実機再検証は本日も取得不可(JS描画)so前回値を流用"
     }
   ]
 }
