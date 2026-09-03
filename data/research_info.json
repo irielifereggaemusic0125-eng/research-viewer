@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-03 07:36",
-  "count": 23,
+  "updated_at": "2026-09-04 07:38",
+  "count": 24,
   "items": {
     "A020-251102": {
       "recommend_min": 44800
@@ -78,6 +78,11 @@
     },
     "O141-260829": {
       "recommend_min": 11200
+    },
+    "A142-260904": {
+      "bid": 80300,
+      "won_price": 80300,
+      "recommend_min": 24700
     }
   }
 }
