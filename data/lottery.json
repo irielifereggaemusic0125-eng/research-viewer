@@ -1,34 +1,7 @@
 {
   "schema": "v2",
-  "updated_at": "2026-09-04T21:36:24+09:00",
+  "updated_at": "2026-09-05T21:35:02+09:00",
   "candidates": [
-    {
-      "name": "ポケカ MEGA 30th CELEBRATION カードセット(No.1〜9)",
-      "brand": "ポケモン",
-      "category": "トレカ",
-      "price": 0,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "低",
-      "profit_max": 0,
-      "best_route": "",
-      "phase": "受付中",
-      "deadline": "2026-09-04T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "イオンスタイルオンライン",
-          "url": "https://aeonretail.com/Page/k-lottery_pokemon_set.aspx",
-          "phase": "受付中",
-          "entry_open": "2026-09-03T11:00:00+09:00",
-          "entry_deadline": "2026-09-04T23:59:00+09:00",
-          "result_date": "2026-09-15T12:00:00+09:00",
-          "order_deadline": "",
-          "note": "🔴今夜23:59締切。No.1〜9の3グループに分け9/15〜9/17に順次発表"
-        }
-      ],
-      "note": "🆕2026-09-04夜検知。BOXとは別商品(10/16発売のカードセット)。締切=今夜23:59so即応募。イオンは過去当選実績あり(2025/11イオンスタイル)。発売前so粗利判定は保留・応募はノーリスク"
-    },
     {
       "name": "ポケカ MEGA拡張パック 30th CELEBRATION BOX",
       "brand": "ポケモンカード",
@@ -38,9 +11,9 @@
       "premium_rate": 0.0,
       "premium_level": "低",
       "profit_max": 0,
-      "best_route": "未確定(発売前)",
+      "best_route": "未確定(9/16発売・発売前so粗利判定保留)",
       "phase": "受付中",
-      "deadline": "2026-09-06T20:00:00+09:00",
+      "deadline": "2026-09-06T19:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
@@ -61,27 +34,67 @@
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-15T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕本日開始・店頭抽選(来店要)"
+          "note": "店頭抽選(来店要)・一部店舗はXリポスト23:59締切"
         },
         {
           "store": "Bee本舗",
-          "url": "https://nyuka-now.com/archives/159770",
+          "url": "https://www.bee-honpo.com/",
           "phase": "受付中",
           "entry_open": "2026-09-04T14:00:00+09:00",
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-16T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕本日開始・Googleフォーム応募"
+          "note": "Googleフォーム応募"
         },
         {
           "store": "ホビーゾーン各店",
-          "url": "https://nyuka-now.com/archives/2459",
+          "url": "https://nyuka-now.com/archives/159770",
           "phase": "受付中",
           "entry_open": "2026-09-04T10:00:00+09:00",
           "entry_deadline": "2026-09-06T21:00:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "🆕本日開始・店頭QRコード応募(来店要)"
+          "note": "店頭QRコード"
+        },
+        {
+          "store": "トレカショップVOW(滋賀)",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-06T19:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕WEBフォーム"
+        },
+        {
+          "store": "文教堂書店浦安西友店",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-06T20:30:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕WEBフォーム"
+        },
+        {
+          "store": "Clove Base秋葉原店",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-06T21:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕WEBフォーム"
+        },
+        {
+          "store": "カードショップきりん大阪天満橋店",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-06T22:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕WEBフォーム"
         },
         {
           "store": "古本市場",
@@ -91,17 +104,27 @@
           "entry_deadline": "2026-09-06T23:00:00+09:00",
           "result_date": "2026-09-14T23:00:00+09:00",
           "order_deadline": "",
-          "note": "BOX/デッキセット"
+          "note": ""
         },
         {
-          "store": "駿河屋",
+          "store": "プレイズ/お宝創庫グループ",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-06T23:45:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕アプリ会員登録要"
+        },
+        {
+          "store": "駿河屋 通販",
           "url": "https://www.suruga-ya.jp/blog/?q=pokeka_chusen260820.html",
           "phase": "受付中",
           "entry_open": "2026-08-20T12:00:00+09:00",
           "entry_deadline": "2026-09-06T23:59:00+09:00",
           "result_date": "2026-09-07T00:00:00+09:00",
           "order_deadline": "",
-          "note": "BOX"
+          "note": "WEBフォーム＋Xリポスト"
         },
         {
           "store": "竜のしっぽ各店",
@@ -111,27 +134,47 @@
           "entry_deadline": "2026-09-06T23:59:00+09:00",
           "result_date": "2026-09-09T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕未応募窓口"
-        },
-        {
-          "store": "ドラゴンスター各店",
-          "url": "https://dorasuta.membercard.jp/lottery",
-          "phase": "受付中",
-          "entry_open": "2026-08-31T22:30:00+09:00",
-          "entry_deadline": "2026-09-06T23:59:00+09:00",
-          "result_date": "2026-09-12T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "🆕未応募窓口 ⚠️まとめ2記事で締切表記が割れる(9/3説あり)so早めに応募"
+          "note": ""
         },
         {
           "store": "キデイランド各店",
           "url": "https://livepocket.jp/p/hpmzs",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "2026-09-05T10:00:00+09:00",
           "entry_deadline": "2026-09-07T23:59:00+09:00",
           "result_date": "2026-09-14T18:00:00+09:00",
           "order_deadline": "",
-          "note": "明日9/5 10:00エントリー開始"
+          "note": "🆕本日10時受付開始"
+        },
+        {
+          "store": "WonderGOO/新星堂",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "受付中",
+          "entry_open": "2026-09-05T10:00:00+09:00",
+          "entry_deadline": "2026-09-07T20:59:00+09:00",
+          "result_date": "2026-09-10T12:00:00+09:00",
+          "order_deadline": "",
+          "note": "🆕本日10時開始・店頭QR"
+        },
+        {
+          "store": "GIRAFULL",
+          "url": "https://livepocket.jp/p/puf0p",
+          "phase": "受付中",
+          "entry_open": "2026-09-05T12:00:00+09:00",
+          "entry_deadline": "2026-09-07T23:59:00+09:00",
+          "result_date": "2026-09-12T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "🆕本日12時開始"
+        },
+        {
+          "store": "フルコンプ",
+          "url": "https://livepocket.jp/e/thb-n",
+          "phase": "受付中",
+          "entry_open": "2026-09-05T12:00:00+09:00",
+          "entry_deadline": "2026-09-08T23:59:00+09:00",
+          "result_date": "2026-09-09T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "🆕本日12時開始"
         },
         {
           "store": "ファミマオンライン",
@@ -141,7 +184,7 @@
           "entry_deadline": "2026-09-10T23:59:00+09:00",
           "result_date": "2026-09-14T00:00:00+09:00",
           "order_deadline": "",
-          "note": "BOX"
+          "note": ""
         },
         {
           "store": "晴れる屋2各店",
@@ -151,17 +194,17 @@
           "entry_deadline": "2026-09-12T23:59:00+09:00",
           "result_date": "2026-09-13T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕本日開始・LivePocket"
+          "note": ""
         },
         {
           "store": "コジマ(アプリ)",
-          "url": "https://www.kojima.net/shop/app/kojima_appli.html",
+          "url": "https://www.kojima.net/",
           "phase": "受付中",
           "entry_open": "2026-09-04T21:00:00+09:00",
           "entry_deadline": "2026-09-13T23:59:00+09:00",
           "result_date": "2026-09-16T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕本日21:00開始・コジマアプリ要インストール"
+          "note": "アプリ限定"
         },
         {
           "store": "おりパンダ",
@@ -169,7 +212,7 @@
           "phase": "受付中",
           "entry_open": "2026-09-03T00:00:00+09:00",
           "entry_deadline": "2026-09-15T23:59:00+09:00",
-          "result_date": "2026-09-16T00:00:00+09:00",
+          "result_date": "",
           "order_deadline": "",
           "note": ""
         },
@@ -181,7 +224,7 @@
           "entry_deadline": "2026-09-15T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "無料・カード登録不要"
+          "note": "12ヶ月有効・登録済みなら放置可"
         },
         {
           "store": "ポケモンセンターオンライン",
@@ -191,20 +234,20 @@
           "entry_deadline": "2026-09-16T16:59:00+09:00",
           "result_date": "2026-09-30T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕🎯本命窓口。9/11 16:00エントリー開始・発表9/30"
+          "note": "本命・9/11 16時開始"
         },
         {
           "store": "ノジマオンライン",
-          "url": "https://online.nojima.co.jp/",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe2tm0oG-L8fBGGdkqdWNJD2NRkl7IHSWxGKKcFoU_u0-K1Ow/viewform",
           "phase": "受付中",
           "entry_open": "2026-06-10T13:00:00+09:00",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "継続受付(招待制)"
+          "note": "締切未告知・継続受付"
         }
       ],
-      "note": "🎯名指しWATCH。発売2026-09-16(世界同時)so実売相場は未成立=粗利判定は保留・応募はノーリスクso全窓口に応募。2026-09-04夜の巡回で窓口を8→16に拡張(🆕7窓口=ビックカメラ/Bee本舗/ホビーゾーン/竜のしっぽ/ドラゴンスター/晴れる屋2/コジマ、＋🎯本命ポケセン9/11開始を新規検知)。25th ANNIVERSARY box(定価¥5,500→ピーク¥20,000+)の前例あり。当選後は発売直後に早期売却"
+      "note": "9/16世界同時発売。本日9/5に4窓口が新規受付開始(キデイランド/WonderGOO/GIRAFULL/フルコンプ)。明日9/6に12窓口が一斉締切。発売前so実勢未確定・応募はノーリスク。25th ANNIVERSARY(定価5,500→ピーク20,000+)の前例あり"
     },
     {
       "name": "ポケカ 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
@@ -228,7 +271,7 @@
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-13T00:00:00+09:00",
           "order_deadline": "",
-          "note": "BOX/デッキセット"
+          "note": ""
         },
         {
           "store": "ビックカメラ各店(店頭抽選)",
@@ -238,17 +281,17 @@
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-15T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕BOX/デッキ両方対象"
+          "note": ""
         },
         {
           "store": "Bee本舗",
-          "url": "https://nyuka-now.com/archives/159770",
+          "url": "https://www.bee-honpo.com/",
           "phase": "受付中",
           "entry_open": "2026-09-04T14:00:00+09:00",
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-16T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕BOX/デッキ両方対象"
+          "note": ""
         },
         {
           "store": "古本市場",
@@ -258,17 +301,27 @@
           "entry_deadline": "2026-09-06T23:00:00+09:00",
           "result_date": "2026-09-14T23:00:00+09:00",
           "order_deadline": "",
-          "note": "BOX/デッキセット"
+          "note": ""
         },
         {
           "store": "キデイランド各店",
           "url": "https://livepocket.jp/p/hpmzs",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "2026-09-05T10:00:00+09:00",
           "entry_deadline": "2026-09-07T23:59:00+09:00",
           "result_date": "2026-09-14T18:00:00+09:00",
           "order_deadline": "",
-          "note": "明日9/5 10:00エントリー開始"
+          "note": "🆕本日開始"
+        },
+        {
+          "store": "各店(WEB/店頭/アプリ)",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-12T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "複数店が9/8〜9/12締切で受付中"
         },
         {
           "store": "ポケモンセンターオンライン",
@@ -278,47 +331,101 @@
           "entry_deadline": "2026-09-16T16:59:00+09:00",
           "result_date": "2026-09-30T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕🎯本命窓口。BOX/デッキ両方対象"
+          "note": ""
         },
         {
           "store": "ノジマオンライン",
-          "url": "https://online.nojima.co.jp/",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe2tm0oG-L8fBGGdkqdWNJD2NRkl7IHSWxGKKcFoU_u0-K1Ow/viewform",
           "phase": "受付中",
           "entry_open": "2026-06-10T13:00:00+09:00",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "継続受付(招待制)"
+          "note": "締切未告知"
         }
       ],
-      "note": "BOXと同時受付の店舗が多い。発売前so粗利判定保留・応募のみ先行。2026-09-04夜に窓口4→7へ拡張"
+      "note": "BOXと別枠so併願可。発売前so粗利判定保留"
+    },
+    {
+      "name": "ポケカ ストームエメラルダ",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0.0,
+      "premium_level": "低",
+      "profit_max": 0,
+      "best_route": "未確定(発売前)",
+      "phase": "受付中",
+      "deadline": "2026-09-06T23:45:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "お宝創庫・プレイズ",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "2026-09-03T12:00:00+09:00",
+          "entry_deadline": "2026-09-06T23:45:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕アプリ会員登録要"
+        }
+      ],
+      "note": "🆕2026-09-05検知。30th以外の新弾枠。発売前so粗利判定保留・応募はノーリスク"
+    },
+    {
+      "name": "ポケカ メガブレイブ / メガシンフォニア",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0.0,
+      "premium_level": "低",
+      "profit_max": 0,
+      "best_route": "未確定(発売前)",
+      "phase": "受付中",
+      "deadline": "2026-09-06T23:45:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "お宝創庫・プレイズ",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "2026-09-03T12:00:00+09:00",
+          "entry_deadline": "2026-09-06T23:45:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕アプリ会員登録要"
+        }
+      ],
+      "note": "🆕2026-09-05検知。ホビステ枠は9/3締切済(発表9/14)。発売前so粗利判定保留"
     },
     {
       "name": "ONE PIECEカードゲーム EB-05 ヒロインズエディション vol.2 BOX",
-      "brand": "バンダイ",
+      "brand": "ONE PIECEカードゲーム",
       "category": "トレカ",
       "price": 5760,
       "jissei": 0,
-      "premium_rate": 0,
+      "premium_rate": 0.0,
       "premium_level": "低",
       "profit_max": 0,
-      "best_route": "",
+      "best_route": "未確定(10/31発売)",
       "phase": "受付中",
       "deadline": "2026-09-07T13:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "あみあみ",
-          "url": "https://nyuka-now.com/archives/97393",
+          "url": "https://form.amiami.jp/draw20260904",
           "phase": "受付中",
           "entry_open": "2026-09-04T10:00:00+09:00",
           "entry_deadline": "2026-09-07T13:59:00+09:00",
           "result_date": "2026-09-08T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕本日開始・WEB抽選"
+          "note": "WEBフォーム"
         }
       ],
-      "note": "🆕2026-09-04夜検知。発売2026-10-31・1BOX(24パック)定価¥5,760。発売前so実勢なし=粗利判定保留・応募はノーリスク。発売後にメルカリ『シュリンク付未開封1BOX』で粗利再判定"
+      "note": "発売=2026-10-31。定価≈¥5,760(¥240×24パック)。前作ヒロインズEDはプレミア化した実績あり。発売前so粗利判定保留・当選後は発売直後に売り切る(TCG新弾の暴落則)"
     },
     {
       "name": "ONE PIECEカードゲーム プレミアムカードコレクション -ONE PIECE DAY'26-",
@@ -329,23 +436,23 @@
       "premium_rate": 0.0,
       "premium_level": "低",
       "profit_max": 0,
-      "best_route": "未確定(発売前)",
+      "best_route": "未確定",
       "phase": "受付中",
       "deadline": "2026-09-07T23:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "プレミアムバンダイ",
-          "url": "https://p-bandai.jp/",
+          "url": "https://p-bandai.jp/item/item-1000256592/",
           "phase": "受付中",
           "entry_open": "2026-08-22T13:00:00+09:00",
           "entry_deadline": "2026-09-07T23:00:00+09:00",
           "result_date": "2026-09-15T00:00:00+09:00",
           "order_deadline": "",
-          "note": "WEB抽選・当選者にオンライン販売"
+          "note": "プレバン受注抽選"
         }
       ],
-      "note": "締切9/7 23:00・残3日。発売前so粗利判定保留・応募はノーリスク"
+      "note": "⏰残り約2日。プレバン限定so数量限定・イベント限定商材"
     },
     {
       "name": "RICOH GR各モデル(GR SPACE TOKYO 店頭抽選)",
@@ -353,7 +460,7 @@
       "category": "カメラ",
       "price": 0,
       "jissei": 0,
-      "premium_rate": 0.0,
+      "premium_rate": 0,
       "premium_level": "低",
       "profit_max": 0,
       "best_route": "るでや買取",
@@ -369,13 +476,13 @@
           "entry_deadline": "2026-09-25T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "東京店頭・事前本人確認要"
+          "note": "要店頭での事前本人確認so東京在住者向け"
         }
       ],
-      "note": "継続・唯一のカメラ新規受付枠 ※2026-09-04夜巡回: リコーイメージングストア/転売クエストとも新規エントリー受付の予告なし。買取値は2026-09-02検証値を流用"
+      "note": "現在リコー系で唯一の受付中枠。ただし店頭本人確認要so愛知からは実質不参加"
     },
     {
-      "name": "ONE PIECEカードゲーム OP-10 ロイヤルブラッドライン(Amazon招待リクエスト)",
+      "name": "ONE PIECEカードゲーム OP-10 王族の血統 BOX",
       "brand": "ONE PIECEカードゲーム",
       "category": "トレカ",
       "price": 0,
@@ -384,36 +491,36 @@
       "premium_level": "低",
       "profit_max": 0,
       "best_route": "未確定",
-      "phase": "予告",
+      "phase": "受付中",
       "deadline": "",
       "status": "未応募",
       "routes": [
         {
           "store": "Amazon 招待リクエスト",
-          "url": "https://nyuka-now.com/archives/97393",
-          "phase": "予告",
+          "url": "https://www.amazon.co.jp/dp/B0DDWZWW1Z",
+          "phase": "受付中",
           "entry_open": "2026-09-05T22:00:00+09:00",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "明日9/5 22:00 招待リクエスト開始"
+          "note": "🔴本日22:00リクエスト開始・招待制販売"
         }
       ],
-      "note": "🔵明日9/5 22:00 招待リクエスト開始。招待リクエストは無料・放置可so登録だけしておく。⚠️2026-09-04夜の再巡回では入荷Now側にOP-10の記載を再確認できずso弾番号は要確認(現行弾はOP-15)"
+      "note": "🆕本日9/5 22:00からAmazon招待リクエスト受付。招待制so登録は1分・ノーリスク。※前回台帳の『ロイヤルブラッドライン』は誤記so『王族の血統』に修正"
     },
     {
       "name": "RICOH GR IIIx",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 155400,
-      "jissei": 198000,
-      "premium_rate": 1.27,
-      "premium_level": "中",
+      "price": 187000,
+      "jissei": 228600,
+      "premium_rate": 1.22,
+      "premium_level": "低",
       "profit_max": 41600,
-      "best_route": "るでや買取(2026-09-02検証)",
+      "best_route": "るでや買取(2026-08-26検証値)",
       "phase": "案内待ち",
       "deadline": "2026-09-09T23:59:00+09:00",
-      "status": "未応募",
+      "status": "応募済み(要確認)",
       "routes": [
         {
           "store": "リコーイメージングストア",
@@ -423,24 +530,24 @@
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-09-07T00:00:00+09:00",
           "order_deadline": "2026-09-09T23:59:00+09:00",
-          "note": "1次発表9/7→注文期限9/9 / 2次発表9/15→注文期限9/17"
+          "note": "2次当選発表09-07→注文締切09-09。⭐応募価値あり"
         }
       ],
-      "note": "🚨SKILL表の定価が誤り→本日実定価で再計算。買取¥198,000(るでや2026-09-02)−定価¥155,400−送料¥1,000。保証書店舗印ありは減額あり ※2026-09-04夜巡回: リコーイメージングストア/転売クエストとも新規エントリー受付の予告なし。買取値は2026-09-02検証値を流用"
+      "note": "⭐応募価値あり。粗利は2026-08-26検証値(本日kaitori-rudeya.comから機種別価格を取得できずso流用)。🚨取り逃しやすいのは発表日でなく注文期限"
     },
     {
       "name": "RICOH GR IV",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 211800,
-      "jissei": 227000,
-      "premium_rate": 1.07,
+      "price": 232600,
+      "jissei": 246800,
+      "premium_rate": 1.06,
       "premium_level": "低",
       "profit_max": 14200,
-      "best_route": "るでや買取(2026-09-02検証)",
+      "best_route": "るでや買取(2026-08-26検証値)",
       "phase": "案内待ち",
       "deadline": "2026-09-10T23:59:00+09:00",
-      "status": "未応募",
+      "status": "応募済み(要確認)",
       "routes": [
         {
           "store": "リコーイメージングストア",
@@ -450,51 +557,51 @@
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-09-08T00:00:00+09:00",
           "order_deadline": "2026-09-10T23:59:00+09:00",
-          "note": "1次発表9/8→注文期限9/10 / 2次発表9/15→注文期限9/17"
+          "note": "2次当選発表09-08→注文締切09-10。⚠️7月値上げで妙味縮小"
         }
       ],
-      "note": "🚨SKILL表の定価が誤り→本日実定価で再計算。買取¥227,000(るでや2026-09-02)−定価¥211,800−送料¥1,000。保証書店舗印ありは減額あり ※2026-09-04夜巡回: リコーイメージングストア/転売クエストとも新規エントリー受付の予告なし。買取値は2026-09-02検証値を流用"
+      "note": "⚠️7月値上げで妙味縮小。粗利は2026-08-26検証値(本日kaitori-rudeya.comから機種別価格を取得できずso流用)。🚨取り逃しやすいのは発表日でなく注文期限"
     },
     {
-      "name": "RICOH GR IV Monochrome",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 222000,
-      "jissei": 194000,
-      "premium_rate": 0.87,
+      "name": "ポケカ MEGA 30th CELEBRATION カードセット(No.1〜9)",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0.0,
       "premium_level": "低",
-      "profit_max": -29000,
-      "best_route": "るでや買取(2026-09-02検証)",
+      "profit_max": 0,
+      "best_route": "",
       "phase": "案内待ち",
-      "deadline": "2026-09-16T23:59:00+09:00",
-      "status": "未応募",
+      "deadline": "2026-09-15T12:00:00+09:00",
+      "status": "応募済み(要確認)",
       "routes": [
         {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "store": "イオンスタイルオンライン",
+          "url": "https://aeonretail.com/Page/k-lottery_pokemon_set.aspx",
           "phase": "案内待ち",
-          "entry_open": "2026-08-24T12:00:00+09:00",
-          "entry_deadline": "2026-08-26T12:00:00+09:00",
-          "result_date": "2026-09-14T00:00:00+09:00",
-          "order_deadline": "2026-09-16T23:59:00+09:00",
-          "note": "1次注文期限9/2は終了→2次発表9/14→注文期限9/16"
+          "entry_open": "2026-09-03T11:00:00+09:00",
+          "entry_deadline": "2026-09-04T23:59:00+09:00",
+          "result_date": "2026-09-15T12:00:00+09:00",
+          "order_deadline": "",
+          "note": "受付終了(9/4 23:59)。No.1〜9の3グループに分け9/15〜9/17に順次発表"
         }
       ],
-      "note": "赤字so購入見送り。買取¥194,000(るでや2026-09-02)−定価¥222,000−送料¥1,000。保証書店舗印ありは減額あり ※2026-09-04夜巡回: リコーイメージングストア/転売クエストとも新規エントリー受付の予告なし。買取値は2026-09-02検証値を流用 ⚠️転売クエストは定価¥299,800と記載(当台帳¥222,000と不一致)。どちらでも赤字so応募不要の判定は不変・次回要確認"
+      "note": "受付終了→当選発表待ち(9/15〜17)。10/16発売のカードセット"
     },
     {
       "name": "RICOH GR IIIx HDF",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 168800,
-      "jissei": 226500,
-      "premium_rate": 1.34,
-      "premium_level": "中",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "低",
       "profit_max": 56700,
-      "best_route": "るでや買取(2026-09-02検証)",
+      "best_route": "るでや買取(2026-08-26検証値)",
       "phase": "案内待ち",
       "deadline": "2026-09-16T23:59:00+09:00",
-      "status": "未応募",
+      "status": "応募済み(要確認)",
       "routes": [
         {
           "store": "リコーイメージングストア",
@@ -504,24 +611,24 @@
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-09-14T00:00:00+09:00",
           "order_deadline": "2026-09-16T23:59:00+09:00",
-          "note": "1次注文期限9/3は終了→2次(繰上)発表9/14→注文期限9/16"
+          "note": "2次当選発表09-14→注文締切09-16。⭐応募価値あり"
         }
       ],
-      "note": "🚨SKILL表の定価が誤り→本日実定価で再計算。買取¥226,500(るでや2026-09-02)−定価¥168,800−送料¥1,000。保証書店舗印ありは減額あり ※2026-09-04夜巡回: リコーイメージングストア/転売クエストとも新規エントリー受付の予告なし。買取値は2026-09-02検証値を流用"
+      "note": "⭐応募価値あり。粗利は2026-08-26検証値(本日kaitori-rudeya.comから機種別価格を取得できずso流用)。🚨取り逃しやすいのは発表日でなく注文期限"
     },
     {
       "name": "RICOH GR IV HDF",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 222000,
-      "jissei": 266000,
-      "premium_rate": 1.2,
-      "premium_level": "中",
+      "price": 244000,
+      "jissei": 287000,
+      "premium_rate": 1.18,
+      "premium_level": "低",
       "profit_max": 43000,
-      "best_route": "るでや買取(2026-09-02検証)",
+      "best_route": "るでや買取(2026-08-26検証値)",
       "phase": "案内待ち",
       "deadline": "2026-09-16T23:59:00+09:00",
-      "status": "未応募",
+      "status": "応募済み(要確認)",
       "routes": [
         {
           "store": "リコーイメージングストア",
@@ -531,24 +638,24 @@
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-09-14T00:00:00+09:00",
           "order_deadline": "2026-09-16T23:59:00+09:00",
-          "note": "1次注文期限9/3は終了→2次発表9/14→注文期限9/16"
+          "note": "2次当選発表09-14→注文締切09-16。⭐最優先"
         }
       ],
-      "note": "🚨SKILL表の定価が誤り→本日実定価で再計算。買取¥266,000(るでや2026-09-02)−定価¥222,000−送料¥1,000。保証書店舗印ありは減額あり ※2026-09-04夜巡回: リコーイメージングストア/転売クエストとも新規エントリー受付の予告なし。買取値は2026-09-02検証値を流用"
+      "note": "⭐最優先。粗利は2026-08-26検証値(本日kaitori-rudeya.comから機種別価格を取得できずso流用)。🚨取り逃しやすいのは発表日でなく注文期限"
     },
     {
       "name": "RICOH GR IIIx Urban Edition",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 163200,
-      "jissei": 186800,
-      "premium_rate": 1.14,
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
       "premium_level": "低",
       "profit_max": 22600,
-      "best_route": "るでや買取(2026-09-02検証)",
+      "best_route": "るでや買取(2026-08-26検証値)",
       "phase": "案内待ち",
       "deadline": "2026-09-16T23:59:00+09:00",
-      "status": "未応募",
+      "status": "応募済み(要確認)",
       "routes": [
         {
           "store": "リコーイメージングストア",
@@ -558,10 +665,37 @@
           "entry_deadline": "2026-08-26T12:00:00+09:00",
           "result_date": "2026-09-14T00:00:00+09:00",
           "order_deadline": "2026-09-16T23:59:00+09:00",
-          "note": "1次注文期限9/3は終了→2次発表9/14→注文期限9/16"
+          "note": "2次当選発表09-14→注文締切09-16。⭐応募価値あり"
         }
       ],
-      "note": "🚨SKILL表の定価が誤り→本日実定価で再計算。買取¥186,800(るでや2026-09-02)−定価¥163,200−送料¥1,000。保証書店舗印ありは減額あり ※2026-09-04夜巡回: リコーイメージングストア/転売クエストとも新規エントリー受付の予告なし。買取値は2026-09-02検証値を流用"
+      "note": "⭐応募価値あり。粗利は2026-08-26検証値(本日kaitori-rudeya.comから機種別価格を取得できずso流用)。🚨取り逃しやすいのは発表日でなく注文期限"
+    },
+    {
+      "name": "RICOH GR IV Monochrome",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 244000,
+      "jissei": 215000,
+      "premium_rate": 0.88,
+      "premium_level": "低",
+      "profit_max": -29000,
+      "best_route": "るでや買取(2026-08-26検証値)",
+      "phase": "案内待ち",
+      "deadline": "2026-09-16T23:59:00+09:00",
+      "status": "応募済み(要確認)",
+      "routes": [
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "案内待ち",
+          "entry_open": "2026-08-24T12:00:00+09:00",
+          "entry_deadline": "2026-08-26T12:00:00+09:00",
+          "result_date": "2026-09-14T00:00:00+09:00",
+          "order_deadline": "2026-09-16T23:59:00+09:00",
+          "note": "2次当選発表09-14→注文締切09-16。🚫赤字so当選しても辞退推奨"
+        }
+      ],
+      "note": "🚫赤字so当選しても辞退推奨。粗利は2026-08-26検証値(本日kaitori-rudeya.comから機種別価格を取得できずso流用)。🚨取り逃しやすいのは発表日でなく注文期限"
     }
   ]
 }
