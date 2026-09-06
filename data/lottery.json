@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-09-05T21:35:02+09:00",
+  "updated_at": "2026-09-06T22:43:36+09:00",
   "candidates": [
     {
       "name": "ポケカ MEGA拡張パック 30th CELEBRATION BOX",
@@ -13,13 +13,13 @@
       "profit_max": 0,
       "best_route": "未確定(9/16発売・発売前so粗利判定保留)",
       "phase": "受付中",
-      "deadline": "2026-09-06T19:00:00+09:00",
+      "deadline": "2026-09-06T23:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "シーガル各店",
           "url": "https://seagullonline.jp/gullmoba/",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-09-01T10:00:00+09:00",
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-13T00:00:00+09:00",
@@ -29,7 +29,7 @@
         {
           "store": "ビックカメラ各店(店頭抽選)",
           "url": "https://www.biccamera.com/",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-09-04T10:00:00+09:00",
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-15T00:00:00+09:00",
@@ -39,7 +39,7 @@
         {
           "store": "Bee本舗",
           "url": "https://www.bee-honpo.com/",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-09-04T14:00:00+09:00",
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-16T00:00:00+09:00",
@@ -49,7 +49,7 @@
         {
           "store": "ホビーゾーン各店",
           "url": "https://nyuka-now.com/archives/159770",
-          "phase": "受付中",
+          "phase": "終了",
           "entry_open": "2026-09-04T10:00:00+09:00",
           "entry_deadline": "2026-09-06T21:00:00+09:00",
           "result_date": "",
@@ -59,7 +59,7 @@
         {
           "store": "トレカショップVOW(滋賀)",
           "url": "https://nyuka-now.com/archives/159770",
-          "phase": "受付中",
+          "phase": "終了",
           "entry_open": "",
           "entry_deadline": "2026-09-06T19:00:00+09:00",
           "result_date": "",
@@ -69,7 +69,7 @@
         {
           "store": "文教堂書店浦安西友店",
           "url": "https://nyuka-now.com/archives/159770",
-          "phase": "受付中",
+          "phase": "終了",
           "entry_open": "",
           "entry_deadline": "2026-09-06T20:30:00+09:00",
           "result_date": "",
@@ -79,7 +79,7 @@
         {
           "store": "Clove Base秋葉原店",
           "url": "https://nyuka-now.com/archives/159770",
-          "phase": "受付中",
+          "phase": "終了",
           "entry_open": "",
           "entry_deadline": "2026-09-06T21:00:00+09:00",
           "result_date": "",
@@ -89,7 +89,7 @@
         {
           "store": "カードショップきりん大阪天満橋店",
           "url": "https://nyuka-now.com/archives/159770",
-          "phase": "受付中",
+          "phase": "終了",
           "entry_open": "",
           "entry_deadline": "2026-09-06T22:00:00+09:00",
           "result_date": "",
@@ -221,10 +221,10 @@
           "url": "https://www.amazon.co.jp/dp/B0GXCRBL5J",
           "phase": "受付中",
           "entry_open": "2026-06-02T14:00:00+09:00",
-          "entry_deadline": "2026-09-15T23:59:00+09:00",
+          "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "12ヶ月有効・登録済みなら放置可"
+          "note": "招待リクエスト・継続受付(12ヶ月有効)"
         },
         {
           "store": "ポケモンセンターオンライン",
@@ -234,20 +234,50 @@
           "entry_deadline": "2026-09-16T16:59:00+09:00",
           "result_date": "2026-09-30T00:00:00+09:00",
           "order_deadline": "",
-          "note": "本命・9/11 16時開始"
+          "note": "BOX/カードセット/FUTURISTIC BOX対象・本命"
         },
         {
           "store": "ノジマオンライン",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe2tm0oG-L8fBGGdkqdWNJD2NRkl7IHSWxGKKcFoU_u0-K1Ow/viewform",
+          "url": "https://online.nojima.co.jp/",
           "phase": "受付中",
-          "entry_open": "2026-06-10T13:00:00+09:00",
+          "entry_open": "2026-09-06T12:00:00+09:00",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "締切未告知・継続受付"
+          "note": "招待制販売・継続受付"
+        },
+        {
+          "store": "ポケモンカード公式 30th CELEBRATION 抽選",
+          "url": "https://www.30th.pokemon-card.com/product/m6a",
+          "phase": "受付中",
+          "entry_open": "2026-09-04T14:00:00+09:00",
+          "entry_deadline": "2026-09-18T12:00:00+09:00",
+          "result_date": "2026-10-02T17:00:00+09:00",
+          "order_deadline": "",
+          "note": "🆕9/6検知・公式抽選・締切9/18昼"
+        },
+        {
+          "store": "ドラゴンスター(店舗)",
+          "url": "https://dorasuta.membercard.jp/lottery",
+          "phase": "受付中",
+          "entry_open": "2026-08-31T22:30:00+09:00",
+          "entry_deadline": "2026-09-06T23:59:00+09:00",
+          "result_date": "2026-09-12T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "🆕9/6検知・本日締切"
+        },
+        {
+          "store": "HMV トレカ館",
+          "url": "https://www.hmv.co.jp/",
+          "phase": "案内待ち",
+          "entry_open": "2026-09-05T13:00:00+09:00",
+          "entry_deadline": "2026-09-06T20:59:00+09:00",
+          "result_date": "2026-09-10T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "🆕9/6検知・締切済"
         }
       ],
-      "note": "9/16世界同時発売。本日9/5に4窓口が新規受付開始(キデイランド/WonderGOO/GIRAFULL/フルコンプ)。明日9/6に12窓口が一斉締切。発売前so実勢未確定・応募はノーリスク。25th ANNIVERSARY(定価5,500→ピーク20,000+)の前例あり"
+      "note": "定価¥7,200(20パック×¥360・9/16世界同時発売)。発売前so粗利判定は保留"
     },
     {
       "name": "ポケカ 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
@@ -260,13 +290,13 @@
       "profit_max": 0,
       "best_route": "未確定(発売前)",
       "phase": "受付中",
-      "deadline": "2026-09-06T20:00:00+09:00",
+      "deadline": "2026-09-06T23:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "シーガル各店",
           "url": "https://seagullonline.jp/gullmoba/",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-09-01T10:00:00+09:00",
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-13T00:00:00+09:00",
@@ -276,7 +306,7 @@
         {
           "store": "ビックカメラ各店(店頭抽選)",
           "url": "https://www.biccamera.com/",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-09-04T10:00:00+09:00",
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-15T00:00:00+09:00",
@@ -286,7 +316,7 @@
         {
           "store": "Bee本舗",
           "url": "https://www.bee-honpo.com/",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-09-04T14:00:00+09:00",
           "entry_deadline": "2026-09-06T20:00:00+09:00",
           "result_date": "2026-09-16T00:00:00+09:00",
