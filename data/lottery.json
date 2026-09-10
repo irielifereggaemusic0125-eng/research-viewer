@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-09-09T22:36:08+09:00",
+  "updated_at": "2026-09-10T22:37:42+09:00",
   "candidates": [
     {
       "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
@@ -13,19 +13,9 @@
       "profit_max": 8189,
       "best_route": "メルカリ(個人売切中央値)",
       "phase": "受付中",
-      "deadline": "2026-09-09T23:59:00+09:00",
+      "deadline": "2026-09-10T23:59:00+09:00",
       "status": "未応募",
       "routes": [
-        {
-          "store": "ヤマダデンキ(アプリ抽選・店頭受取)",
-          "url": "https://x.com/onepiecenyuka/status/2096967757925654971",
-          "phase": "受付中",
-          "entry_open": "2026-09-07T23:00:00+09:00",
-          "entry_deadline": "2026-09-09T23:59:00+09:00",
-          "result_date": "2026-09-22T12:00:00+09:00",
-          "order_deadline": "2026-10-02T23:59:00+09:00",
-          "note": "OP-17+EB-03再販。購入期間9/26〜10/2。要:2025/4/1〜2026/9/6の購入履歴 or ゴールド会員"
-        },
         {
           "store": "JUMP SHOP(WEB抽選・店頭受取)",
           "url": "https://livepocket.jp/p/k-xl2",
@@ -34,17 +24,37 @@
           "entry_deadline": "2026-09-10T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "当選者は店頭受取"
+          "note": "当選者は店頭受取・9/10 23:59締切"
+        },
+        {
+          "store": "ONE PIECEカードゲーム公式ショップ(ナムコParks)",
+          "url": "https://parks2.bandainamco-am.co.jp/category/ECCL00000054/",
+          "phase": "予告",
+          "entry_open": "2026-09-11T10:00:00+09:00",
+          "entry_deadline": "2026-09-15T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕9/10検知。購入権チケット形式。9/10時点ページは商品0件(開始前)"
         },
         {
           "store": "ノジマオンライン(招待制シークレットセール)",
-          "url": "https://online.nojima.co.jp/",
+          "url": "https://contents.online.nojima.co.jp/secret202609/",
           "phase": "受付中",
           "entry_open": "2026-09-06T12:00:00+09:00",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
           "note": "招待制。ポケカ/ワンピ/DBフュージョン対象"
+        },
+        {
+          "store": "ヤマダデンキ(アプリ抽選・店頭受取)",
+          "url": "https://x.com/onepiecenyuka/status/2096967757925654971",
+          "phase": "案内待ち",
+          "entry_open": "2026-09-07T23:00:00+09:00",
+          "entry_deadline": "2026-09-09T23:59:00+09:00",
+          "result_date": "2026-09-22T12:00:00+09:00",
+          "order_deadline": "2026-10-02T23:59:00+09:00",
+          "note": "OP-17+EB-03再販。購入期間9/26〜10/2"
         }
       ],
       "note": "🔥【実勢を9/9にChromeで実機検証・前回値¥19,500は過大】メルカリ『テープ付き未開封1BOX』個人売切 n=7 中央値¥15,999(15,500/15,500/15,555/15,999/15,999/16,000/16,000)。粗利=15,999×0.9−送料450−定価5,760=¥8,189。⚠️まとめ売りは逆に安い(3BOX¥45,999=15,333/箱・6BOX¥88,888=14,815/箱・12BOX¥170,000=14,167/箱)soバラ1BOX売りが最適。⚠️前回記載の業者買取¥17,550(9/3)は個人売切中央値を上回り不自然so要再検証・採用せず。8/22発売から2.5週soTCG暴落則により早期売却推奨"
@@ -60,13 +70,13 @@
       "profit_max": 0,
       "best_route": "未確定(9/16発売・発売前so粗利判定は保留)",
       "phase": "受付中",
-      "deadline": "2026-09-10T18:59:00+09:00",
+      "deadline": "2026-09-10T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "CARD WINGS秋葉原駅前店",
           "url": "https://livepocket.jp/e/t70c4",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "2026-09-10T18:59:00+09:00",
           "result_date": "",
@@ -76,7 +86,7 @@
         {
           "store": "新宿高島屋",
           "url": "https://livepocket.jp/e/mdybf",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "2026-09-10T19:30:00+09:00",
           "result_date": "",
@@ -86,7 +96,7 @@
         {
           "store": "バトロコ小山駅前店",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSdohI7u7UuFBMdEidC1p1nCxXqZkFE0eaNq103i3xOMgRPS5Q/viewform",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "2026-09-10T21:00:00+09:00",
           "result_date": "",
@@ -96,7 +106,7 @@
         {
           "store": "バトロコ札幌狸小路",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSfPUM2_G3yHACko0kKYdXMirmxAay9PfxPvgmLG9eipohO4gQ/viewform",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "2026-09-10T22:00:00+09:00",
           "result_date": "",
@@ -106,7 +116,7 @@
         {
           "store": "ピットイン",
           "url": "https://x.com/toypitin/status/2096817939232280903",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "2026-09-10T22:00:00+09:00",
           "result_date": "",
@@ -171,7 +181,7 @@
           "entry_deadline": "2026-09-11T23:59:00+09:00",
           "result_date": "2026-09-14T12:00:00+09:00",
           "order_deadline": "",
-          "note": ""
+          "note": "30th拡張パック10パック抽選(BOXではない)・9/11 23:59締切"
         },
         {
           "store": "晴れる屋2各店",
@@ -251,7 +261,7 @@
           "entry_deadline": "2026-09-16T16:59:00+09:00",
           "result_date": "2026-09-30T00:00:00+09:00",
           "order_deadline": "",
-          "note": "🆕9/9訂正: 受付開始は9/11 16:00so現時点は『予告』。前回『受付中』は誤り"
+          "note": "9/11 16:00〜9/16 16:59。BOX/FUTURISTIC BOX/カードセット。本人認証済/不要の2枠。発表9/30(BOX13時〜)"
         },
         {
           "store": "ローソン(先着販売)",
@@ -271,7 +281,7 @@
           "entry_deadline": "",
           "result_date": "2026-09-14T00:00:00+09:00",
           "order_deadline": "",
-          "note": ""
+          "note": "しまむらパーク経由・当選発表9/14"
         },
         {
           "store": "フルコンプ一部店舗",
@@ -304,7 +314,44 @@
           "note": ""
         }
       ],
-      "note": "9/16世界同時発売(残り7日)。全国で約113件の抽選が受付中so窓口を広く取るのが正。本日新規=9/10締切の10窓口を捕捉(CARD WINGS秋葉原/新宿高島屋/バトロコ小山・札幌狸小路・福島/ピットイン/BIGMAGIC池袋/プラント/ブックオフ倉敷)。🆕重要訂正=ポケセンオンライン追加抽選は9/11 16:00受付開始(前回『受付中』は誤り)。発売前so相場未成立=粗利判定は保留・応募はノーリスク。9/16以降にbox-flip判定へ切替"
+      "note": "9/16世界同時発売(残り6日)。9/10: 同日18:59〜22:00締切の5窓口は締切済→案内待ち。今夜23:59締切5窓口(ファミマ/BIGMAGIC/バトロコ福島/プラント/ブックオフ倉敷)。明日9/11 16:00ポケセンオンライン追加抽選開始。発売前so相場未成立=粗利判定保留・応募はノーリスク。9/16以降にbox-flip判定へ切替"
+    },
+    {
+      "name": "ポケカ MEGA拡張パック ストームエメラルダ BOX",
+      "brand": "Pokémon",
+      "category": "トレカ",
+      "price": 6000,
+      "jissei": 11699,
+      "premium_rate": 1.95,
+      "premium_level": "高",
+      "profit_max": 4079,
+      "best_route": "メルカリ(個人売切中央値)",
+      "phase": "受付中",
+      "deadline": "2026-09-11T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ドラゴンスター通販",
+          "url": "https://dorasuta.membercard.jp/lottery",
+          "phase": "受付中",
+          "entry_open": "2026-09-10T22:00:00+09:00",
+          "entry_deadline": "2026-09-11T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕9/10 22:00受付開始"
+        },
+        {
+          "store": "しまむらパーク/バースデイ",
+          "url": "https://www.shop-shimamura.com/",
+          "phase": "受付中",
+          "entry_open": "2026-09-08T00:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "2026-09-14T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "30th BOX等と同時受付"
+        }
+      ],
+      "note": "🆕9/10検知。7/31発売・定価¥6,000。実勢=メルカリ個人シュリンク付1BOX売切中央値¥11,699(n=19・9/10 Chrome実機)。粗利=11,699×0.9−450−6,000=¥4,079。まとめ売り(3BOX¥35,000=¥11,667/箱)は割高にならずバラ売り同等"
     },
     {
       "name": "ポケカ 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
@@ -399,6 +446,60 @@
         }
       ],
       "note": "カメラ枠で唯一の受付中。ただし東京店頭での事前本人確認が必要so遠方は実質応募不可"
+    },
+    {
+      "name": "ワンピースカード OP-18 神の支配 BOX",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 0,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "",
+      "profit_max": 0,
+      "best_route": "未確定(11/21発売・発売前so粗利判定は保留)",
+      "phase": "受付中",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "Amazon(招待リクエスト)",
+          "url": "https://www.amazon.co.jp/dp/B0HFVPJF4Q",
+          "phase": "受付中",
+          "entry_open": "2026-09-10T19:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕9/10 19:00開始の招待制販売"
+        }
+      ],
+      "note": "🆕9/10検知。4周年記念弾(W7/神の騎士団)・2026-11-21発売予定・定価未発表。量販店抽選は10月頃開始見込み。直近弾OP-17は粗利¥8k/BOXso期待値は高いが発売前so判定保留・招待リクエストはノーリスク"
+    },
+    {
+      "name": "ワンピースカード OP-13 受け継がれる意志 BOX",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 17000,
+      "premium_rate": 3.22,
+      "premium_level": "高",
+      "profit_max": 9570,
+      "best_route": "メルカリ(個人売切中央値)",
+      "phase": "予告",
+      "deadline": "2026-09-13T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "麦わらストア10店(LivePocket抽選・店頭受取)",
+          "url": "https://www.mugiwara-store.com/news/2870/",
+          "phase": "予告",
+          "entry_open": "2026-09-11T00:00:00+09:00",
+          "entry_deadline": "2026-09-13T23:59:00+09:00",
+          "result_date": "2026-09-14T00:00:00+09:00",
+          "order_deadline": "2026-09-27T23:59:00+09:00",
+          "note": "渋谷/池袋/お台場/名古屋/あべの/梅田/福岡/熊本/原宿/東京駅。各種1BOXまで。受取9/20〜9/27・本人確認書類要"
+        }
+      ],
+      "note": "🆕9/10検知。実勢=メルカリ個人テープ付1BOX売切中央値¥17,000(n=13・9/10 Chrome実機)。粗利=17,000×0.9−450−5,280=¥9,570。名古屋店あり=受取圏内。⚠️同時受付のOP-14蒼海の七傑(実勢¥9,000→粗利¥2,370)・OP-15神の島の冒険(実勢¥8,700→粗利¥2,100)は¥3k未満so応募不要(9/10検証・再調査不要)"
     },
     {
       "name": "RICOH GR IIIx HDF",
