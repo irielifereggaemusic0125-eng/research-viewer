@@ -1,54 +1,7 @@
 {
   "schema": "v2",
-  "updated_at": "2026-09-15T07:07:16+09:00",
+  "updated_at": "2026-09-15T22:35:07+09:00",
   "candidates": [
-    {
-      "name": "RICOH GR IV",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 211800,
-      "jissei": 210000,
-      "premium_rate": 1.1,
-      "premium_level": "低",
-      "profit_max": 18380,
-      "best_route": "フジヤ抽選購入→るでや買取(店舗印なし前提)",
-      "phase": "受付中",
-      "deadline": "2026-09-15T17:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "フジヤカメラ(WEB抽選・9月入荷分)",
-          "url": "https://www.fujiya-camera.co.jp/shop/pages/c-evricohgriv_9.aspx",
-          "phase": "受付中",
-          "entry_open": "2026-09-12T18:00:00+09:00",
-          "entry_deadline": "2026-09-15T17:00:00+09:00",
-          "result_date": "2026-09-16T16:00:00+09:00",
-          "order_deadline": "2026-09-19T18:00:00+09:00",
-          "note": "🆕販売価格¥190,620(定価より¥21,180安い)。るでや¥210,000−190,620−送料1,000=+¥18,380／保証書店舗印ありなら−¥1,620。会員登録必須・1人1回・『転売目的と判断した場合キャンセル』条項あり"
-        },
-        {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "注文中",
-          "entry_open": "2026-08-24T12:00:00+09:00",
-          "entry_deadline": "2026-08-26T12:00:00+09:00",
-          "result_date": "2026-09-15T00:00:00+09:00",
-          "order_deadline": "2026-09-17T23:59:00+09:00",
-          "note": "2次当選発表2026-09-15・注文受付〜2026-09-17。次回抽選スケジュールは『未定』と公式告知"
-        },
-        {
-          "store": "GR SPACE TOKYO(店頭抽選)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-09-25T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "東京店頭での事前本人確認が必要so遠方は実質応募不可"
-        }
-      ],
-      "note": "🟡条件付き: フジヤ抽選価格¥190,620なら るでや¥210,000(2026-09-15検証)−送料¥1,000=+¥18,380。ただし保証書に店舗印ありだと−¥20,000で−¥1,620。リコーストア定価¥211,800では定価割れ(−¥2,800)🚫。📉るでや9/9比−¥8,000"
-    },
     {
       "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
       "brand": "BANDAI",
@@ -127,7 +80,7 @@
       "profit_max": 0,
       "best_route": "未確定(9/16発売・発売前so粗利判定は保留)",
       "phase": "受付中",
-      "deadline": "2026-09-15T13:00:00+09:00",
+      "deadline": "2026-09-15T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
@@ -353,7 +306,7 @@
         {
           "store": "プラネットポケット(Webフォーム)",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSds5_yzSKRwXDcn8gbl0AsWjuov6qTMdTAIx7kUqYklTT0Ocw/viewform",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "2026-09-15T15:00:00+09:00",
           "result_date": "",
@@ -383,7 +336,7 @@
         {
           "store": "ブックオフ西友鳴海店(Xリポスト・名古屋)",
           "url": "https://x.com/bookoff_narumi/status/2098245451371929752",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "2026-09-15T13:00:00+09:00",
           "result_date": "",
@@ -402,7 +355,7 @@
         },
         {
           "store": "CarD StocK(Xリポスト・配送)",
-          "url": "https://www.pokeca-navi.jp/products/30th-CELEBRATION/",
+          "url": "https://x.com/cardstock77/status/2093868540445290788",
           "phase": "受付中",
           "entry_open": "",
           "entry_deadline": "2026-09-16T10:00:00+09:00",
@@ -459,9 +412,49 @@
           "result_date": "",
           "order_deadline": "",
           "note": "本日締切のXリポスト型30件の一覧"
+        },
+        {
+          "store": "ニンジャソルジャー(Xリポスト・配送)",
+          "url": "https://x.com/tcgninjasoldier/status/2084240342963179690",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-16T00:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕9/15夜検知・送料着払い"
+        },
+        {
+          "store": "カードマックス秋葉原(Xリポスト・配送)",
+          "url": "https://x.com/cardmax_akiba/status/2094715367730168210",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-16T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕9/15夜検知・送料着払い"
+        },
+        {
+          "store": "駿河屋 千葉中央店(Xリポスト・配送)",
+          "url": "https://x.com/ek_chiba_center/status/2098993038131708314",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-16T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕9/15夜検知"
+        },
+        {
+          "store": "カードコレクト秋葉原本店(Xリポスト・配送)",
+          "url": "https://x.com/cardcollect_/status/2096890090136158545",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-30T13:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕9/15夜検知"
         }
       ],
-      "note": "🎯明日9/16世界同時発売。発売前so相場未成立=粗利判定保留（応募はノーリスク）。9/15時点で本日締切30件超（大半はXリポスト型の店頭受取）。配送で受け取れる窓口を優先掲載。9/16以降はbox-flip判定に切替"
+      "note": "🎯明日9/16世界同時発売。発売前so相場未成立=粗利判定保留（応募はノーリスク）。9/15夜: 配送可の新規窓口4件を追加。本命ポケセンオンライン追加抽選は9/16 16:59締切。9/16以降はbox-flip判定に切替(メルカリ テープ付1BOX売切中央値)"
     },
     {
       "name": "ワンピースカード EB-03 Heroines Edition BOX",
@@ -501,6 +494,90 @@
       "note": "🆕9/15検知。実勢=メルカリ個人テープ付1BOX売切中央値¥22,000(n=16・9/15 Chrome実機)。粗利=22,000×0.9−450−5,280=¥14,070。今回のワンピ枠で最も粗利が大きい"
     },
     {
+      "name": "ワンピースカード OP-18 神の支配 BOX",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "",
+      "profit_max": 0,
+      "best_route": "未確定(11/21発売・発売前so粗利判定は保留)",
+      "phase": "受付中",
+      "deadline": "2026-09-21T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ファミマオンライン(WEB抽選)",
+          "url": "https://famima-online.family.co.jp/item?itemCode=100162663879694780",
+          "phase": "受付中",
+          "entry_open": "2026-09-15T10:00:00+09:00",
+          "entry_deadline": "2026-09-21T23:59:00+09:00",
+          "result_date": "2026-09-24T00:00:00+09:00",
+          "order_deadline": "2026-12-11T23:59:00+09:00",
+          "note": "🆕9/15夜検知。定価¥5,760(税込)。購入/受取期間11/28〜12/11"
+        },
+        {
+          "store": "Amazon(招待リクエスト)",
+          "url": "https://www.amazon.co.jp/dp/B0HFVPJF4Q",
+          "phase": "受付中",
+          "entry_open": "2026-09-10T19:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕9/10 19:00開始の招待制販売"
+        }
+      ],
+      "note": "🆕9/15夜: ファミマオンライン抽選(9/15 10:00〜9/21 23:59・発表9/24)を検知。定価¥5,760判明。11/21発売予定so相場未成立=粗利判定保留。参考: 同定価の直近弾OP-17は9/15実勢¥12,800→粗利¥5,310(下落中)。応募はノーリスク"
+    },
+    {
+      "name": "RICOH GR IV",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 211800,
+      "jissei": 210000,
+      "premium_rate": 1.1,
+      "premium_level": "低",
+      "profit_max": 18380,
+      "best_route": "フジヤ抽選購入→るでや買取(店舗印なし前提)",
+      "phase": "受付中",
+      "deadline": "2026-09-25T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "フジヤカメラ(WEB抽選・9月入荷分)",
+          "url": "https://www.fujiya-camera.co.jp/shop/pages/c-evricohgriv_9.aspx",
+          "phase": "案内待ち",
+          "entry_open": "2026-09-12T18:00:00+09:00",
+          "entry_deadline": "2026-09-15T17:00:00+09:00",
+          "result_date": "2026-09-16T16:00:00+09:00",
+          "order_deadline": "2026-09-19T18:00:00+09:00",
+          "note": "🆕販売価格¥190,620(定価より¥21,180安い)。るでや¥210,000−190,620−送料1,000=+¥18,380／保証書店舗印ありなら−¥1,620。会員登録必須・1人1回・『転売目的と判断した場合キャンセル』条項あり"
+        },
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "注文中",
+          "entry_open": "2026-08-24T12:00:00+09:00",
+          "entry_deadline": "2026-08-26T12:00:00+09:00",
+          "result_date": "2026-09-15T00:00:00+09:00",
+          "order_deadline": "2026-09-17T23:59:00+09:00",
+          "note": "2次当選発表2026-09-15・注文受付〜2026-09-17。次回抽選スケジュールは『未定』と公式告知"
+        },
+        {
+          "store": "GR SPACE TOKYO(店頭抽選)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-25T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "東京店頭での事前本人確認が必要so遠方は実質応募不可"
+        }
+      ],
+      "note": "🟡フジヤWEB抽選は9/15 17:00締切済(案内待ち・購入期限9/19 18:00)。残る受付中はGR SPACE TOKYO店頭抽選(9/25締切・東京原宿で本人確認要)。 ／旧: 🟡条件付き: フジヤ抽選価格¥190,620なら るでや¥210,000(2026-09-15検証)−送料¥1,000=+¥18,380。ただし保証書に店舗印ありだと−¥20,000で−¥1,620。リコーストア定価¥211,800では定価割れ(−¥2,800)🚫。📉るでや9/9比−¥8,000"
+    },
+    {
       "name": "RICOH GR各モデル(GR SPACE TOKYO 店頭抽選)",
       "brand": "RICOH",
       "category": "カメラ",
@@ -526,33 +603,6 @@
         }
       ],
       "note": "9/25(金)締切・発表10/5・受取10/8〜10/19。東京・原宿の店頭で事前本人確認が必要so遠方/渡航中は実質応募不可"
-    },
-    {
-      "name": "ワンピースカード OP-18 神の支配 BOX",
-      "brand": "BANDAI",
-      "category": "トレカ",
-      "price": 0,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "",
-      "profit_max": 0,
-      "best_route": "未確定(11/21発売・発売前so粗利判定は保留)",
-      "phase": "受付中",
-      "deadline": "",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "Amazon(招待リクエスト)",
-          "url": "https://www.amazon.co.jp/dp/B0HFVPJF4Q",
-          "phase": "受付中",
-          "entry_open": "2026-09-10T19:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "🆕9/10 19:00開始の招待制販売"
-        }
-      ],
-      "note": "🆕9/10検知。4周年記念弾(W7/神の騎士団)・2026-11-21発売予定・定価未発表。量販店抽選は10月頃開始見込み。直近弾OP-17は粗利¥8k/BOXso期待値は高いが発売前so判定保留・招待リクエストはノーリスク"
     },
     {
       "name": "ワンピースカード OP-13 受け継がれる意志 BOX",
@@ -589,7 +639,7 @@
           "note": "受取9/20〜9/27・本人確認書類要"
         }
       ],
-      "note": "【9/15 Chrome実機再検証】メルカリ個人テープ付1BOX売切 n=8 中央値¥17,250（9/10は¥17,000＝値崩れなし）。粗利=17,250×0.9−450−5,280=¥9,795。⚠️OP-14(粗利¥2,370)・OP-15(¥2,100)は¥3k未満so応募不要(9/10検証)"
+      "note": "【9/15 Chrome実機再検証】メルカリ個人テープ付1BOX売切 n=8 中央値¥17,250（9/10は¥17,000＝値崩れなし）。粗利=17,250×0.9−450−5,280=¥9,795。⚠️OP-14(粗利¥2,370)・OP-15(¥2,100)は¥3k未満so応募不要(9/10検証) ／9/15夜 OP-14再検証: メルカリ個人テープ付1BOX売切 n=10 中央値¥9,200→粗利=9,200×0.9−450−5,280=¥2,550。ドラゴンスター通販のOP-14抽選(9/15 22:00〜9/17 23:59)は¥3k未満so応募不要"
     },
     {
       "name": "RICOH GR IIIx HDF",
