@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-20 01:10",
+ "updated_at": "2026-09-21 01:06",
  "total_items": 558,
  "by_brand_rank": {
   "その他:B": {
@@ -1387,5 +1387,5 @@
    }
   }
  },
- "_note": "by_brand_rank key='ブランド(JP):ランク' / 期間=2026-03〜2026-09"
+ "_note": "by_brand_rank key='ブランド(JP):ランク'"
 }
