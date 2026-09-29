@@ -1,111 +1,7 @@
 {
   "schema": "v2",
-  "updated_at": "2026-09-29T05:26:34+09:00",
+  "updated_at": "2026-09-29T22:44:53+09:00",
   "candidates": [
-    {
-      "name": "RICOH GR IV 30th Anniversary Edition Kit",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 259800,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "未確定",
-      "profit_max": 0,
-      "best_route": "未確定(10/21発売・買取相場未成立)",
-      "phase": "受付中",
-      "deadline": "2026-09-29T18:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "フジヤカメラ(WEB抽選)",
-          "url": "https://www.fujiya-camera.co.jp/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-09-29T18:00:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "転売クエスト掲載(9/26確認)"
-        },
-        {
-          "store": "GR SPACE TOKYO(店頭抽選・事前登録要)",
-          "url": "https://tenbaiquest.com/resale/ricoh-2",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-19T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "店頭受取so渡航中(〜10/25)は実質不可"
-        }
-      ],
-      "note": "全世界6,000台限定・10/21発売・定価¥259,800。相場未成立so粗利未確定・応募ノーリスク。リコーストア/GR SPACE枠は終了、残りはフジヤカメラ9/29 18:00締切"
-    },
-    {
-      "name": "ポケカ MEGA拡張パック ストームエメラルダ BOX",
-      "brand": "ポケモンカード",
-      "category": "トレカ",
-      "price": 6000,
-      "jissei": 11000,
-      "premium_rate": 1.83,
-      "premium_level": "中",
-      "profit_max": 3200,
-      "best_route": "メルカリ(個人売切中央値¥11,000 n=15)",
-      "phase": "受付中",
-      "deadline": "2026-09-29T21:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "晴れる屋2 通販",
-          "url": "https://cardchusen.com/pokeka",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-09-30T17:00:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "トレカムーン秋葉原店",
-          "url": "https://cardchusen.com/pokeka",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-09-30T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "イオンスタイルオンライン",
-          "url": "https://nyuka-now.com/archives/2459",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-08T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "イオンカード決済必須"
-        },
-        {
-          "store": "ブックセンター江戸屋",
-          "url": "https://cardchusen.com/pokeka",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-09-29T21:00:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "TSUTAYA福井高柳店",
-          "url": "https://cardchusen.com/pokeka",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-09-30T10:00:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "7/31発売の既発弾so暴落済み・下げ止まり(7月¥36,000→8月¥11,000→9月¥11,000)。2026-09-23実測 個人売切中央値¥11,000(n=15・レンジ10,100〜11,400)。粗利¥3,200は通知基準ギリギリso送料・手数料のブレで消えうる＝優先度低"
-    },
     {
       "name": "ポケカ MEGA拡張パック 30th CELEBRATION BOX",
       "brand": "ポケモンカード",
@@ -204,6 +100,73 @@
       "note": "9/16発売済。🚨メルカリは未開封拡張パック『30th CELEBRATION』を9/16 0時から出品禁止中・解除日未定so出口は買取店/スニダンのみ(フリマ販路を粗利計算に使わないこと)。買取24社平均¥17,358・最高¥21,000(2026-09-17検証値・7日経過so要再取得)"
     },
     {
+      "name": "ポケカ MEGA拡張パック ストームエメラルダ BOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 6000,
+      "jissei": 11000,
+      "premium_rate": 1.83,
+      "premium_level": "中",
+      "profit_max": 3200,
+      "best_route": "メルカリ(個人売切中央値¥11,000 n=15)",
+      "phase": "受付中",
+      "deadline": "2026-09-30T10:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ポケモンセンターオンライン(追加抽選)",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
+          "phase": "予告",
+          "entry_open": "2026-10-02T12:00:00+09:00",
+          "entry_deadline": "2026-10-05T16:59:00+09:00",
+          "result_date": "2026-10-14T17:00:00+09:00",
+          "order_deadline": "2026-10-20T16:59:00+09:00",
+          "note": "当選の大半は本人認証済み枠"
+        },
+        {
+          "store": "晴れる屋2 通販",
+          "url": "https://cardchusen.com/pokeka",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-30T17:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "トレカムーン秋葉原店",
+          "url": "https://cardchusen.com/pokeka",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-30T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "イオンスタイルオンライン",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-10-08T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "イオンカード決済必須"
+        },
+        {
+          "store": "TSUTAYA福井高柳店",
+          "url": "https://cardchusen.com/pokeka",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-09-30T10:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "7/31発売の既発弾so暴落済み・下げ止まり(7月¥36,000→8月¥11,000→9月¥11,000)。2026-09-23実測 個人売切中央値¥11,000(n=15・レンジ10,100〜11,400)。粗利¥3,200は通知基準ギリギリso送料・手数料のブレで消えうる＝優先度低"
+    },
+    {
       "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
       "brand": "ワンピースカード",
       "category": "トレカ",
@@ -214,7 +177,7 @@
       "profit_max": 5060,
       "best_route": "メルカリ",
       "phase": "受付中",
-      "deadline": "2026-09-29T23:59:00+09:00",
+      "deadline": "2026-10-01T00:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
@@ -276,9 +239,83 @@
           "result_date": "",
           "order_deadline": "",
           "note": ""
+        },
+        {
+          "store": "北国書林 辰口店(カードボックス)",
+          "url": "https://cardchusen.com/onepiece",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-10-01T00:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "WEB応募"
         }
       ],
       "note": "⚠️実勢¥12,800は前回(9/23未明)の値so未再検証。粗利¥5,060は目安"
+    },
+    {
+      "name": "ワンピースカード EB-05 Heroines Edition vol.2 BOX",
+      "brand": "ワンピースカード",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "未確定",
+      "profit_max": 0,
+      "best_route": "未確定(10/31発売・相場未成立)",
+      "phase": "受付中",
+      "deadline": "2026-10-01T17:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ゲオ(WEB抽選)",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "受付中",
+          "entry_open": "2026-09-28T11:00:00+09:00",
+          "entry_deadline": "2026-10-01T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "アプリ会員・本人確認要"
+        },
+        {
+          "store": "ONE PIECEカードゲーム公式ショップ(アプリ抽選)",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-10-04T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "10/31発売。前作EB-03は定価¥5,280→メルカリ個人売切¥21,567(9/23実測)。同型の前例は強いが発売後の実売で要確認。応募ノーリスク"
+    },
+    {
+      "name": "ポケカ 30th CELEBRATION カードセット(御三家9種セット)",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 10791,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "未確定",
+      "profit_max": 0,
+      "best_route": "未確定(10/16発売・相場未成立)",
+      "phase": "受付中",
+      "deadline": "2026-10-01T17:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ゲオ(WEB抽選・9種セット)",
+          "url": "https://www.inside-games.jp/article/2026/09/28/188412.html",
+          "phase": "受付中",
+          "entry_open": "2026-09-28T11:00:00+09:00",
+          "entry_deadline": "2026-10-01T17:59:00+09:00",
+          "result_date": "2026-10-14T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "1セット¥1,200×9種(ゲオは9種まとめ¥10,791)。各セットに30th CELEBRATIONパック2袋同梱。⚠️メルカリは30th拡張パックの未開封出品を禁止中so、出口は買取/スニダンの見込み。粗利は発売後に判定"
     },
     {
       "name": "ワンピースカード EB-03 Heroines Edition BOX",
@@ -363,6 +400,60 @@
         }
       ],
       "note": "🥇今回の最有力。定価¥27,500→メルカリ個人売切中央値¥71,999(n=25・2026-09-23実測・レンジ60,000〜76,300で非常にタイト)。⚠️プレスリリースの『実売11万円台』は過大so採用しない。拡張パックBOXと違いメルカリ出品禁止の対象外(実際に売れている)。TCG暴落則so当選後2週以内に売却"
+    },
+    {
+      "name": "RICOH GR IV 30th Anniversary Edition Kit",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 259800,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "未確定",
+      "profit_max": 0,
+      "best_route": "未確定(10/21発売・買取相場未成立)",
+      "phase": "受付中",
+      "deadline": "2026-10-19T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO(店頭抽選・事前登録要)",
+          "url": "https://tenbaiquest.com/resale/ricoh-2",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-10-19T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "店頭受取so渡航中(〜10/25)は実質不可"
+        }
+      ],
+      "note": "全世界6,000台限定・10/21発売・定価¥259,800。相場未成立so粗利未確定・応募ノーリスク。リコーストア/GR SPACE枠は終了、残りはフジヤカメラ9/29 18:00締切 ／9/29 22:50: フジヤ枠締切済・残りGR SPACE店頭のみ(渡航中so実質不可)"
+    },
+    {
+      "name": "ポケカ MEGA拡張パック インフェルノX BOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 5400,
+      "jissei": 12500,
+      "premium_rate": 2.31,
+      "premium_level": "高",
+      "profit_max": 6600,
+      "best_route": "るでや買取(¥12,500・2026-09-29)",
+      "phase": "予告",
+      "deadline": "2026-10-05T16:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ポケモンセンターオンライン(追加抽選)",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
+          "phase": "予告",
+          "entry_open": "2026-10-02T12:00:00+09:00",
+          "entry_deadline": "2026-10-05T16:59:00+09:00",
+          "result_date": "2026-10-14T15:00:00+09:00",
+          "order_deadline": "2026-10-20T16:59:00+09:00",
+          "note": "当選の大半は本人認証済み枠"
+        }
+      ],
+      "note": "2025/9発売の既発弾。るでや買取¥12,500(2026-09-29)−定価¥5,400−送料¥500=粗利¥6,600(買取ルートの保守値)。Web相場は約¥19,000だがメルカリ個人売切は未検証so採用せず"
     },
     {
       "name": "RICOH GR各モデル(GR SPACE TOKYO 店頭抽選)",
