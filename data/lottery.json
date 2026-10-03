@@ -1,7 +1,64 @@
 {
   "schema": "v2",
-  "updated_at": "2026-09-30T22:49:45+09:00",
+  "updated_at": "2026-10-04T08:06:14+09:00",
   "candidates": [
+    {
+      "name": "ポケカ 30th CELEBRATION カードセット(御三家9種セット)",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 10791,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "未確定",
+      "profit_max": 0,
+      "best_route": "未確定(10/16発売・相場未成立)",
+      "phase": "受付中",
+      "deadline": "2026-10-04T19:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ビックカメラ一部店舗(店頭抽選・店頭受取)",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-10-04T19:00:00+09:00",
+          "result_date": "2026-10-15T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "ポイントカード会員・2024/9/27以降の購入履歴要"
+        },
+        {
+          "store": "ゲオ(WEB抽選・9種セット)",
+          "url": "https://geo-online.co.jp/news/783",
+          "phase": "案内待ち",
+          "entry_open": "2026-09-28T11:00:00+09:00",
+          "entry_deadline": "2026-10-01T17:59:00+09:00",
+          "result_date": "2026-10-14T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ゲームショップ プラスアルファ(SNS抽選)",
+          "url": "https://x.com/PLUS_ALPHA_ANMS",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-02T13:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "プラネット西条中央店(SNS抽選)",
+          "url": "https://x.com/planet_saijyou",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-02T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "1セット¥1,200×9種(ゲオは9種まとめ¥10,791)。各セットに30th CELEBRATIONパック2袋同梱。⚠️メルカリは30th拡張パックの未開封出品を禁止中so、出口は買取/スニダンの見込み。粗利は発売後に判定"
+    },
     {
       "name": "ポケカ MEGA拡張パック 30th CELEBRATION BOX",
       "brand": "ポケモンカード",
@@ -13,18 +70,18 @@
       "profit_max": 15300,
       "best_route": "るでや買取¥23,000(2026-09-30検証)",
       "phase": "受付中",
-      "deadline": "2026-10-01T17:59:00+09:00",
+      "deadline": "2026-10-04T20:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "ゲオ(アプリWEB抽選・店頭販売)",
-          "url": "https://geo-online.co.jp/news/785",
+          "store": "三洋堂トレカ館 桜井店(SNS抽選)",
+          "url": "https://x.com/sanyodotcg_saku",
           "phase": "受付中",
-          "entry_open": "2026-09-28T11:00:00+09:00",
-          "entry_deadline": "2026-10-01T17:59:00+09:00",
+          "entry_open": "",
+          "entry_deadline": "2026-10-04T20:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "1BOX限定・ゲオアプリ+Ponta連携要・店頭で本人確認。ゲオ七宝町で当選実績あり"
+          "note": "奈良・店頭受取見込み"
         },
         {
           "store": "三洋堂書店",
@@ -37,14 +94,34 @@
           "note": ""
         },
         {
-          "store": "三洋堂トレカ館 桜井店(SNS抽選)",
-          "url": "https://x.com/sanyodotcg_saku",
+          "store": "ホビーステーション(LivePocket抽選)",
+          "url": "https://livepocket.jp/e/7r2ey",
           "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-04T20:59:00+09:00",
+          "entry_open": "2026-10-02T12:00:00+09:00",
+          "entry_deadline": "2026-10-04T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "奈良・店頭受取見込み"
+          "note": "2026-10-04 入荷Nowで検知"
+        },
+        {
+          "store": "駿河屋(SNS抽選)",
+          "url": "https://x.com/surugayaakiba4/status/2106187483687850055",
+          "phase": "受付中",
+          "entry_open": "2026-10-03T10:00:00+09:00",
+          "entry_deadline": "2026-10-05T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "2026-10-04 入荷Nowで検知"
+        },
+        {
+          "store": "オレタン(WEB抽選)",
+          "url": "https://oretan.membercard.jp/lottery",
+          "phase": "受付中",
+          "entry_open": "2026-10-03T21:00:00+09:00",
+          "entry_deadline": "2026-10-07T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "2026-10-04 入荷Nowで検知"
         },
         {
           "store": "トレカBH秋葉原",
@@ -95,113 +172,19 @@
           "result_date": "",
           "order_deadline": "",
           "note": "常設"
+        },
+        {
+          "store": "ゲオ(アプリWEB抽選・店頭販売)",
+          "url": "https://geo-online.co.jp/news/785",
+          "phase": "案内待ち",
+          "entry_open": "2026-09-28T11:00:00+09:00",
+          "entry_deadline": "2026-10-01T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "1BOX限定・ゲオアプリ+Ponta連携要・店頭で本人確認。ゲオ七宝町で当選実績あり"
         }
       ],
       "note": "9/16発売済。🚨メルカリは未開封『30th CELEBRATION』拡張パックを出品禁止中so出口は買取店/スニダンのみ。るでや買取¥23,000(2026-09-30検証・9/17の24社平均¥17,358から上昇)−定価¥7,200−送料¥500=粗利¥15,300。シュリンク切れは買取不可"
-    },
-    {
-      "name": "ワンピースカード EB-05 Heroines Edition vol.2 BOX",
-      "brand": "ワンピースカード",
-      "category": "トレカ",
-      "price": 5760,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "未確定",
-      "profit_max": 0,
-      "best_route": "未確定(10/31発売・相場未成立)",
-      "phase": "受付中",
-      "deadline": "2026-10-01T17:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ゲオ(アプリWEB抽選・店頭販売)",
-          "url": "https://geo-online.co.jp/news/784",
-          "phase": "受付中",
-          "entry_open": "2026-09-28T11:00:00+09:00",
-          "entry_deadline": "2026-10-01T17:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "アプリ会員・本人確認要"
-        },
-        {
-          "store": "ヤマダデンキ(アプリ抽選・店頭販売)",
-          "url": "https://nyuka-now.com/archives/97393",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-01T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "🆕2026-09-30検知"
-        },
-        {
-          "store": "ONE PIECEカードゲーム公式ショップ(アプリ抽選)",
-          "url": "https://nyuka-now.com/archives/97393",
-          "phase": "受付中",
-          "entry_open": "2026-09-25T00:00:00+09:00",
-          "entry_deadline": "2026-10-04T23:59:00+09:00",
-          "result_date": "2026-10-09T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "発売記念イベント枠"
-        }
-      ],
-      "note": "10/31発売。前作EB-03は定価¥5,280→メルカリ個人売切¥21,567(9/23実測)。同型の前例は強いが発売後の実売で要確認。応募ノーリスク"
-    },
-    {
-      "name": "ポケカ 30th CELEBRATION カードセット(御三家9種セット)",
-      "brand": "ポケモンカード",
-      "category": "トレカ",
-      "price": 10791,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "未確定",
-      "profit_max": 0,
-      "best_route": "未確定(10/16発売・相場未成立)",
-      "phase": "受付中",
-      "deadline": "2026-10-01T17:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ゲオ(WEB抽選・9種セット)",
-          "url": "https://geo-online.co.jp/news/783",
-          "phase": "受付中",
-          "entry_open": "2026-09-28T11:00:00+09:00",
-          "entry_deadline": "2026-10-01T17:59:00+09:00",
-          "result_date": "2026-10-14T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ゲームショップ プラスアルファ(SNS抽選)",
-          "url": "https://x.com/PLUS_ALPHA_ANMS",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-02T13:00:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "プラネット西条中央店(SNS抽選)",
-          "url": "https://x.com/planet_saijyou",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-02T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ビックカメラ一部店舗(店頭抽選・店頭受取)",
-          "url": "https://nyuka-now.com/archives/2459",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-04T19:00:00+09:00",
-          "result_date": "2026-10-15T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "ポイントカード会員・2024/9/27以降の購入履歴要"
-        }
-      ],
-      "note": "1セット¥1,200×9種(ゲオは9種まとめ¥10,791)。各セットに30th CELEBRATIONパック2袋同梱。⚠️メルカリは30th拡張パックの未開封出品を禁止中so、出口は買取/スニダンの見込み。粗利は発売後に判定"
     },
     {
       "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
@@ -214,25 +197,15 @@
       "profit_max": 3540,
       "best_route": "メルカリ(個人売切中央値¥11,000 n=5・2026-09-30)",
       "phase": "受付中",
-      "deadline": "2026-10-01T17:59:00+09:00",
+      "deadline": "2026-10-04T21:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "ゲオ(WEB抽選・店頭受取)",
-          "url": "https://geo-online.co.jp/news/785",
-          "phase": "受付中",
-          "entry_open": "2026-09-28T11:00:00+09:00",
-          "entry_deadline": "2026-10-01T17:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "ゲオ七宝町で当選実績あり"
-        },
-        {
-          "store": "JUMP SHOP(WEB抽選・店頭受取)",
-          "url": "https://nyuka-now.com/archives/97393",
+          "store": "三洋堂トレカ館豊郷店",
+          "url": "https://cardchusen.com/onepiece",
           "phase": "受付中",
           "entry_open": "",
-          "entry_deadline": "2026-10-03T23:59:00+09:00",
+          "entry_deadline": "2026-10-04T21:00:00+09:00",
           "result_date": "",
           "order_deadline": "",
           "note": "9/29取得・本日未再確認"
@@ -248,14 +221,14 @@
           "note": "1人1商品1回のみ(EB-03と択一→EB-03推奨)"
         },
         {
-          "store": "三洋堂トレカ館豊郷店",
-          "url": "https://cardchusen.com/onepiece",
+          "store": "きくざわ書店(WEB抽選)",
+          "url": "https://shoplottery.e-starbox.com",
           "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-04T21:00:00+09:00",
+          "entry_open": "2026-09-28T00:00:00+09:00",
+          "entry_deadline": "2026-10-04T23:59:00+09:00",
           "result_date": "",
           "order_deadline": "",
-          "note": "9/29取得・本日未再確認"
+          "note": "2026-10-04 入荷Nowで検知"
         },
         {
           "store": "イオンスタイルオンライン",
@@ -266,6 +239,26 @@
           "result_date": "",
           "order_deadline": "",
           "note": "イオンカード決済必須"
+        },
+        {
+          "store": "ゲオ(WEB抽選・店頭受取)",
+          "url": "https://geo-online.co.jp/news/785",
+          "phase": "案内待ち",
+          "entry_open": "2026-09-28T11:00:00+09:00",
+          "entry_deadline": "2026-10-01T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "ゲオ七宝町で当選実績あり"
+        },
+        {
+          "store": "JUMP SHOP(WEB抽選・店頭受取)",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-03T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "9/29取得・本日未再確認"
         }
       ],
       "note": "🔻2026-09-30実測でメルカリ個人売切中央値¥11,000(n=5・レンジ10,800〜11,500)。9/23の¥12,800から下落。粗利=11,000×0.9−送料600−定価5,760=¥3,540＝基準ギリギリso優先度低(送料/値下げで消える水準)"
@@ -281,49 +274,9 @@
       "profit_max": 10500,
       "best_route": "るでや買取¥17,200(2026-09-30検証)",
       "phase": "受付中",
-      "deadline": "2026-10-01T23:59:00+09:00",
+      "deadline": "2026-10-04T22:00:00+09:00",
       "status": "未応募",
       "routes": [
-        {
-          "store": "三洋堂書店 梅坪店(愛知・豊田/SNS抽選)",
-          "url": "https://x.com/sanyodo_umetsub",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-01T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "県内・店頭受取見込み"
-        },
-        {
-          "store": "スマ本屋 三洋堂 生桑店(三重/SNS抽選)",
-          "url": "https://x.com/sanyodoikuwa",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-02T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "牧之原鑑定団(SNS抽選)",
-          "url": "https://x.com/_Makikan_",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-03T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ホビーラウンジ秋葉原(SNS抽選)",
-          "url": "https://x.com/hobby_lounge",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-03T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
         {
           "store": "SuperKaBoS敦賀店(WEB抽選)",
           "url": "https://shoplottery.e-starbox.com",
@@ -343,6 +296,46 @@
           "result_date": "",
           "order_deadline": "",
           "note": "常設"
+        },
+        {
+          "store": "三洋堂書店 梅坪店(愛知・豊田/SNS抽選)",
+          "url": "https://x.com/sanyodo_umetsub",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-01T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "県内・店頭受取見込み"
+        },
+        {
+          "store": "スマ本屋 三洋堂 生桑店(三重/SNS抽選)",
+          "url": "https://x.com/sanyodoikuwa",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-02T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "牧之原鑑定団(SNS抽選)",
+          "url": "https://x.com/_Makikan_",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-03T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ホビーラウンジ秋葉原(SNS抽選)",
+          "url": "https://x.com/hobby_lounge",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-03T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
         }
       ],
       "note": "🆕2026-09-30新規採用。9/16発売・定価¥6,200。るでや買取¥17,200−定価−送料¥500=粗利¥10,500／メルカリ個人売切中央値¥17,000(n=13・レンジ15,000〜17,499・2026-09-30実測)→粗利¥8,400。デッキセットはメルカリ出品可(実際に売れている)。窓口は店頭受取型が中心so渡航中(〜10/25)は受取可否を要確認"
@@ -358,29 +351,9 @@
       "profit_max": 2400,
       "best_route": "メルカリ(個人売切中央値¥10,000 n=13・2026-09-30)",
       "phase": "受付中",
-      "deadline": "2026-10-01T23:59:00+09:00",
+      "deadline": "2026-10-04T22:00:00+09:00",
       "status": "未応募",
       "routes": [
-        {
-          "store": "隆文堂書店岡山(SNS抽選)",
-          "url": "https://x.com/ryubunokayama",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-01T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ポケモンセンターオンライン(追加抽選)",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
-          "phase": "予告",
-          "entry_open": "2026-10-02T12:00:00+09:00",
-          "entry_deadline": "2026-10-05T16:59:00+09:00",
-          "result_date": "2026-10-14T17:00:00+09:00",
-          "order_deadline": "",
-          "note": "当選の大半は本人認証済み枠"
-        },
         {
           "store": "SuperKaBoS敦賀店/勝木書店大野店(WEB抽選)",
           "url": "https://shoplottery.e-starbox.com",
@@ -392,6 +365,16 @@
           "note": ""
         },
         {
+          "store": "ポケモンセンターオンライン(追加抽選)",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
+          "phase": "受付中",
+          "entry_open": "2026-10-02T12:00:00+09:00",
+          "entry_deadline": "2026-10-05T16:59:00+09:00",
+          "result_date": "2026-10-14T17:00:00+09:00",
+          "order_deadline": "",
+          "note": "当選の大半は本人認証済み枠"
+        },
+        {
           "store": "イオンスタイルオンライン",
           "url": "https://aeonretail.com/Page/k-lottery_cardgame.aspx",
           "phase": "受付中",
@@ -400,9 +383,76 @@
           "result_date": "",
           "order_deadline": "",
           "note": "イオンカード決済必須・30パック¥5,973"
+        },
+        {
+          "store": "隆文堂書店岡山(SNS抽選)",
+          "url": "https://x.com/ryubunokayama",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-01T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
         }
       ],
       "note": "🚫2026-09-30降格＝応募優先度なし。メルカリ個人売切中央値¥10,000(n=13・レンジ9,999〜10,500)に下落→粗利=10,000×0.9−600−6,000=¥2,400で基準¥3,000割れ。るでや買取も¥8,700(粗利¥2,200)。ポケセン追加抽選はインフェルノXのついで応募のみ"
+    },
+    {
+      "name": "ワンピースカード EB-05 Heroines Edition vol.2 BOX",
+      "brand": "ワンピースカード",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "未確定",
+      "profit_max": 0,
+      "best_route": "未確定(10/31発売・相場未成立)",
+      "phase": "受付中",
+      "deadline": "2026-10-04T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ONE PIECEカードゲーム公式ショップ(アプリ抽選)",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "受付中",
+          "entry_open": "2026-09-25T00:00:00+09:00",
+          "entry_deadline": "2026-10-04T23:59:00+09:00",
+          "result_date": "2026-10-09T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "発売記念イベント枠"
+        },
+        {
+          "store": "イオン九州(アプリ抽選)",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "受付中",
+          "entry_open": "2026-10-03T00:00:00+09:00",
+          "entry_deadline": "2026-10-11T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "2026-10-04 入荷Nowで検知"
+        },
+        {
+          "store": "ゲオ(アプリWEB抽選・店頭販売)",
+          "url": "https://geo-online.co.jp/news/784",
+          "phase": "案内待ち",
+          "entry_open": "2026-09-28T11:00:00+09:00",
+          "entry_deadline": "2026-10-01T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "アプリ会員・本人確認要"
+        },
+        {
+          "store": "ヤマダデンキ(アプリ抽選・店頭販売)",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-01T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "🆕2026-09-30検知"
+        }
+      ],
+      "note": "10/31発売。前作EB-03は定価¥5,280→メルカリ個人売切¥21,567(9/23実測)。同型の前例は強いが発売後の実売で要確認。応募ノーリスク"
     },
     {
       "name": "ワンピースカード EB-03 Heroines Edition BOX",
@@ -415,19 +465,9 @@
       "profit_max": 8120,
       "best_route": "るでや買取¥13,900(2026-09-30検証)",
       "phase": "受付中",
-      "deadline": "2026-10-03T23:59:00+09:00",
+      "deadline": "2026-10-04T23:59:00+09:00",
       "status": "未応募",
       "routes": [
-        {
-          "store": "JUMP SHOP(WEB抽選・店頭受取)",
-          "url": "https://nyuka-now.com/archives/97393",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-03T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "9/29取得・本日未再確認"
-        },
         {
           "store": "喜久屋書店(WEB抽選・店頭受取)",
           "url": "https://nyuka-now.com/archives/97393",
@@ -437,6 +477,26 @@
           "result_date": "",
           "order_deadline": "",
           "note": "1人1商品1回のみ"
+        },
+        {
+          "store": "きくざわ書店(WEB抽選)",
+          "url": "https://shoplottery.e-starbox.com",
+          "phase": "受付中",
+          "entry_open": "2026-09-28T00:00:00+09:00",
+          "entry_deadline": "2026-10-04T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "2026-10-04 入荷Nowで検知"
+        },
+        {
+          "store": "JUMP SHOP(WEB抽選・店頭受取)",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-03T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "9/29取得・本日未再確認"
         }
       ],
       "note": "🔻2026-09-30実測でメルカリ個人売切中央値¥15,000(n=7・レンジ14,500〜15,999＋外れ値25,500)。9/23の¥21,567(n=14)から約3割下落＝再販で軟化中。るでや買取¥13,900−定価5,280−送料500=粗利¥8,120／メルカリ15,000×0.9−600−5,280=¥7,620。当選後は即売り"
@@ -489,6 +549,33 @@
       "note": "🥇最有力は変わらずだが相場は軟化。2026-09-30実測メルカリ個人売切中央値¥63,333(n=13・レンジ56,000〜64,900)＝9/23の¥71,999から−12%。るでや買取¥58,000−定価27,500−送料500=粗利¥30,000／メルカリ63,333×0.9−700−27,500=¥28,800。TCG暴落則so当選後は即売り(買取が手堅い)"
     },
     {
+      "name": "ポケカ MEGA拡張パック インフェルノX BOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 5400,
+      "jissei": 16500,
+      "premium_rate": 3.06,
+      "premium_level": "高",
+      "profit_max": 8850,
+      "best_route": "メルカリ(個人売切中央値¥16,500 n=8・2026-09-30)",
+      "phase": "受付中",
+      "deadline": "2026-10-05T16:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ポケモンセンターオンライン(追加抽選)",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
+          "phase": "受付中",
+          "entry_open": "2026-10-02T12:00:00+09:00",
+          "entry_deadline": "2026-10-05T16:59:00+09:00",
+          "result_date": "2026-10-14T15:00:00+09:00",
+          "order_deadline": "2026-10-20T16:59:00+09:00",
+          "note": "当選の大半は本人認証済み枠"
+        }
+      ],
+      "note": "2025/9発売の既発弾。2026-09-30メルカリ個人売切(シュリンク付1BOX)中央値¥16,500(n=8・レンジ11,500〜17,000)を実測→粗利=16,500×0.9−600−5,400=¥8,850。るでやは本日掲載なし(9/29は¥12,500)。ポケセンオンライン追加抽選は10/2 12:00開始"
+    },
+    {
       "name": "RICOH GR IV 30th Anniversary Edition Kit",
       "brand": "RICOH",
       "category": "カメラ",
@@ -514,33 +601,6 @@
         }
       ],
       "note": "全世界6,000台限定・10/21発売・定価¥259,800。るでやは2026-09-30時点で買取価格未掲載＝相場未成立so粗利未確定。リコーストア枠は9/24締切済(仮当選案内9/30・本人確認10/6・正式当選10/9・注文10/15迄)、フジヤ枠9/29締切済。残りはGR SPACE店頭のみ(渡航中so実質不可)"
-    },
-    {
-      "name": "ポケカ MEGA拡張パック インフェルノX BOX",
-      "brand": "ポケモンカード",
-      "category": "トレカ",
-      "price": 5400,
-      "jissei": 16500,
-      "premium_rate": 3.06,
-      "premium_level": "高",
-      "profit_max": 8850,
-      "best_route": "メルカリ(個人売切中央値¥16,500 n=8・2026-09-30)",
-      "phase": "予告",
-      "deadline": "2026-10-05T16:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ポケモンセンターオンライン(追加抽選)",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
-          "phase": "予告",
-          "entry_open": "2026-10-02T12:00:00+09:00",
-          "entry_deadline": "2026-10-05T16:59:00+09:00",
-          "result_date": "2026-10-14T15:00:00+09:00",
-          "order_deadline": "2026-10-20T16:59:00+09:00",
-          "note": "当選の大半は本人認証済み枠"
-        }
-      ],
-      "note": "2025/9発売の既発弾。2026-09-30メルカリ個人売切(シュリンク付1BOX)中央値¥16,500(n=8・レンジ11,500〜17,000)を実測→粗利=16,500×0.9−600−5,400=¥8,850。るでやは本日掲載なし(9/29は¥12,500)。ポケセンオンライン追加抽選は10/2 12:00開始"
     },
     {
       "name": "RICOH GR各モデル(GR SPACE TOKYO 店頭抽選)",
@@ -591,7 +651,7 @@
           "entry_deadline": "2026-09-28T12:00:00+09:00",
           "result_date": "2026-10-02T00:00:00+09:00",
           "order_deadline": "2026-10-05T23:59:00+09:00",
-          "note": "2次当選案内あり(10/9〜10/13)"
+          "note": "1次当選発表10/2済→メール確認要・2次10/9・発送10/6〜10/30"
         }
       ],
       "note": "るでや買取¥226,500(2026-09-30検証)−定価¥168,800−送料¥1,000=粗利¥56,700。🥇最高粗利。保証書店舗印ありは−¥30,000。当選発表10/2・注文10/2〜10/5(2次10/9〜10/13)。次回エントリーで販売終了予告"
@@ -616,9 +676,9 @@
           "phase": "案内待ち",
           "entry_open": "2026-09-25T12:00:00+09:00",
           "entry_deadline": "2026-09-28T12:00:00+09:00",
-          "result_date": "2026-10-05T00:00:00+09:00",
+          "result_date": "2026-10-06T00:00:00+09:00",
           "order_deadline": "2026-10-07T23:59:00+09:00",
-          "note": "2次当選案内あり(10/9〜10/13)"
+          "note": "1次当選発表10/6・2次10/13・発送10/8〜10/30(2026-10-04公式確認)"
         }
       ],
       "note": "るでや買取¥185,000(2026-09-30検証)−定価¥155,400−送料¥1,000=粗利¥28,600。🔚今回で販売終了。保証書店舗印ありは−¥15,000。当選発表10/5・注文10/5〜10/7"
@@ -645,7 +705,7 @@
           "entry_deadline": "2026-09-28T12:00:00+09:00",
           "result_date": "2026-10-06T00:00:00+09:00",
           "order_deadline": "2026-10-08T23:59:00+09:00",
-          "note": "2次当選案内あり(10/9〜10/13)"
+          "note": "1次当選発表10/6・2次10/13・発送10/8〜10/30(2026-10-04公式確認)"
         }
       ],
       "note": "🔻るでや買取¥248,000(2026-09-30検証・9/26の¥258,000から−¥10,000)−定価¥222,000−送料¥1,000=粗利¥25,000。保証書店舗印ありは−¥30,000so−¥5,000の赤字。当選発表10/6・注文10/6〜10/8"
@@ -670,9 +730,9 @@
           "phase": "案内待ち",
           "entry_open": "2026-09-25T12:00:00+09:00",
           "entry_deadline": "2026-09-28T12:00:00+09:00",
-          "result_date": "2026-10-05T00:00:00+09:00",
+          "result_date": "2026-10-06T00:00:00+09:00",
           "order_deadline": "2026-10-07T23:59:00+09:00",
-          "note": "2次当選案内あり(10/9〜10/13)"
+          "note": "1次当選発表10/6・2次10/13・発送10/8〜10/30(2026-10-04公式確認)"
         }
       ],
       "note": "るでや買取¥185,000(2026-09-30検証)−定価¥163,200−送料¥1,000=粗利¥20,800。🔚今回で販売終了。保証書店舗印ありは−¥20,000→¥800。当選発表10/5・注文10/5〜10/7"
@@ -699,7 +759,7 @@
           "entry_deadline": "2026-09-28T12:00:00+09:00",
           "result_date": "2026-10-06T00:00:00+09:00",
           "order_deadline": "2026-10-08T23:59:00+09:00",
-          "note": "2次当選案内あり(10/9〜10/13)"
+          "note": "1次当選発表10/6・2次10/13・発送10/8〜10/30(2026-10-04公式確認)"
         }
       ],
       "note": "るでや買取¥200,000(2026-09-30検証)−定価¥211,800−送料¥1,000=粗利¥-12,800。🚫転売目的の応募不要(赤字)"
@@ -726,7 +786,7 @@
           "entry_deadline": "2026-09-28T12:00:00+09:00",
           "result_date": "2026-10-02T00:00:00+09:00",
           "order_deadline": "2026-10-05T23:59:00+09:00",
-          "note": "2次当選案内あり(10/9〜10/13)"
+          "note": "1次当選発表10/2済→メール確認要・2次10/9・発送10/6〜10/30"
         }
       ],
       "note": "🔻るでや買取¥205,000(2026-09-30検証・9/15の¥230,000から下落)−定価¥299,800−送料¥1,000=粗利¥-95,800。🚫大幅赤字so応募不要"
