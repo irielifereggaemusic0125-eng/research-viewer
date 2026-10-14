@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-15 06:38 +judge",
+ "updated_at": "2026-10-15 06:40 +judge",
  "count": 787,
  "items": [
   {
@@ -53,7 +53,7 @@
    "jissei_n": 20,
    "judge_hammer": 44000,
    "judge_cost": 51000,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "▼JAPAN ONLY▼LOUIS VUITTON ルジュール スレーヴ 100ml 残量7割 成分表記有り 香水",
@@ -730,7 +730,7 @@
    "jissei_n": 12,
    "judge_hammer": 34000,
    "judge_cost": 40000,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "PRADA プラダ サフィアーノ長財布 財布",
@@ -801,10 +801,10 @@
    "asking_bid_closing_price": 15000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 19100,
-   "jissei_src": "mercari:n=9",
-   "profit": -7010,
-   "shitene": 8581,
+   "jissei": 10500,
+   "jissei_src": "mercari:n=9(B→p25)",
+   "profit": -14750,
+   "shitene": 1545,
    "highlight": false,
    "needs_jissei_verify": false,
    "tier": "S",
@@ -815,11 +815,11 @@
    "matched_queries": [
     "プラダ サフィアーノ"
    ],
-   "hanbai_souba": 19100,
+   "hanbai_souba": 10500,
    "rakusatsu_souba": 19000,
    "rakusatsu_src": "official:プラダ:B",
-   "max_bid": 8581,
-   "max_bid_soda": 6081,
+   "max_bid": 1545,
+   "max_bid_soda": -955,
    "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
@@ -830,7 +830,7 @@
    "jissei_n": 9,
    "judge_hammer": 19000,
    "judge_cost": 23500,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "PRADA プラダ リボン ピンク サフィアーノレザー ラウンドファスナー 長財布 財布",
@@ -1170,7 +1170,7 @@
    "jissei_n": 0,
    "judge_hammer": 630000,
    "judge_cost": 703300,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Cartier サントスガルベSM 090279189 オートマ レディース腕時計",
@@ -1194,7 +1194,7 @@
    "non_deductible_tax": false,
    "confidence": "category_only",
    "jissei": null,
-   "jissei_src": "mercari:n=1(不足)",
+   "jissei_src": "mercari:n=1(語ズレ:サントスガルベSMが標本0/1)",
    "profit": null,
    "shitene": null,
    "highlight": false,
@@ -1222,7 +1222,7 @@
    "jissei_n": 1,
    "judge_hammer": 620000,
    "judge_cost": 692300,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Cartier サントス ミディアムモデル WG Au750 19.6g ブレスレット・バングル(貴金属)",
@@ -1323,7 +1323,7 @@
    "jissei_n": 0,
    "judge_hammer": 546000,
    "judge_cost": 610900,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Cartier サントスオクタゴンLM 296642543 オートマ レディース腕時計",
@@ -1375,7 +1375,7 @@
    "jissei_n": 0,
    "judge_hammer": 530000,
    "judge_cost": 593300,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Cartier サントスガルベSM W20012C4 1567951043CD クォーツ レディース腕時計",
@@ -1427,7 +1427,7 @@
    "jissei_n": 0,
    "judge_hammer": 560000,
    "judge_cost": 626300,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Cartier サントスガルベLM W20060D6 1564594618CD クォーツ レディース腕時計",
@@ -1479,7 +1479,7 @@
    "jissei_n": 0,
    "judge_hammer": 600000,
    "judge_cost": 670300,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Cartier サントスドゥモワゼルSM W25064Z5 2698 435278SX クオーツ レディース腕時計",
@@ -1531,7 +1531,7 @@
    "jissei_n": 0,
    "judge_hammer": 382000,
    "judge_cost": 426100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Cartier サントスオクタゴン W2001583 18790200533 クオーツ レディース腕時計",
@@ -1583,7 +1583,7 @@
    "jissei_n": 0,
    "judge_hammer": 340000,
    "judge_cost": 379900,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "◆Cartier カルティエ サントス ヴィンテージ アイウェア サングラス・メガネ",
@@ -1606,10 +1606,10 @@
    "asking_bid_closing_price": 28000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 36800,
-   "jissei_src": "mercari:n=8",
-   "profit": -980,
-   "shitene": 22563,
+   "jissei": 30000,
+   "jissei_src": "mercari:n=8(B→p25)",
+   "profit": -7100,
+   "shitene": 17000,
    "highlight": false,
    "needs_jissei_verify": false,
    "tier": "A",
@@ -1620,11 +1620,11 @@
    "matched_queries": [
     "カルティエ サントス"
    ],
-   "hanbai_souba": 36800,
+   "hanbai_souba": 30000,
    "rakusatsu_souba": null,
    "rakusatsu_src": null,
-   "max_bid": 22563,
-   "max_bid_soda": 20063,
+   "max_bid": 17000,
+   "max_bid_soda": 14500,
    "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
@@ -1635,7 +1635,7 @@
    "jissei_n": 8,
    "judge_hammer": 28000,
    "judge_cost": 33400,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "BALENCIAGA バレンシアガ クラシック 長財布 ピンク 財布",
@@ -1658,10 +1658,10 @@
    "asking_bid_closing_price": 11500,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 7500,
-   "jissei_src": "mercari:n=14",
-   "profit": -40550,
-   "shitene": -909,
+   "jissei": 5740,
+   "jissei_src": "mercari:n=14(B→p25)",
+   "profit": -42134,
+   "shitene": -2349,
    "highlight": false,
    "needs_jissei_verify": false,
    "tier": "A",
@@ -1672,11 +1672,11 @@
    "matched_queries": [
     "バレンシアガ 財布"
    ],
-   "hanbai_souba": 7500,
+   "hanbai_souba": 5740,
    "rakusatsu_souba": 40000,
    "rakusatsu_src": "official:バレンシアガ:B",
-   "max_bid": -909,
-   "max_bid_soda": -3409,
+   "max_bid": -2349,
+   "max_bid_soda": -4849,
    "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
@@ -1687,7 +1687,7 @@
    "jissei_n": 14,
    "judge_hammer": 40000,
    "judge_cost": 46600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOUIS VUITTON ルイヴィトン モノグラム バンダナ ショートスリーブ ニット フーディ トップス",
@@ -2766,12 +2766,12 @@
    "asking_bid_closing_price": 21000,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 55000,
-   "jissei_src": "mercari:n=12",
-   "profit": 23100,
-   "shitene": 37454,
-   "highlight": true,
-   "needs_jissei_verify": false,
+   "jissei": null,
+   "jissei_src": "mercari:n=12(語ズレ:JILSANDERが標本0/3)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
    "tier": "A",
    "kaiten": 3,
    "rieki": null,
@@ -2785,7 +2785,7 @@
    "rakusatsu_src": null,
    "max_bid": 37454,
    "max_bid_soda": 34954,
-   "profit_flag": "✅",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
@@ -2795,7 +2795,7 @@
    "jissei_n": 12,
    "judge_hammer": 21000,
    "judge_cost": 25700,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "JILSANDER ジルサンダー タングル スモール レザー ショルダーバッグ ショルダーバッグ",
@@ -2818,12 +2818,12 @@
    "asking_bid_closing_price": 18500,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 33300,
-   "jissei_src": "mercari:n=10",
-   "profit": 6320,
-   "shitene": 19700,
-   "highlight": true,
-   "needs_jissei_verify": false,
+   "jissei": null,
+   "jissei_src": "mercari:n=10(語ズレ:JILSANDERが標本0/3)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
    "tier": "A",
    "kaiten": 3,
    "rieki": null,
@@ -2837,7 +2837,7 @@
    "rakusatsu_src": null,
    "max_bid": 19700,
    "max_bid_soda": 17200,
-   "profit_flag": "✅",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
@@ -2847,7 +2847,7 @@
    "jissei_n": 10,
    "judge_hammer": 18500,
    "judge_cost": 22950,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "GUCCI グッチ GGマーモント レザー チェーンショルダーバッグ ブラック 443497 ショルダーバッグ",
@@ -3878,12 +3878,12 @@
    "asking_bid_closing_price": 18000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 19700,
-   "jissei_src": "mercari:n=17",
-   "profit": -13070,
-   "shitene": 9072,
+   "jissei": null,
+   "jissei_src": "mercari:n=17(語ズレ:二つ折り長財布が標本0/3)",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -3897,7 +3897,7 @@
    "rakusatsu_src": "official:グッチ:B",
    "max_bid": 9072,
    "max_bid_soda": 6572,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
@@ -3907,7 +3907,7 @@
    "jissei_n": 17,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌティーントリオンフ ショルダーバッグ ショルダーバッグ",
@@ -8538,10 +8538,10 @@
    "asking_bid_closing_price": 40000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 22500,
-   "jissei_src": "mercari:n=14",
-   "profit": -27050,
-   "shitene": 10863,
+   "jissei": 16900,
+   "jissei_src": "mercari:n=14(B→p25)",
+   "profit": -32090,
+   "shitene": 6781,
    "highlight": false,
    "needs_jissei_verify": false,
    "tier": "A/バッグ",
@@ -8552,11 +8552,11 @@
    "matched_queries": [
     "セリーヌ バッグ"
    ],
-   "hanbai_souba": 22500,
+   "hanbai_souba": 16900,
    "rakusatsu_souba": null,
    "rakusatsu_src": null,
-   "max_bid": 10863,
-   "max_bid_soda": 8363,
+   "max_bid": 6781,
+   "max_bid_soda": 4281,
    "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
@@ -8567,7 +8567,7 @@
    "jissei_n": 14,
    "judge_hammer": 40000,
    "judge_cost": 46600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ マカダム ハンドバッグ グレー キャンバス ハンドバッグ",
@@ -8590,10 +8590,10 @@
    "asking_bid_closing_price": 41000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 26800,
-   "jissei_src": "mercari:n=14",
-   "profit": -24280,
-   "shitene": 14381,
+   "jissei": 20000,
+   "jissei_src": "mercari:n=14(B→p25)",
+   "profit": -30400,
+   "shitene": 9318,
    "highlight": false,
    "needs_jissei_verify": false,
    "tier": "A/バッグ",
@@ -8604,11 +8604,11 @@
    "matched_queries": [
     "セリーヌ バッグ"
    ],
-   "hanbai_souba": 26800,
+   "hanbai_souba": 20000,
    "rakusatsu_souba": null,
    "rakusatsu_src": null,
-   "max_bid": 14381,
-   "max_bid_soda": 11881,
+   "max_bid": 9318,
+   "max_bid_soda": 6818,
    "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
@@ -8619,7 +8619,7 @@
    "jissei_n": 14,
    "judge_hammer": 41000,
    "judge_cost": 47700,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE ビタースイート レザー イエロー ショルダーバッグ",
@@ -8642,12 +8642,12 @@
    "asking_bid_closing_price": 40000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 6500,
-   "jissei_src": "mercari:n=3",
-   "profit": -41450,
-   "shitene": -1727,
+   "jissei": null,
+   "jissei_src": "mercari:n=3(語ズレ:ビタースイートが標本0/3)",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -8661,7 +8661,7 @@
    "rakusatsu_src": null,
    "max_bid": -1727,
    "max_bid_soda": -4227,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
@@ -8671,7 +8671,7 @@
    "jissei_n": 3,
    "judge_hammer": 40000,
    "judge_cost": 46600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE マイクロショッパートートバッグ レザー 赤 ハンドバッグ",
@@ -8982,12 +8982,12 @@
    "asking_bid_closing_price": 38000,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 30000,
-   "jissei_src": "mercari:n=15",
-   "profit": -18100,
-   "shitene": 17000,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -9001,17 +9001,17 @@
    "rakusatsu_src": null,
    "max_bid": 17000,
    "max_bid_soda": 14500,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 38000,
    "judge_cost": 44400,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "▽【※発送元:中国※】CELINE セリーヌ バケット レザー ショルダーバッグ",
@@ -9566,12 +9566,12 @@
    "asking_bid_closing_price": 30000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 23100,
-   "jissei_src": "mercari:n=14",
-   "profit": -15510,
-   "shitene": 11354,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -9585,17 +9585,17 @@
    "rakusatsu_src": null,
    "max_bid": 11354,
    "max_bid_soda": 8854,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE ウエストバック マカダム柄 ウエストバッグ",
@@ -9618,12 +9618,12 @@
    "asking_bid_closing_price": 28000,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 35000,
-   "jissei_src": "mercari:n=8",
-   "profit": -2600,
-   "shitene": 21090,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -9637,17 +9637,17 @@
    "rakusatsu_src": null,
    "max_bid": 21090,
    "max_bid_soda": 18590,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 8,
+   "jissei_n": null,
    "judge_hammer": 28000,
    "judge_cost": 33400,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE パリマカダム ブギーバッグ ブロンズ ハンドバッグ ハンドバッグ",
@@ -10294,12 +10294,12 @@
    "asking_bid_closing_price": 32000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 25000,
-   "jissei_src": "mercari:n=13",
-   "profit": -16000,
-   "shitene": 12909,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -10313,17 +10313,17 @@
    "rakusatsu_src": null,
    "max_bid": 12909,
    "max_bid_soda": 10409,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 13,
+   "jissei_n": null,
    "judge_hammer": 32000,
    "judge_cost": 37800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ ハンド ブラック ハンドバッグ",
@@ -10634,12 +10634,12 @@
    "asking_bid_closing_price": 30000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 22000,
-   "jissei_src": "mercari:n=14",
-   "profit": -16500,
-   "shitene": 10454,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -10653,17 +10653,17 @@
    "rakusatsu_src": null,
    "max_bid": 10454,
    "max_bid_soda": 7954,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE マカダム ボストンバッグ ボストンバッグ",
@@ -10686,12 +10686,12 @@
    "asking_bid_closing_price": 30000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 26899,
-   "jissei_src": "mercari:n=14",
-   "profit": -12091,
-   "shitene": 14462,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -10705,17 +10705,17 @@
    "rakusatsu_src": null,
    "max_bid": 14462,
    "max_bid_soda": 11962,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ MC98/1 ハンドバッグ トートバッグ マカダム PVC レザー ブラウン ハンドバッグ",
@@ -10738,12 +10738,12 @@
    "asking_bid_closing_price": 29000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 26099,
-   "jissei_src": "mercari:n=16",
-   "profit": -11711,
-   "shitene": 13808,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -10757,17 +10757,17 @@
    "rakusatsu_src": null,
    "max_bid": 13808,
    "max_bid_soda": 11308,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 16,
+   "jissei_n": null,
    "judge_hammer": 29000,
    "judge_cost": 34500,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ マカダム ミニボストンバッグ ハンドバッグ",
@@ -10790,12 +10790,12 @@
    "asking_bid_closing_price": 30000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 25000,
-   "jissei_src": "mercari:n=13",
-   "profit": -13800,
-   "shitene": 12909,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -10809,17 +10809,17 @@
    "rakusatsu_src": null,
    "max_bid": 12909,
    "max_bid_soda": 10409,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 13,
+   "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ マカダム ボストンバッグ ボストンバッグ",
@@ -10842,12 +10842,12 @@
    "asking_bid_closing_price": 29000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 26899,
-   "jissei_src": "mercari:n=14",
-   "profit": -10991,
-   "shitene": 14462,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -10861,17 +10861,17 @@
    "rakusatsu_src": null,
    "max_bid": 14462,
    "max_bid_soda": 11962,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 29000,
    "judge_cost": 34500,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE サークル金具 ゴールド金具 ピンク タグ付き ハンドバッグ",
@@ -11422,12 +11422,12 @@
    "asking_bid_closing_price": 27000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 22000,
-   "jissei_src": "mercari:n=9",
-   "profit": -13200,
-   "shitene": 10454,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -11441,17 +11441,17 @@
    "rakusatsu_src": null,
    "max_bid": 10454,
    "max_bid_soda": 7954,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 9,
+   "jissei_n": null,
    "judge_hammer": 27000,
    "judge_cost": 32300,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE マカダム柄 ゴールド金具 ヴィンテージ レザーハンド ハンドバッグ",
@@ -11954,12 +11954,12 @@
    "asking_bid_closing_price": 25000,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 29000,
-   "jissei_src": "mercari:n=11",
-   "profit": -4700,
-   "shitene": 16181,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -11973,17 +11973,17 @@
    "rakusatsu_src": null,
    "max_bid": 16181,
    "max_bid_soda": 13681,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 11,
+   "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE ビタースウィート ハンドバッグ ハンドバッグ",
@@ -12006,12 +12006,12 @@
    "asking_bid_closing_price": 25000,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 29999,
-   "jissei_src": "mercari:n=13",
-   "profit": -3801,
-   "shitene": 16999,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -12025,17 +12025,17 @@
    "rakusatsu_src": null,
    "max_bid": 16999,
    "max_bid_soda": 14499,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 13,
+   "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE/セリーヌ ワンショルダーバッグ ハンドバッグ",
@@ -12058,12 +12058,12 @@
    "asking_bid_closing_price": 25000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 19800,
-   "jissei_src": "mercari:n=14",
-   "profit": -12980,
-   "shitene": 9154,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -12077,17 +12077,17 @@
    "rakusatsu_src": null,
    "max_bid": 9154,
    "max_bid_soda": 6654,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ トリオ ショルダーバッグ レザー レッド ラージ ショルダーバッグ",
@@ -12110,12 +12110,12 @@
    "asking_bid_closing_price": 25000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 30000,
-   "jissei_src": "mercari:n=11",
-   "profit": -3800,
-   "shitene": 17000,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -12129,17 +12129,17 @@
    "rakusatsu_src": null,
    "max_bid": 17000,
    "max_bid_soda": 14500,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 11,
+   "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE ビタースウィート ハンドバッグ ショルダーバッグ",
@@ -12162,12 +12162,12 @@
    "asking_bid_closing_price": 25000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 28000,
-   "jissei_src": "mercari:n=18",
-   "profit": -5600,
-   "shitene": 15363,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -12181,17 +12181,17 @@
    "rakusatsu_src": null,
    "max_bid": 15363,
    "max_bid_soda": 12863,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 18,
+   "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE ビタースイート ショルダーバッグ ハンドバッグ",
@@ -12214,12 +12214,12 @@
    "asking_bid_closing_price": 25000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 22000,
-   "jissei_src": "mercari:n=14",
-   "profit": -11000,
-   "shitene": 10454,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -12233,17 +12233,17 @@
    "rakusatsu_src": null,
    "max_bid": 10454,
    "max_bid_soda": 7954,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE マカダム柄 ボストンバッグ ボストンバッグ",
@@ -12266,12 +12266,12 @@
    "asking_bid_closing_price": 25000,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 20000,
-   "jissei_src": "mercari:n=15",
-   "profit": -12800,
-   "shitene": 9318,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -12285,17 +12285,17 @@
    "rakusatsu_src": null,
    "max_bid": 9318,
    "max_bid_soda": 6818,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE Cマカダム スエード ショルダーバッグ バッグ",
@@ -12318,12 +12318,12 @@
    "asking_bid_closing_price": 17000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 14400,
-   "jissei_src": "mercari:n=13",
-   "profit": -9040,
-   "shitene": 4736,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -12337,17 +12337,17 @@
    "rakusatsu_src": null,
    "max_bid": 4736,
    "max_bid_soda": 2236,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 13,
+   "jissei_n": null,
    "judge_hammer": 17000,
    "judge_cost": 21300,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE マカダム ブラック レザー ハンドバッグ",
@@ -13714,12 +13714,12 @@
    "asking_bid_closing_price": 21500,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 21500,
-   "jissei_src": "mercari:n=14",
-   "profit": -7600,
-   "shitene": 10045,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -13733,17 +13733,17 @@
    "rakusatsu_src": null,
    "max_bid": 10045,
    "max_bid_soda": 7545,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 21500,
    "judge_cost": 26250,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE ショルダーバッグ ショルダーバッグ",
@@ -13766,12 +13766,12 @@
    "asking_bid_closing_price": 20000,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 23000,
-   "jissei_src": "mercari:n=13",
-   "profit": -4600,
-   "shitene": 11272,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -13785,17 +13785,17 @@
    "rakusatsu_src": null,
    "max_bid": 11272,
    "max_bid_soda": 8772,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 13,
+   "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE ポーチ セカンドバッグ",
@@ -13818,12 +13818,12 @@
    "asking_bid_closing_price": 20000,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 10200,
-   "jissei_src": "mercari:n=17",
-   "profit": -16120,
-   "shitene": 1299,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -13837,17 +13837,17 @@
    "rakusatsu_src": null,
    "max_bid": 1299,
    "max_bid_soda": -1201,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 17,
+   "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ バッグ ハンドバッグ",
@@ -13870,12 +13870,12 @@
    "asking_bid_closing_price": 20000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 23200,
-   "jissei_src": "mercari:n=14",
-   "profit": -4420,
-   "shitene": 11436,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -13889,17 +13889,17 @@
    "rakusatsu_src": null,
    "max_bid": 11436,
    "max_bid_soda": 8936,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE 巾着 ショルダーバッグ マカダム ショルダーバッグ",
@@ -13922,12 +13922,12 @@
    "asking_bid_closing_price": 20000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 22500,
-   "jissei_src": "mercari:n=15",
-   "profit": -5050,
-   "shitene": 10863,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -13941,17 +13941,17 @@
    "rakusatsu_src": null,
    "max_bid": 10863,
    "max_bid_soda": 8363,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE レザー ハンドバッグ ビタースウィート ハンドバッグ",
@@ -13974,12 +13974,12 @@
    "asking_bid_closing_price": 20000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 29999,
-   "jissei_src": "mercari:n=13",
-   "profit": 1699,
-   "shitene": 16999,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -13993,17 +13993,17 @@
    "rakusatsu_src": null,
    "max_bid": 16999,
    "max_bid_soda": 14499,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 13,
+   "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE サークルロゴ ハンドバッグ ブラック ハンドバッグ",
@@ -14026,12 +14026,12 @@
    "asking_bid_closing_price": 20000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 25000,
-   "jissei_src": "mercari:n=15",
-   "profit": -2800,
-   "shitene": 12909,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -14045,17 +14045,17 @@
    "rakusatsu_src": null,
    "max_bid": 12909,
    "max_bid_soda": 10409,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ マカダム ショルダーバッグ ショルダーバッグ",
@@ -14078,12 +14078,12 @@
    "asking_bid_closing_price": 20000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 17500,
-   "jissei_src": "mercari:n=15",
-   "profit": -9550,
-   "shitene": 7272,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -14097,17 +14097,17 @@
    "rakusatsu_src": null,
    "max_bid": 7272,
    "max_bid_soda": 4772,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ ハンドバッグ ブギーバッグ ハンドバッグ",
@@ -14130,12 +14130,12 @@
    "asking_bid_closing_price": 20000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 19000,
-   "jissei_src": "mercari:n=11",
-   "profit": -8200,
-   "shitene": 8500,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -14149,17 +14149,17 @@
    "rakusatsu_src": null,
    "max_bid": 8500,
    "max_bid_soda": 6000,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 11,
+   "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE マカダム ガンチーニ ショルダーバッグ ショルダーバッグ",
@@ -14182,12 +14182,12 @@
    "asking_bid_closing_price": 20000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 24000,
-   "jissei_src": "mercari:n=12",
-   "profit": -3700,
-   "shitene": 12090,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -14201,17 +14201,17 @@
    "rakusatsu_src": null,
    "max_bid": 12090,
    "max_bid_soda": 9590,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 12,
+   "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE Macadam Clutch クラッチバッグ",
@@ -14570,12 +14570,12 @@
    "asking_bid_closing_price": 18000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 21500,
-   "jissei_src": "mercari:n=14",
-   "profit": -3750,
-   "shitene": 10045,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -14589,17 +14589,17 @@
    "rakusatsu_src": null,
    "max_bid": 10045,
    "max_bid_soda": 7545,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE マカダム ハンドバッグ レザー ハンドバッグ",
@@ -14622,12 +14622,12 @@
    "asking_bid_closing_price": 18000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 20200,
-   "jissei_src": "mercari:n=15",
-   "profit": -4920,
-   "shitene": 9481,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -14641,17 +14641,17 @@
    "rakusatsu_src": null,
    "max_bid": 9481,
    "max_bid_soda": 6981,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE マカダム ハンドバッグ レザー ハンドバッグ",
@@ -14674,12 +14674,12 @@
    "asking_bid_closing_price": 18000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 20200,
-   "jissei_src": "mercari:n=15",
-   "profit": -4920,
-   "shitene": 9481,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -14693,17 +14693,17 @@
    "rakusatsu_src": null,
    "max_bid": 9481,
    "max_bid_soda": 6981,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ ヴィンテージ ハンドバッグ オールレザー キャメル ハンドバッグ",
@@ -14726,12 +14726,12 @@
    "asking_bid_closing_price": 19000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 22000,
-   "jissei_src": "mercari:n=19",
-   "profit": -4400,
-   "shitene": 10454,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -14745,17 +14745,17 @@
    "rakusatsu_src": null,
    "max_bid": 10454,
    "max_bid_soda": 7954,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 19,
+   "jissei_n": null,
    "judge_hammer": 19000,
    "judge_cost": 23500,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE / ショルダーバッグ / レザー ショルダーバッグ",
@@ -15114,12 +15114,12 @@
    "asking_bid_closing_price": 16000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 23200,
-   "jissei_src": "mercari:n=14",
-   "profit": -20,
-   "shitene": 11436,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -15133,17 +15133,17 @@
    "rakusatsu_src": null,
    "max_bid": 11436,
    "max_bid_soda": 8936,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE セリーヌ マカダム ショルダーバッグ ネイビー ショルダーバッグ",
@@ -15166,12 +15166,12 @@
    "asking_bid_closing_price": 16000,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 14800,
-   "jissei_src": "mercari:n=15",
-   "profit": -7580,
-   "shitene": 5063,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -15185,17 +15185,17 @@
    "rakusatsu_src": null,
    "max_bid": 5063,
    "max_bid_soda": 2563,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ ヴィンテージ ショルダー ショルダーバッグ",
@@ -15218,12 +15218,12 @@
    "asking_bid_closing_price": 16000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 23500,
-   "jissei_src": "mercari:n=15",
-   "profit": 250,
-   "shitene": 11681,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -15237,17 +15237,17 @@
    "rakusatsu_src": null,
    "max_bid": 11681,
    "max_bid_soda": 9181,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ クラッチ マダカム クラッチバッグ",
@@ -15654,12 +15654,12 @@
    "asking_bid_closing_price": 15000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 25000,
-   "jissei_src": "mercari:n=9",
-   "profit": 2700,
-   "shitene": 12909,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -15673,17 +15673,17 @@
    "rakusatsu_src": null,
    "max_bid": 12909,
    "max_bid_soda": 10409,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 9,
+   "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE ヴィンテージ ガンチーニ ショルダーバッグ ショルダーバッグ",
@@ -15706,12 +15706,12 @@
    "asking_bid_closing_price": 15000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 21500,
-   "jissei_src": "mercari:n=14",
-   "profit": -450,
-   "shitene": 10045,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -15725,17 +15725,17 @@
    "rakusatsu_src": null,
    "max_bid": 10045,
    "max_bid_soda": 7545,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ ブラッグ ショルダーバッグ ショルダーバッグ",
@@ -16142,12 +16142,12 @@
    "asking_bid_closing_price": 11000,
    "non_deductible_tax": true,
    "confidence": "category_only",
-   "jissei": 25000,
-   "jissei_src": "mercari:n=11",
-   "profit": 7100,
-   "shitene": 12909,
-   "highlight": true,
-   "needs_jissei_verify": false,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -16161,17 +16161,17 @@
    "rakusatsu_src": null,
    "max_bid": 12909,
    "max_bid_soda": 10409,
-   "profit_flag": "✅",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 11,
+   "jissei_n": null,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ デニム トートバッグ トートバッグ",
@@ -16194,12 +16194,12 @@
    "asking_bid_closing_price": 13000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 31900,
-   "jissei_src": "mercari:n=15",
-   "profit": 11110,
-   "shitene": 18554,
-   "highlight": true,
-   "needs_jissei_verify": false,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -16213,17 +16213,17 @@
    "rakusatsu_src": null,
    "max_bid": 18554,
    "max_bid_soda": 16054,
-   "profit_flag": "✅",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE PVC/レザーマカダム ミニボストンバッグ ブラウン ライトブラウン ハンドバッグ",
@@ -16246,12 +16246,12 @@
    "asking_bid_closing_price": 31000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 25000,
-   "jissei_src": "mercari:n=5",
-   "profit": -14900,
-   "shitene": 12909,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -16265,17 +16265,17 @@
    "rakusatsu_src": null,
    "max_bid": 12909,
    "max_bid_soda": 10409,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 5,
+   "jissei_n": null,
    "judge_hammer": 31000,
    "judge_cost": 36700,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE PVC×レザーマカダム ハンドバッグ ブラウン ライトブラウン GD金具 ハンドバッグ",
@@ -16298,12 +16298,12 @@
    "asking_bid_closing_price": 30000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 22000,
-   "jissei_src": "mercari:n=5",
-   "profit": -16500,
-   "shitene": 10454,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -16317,17 +16317,17 @@
    "rakusatsu_src": null,
    "max_bid": 10454,
    "max_bid_soda": 7954,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 5,
+   "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE CELINE セリーヌ PVC マカダム柄 ショルダー バッグ ベージュ 系 クラッチバッグ",
@@ -16350,12 +16350,12 @@
    "asking_bid_closing_price": 25000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 18500,
-   "jissei_src": "mercari:n=15",
-   "profit": -14150,
-   "shitene": 8090,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -16369,17 +16369,17 @@
    "rakusatsu_src": null,
    "max_bid": 8090,
    "max_bid_soda": 5590,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CELINE セリーヌ ハンド マカダム ハンドバッグ",
@@ -19186,12 +19186,12 @@
    "asking_bid_closing_price": 30000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 32780,
-   "jissei_src": "mercari:n=15",
-   "profit": -6798,
-   "shitene": 19274,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -19205,17 +19205,17 @@
    "rakusatsu_src": null,
    "max_bid": 19274,
    "max_bid_soda": 16774,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE LOEWE ロエベ クラッチバッグ ポーチ レディース オブロングポーチ アナグラムジャカード&カーフ ポーチ",
@@ -19334,12 +19334,12 @@
    "asking_bid_closing_price": 35000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 32800,
-   "jissei_src": "mercari:n=15",
-   "profit": -12280,
-   "shitene": 19290,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -19353,17 +19353,17 @@
    "rakusatsu_src": null,
    "max_bid": 19290,
    "max_bid_soda": 16790,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 35000,
    "judge_cost": 41100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "▼JAPAN ONLY▼LOEWE LOEWE ロエベ ハラコ ラムスキン レオパード アナグラム総柄 トートバッグ ハンドバッグ トートバッグ",
@@ -19386,12 +19386,12 @@
    "asking_bid_closing_price": 40000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 21800,
-   "jissei_src": "mercari:n=12",
-   "profit": -27680,
-   "shitene": 10290,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -19405,17 +19405,17 @@
    "rakusatsu_src": null,
    "max_bid": 10290,
    "max_bid_soda": 7790,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 12,
+   "jissei_n": null,
    "judge_hammer": 40000,
    "judge_cost": 46600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ゲート ダブルジップショルダー ショルダーバッグ",
@@ -19438,12 +19438,12 @@
    "asking_bid_closing_price": 40000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 50000,
-   "jissei_src": "mercari:n=8",
-   "profit": -2300,
-   "shitene": 33363,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -19457,17 +19457,17 @@
    "rakusatsu_src": null,
    "max_bid": 33363,
    "max_bid_soda": 30863,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 8,
+   "jissei_n": null,
    "judge_hammer": 40000,
    "judge_cost": 46600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE かごトート トートバッグ",
@@ -19490,12 +19490,12 @@
    "asking_bid_closing_price": 40000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 50000,
-   "jissei_src": "mercari:n=14",
-   "profit": -2300,
-   "shitene": 33363,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -19509,17 +19509,17 @@
    "rakusatsu_src": null,
    "max_bid": 33363,
    "max_bid_soda": 30863,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 40000,
    "judge_cost": 46600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE レザー ヘリテージ ショルダーバッグ ブラウン GD金具 パドロック・キー×2・クロシェット付 ショルダーバッグ",
@@ -19542,12 +19542,12 @@
    "asking_bid_closing_price": 35000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 31500,
-   "jissei_src": "mercari:n=13",
-   "profit": -13450,
-   "shitene": 18227,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -19561,17 +19561,17 @@
    "rakusatsu_src": null,
    "max_bid": 18227,
    "max_bid_soda": 15727,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 13,
+   "jissei_n": null,
    "judge_hammer": 35000,
    "judge_cost": 41100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ロエベ アマソナ バッグ",
@@ -19594,12 +19594,12 @@
    "asking_bid_closing_price": 30000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 85000,
-   "jissei_src": "mercari:n=3",
-   "profit": 40200,
-   "shitene": 60999,
-   "highlight": true,
-   "needs_jissei_verify": false,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -19613,17 +19613,17 @@
    "rakusatsu_src": null,
    "max_bid": 60999,
    "max_bid_soda": 58499,
-   "profit_flag": "✅",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 3,
+   "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE LOEWE レザートートバッグ トートバッグ",
@@ -19771,7 +19771,7 @@
    "jissei_n": null,
    "judge_hammer": 22000,
    "judge_cost": 26800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE フスタ31 ボストンバッグ ボストンバッグ",
@@ -19794,12 +19794,12 @@
    "asking_bid_closing_price": 32000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 68000,
-   "jissei_src": "mercari:n=3",
-   "profit": 22700,
-   "shitene": 48090,
-   "highlight": true,
-   "needs_jissei_verify": false,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -19813,17 +19813,17 @@
    "rakusatsu_src": null,
    "max_bid": 48090,
    "max_bid_soda": 45590,
-   "profit_flag": "✅",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 3,
+   "jissei_n": null,
    "judge_hammer": 32000,
    "judge_cost": 37800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ロエベ ショルダーバッグ ポーチ",
@@ -19846,12 +19846,12 @@
    "asking_bid_closing_price": 30000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 32000,
-   "jissei_src": "mercari:n=12",
-   "profit": -7500,
-   "shitene": 18636,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -19865,17 +19865,17 @@
    "rakusatsu_src": null,
    "max_bid": 18636,
    "max_bid_soda": 16136,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 12,
+   "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ショッパートート トートバッグ",
@@ -19898,12 +19898,12 @@
    "asking_bid_closing_price": 30000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 41760,
-   "jissei_src": "mercari:n=14",
-   "profit": 1284,
-   "shitene": 26621,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -19917,17 +19917,17 @@
    "rakusatsu_src": null,
    "max_bid": 26621,
    "max_bid_soda": 24121,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ロエベ ベラスケス 2WAY ハンドバッグ",
@@ -19979,7 +19979,7 @@
    "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ロエベ セカンドバッグ ポーチ",
@@ -20031,7 +20031,7 @@
    "jissei_n": null,
    "judge_hammer": 28000,
    "judge_cost": 33400,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE LOEWE ロエベ アナグラム柄 ショルダーバッグ ショルダーバッグ ショルダーバッグ",
@@ -20083,7 +20083,7 @@
    "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE LOEWE ロエベ ショッパートート アナグラム レザー トートバッグ トートバッグ キャメル トートバッグ",
@@ -20135,7 +20135,7 @@
    "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE LOEWE ショルダーバッグ ショルダーバッグ",
@@ -20158,12 +20158,12 @@
    "asking_bid_closing_price": 21000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 32800,
-   "jissei_src": "mercari:n=15",
-   "profit": 3120,
-   "shitene": 19290,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -20177,17 +20177,17 @@
    "rakusatsu_src": null,
    "max_bid": 19290,
    "max_bid_soda": 16790,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 21000,
    "judge_cost": 25700,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE レザー トートバッグ",
@@ -20239,7 +20239,7 @@
    "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE アマソナ28 ゴールド トートバッグ",
@@ -20291,7 +20291,7 @@
    "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE LOEWE ロエベ アナグラム ショルダーバッグ ショルダーバッグ",
@@ -20343,7 +20343,7 @@
    "jissei_n": null,
    "judge_hammer": 22000,
    "judge_cost": 26800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ロエベ ヘリテージ ショルダーバッグ レザー メタリックシルバー ショルダーバッグ",
@@ -20395,7 +20395,7 @@
    "jissei_n": null,
    "judge_hammer": 22000,
    "judge_cost": 26800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "▼JAPAN ONLY▼LOEWE LOEWE オーストリッチ ショルダーバッグ ショルダーバッグ",
@@ -20447,7 +20447,7 @@
    "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE LOEWE アマソナ 32 コーデュロイ ハンドバッグ",
@@ -20499,7 +20499,7 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ロエベ アマソナ フスタ ハンドバッグ アナグラム トートバッグ トートバッグ",
@@ -20551,7 +20551,7 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE トップハンド/レザーバック ハンドバッグ",
@@ -20603,7 +20603,7 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE LOEWE ロエベ アナグラム トートバッグ トートバッグ",
@@ -20655,7 +20655,7 @@
    "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE LOEWE トートバッグ トートバッグ",
@@ -20678,12 +20678,12 @@
    "asking_bid_closing_price": 10000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 32780,
-   "jissei_src": "mercari:n=15",
-   "profit": 15752,
-   "shitene": 19274,
-   "highlight": true,
-   "needs_jissei_verify": false,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -20697,17 +20697,17 @@
    "rakusatsu_src": null,
    "max_bid": 19274,
    "max_bid_soda": 16774,
-   "profit_flag": "✅",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 15,
+   "jissei_n": null,
    "judge_hammer": 10000,
    "judge_cost": 13050,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "▼JAPAN ONLY▼LOEWE ロエベ アナグラム ファー ハンドバッグ ハンドバッグ",
@@ -20759,7 +20759,7 @@
    "jissei_n": null,
    "judge_hammer": 14000,
    "judge_cost": 18000,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ロエベ ハンドバッグ レザー イエロー ハンドバッグ",
@@ -20811,7 +20811,7 @@
    "jissei_n": null,
    "judge_hammer": 14000,
    "judge_cost": 18000,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE アナグラム レザーショルダー ショルダーバッグ",
@@ -20863,7 +20863,7 @@
    "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ロエベ レオパード トートバッグ トートバッグ",
@@ -20915,7 +20915,7 @@
    "jissei_n": null,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ロエベ ブラウン 2way ハンドバッグ",
@@ -20938,12 +20938,12 @@
    "asking_bid_closing_price": 35000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 41800,
-   "jissei_src": "mercari:n=11",
-   "profit": -4180,
-   "shitene": 26654,
+   "jissei": null,
+   "jissei_src": "mercari:未取得",
+   "profit": null,
+   "shitene": null,
    "highlight": false,
-   "needs_jissei_verify": false,
+   "needs_jissei_verify": true,
    "tier": "A/バッグ",
    "kaiten": null,
    "rieki": null,
@@ -20957,17 +20957,17 @@
    "rakusatsu_src": null,
    "max_bid": 26654,
    "max_bid_soda": 24154,
-   "profit_flag": "❌",
+   "profit_flag": "⚠️",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 11,
+   "jissei_n": null,
    "judge_hammer": 35000,
    "judge_cost": 41100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "LOEWE ロエベ ナッパレザー ワンショルダー アナグラム ショルダーバッグ",
@@ -21019,7 +21019,7 @@
    "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "▼JAPAN ONLY▼LOEWE LOEWE ハンドバッグ トート アナグラム ボア ハンドバッグ",
@@ -21071,7 +21071,7 @@
    "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CHANEL シャネル マトラッセ キャビアスキン WチェWフラ 黒×シルバー ショルダーバッグ",
@@ -27172,7 +27172,7 @@
    "jissei_n": null,
    "judge_hammer": 36000,
    "judge_cost": 42200,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CHANEL 3連マトラッセ イヤリング イヤリング",
@@ -27560,7 +27560,7 @@
    "jissei_n": null,
    "judge_hammer": 26000,
    "judge_cost": 31200,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CHANEL キャビアスキン マトラッセ 二つ折り財布 財布",
@@ -27708,7 +27708,7 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CHANEL シャネル ココマーク マトラッセ ネックレス シルバー コメあり ペンダントトップ",
@@ -27760,7 +27760,7 @@
    "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "CHANEL シャネル マトラッセ イヤリング 片耳 イヤリング",
@@ -32092,7 +32092,7 @@
    "jissei_n": null,
    "judge_hammer": 34000,
    "judge_cost": 40000,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "HERMES エルメス ミニ・ケリー ドゥブルトゥール K刻印 ブレスレット・バングル",
@@ -32144,7 +32144,7 @@
    "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "HERMES エルメス ブレスレット ブレスレット・バングル",
@@ -32196,7 +32196,7 @@
    "jissei_n": null,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "HERMES ミニドッグ ドゥブルトゥール ブレスレット ブレスレット・バングル",
@@ -32344,7 +32344,7 @@
    "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "HERMES エルメス ブレスレット ブレスレット・バングル",
@@ -32396,7 +32396,7 @@
    "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "HERMES HERMES エマイユバングル ブレスレット・バングル パンサー ブレスレット・バングル",
@@ -32592,7 +32592,7 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "HERMES エマイユ ブレスレット・バングル",
@@ -32692,7 +32692,7 @@
    "jissei_n": null,
    "judge_hammer": 19000,
    "judge_cost": 23500,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "HERMES ジャンボブレスレット シルバー金具 レザー ブラウン ブレスレット・バングル",
@@ -33080,7 +33080,7 @@
    "jissei_n": null,
    "judge_hammer": 32000,
    "judge_cost": 37800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "HERMES エルメス ジャンボブレス ブレスレット・バングル",
@@ -35196,7 +35196,7 @@
    "jissei_n": null,
    "judge_hammer": 40000,
    "judge_cost": 46600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ティファニー シグネチャークロス 925 750 SV925 6.7g ネックレス",
@@ -35248,7 +35248,7 @@
    "jissei_n": null,
    "judge_hammer": 34200,
    "judge_cost": 40220,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. リターントゥ ダブルハート 925 750 ネックレス",
@@ -35300,7 +35300,7 @@
    "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. リターントゥティファニー ブルー ダブルハート ネックレス SV925 2.6g ネックレス",
@@ -35352,7 +35352,7 @@
    "jissei_n": null,
    "judge_hammer": 23000,
    "judge_cost": 27900,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ネックレス インフィニティダブルチェーン 8.1? ネックレス",
@@ -35404,7 +35404,7 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ティファニー アップル ネックレス ビッグサイズ ロングチェーン ネックレス",
@@ -35456,7 +35456,7 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ティファニー SV925/750 デイジーフラワーコンビーカラーネックレス ネックレス",
@@ -35508,7 +35508,7 @@
    "jissei_n": null,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. サークルネックレス SV925 ネックレス",
@@ -35560,7 +35560,7 @@
    "jissei_n": null,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. メッシュ ネックレス 925 ネックレス",
@@ -35612,7 +35612,7 @@
    "jissei_n": null,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. リターントゥティファニー リターントゥ ネックレス ネックレス",
@@ -35664,7 +35664,7 @@
    "jissei_n": null,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ダブルドロップハートネックレス SV925 ネックレス",
@@ -35716,7 +35716,7 @@
    "jissei_n": null,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. シグネチャークロス SV925 4.4g ネックレス",
@@ -35768,7 +35768,7 @@
    "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. オープンハート オープンハート XL SV925 ネックレス",
@@ -35820,7 +35820,7 @@
    "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ティファニー オリーブリーフ ヴァインネックレス ネックレス",
@@ -35872,7 +35872,7 @@
    "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. GO WOMAN 2016 SV925 ネックレス",
@@ -35924,7 +35924,7 @@
    "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ツイストハート SV925 5.3g ネックレス",
@@ -35976,7 +35976,7 @@
    "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ティファニー シグネチャークロス ネックレス 925 ネックレス",
@@ -36028,7 +36028,7 @@
    "jissei_n": null,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. テディベア SV925 5.6g ネックレス",
@@ -36080,7 +36080,7 @@
    "jissei_n": null,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. SV925 スターオブダビデ ネックレス ネックレス",
@@ -36132,7 +36132,7 @@
    "jissei_n": null,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. SV925 スモールクロスネックレス ネックレス",
@@ -36184,7 +36184,7 @@
    "jissei_n": null,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ティファニー エルサ・ペレッティ オープン ハート ペンダント ミディアム スターリングシルバー ネックレス",
@@ -36236,7 +36236,7 @@
    "jissei_n": null,
    "judge_hammer": 6000,
    "judge_cost": 8650,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ティファニー エルサ・ペレッティ オープン ハート ペンダント スモール スターリングシルバー ネックレス",
@@ -36288,7 +36288,7 @@
    "jissei_n": null,
    "judge_hammer": 6000,
    "judge_cost": 8650,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. ネックレス 925 ナローバー ネックレス",
@@ -36340,7 +36340,7 @@
    "jissei_n": null,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. バードクロス 925 ネックレス ネックレス",
@@ -36392,7 +36392,7 @@
    "jissei_n": null,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. トリプルスター ネックレス ネックレス",
@@ -36444,7 +36444,7 @@
    "jissei_n": null,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. デイジーフラワーネックレス シルバー925 ヴィンテージ 3.3g ネックレス",
@@ -36496,7 +36496,7 @@
    "jissei_n": null,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Tiffany&Co. オープンハート ダブルオープンハート SV925 8.3g ネックレス",
@@ -36548,7 +36548,7 @@
    "jissei_n": null,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "SAINT LAURENT カサンドラ 長財布 財布",
@@ -36600,7 +36600,7 @@
    "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "SAINT LAURENT サンローラン 851689 イカリーノ レザー 黒 ハンドバッグ",
@@ -37660,7 +37660,7 @@
    "jissei_n": null,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "ホーセンブース ブルートファントム US10 リング",
@@ -37760,7 +37760,7 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Maison Margiela メゾンマルジェラ 5AC 2WAY ショルダーバッグ ショルダーバッグ",
@@ -38004,7 +38004,7 @@
    "jissei_n": null,
    "judge_hammer": 35000,
    "judge_cost": 41100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "Maison Margiela ナイロンジャケット ジャケット",
@@ -38056,7 +38056,7 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "▼JAPAN ONLY▼GUCCI トムフォード がま口 リザード 001.4212 ショルダーバッグ",
@@ -38252,7 +38252,7 @@
    "jissei_n": null,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "GUCCI グッチ トムフォード期 テーラードジャケット 裏地総ロゴ サイズ40 ジャケット",
@@ -38304,7 +38304,7 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   },
   {
    "name": "GUCCI グッチ トムフォード期 ホースビット総柄トップス Tシャツ",
@@ -38356,18 +38356,19 @@
    "jissei_n": null,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-10-15 06:38"
+   "judged_at": "2026-10-15 06:40"
   }
  ],
  "_note": "jissei未検証(Mercari中央値未取得)。落札相場はenrichでofficial相場表から付与。asking_bid_closing_price=EcoAucカードのdata属性値。brand_en=EcoAucブランド表記",
  "strategy_c": {
-  "profitable": 8,
-  "rejected": 59,
-  "unknown": 77,
-  "eligible": 144,
+  "profitable": 0,
+  "thin": 0,
+  "rejected": 7,
+  "unknown": 134,
+  "eligible": 141,
   "total": 787,
   "over100k": 0,
   "gate": "仕入総額≤50,000 or kaiten≥6",
-  "enriched_at": "2026-10-15 06:38"
+  "enriched_at": "2026-10-15 06:40"
  }
 }
