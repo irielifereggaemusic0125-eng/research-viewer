@@ -1,215 +1,7 @@
 {
   "schema": "v2",
-  "updated_at": "2026-10-14T22:47:55+09:00",
+  "updated_at": "2026-10-15T22:43:57+09:00",
   "candidates": [
-    {
-      "name": "ポケカ MEGA拡張パック 30th CELEBRATION BOX",
-      "brand": "ポケモン",
-      "category": "トレカ",
-      "price": 7200,
-      "jissei": 24000,
-      "premium_rate": 3.33,
-      "premium_level": "高",
-      "profit_max": 13550,
-      "best_route": "メルカリ/ヤフフリ(個人売切)",
-      "phase": "受付中",
-      "deadline": "2026-10-14T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "イオンスタイルオンライン(イオンカード決済限定)",
-          "url": "https://aeonretail.com/Page/k-lottery_cardgame.aspx",
-          "phase": "受付中",
-          "entry_open": "2026-10-07T11:00:00+09:00",
-          "entry_deadline": "2026-10-14T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "本日23:59締切・20パック¥7,194・1人1点"
-        },
-        {
-          "store": "楽天ブックス(WEB抽選・クレカ払い)",
-          "url": "https://books.rakuten.co.jp/rb/18595282/",
-          "phase": "受付中",
-          "entry_open": "2026-10-14T10:00:00+09:00",
-          "entry_deadline": "2026-10-18T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "2026-11-03T23:59:00+09:00",
-          "note": "本日10時開始・9商品に複数応募可(当選1商品)・1世帯1名・購入10/29〜11/3"
-        },
-        {
-          "store": "トレカプラザ55通販(Googleフォーム)",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSePKfIfAzVnfBIaMb9zqMCJLsbD7qxnViMgAbAYzy-6dBzjAA/viewform",
-          "phase": "受付中",
-          "entry_open": "2026-10-14T17:30:00+09:00",
-          "entry_deadline": "2026-10-20T23:59:00+09:00",
-          "result_date": "2026-10-23T00:00:00+09:00",
-          "order_deadline": "2026-10-26T23:59:00+09:00",
-          "note": "本日17:30開始・会員登録必須・1人1回・プレミアムデッキ等も同フォーム"
-        },
-        {
-          "store": "竜のしっぽ各店(WEB抽選・店頭受取)",
-          "url": "https://ryuunoshippo.membercard.jp/",
-          "phase": "受付中",
-          "entry_open": "2026-10-12T22:00:00+09:00",
-          "entry_deadline": "2026-10-16T23:59:00+09:00",
-          "result_date": "2026-10-21T17:00:00+09:00",
-          "order_deadline": "2026-10-25T23:59:00+09:00",
-          "note": "モバイル会員・店舗ごと申込可・来店本人確認"
-        },
-        {
-          "store": "ノジマオンライン(招待制)",
-          "url": "https://contents.online.nojima.co.jp/secret202609/",
-          "phase": "受付中",
-          "entry_open": "2026-10-04T18:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "会員ID要・10/4以前のエントリーはリセット済so再エントリー"
-        },
-        {
-          "store": "ポケモンセンターオンライン(4回目追加抽選)",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "12月頃予定・日程未定"
-        }
-      ],
-      "note": "2026-10-14実測(ヤフオク/ヤフフリ落札 10/12〜14): シュリンク付1BOX ¥23,000〜25,000・中央値≈¥24,000(前日¥25,000から軟化)。シュリンク無/ペリペリ有は¥19,000〜23,000so出品時はシュリンク明記。粗利=24,000×0.9−850−7,200=¥13,550。当選後は早期売却推奨"
-    },
-    {
-      "name": "ワンピースカード OP-18 神の支配 BOX",
-      "brand": "バンダイ",
-      "category": "トレカ",
-      "price": 5755,
-      "jissei": 15500,
-      "premium_rate": 2.69,
-      "premium_level": "高",
-      "profit_max": 7345,
-      "best_route": "メルカリ(発売初週の個人売切)",
-      "phase": "受付中",
-      "deadline": "2026-10-14T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ヤマダデンキ(ヤマダデジタル会員アプリ抽選)",
-          "url": "https://www.yamada-denki.jp/service/pointservice/digital-kaiin.html",
-          "phase": "受付中",
-          "entry_open": "2026-10-12T23:00:00+09:00",
-          "entry_deadline": "2026-10-14T23:59:00+09:00",
-          "result_date": "2026-11-18T12:00:00+09:00",
-          "order_deadline": "2026-11-27T23:59:00+09:00",
-          "note": "本日23:59締切・購入履歴(2025/4/1〜2026/10/11)orゴールド会員要・店頭受取11/21〜27"
-        },
-        {
-          "store": "Amazon(招待制)",
-          "url": "https://www.amazon.co.jp/dp/B0HFVPJF4Q",
-          "phase": "受付中",
-          "entry_open": "2026-09-10T19:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "終了日記載なし"
-        }
-      ],
-      "note": "⚠️未発売(11月下旬)。実勢はOP-17の発売初週実績¥15,500〜16,008(9/5〜8)で代替・1か月で¥10,700まで軟化した前例so当選後は発売初週に即売却。粗利=15,500×0.9−850−5,755=¥7,345"
-    },
-    {
-      "name": "ワンピースカード EB-05 ヒロインズエディション vol.2 BOX",
-      "brand": "バンダイ",
-      "category": "トレカ",
-      "price": 5280,
-      "jissei": 13000,
-      "premium_rate": 2.46,
-      "premium_level": "高",
-      "profit_max": 5570,
-      "best_route": "メルカリ(個人売切)",
-      "phase": "受付中",
-      "deadline": "2026-10-14T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "カードボックス池袋店",
-          "url": "https://shoplottery.e-starbox.com/lottery/entry?code=UpduoI2g6l",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-14T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "本日23:59締切(cardchusen掲載・店頭受取)"
-        },
-        {
-          "store": "JUMP SHOP各店(LivePocket)",
-          "url": "https://livepocket.jp/p/k-xl2",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-17T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "店頭受取"
-        },
-        {
-          "store": "楽天ブックス(WEB抽選・クレカ払い)",
-          "url": "https://books.rakuten.co.jp/rb/18669675/",
-          "phase": "受付中",
-          "entry_open": "2026-10-14T10:00:00+09:00",
-          "entry_deadline": "2026-10-18T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "2026-11-03T23:59:00+09:00",
-          "note": "本日10時開始"
-        },
-        {
-          "store": "トレカプラザ55通販(Googleフォーム)",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf_V_BuLBgOzWZlfMXABkWKnPagns8RKJdiFQjSTgoH6uEesQ/viewform",
-          "phase": "受付中",
-          "entry_open": "2026-10-12T20:00:00+09:00",
-          "entry_deadline": "2026-10-20T23:59:00+09:00",
-          "result_date": "2026-10-23T00:00:00+09:00",
-          "order_deadline": "2026-10-26T23:59:00+09:00",
-          "note": "WEB抽選・オンライン販売"
-        }
-      ],
-      "note": "⚠️発売10/31so未発売。前作EB-03 vol.1のヤフ落札¥13,000(10/2)・¥19,000(6月)のn2で薄い。粗利=13,000×0.9−850−5,280=¥5,570(代替値)。発売後に実売で再判定"
-    },
-    {
-      "name": "RICOH GR IV HDF",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 222000,
-      "jissei": 248000,
-      "premium_rate": 1.12,
-      "premium_level": "低",
-      "profit_max": 25000,
-      "best_route": "るでや買取",
-      "phase": "受付中",
-      "deadline": "2026-10-15T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "リコーイメージングストア(Web抽選)",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "注文中",
-          "entry_open": "2026-09-25T12:00:00+09:00",
-          "entry_deadline": "2026-09-28T12:00:00+09:00",
-          "result_date": "2026-10-13T00:00:00+09:00",
-          "order_deadline": "2026-10-15T23:59:00+09:00",
-          "note": "2次(繰上)当選の注文期限 10/15 23:59・発送〜10/30"
-        },
-        {
-          "store": "GR SPACE TOKYO(店頭抽選・事前登録+来店本人確認要)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "2026-09-26T00:00:00+09:00",
-          "entry_deadline": "2026-10-19T23:59:00+09:00",
-          "result_date": "2026-11-05T00:00:00+09:00",
-          "order_deadline": "2026-11-20T23:59:00+09:00",
-          "note": "受付期間内の来店本人確認必須・受取11/6〜11/20本人来店のみ"
-        }
-      ],
-      "note": "るでや買取¥248,000(2026-10-13検証値)−定価¥222,000−送料¥1,000=粗利¥25,000。リコーストア2次当選者は10/15 23:59注文期限。GR SPACE TOKYOは来店必須so渡航中は不可。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用"
-    },
     {
       "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
       "brand": "バンダイ",
@@ -273,9 +65,153 @@
           "result_date": "",
           "order_deadline": "",
           "note": "会員ID要"
+        },
+        {
+          "store": "ONE PIECE 麦わらストア各店(LivePocket抽選・会員登録要)",
+          "url": "https://www.mugiwara-store.com/news/2983/",
+          "phase": "予告",
+          "entry_open": "2026-10-16T00:00:00+09:00",
+          "entry_deadline": "2026-10-18T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "2026-10-15 入荷Nowで新規検知"
         }
       ],
       "note": "⚠️ギリギリ枠。2026-10-14実測(ヤフオク落札 9/4〜10/13 n20): テープ付1BOX ¥9,100〜12,900・40日中央値≈¥10,700→粗利¥3,020。ただし直近2件(10/12〜13)は¥9,500〜9,980で¥3k割れ(¥2,165)。発売1か月で軟化中so複数当選時はまとめ売り前提・単BOXなら見送りも可"
+    },
+    {
+      "name": "ポケカ MEGA拡張パック 30th CELEBRATION BOX",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 7200,
+      "jissei": 24000,
+      "premium_rate": 3.33,
+      "premium_level": "高",
+      "profit_max": 13550,
+      "best_route": "メルカリ/ヤフフリ(個人売切)",
+      "phase": "受付中",
+      "deadline": "2026-10-16T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "イオンスタイルオンライン(イオンカード決済限定)",
+          "url": "https://aeonretail.com/Page/k-lottery_cardgame.aspx",
+          "phase": "終了",
+          "entry_open": "2026-10-07T11:00:00+09:00",
+          "entry_deadline": "2026-10-14T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "本日23:59締切・20パック¥7,194・1人1点"
+        },
+        {
+          "store": "楽天ブックス(WEB抽選・クレカ払い)",
+          "url": "https://books.rakuten.co.jp/rb/18595282/",
+          "phase": "受付中",
+          "entry_open": "2026-10-14T10:00:00+09:00",
+          "entry_deadline": "2026-10-18T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "2026-11-03T23:59:00+09:00",
+          "note": "本日10時開始・9商品に複数応募可(当選1商品)・1世帯1名・購入10/29〜11/3"
+        },
+        {
+          "store": "トレカプラザ55通販(Googleフォーム)",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSePKfIfAzVnfBIaMb9zqMCJLsbD7qxnViMgAbAYzy-6dBzjAA/viewform",
+          "phase": "受付中",
+          "entry_open": "2026-10-14T17:30:00+09:00",
+          "entry_deadline": "2026-10-20T23:59:00+09:00",
+          "result_date": "2026-10-23T00:00:00+09:00",
+          "order_deadline": "2026-10-26T23:59:00+09:00",
+          "note": "本日17:30開始・会員登録必須・1人1回・プレミアムデッキ等も同フォーム"
+        },
+        {
+          "store": "竜のしっぽ各店(WEB抽選・店頭受取)",
+          "url": "https://ryuunoshippo.membercard.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-10-12T22:00:00+09:00",
+          "entry_deadline": "2026-10-16T23:59:00+09:00",
+          "result_date": "2026-10-21T17:00:00+09:00",
+          "order_deadline": "2026-10-25T23:59:00+09:00",
+          "note": "モバイル会員・店舗ごと申込可・来店本人確認"
+        },
+        {
+          "store": "ノジマオンライン(招待制)",
+          "url": "https://contents.online.nojima.co.jp/secret202609/",
+          "phase": "受付中",
+          "entry_open": "2026-10-04T18:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "会員ID要・10/4以前のエントリーはリセット済so再エントリー"
+        },
+        {
+          "store": "ポケモンセンターオンライン(4回目追加抽選)",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "12月頃予定・日程未定"
+        }
+      ],
+      "note": "2026-10-14実測(ヤフオク/ヤフフリ落札 10/12〜14): シュリンク付1BOX ¥23,000〜25,000・中央値≈¥24,000(前日¥25,000から軟化)。シュリンク無/ペリペリ有は¥19,000〜23,000so出品時はシュリンク明記。粗利=24,000×0.9−850−7,200=¥13,550。当選後は早期売却推奨"
+    },
+    {
+      "name": "ワンピースカード EB-05 ヒロインズエディション vol.2 BOX",
+      "brand": "バンダイ",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 13000,
+      "premium_rate": 2.46,
+      "premium_level": "高",
+      "profit_max": 5570,
+      "best_route": "メルカリ(個人売切)",
+      "phase": "受付中",
+      "deadline": "2026-10-17T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "カードボックス池袋店",
+          "url": "https://shoplottery.e-starbox.com/lottery/entry?code=UpduoI2g6l",
+          "phase": "終了",
+          "entry_open": "",
+          "entry_deadline": "2026-10-14T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "本日23:59締切(cardchusen掲載・店頭受取)"
+        },
+        {
+          "store": "JUMP SHOP各店(LivePocket)",
+          "url": "https://livepocket.jp/p/k-xl2",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-10-17T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "店頭受取"
+        },
+        {
+          "store": "楽天ブックス(WEB抽選・クレカ払い)",
+          "url": "https://books.rakuten.co.jp/rb/18669675/",
+          "phase": "受付中",
+          "entry_open": "2026-10-14T10:00:00+09:00",
+          "entry_deadline": "2026-10-18T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "2026-11-03T23:59:00+09:00",
+          "note": "本日10時開始"
+        },
+        {
+          "store": "トレカプラザ55通販(Googleフォーム)",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf_V_BuLBgOzWZlfMXABkWKnPagns8RKJdiFQjSTgoH6uEesQ/viewform",
+          "phase": "受付中",
+          "entry_open": "2026-10-12T20:00:00+09:00",
+          "entry_deadline": "2026-10-20T23:59:00+09:00",
+          "result_date": "2026-10-23T00:00:00+09:00",
+          "order_deadline": "2026-10-26T23:59:00+09:00",
+          "note": "WEB抽選・オンライン販売"
+        }
+      ],
+      "note": "⚠️発売10/31so未発売。前作EB-03 vol.1のヤフ落札¥13,000(10/2)・¥19,000(6月)のn2で薄い。粗利=13,000×0.9−850−5,280=¥5,570(代替値)。発売後に実売で再判定"
     },
     {
       "name": "ポケカ 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
@@ -323,6 +259,43 @@
         }
       ],
       "note": "2026-10-14実測(ヤフフリ落札 10/12〜14 n4): 未開封 ¥17,000〜18,000・中央値¥17,450(前日¥17,200)。粗利=17,450×0.9−850−6,200=¥8,655"
+    },
+    {
+      "name": "RICOH GR IV HDF",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 222000,
+      "jissei": 248000,
+      "premium_rate": 1.12,
+      "premium_level": "低",
+      "profit_max": 25000,
+      "best_route": "るでや買取",
+      "phase": "受付中",
+      "deadline": "2026-10-19T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "リコーイメージングストア(Web抽選)",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "注文中",
+          "entry_open": "2026-09-25T12:00:00+09:00",
+          "entry_deadline": "2026-09-28T12:00:00+09:00",
+          "result_date": "2026-10-13T00:00:00+09:00",
+          "order_deadline": "2026-10-15T23:59:00+09:00",
+          "note": "2次(繰上)当選の注文期限 10/15 23:59・発送〜10/30"
+        },
+        {
+          "store": "GR SPACE TOKYO(店頭抽選・事前登録+来店本人確認要)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "2026-09-26T00:00:00+09:00",
+          "entry_deadline": "2026-10-19T23:59:00+09:00",
+          "result_date": "2026-11-05T00:00:00+09:00",
+          "order_deadline": "2026-11-20T23:59:00+09:00",
+          "note": "受付期間内の来店本人確認必須・受取11/6〜11/20本人来店のみ"
+        }
+      ],
+      "note": "るでや買取¥248,000(2026-10-13検証値)−定価¥222,000−送料¥1,000=粗利¥25,000。リコーストア2次当選者は10/15 23:59注文期限。GR SPACE TOKYOは来店必須so渡航中は不可。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用"
     },
     {
       "name": "RICOH GR IIIx HDF",
@@ -436,6 +409,43 @@
       "note": "⚠️未発売(発送2027年5月so資金拘束7か月)。実勢は3rd Anniversary Set実績(2026-10-13ヤフオク落札6〜7月 ¥106,000〜)で代替。粗利=106,000×0.9−1,000−27,500=¥66,900"
     },
     {
+      "name": "ワンピースカード OP-18 神の支配 BOX",
+      "brand": "バンダイ",
+      "category": "トレカ",
+      "price": 5755,
+      "jissei": 15500,
+      "premium_rate": 2.69,
+      "premium_level": "高",
+      "profit_max": 7345,
+      "best_route": "メルカリ(発売初週の個人売切)",
+      "phase": "受付中",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ヤマダデンキ(ヤマダデジタル会員アプリ抽選)",
+          "url": "https://www.yamada-denki.jp/service/pointservice/digital-kaiin.html",
+          "phase": "終了",
+          "entry_open": "2026-10-12T23:00:00+09:00",
+          "entry_deadline": "2026-10-14T23:59:00+09:00",
+          "result_date": "2026-11-18T12:00:00+09:00",
+          "order_deadline": "2026-11-27T23:59:00+09:00",
+          "note": "本日23:59締切・購入履歴(2025/4/1〜2026/10/11)orゴールド会員要・店頭受取11/21〜27"
+        },
+        {
+          "store": "Amazon(招待制)",
+          "url": "https://www.amazon.co.jp/dp/B0HFVPJF4Q",
+          "phase": "受付中",
+          "entry_open": "2026-09-10T19:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "終了日記載なし"
+        }
+      ],
+      "note": "⚠️未発売(11月下旬)。実勢はOP-17の発売初週実績¥15,500〜16,008(9/5〜8)で代替・1か月で¥10,700まで軟化した前例so当選後は発売初週に即売却。粗利=15,500×0.9−850−5,755=¥7,345"
+    },
+    {
       "name": "ポケカ 30th CELEBRATION FUTURISTIC BOX",
       "brand": "ポケモン",
       "category": "トレカ",
@@ -473,7 +483,7 @@
       "profit_max": 23800,
       "best_route": "るでや買取",
       "phase": "注文中",
-      "deadline": "2026-10-15T23:59:00+09:00",
+      "deadline": "",
       "status": "未応募",
       "routes": [
         {
@@ -500,7 +510,7 @@
       "profit_max": 0,
       "best_route": "未成立",
       "phase": "案内待ち",
-      "deadline": "2026-10-28T23:59:00+09:00",
+      "deadline": "",
       "status": "未応募",
       "routes": [
         {
@@ -547,7 +557,7 @@
       "profit_max": 28600,
       "best_route": "るでや買取",
       "phase": "終了",
-      "deadline": "2026-10-13T23:59:00+09:00",
+      "deadline": "",
       "status": "未応募",
       "routes": [
         {
@@ -574,7 +584,7 @@
       "profit_max": -95800,
       "best_route": "るでや買取",
       "phase": "終了",
-      "deadline": "2026-10-13T23:59:00+09:00",
+      "deadline": "",
       "status": "未応募",
       "routes": [
         {
