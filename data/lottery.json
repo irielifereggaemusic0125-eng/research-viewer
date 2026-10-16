@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-10-15T22:43:57+09:00",
+  "updated_at": "2026-10-16T22:44:27+09:00",
   "candidates": [
     {
       "name": "ワンピースカード OP-17 世界最強の戦士 BOX",
@@ -13,13 +13,13 @@
       "profit_max": 3020,
       "best_route": "ヤフオク/メルカリ(個人売切)",
       "phase": "受付中",
-      "deadline": "2026-10-16T21:30:00+09:00",
+      "deadline": "2026-10-16T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "ヤマシロヤ オンライン(Googleフォーム)",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSfHE4Q5n8CCGwOXRt85BS0zvk_Aa9iiNmmoWD4nYObooD-G_w/viewform",
-          "phase": "受付中",
+          "phase": "終了",
           "entry_open": "2026-10-14T21:30:00+09:00",
           "entry_deadline": "2026-10-16T21:30:00+09:00",
           "result_date": "2026-10-22T00:00:00+09:00",
@@ -69,7 +69,7 @@
         {
           "store": "ONE PIECE 麦わらストア各店(LivePocket抽選・会員登録要)",
           "url": "https://www.mugiwara-store.com/news/2983/",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "2026-10-16T00:00:00+09:00",
           "entry_deadline": "2026-10-18T23:59:00+09:00",
           "result_date": "",
@@ -77,7 +77,7 @@
           "note": "2026-10-15 入荷Nowで新規検知"
         }
       ],
-      "note": "⚠️ギリギリ枠。2026-10-14実測(ヤフオク落札 9/4〜10/13 n20): テープ付1BOX ¥9,100〜12,900・40日中央値≈¥10,700→粗利¥3,020。ただし直近2件(10/12〜13)は¥9,500〜9,980で¥3k割れ(¥2,165)。発売1か月で軟化中so複数当選時はまとめ売り前提・単BOXなら見送りも可"
+      "note": "⚠️ギリギリ枠。2026-10-14実測(ヤフオク落札 9/4〜10/13 n20): テープ付1BOX ¥9,100〜12,900・40日中央値≈¥10,700→粗利¥3,020。ただし直近2件(10/12〜13)は¥9,500〜9,980で¥3k割れ(¥2,165)。発売1か月で軟化中so複数当選時はまとめ売り前提・単BOXなら見送りも可 / 10/16: ヤマシロヤ終了・麦わらストア10/16〜18受付開始"
     },
     {
       "name": "ポケカ MEGA拡張パック 30th CELEBRATION BOX",
@@ -157,6 +157,53 @@
       "note": "2026-10-14実測(ヤフオク/ヤフフリ落札 10/12〜14): シュリンク付1BOX ¥23,000〜25,000・中央値≈¥24,000(前日¥25,000から軟化)。シュリンク無/ペリペリ有は¥19,000〜23,000so出品時はシュリンク明記。粗利=24,000×0.9−850−7,200=¥13,550。当選後は早期売却推奨"
     },
     {
+      "name": "ポケカ 拡張パック ストームエメラルダ(M6) BOX",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 5400,
+      "jissei": 16800,
+      "premium_rate": 3.11,
+      "premium_level": "高",
+      "profit_max": 8870,
+      "best_route": "メルカリ/ヤフオク",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ドラゴンスター通販",
+          "url": "https://dorasuta.membercard.jp/lottery",
+          "phase": "受付中",
+          "entry_open": "2026-10-14T22:00:00+09:00",
+          "entry_deadline": "2026-10-16T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "2026-10-25T23:59:00+09:00",
+          "note": "1BOX¥6,000(30パック)"
+        },
+        {
+          "store": "楽天ブックス(WEB抽選・クレカ払い・当選1商品のみ)",
+          "url": "https://books.rakuten.co.jp/rb/18595282/",
+          "phase": "受付中",
+          "entry_open": "2026-10-14T10:00:00+09:00",
+          "entry_deadline": "2026-10-18T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "2026-11-03T23:59:00+09:00",
+          "note": "30th BOXと同一エントリー枠(当選は1商品)so30th BOX優先"
+        },
+        {
+          "store": "トレカプラザ55通販(Googleフォーム)",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSePKfIfAzVnfBIaMb9zqMCJLsbD7qxnViMgAbAYzy-6dBzjAA/viewform",
+          "phase": "受付中",
+          "entry_open": "2026-10-14T17:30:00+09:00",
+          "entry_deadline": "2026-10-20T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "2026-10-26T23:59:00+09:00",
+          "note": "1人1回(30th BOX等と同一フォーム)"
+        }
+      ],
+      "note": "⚠️2026-10-16参考値: 7/31発売・中古出品例¥12,800〜20,560(売切例¥16,800)。売切中央値は未検証so控えめに¥16,800で算定。粗利=16,800×0.9−850−5,400=¥8,870(ドラスタ¥6,000なら¥8,270)。定価¥5,400は30パック×¥180の推定",
+      "phase": "受付中",
+      "deadline": "2026-10-16T23:59:00+09:00"
+    },
+    {
       "name": "ワンピースカード EB-05 ヒロインズエディション vol.2 BOX",
       "brand": "バンダイ",
       "category": "トレカ",
@@ -209,6 +256,26 @@
           "result_date": "2026-10-23T00:00:00+09:00",
           "order_deadline": "2026-10-26T23:59:00+09:00",
           "note": "WEB抽選・オンライン販売"
+        },
+        {
+          "store": "ホビーステーション関東(LivePocket・1店舗のみ・2BOXまで)",
+          "url": "https://livepocket.jp/e/s9-lf",
+          "phase": "受付中",
+          "entry_open": "2026-10-16T12:00:00+09:00",
+          "entry_deadline": "2026-10-18T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "1BOX¥5,760・店頭受取(関東)"
+        },
+        {
+          "store": "アニメイトオンライン(郵送)",
+          "url": "https://www.animate-onlineshop.jp/products/detail.php?product_id=3567552",
+          "phase": "予告",
+          "entry_open": "2026-10-19T10:00:00+09:00",
+          "entry_deadline": "2026-10-25T23:59:00+09:00",
+          "result_date": "2026-10-27T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "郵送so渡航中でも可"
         }
       ],
       "note": "⚠️発売10/31so未発売。前作EB-03 vol.1のヤフ落札¥13,000(10/2)・¥19,000(6月)のn2で薄い。粗利=13,000×0.9−850−5,280=¥5,570(代替値)。発売後に実売で再判定"
