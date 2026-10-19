@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-19 22:03 (ヤフオク・ストア1円ライブ取得)",
+ "updated_at": "2026-10-19 22:04 (ヤフオク・ストア1円ライブ取得)",
  "date": "2026-10-19",
  "candidates": [
   {
@@ -3696,28 +3696,6 @@
    "note": "⚠️KW一致のみ・実勢は個別検証要（参考watch: ティファニー ネックレス）"
   },
   {
-   "id": "m1248781997",
-   "aucid": "m1248781997",
-   "name": "TIFFANY＆Co ティファニー アトラス SV925 カフリンクス カフスボタン アクセサリー ビジネス 紳士 メンズ",
-   "brand": "ティファニー",
-   "model": "",
-   "rank": "要確認",
-   "source": "ヤフオク/pleasure",
-   "url": "https://auctions.yahoo.co.jp/jp/auction/m1248781997",
-   "current_price": 1,
-   "img": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0210/user/9a56e406d03567111327196b75725a0fc5ff76c53805a1e1e44acdafbd8d8418/i-img600x450-17922875056582nel0to14546.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
-   "bids": 1,
-   "end": "2026-10-25T22:09:13+09:00",
-   "status": "waiting",
-   "coherence": "",
-   "n40": null,
-   "jissei": null,
-   "yahoo_shitene": null,
-   "tier": "Tier3",
-   "tier_detail": "未照合（実勢要確認）",
-   "note": "⚠️実勢要確認（watch_list未登録）"
-  },
-  {
    "id": "j1248785796",
    "aucid": "j1248785796",
    "name": "BVLGARI ブルガリ ロゴマニア キャンバス×レザー ハンドバッグ トートバッグ レディース ブラック系 FY7505",
@@ -6233,6 +6211,29 @@
    "tier": "Tier2",
    "tier_detail": "watch_list近縁(KW一致66%・型番未確認)",
    "note": "⚠️KW一致のみ・実勢は個別検証要（参考watch: グッチ GGマーモント ショルダー）"
+  },
+  {
+   "id": "n1248775043",
+   "aucid": "n1248775043",
+   "name": "PRADA プラダ サフィアーノレザー 二つ折り 長財布 ウォレット 札入れ 小銭入れ カード入れ レディース メンズ ブ",
+   "brand": "プラダ",
+   "model": "PRADA-SAFFIANO",
+   "rank": "B",
+   "source": "ヤフオク/pleasure",
+   "url": "https://auctions.yahoo.co.jp/jp/auction/n1248775043",
+   "current_price": 1,
+   "img": "https://auc-pctr.c.yimg.jp/i/auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0210/user/9a56e406d03567111327196b75725a0fc5ff76c53805a1e1e44acdafbd8d8418/i-img600x450-179228735414607qffrj1636.jpg?pri=l&w=300&h=300&up=0&nf_src=sy&nf_path=images/auc/pc/top/image/1.0.3/na_170x170.png&nf_st=200",
+   "bids": 1,
+   "end": "2026-10-25T22:20:43+09:00",
+   "status": "waiting",
+   "coherence": "△近縁",
+   "n40": 104,
+   "jissei": null,
+   "yahoo_shitene": null,
+   "kaiten": 7,
+   "tier": "Tier2",
+   "tier_detail": "watch_list近縁(KW一致100%・型番未確認)",
+   "note": "⚠️KW一致のみ・実勢は個別検証要（参考watch: プラダ サフィアーノ財布）"
   },
   {
    "id": "x1248778491",
