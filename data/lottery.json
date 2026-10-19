@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-10-18T22:43:58+09:00",
+  "updated_at": "2026-10-19T22:45:10+09:00",
   "candidates": [
     {
       "name": "RICOH GR IV HDF",
@@ -112,6 +112,43 @@
         }
       ],
       "note": "るでや買取¥209,500(2026-10-13検証値)−定価¥211,800−送料¥1,000=粗利¥-3,300。🚫粗利マイナスso応募不要(受付は同時so併記)。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用"
+    },
+    {
+      "name": "ポケモンカード 30th CELEBRATION BOX",
+      "brand": "Pokemon",
+      "category": "トレカ",
+      "price": 7200,
+      "jissei": 17600,
+      "premium_rate": 2.44,
+      "premium_level": "高",
+      "profit_max": 7940,
+      "best_route": "メルカリ(1BOX・n≈11)",
+      "phase": "受付中",
+      "deadline": "2026-10-20T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "トレカプラザ55通販",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSePKfIfAzVnfBIaMb9zqMCJLsbD7qxnViMgAbAYzy-6dBzjAA/viewform",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-10-20T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "Googleフォーム・小規模店"
+        },
+        {
+          "store": "ポケモンセンターオンライン(4回目追加抽選)",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "12月頃・日程未定"
+        }
+      ],
+      "note": "発売9/16済。メルカリ売切1BOX約¥17.5-18k。62k台は箱(カートン)混入の可能性"
     },
     {
       "name": "RICOH GR IIIx Urban Edition",
