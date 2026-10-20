@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-20 07:35",
-  "count": 56,
+  "updated_at": "2026-10-21 07:35",
+  "count": 55,
   "items": [
     {
       "kanri_no": "A020-251102",
@@ -318,20 +318,6 @@
       "buy_date": "2026-08-29",
       "buy_price": 4345,
       "loss_cut": 5390,
-      "list_price": null,
-      "actual_price": null,
-      "price_updated_at": null,
-      "mercari_id": "",
-      "ecoauc_listed": false
-    },
-    {
-      "kanri_no": "A142-260904",
-      "name": "LONE ONES ケルティッククレーン ペンダント S SV925 チェーン付",
-      "category": "アクセ",
-      "category_raw": "A アクセサリー",
-      "buy_date": "2026-09-04",
-      "buy_price": 16500,
-      "loss_cut": 18890,
       "list_price": null,
       "actual_price": null,
       "price_updated_at": null,
