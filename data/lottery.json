@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-10-20T22:43:08+09:00",
+  "updated_at": "2026-10-21T22:43:50+09:00",
   "candidates": [
     {
       "name": "RICOH GR IV HDF",
@@ -112,6 +112,53 @@
         }
       ],
       "note": "るでや買取¥209,500(2026-10-13検証値)−定価¥211,800−送料¥1,000=粗利¥-3,300。🚫粗利マイナスso応募不要(受付は同時so併記)。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用"
+    },
+    {
+      "name": "ポケカ 30th CELEBRATION BOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 7200,
+      "jissei": 25400,
+      "premium_rate": 3.53,
+      "premium_level": "高",
+      "profit_max": 16000,
+      "best_route": "買取/ヤフオク(メルカリ出品禁止中)",
+      "phase": "受付中",
+      "deadline": "2026-10-22T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ホビーステーション(関東)",
+          "url": "https://livepocket.jp/e/4_jau",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-10-22T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "Livepocket会員"
+        },
+        {
+          "store": "しまむらパーク(カードセット各種)",
+          "url": "https://www.shop-shimamura.com/disp/itemlist/?pre_rsv_icon=1",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-10-25T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "アプリ会員限定"
+        },
+        {
+          "store": "ノジマオンライン(招待制)",
+          "url": "https://contents.online.nojima.co.jp/secret202609/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "招待制"
+        }
+      ],
+      "note": "実勢25,400はprice-base 9月参考値(未検証)。メルカリ/Shops未開封出品禁止中so出口は買取店/ヤフオク"
     },
     {
       "name": "RICOH GR IIIx Urban Edition",
