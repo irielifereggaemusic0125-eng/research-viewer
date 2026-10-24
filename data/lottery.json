@@ -1,118 +1,7 @@
 {
   "schema": "v2",
-  "updated_at": "2026-10-23T22:43:48+09:00",
+  "updated_at": "2026-10-24T22:46:16+09:00",
   "candidates": [
-    {
-      "name": "RICOH GR IV HDF",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 222000,
-      "jissei": 248000,
-      "premium_rate": 1.12,
-      "premium_level": "低",
-      "profit_max": 25000,
-      "best_route": "るでや買取",
-      "phase": "受付中",
-      "deadline": "2026-10-19T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "リコーイメージングストア(Web抽選)",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "注文中",
-          "entry_open": "2026-09-25T12:00:00+09:00",
-          "entry_deadline": "2026-09-28T12:00:00+09:00",
-          "result_date": "2026-10-13T00:00:00+09:00",
-          "order_deadline": "2026-10-15T23:59:00+09:00",
-          "note": "2次(繰上)当選の注文期限 10/15 23:59・発送〜10/30"
-        },
-        {
-          "store": "GR SPACE TOKYO(店頭抽選・事前登録+来店本人確認要)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "2026-09-26T00:00:00+09:00",
-          "entry_deadline": "2026-10-19T23:59:00+09:00",
-          "result_date": "2026-11-05T00:00:00+09:00",
-          "order_deadline": "2026-11-20T23:59:00+09:00",
-          "note": "受付期間内の来店本人確認必須・受取11/6〜11/20本人来店のみ"
-        }
-      ],
-      "note": "るでや買取¥248,000(2026-10-13検証値)−定価¥222,000−送料¥1,000=粗利¥25,000。リコーストア2次当選者は10/15 23:59注文期限。GR SPACE TOKYOは来店必須so渡航中は不可。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用"
-    },
-    {
-      "name": "RICOH GR IIIx HDF",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 168800,
-      "jissei": 226500,
-      "premium_rate": 1.34,
-      "premium_level": "中",
-      "profit_max": 56700,
-      "best_route": "るでや買取",
-      "phase": "受付中",
-      "deadline": "2026-10-19T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "GR SPACE TOKYO(店頭抽選・事前登録+来店本人確認要)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "2026-09-26T00:00:00+09:00",
-          "entry_deadline": "2026-10-19T23:59:00+09:00",
-          "result_date": "2026-11-05T00:00:00+09:00",
-          "order_deadline": "2026-11-20T23:59:00+09:00",
-          "note": "受付期間内の来店本人確認必須・受取11/6〜11/20本人来店のみ"
-        },
-        {
-          "store": "リコーイメージングストア(Web抽選)",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "次回エントリーをもって販売終了(日程未告知)"
-        }
-      ],
-      "note": "るでや買取¥226,500(2026-10-13検証値)−定価¥168,800−送料¥1,000=粗利¥56,700。🥇最高粗利。GR SPACE TOKYOは今回が最終受付。来店本人確認が必須so渡航中(〜10/25)は応募不可。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用"
-    },
-    {
-      "name": "RICOH GR IV (無印)",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 211800,
-      "jissei": 209500,
-      "premium_rate": 0.99,
-      "premium_level": "低",
-      "profit_max": -3300,
-      "best_route": "るでや買取",
-      "phase": "受付中",
-      "deadline": "2026-10-19T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "リコーイメージングストア(Web抽選)",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "注文中",
-          "entry_open": "2026-09-25T12:00:00+09:00",
-          "entry_deadline": "2026-09-28T12:00:00+09:00",
-          "result_date": "2026-10-13T00:00:00+09:00",
-          "order_deadline": "2026-10-15T23:59:00+09:00",
-          "note": "2次(繰上)当選の注文期限 10/15 23:59・発送〜10/30"
-        },
-        {
-          "store": "GR SPACE TOKYO(店頭抽選・事前登録+来店本人確認要)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "2026-09-26T00:00:00+09:00",
-          "entry_deadline": "2026-10-19T23:59:00+09:00",
-          "result_date": "2026-11-05T00:00:00+09:00",
-          "order_deadline": "2026-11-20T23:59:00+09:00",
-          "note": "受付期間内の来店本人確認必須・受取11/6〜11/20本人来店のみ"
-        }
-      ],
-      "note": "るでや買取¥209,500(2026-10-13検証値)−定価¥211,800−送料¥1,000=粗利¥-3,300。🚫粗利マイナスso応募不要(受付は同時so併記)。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用"
-    },
     {
       "name": "ポケカ 30th CELEBRATION BOX",
       "brand": "ポケモンカード",
@@ -124,28 +13,28 @@
       "profit_max": 16000,
       "best_route": "買取/ヤフオク(メルカリ出品禁止中)",
       "phase": "受付中",
-      "deadline": "2026-10-22T23:59:00+09:00",
+      "deadline": "2026-10-25T23:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "ホビーステーション(関東)",
-          "url": "https://livepocket.jp/e/4_jau",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-10-22T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "Livepocket会員"
-        },
-        {
-          "store": "しまむらパーク(カードセット各種)",
+          "store": "しまむらパーク(30th CELEBRATION各種)",
           "url": "https://www.shop-shimamura.com/disp/itemlist/?pre_rsv_icon=1",
           "phase": "受付中",
+          "entry_open": "2026-10-20T13:00:00+09:00",
+          "entry_deadline": "2026-10-25T23:00:00+09:00",
+          "result_date": "2026-10-26T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "しまむらアプリ会員限定"
+        },
+        {
+          "store": "ポケモンセンターオンライン(追加抽選4回目)",
+          "url": "https://www.pokemoncenter-online.com/",
+          "phase": "予告",
           "entry_open": "",
-          "entry_deadline": "2026-10-25T23:59:00+09:00",
+          "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "アプリ会員限定"
+          "note": "12月頃開始予定・日程未定(入荷Now 10/24)"
         },
         {
           "store": "ノジマオンライン(招待制)",
@@ -158,7 +47,54 @@
           "note": "招待制"
         }
       ],
-      "note": "実勢25,400はprice-base 9月参考値(未検証)。メルカリ/Shops未開封出品禁止中so出口は買取店/ヤフオク"
+      "note": "実勢25,400はprice-base 9月参考値(未再検証・10/24)。メルカリ未開封出品禁止中so出口は買取店/ヤフオク"
+    },
+    {
+      "name": "RICOH GR IV 30th Anniversary Edition Kit",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 259800,
+      "jissei": 268100,
+      "premium_rate": 1.03,
+      "premium_level": "低",
+      "profit_max": -19510,
+      "best_route": "メルカリ(赤字)",
+      "phase": "受付中",
+      "deadline": "2026-10-25T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ビックカメラ有楽町/池袋(アプリ抽選)",
+          "url": "https://www.biccamera.com/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-10-25T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "参加条件あり"
+        },
+        {
+          "store": "ヨドバシ.com(WEB抽選)",
+          "url": "https://www.yodobashi.com/",
+          "phase": "予告",
+          "entry_open": "2026-10-26T11:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "他商品の購入履歴要"
+        },
+        {
+          "store": "GR SPACE TOKYO(店頭抽選)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-22T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "事前に本人確認要"
+        }
+      ],
+      "note": "🚫応募不要: メルカリ売切中央値¥268,100(n=8・2026-10-24検証)×0.9−送料¥1,000−定価¥259,800=−¥19,510"
     },
     {
       "name": "RICOH GR IIIx Urban Edition",
@@ -188,51 +124,115 @@
       "note": "るでや買取¥188,000(2026-10-13検証値)−定価¥163,200−送料¥1,000=粗利¥23,800。今回のエントリーで販売終了。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用"
     },
     {
-      "name": "RICOH GR IV 30th Anniversary Edition Kit",
+      "name": "RICOH GR IV HDF",
       "brand": "RICOH",
       "category": "カメラ",
-      "price": 259800,
-      "jissei": 0,
-      "premium_rate": 0,
+      "price": 222000,
+      "jissei": 248000,
+      "premium_rate": 1.12,
       "premium_level": "低",
-      "profit_max": 0,
-      "best_route": "未成立",
+      "profit_max": 25000,
+      "best_route": "るでや買取",
       "phase": "案内待ち",
-      "deadline": "",
+      "deadline": "2026-10-19T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "リコーイメージングストア/GR SPACE TOKYO(共通エントリー)",
+          "store": "リコーイメージングストア(Web抽選)",
           "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "注文中",
+          "entry_open": "2026-09-25T12:00:00+09:00",
+          "entry_deadline": "2026-09-28T12:00:00+09:00",
+          "result_date": "2026-10-13T00:00:00+09:00",
+          "order_deadline": "2026-10-15T23:59:00+09:00",
+          "note": "2次(繰上)当選の注文期限 10/15 23:59・発送〜10/30"
+        },
+        {
+          "store": "GR SPACE TOKYO(店頭抽選・事前登録+来店本人確認要)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
           "phase": "案内待ち",
-          "entry_open": "2026-09-18T12:00:00+09:00",
-          "entry_deadline": "2026-09-24T23:59:00+09:00",
-          "result_date": "2026-10-22T00:00:00+09:00",
-          "order_deadline": "2026-11-05T23:59:00+09:00",
-          "note": "1次受付終了。2次(当選無効発生時)=仮当選10/22・身分証登録10/22〜28・注文10/30〜11/5"
+          "entry_open": "2026-09-26T00:00:00+09:00",
+          "entry_deadline": "2026-10-19T23:59:00+09:00",
+          "result_date": "2026-11-05T00:00:00+09:00",
+          "order_deadline": "2026-11-20T23:59:00+09:00",
+          "note": "受付期間内の来店本人確認必須・受取11/6〜11/20本人来店のみ"
+        }
+      ],
+      "note": "るでや買取¥248,000(2026-10-13検証値)−定価¥222,000−送料¥1,000=粗利¥25,000。リコーストア2次当選者は10/15 23:59注文期限。GR SPACE TOKYOは来店必須so渡航中は不可。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用"
+    },
+    {
+      "name": "RICOH GR IIIx HDF",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 168800,
+      "jissei": 226500,
+      "premium_rate": 1.34,
+      "premium_level": "中",
+      "profit_max": 56700,
+      "best_route": "るでや買取",
+      "phase": "案内待ち",
+      "deadline": "2026-10-19T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO(店頭抽選・事前登録+来店本人確認要)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "案内待ち",
+          "entry_open": "2026-09-26T00:00:00+09:00",
+          "entry_deadline": "2026-10-19T23:59:00+09:00",
+          "result_date": "2026-11-05T00:00:00+09:00",
+          "order_deadline": "2026-11-20T23:59:00+09:00",
+          "note": "受付期間内の来店本人確認必須・受取11/6〜11/20本人来店のみ"
         },
         {
-          "store": "マップカメラ(会員限定抽選)",
-          "url": "https://www.mapcamera.com/",
-          "phase": "終了",
-          "entry_open": "2026-09-24T00:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "9/24受付開始・現在は終了表示"
-        },
-        {
-          "store": "フジヤカメラ(WEB抽選)",
-          "url": "https://www.fujiya-camera.co.jp/",
-          "phase": "終了",
+          "store": "リコーイメージングストア(Web抽選)",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "予告",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "受付終了"
+          "note": "次回エントリーをもって販売終了(日程未告知)"
         }
       ],
-      "note": "全世界6,000台限定・10/21発売・定価¥259,800。るでや買取価格は未掲載(2026-10-13時点)＝相場未成立so粗利判定保留。発売後に買取価格が出たら再判定"
+      "note": "るでや買取¥226,500(2026-10-13検証値)−定価¥168,800−送料¥1,000=粗利¥56,700。🥇最高粗利。GR SPACE TOKYOは今回が最終受付。来店本人確認が必須so渡航中(〜10/25)は応募不可。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用 / リコーストア: 次回エントリーで販売終了(10/24確認)so次回は最終"
+    },
+    {
+      "name": "RICOH GR IV (無印)",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 211800,
+      "jissei": 209500,
+      "premium_rate": 0.99,
+      "premium_level": "低",
+      "profit_max": -3300,
+      "best_route": "るでや買取",
+      "phase": "案内待ち",
+      "deadline": "2026-10-19T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "リコーイメージングストア(Web抽選)",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "注文中",
+          "entry_open": "2026-09-25T12:00:00+09:00",
+          "entry_deadline": "2026-09-28T12:00:00+09:00",
+          "result_date": "2026-10-13T00:00:00+09:00",
+          "order_deadline": "2026-10-15T23:59:00+09:00",
+          "note": "2次(繰上)当選の注文期限 10/15 23:59・発送〜10/30"
+        },
+        {
+          "store": "GR SPACE TOKYO(店頭抽選・事前登録+来店本人確認要)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "案内待ち",
+          "entry_open": "2026-09-26T00:00:00+09:00",
+          "entry_deadline": "2026-10-19T23:59:00+09:00",
+          "result_date": "2026-11-05T00:00:00+09:00",
+          "order_deadline": "2026-11-20T23:59:00+09:00",
+          "note": "受付期間内の来店本人確認必須・受取11/6〜11/20本人来店のみ"
+        }
+      ],
+      "note": "るでや買取¥209,500(2026-10-13検証値)−定価¥211,800−送料¥1,000=粗利¥-3,300。🚫粗利マイナスso応募不要(受付は同時so併記)。 るでや買取は本日WebFetchで取得不可so(2026-10-13 22:45検証値)流用"
     },
     {
       "name": "RICOH GR IIIx",
