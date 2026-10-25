@@ -1,53 +1,140 @@
 {
   "schema": "v2",
-  "updated_at": "2026-10-24T22:46:16+09:00",
+  "updated_at": "2026-10-25T22:47:14+09:00",
   "candidates": [
     {
       "name": "ポケカ 30th CELEBRATION BOX",
       "brand": "ポケモンカード",
       "category": "トレカ",
       "price": 7200,
-      "jissei": 25400,
-      "premium_rate": 3.53,
+      "jissei": 25000,
+      "premium_rate": 3.47,
       "premium_level": "高",
-      "profit_max": 16000,
-      "best_route": "買取/ヤフオク(メルカリ出品禁止中)",
+      "profit_max": 14600,
+      "best_route": "ヤフオク/ヤフフリ(メルカリ未開封出品禁止中)",
       "phase": "受付中",
       "deadline": "2026-10-25T23:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
-          "store": "しまむらパーク(30th CELEBRATION各種)",
+          "store": "しまむらパーク(アプリ会員限定)",
           "url": "https://www.shop-shimamura.com/disp/itemlist/?pre_rsv_icon=1",
           "phase": "受付中",
           "entry_open": "2026-10-20T13:00:00+09:00",
           "entry_deadline": "2026-10-25T23:00:00+09:00",
           "result_date": "2026-10-26T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "しまむらアプリ会員限定"
+          "order_deadline": "2026-10-31T23:00:00+09:00",
+          "note": "注文10/26 12:00〜10/31 23:00"
         },
         {
-          "store": "ポケモンセンターオンライン(追加抽選4回目)",
-          "url": "https://www.pokemoncenter-online.com/",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
+          "store": "ドラゴンスター各店(WEB抽選・店頭販売)",
+          "url": "https://dorasuta.membercard.jp/lottery",
+          "phase": "受付中",
+          "entry_open": "2026-10-25T22:00:00+09:00",
+          "entry_deadline": "2026-10-27T23:59:00+09:00",
+          "result_date": "2026-10-30T00:00:00+09:00",
+          "order_deadline": "2026-11-03T23:59:00+09:00",
+          "note": "購入11/1〜11/3店頭"
+        },
+        {
+          "store": "イエローサブマリン各店(店頭抽選・再販)",
+          "url": "https://x.com/YS_INFO/",
+          "phase": "受付中",
+          "entry_open": "2026-10-25T10:00:00+09:00",
+          "entry_deadline": "2026-10-28T20:00:00+09:00",
+          "result_date": "2026-11-07T00:00:00+09:00",
           "order_deadline": "",
-          "note": "12月頃開始予定・日程未定(入荷Now 10/24)"
+          "note": "前回落選者等が対象・来店要"
         },
         {
           "store": "ノジマオンライン(招待制)",
           "url": "https://contents.online.nojima.co.jp/secret202609/",
           "phase": "受付中",
+          "entry_open": "2026-10-04T18:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "10/4以前エントリーはリセット済→再エントリー要"
+        },
+        {
+          "store": "ポケモンセンターオンライン(追加抽選4回目)",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
+          "phase": "予告",
           "entry_open": "",
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "招待制"
+          "note": "12月頃・日程未定"
         }
       ],
-      "note": "実勢25,400はprice-base 9月参考値(未再検証・10/24)。メルカリ未開封出品禁止中so出口は買取店/ヤフオク"
+      "note": "実勢=ヤフオク/ヤフフリ1BOXシュリンク付落札中央値¥25,000(n=19・10/19〜25・2026-10-25検証)。粗利=25,000×0.9−700−7,200=¥14,600"
+    },
+    {
+      "name": "ONE PIECEカード Heroines Edition vol.2 (EB-05)",
+      "brand": "ONE PIECEカード",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "低",
+      "profit_max": 0,
+      "best_route": "発売後検証",
+      "phase": "受付中",
+      "deadline": "2026-10-25T23:45:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "お宝創庫・プレイズ(アプリ・一部店舗)",
+          "url": "https://www.otakarasouko.com/information/105017357/",
+          "phase": "受付中",
+          "entry_open": "2026-10-22T12:00:00+09:00",
+          "entry_deadline": "2026-10-25T23:45:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "アニメイトオンライン(WEB抽選・郵送)",
+          "url": "https://www.animate-onlineshop.jp/products/detail.php?product_id=3567552",
+          "phase": "受付中",
+          "entry_open": "2026-10-19T10:00:00+09:00",
+          "entry_deadline": "2026-10-25T23:59:00+09:00",
+          "result_date": "2026-10-27T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "郵送so来店不要"
+        },
+        {
+          "store": "麦わらストア各店(WEB抽選・店頭)",
+          "url": "https://www.mugiwara-store.com/news/3012/",
+          "phase": "受付中",
+          "entry_open": "2026-10-23T00:00:00+09:00",
+          "entry_deadline": "2026-10-25T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "フルコンプ(WEB抽選・店頭)",
+          "url": "https://livepocket.jp/e/up9fr",
+          "phase": "受付中",
+          "entry_open": "2026-10-24T16:49:00+09:00",
+          "entry_deadline": "2026-10-26T23:59:00+09:00",
+          "result_date": "2026-10-28T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ジョーシン(アプリ・店頭)",
+          "url": "https://shop.joshin.co.jp/app/",
+          "phase": "受付中",
+          "entry_open": "2026-10-23T10:00:00+09:00",
+          "entry_deadline": "2026-10-28T20:00:00+09:00",
+          "result_date": "2026-10-29T12:00:00+09:00",
+          "order_deadline": "2026-11-06T23:59:00+09:00",
+          "note": "購入10/31〜11/6"
+        }
+      ],
+      "note": "🔭WATCH・10/31発売前so実勢なし(粗利未判定)。vol.1は高プレ実績。発売後にヤフオク落札で検証"
     },
     {
       "name": "RICOH GR IV 30th Anniversary Edition Kit",
@@ -66,7 +153,7 @@
         {
           "store": "ビックカメラ有楽町/池袋(アプリ抽選)",
           "url": "https://www.biccamera.com/",
-          "phase": "受付中",
+          "phase": "終了",
           "entry_open": "",
           "entry_deadline": "2026-10-25T23:59:00+09:00",
           "result_date": "",
@@ -81,7 +168,7 @@
           "entry_deadline": "",
           "result_date": "",
           "order_deadline": "",
-          "note": "他商品の購入履歴要"
+          "note": "他商品の購入履歴要・10/26 11:00開始"
         },
         {
           "store": "GR SPACE TOKYO(店頭抽選)",
