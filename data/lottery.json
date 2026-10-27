@@ -1,121 +1,7 @@
 {
   "schema": "v2",
-  "updated_at": "2026-10-26T22:46:00+09:00",
+  "updated_at": "2026-10-27T22:43:38+09:00",
   "candidates": [
-    {
-      "name": "ONE PIECEカード Heroines Edition vol.2 (EB-05)",
-      "brand": "ONE PIECEカード",
-      "category": "トレカ",
-      "price": 5760,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "低",
-      "profit_max": 0,
-      "best_route": "発売後検証",
-      "phase": "受付中",
-      "deadline": "2026-10-26T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "フルコンプ(WEB抽選・店頭)",
-          "url": "https://livepocket.jp/e/up9fr",
-          "phase": "受付中",
-          "entry_open": "2026-10-24T16:49:00+09:00",
-          "entry_deadline": "2026-10-26T23:59:00+09:00",
-          "result_date": "2026-10-28T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ジョーシン(アプリ・店頭)",
-          "url": "https://shop.joshin.co.jp/app/",
-          "phase": "受付中",
-          "entry_open": "2026-10-23T10:00:00+09:00",
-          "entry_deadline": "2026-10-28T20:00:00+09:00",
-          "result_date": "2026-10-29T12:00:00+09:00",
-          "order_deadline": "2026-11-06T23:59:00+09:00",
-          "note": "購入10/31〜11/6"
-        }
-      ],
-      "note": "🔭WATCH・10/31発売前so実勢なし(粗利未判定)。vol.1は高プレ実績。発売後にヤフオク落札で検証"
-    },
-    {
-      "name": "ポケカ MEGA拡張パック ハドウシーカー BOX",
-      "brand": "ポケモンカード",
-      "category": "トレカ",
-      "price": 6000,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "低",
-      "profit_max": 0,
-      "best_route": "発売後検証",
-      "phase": "受付中",
-      "deadline": "2026-10-27T21:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "おもちゃのペリカン各店(店頭抽選)",
-          "url": "https://pelican-toy.co.jp/shop/",
-          "phase": "受付中",
-          "entry_open": "2026-10-24T10:00:00+09:00",
-          "entry_deadline": "2026-10-27T21:00:00+09:00",
-          "result_date": "2026-11-21T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "締切=10/27閉店まで(時刻は推定)"
-        },
-        {
-          "store": "イエローサブマリン各店(店頭抽選)",
-          "url": "https://x.com/YS_INFO/",
-          "phase": "受付中",
-          "entry_open": "2026-10-25T10:00:00+09:00",
-          "entry_deadline": "2026-10-28T20:00:00+09:00",
-          "result_date": "2026-11-26T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ホビーステーション(WEB抽選・1店舗のみ)",
-          "url": "https://livepocket.jp/e/075sp",
-          "phase": "受付中",
-          "entry_open": "2026-10-26T12:00:00+09:00",
-          "entry_deadline": "2026-10-28T23:59:00+09:00",
-          "result_date": "2026-11-05T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "当選者2BOXまで・本人確認書類要"
-        },
-        {
-          "store": "イオンスタイルオンライン(WEB抽選・イオンカード決済限定)",
-          "url": "https://aeonretail.com/Page/k-lottery_pokemon_com.aspx",
-          "phase": "予告",
-          "entry_open": "2026-10-27T11:00:00+09:00",
-          "entry_deadline": "2026-10-28T23:59:00+09:00",
-          "result_date": "2026-11-09T12:00:00+09:00",
-          "order_deadline": "",
-          "note": "1人1点"
-        },
-        {
-          "store": "Amazon(招待リクエスト)",
-          "url": "https://www.amazon.co.jp/dp/B0H4PQ6LR5",
-          "phase": "受付中",
-          "entry_open": "2026-10-26T14:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ビックカメラ各店(店頭抽選・購入履歴要)",
-          "url": "https://www.biccamera.com/",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "2026-11-01T21:00:00+09:00",
-          "result_date": "2026-11-26T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "開始日不明・11/1閉店まで"
-        }
-      ],
-      "note": "🔭WATCH・11月下旬発売前so実勢なし(粗利未判定)。応募ノーリスク"
-    },
     {
       "name": "ポケカ 30th CELEBRATION BOX",
       "brand": "ポケモンカード",
@@ -179,15 +65,149 @@
           "result_date": "",
           "order_deadline": "",
           "note": "12月頃予定・日程未定"
+        },
+        {
+          "store": "トレカステーション各店(店頭抽選)",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "2026-10-26T10:00:00+09:00",
+          "entry_deadline": "2026-11-01T23:59:00+09:00",
+          "result_date": "2026-11-03T00:00:00+09:00",
+          "order_deadline": "2026-11-08T23:59:00+09:00",
+          "note": "30th CELEBRATIONカードセット各種・購入11/6〜11/8"
+        },
+        {
+          "store": "平和堂(HOPアプリ抽選)",
+          "url": "https://www.heiwado.jp/service/hopapp",
+          "phase": "予告",
+          "entry_open": "2026-10-31T09:00:00+09:00",
+          "entry_deadline": "2026-11-01T23:59:00+09:00",
+          "result_date": "2026-11-12T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "再販・開始時刻未発表(午前中)"
         }
       ],
-      "note": "実勢=ヤフオク1BOXシュリンク付落札中央値¥25,000(n=32・9/25〜10/25・2026-10-26検証)。粗利=25,000×0.9−700−7,200=¥14,600"
+      "note": "実勢=ヤフオク1BOXシュリンク付落札中央値¥25,000(n=32・9/25〜10/25・2026-10-26検証)。粗利=25,000×0.9−700−7,200=¥14,600 / 2026-10-27: 実勢は前日検証値流用(2026-10-26検証値)"
+    },
+    {
+      "name": "ONE PIECEカード Heroines Edition vol.2 (EB-05)",
+      "brand": "ONE PIECEカード",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "低",
+      "profit_max": 0,
+      "best_route": "発売後検証",
+      "phase": "受付中",
+      "deadline": "2026-10-28T20:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ジョーシン(アプリ・店頭)",
+          "url": "https://shop.joshin.co.jp/app/",
+          "phase": "受付中",
+          "entry_open": "2026-10-23T10:00:00+09:00",
+          "entry_deadline": "2026-10-28T20:00:00+09:00",
+          "result_date": "2026-10-29T12:00:00+09:00",
+          "order_deadline": "2026-11-06T23:59:00+09:00",
+          "note": "購入10/31〜11/6"
+        },
+        {
+          "store": "しまむらパーク(アプリ会員抽選)",
+          "url": "https://www.shop-shimamura.com/disp/itemlist/?pre_rsv_icon=1",
+          "phase": "受付中",
+          "entry_open": "2026-10-27T13:00:00+09:00",
+          "entry_deadline": "2026-11-01T23:00:00+09:00",
+          "result_date": "2026-11-02T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "EB-03/OP-13〜16/THE BEST vol.2も対象"
+        }
+      ],
+      "note": "🔭WATCH・10/31発売前so実勢なし(粗利未判定)。vol.1は高プレ実績。発売後にヤフオク落札で検証"
+    },
+    {
+      "name": "ポケカ MEGA拡張パック ハドウシーカー BOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 6000,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "低",
+      "profit_max": 0,
+      "best_route": "発売後検証",
+      "phase": "受付中",
+      "deadline": "2026-10-28T20:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "おもちゃのペリカン各店(店頭抽選)",
+          "url": "https://pelican-toy.co.jp/shop/",
+          "phase": "案内待ち",
+          "entry_open": "2026-10-24T10:00:00+09:00",
+          "entry_deadline": "2026-10-27T21:00:00+09:00",
+          "result_date": "2026-11-21T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "締切=10/27閉店まで(時刻は推定)"
+        },
+        {
+          "store": "イエローサブマリン各店(店頭抽選)",
+          "url": "https://x.com/YS_INFO/",
+          "phase": "受付中",
+          "entry_open": "2026-10-25T10:00:00+09:00",
+          "entry_deadline": "2026-10-28T20:00:00+09:00",
+          "result_date": "2026-11-26T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ホビーステーション(WEB抽選・1店舗のみ)",
+          "url": "https://livepocket.jp/e/075sp",
+          "phase": "受付中",
+          "entry_open": "2026-10-26T12:00:00+09:00",
+          "entry_deadline": "2026-10-28T23:59:00+09:00",
+          "result_date": "2026-11-05T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "当選者2BOXまで・本人確認書類要"
+        },
+        {
+          "store": "イオンスタイルオンライン(WEB抽選・イオンカード決済限定)",
+          "url": "https://aeonretail.com/Page/k-lottery_pokemon_com.aspx",
+          "phase": "受付中",
+          "entry_open": "2026-10-27T11:00:00+09:00",
+          "entry_deadline": "2026-10-28T23:59:00+09:00",
+          "result_date": "2026-11-09T12:00:00+09:00",
+          "order_deadline": "",
+          "note": "1人1点"
+        },
+        {
+          "store": "Amazon(招待リクエスト)",
+          "url": "https://www.amazon.co.jp/dp/B0H4PQ6LR5",
+          "phase": "受付中",
+          "entry_open": "2026-10-26T14:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ビックカメラ各店(店頭抽選・購入履歴要)",
+          "url": "https://www.biccamera.com/",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "2026-11-01T21:00:00+09:00",
+          "result_date": "2026-11-26T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "開始日不明・11/1閉店まで"
+        }
+      ],
+      "note": "🔭WATCH・11月下旬発売前so実勢なし(粗利未判定)。応募ノーリスク"
     },
     {
       "name": "ONE PIECEカード 神の支配 (OP-18)",
       "brand": "ONE PIECEカード",
       "category": "トレカ",
-      "price": 0,
+      "price": 5760,
       "jissei": 0,
       "premium_rate": 0,
       "premium_level": "低",
@@ -200,7 +220,7 @@
         {
           "store": "イオンスタイルオンライン(WEB抽選・イオンカード決済限定)",
           "url": "https://aeonretail.com/Page/k-lottery_sale_02.aspx",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "2026-10-27T11:00:00+09:00",
           "entry_deadline": "2026-10-28T23:59:00+09:00",
           "result_date": "",
@@ -226,9 +246,29 @@
           "result_date": "",
           "order_deadline": "",
           "note": ""
+        },
+        {
+          "store": "あみあみ(WEB抽選)",
+          "url": "https://form.amiami.jp/draw20261027",
+          "phase": "受付中",
+          "entry_open": "2026-10-27T10:00:00+09:00",
+          "entry_deadline": "2026-10-29T13:59:00+09:00",
+          "result_date": "2026-10-30T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "同一住所1商品1個・EB-03再販も同時抽選"
+        },
+        {
+          "store": "しまむらパーク(アプリ会員抽選)",
+          "url": "https://www.shop-shimamura.com/disp/itemlist/?pre_rsv_icon=1",
+          "phase": "受付中",
+          "entry_open": "2026-10-27T13:00:00+09:00",
+          "entry_deadline": "2026-11-01T23:00:00+09:00",
+          "result_date": "2026-11-02T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "対象はOP-13〜16等(OP-18は対象外)"
         }
       ],
-      "note": "🔭WATCH・11/21発売予定・定価未確認。OP-16は粗利約¥8,000/BOX実績。発売後検証"
+      "note": "🔭WATCH・11/21発売・定価¥5,760(24P)。OP-16は粗利約¥8,000/BOX実績。発売後検証"
     },
     {
       "name": "RICOH GR IV 30th Anniversary Edition Kit",
@@ -247,7 +287,7 @@
         {
           "store": "ビックカメラ有楽町/池袋(アプリ抽選)",
           "url": "https://www.biccamera.com/",
-          "phase": "終了",
+          "phase": "案内待ち",
           "entry_open": "",
           "entry_deadline": "2026-10-25T23:59:00+09:00",
           "result_date": "",
@@ -257,7 +297,7 @@
         {
           "store": "ヨドバシ.com(WEB抽選)",
           "url": "https://www.yodobashi.com/",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-10-26T11:00:00+09:00",
           "entry_deadline": "",
           "result_date": "",
@@ -275,7 +315,7 @@
           "note": "事前に本人確認要"
         }
       ],
-      "note": "🚫応募不要: メルカリ売切中央値¥268,100(n=8・2026-10-24検証)×0.9−送料¥1,000−定価¥259,800=−¥19,510"
+      "note": "🚫応募不要: メルカリ売切中央値¥268,100(n=8・2026-10-24検証)×0.9−送料¥1,000−定価¥259,800=−¥19,510 / 10/27: ヨドバシ抽選10:59締切済。転売クエストもメルカリ転売弱く非推奨"
     },
     {
       "name": "RICOH GR IIIx Urban Edition",
