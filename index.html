@@ -845,8 +845,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 20;
-const APP_VER_DATE = '2026-07-02';
+const APP_VER = 21;
+const APP_VER_DATE = '2026-10-31';
 
 // 全角数字→半角に正規化（金額入力・全角０-９やカンマ／円記号も許容）
 function toHalfWidthNum(s){ return (s||'').replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xFEE0)).replace(/[，､、]/g,','); }
@@ -2884,6 +2884,9 @@ function renderInspect(){
           })()}
           ${it.max_bid?`<div class="iv-row"><span class="iv-rl">入札上限<span class="mkt-rank">鑑定なし</span></span><span class="iv-rv" style="color:var(--profit);font-weight:800">¥${(+it.max_bid).toLocaleString('ja-JP')}</span></div>`:''}
           ${it.max_bid_soda?`<div class="iv-row"><span class="iv-rl">入札上限<span class="mkt-rank soda">鑑定付SODA</span></span><span class="iv-rv" style="color:#6ad8ff;font-weight:700">¥${(+it.max_bid_soda).toLocaleString('ja-JP')}<span class="soda-note">鑑定料¥2,500差引</span></span></div>`:''}
+          ${it.shitene_safe?`<div class="iv-row"><span class="iv-rl">上限<span class="mkt-rank">安全 下位25%</span></span><span class="iv-rv">¥${(+it.shitene_safe).toLocaleString('ja-JP')}</span></div>`:''}
+          ${it.shitene_attack?`<div class="iv-row"><span class="iv-rl">上限<span class="mkt-rank">攻め 中央値</span></span><span class="iv-rv">¥${(+it.shitene_attack).toLocaleString('ja-JP')}</span></div>`:''}
+          ${it.tsubushi?`<div class="iv-row"><span class="iv-rl">ツブシ値<span class="mkt-rank">重さ×相場×0.85</span></span><span class="iv-rv">¥${(+it.tsubushi).toLocaleString('ja-JP')}</span></div>`:''}
           ${(it.profit_flag&&it.profit_flag!=='?')?`<div class="sc-judge ${it.profit_flag==='✅'?'go':'no'}">${it.profit_flag==='✅'?'✅ 利益が出る案件（落札相場 ≤ 上限）':'❌ 利益が出ない（落札相場 > 上限）'}${it.exclude_100k?' ／ ⚠️販売相場10万超=除外':''}</div>`:''}
         </div>
         <div class="iv-input-row">
