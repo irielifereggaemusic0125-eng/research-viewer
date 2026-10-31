@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-31 07:36",
-  "count": 51,
+  "updated_at": "2026-11-01 07:36",
+  "count": 60,
   "items": {
     "A020-251102": {
       "recommend_min": 44800
@@ -12,7 +12,7 @@
       "recommend_min": 23000
     },
     "W067-260309": {
-      "recommend_min": 55200
+      "recommend_min": 54700
     },
     "A070-260319": {
       "recommend_min": 26700
@@ -47,9 +47,6 @@
     "O125-260728": {
       "recommend_min": 15400
     },
-    "O126-260728": {
-      "recommend_min": 8400
-    },
     "A131-260803": {
       "recommend_min": 128600
     },
@@ -66,7 +63,7 @@
       "recommend_min": 7200
     },
     "O145-260912": {
-      "recommend_min": 8000
+      "recommend_min": 7800
     },
     "O146-260912": {
       "recommend_min": 6900
@@ -105,10 +102,10 @@
       "recommend_min": 7200
     },
     "O158-260913": {
-      "recommend_min": 8400
+      "recommend_min": 8200
     },
     "O159-260913": {
-      "recommend_min": 7600
+      "recommend_min": 7500
     },
     "O160-260913": {
       "recommend_min": 6900
@@ -125,23 +122,20 @@
     "O164-260915": {
       "recommend_min": 7400
     },
-    "O165-260915": {
-      "recommend_min": 8200
-    },
     "O166-260918": {
       "recommend_min": 7400
     },
     "O167-260919": {
-      "recommend_min": 8400
+      "recommend_min": 8200
     },
     "O168-260919": {
-      "recommend_min": 7600
+      "recommend_min": 7500
     },
     "O169-260919": {
-      "recommend_min": 7600
+      "recommend_min": 7500
     },
     "O170-260919": {
-      "recommend_min": 7600
+      "recommend_min": 7500
     },
     "O171-260919": {
       "recommend_min": 7000
@@ -154,6 +148,39 @@
     },
     "O174-260930": {
       "recommend_min": 6900
+    },
+    "ト176-260905": {
+      "recommend_min": 14400
+    },
+    "ト177-260905": {
+      "recommend_min": 14400
+    },
+    "ト178-260905": {
+      "recommend_min": 14400
+    },
+    "ト179-260905": {
+      "recommend_min": 18400
+    },
+    "ト180-260905": {
+      "recommend_min": 18400
+    },
+    "ト181-260930": {
+      "recommend_min": 18400
+    },
+    "ト182-260930": {
+      "recommend_min": 14400
+    },
+    "ト183-261015": {
+      "recommend_min": 13000
+    },
+    "ト184-261015": {
+      "recommend_min": 13000
+    },
+    "ト185-261015": {
+      "recommend_min": 13000
+    },
+    "i186-261005": {
+      "recommend_min": 272800
     }
   }
 }
