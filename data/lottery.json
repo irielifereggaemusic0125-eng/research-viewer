@@ -1,395 +1,7 @@
 {
   "schema": "v2",
-  "updated_at": "2026-11-04T22:46:59+09:00",
+  "updated_at": "2026-11-05T22:44:07+09:00",
   "candidates": [
-    {
-      "name": "ポケカ MEGA拡張パック ハドウシーカー BOX",
-      "brand": "ポケモンカード",
-      "category": "トレカ",
-      "price": 6000,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "",
-      "profit_max": 0,
-      "best_route": "",
-      "phase": "受付中",
-      "deadline": "2026-11-04T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "あみあみ(WEB)",
-          "url": "https://form.amiami.jp/draw20261030",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-04T13:59:00+09:00",
-          "result_date": "2026-11-05T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "イオン九州(アプリ・店頭)",
-          "url": "https://www.aeon-kyushu.info/customer/information/archives/145",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-11-08T23:59:00+09:00",
-          "result_date": "2026-11-26T12:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "Amazon(招待リクエスト)",
-          "url": "https://www.amazon.co.jp/dp/B0H4PQ6LR5",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "セブンネット(WEB・購入履歴要)",
-          "url": "https://x.com/7_netshopping/status/2116047447793295723",
-          "phase": "受付中",
-          "entry_open": "2026-11-04T17:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "11/4 17時頃開始予定・開始未確認"
-        },
-        {
-          "store": "ポケモンセンターオンライン(追加抽選)",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20261030",
-          "phase": "予告",
-          "entry_open": "2026-11-06T16:00:00+09:00",
-          "entry_deadline": "2026-11-10T16:59:00+09:00",
-          "result_date": "2026-11-17T15:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "TSUTAYA福井高柳店(WEB)",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSePrdx1zJNpOmYEeOI9rEQfWhXBuHsqJrvGG0PvRFkoIuMTWg/viewform",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-04T10:00:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ヤマダデンキ(アプリ)",
-          "url": "https://www.yamada-denki.jp/service/pointservice/digital-kaiin.html",
-          "phase": "受付中",
-          "entry_open": "2026-11-02T23:00:00+09:00",
-          "entry_deadline": "2026-11-04T23:59:00+09:00",
-          "result_date": "2026-11-24T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "三洋堂書店(トレカ館・ホビープラネット)",
-          "url": "https://select-type.com/e/?id=qbOTqJC0nTM",
-          "phase": "受付中",
-          "entry_open": "2026-11-04T00:00:00+09:00",
-          "entry_deadline": "2026-11-15T23:59:00+09:00",
-          "result_date": "2026-11-25T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ファミマオンライン(メルマガ会員)",
-          "url": "https://famima-online.family.co.jp/",
-          "phase": "受付中",
-          "entry_open": "2026-11-04T00:00:00+09:00",
-          "entry_deadline": "2026-11-09T23:59:00+09:00",
-          "result_date": "2026-11-11T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "カードラボ一部店舗(Xフォロー&リポスト)",
-          "url": "https://www.c-labo.jp/blog/",
-          "phase": "受付中",
-          "entry_open": "2026-11-03T00:00:00+09:00",
-          "entry_deadline": "2026-11-19T23:59:00+09:00",
-          "result_date": "2026-11-20T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "店舗で締切差あり"
-        },
-        {
-          "store": "ドン・キホーテ(majicaアプリ)",
-          "url": "https://www.majica-net.com/app/",
-          "phase": "予告",
-          "entry_open": "2026-11-06T10:00:00+09:00",
-          "entry_deadline": "2026-11-15T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "🔭WATCH・11/27発売前so粗利未判定。同価格帯のストームエメラルダはヤフオク¥9,250(n=9)・るでや¥8,500で粗利¥1,700前後と基準未満。"
-    },
-    {
-      "name": "ポケカ スペシャルデッキセットMEGA",
-      "brand": "ポケモンカード",
-      "category": "トレカ",
-      "price": 5500,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "",
-      "profit_max": 0,
-      "best_route": "",
-      "phase": "受付中",
-      "deadline": "2026-11-04T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "あみあみ(WEB)",
-          "url": "https://form.amiami.jp/draw20261030",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-04T13:59:00+09:00",
-          "result_date": "2026-11-05T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "平和堂(HOPアプリ)",
-          "url": "https://www.heiwado.jp/service/hopapp",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-01T23:59:00+09:00",
-          "result_date": "2026-11-12T09:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "コジマ(アプリ・購入履歴要)",
-          "url": "https://www.kojima.net/shop/app/kojima_appli.html",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-11-06T23:59:00+09:00",
-          "result_date": "2026-11-13T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "キデイランド各店(WEB・店頭)",
-          "url": "https://livepocket.jp/p/hpmzs",
-          "phase": "受付中",
-          "entry_open": "2026-11-02T10:00:00+09:00",
-          "entry_deadline": "2026-11-04T23:59:00+09:00",
-          "result_date": "2026-11-11T18:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ゲオ(WEB・店頭)",
-          "url": "https://geo-online.co.jp/news/787",
-          "phase": "受付中",
-          "entry_open": "2026-11-02T11:00:00+09:00",
-          "entry_deadline": "2026-11-05T17:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ドラゴンスター通販",
-          "url": "https://dorasuta.membercard.jp/lottery",
-          "phase": "受付中",
-          "entry_open": "2026-11-02T00:00:00+09:00",
-          "entry_deadline": "2026-11-04T23:59:00+09:00",
-          "result_date": "2026-11-05T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ドラゴンスター各店(モバイル会員)",
-          "url": "https://dorasuta.membercard.jp/lottery",
-          "phase": "受付中",
-          "entry_open": "2026-11-01T22:00:00+09:00",
-          "entry_deadline": "2026-11-05T23:59:00+09:00",
-          "result_date": "2026-11-10T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "竜のしっぽ各店(モバイル会員)",
-          "url": "https://ryuunoshippo.membercard.jp/",
-          "phase": "受付中",
-          "entry_open": "2026-11-04T00:00:00+09:00",
-          "entry_deadline": "2026-11-06T23:59:00+09:00",
-          "result_date": "2026-11-11T17:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "🔭WATCH・発売前で落札実績なしso粗利未判定"
-    },
-    {
-      "name": "ONE PIECEカード 世界最強の戦士 (OP-17)",
-      "brand": "ONE PIECE",
-      "category": "トレカ",
-      "price": 5760,
-      "jissei": 10400,
-      "premium_rate": 1.81,
-      "premium_level": "高",
-      "profit_max": 3140,
-      "best_route": "るでや買取",
-      "phase": "受付中",
-      "deadline": "2026-11-04T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "Joshin webショップ(対象会員へメール案内)",
-          "url": "https://shop.joshin.co.jp/",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-02T09:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "トレカプラザ55通販(WEB)",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf-D1Frcyt_6fF0Nyjgm_CTBAsmsuIEjnl9fUtaeseonqeTHg/viewform",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-11-06T23:59:00+09:00",
-          "result_date": "2026-11-07T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ノジマオンライン(招待制)",
-          "url": "https://contents.online.nojima.co.jp/secret202609/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "TierOne渋谷店(WEB)",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe_Of864NWgSghCeuBREZn4SM6lloXcDkZJGVAxDG-xKe9fjw/viewform",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-11-04T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "基準ぎりぎり。るでや買取¥9,600(2026-11-02検証・据置)−送料¥700−定価=¥3,140。ヤフオク¥10,400なら¥2,900で基準未満。"
-    },
-    {
-      "name": "ONE PIECEカード 神の支配 (OP-18)",
-      "brand": "ONE PIECE",
-      "category": "トレカ",
-      "price": 5760,
-      "jissei": 0,
-      "premium_rate": 0,
-      "premium_level": "",
-      "profit_max": 0,
-      "best_route": "",
-      "phase": "受付中",
-      "deadline": "2026-11-05T17:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "竜星のPAO各店(WEB・店頭)",
-          "url": "https://livepocket.jp/e/6t8b2y",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-01T23:59:00+09:00",
-          "result_date": "2026-11-12T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "イオン九州(アプリ・店頭)",
-          "url": "https://www.aeon-kyushu.info/customer/information/archives/140",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-01T23:59:00+09:00",
-          "result_date": "2026-11-20T12:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "イオン北海道(iAEONアプリ・店頭)",
-          "url": "https://www.aeon-hokkaido.jp/iaeonapp/campaign/2611_optcg/",
-          "phase": "案内待ち",
-          "entry_open": "2026-11-01T08:00:00+09:00",
-          "entry_deadline": "2026-11-03T23:59:00+09:00",
-          "result_date": "2026-11-20T08:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "キッズリパブリック(アプリ・店頭)",
-          "url": "https://www.kidsrepublic.jp/campaign/campaign_detail/20261121onepiececardgame",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-11-05T19:59:00+09:00",
-          "result_date": "2026-11-20T12:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "Amazon(招待リクエスト)",
-          "url": "https://www.amazon.co.jp/dp/B0HFVPJF4Q",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ゲオ(WEB・店頭)",
-          "url": "https://geo-online.co.jp/news/788",
-          "phase": "受付中",
-          "entry_open": "2026-11-02T11:00:00+09:00",
-          "entry_deadline": "2026-11-05T17:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "カードボックス広島店(WEB)",
-          "url": "https://shoplottery.e-starbox.com/lottery/entry?code=hcOWj47bHg",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-02T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "JUMP SHOP各店(WEB抽選→店頭)",
-          "url": "https://jumpshop-benelic.com/pages/about-enter-shop",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-11-07T23:59:00+09:00",
-          "result_date": "2026-11-09T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ホビーステーション(WEB)",
-          "url": "https://livepocket.jp/e/ky8qv",
-          "phase": "受付中",
-          "entry_open": "2026-11-03T12:00:00+09:00",
-          "entry_deadline": "2026-11-05T23:59:00+09:00",
-          "result_date": "2026-11-20T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "🔭WATCH・11/21発売前so粗利未判定。るでや買取は価格未掲載。前弾OP-17はるでや¥9,600で粗利¥3,140まで軟化。発売直後に売る前提。"
-    },
     {
       "name": "ONE PIECEカード Heroines Edition vol.2 (EB-05)",
       "brand": "ONE PIECE",
@@ -448,6 +60,210 @@
       "note": "るでや買取¥12,000(2026-11-02検証)−送料¥700−定価¥5,760=¥5,540。メルカリ個人売切¥11,500(n=18・11/01)なら¥3,890。発売直後so早期売却。"
     },
     {
+      "name": "ポケカ スペシャルデッキセットMEGA",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 5500,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "",
+      "profit_max": 0,
+      "best_route": "",
+      "phase": "受付中",
+      "deadline": "2026-11-05T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "あみあみ(WEB)",
+          "url": "https://form.amiami.jp/draw20261030",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-04T13:59:00+09:00",
+          "result_date": "2026-11-05T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "平和堂(HOPアプリ)",
+          "url": "https://www.heiwado.jp/service/hopapp",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-01T23:59:00+09:00",
+          "result_date": "2026-11-12T09:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "コジマ(アプリ・購入履歴要)",
+          "url": "https://www.kojima.net/shop/app/kojima_appli.html",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-06T23:59:00+09:00",
+          "result_date": "2026-11-13T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "キデイランド各店(WEB・店頭)",
+          "url": "https://livepocket.jp/p/hpmzs",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-02T10:00:00+09:00",
+          "entry_deadline": "2026-11-04T23:59:00+09:00",
+          "result_date": "2026-11-11T18:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ゲオ(WEB・店頭)",
+          "url": "https://geo-online.co.jp/news/787",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-02T11:00:00+09:00",
+          "entry_deadline": "2026-11-05T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ドラゴンスター通販",
+          "url": "https://dorasuta.membercard.jp/lottery",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-02T00:00:00+09:00",
+          "entry_deadline": "2026-11-04T23:59:00+09:00",
+          "result_date": "2026-11-05T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ドラゴンスター各店(モバイル会員)",
+          "url": "https://dorasuta.membercard.jp/lottery",
+          "phase": "受付中",
+          "entry_open": "2026-11-01T22:00:00+09:00",
+          "entry_deadline": "2026-11-05T23:59:00+09:00",
+          "result_date": "2026-11-10T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "竜のしっぽ各店(モバイル会員)",
+          "url": "https://ryuunoshippo.membercard.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-11-04T00:00:00+09:00",
+          "entry_deadline": "2026-11-06T23:59:00+09:00",
+          "result_date": "2026-11-11T17:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "🔭WATCH・発売前で落札実績なしso粗利未判定"
+    },
+    {
+      "name": "ONE PIECEカード 神の支配 (OP-18)",
+      "brand": "ONE PIECE",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "",
+      "profit_max": 0,
+      "best_route": "",
+      "phase": "受付中",
+      "deadline": "2026-11-05T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "竜星のPAO各店(WEB・店頭)",
+          "url": "https://livepocket.jp/e/6t8b2y",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-01T23:59:00+09:00",
+          "result_date": "2026-11-12T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "イオン九州(アプリ・店頭)",
+          "url": "https://www.aeon-kyushu.info/customer/information/archives/140",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-01T23:59:00+09:00",
+          "result_date": "2026-11-20T12:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "イオン北海道(iAEONアプリ・店頭)",
+          "url": "https://www.aeon-hokkaido.jp/iaeonapp/campaign/2611_optcg/",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-01T08:00:00+09:00",
+          "entry_deadline": "2026-11-03T23:59:00+09:00",
+          "result_date": "2026-11-20T08:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "キッズリパブリック(アプリ・店頭)",
+          "url": "https://www.kidsrepublic.jp/campaign/campaign_detail/20261121onepiececardgame",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-05T19:59:00+09:00",
+          "result_date": "2026-11-20T12:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "Amazon(招待リクエスト)",
+          "url": "https://www.amazon.co.jp/dp/B0HFVPJF4Q",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ゲオ(WEB・店頭)",
+          "url": "https://geo-online.co.jp/news/788",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-02T11:00:00+09:00",
+          "entry_deadline": "2026-11-05T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "カードボックス広島店(WEB)",
+          "url": "https://shoplottery.e-starbox.com/lottery/entry?code=hcOWj47bHg",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-02T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "JUMP SHOP各店(WEB抽選→店頭)",
+          "url": "https://jumpshop-benelic.com/pages/about-enter-shop",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-07T23:59:00+09:00",
+          "result_date": "2026-11-09T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ホビーステーション(WEB)",
+          "url": "https://livepocket.jp/e/ky8qv",
+          "phase": "受付中",
+          "entry_open": "2026-11-03T12:00:00+09:00",
+          "entry_deadline": "2026-11-05T23:59:00+09:00",
+          "result_date": "2026-11-20T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "🔭WATCH・11/21発売前so粗利未判定。るでや買取は価格未掲載。前弾OP-17はるでや¥9,600で粗利¥3,140まで軟化。発売直後に売る前提。"
+    },
+    {
       "name": "ONE PIECE HEROINES PRECIOUS BOX",
       "brand": "ONE PIECE",
       "category": "トレカ",
@@ -499,13 +315,13 @@
       "brand": "ポケモンカード",
       "category": "トレカ",
       "price": 7200,
-      "jissei": 22000,
-      "premium_rate": 3.06,
+      "jissei": 19500,
+      "premium_rate": 2.71,
       "premium_level": "高",
-      "profit_max": 11900,
-      "best_route": "ヤフオク",
+      "profit_max": 9650,
+      "best_route": "ヤフフリ",
       "phase": "受付中",
-      "deadline": "2026-11-06T23:59:00+09:00",
+      "deadline": "2026-11-06T21:30:00+09:00",
       "status": "未応募",
       "routes": [
         {
@@ -631,15 +447,269 @@
         {
           "store": "ビックカメラ広島駅前店(店舗)",
           "url": "https://nyuka-now.com/archives/159770",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "",
           "entry_deadline": "2026-11-07T23:59:00+09:00",
           "result_date": "2026-11-14T00:00:00+09:00",
+          "order_deadline": "2026-11-17T23:59:00+09:00",
+          "note": "購入11/15〜11/17"
+        },
+        {
+          "store": "ヤマシロヤ オンラインショップ(WEB)",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSd6O9PhrqOHX4xxcRV4APYy_B_0OyCAW_ZkTa-Rp7htUleUjQ/viewform",
+          "phase": "受付中",
+          "entry_open": "2026-11-04T21:30:00+09:00",
+          "entry_deadline": "2026-11-06T21:30:00+09:00",
+          "result_date": "2026-11-09T00:00:00+09:00",
           "order_deadline": "",
-          "note": "近日・開始日未記載"
+          "note": "オンライン販売"
+        },
+        {
+          "store": "フルコンプ一部店舗(WEB・再販)",
+          "url": "https://livepocket.jp/e/7r13g",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-08T11:59:00+09:00",
+          "result_date": "2026-11-11T00:00:00+09:00",
+          "order_deadline": "2026-11-16T23:59:00+09:00",
+          "note": "購入11/14〜11/16店頭・本人確認"
+        },
+        {
+          "store": "ビックカメラなんば店(店頭)",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-08T23:59:00+09:00",
+          "result_date": "2026-11-13T00:00:00+09:00",
+          "order_deadline": "2026-11-15T23:59:00+09:00",
+          "note": "購入11/14〜11/15"
+        },
+        {
+          "store": "ブックオフ西友岡崎店(店頭)",
+          "url": "https://x.com/boc_248okazaki/status/2118166437923795004",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-11T23:59:00+09:00",
+          "result_date": "2026-11-12T00:00:00+09:00",
+          "order_deadline": "2026-11-15T23:59:00+09:00",
+          "note": "購入11/13〜11/15"
+        },
+        {
+          "store": "au PAY マーケット ダイレクトストア(先着・Pontaパス+メルマガ限定)",
+          "url": "https://wowma.jp/bep/m/dm40",
+          "phase": "予告",
+          "entry_open": "2026-11-09T20:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "11/9 13時頃メルマガで商品URL案内・1人1BOX先着"
         }
       ],
-      "note": "ヤフオク1BOX入札3件以上¥22,000(2026-11-01検証)×0.9−送料¥700−定価=¥11,900。るでや買取は¥20,000→¥17,000に下落(2026-11-02検証)で¥9,100。下落中so当選後は即売却。"
+      "note": "ヤフフリ1BOXシュリンク付き売切中央値¥19,500(11/2〜11/5 n=13・2026-11-05検証)×0.9−送料¥700−定価¥7,200=¥9,650。11/1の¥22,000から下落中so当選後は即売却。"
+    },
+    {
+      "name": "ONE PIECEカード 世界最強の戦士 (OP-17)",
+      "brand": "ONE PIECE",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 10400,
+      "premium_rate": 1.81,
+      "premium_level": "高",
+      "profit_max": 3140,
+      "best_route": "るでや買取",
+      "phase": "受付中",
+      "deadline": "2026-11-06T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "Joshin webショップ(対象会員へメール案内)",
+          "url": "https://shop.joshin.co.jp/",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-02T09:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "トレカプラザ55通販(WEB)",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf-D1Frcyt_6fF0Nyjgm_CTBAsmsuIEjnl9fUtaeseonqeTHg/viewform",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-06T23:59:00+09:00",
+          "result_date": "2026-11-07T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ノジマオンライン(招待制)",
+          "url": "https://contents.online.nojima.co.jp/secret202609/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "TierOne渋谷店(WEB)",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe_Of864NWgSghCeuBREZn4SM6lloXcDkZJGVAxDG-xKe9fjw/viewform",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-04T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "るでや買取¥9,600(2026-11-02検証値・据置)−送料¥700−定価¥5,760=¥3,140。基準ぎりぎり。"
+    },
+    {
+      "name": "ポケカ MEGA拡張パック ハドウシーカー BOX",
+      "brand": "ポケモンカード",
+      "category": "トレカ",
+      "price": 6000,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "",
+      "profit_max": 0,
+      "best_route": "",
+      "phase": "受付中",
+      "deadline": "2026-11-08T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "あみあみ(WEB)",
+          "url": "https://form.amiami.jp/draw20261030",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-04T13:59:00+09:00",
+          "result_date": "2026-11-05T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "イオン九州(アプリ・店頭)",
+          "url": "https://www.aeon-kyushu.info/customer/information/archives/145",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-08T23:59:00+09:00",
+          "result_date": "2026-11-26T12:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "Amazon(招待リクエスト)",
+          "url": "https://www.amazon.co.jp/dp/B0H4PQ6LR5",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "セブンネット(WEB・購入履歴要)",
+          "url": "https://x.com/7_netshopping/status/2116047447793295723",
+          "phase": "受付中",
+          "entry_open": "2026-11-04T17:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "11/4 17時頃開始予定・開始未確認"
+        },
+        {
+          "store": "ポケモンセンターオンライン(追加抽選)",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20261030",
+          "phase": "予告",
+          "entry_open": "2026-11-06T16:00:00+09:00",
+          "entry_deadline": "2026-11-10T16:59:00+09:00",
+          "result_date": "2026-11-17T15:00:00+09:00",
+          "order_deadline": "2026-11-24T16:59:00+09:00",
+          "note": ""
+        },
+        {
+          "store": "TSUTAYA福井高柳店(WEB)",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSePrdx1zJNpOmYEeOI9rEQfWhXBuHsqJrvGG0PvRFkoIuMTWg/viewform",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-04T10:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ヤマダデンキ(アプリ)",
+          "url": "https://www.yamada-denki.jp/service/pointservice/digital-kaiin.html",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-02T23:00:00+09:00",
+          "entry_deadline": "2026-11-04T23:59:00+09:00",
+          "result_date": "2026-11-24T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "三洋堂書店(トレカ館・ホビープラネット)",
+          "url": "https://select-type.com/e/?id=qbOTqJC0nTM",
+          "phase": "受付中",
+          "entry_open": "2026-11-04T00:00:00+09:00",
+          "entry_deadline": "2026-11-15T23:59:00+09:00",
+          "result_date": "2026-11-25T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ファミマオンライン(メルマガ会員)",
+          "url": "https://famima-online.family.co.jp/",
+          "phase": "受付中",
+          "entry_open": "2026-11-04T00:00:00+09:00",
+          "entry_deadline": "2026-11-09T23:59:00+09:00",
+          "result_date": "2026-11-11T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "カードラボ一部店舗(Xフォロー&リポスト)",
+          "url": "https://www.c-labo.jp/blog/",
+          "phase": "受付中",
+          "entry_open": "2026-11-03T00:00:00+09:00",
+          "entry_deadline": "2026-11-19T23:59:00+09:00",
+          "result_date": "2026-11-20T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "店舗で締切差あり"
+        },
+        {
+          "store": "ドン・キホーテ(majicaアプリ)",
+          "url": "https://www.majica-net.com/app/",
+          "phase": "予告",
+          "entry_open": "2026-11-06T10:00:00+09:00",
+          "entry_deadline": "2026-11-15T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "駿河屋(WEB・X RP)",
+          "url": "https://www.suruga-ya.jp/blog/?q=pokeka_chusen261105.html",
+          "phase": "受付中",
+          "entry_open": "2026-11-05T12:00:00+09:00",
+          "entry_deadline": "2026-11-22T23:59:00+09:00",
+          "result_date": "2026-11-23T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "晴れる屋2通販(WEB)",
+          "url": "https://livepocket.jp/e/s191v",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-11T18:00:00+09:00",
+          "result_date": "2026-11-16T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "🔭WATCH・11/27発売前so粗利未判定。同価格帯のストームエメラルダはヤフオク¥9,250(n=9)・るでや¥8,500で粗利¥1,700前後と基準未満。"
     },
     {
       "name": "RICOH GR IV (無印)",
