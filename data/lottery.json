@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-11-09T21:46:33+09:00",
+  "updated_at": "2026-11-10T21:46:35+09:00",
   "candidates": [
     {
       "name": "ポケカ MEGA拡張パック ハドウシーカー BOX",
@@ -13,7 +13,7 @@
       "profit_max": 0,
       "best_route": "",
       "phase": "受付中",
-      "deadline": "2026-11-09T23:59:00+09:00",
+      "deadline": "2026-11-11T10:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
@@ -59,7 +59,7 @@
         {
           "store": "ポケモンセンターオンライン(追加抽選)",
           "url": "https://www.pokemoncenter-online.com/news/?id=20261030",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-11-06T16:00:00+09:00",
           "entry_deadline": "2026-11-10T16:59:00+09:00",
           "result_date": "2026-11-17T15:00:00+09:00",
@@ -99,7 +99,7 @@
         {
           "store": "ファミマオンライン(メルマガ会員)",
           "url": "https://famima-online.family.co.jp/",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-11-04T00:00:00+09:00",
           "entry_deadline": "2026-11-09T23:59:00+09:00",
           "result_date": "2026-11-11T00:00:00+09:00",
@@ -199,12 +199,12 @@
         {
           "store": "ヨドバシ.com(WEB)",
           "url": "https://limited.yodobashi.com/entry/shared/",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "2026-11-10T11:00:00+09:00",
           "entry_deadline": "2026-11-11T10:59:00+09:00",
           "result_date": "2026-11-11T18:00:00+09:00",
           "order_deadline": "",
-          "note": ""
+          "note": "注文期限11/12 23:59"
         },
         {
           "store": "ドラゴンスター各店(モバイル会員)",
@@ -224,7 +224,27 @@
           "entry_deadline": "2026-11-15T23:59:00+09:00",
           "result_date": "2026-11-26T00:00:00+09:00",
           "order_deadline": "",
-          "note": ""
+          "note": "受付11/14午前中開始"
+        },
+        {
+          "store": "オレタン各店(WEB・オレモバ会員)",
+          "url": "https://oretan.membercard.jp/lottery",
+          "phase": "受付中",
+          "entry_open": "2026-11-10T20:00:00+09:00",
+          "entry_deadline": "2026-11-22T23:59:00+09:00",
+          "result_date": "2026-11-24T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "購入11/27〜29"
+        },
+        {
+          "store": "ホビーゾーン各店(店頭)",
+          "url": "https://nyuka-now.com/archives/2459",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-15T21:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "リンクなし・入荷Now掲載"
         }
       ],
       "note": "🔭WATCH・11/27発売前so粗利未判定。同価格帯のストームエメラルダはヤフオク¥9,250(n=9)・るでや¥8,500で粗利¥1,700前後と基準未満。"
@@ -240,7 +260,7 @@
       "profit_max": 9100,
       "best_route": "るでや買取",
       "phase": "受付中",
-      "deadline": "2026-11-10T19:00:00+09:00",
+      "deadline": "2026-11-11T20:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
@@ -506,7 +526,7 @@
         {
           "store": "ビックカメラ各店(Suicaカード会員・店頭)",
           "url": "https://nyuka-now.com/archives/159770",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-11-09T13:00:00+09:00",
           "entry_deadline": "2026-11-10T19:00:00+09:00",
           "result_date": "2026-11-13T00:00:00+09:00",
@@ -516,15 +536,15 @@
         {
           "store": "ビックカメラ浦和西口店・大宮西口そごう店(Suica会員・店頭)",
           "url": "https://nyuka-now.com/archives/159770",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "2026-11-10T13:00:00+09:00",
           "entry_deadline": "2026-11-11T20:00:00+09:00",
           "result_date": "2026-11-13T13:00:00+09:00",
           "order_deadline": "",
-          "note": "2店舗のうち1店舗のみ"
+          "note": "2店舗のうち1店舗のみ・11/8までの購入履歴要・購入11/14〜15"
         }
       ],
-      "note": "るでや買取¥17,000(2026-11-09検証)−送料¥700−定価¥7,200=¥9,100。下落中so当選後は即売却。au PAY(11/9 20時)は先着so抽選枠から除外"
+      "note": "るでや買取¥17,000(2026-11-10検証)−送料¥700−定価¥7,200=¥9,100。下落中so当選後は即売却。"
     },
     {
       "name": "ONE PIECEカード 神の支配 (OP-18)",
@@ -694,11 +714,11 @@
           "store": "トレカステーション各店(店頭・LivePocket QR)",
           "url": "https://nyuka-now.com/archives/97393",
           "phase": "受付中",
-          "entry_open": "2026-11-09T18:00:00+09:00",
+          "entry_open": "2026-11-09T00:00:00+09:00",
           "entry_deadline": "2026-11-15T23:59:00+09:00",
           "result_date": "2026-11-17T00:00:00+09:00",
           "order_deadline": "",
-          "note": ""
+          "note": "各店Xから応募"
         },
         {
           "store": "トレカエース各店(店頭QR)",
@@ -733,203 +753,45 @@
         {
           "store": "アニメイトオンライン(WEB)",
           "url": "https://www.animate-onlineshop.jp/products/detail.php?product_id=3592097",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "2026-11-10T10:00:00+09:00",
           "entry_deadline": "2026-11-15T23:59:00+09:00",
           "result_date": "2026-11-17T00:00:00+09:00",
           "order_deadline": "",
           "note": ""
+        },
+        {
+          "store": "ヤマシロヤ オンラインショップ(WEB)",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfL8s2V2iGQ4uZYHfO8ckZG23OiggPZ_0HAxgf_i7G39AkeRA/viewform",
+          "phase": "受付中",
+          "entry_open": "2026-11-10T21:30:00+09:00",
+          "entry_deadline": "2026-11-12T21:30:00+09:00",
+          "result_date": "2026-11-17T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ドラゴンスター通販(WEB)",
+          "url": "https://dorasuta.membercard.jp/lottery?mail",
+          "phase": "受付中",
+          "entry_open": "2026-11-09T22:00:00+09:00",
+          "entry_deadline": "2026-11-11T23:59:00+09:00",
+          "result_date": "2026-11-12T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ワンピース公式ショップ・デクスタ各店(WEB)",
+          "url": "https://parks2.bandainamco-am.co.jp/category/ECCL00000061/",
+          "phase": "予告",
+          "entry_open": "2026-11-11T10:00:00+09:00",
+          "entry_deadline": "2026-11-15T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "販売11/21〜27"
         }
       ],
       "note": "🔭WATCH・11/21発売前so粗利未判定。るでや未掲載。前弾OP-17はるでや¥9,400(11/06)で粗利¥2,940まで軟化＝基準割れ傾向。"
-    },
-    {
-      "name": "RICOH GR IV (無印)",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 211800,
-      "jissei": 211000,
-      "premium_rate": 1.02,
-      "premium_level": "低",
-      "profit_max": -1800,
-      "best_route": "るでや買取",
-      "phase": "受付中",
-      "deadline": "2026-11-22T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "フジヤカメラ(WEB抽選)",
-          "url": "https://www.fujiya-camera.co.jp/shop/g/gC4549212311291/",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-01T17:00:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "10/31は本体ページ取得不可。締切は転売クエスト掲載の二次情報"
-        },
-        {
-          "store": "GR SPACE TOKYO(店頭抽選・来店本人確認要)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "2026-10-21T00:00:00+09:00",
-          "entry_deadline": "2026-11-22T23:59:00+09:00",
-          "result_date": "2026-12-05T00:00:00+09:00",
-          "order_deadline": "2026-12-20T00:00:00+09:00",
-          "note": ""
-        },
-        {
-          "store": "リコーイメージングストア(WEB抽選・再販)",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "注文中",
-          "entry_open": "2026-10-28T12:00:00+09:00",
-          "entry_deadline": "2026-10-30T12:00:00+09:00",
-          "result_date": "2026-11-06T00:00:00+09:00",
-          "order_deadline": "2026-11-09T23:59:00+09:00",
-          "note": "1次当選案内11/6・注文〜11/9 23:59・2次案内11/16・注文〜11/18"
-        }
-      ],
-      "note": "🚫応募不要(赤字): るでや買取¥211,000(2026-11-09検証)−定価¥211,800−送料¥1,000=−¥1,800。自家用なら別。"
-    },
-    {
-      "name": "RICOH GR IV HDF",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 222000,
-      "jissei": 248000,
-      "premium_rate": 1.12,
-      "premium_level": "低",
-      "profit_max": 25000,
-      "best_route": "るでや買取",
-      "phase": "受付中",
-      "deadline": "2026-11-22T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "GR SPACE TOKYO(店頭抽選・来店本人確認要)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "2026-10-21T00:00:00+09:00",
-          "entry_deadline": "2026-11-22T23:59:00+09:00",
-          "result_date": "2026-12-05T00:00:00+09:00",
-          "order_deadline": "2026-12-20T00:00:00+09:00",
-          "note": "tenbaiquestでは対象機種未確認(11/4)"
-        },
-        {
-          "store": "リコーイメージングストア(WEB抽選・再販)",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "注文中",
-          "entry_open": "2026-10-28T12:00:00+09:00",
-          "entry_deadline": "2026-10-30T12:00:00+09:00",
-          "result_date": "2026-11-09T00:00:00+09:00",
-          "order_deadline": "2026-11-11T23:59:00+09:00",
-          "note": "1次注文〜11/11 23:59・2次当落11/16"
-        }
-      ],
-      "note": "るでや買取¥248,000(2026-11-07検証値・11/09再取得は要約のみ)−定価¥222,000−送料¥1,000=+¥25,000。⚠️店印あり¥208,000で赤字。リコーストア1次当落は11/9・当選なら11/11 23:59までに注文。GR SPACE TOKYO店頭抽選は11/22締切(来店本人確認要・当落12/5)"
-    },
-    {
-      "name": "RICOH GR IV 30th Anniversary Edition Kit",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 259800,
-      "jissei": 244000,
-      "premium_rate": 0.94,
-      "premium_level": "低",
-      "profit_max": -16800,
-      "best_route": "るでや買取",
-      "phase": "受付中",
-      "deadline": "2026-11-22T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ビックカメラ有楽町/池袋(アプリ抽選)",
-          "url": "https://www.biccamera.com/",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-10-25T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "参加条件あり"
-        },
-        {
-          "store": "ヨドバシ.com(WEB抽選)",
-          "url": "https://www.yodobashi.com/",
-          "phase": "受付中",
-          "entry_open": "2026-10-26T11:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "他商品の購入履歴要・🚫赤字so応募不要"
-        },
-        {
-          "store": "GR SPACE TOKYO(店頭抽選)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "2026-11-22T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "事前に本人確認要"
-        }
-      ],
-      "note": "🚫応募不要: るでや買取¥244,000(2026-11-01検証)−定価¥259,800−送料¥1,000=−¥16,800。メルカリ¥268,100(2026-10-24検証)でも−¥19,510"
-    },
-    {
-      "name": "ONE PIECEカード 世界最強の戦士 (OP-17)",
-      "brand": "ONE PIECE",
-      "category": "トレカ",
-      "price": 5760,
-      "jissei": 10400,
-      "premium_rate": 1.81,
-      "premium_level": "高",
-      "profit_max": 2940,
-      "best_route": "るでや買取",
-      "phase": "受付中",
-      "deadline": "",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "Joshin webショップ(対象会員へメール案内)",
-          "url": "https://shop.joshin.co.jp/",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-02T09:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "トレカプラザ55通販(WEB)",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf-D1Frcyt_6fF0Nyjgm_CTBAsmsuIEjnl9fUtaeseonqeTHg/viewform",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-06T23:59:00+09:00",
-          "result_date": "2026-11-07T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ノジマオンライン(招待制)",
-          "url": "https://contents.online.nojima.co.jp/secret202609/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "TierOne渋谷店(WEB)",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe_Of864NWgSghCeuBREZn4SM6lloXcDkZJGVAxDG-xKe9fjw/viewform",
-          "phase": "案内待ち",
-          "entry_open": "",
-          "entry_deadline": "2026-11-04T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "🚫基準割れ: るでや買取¥9,400(2026-11-06検証)−送料¥700−定価¥5,760=¥2,940。¥3,000未満so応募不要（自家用は別）"
     },
     {
       "name": "ポケカ スペシャルデッキセットMEGA",
@@ -941,7 +803,7 @@
       "premium_level": "",
       "profit_max": 0,
       "best_route": "",
-      "phase": "予告",
+      "phase": "受付中",
       "deadline": "2026-11-12T19:00:00+09:00",
       "status": "未応募",
       "routes": [
@@ -1088,15 +950,203 @@
         {
           "store": "ジョーシン(店頭・アプリ)",
           "url": "https://shop.joshin.co.jp/app/",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "2026-11-10T10:00:00+09:00",
           "entry_deadline": "2026-11-12T19:00:00+09:00",
           "result_date": "2026-11-13T00:00:00+09:00",
           "order_deadline": "",
-          "note": ""
+          "note": "各日10-19時レジ受付"
         }
       ],
       "note": "🔭WATCH・発売前で落札実績なしso粗利未判定"
+    },
+    {
+      "name": "RICOH GR IV (無印)",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 211800,
+      "jissei": 211000,
+      "premium_rate": 1.02,
+      "premium_level": "低",
+      "profit_max": -1800,
+      "best_route": "るでや買取",
+      "phase": "受付中",
+      "deadline": "2026-11-22T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "フジヤカメラ(WEB抽選)",
+          "url": "https://www.fujiya-camera.co.jp/shop/g/gC4549212311291/",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-01T17:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "10/31は本体ページ取得不可。締切は転売クエスト掲載の二次情報"
+        },
+        {
+          "store": "GR SPACE TOKYO(店頭抽選・来店本人確認要)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "2026-10-21T00:00:00+09:00",
+          "entry_deadline": "2026-11-22T23:59:00+09:00",
+          "result_date": "2026-12-05T00:00:00+09:00",
+          "order_deadline": "2026-12-20T00:00:00+09:00",
+          "note": ""
+        },
+        {
+          "store": "リコーイメージングストア(WEB抽選・再販)",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "注文中",
+          "entry_open": "2026-10-28T12:00:00+09:00",
+          "entry_deadline": "2026-10-30T12:00:00+09:00",
+          "result_date": "2026-11-06T00:00:00+09:00",
+          "order_deadline": "2026-11-09T23:59:00+09:00",
+          "note": "1次当選案内11/6・注文〜11/9 23:59・2次案内11/16・注文〜11/18"
+        }
+      ],
+      "note": "🚫応募不要(赤字): るでや買取¥211,000(2026-11-10検証)−定価¥211,800−送料¥1,000=−¥1,800。自家用なら別。"
+    },
+    {
+      "name": "RICOH GR IV HDF",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 222000,
+      "jissei": 248000,
+      "premium_rate": 1.12,
+      "premium_level": "低",
+      "profit_max": 25000,
+      "best_route": "るでや買取",
+      "phase": "受付中",
+      "deadline": "2026-11-22T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO(店頭抽選・来店本人確認要)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "2026-10-21T00:00:00+09:00",
+          "entry_deadline": "2026-11-22T23:59:00+09:00",
+          "result_date": "2026-12-05T00:00:00+09:00",
+          "order_deadline": "2026-12-20T00:00:00+09:00",
+          "note": "tenbaiquestでは対象機種未確認(11/4)"
+        },
+        {
+          "store": "リコーイメージングストア(WEB抽選・再販)",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "注文中",
+          "entry_open": "2026-10-28T12:00:00+09:00",
+          "entry_deadline": "2026-10-30T12:00:00+09:00",
+          "result_date": "2026-11-09T00:00:00+09:00",
+          "order_deadline": "2026-11-11T23:59:00+09:00",
+          "note": "1次注文〜11/11 23:59・2次当落11/16"
+        }
+      ],
+      "note": "るでや買取¥248,000(2026-11-10検証)−定価¥222,000−送料¥1,000=+¥25,000。⚠️店印あり¥208,000で赤字。リコーストア1次当選は11/11 23:59までに注文・2次案内11/16。GR SPACE TOKYO店頭抽選11/22締切"
+    },
+    {
+      "name": "RICOH GR IV 30th Anniversary Edition Kit",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 259800,
+      "jissei": 244000,
+      "premium_rate": 0.94,
+      "premium_level": "低",
+      "profit_max": -16800,
+      "best_route": "るでや買取",
+      "phase": "受付中",
+      "deadline": "2026-11-22T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ビックカメラ有楽町/池袋(アプリ抽選)",
+          "url": "https://www.biccamera.com/",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-10-25T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "参加条件あり"
+        },
+        {
+          "store": "ヨドバシ.com(WEB抽選)",
+          "url": "https://www.yodobashi.com/",
+          "phase": "受付中",
+          "entry_open": "2026-10-26T11:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "他商品の購入履歴要・🚫赤字so応募不要"
+        },
+        {
+          "store": "GR SPACE TOKYO(店頭抽選)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "2026-11-22T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "事前に本人確認要"
+        }
+      ],
+      "note": "🚫応募不要: るでや買取¥244,000(2026-11-01検証)−定価¥259,800−送料¥1,000=−¥16,800。メルカリ¥268,100(2026-10-24検証)でも−¥19,510"
+    },
+    {
+      "name": "ONE PIECEカード 世界最強の戦士 (OP-17)",
+      "brand": "ONE PIECE",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 9000,
+      "premium_rate": 1.81,
+      "premium_level": "高",
+      "profit_max": 2540,
+      "best_route": "るでや買取",
+      "phase": "受付中",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "Joshin webショップ(対象会員へメール案内)",
+          "url": "https://shop.joshin.co.jp/",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-02T09:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "トレカプラザ55通販(WEB)",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf-D1Frcyt_6fF0Nyjgm_CTBAsmsuIEjnl9fUtaeseonqeTHg/viewform",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-06T23:59:00+09:00",
+          "result_date": "2026-11-07T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ノジマオンライン(招待制)",
+          "url": "https://contents.online.nojima.co.jp/secret202609/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "TierOne渋谷店(WEB)",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe_Of864NWgSghCeuBREZn4SM6lloXcDkZJGVAxDG-xKe9fjw/viewform",
+          "phase": "案内待ち",
+          "entry_open": "",
+          "entry_deadline": "2026-11-04T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "🚫基準割れ: るでや買取¥9,000(2026-11-10検証)−送料¥700−定価¥5,760=¥2,540。続落中so応募不要"
     },
     {
       "name": "RICOH GR IIIx HDF",
@@ -1227,7 +1277,7 @@
           "note": ""
         }
       ],
-      "note": "るでや買取¥12,400(2026-11-09検証)−送料¥700−定価¥5,760=¥5,940。11/9時点で受付中の抽選窓口なし。"
+      "note": "るでや買取¥12,400(2026-11-10検証)−送料¥700−定価¥5,760=¥5,940。11/10時点で受付中の抽選窓口なし。"
     },
     {
       "name": "Pokémon x CASIO G-SHOCK GA-110PKM-7AJR",
