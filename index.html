@@ -575,7 +575,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
   #cards[data-tab="list"] .card{margin-bottom:0}
   #cards[data-tab="list"] .empty{grid-column:1/-1}
   /* 抽選/ワード/領収書/在庫タブ: 左右中央・読みやすい幅に固定（右寄り崩れ防止） */
-  #cards[data-tab="lottery"],#cards[data-tab="words"],#cards[data-tab="receipts"],#cards[data-tab="inventory"],#cards[data-tab="inspect"],#cards[data-tab="artifacts"]{
+  #cards[data-tab="lottery"],#cards[data-tab="words"],#cards[data-tab="receipts"],#cards[data-tab="inventory"],#cards[data-tab="inspect"],#cards[data-tab="artifacts"],#cards[data-tab="kaitori"]{
     max-width:760px;margin-left:auto;margin-right:auto;display:block}
   .card-name{font-size:15px}
   .row{font-size:12.5px}
@@ -787,6 +787,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 <!-- 「その他」メニュー（たまに使うタブ・タップで展開） -->
 <div class="more-menu" id="more-menu">
   <div class="more-hd">その他のタブ</div>
+  <div class="more-item" onclick="pickMore('kaitori')"><span>💴</span> 買取（ルデヤ巡回）</div>
   <div class="more-item" onclick="pickMore('receipts')"><span>🧾</span> 領収書</div>
   <div class="more-item" onclick="pickMore('artifacts')"><span>📄</span> 成果物</div>
   <div class="more-item" onclick="pickMore('archive')"><span>📅</span> 日別</div>
@@ -845,8 +846,8 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 23;
-const APP_VER_DATE = '2026-10-31';
+const APP_VER = 24;
+const APP_VER_DATE = '2026-11-17';
 
 // 全角数字→半角に正規化（金額入力・全角０-９やカンマ／円記号も許容）
 function toHalfWidthNum(s){ return (s||'').replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xFEE0)).replace(/[，､、]/g,','); }
@@ -1480,7 +1481,7 @@ function buildItemLinks(c){
 }
 
 // ② その他メニュー（たまに使うタブ）
-const MORE_TABS=['receipts','artifacts','archive','help','skiplog','bidtrack'];
+const MORE_TABS=['kaitori','receipts','artifacts','archive','help','skiplog','bidtrack'];
 function toggleMoreMenu(e){ if(e)e.stopPropagation(); const m=document.getElementById('more-menu'),b=document.getElementById('more-backdrop'); const open=m.classList.toggle('open'); b.classList.toggle('open',open); }
 function closeMoreMenu(){ document.getElementById('more-menu').classList.remove('open'); document.getElementById('more-backdrop').classList.remove('open'); }
 function pickMore(tab){ closeMoreMenu(); setTab(tab); }
@@ -1504,6 +1505,7 @@ function setTab(tab) {
   else if (tab==='skiplog') { showSkipReport(); }
   else if (tab==='bidtrack') { showBidTracking(); }
   else if (tab==='artifacts') { showArtifacts(); }
+  else if (tab==='kaitori') { showKaitori(); }
   else if (tab==='archive') {
     document.getElementById('cards').innerHTML = `<div class="empty"><div style="font-size:32px;margin-bottom:8px">📅</div><div>日別アーカイブ</div><div style="font-size:11px;margin-top:4px">上の日付バーで日を選んでください</div></div>`;
   } else if (tab==='help') {
@@ -1687,6 +1689,91 @@ async function showLottery(){
     catBar.innerHTML=cats.map(c=>`<button class="lot-cat-btn${c===lotCatFilter?' on':''}" data-cat="${c}" onclick="setLotCat('${c}')">${CAT_NAMES[c]||c}</button>`).join('');
   }
   renderLottery();
+}
+
+// ===== 買取タブ（ルデヤ巡回・2026-11-17 v24） =====
+// データ: data/kaitori_watch.json（~/banshee/kaitori-watch/kaitori_watch.py が1日3回書く）
+let kaitoriData=null, kaitoriView='ps5';
+const KT_VIEWS={ps5:'🎮 PS5 Pro',normal:'💰 通常候補',point:'💳 ポイント狙い',unpriced:'❓ 定価なし',log:'📜 記録'};
+function ktYen(n){ if(n==null) return '−'; return (n<0?'−¥':'¥')+Math.abs(n).toLocaleString('ja-JP'); }
+function ktEsc(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function ktSpark(jan){
+  const s=(kaitoriData.series||{})[jan]||[]; if(s.length<2) return '';
+  const vals=s.map(p=>p[1]), min=Math.min(...vals), max=Math.max(...vals), W=140, H=26;
+  const xy=s.map((p,i)=>`${(i/(s.length-1)*W).toFixed(1)},${(max===min?H/2:H-((p[1]-min)/(max-min))*H).toFixed(1)}`).join(' ');
+  return `<div class="lot-row"><span class="lot-lbl">買取の推移（${s.length}回）</span><span class="lot-val"><svg class="spark" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><polyline points="${xy}" fill="none" stroke="#e08030" stroke-width="1.5"/></svg></span></div>`;
+}
+function ktMoney(n){ return `<span class="lot-val ${n>=0?'profit':''}" style="${n<0?'color:var(--alert)':''}">${ktYen(n)}</span>`; }
+function ktCard(r){
+  const d=kaitoriData, pct=((d.card_rate||0)*100).toFixed(1);
+  const tierDef={normal:['phase-entry','💰 通常候補（現金利益 '+ktYen(d.cash_threshold)+'以上）'],point:['phase-order','💳 ポイント狙い候補'],
+    loss:['phase-wait','対象外'],stopped:['phase-end','⏸ 申込一時停止中'],unpriced:['phase-wait','定価未登録']};
+  const [cls,label]=tierDef[r.tier]||['phase-wait',r.tier];
+  const drop=(r.drop_pct!=null)?`ピーク比 −${r.drop_pct}%`:'';
+  const dropWarn=(r.drop_pct!=null && r.drop_pct>=d.exit_drop_pct);
+  let rows=`<div class="lot-row"><span class="lot-lbl">買取（ルデヤ）</span><span class="lot-val">${ktYen(r.price)}</span></div>`;
+  if(r.list_price){
+    rows+=`<div class="lot-row"><span class="lot-lbl">購入価格（定価・税込）</span><span class="lot-val">${ktYen(r.list_price)}${r.list_asof?` <span style="color:var(--muted);font-weight:400;font-size:10px">${ktEsc(r.list_asof)}時点</span>`:''}</span></div>`;
+    rows+=`<div class="lot-row"><span class="lot-lbl">現金利益</span>${ktMoney(r.cash)}</div>`;
+    rows+=`<div class="lot-row"><span class="lot-lbl">クレカポイント（${pct}%）</span><span class="lot-val">+${ktYen(r.card_amt)}</span></div>`;
+    if(r.store_later_amt) rows+=`<div class="lot-row"><span class="lot-lbl">後日の店舗ポイント（×0.8）</span><span class="lot-val">+${ktYen(r.store_later_amt)}</span></div>`;
+    rows+=`<div class="lot-row"><span class="lot-lbl">総合利益</span>${ktMoney(r.total)}</div>`;
+  }
+  if(r.peak) rows+=`<div class="lot-row"><span class="lot-lbl">直近ピーク</span><span class="lot-val" style="${dropWarn?'color:var(--alert)':''}">${ktYen(r.peak)} ${drop}</span></div>`;
+  rows+=ktSpark(r.jan);
+  return `<div class="lot-card ${cls}">
+  <div class="lot-strip ${cls}"><span>${label}${r.in_watch?' ・👀ウォッチ中':''}</span><span>${dropWarn?'⚠️撤退検討':''}</span></div>
+  <div class="lot-body">
+    <div class="lot-name">${ktEsc(r.name)}</div>
+    <div class="lot-brand">${ktEsc(r.cat)} ・ JAN ${ktEsc(r.jan)}${r.edition?' ・ '+ktEsc(r.edition):''}</div>
+    <div class="lot-rows">${rows}</div>
+    ${r.memo?`<div class="lot-note">${ktEsc(r.memo)}</div>`:''}
+    <div class="lot-actions"><a class="lot-url-btn" href="${ktEsc(r.url)}" target="_blank" rel="noopener">🔗 ルデヤの買取ページ</a></div>
+  </div></div>`;
+}
+function renderKaitori(){
+  const area=document.getElementById('kt-cards'); if(!area||!kaitoriData) return;
+  const d=kaitoriData;
+  document.querySelectorAll('.kt-view-btn').forEach(b=>b.classList.toggle('on',b.dataset.v===kaitoriView));
+  if(kaitoriView==='log'){
+    const w=Object.entries(d.watch||{});
+    const al=(d.alerts||[]).slice().reverse(), rm=(d.removed||[]).slice().reverse();
+    const box=(t,body)=>`<div class="lot-card"><div class="lot-body"><div class="lot-name">${t}</div><div class="lot-rows">${body||'<div class="lot-row"><span class="lot-lbl">なし</span></div>'}</div></div></div>`;
+    area.innerHTML=
+      box(`👀 ウォッチ中（${w.length}品）`, w.map(([j,x])=>`<div class="lot-row"><span class="lot-lbl">${ktEsc(x.name)}</span><span class="lot-val">${ktEsc((x.added_at||'').slice(5,16).replace('T',' '))}〜</span></div>`).join(''))+
+      box('⚠️ 撤退検討の通知', al.map(x=>`<div class="lot-row"><span class="lot-lbl">${ktEsc((x.ts||'').slice(5,16).replace('T',' '))} ${ktEsc(x.name)}</span><span class="lot-val" style="color:var(--alert)">−${x.drop_pct}%（${ktYen(x.price)}）</span></div>`).join(''))+
+      box('🗑 ウォッチから外した品', rm.map(x=>`<div class="lot-row"><span class="lot-lbl">${ktEsc((x.removed_at||'').slice(5,16).replace('T',' '))} ${ktEsc(x.name)}<br><span style="font-size:10px">${ktEsc(x.reason)}</span></span><span class="lot-val">${ktYen(x.last_cash)}</span></div>`).join(''));
+    return;
+  }
+  if(kaitoriView==='unpriced'){
+    const u=d.unpriced||[];
+    area.innerHTML=`<div class="lot-note" style="margin-bottom:10px">定価が登録されていない新品を、買取の高い順に並べています（上位${u.length}品）。定価が分かれば利益を計算できます。</div>`+
+      (u.length?`<div class="lot-card"><div class="lot-body"><div class="lot-rows">`+u.map(r=>`<div class="lot-row"><span class="lot-lbl"><a href="${ktEsc(r.url)}" target="_blank" rel="noopener" style="color:inherit">${ktEsc(r.name)}</a><br><span style="font-size:10px">${ktEsc(r.cat)} ・ ${ktEsc(r.jan)}</span></span><span class="lot-val">${ktYen(r.price)}</span></div>`).join('')+`</div></div></div>`:'<div class="empty">なし</div>');
+    return;
+  }
+  const list=d[kaitoriView]||[];
+  const head={normal:`通常候補: 現金利益が ${ktYen(d.cash_threshold)} 以上の品`,
+    point:`ポイント狙い候補: 現金利益が ${ktYen(d.cash_threshold)} 未満でも、総合利益が ${ktYen(d.point_min_total)} 以上で、現金の赤字が ${ktYen(-d.point_max_cash_loss)} までの品（クレカ ${((d.card_rate||0)*100).toFixed(1)}% で計算）`,
+    ps5:`PS5 Pro は利益に関係なく毎回記録し、ピークから ${d.exit_drop_pct}% 下がったら Discord に「撤退検討」を送ります`}[kaitoriView]||'';
+  area.innerHTML=`<div class="lot-note" style="margin-bottom:10px">${head}。送料 ${ktYen(d.ship_cost)}・交通費 ${ktYen(d.travel_cost)} で計算。在庫は自動では見ていません。</div>`+
+    (list.length?list.map(ktCard).join(''):'<div class="empty">該当なし</div>');
+}
+function setKtView(v){ kaitoriView=v; renderKaitori(); }
+async function showKaitori(){
+  const main=document.getElementById('cards');
+  main.innerHTML=`<div class="lot-header"><span class="lot-title">💴 買取ウォッチ（ルデヤ）</span><span class="lot-meta" id="kt-meta">読み込み中…</span></div>
+<div class="lot-cat-bar" id="kt-bar">${Object.entries(KT_VIEWS).map(([k,v])=>`<button class="lot-cat-btn kt-view-btn${k===kaitoriView?' on':''}" data-v="${k}" onclick="setKtView('${k}')">${v}</button>`).join('')}</div>
+<div id="kt-cards"><div class="empty">取得中…</div></div>`;
+  try{
+    const r=await fetch(`data/kaitori_watch.json?t=${Date.now()}`,{cache:'no-store'});
+    if(!r.ok) throw new Error();
+    kaitoriData=await r.json();
+  }catch(e){ document.getElementById('kt-cards').innerHTML='<div class="empty">買取データを取得できませんでした</div>'; return; }
+  const d=kaitoriData, run=d.run||{};
+  document.getElementById('kt-meta').innerHTML=`${fresh(d.updated_at)}${ktEsc(d.updated_at)} ・ ${run.items||0}品${run.cat_ng?` ・ 取得失敗${run.cat_ng}カテゴリ`:''}`;
+  const cnt={ps5:(d.ps5||[]).length,normal:(d.normal||[]).length,point:(d.point||[]).length,unpriced:(d.unpriced||[]).length};
+  document.querySelectorAll('.kt-view-btn').forEach(b=>{ if(cnt[b.dataset.v]!=null) b.textContent=KT_VIEWS[b.dataset.v]+' '+cnt[b.dataset.v]; });
+  renderKaitori();
 }
 
 // ===== 検索ワードタブ（実績ランク制・1円先頭） =====
