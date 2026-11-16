@@ -1,18 +1,18 @@
 {
- "updated_at": "2026-11-17 03:36",
+ "updated_at": "2026-11-17 08:20",
  "source": "買取ルデヤ（kaitori-rudeya.com）",
  "card_rate": 0.01,
  "cash_threshold": 4000,
  "point_min_total": 1000,
  "point_max_cash_loss": -2000,
  "exit_drop_pct": 5.0,
- "ship_cost": 0,
+ "ship_cost": 1000,
  "travel_cost": 0,
  "run": {
   "cat_ok": 63,
   "cat_ng": 0,
   "items": 1829,
-  "fetched_at": "2026-11-17T03:33:42+09:00"
+  "fetched_at": "2026-11-17T08:25:33+09:00"
  },
  "ps5": [
   {
@@ -26,15 +26,16 @@
    "list_price": 137980,
    "list_asof": "2026-04-02",
    "edition": "通常版",
-   "cash": 62020,
+   "cash": 61020,
    "card_amt": 1380,
    "store_later_amt": 0,
-   "total": 63400,
+   "total": 62400,
    "tier": "normal",
    "peak": 200000,
    "peak_at": "2026-11-17T03:36:00+09:00",
    "drop_pct": 0.0,
-   "in_watch": false
+   "ended": false,
+   "in_watch": true
   },
   {
    "jan": "4948872416320",
@@ -47,14 +48,15 @@
    "list_price": 137980,
    "list_asof": "2026-04-02",
    "edition": "通常版（旧型）",
-   "cash": 57020,
+   "cash": 56020,
    "card_amt": 1380,
    "store_later_amt": 0,
-   "total": 58400,
+   "total": 57400,
    "tier": "normal",
    "peak": 195000,
    "peak_at": "2026-11-17T03:36:00+09:00",
    "drop_pct": 0.0,
+   "ended": true,
    "in_watch": false
   },
   {
@@ -68,18 +70,323 @@
    "list_price": 168980,
    "list_asof": "2024-11-21",
    "edition": "30周年記念版（世界12,300台）",
-   "cash": 31020,
+   "cash": 30020,
    "card_amt": 1690,
    "store_later_amt": 0,
-   "total": 32710,
+   "total": 31710,
    "tier": "normal",
    "peak": 200000,
    "peak_at": "2026-11-17T03:36:00+09:00",
    "drop_pct": 0.0,
+   "ended": true,
    "in_watch": false
   }
  ],
  "normal": [
+  {
+   "jan": "4570118002167",
+   "name": "ONE PIECEカードゲーム 新時代の主役 OP-05 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 442000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6467",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 377640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 378274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549660853268",
+   "name": "ONE PIECEカードゲーム ROMANCE DAWN OP-01 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 390000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6463",
+   "list_price": 57024,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 331976,
+   "card_amt": 570,
+   "store_later_amt": 0,
+   "total": 332546,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769721816",
+   "name": "ONE PIECEカードゲーム エクストラブースター Anime 25th collection EB-02 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 318000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6474",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 253640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 254274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769734311",
+   "name": "ONE PIECEカードゲーム 神速の拳 OP-11 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 300000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6362",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 235640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 236274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118001900",
+   "name": "ONE PIECEカードゲーム 双璧の覇者 OP-06 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 234000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6468",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 169640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 170274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549660860488",
+   "name": "ONE PIECEカードゲーム 頂上決戦 OP-02 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 221000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6464",
+   "list_price": 57024,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 162976,
+   "card_amt": 570,
+   "store_later_amt": 0,
+   "total": 163546,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118084910",
+   "name": "ONE PIECEカードゲーム エクストラブースター メモリアルコレクション EB-01 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 221000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6473",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 156640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 157274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118259370",
+   "name": "ONE PIECEカードゲーム 新たなる皇帝 OP-09 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 195000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6361",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 130640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 131274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549660954941",
+   "name": "ONE PIECEカードゲーム 謀略の王国 OP-04 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 192000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6466",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 127640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 128274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549660863182",
+   "name": "ONE PIECEカードゲーム 強大な敵 OP-03 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 185000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6465",
+   "list_price": 57024,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 126976,
+   "card_amt": 570,
+   "store_later_amt": 0,
+   "total": 127546,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118145529",
+   "name": "ONE PIECEカードゲーム 500年後の未来 OP-07 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 188000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6469",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 123640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 124274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769864865",
+   "name": "ONE PIECEカードゲーム 受け継がれる意志 OP-13 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 180000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6363",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 115640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 116274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769796821",
+   "name": "ONE PIECEカードゲーム 師弟の絆 OP-12 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 179000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6472",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 114640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 115274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769937613",
+   "name": "ONE PIECEカードゲーム エクストラブースター EGGHEAD CRISIS EB-04 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 150000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6625",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 85640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 86274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582770059212",
+   "name": "ONE PIECEカードゲーム エクストラブースター ONE PIECE Heroines Edition vol.2 EB-05 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 143000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7686",
+   "list_price": 69120,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 72880,
+   "card_amt": 691,
+   "store_later_amt": 0,
+   "total": 73571,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769864872",
+   "name": "ONE PIECEカードゲーム エクストラブースター ONE PIECE Heroines Edition EB-03 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 137000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6386",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 72640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 73274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
   {
    "jan": "4948872417075",
    "name": "新型 プレイステーション5 プロ PlayStation5 Pro (CFI-7100B01)",
@@ -91,14 +398,53 @@
    "list_price": 137980,
    "list_asof": "2026-04-02",
    "edition": "通常版",
-   "cash": 62020,
+   "cash": 61020,
    "card_amt": 1380,
    "store_later_amt": 0,
-   "total": 63400,
+   "total": 62400,
    "tier": "normal",
    "peak": 200000,
    "peak_at": "2026-11-17T03:36:00+09:00",
    "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
+  },
+  {
+   "jan": "4582769707100",
+   "name": "ONE PIECEカードゲーム 王族の血統 OP-10 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 125000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6471",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 60640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 61274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118213686",
+   "name": "ONE PIECEカードゲーム 二つの伝説 OP-08 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 124000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6470",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 59640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 60274,
+   "tier": "normal",
+   "ended": false,
    "in_watch": false
   },
   {
@@ -112,14 +458,129 @@
    "list_price": 137980,
    "list_asof": "2026-04-02",
    "edition": "通常版（旧型）",
-   "cash": 57020,
+   "cash": 56020,
    "card_amt": 1380,
    "store_later_amt": 0,
-   "total": 58400,
+   "total": 57400,
    "tier": "normal",
    "peak": 195000,
    "peak_at": "2026-11-17T03:36:00+09:00",
    "drop_pct": 0.0,
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "0814585022513",
+   "name": "Steam Deck 有機EL (OLED) ホワイト 1TB SSD",
+   "cat": "Steam",
+   "price": 164600,
+   "memo": "中古品、免税品買取不可\n箱開封のみ減額-3000\n※中身が完品の場合のみ買取可能",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/5410",
+   "list_price": 109800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 53800,
+   "card_amt": 1098,
+   "store_later_amt": 0,
+   "total": 54898,
+   "tier": "normal",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769922961",
+   "name": "ONE PIECEカードゲーム 蒼海の七傑 OP-14 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 116000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6476",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 51640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 52274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582770058390",
+   "name": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士 OP-17 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 110000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7326",
+   "list_price": 69120,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 39880,
+   "card_amt": 691,
+   "store_later_amt": 0,
+   "total": 40571,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769982880",
+   "name": "ONE PIECEカードゲーム ブースターパック 決戦の刻 OP-16 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 101000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6972",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 36640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 37274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769965999",
+   "name": "ONE PIECEカードゲーム エクストラブースター 神の島の冒険 OP-15 [カートン]",
+   "cat": "ワンピースカード",
+   "price": 100000,
+   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6677",
+   "list_price": 63360,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 35640,
+   "card_amt": 634,
+   "store_later_amt": 0,
+   "total": 36274,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4948872850391",
+   "name": "プレイステーション5 Ghost of Yotei ゴールド リミテッドエディション (CFIJ-10029)",
+   "cat": "PlayStation5",
+   "price": 118700,
+   "memo": "印有減額なし コード無効 -20000円 弊社側にてコードを全て控えております為、買取後にコードが無効となっている場合は警察に通報致します。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6169",
+   "list_price": 86980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 30720,
+   "card_amt": 870,
+   "store_later_amt": 0,
+   "total": 31590,
+   "tier": "normal",
+   "ended": false,
    "in_watch": false
   },
   {
@@ -133,14 +594,566 @@
    "list_price": 168980,
    "list_asof": "2024-11-21",
    "edition": "30周年記念版（世界12,300台）",
-   "cash": 31020,
+   "cash": 30020,
    "card_amt": 1690,
    "store_later_amt": 0,
-   "total": 32710,
+   "total": 31710,
    "tier": "normal",
    "peak": 200000,
    "peak_at": "2026-11-17T03:36:00+09:00",
    "drop_pct": 0.0,
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118002174",
+   "name": "ONE PIECEカードゲーム 新時代の主役 OP-05 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 36000,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6523",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 29720,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 29773,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329346038",
+   "name": "ポケモンカード S&V 強化拡張パック 151  BOX [SV2a]",
+   "cat": "ポケモンカード",
+   "price": 36500,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3673",
+   "list_price": 5800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 29700,
+   "card_amt": 58,
+   "store_later_amt": 0,
+   "total": 29758,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329322568",
+   "name": "ポケモンカードゲーム S&S 拡張パック 25th ANNIVERSARY COLLECTION BOX [S8a]",
+   "cat": "ポケモンカード",
+   "price": 35000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7017",
+   "list_price": 4752,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 29248,
+   "card_amt": 48,
+   "store_later_amt": 0,
+   "total": 29296,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582770012040",
+   "name": "ONE PIECEカードゲーム プレミアムカードコレクション-熊本県スペシャル-",
+   "cat": "ワンピースカード",
+   "price": 30000,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7029",
+   "list_price": 2200,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 26800,
+   "card_amt": 22,
+   "store_later_amt": 0,
+   "total": 26822,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549660853503",
+   "name": "ONE PIECEカードゲーム ROMANCE DAWN OP-01 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 31300,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6515",
+   "list_price": 4752,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 25548,
+   "card_amt": 48,
+   "store_later_amt": 0,
+   "total": 25596,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769733727",
+   "name": "ONE PIECEカードゲーム エクストラブースター Anime 25th collection EB-02 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 26100,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6530",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 19820,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 19873,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4948872415934",
+   "name": "プレイステーション5 PlayStation5 Slimモデル (CFI-2000A01) 新型",
+   "cat": "PlayStation5",
+   "price": 118700,
+   "memo": "印有減額なし",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3848",
+   "list_price": 97980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 19720,
+   "card_amt": 980,
+   "store_later_amt": 0,
+   "total": 20700,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4948872415910",
+   "name": "プレイステーション5 PlayStation5 Slimモデル (CFI-2000B01)デジタル・エディション 新型",
+   "cat": "PlayStation5",
+   "price": 108900,
+   "memo": "印有減額なし",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3849",
+   "list_price": 89980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 17920,
+   "card_amt": 900,
+   "store_later_amt": 0,
+   "total": 18820,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769774683",
+   "name": "ONE PIECEカードゲーム 神速の拳 OP-11 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 24000,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6505",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 17720,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 17773,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769893971",
+   "name": "神龍への願い FB07 [BOX]",
+   "cat": "ドラゴンボールカード",
+   "price": 24000,
+   "memo": "BOX未開封のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6914",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 17720,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 17773,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329427300",
+   "name": "ポケモンカード S&V 拡張パックデラックス ブラックボルト BOX [SV11B_DX]",
+   "cat": "ポケモンカード",
+   "price": 23000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6321",
+   "list_price": 5800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 16200,
+   "card_amt": 58,
+   "store_later_amt": 0,
+   "total": 16258,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777188907",
+   "name": "サントリー シングルモルト ウイスキー 山崎 18年 700ml 43度",
+   "cat": "山崎",
+   "price": 84000,
+   "memo": "外箱なし、ラベル欠損、買取不可\n購入証明書（レシートまたは納品書など）が必須です。\n郵送買取、池袋店買取限定です。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/4418",
+   "list_price": 67100,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 15900,
+   "card_amt": 671,
+   "store_later_amt": 0,
+   "total": 16571,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329427768",
+   "name": "ポケモンカード S&V 拡張パック ブラックボルト BOX [SV11B]",
+   "cat": "ポケモンカード",
+   "price": 21500,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6319",
+   "list_price": 5800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 14700,
+   "card_amt": 58,
+   "store_later_amt": 0,
+   "total": 14758,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329373362",
+   "name": "ポケモンカードゲーム S&V ハイクラスパック VSTARユニバース BOX [S12a]",
+   "cat": "ポケモンカード",
+   "price": 21000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/2501",
+   "list_price": 5500,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 14500,
+   "card_amt": 55,
+   "store_later_amt": 0,
+   "total": 14555,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769937651",
+   "name": "ONEPIECEカードゲーム 3rd ANNIVERSARY SET",
+   "cat": "ワンピースカード",
+   "price": 35000,
+   "memo": "ダンボール(茶箱)未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7031",
+   "list_price": 19800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 14200,
+   "card_amt": 198,
+   "store_later_amt": 0,
+   "total": 14398,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118259509",
+   "name": "ONE PIECEカードゲーム プレミアムブースター THE BEST PRB-01 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 20200,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6501",
+   "list_price": 5500,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 13700,
+   "card_amt": 55,
+   "store_later_amt": 0,
+   "total": 13755,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329374659",
+   "name": "ポケモンカード S&V 拡張パック ロケット団の栄光 BOX [SV10]",
+   "cat": "ポケモンカード",
+   "price": 20000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6359",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 13600,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 13654,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329361505",
+   "name": "ポケモンカード S&V 強化拡張パック  超電ブレイカー BOX [SV8]",
+   "cat": "ポケモンカード",
+   "price": 20000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6317",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 13600,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 13654,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329427324",
+   "name": "ポケモンカード S&V 拡張パックデラックス ホワイトフレア BOX [SV11W_DX]",
+   "cat": "ポケモンカード",
+   "price": 20000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6322",
+   "list_price": 5800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 13200,
+   "card_amt": 58,
+   "store_later_amt": 0,
+   "total": 13258,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329427782",
+   "name": "ポケモンカード S&V 拡張パック ホワイトフレア BOX [SV11W]",
+   "cat": "ポケモンカード",
+   "price": 19800,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6320",
+   "list_price": 5800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 13000,
+   "card_amt": 58,
+   "store_later_amt": 0,
+   "total": 13058,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118001962",
+   "name": "ONE PIECEカードゲーム 双璧の覇者 OP-06 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 19100,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6524",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 12820,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 12873,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4902370552683",
+   "name": "Nintendo Switch 2 多言語版 BEE-S-KB6AA",
+   "cat": "Nintendo Switch 2",
+   "price": 83200,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/5797",
+   "list_price": 69980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 12220,
+   "card_amt": 700,
+   "store_later_amt": 0,
+   "total": 12920,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4948872016940",
+   "name": "プレイステーション5 PlayStation5 Slimモデル(CFIJ-10018) ワイヤレスコントローラー ダブルパック 新型",
+   "cat": "PlayStation5",
+   "price": 121200,
+   "memo": "印有減額なし",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3850",
+   "list_price": 107980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 12220,
+   "card_amt": 1080,
+   "store_later_amt": 0,
+   "total": 13300,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769937194",
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション ONE PIECE DAY’25",
+   "cat": "ワンピースカード",
+   "price": 14000,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6537",
+   "list_price": 990,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 12010,
+   "card_amt": 10,
+   "store_later_amt": 0,
+   "total": 12020,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118085047",
+   "name": "ONE PIECEカードゲーム エクストラブースター メモリアルコレクション EB-01 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 18000,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6529",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 11720,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 11773,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549660862963",
+   "name": "ONE PIECEカードゲーム 頂上決戦 OP-02 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 17300,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6520",
+   "list_price": 4752,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 11548,
+   "card_amt": 48,
+   "store_later_amt": 0,
+   "total": 11596,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329463872",
+   "name": "ポケモンカードゲーム MEGA 30th CELEBRATION FUTURISTIC BOX",
+   "cat": "ポケモンカード",
+   "price": 40000,
+   "memo": "新品未開封のみ買取可 箱潰れや痛み具合によって減額又は着払いにて返送となります。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7375",
+   "list_price": 27500,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 11500,
+   "card_amt": 275,
+   "store_later_amt": 0,
+   "total": 11775,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4948872850995",
+   "name": "プレイステーション5 デジタル・エディション “Marvel’s Wolverine” バトルイエロー リミテッドエディション (CFIJ-10033)",
+   "cat": "PlayStation5",
+   "price": 108900,
+   "memo": "印有減額なし",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7269",
+   "list_price": 96980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 10920,
+   "card_amt": 970,
+   "store_later_amt": 0,
+   "total": 11890,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329346274",
+   "name": "ポケモンカードゲーム S&V 強化拡張パック トリプレットビート BOX [SV1a]",
+   "cat": "ポケモンカード",
+   "price": 16800,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/2552",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 10400,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 10454,
+   "tier": "normal",
+   "ended": false,
    "in_watch": false
   },
   {
@@ -154,12 +1167,16 @@
    "list_price": 469800,
    "list_asof": "",
    "edition": "",
-   "cash": 11200,
+   "cash": 10200,
    "card_amt": 4698,
    "store_later_amt": 0,
-   "total": 15898,
+   "total": 14898,
    "tier": "normal",
-   "in_watch": false
+   "peak": 481000,
+   "peak_at": "2026-11-17T03:36:00+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
   },
   {
    "jan": "4549995732849",
@@ -172,11 +1189,148 @@
    "list_price": 469800,
    "list_asof": "",
    "edition": "",
-   "cash": 11200,
+   "cash": 10200,
    "card_amt": 4698,
    "store_later_amt": 0,
-   "total": 15898,
+   "total": 14898,
    "tier": "normal",
+   "peak": 481000,
+   "peak_at": "2026-11-17T03:36:00+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
+  },
+  {
+   "jan": "4948872016957",
+   "name": "プレイステーション5 PlayStation5 Slimモデル (CFIJ-10019) デジタル・エディション ワイヤレスコントローラー ダブルパック 新型",
+   "cat": "PlayStation5",
+   "price": 110700,
+   "memo": "印有減額なし",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3851",
+   "list_price": 99980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 9720,
+   "card_amt": 1000,
+   "store_later_amt": 0,
+   "total": 10720,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329346014",
+   "name": "ポケモンカードゲーム S&V 拡張パック 黒炎の支配者 BOX [SV3]",
+   "cat": "ポケモンカード",
+   "price": 16000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3674",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 9600,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 9654,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118259493",
+   "name": "ONE PIECEカードゲーム 新たなる皇帝 OP-09 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 15800,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6502",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 9520,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 9573,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329394824",
+   "name": "ポケモンカード S&V ハイクラスパック シャイニートレジャーex BOX [SV4a]",
+   "cat": "ポケモンカード",
+   "price": 16000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6316",
+   "list_price": 5500,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 9500,
+   "card_amt": 55,
+   "store_later_amt": 0,
+   "total": 9555,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769734441",
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション -リーダーコレクション-",
+   "cat": "ワンピースカード",
+   "price": 12000,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7293",
+   "list_price": 1500,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 9500,
+   "card_amt": 15,
+   "store_later_amt": 0,
+   "total": 9515,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549660863373",
+   "name": "ONE PIECEカードゲーム 強大な敵 OP-03 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 15200,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6521",
+   "list_price": 4752,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 9448,
+   "card_amt": 48,
+   "store_later_amt": 0,
+   "total": 9496,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549660954958",
+   "name": "ONE PIECEカードゲーム 謀略の王国 OP-04 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 15700,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6522",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 9420,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 9473,
+   "tier": "normal",
+   "ended": false,
    "in_watch": false
   },
   {
@@ -190,12 +1344,16 @@
    "list_price": 574800,
    "list_asof": "",
    "edition": "",
-   "cash": 10200,
+   "cash": 9200,
    "card_amt": 5748,
    "store_later_amt": 0,
-   "total": 15948,
+   "total": 14948,
    "tier": "normal",
-   "in_watch": false
+   "peak": 585000,
+   "peak_at": "2026-11-17T03:36:00+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
   },
   {
    "jan": "4549995732948",
@@ -208,11 +1366,72 @@
    "list_price": 574800,
    "list_asof": "",
    "edition": "",
-   "cash": 10200,
+   "cash": 9200,
    "card_amt": 5748,
    "store_later_amt": 0,
-   "total": 15948,
+   "total": 14948,
    "tier": "normal",
+   "peak": 585000,
+   "peak_at": "2026-11-17T03:36:00+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
+  },
+  {
+   "jan": "4570118145765",
+   "name": "ONE PIECEカードゲーム 500年後の未来 OP-07 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 15200,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6525",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 8920,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 8973,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329361352",
+   "name": "ポケモンカードゲーム S&V 強化拡張パック 楽園ドラゴーナ BOX [SV7a]",
+   "cat": "ポケモンカード",
+   "price": 15200,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6429",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 8800,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 8854,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329391397",
+   "name": "ポケモンカードゲーム S&V 強化拡張パック レイジングサーフ BOX [SV3a]",
+   "cat": "ポケモンカード",
+   "price": 15200,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3790",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 8800,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 8854,
+   "tier": "normal",
+   "ended": false,
    "in_watch": false
   },
   {
@@ -226,12 +1445,16 @@
    "list_price": 129800,
    "list_asof": "",
    "edition": "",
-   "cash": 9700,
+   "cash": 8700,
    "card_amt": 1298,
    "store_later_amt": 0,
-   "total": 10998,
+   "total": 9998,
    "tier": "normal",
-   "in_watch": false
+   "peak": 139500,
+   "peak_at": "2026-11-17T03:36:00+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
   },
   {
    "jan": "4549995649192",
@@ -244,12 +1467,16 @@
    "list_price": 129800,
    "list_asof": "",
    "edition": "",
-   "cash": 9700,
+   "cash": 8700,
    "card_amt": 1298,
    "store_later_amt": 0,
-   "total": 10998,
+   "total": 9998,
    "tier": "normal",
-   "in_watch": false
+   "peak": 139500,
+   "peak_at": "2026-11-17T03:36:00+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
   },
   {
    "jan": "4549995649154",
@@ -262,12 +1489,16 @@
    "list_price": 129800,
    "list_asof": "",
    "edition": "",
-   "cash": 9700,
+   "cash": 8700,
    "card_amt": 1298,
    "store_later_amt": 0,
-   "total": 10998,
+   "total": 9998,
    "tier": "normal",
-   "in_watch": false
+   "peak": 139500,
+   "peak_at": "2026-11-17T03:36:00+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
   },
   {
    "jan": "4549995649161",
@@ -280,12 +1511,16 @@
    "list_price": 129800,
    "list_asof": "",
    "edition": "",
-   "cash": 9700,
+   "cash": 8700,
    "card_amt": 1298,
    "store_later_amt": 0,
-   "total": 10998,
+   "total": 9998,
    "tier": "normal",
-   "in_watch": false
+   "peak": 139500,
+   "peak_at": "2026-11-17T03:36:00+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
   },
   {
    "jan": "4549995649178",
@@ -298,11 +1533,661 @@
    "list_price": 129800,
    "list_asof": "",
    "edition": "",
-   "cash": 9700,
+   "cash": 8700,
    "card_amt": 1298,
    "store_later_amt": 0,
-   "total": 10998,
+   "total": 9998,
    "tier": "normal",
+   "peak": 139500,
+   "peak_at": "2026-11-17T03:36:00+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
+  },
+  {
+   "jan": "4582769865213",
+   "name": "ONE PIECEカードゲーム 受け継がれる意志 OP-13 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 14600,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6498",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 8320,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 8373,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769796838",
+   "name": "ONE PIECEカードゲーム 師弟の絆 OP-12 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 14500,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6512",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 8220,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 8273,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329374758",
+   "name": "ポケモンカードゲーム S&V 拡張パック 熱風のアリーナ BOX [SV9a]",
+   "cat": "ポケモンカード",
+   "price": 14500,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6414",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 8100,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 8154,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329431529",
+   "name": "ポケモンカードゲーム MEGA 拡張パック インフェルノX BOX [M2]",
+   "cat": "ポケモンカード",
+   "price": 14000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6329",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 7600,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 7654,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329431536",
+   "name": "ポケモンカードゲーム S&V スペシャルBOX ポケモンセンターフクオカ",
+   "cat": "ポケモンカード",
+   "price": 10000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6336",
+   "list_price": 2090,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6910,
+   "card_amt": 21,
+   "store_later_amt": 0,
+   "total": 6931,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329427669",
+   "name": "ポケモンカードゲーム S&V スペシャルBOX ポケモンセンターヒロシマ",
+   "cat": "ポケモンカード",
+   "price": 10000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6328",
+   "list_price": 2090,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6910,
+   "card_amt": 21,
+   "store_later_amt": 0,
+   "total": 6931,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329431277",
+   "name": "ポケモンカードゲーム S&V スペシャルBOX ポケモンセンタートウホク",
+   "cat": "ポケモンカード",
+   "price": 10000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6327",
+   "list_price": 2090,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6910,
+   "card_amt": 21,
+   "store_later_amt": 0,
+   "total": 6931,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777359895",
+   "name": "響 ブロッサム ハーモニー 2021 700ml 43％",
+   "cat": "響",
+   "price": 16500,
+   "memo": "箱なし、箱潰れ、ラベル欠損、買取不可、冊子必須\n外箱JANコード「4901777359895」のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1208",
+   "list_price": 8800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6700,
+   "card_amt": 88,
+   "store_later_amt": 0,
+   "total": 6788,
+   "tier": "normal",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329373515",
+   "name": "ポケモンカードゲーム S&V 拡張パック スカーレットex BOX [SV1S]",
+   "cat": "ポケモンカード",
+   "price": 13000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1974",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6600,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 6654,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4988602179507",
+   "name": "遊戯王OCG デュエルモンスターズ LIMIT OVER COLLECTION -THE HEROES- [BOX]",
+   "cat": "遊戯王",
+   "price": 13200,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6690",
+   "list_price": 5775,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6425,
+   "card_amt": 58,
+   "store_later_amt": 0,
+   "total": 6483,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "9784081024391",
+   "name": "ONE PIECE magazine 特集 週刊少年ジャンプとONE PIECE",
+   "cat": "ワンピースカード",
+   "price": 9000,
+   "memo": "付録未開封のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6369",
+   "list_price": 1650,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6350,
+   "card_amt": 16,
+   "store_later_amt": 0,
+   "total": 6366,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4902370551495",
+   "name": "Nintendo Switch 有機ELモデル マリオレッド",
+   "cat": "Nintendo Switch",
+   "price": 45300,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3681",
+   "list_price": 37980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6320,
+   "card_amt": 380,
+   "store_later_amt": 0,
+   "total": 6700,
+   "tier": "normal",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777359772",
+   "name": "山崎 LIMITED EDITION 2021 700ml 43％",
+   "cat": "山崎",
+   "price": 16000,
+   "memo": "箱なし、箱潰れ、ラベル欠損、買取不可、冊子必須\n外箱JANコード「4901777359772」のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1444",
+   "list_price": 8800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6200,
+   "card_amt": 88,
+   "store_later_amt": 0,
+   "total": 6288,
+   "tier": "normal",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329368009",
+   "name": "Pokemon GO Plus+",
+   "cat": "その他",
+   "price": 13700,
+   "memo": "新品未使用のみ",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3610",
+   "list_price": 6578,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6122,
+   "card_amt": 66,
+   "store_later_amt": 0,
+   "total": 6188,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "9784089084632",
+   "name": "MONSTERS 一百三情飛龍侍極 公式ガイドブックDVD同梱BOX 大業匣",
+   "cat": "ワンピースカード",
+   "price": 12000,
+   "memo": "未開封のみ買取可。付録なし買取不可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6544",
+   "list_price": 4950,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 6050,
+   "card_amt": 50,
+   "store_later_amt": 0,
+   "total": 6100,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769937620",
+   "name": "ONE PIECEカードゲーム エクストラブースター EGGHEAD CRISIS EB-04 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 12100,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6547",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5820,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 5873,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329462424",
+   "name": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX [M6a]",
+   "cat": "ポケモンカード",
+   "price": 14000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7373",
+   "list_price": 7200,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5800,
+   "card_amt": 72,
+   "store_later_amt": 0,
+   "total": 5872,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329362526",
+   "name": "ポケモンカードゲーム S&V 拡張パック 変幻の仮面 BOX [SV6]",
+   "cat": "ポケモンカード",
+   "price": 12000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6432",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5600,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 5654,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329394831",
+   "name": "ポケモンカードゲーム S&V 拡張パック ワイルドフォース BOX [SV5K]",
+   "cat": "ポケモンカード",
+   "price": 12000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6434",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5600,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 5654,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4902370549706",
+   "name": "Nintendo Switch 有機ELモデル スプラトゥーン3エディション",
+   "cat": "Nintendo Switch",
+   "price": 45300,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1555",
+   "list_price": 38980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5320,
+   "card_amt": 390,
+   "store_later_amt": 0,
+   "total": 5710,
+   "tier": "normal",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4902370550481",
+   "name": "Nintendo Switch 有機ELモデル ゼルダの伝説エディション",
+   "cat": "Nintendo Switch",
+   "price": 45300,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3338",
+   "list_price": 38980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5320,
+   "card_amt": 390,
+   "store_later_amt": 0,
+   "total": 5710,
+   "tier": "normal",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4902370550412",
+   "name": "Nintendo Switch 有機ELモデル スカーレット・バイオレットエディション",
+   "cat": "Nintendo Switch",
+   "price": 45300,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1746",
+   "list_price": 38980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5320,
+   "card_amt": 390,
+   "store_later_amt": 0,
+   "total": 5710,
+   "tier": "normal",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4904810939542",
+   "name": "BEYBLADE X UX-10 カスタマイズセットU",
+   "cat": "ベイブレード",
+   "price": 12000,
+   "memo": "新品未開封品のみ買取可　防犯シールは綺麗に剥がしていただいてのご売却をお願いします。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7095",
+   "list_price": 5700,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5300,
+   "card_amt": 57,
+   "store_later_amt": 0,
+   "total": 5357,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4902370552232",
+   "name": "Nintendo Switch Lite ハイラルエディション",
+   "cat": "Nintendo Switch",
+   "price": 29200,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/4711",
+   "list_price": 22980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5220,
+   "card_amt": 230,
+   "store_later_amt": 0,
+   "total": 5450,
+   "tier": "normal",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4902370551457",
+   "name": "Nintendo Switch Lite あつまれ どうぶつの森セット [ターコイズ]",
+   "cat": "Nintendo Switch",
+   "price": 29100,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3836",
+   "list_price": 22980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5120,
+   "card_amt": 230,
+   "store_later_amt": 0,
+   "total": 5350,
+   "tier": "normal",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4902370551471",
+   "name": "Nintendo Switch Lite あつまれ どうぶつの森セット [コーラル]",
+   "cat": "Nintendo Switch",
+   "price": 29100,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3837",
+   "list_price": 22980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5120,
+   "card_amt": 230,
+   "store_later_amt": 0,
+   "total": 5350,
+   "tier": "normal",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329361239",
+   "name": "ポケモンカードゲーム S&V 強化拡張パック クリムゾンヘイズ BOX [SV5a]",
+   "cat": "ポケモンカード",
+   "price": 11500,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6433",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5100,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 5154,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329394732",
+   "name": "ポケモンカードゲーム S&V 拡張パック 古代の咆哮 BOX [SV4K]",
+   "cat": "ポケモンカード",
+   "price": 11500,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6436",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 5100,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 5154,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329362496",
+   "name": "ポケモンカードゲーム S&V 強化拡張パック ナイトワンダラー BOX [SV6a]",
+   "cat": "ポケモンカード",
+   "price": 11200,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6431",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 4800,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 4854,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769865220",
+   "name": "ONE PIECEカードゲーム エクストラブースター ONE PIECE Heroines Edition EB-03 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 11000,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6500",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 4720,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 4773,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329361000",
+   "name": "ポケモンカードゲーム S&V 強化拡張パック ステラミラクル BOX [SV7]",
+   "cat": "ポケモンカード",
+   "price": 11000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6430",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 4600,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 4654,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329346182",
+   "name": "ポケモンカード S＆V 拡張パック クレイバースト BOX [SV2D]",
+   "cat": "ポケモンカード",
+   "price": 10600,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3408",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 4200,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 4254,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329394848",
+   "name": "ポケモンカードゲーム S&V 拡張パック サイバージャッジ BOX [SV5M]",
+   "cat": "ポケモンカード",
+   "price": 10500,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6435",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 4100,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 4154,
+   "tier": "normal",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4904810085515",
+   "name": "BEYBLADE X UX-00 スターター サムライセイバー5-60K メタルコート:サムライブルー サッカー日本代表Ver",
+   "cat": "ベイブレード",
+   "price": 7500,
+   "memo": "新品未開封品のみ買取可　防犯シールは綺麗に剥がしていただいてのご売却をお願いします。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7049",
+   "list_price": 2500,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 4000,
+   "card_amt": 25,
+   "store_later_amt": 0,
+   "total": 4025,
+   "tier": "normal",
+   "ended": false,
    "in_watch": false
   }
  ],
@@ -318,11 +2203,12 @@
    "list_price": 399800,
    "list_asof": "",
    "edition": "",
-   "cash": 2200,
+   "cash": 1200,
    "card_amt": 3998,
    "store_later_amt": 0,
-   "total": 6198,
+   "total": 5198,
    "tier": "point",
+   "ended": false,
    "in_watch": false
   },
   {
@@ -336,15 +2222,1270 @@
    "list_price": 399800,
    "list_asof": "",
    "edition": "",
-   "cash": 2200,
+   "cash": 1200,
    "card_amt": 3998,
    "store_later_amt": 0,
-   "total": 6198,
+   "total": 5198,
    "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4902370553031",
+   "name": "Nintendo Switch 2 日本国内専用版 マリオカート ワールド セット BEE-S-KB6PA",
+   "cat": "Nintendo Switch 2",
+   "price": 58500,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/5798",
+   "list_price": 53980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3520,
+   "card_amt": 540,
+   "store_later_amt": 0,
+   "total": 4060,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329346229",
+   "name": "ポケモンカードゲーム S＆V 拡張パック スノーハザード BOX [SV2P]",
+   "cat": "ポケモンカード",
+   "price": 10300,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3409",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3900,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 3954,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769707384",
+   "name": "ONE PIECEカードゲーム 王族の血統 OP-10 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 10000,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6527",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3720,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 3773,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118227720",
+   "name": "ONE PIECEカードゲーム 二つの伝説 OP-08 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 9900,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6526",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3620,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 3673,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "0814585022803",
+   "name": "Steam Controller",
+   "cat": "Steam",
+   "price": 22200,
+   "memo": "新品未開封品のみ買取",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6932",
+   "list_price": 17800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3400,
+   "card_amt": 178,
+   "store_later_amt": 0,
+   "total": 3578,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329431932",
+   "name": "ポケモンカード S&V ハイクラスパック MEGAドリームex BOX [M2a]",
+   "cat": "ポケモンカード",
+   "price": 10000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6478",
+   "list_price": 5500,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3500,
+   "card_amt": 55,
+   "store_later_amt": 0,
+   "total": 3555,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329394756",
+   "name": "ポケモンカードゲーム S&V 拡張パック 未来の一閃 BOX [SV4M]",
+   "cat": "ポケモンカード",
+   "price": 9800,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6437",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3400,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 3454,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570117961472",
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション ONE PIECE FILM RED",
+   "cat": "ワンピースカード",
+   "price": 7000,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6513",
+   "list_price": 2640,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3360,
+   "card_amt": 26,
+   "store_later_amt": 0,
+   "total": 3386,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329373539",
+   "name": "ポケモンカードゲーム S&V 拡張パック バイオレットex BOX [SV1V]",
+   "cat": "ポケモンカード",
+   "price": 9600,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1975",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3200,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 3254,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769922978",
+   "name": "ONE PIECEカードゲーム 蒼海の七傑 OP-14 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 9400,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6504",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3120,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 3173,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769865206",
+   "name": "ONE PIECEカードゲーム プレミアムブースター ONE PIECE CARD THE BEST vol.2 PRB-02 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 9500,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6528",
+   "list_price": 5500,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 3000,
+   "card_amt": 55,
+   "store_later_amt": 0,
+   "total": 3055,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549660863748",
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション25周年エディション",
+   "cat": "ワンピースカード",
+   "price": 6000,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6548",
+   "list_price": 2200,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 2800,
+   "card_amt": 22,
+   "store_later_amt": 0,
+   "total": 2822,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777395459",
+   "name": "山崎 LIMITED EDITION 2023　700ml 43％",
+   "cat": "山崎",
+   "price": 14500,
+   "memo": "箱なし、箱潰れ、ラベル欠損、ホログラムシール無し買取不可、冊子必須\n外箱JANコード「4901777395459」のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3468",
+   "list_price": 11000,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 2500,
+   "card_amt": 110,
+   "store_later_amt": 0,
+   "total": 2610,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777377127",
+   "name": "山崎 LIMITED EDITION 2022 700ml 43％",
+   "cat": "山崎",
+   "price": 14500,
+   "memo": "箱なし、箱潰れ、ラベル欠損、買取不可、冊子必須\n外箱JANコード「4901777377127」のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1497",
+   "list_price": 11000,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 2500,
+   "card_amt": 110,
+   "store_later_amt": 0,
+   "total": 2610,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777378124",
+   "name": "響 ブロッサム ハーモニー 2022 700ml 43％",
+   "cat": "響",
+   "price": 14500,
+   "memo": "箱なし、箱潰れ、ラベル欠損、買取不可、冊子必須\n外箱JANコード「4901777378124」のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1496",
+   "list_price": 11000,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 2500,
+   "card_amt": 110,
+   "store_later_amt": 0,
+   "total": 2610,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4948872414647",
+   "name": "プレイステーション4 CUH-2200AB01",
+   "cat": "PlayStation4",
+   "price": 36200,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/27",
+   "list_price": 32978,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 2222,
+   "card_amt": 330,
+   "store_later_amt": 0,
+   "total": 2552,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4582770059229",
+   "name": "ONE PIECEカードゲーム エクストラブースター ONE PIECE Heroines Edition vol.2 EB-05 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 9000,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7669",
+   "list_price": 5760,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 2240,
+   "card_amt": 58,
+   "store_later_amt": 0,
+   "total": 2298,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769912498",
+   "name": "誇り高き戦闘民族 FB08 [BOX]",
+   "cat": "ドラゴンボールカード",
+   "price": 8500,
+   "memo": "BOX未開封のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6669",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 2220,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 2273,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549576275383",
+   "name": "新型版 Xbox Series X 本体 ディスクモデル 1TB EP2-63835",
+   "cat": "Xbox",
+   "price": 120000,
+   "memo": "必ずJAN・型番をご確認ください。\n印有減額なし。\nシールが剥がれているものは買取不可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6651",
+   "list_price": 117980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1020,
+   "card_amt": 1180,
+   "store_later_amt": 0,
+   "total": 2200,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769721885",
+   "name": "ONE PIECEカードゲーム プレミアムカードコレクション ONE PIECE DAY’24",
+   "cat": "ワンピースカード",
+   "price": 4000,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6536",
+   "list_price": 990,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 2010,
+   "card_amt": 10,
+   "store_later_amt": 0,
+   "total": 2020,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769982897",
+   "name": "ONE PIECEカードゲーム ブースターパック 決戦の刻 OP-16 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 8000,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6971",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1720,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 1773,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4902370553505",
+   "name": "Nintendo Switch 2 日本国内専用版 Pokemon LEGENDS Z-A セット BEE-S-KB6PC",
+   "cat": "Nintendo Switch 2",
+   "price": 56200,
+   "memo": "印有減額無し",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6139",
+   "list_price": 53980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1220,
+   "card_amt": 540,
+   "store_later_amt": 0,
+   "total": 1760,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769966002",
+   "name": "ONE PIECEカードゲーム エクストラブースター 神の島の冒険 OP-15 [BOX]",
+   "cat": "ワンピースカード",
+   "price": 7900,
+   "memo": "未開封BOXのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6676",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1620,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 1673,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "0814585023527",
+   "name": "Steam Machine 2TB + Steam Controllerモデル",
+   "cat": "Steam",
+   "price": 265000,
+   "memo": "中古品、免税品買取不可\n新品未開封品のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7065",
+   "list_price": 264980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -980,
+   "card_amt": 2650,
+   "store_later_amt": 0,
+   "total": 1670,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329362649",
+   "name": "ポケモンカードゲームS&V 拡張パック バトルパートナーズ BOX [SV9]",
+   "cat": "ポケモンカード",
+   "price": 8000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6413",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1600,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 1654,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4988602180749",
+   "name": "遊戯王 ORIGINAL ARTWORK DUEL SET [海馬編]",
+   "cat": "遊戯王",
+   "price": 7500,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7672",
+   "list_price": 4950,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1550,
+   "card_amt": 50,
+   "store_later_amt": 0,
+   "total": 1600,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549576167893",
+   "name": "Xbox Elite ワイヤレス コントローラー シリーズ 2 Halo Infinite リミテッド エディション",
+   "cat": "Xbox",
+   "price": 24300,
+   "memo": "",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/4487",
+   "list_price": 21978,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1322,
+   "card_amt": 220,
+   "store_later_amt": 0,
+   "total": 1542,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "0814585023503",
+   "name": "Steam Machine 2TBモデル",
+   "cat": "Steam",
+   "price": 250000,
+   "memo": "中古品、免税品買取不可\n新品未開封品のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7064",
+   "list_price": 249980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -980,
+   "card_amt": 2500,
+   "store_later_amt": 0,
+   "total": 1520,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777433502",
+   "name": "サントリーウイスキー 響 BLOSSOM HARMONY 2025 700ml",
+   "cat": "響",
+   "price": 15500,
+   "memo": "箱なし、箱潰れ、ラベル欠損、ホログラムシール無し買取不可、冊子必須",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/5839",
+   "list_price": 13200,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1300,
+   "card_amt": 132,
+   "store_later_amt": 0,
+   "total": 1432,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4948872416504",
+   "name": "DualSense Edge ワイヤレスコントローラー 30周年アニバーサリー リミテッドエディション [CFI-ZCP1J30]",
+   "cat": "PlayStation5",
+   "price": 40000,
+   "memo": "未開封品のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/5265",
+   "list_price": 37980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1020,
+   "card_amt": 380,
+   "store_later_amt": 0,
+   "total": 1400,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769824548",
+   "name": "迫り来る脅威 FB06 [BOX]",
+   "cat": "ドラゴンボールカード",
+   "price": 7600,
+   "memo": "BOX未開封のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6952",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1320,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 1373,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777447554",
+   "name": "サントリーウイスキー 響 BLOSSOM HARMONY 2026 700ml",
+   "cat": "響",
+   "price": 16500,
+   "memo": "箱なし、箱潰れ、ラベル欠損、ホログラムシール無し買取不可、冊子必須",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7151",
+   "list_price": 14300,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1200,
+   "card_amt": 143,
+   "store_later_amt": 0,
+   "total": 1343,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4904810939566",
+   "name": "BEYBLADE X UX-12 ランダムブースターVol.5",
+   "cat": "ベイブレード",
+   "price": 3500,
+   "memo": "新品未開封品のみ買取可。\n防犯シールは綺麗に剥がしていただいてのご売却をお願いします。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7158",
+   "list_price": 1400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1100,
+   "card_amt": 14,
+   "store_later_amt": 0,
+   "total": 1114,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777395510",
+   "name": "響 ブロッサムハーモニー 2023 43% 700ml",
+   "cat": "響",
+   "price": 13000,
+   "memo": "箱なし、箱潰れ、ラベル欠損、ホログラムシール無し買取不可、冊子必須\n外箱JANコード「4901777395510」のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3469",
+   "list_price": 11000,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1000,
+   "card_amt": 110,
+   "store_later_amt": 0,
+   "total": 1110,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4904810098775",
+   "name": "BEYBLADE X CX-11 エンペラーマイトデッキセット",
+   "cat": "ベイブレード",
+   "price": 7000,
+   "memo": "新品未開封品のみ買取可。\n防犯シールは綺麗に剥がしていただいてのご売却をお願いします。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7160",
+   "list_price": 5000,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1000,
+   "card_amt": 50,
+   "store_later_amt": 0,
+   "total": 1050,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4948872416542",
+   "name": "PlayStation 5 デジタルエディション 30周年アニバーサリー リミテッドエディション 特別セット (CFI-2000B30)",
+   "cat": "PlayStation5",
+   "price": 81200,
+   "memo": "印有減額なし",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/5263",
+   "list_price": 79980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 220,
+   "card_amt": 800,
+   "store_later_amt": 0,
+   "total": 1020,
+   "tier": "point",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4904810080572",
+   "name": "タカラトミーモール・イベント限定 BEYBLADE X CX-00 ブースター ドランブレイブS6-60V メタルコート：ブラック",
+   "cat": "ベイブレード",
+   "price": 3800,
+   "memo": "新品未開封品のみ買取可　防犯シールは綺麗に剥がしていただいてのご売却をお願いします。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7050",
+   "list_price": 1800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 1000,
+   "card_amt": 18,
+   "store_later_amt": 0,
+   "total": 1018,
+   "tier": "point",
+   "ended": false,
    "in_watch": false
   }
  ],
  "loss": [
+  {
+   "jan": "4901777415300",
+   "name": "サントリーウイスキー響 BLOSSOM HARMONY 2024EDITION  700mL",
+   "cat": "響",
+   "price": 15000,
+   "memo": "箱なし、箱潰れ、ラベル欠損、ホログラムシール無し買取不可、冊子必須",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/4452",
+   "list_price": 13200,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 800,
+   "card_amt": 132,
+   "store_later_amt": 0,
+   "total": 932,
+   "tier": "loss",
+   "ended": true,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769843532",
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション -ベストセレクション vol.4-",
+   "cat": "ワンピースカード",
+   "price": 4500,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7285",
+   "list_price": 2640,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 860,
+   "card_amt": 26,
+   "store_later_amt": 0,
+   "total": 886,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777188914",
+   "name": "山崎 12年 シングルモルト 700ml 43％",
+   "cat": "山崎",
+   "price": 19300,
+   "memo": "箱なし1500円減額、ラベル欠損、買取不可。\n100周年記念モデルもこちらでお申込みください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1232",
+   "list_price": 17600,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 700,
+   "card_amt": 176,
+   "store_later_amt": 0,
+   "total": 876,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329462189",
+   "name": "ポケモンカードゲームMEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+   "cat": "ポケモンカード",
+   "price": 8000,
+   "memo": "新品未開封のみ買取可 箱潰れや痛み具合によって減額又は着払いにて返送となります。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7374",
+   "list_price": 6200,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 800,
+   "card_amt": 62,
+   "store_later_amt": 0,
+   "total": 862,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "0814585022605",
+   "name": "Steam Deck 有機EL(OLED) 512GB SSD [新JAN]",
+   "cat": "Steam",
+   "price": 138300,
+   "memo": "中古品、免税品買取不可\n箱開封のみ減額-3000\n※中身が完品の場合のみ買取可能",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6332",
+   "list_price": 137980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -680,
+   "card_amt": 1380,
+   "store_later_amt": 0,
+   "total": 700,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "0814585022254",
+   "name": "Steam Deck 有機EL(OLED) 512GB SSD",
+   "cat": "Steam",
+   "price": 138300,
+   "memo": "中古品、免税品買取不可\n箱開封のみ減額-3000\n※中身が完品の場合のみ買取可能",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3917",
+   "list_price": 137980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -680,
+   "card_amt": 1380,
+   "store_later_amt": 0,
+   "total": 700,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329432274",
+   "name": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ BOX [M3]",
+   "cat": "ポケモンカード",
+   "price": 7000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6546",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 600,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 654,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777233812",
+   "name": "山崎 シングルモルト 700ml 43％",
+   "cat": "山崎",
+   "price": 9800,
+   "memo": "カートン（外箱）無しでも同額買取です。\nラベル欠損や汚れは減額対象になります。\n100周年記念モデルもこちらでお申込みください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1280",
+   "list_price": 8250,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 550,
+   "card_amt": 82,
+   "store_later_amt": 0,
+   "total": 632,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777040427",
+   "name": "SUNTORY サントリーウイスキー 響21年 700ml",
+   "cat": "響",
+   "price": 68000,
+   "memo": "外箱なし、ラベル欠損、買取不可\n購入証明書（レシートまたは納品書など）が必須です。\n郵送買取、池袋店買取限定です。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/4416",
+   "list_price": 67100,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -100,
+   "card_amt": 671,
+   "store_later_amt": 0,
+   "total": 571,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329432786",
+   "name": "ポケモンカードゲーム MEGA 拡張パック ニンジャスピナー BOX [M4]",
+   "cat": "ポケモンカード",
+   "price": 6800,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6723",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 400,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 454,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777233911",
+   "name": "白州 シングルモルト 700ml 43％",
+   "cat": "白州",
+   "price": 9600,
+   "memo": "箱なし500円減額、ラベル欠損、買取不可。100周年記念モデルもこちらでお申込みください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1306",
+   "list_price": 8250,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 350,
+   "card_amt": 82,
+   "store_later_amt": 0,
+   "total": 432,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4904810990154",
+   "name": "BEYBLADE X UX-16 ランダムブースター クロックミラージュセレクト",
+   "cat": "ベイブレード",
+   "price": 2800,
+   "memo": "新品未開封品のみ買取可。\n防犯シールは綺麗に剥がしていただいてのご売却をお願いします。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7167",
+   "list_price": 1400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 400,
+   "card_amt": 14,
+   "store_later_amt": 0,
+   "total": 414,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118119186",
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション -ベストセレクション vol.1-",
+   "cat": "ワンピースカード",
+   "price": 4000,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7297",
+   "list_price": 2640,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 360,
+   "card_amt": 26,
+   "store_later_amt": 0,
+   "total": 386,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777360440",
+   "name": "白州 12年 シングルモルト 700ml 43％",
+   "cat": "白州",
+   "price": 18800,
+   "memo": "箱なし800円減額、ラベル欠損、買取不可。100周年記念モデルもこちらでお申込みください。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1307",
+   "list_price": 17600,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 200,
+   "card_amt": 176,
+   "store_later_amt": 0,
+   "total": 376,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4988602180701",
+   "name": "遊戯王 ORIGINAL ARTWORK COLLECTION [BOX]",
+   "cat": "遊戯王",
+   "price": 7250,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7533",
+   "list_price": 5940,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 310,
+   "card_amt": 59,
+   "store_later_amt": 0,
+   "total": 369,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329431161",
+   "name": "ポケモンカード MEGA 拡張パック メガブレイブ BOX [M1L]",
+   "cat": "ポケモンカード",
+   "price": 6500,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6324",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 100,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 154,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4904810941576",
+   "name": "BEYBLADE X BX-00 スターター コバルトドラグーン2-60C メタルコート：ブラック",
+   "cat": "ベイブレード",
+   "price": 3500,
+   "memo": "新品未開封品のみ買取可防犯シールは綺麗に剥がしていただいてのご売却をお願いします。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7044",
+   "list_price": 2420,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 80,
+   "card_amt": 24,
+   "store_later_amt": 0,
+   "total": 104,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769922985",
+   "name": "ONE PIECEカードゲーム スタートデッキ EGGHEAD [ST-29]",
+   "cat": "ワンピースカード",
+   "price": 2500,
+   "memo": "新品未開封のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6543",
+   "list_price": 1430,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 70,
+   "card_amt": 14,
+   "store_later_amt": 0,
+   "total": 84,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118259479",
+   "name": "怒りの咆哮 FB03 [BOX]",
+   "cat": "ドラゴンボールカード",
+   "price": 6300,
+   "memo": "BOX未開封のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7056",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 20,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": 73,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329462233",
+   "name": "ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ BOX [M6]",
+   "cat": "ポケモンカード",
+   "price": 7000,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7186",
+   "list_price": 6000,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 0,
+   "card_amt": 60,
+   "store_later_amt": 0,
+   "total": 60,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329431185",
+   "name": "ポケモンカード MEGA 拡張パック メガシンフォニア BOX [M1S]",
+   "cat": "ポケモンカード",
+   "price": 6400,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6323",
+   "list_price": 5400,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 0,
+   "card_amt": 54,
+   "store_later_amt": 0,
+   "total": 54,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118084804",
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション ウタ",
+   "cat": "ワンピースカード",
+   "price": 3000,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7299",
+   "list_price": 1980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 20,
+   "card_amt": 20,
+   "store_later_amt": 0,
+   "total": 40,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4901777270688",
+   "name": "響 ジャパニーズ ハーモニー 700ml 43％",
+   "cat": "響",
+   "price": 9700,
+   "memo": "カートン無しでも同額買取。\nラベル欠損は買取不可です。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1447",
+   "list_price": 8800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -100,
+   "card_amt": 88,
+   "store_later_amt": 0,
+   "total": -12,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4904810939627",
+   "name": "BEYBLADE X CX-05 ランダムブースターVol.6",
+   "cat": "ベイブレード",
+   "price": 2500,
+   "memo": "新品未開封品のみ買取可。\n防犯シールは綺麗に剥がしていただいてのご売却をお願いします。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7165",
+   "list_price": 1600,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -100,
+   "card_amt": 16,
+   "store_later_amt": 0,
+   "total": -84,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769937095",
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション -ベストセレクション vol.5-",
+   "cat": "ワンピースカード",
+   "price": 3500,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7284",
+   "list_price": 2640,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -140,
+   "card_amt": 26,
+   "store_later_amt": 0,
+   "total": -114,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769721823",
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション -ベストセレクション vol.3-",
+   "cat": "ワンピースカード",
+   "price": 3500,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7286",
+   "list_price": 2640,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -140,
+   "card_amt": 26,
+   "store_later_amt": 0,
+   "total": -114,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4582769733710",
+   "name": "未知なる冒険 FB05 [BOX]",
+   "cat": "ドラゴンボールカード",
+   "price": 6000,
+   "memo": "BOX未開封のみ買取可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6761",
+   "list_price": 5280,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -280,
+   "card_amt": 53,
+   "store_later_amt": 0,
+   "total": -227,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4521329462127",
+   "name": "ポケモンカードゲーム MEGA 拡張パック アビスアイ BOX [M5]",
+   "cat": "ポケモンカード",
+   "price": 6600,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6949",
+   "list_price": 6000,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -400,
+   "card_amt": 60,
+   "store_later_amt": 0,
+   "total": -340,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4988602179514",
+   "name": "遊戯王OCG デュエルモンスターズ LIMIT OVER COLLECTION -THE RIVALS- [BOX]",
+   "cat": "遊戯王",
+   "price": 6200,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6833",
+   "list_price": 5775,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -575,
+   "card_amt": 58,
+   "store_later_amt": 0,
+   "total": -517,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
   {
    "jan": "4549995732696",
    "name": "iPhone Duo 256GB ナイトスカイ MK254J/A 未開封 SIMフリー",
@@ -356,11 +3497,145 @@
    "list_price": 364800,
    "list_asof": "",
    "edition": "",
-   "cash": -3300,
+   "cash": -4300,
    "card_amt": 3648,
    "store_later_amt": 0,
-   "total": 348,
+   "total": -652,
    "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4904810930495",
+   "name": "BEYBLADE X CX-00 スターター ペガサスブラストATr メタルコート：レッド",
+   "cat": "ベイブレード",
+   "price": 2800,
+   "memo": "新品未開封品のみ買取可　防犯シールは綺麗に剥がしていただいてのご売却をお願いします。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7099",
+   "list_price": 2700,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -900,
+   "card_amt": 27,
+   "store_later_amt": 0,
+   "total": -873,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549576247038",
+   "name": "マイクロソフト Microsoft Xbox Series X 本体 1TB ホワイト デジタルエディション EP2-00708",
+   "cat": "Xbox",
+   "price": 109000,
+   "memo": "印有減額なし。\nシールが剥がれているものは買取不可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/4756",
+   "list_price": 109980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -1980,
+   "card_amt": 1100,
+   "store_later_amt": 0,
+   "total": -880,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4547410370003",
+   "name": "FUJIFILM (富士フィルム) チェキスクエア用フィルム20枚 INSTAX SQUARE WW2",
+   "cat": "チェキ・インスタントカメラ",
+   "price": 2510,
+   "memo": "新品未開封のみ\n使用期限残り16ヶ月以上",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/4530",
+   "list_price": 2420,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -910,
+   "card_amt": 24,
+   "store_later_amt": 0,
+   "total": -886,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "9900000008291",
+   "name": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット 9種セット",
+   "cat": "ポケモンカード",
+   "price": 10800,
+   "memo": "ダンボール未開封のみ買取可、ダンボールそのまま発送買取不可、梱包をお願いいたします。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7627",
+   "list_price": 10800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -1000,
+   "card_amt": 108,
+   "store_later_amt": 0,
+   "total": -892,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4570118228147",
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション -ベストセレクション vol.2-",
+   "cat": "ワンピースカード",
+   "price": 2500,
+   "memo": "未開封品のみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6889",
+   "list_price": 2640,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -1140,
+   "card_amt": 26,
+   "store_later_amt": 0,
+   "total": -1114,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4547410550955",
+   "name": "FUJIFILM (富士フィルム) フジカラー 写ルンです 27枚撮り 新パッケージ",
+   "cat": "チェキ・インスタントカメラ",
+   "price": 2590,
+   "memo": "新品未開封のみ\n使用期限残り16ヶ月以上",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/5769",
+   "list_price": 2990,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -1400,
+   "card_amt": 30,
+   "store_later_amt": 0,
+   "total": -1370,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4547410511178",
+   "name": "FUJIFILM (富士フィルム) instax SQUARE SQ40 チェキスクエア [ブラック]",
+   "cat": "チェキ・インスタントカメラ",
+   "price": 19000,
+   "memo": "店舗印あり買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/4816",
+   "list_price": 19800,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -1800,
+   "card_amt": 198,
+   "store_later_amt": 0,
+   "total": -1602,
+   "tier": "loss",
+   "ended": false,
    "in_watch": false
   },
   {
@@ -374,695 +3649,50 @@
    "list_price": 364800,
    "list_asof": "",
    "edition": "",
-   "cash": -4300,
+   "cash": -5300,
    "card_amt": 3648,
    "store_later_amt": 0,
-   "total": -652,
+   "total": -1652,
    "tier": "loss",
+   "ended": false,
    "in_watch": false
   },
   {
-   "jan": "4549995649284",
-   "name": "iPhone 17 Pro Max 256GB シルバー MFY84J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro Max",
-   "price": 192000,
-   "memo": "郵送買取 +300円",
+   "jan": "4988602180725",
+   "name": "遊戯王 ORIGINAL ARTWORK DUEL SET [遊戯編]",
+   "cat": "遊戯王",
+   "price": 4200,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
    "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6247",
-   "list_price": 194800,
-   "list_asof": "",
+   "url": "https://kaitori-rudeya.com/product/item/7671",
+   "list_price": 4950,
+   "list_asof": "2026-11-17",
    "edition": "",
-   "cash": -2800,
-   "card_amt": 1948,
+   "cash": -1750,
+   "card_amt": 50,
    "store_later_amt": 0,
-   "total": -852,
+   "total": -1700,
    "tier": "loss",
+   "ended": false,
    "in_watch": false
   },
   {
-   "jan": "4549995648294",
-   "name": "iPhone 17 Pro 256GB シルバー MG854J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro",
-   "price": 174000,
-   "memo": "郵送買取 +300円",
+   "jan": "4988602180732",
+   "name": "遊戯王 ORIGINAL ARTWORK DUEL SET [城之内編]",
+   "cat": "遊戯王",
+   "price": 4200,
+   "memo": "新品未開封/シュリンク付きのみの買取となります。 箱潰れや痛み具合によって減額又は着払いにて返送となります。 シュリンクが切れているものは買取不可",
    "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6259",
-   "list_price": 179800,
-   "list_asof": "",
+   "url": "https://kaitori-rudeya.com/product/item/7673",
+   "list_price": 4950,
+   "list_asof": "2026-11-17",
    "edition": "",
-   "cash": -5800,
-   "card_amt": 1798,
+   "cash": -1750,
+   "card_amt": 50,
    "store_later_amt": 0,
-   "total": -4002,
+   "total": -1700,
    "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995648317",
-   "name": "iPhone 17 Pro 256GB ディープブルー MG874J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro",
-   "price": 170000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6261",
-   "list_price": 179800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -9800,
-   "card_amt": 1798,
-   "store_later_amt": 0,
-   "total": -8002,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995648300",
-   "name": "iPhone 17 Pro 256GB コズミックオレンジ MG864J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro",
-   "price": 170000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6260",
-   "list_price": 179800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -9800,
-   "card_amt": 1798,
-   "store_later_amt": 0,
-   "total": -8002,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734898",
-   "name": "iPhone 18 Pro Max 512GB グレイシャー MJXD4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 263000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7397",
-   "list_price": 274800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -11800,
-   "card_amt": 2748,
-   "store_later_amt": 0,
-   "total": -9052,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734744",
-   "name": "iPhone 18 Pro Max 512GB ブラック MJX94J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 263000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7396",
-   "list_price": 274800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -11800,
-   "card_amt": 2748,
-   "store_later_amt": 0,
-   "total": -9052,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995735048",
-   "name": "iPhone 18 Pro Max 1TB バーガンディ MJXG4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 332000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7403",
-   "list_price": 344800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -12800,
-   "card_amt": 3448,
-   "store_later_amt": 0,
-   "total": -9352,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995735093",
-   "name": "iPhone 18 Pro Max 1TB グレイシャー MJXH4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 332000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7402",
-   "list_price": 344800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -12800,
-   "card_amt": 3448,
-   "store_later_amt": 0,
-   "total": -9352,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734942",
-   "name": "iPhone 18 Pro Max 1TB ブラック MJXE4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 332000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7401",
-   "list_price": 344800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -12800,
-   "card_amt": 3448,
-   "store_later_amt": 0,
-   "total": -9352,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734690",
-   "name": "iPhone 18 Pro Max 256GB グレイシャー MJX84J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 228000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7393",
-   "list_price": 239800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -11800,
-   "card_amt": 2398,
-   "store_later_amt": 0,
-   "total": -9402,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734843",
-   "name": "iPhone 18 Pro Max 512GB バーガンディ MJXC4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 262000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7398",
-   "list_price": 274800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -12800,
-   "card_amt": 2748,
-   "store_later_amt": 0,
-   "total": -10052,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734645",
-   "name": "iPhone 18 Pro Max 256GB バーガンディ MJX74J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 227000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7394",
-   "list_price": 239800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -12800,
-   "card_amt": 2398,
-   "store_later_amt": 0,
-   "total": -10402,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734546",
-   "name": "iPhone 18 Pro Max 256GB ブラック MJX54J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 227000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7392",
-   "list_price": 239800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -12800,
-   "card_amt": 2398,
-   "store_later_amt": 0,
-   "total": -10402,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734591",
-   "name": "iPhone 18 Pro Max 256GB シルバー MJX64J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 226000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7391",
-   "list_price": 239800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -13800,
-   "card_amt": 2398,
-   "store_later_amt": 0,
-   "total": -11402,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734164",
-   "name": "iPhone 18 Pro 256GB バーガンディ MJR74J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro",
-   "price": 205500,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7411",
-   "list_price": 219800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -14300,
-   "card_amt": 2198,
-   "store_later_amt": 0,
-   "total": -12102,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995649239",
-   "name": "iPhone 17 512GB ラベンダー MG6G4J/A 未開封 SIMフリー",
-   "cat": "iPhone17",
-   "price": 151000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6276",
-   "list_price": 164800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -13800,
-   "card_amt": 1648,
-   "store_later_amt": 0,
-   "total": -12152,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995649246",
-   "name": "iPhone 17 512GB セージ MG6H4J/A 未開封 SIMフリー",
-   "cat": "iPhone17",
-   "price": 151000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6277",
-   "list_price": 164800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -13800,
-   "card_amt": 1648,
-   "store_later_amt": 0,
-   "total": -12152,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995649208",
-   "name": "iPhone 17 512GB ブラック MG6D4J/A 未開封 SIMフリー",
-   "cat": "iPhone17",
-   "price": 151000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6273",
-   "list_price": 164800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -13800,
-   "card_amt": 1648,
-   "store_later_amt": 0,
-   "total": -12152,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995649215",
-   "name": "iPhone 17 512GB ホワイト MG6E4J/A 未開封 SIMフリー",
-   "cat": "iPhone17",
-   "price": 151000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6274",
-   "list_price": 164800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -13800,
-   "card_amt": 1648,
-   "store_later_amt": 0,
-   "total": -12152,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995649222",
-   "name": "iPhone 17 512GB ミストブルー MG6F4J/A 未開封 SIMフリー",
-   "cat": "iPhone17",
-   "price": 151000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6275",
-   "list_price": 164800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -13800,
-   "card_amt": 1648,
-   "store_later_amt": 0,
-   "total": -12152,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995649307",
-   "name": "iPhone 17 Pro Max 256GB ディープブルー MFYA4J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro Max",
-   "price": 180000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6249",
-   "list_price": 194800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -14800,
-   "card_amt": 1948,
-   "store_later_amt": 0,
-   "total": -12852,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995649291",
-   "name": "iPhone 17 Pro Max 256GB コズミックオレンジ MFY94J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro Max",
-   "price": 180000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6248",
-   "list_price": 194800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -14800,
-   "card_amt": 1948,
-   "store_later_amt": 0,
-   "total": -12852,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995649314",
-   "name": "iPhone 17 Pro Max 512GB シルバー MFYC4J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro Max",
-   "price": 214500,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6250",
-   "list_price": 229800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -15300,
-   "card_amt": 2298,
-   "store_later_amt": 0,
-   "total": -13002,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734799",
-   "name": "iPhone 18 Pro Max 512GB シルバー MJXA4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 259000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7395",
-   "list_price": 274800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -15800,
-   "card_amt": 2748,
-   "store_later_amt": 0,
-   "total": -13052,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734201",
-   "name": "iPhone 18 Pro 512GB バーガンディ MJRD4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro",
-   "price": 239000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7415",
-   "list_price": 254800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -15800,
-   "card_amt": 2548,
-   "store_later_amt": 0,
-   "total": -13252,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734218",
-   "name": "iPhone 18 Pro 512GB グレイシャー MJRE4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro",
-   "price": 239000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7414",
-   "list_price": 254800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -15800,
-   "card_amt": 2548,
-   "store_later_amt": 0,
-   "total": -13252,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734188",
-   "name": "iPhone 18 Pro 512GB ブラック MJR94J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro",
-   "price": 239000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7413",
-   "list_price": 254800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -15800,
-   "card_amt": 2548,
-   "store_later_amt": 0,
-   "total": -13252,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734997",
-   "name": "iPhone 18 Pro Max 1TB シルバー MJXF4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro Max",
-   "price": 328000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7399",
-   "list_price": 344800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -16800,
-   "card_amt": 3448,
-   "store_later_amt": 0,
-   "total": -13352,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734171",
-   "name": "iPhone 18 Pro 256GB グレイシャー MJR84J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro",
-   "price": 204000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7410",
-   "list_price": 219800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -15800,
-   "card_amt": 2198,
-   "store_later_amt": 0,
-   "total": -13602,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734140",
-   "name": "iPhone 18 Pro 256GB ブラック MJR54J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro",
-   "price": 204000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7409",
-   "list_price": 219800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -15800,
-   "card_amt": 2198,
-   "store_later_amt": 0,
-   "total": -13602,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995648324",
-   "name": "iPhone 17 Pro 512GB シルバー MG894J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro",
-   "price": 198000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6262",
-   "list_price": 214800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -16800,
-   "card_amt": 2148,
-   "store_later_amt": 0,
-   "total": -14652,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995648348",
-   "name": "iPhone 17 Pro 512GB ディープブルー MG8C4J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro",
-   "price": 198000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6264",
-   "list_price": 214800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -16800,
-   "card_amt": 2148,
-   "store_later_amt": 0,
-   "total": -14652,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995648331",
-   "name": "iPhone 17 Pro 512GB コズミックオレンジ MG8A4J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro",
-   "price": 198000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6263",
-   "list_price": 214800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -16800,
-   "card_amt": 2148,
-   "store_later_amt": 0,
-   "total": -14652,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734157",
-   "name": "iPhone 18 Pro 256GB シルバー MJR64J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro",
-   "price": 201500,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7408",
-   "list_price": 219800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -18300,
-   "card_amt": 2198,
-   "store_later_amt": 0,
-   "total": -16102,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995649338",
-   "name": "iPhone 17 Pro Max 512GB ディープブルー MFYE4J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro Max",
-   "price": 210000,
-   "memo": "郵送買取 +300円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6252",
-   "list_price": 229800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -19800,
-   "card_amt": 2298,
-   "store_later_amt": 0,
-   "total": -17502,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995649321",
-   "name": "iPhone 17 Pro Max 512GB コズミックオレンジ MFYD4J/A 未開封 SIMフリー",
-   "cat": "iPhone17 Pro Max",
-   "price": 210000,
-   "memo": "",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6251",
-   "list_price": 229800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -19800,
-   "card_amt": 2298,
-   "store_later_amt": 0,
-   "total": -17502,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734195",
-   "name": "iPhone 18 Pro 512GB シルバー MJRC4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro",
-   "price": 233000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7412",
-   "list_price": 254800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -21800,
-   "card_amt": 2548,
-   "store_later_amt": 0,
-   "total": -19252,
-   "tier": "loss",
-   "in_watch": false
-  },
-  {
-   "jan": "4549995734249",
-   "name": "iPhone 18 Pro 1TB バーガンディ MJRH4J/A 未開封 SIMフリー",
-   "cat": "iPhone18 Pro",
-   "price": 302000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7419",
-   "list_price": 324800,
-   "list_asof": "",
-   "edition": "",
-   "cash": -22800,
-   "card_amt": 3248,
-   "store_later_amt": 0,
-   "total": -19552,
-   "tier": "loss",
+   "ended": false,
    "in_watch": false
   }
  ],
@@ -1332,17 +3962,6 @@
    "in_watch": false
   },
   {
-   "jan": "4570118002167",
-   "name": "ONE PIECEカードゲーム 新時代の主役 OP-05 [カートン]",
-   "cat": "ワンピースカード",
-   "price": 442000,
-   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6467",
-   "tier": "unpriced",
-   "in_watch": false
-  },
-  {
    "jan": "4960759909947",
    "name": "Nikon(ニコン)Z 8 ボディ",
    "cat": "デジタル一眼カメラ",
@@ -1438,17 +4057,6 @@
    "memo": "店舗印あり買取不可",
    "stopped": false,
    "url": "https://kaitori-rudeya.com/product/item/5853",
-   "tier": "unpriced",
-   "in_watch": false
-  },
-  {
-   "jan": "4549660853268",
-   "name": "ONE PIECEカードゲーム ROMANCE DAWN OP-01 [カートン]",
-   "cat": "ワンピースカード",
-   "price": 390000,
-   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6463",
    "tier": "unpriced",
    "in_watch": false
   },
@@ -1662,17 +4270,6 @@
    "in_watch": false
   },
   {
-   "jan": "4582769721816",
-   "name": "ONE PIECEカードゲーム エクストラブースター Anime 25th collection EB-02 [カートン]",
-   "cat": "ワンピースカード",
-   "price": 318000,
-   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6474",
-   "tier": "unpriced",
-   "in_watch": false
-  },
-  {
    "jan": "4547410547412",
    "name": "FUJIFILM (富士フィルム) フジノンレンズ XF500mmF5.6 R LM OIS WR",
    "cat": "レンズ",
@@ -1746,28 +4343,6 @@
    "memo": "店舗印あり買取不可",
    "stopped": false,
    "url": "https://kaitori-rudeya.com/product/item/4396",
-   "tier": "unpriced",
-   "in_watch": false
-  },
-  {
-   "jan": "0199291728394",
-   "name": "ROG XBOX Ally X20 Bundle (RC74XA) RC74XA-TW241TBMEGA [オフブラック]",
-   "cat": "ASUS ROG",
-   "price": 300000,
-   "memo": "未開封のみ",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7550",
-   "tier": "unpriced",
-   "in_watch": false
-  },
-  {
-   "jan": "4582769734311",
-   "name": "ONE PIECEカードゲーム 神速の拳 OP-11 [カートン]",
-   "cat": "ワンピースカード",
-   "price": 300000,
-   "memo": "未開封カートンのみ買取可。BOXではございませんのでご注意ください。",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6362",
    "tier": "unpriced",
    "in_watch": false
   },
@@ -1946,9 +4521,125 @@
    "url": "https://kaitori-rudeya.com/product/item/4746",
    "tier": "unpriced",
    "in_watch": false
+  },
+  {
+   "jan": "4547410485837",
+   "name": "FUJIFILM (富士フィルム) FUJIFILM X-H2 XF16-80mmレンズキット",
+   "cat": "デジタル一眼カメラ",
+   "price": 278900,
+   "memo": "保証書店舗印あり-20000円\nキャッシュバックキャンペーン登録済商品買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3907",
+   "tier": "unpriced",
+   "in_watch": false
+  },
+  {
+   "jan": "4548736165960",
+   "name": "SONY(ソニー)ILME-FX2B",
+   "cat": "デジタル一眼カメラ",
+   "price": 278200,
+   "memo": "店舗印あり・キャッシュバックキャンペーン登録済商品買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/5931",
+   "tier": "unpriced",
+   "in_watch": false
+  },
+  {
+   "jan": "4960759905697",
+   "name": "Nikon(ニコン) Z 7II ボディ",
+   "cat": "デジタル一眼カメラ",
+   "price": 278000,
+   "memo": "店舗印あり買取不可",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3520",
+   "tier": "unpriced",
+   "in_watch": false
+  },
+  {
+   "jan": "4960759906557",
+   "name": "Nikon(ニコン) NIKKOR Z 100-400mm f/4.5-5.6 VR S*",
+   "cat": "レンズ",
+   "price": 275600,
+   "memo": "店舗印なしのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/1437",
+   "tier": "unpriced",
+   "in_watch": false
+  },
+  {
+   "jan": "4549292115581",
+   "name": "CANON(キヤノン) RF50mm F1.2L USM",
+   "cat": "レンズ",
+   "price": 275100,
+   "memo": "店舗印なしのみ買取可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/156",
+   "tier": "unpriced",
+   "in_watch": false
   }
  ],
- "watch": {},
+ "watch": {
+  "4948872417075": {
+   "name": "新型 プレイステーション5 プロ PlayStation5 Pro (CFI-7100B01)",
+   "added_at": "2026-11-17T08:20:00+09:00",
+   "tier": "normal",
+   "cash_at_add": 61020
+  },
+  "4549995732894": {
+   "name": "iPhone Duo 1TB ナイトスカイ MK294J/A 未開封 SIMフリー",
+   "added_at": "2026-11-17T08:20:00+09:00",
+   "tier": "normal",
+   "cash_at_add": 10200
+  },
+  "4549995732849": {
+   "name": "iPhone Duo 1TB スターホワイト MK284J/A 未開封 SIMフリー",
+   "added_at": "2026-11-17T08:20:00+09:00",
+   "tier": "normal",
+   "cash_at_add": 10200
+  },
+  "4549995732993": {
+   "name": "iPhone Duo 2TB ナイトスカイ MK2C4J/A 未開封 SIMフリー",
+   "added_at": "2026-11-17T08:20:00+09:00",
+   "tier": "normal",
+   "cash_at_add": 9200
+  },
+  "4549995732948": {
+   "name": "iPhone Duo 2TB スターホワイト MK2A4J/A 未開封 SIMフリー",
+   "added_at": "2026-11-17T08:20:00+09:00",
+   "tier": "normal",
+   "cash_at_add": 9200
+  },
+  "4549995649185": {
+   "name": "iPhone 17 256GB ラベンダー MG6A4J/A 未開封 SIMフリー",
+   "added_at": "2026-11-17T08:20:00+09:00",
+   "tier": "normal",
+   "cash_at_add": 8700
+  },
+  "4549995649192": {
+   "name": "iPhone 17 256GB セージ MG6C4J/A 未開封 SIMフリー",
+   "added_at": "2026-11-17T08:20:00+09:00",
+   "tier": "normal",
+   "cash_at_add": 8700
+  },
+  "4549995649154": {
+   "name": "iPhone 17 256GB ブラック MG674J/A 未開封 SIMフリー",
+   "added_at": "2026-11-17T08:20:00+09:00",
+   "tier": "normal",
+   "cash_at_add": 8700
+  },
+  "4549995649161": {
+   "name": "iPhone 17 256GB ホワイト MG684J/A 未開封 SIMフリー",
+   "added_at": "2026-11-17T08:20:00+09:00",
+   "tier": "normal",
+   "cash_at_add": 8700
+  },
+  "4549995649178": {
+   "name": "iPhone 17 256GB ミストブルー MG694J/A 未開封 SIMフリー",
+   "added_at": "2026-11-17T08:20:00+09:00",
+   "tier": "normal",
+   "cash_at_add": 8700
+  }
+ },
  "removed": [],
  "alerts": [],
  "series": {
@@ -1956,11 +4647,19 @@
    [
     "2026-11-17T03:36",
     200000
+   ],
+   [
+    "2026-11-17T08:20",
+    200000
    ]
   ],
   "4948872416320": [
    [
     "2026-11-17T03:36",
+    195000
+   ],
+   [
+    "2026-11-17T08:20",
     195000
    ]
   ],
@@ -1968,11 +4667,337 @@
    [
     "2026-11-17T03:36",
     200000
+   ],
+   [
+    "2026-11-17T08:20",
+    200000
+   ]
+  ],
+  "4570118002167": [
+   [
+    "2026-11-17T08:20",
+    442000
+   ]
+  ],
+  "4549660853268": [
+   [
+    "2026-11-17T08:20",
+    390000
+   ]
+  ],
+  "4582769721816": [
+   [
+    "2026-11-17T08:20",
+    318000
+   ]
+  ],
+  "4582769734311": [
+   [
+    "2026-11-17T08:20",
+    300000
+   ]
+  ],
+  "4570118001900": [
+   [
+    "2026-11-17T08:20",
+    234000
+   ]
+  ],
+  "4549660860488": [
+   [
+    "2026-11-17T08:20",
+    221000
+   ]
+  ],
+  "4570118084910": [
+   [
+    "2026-11-17T08:20",
+    221000
+   ]
+  ],
+  "4570118259370": [
+   [
+    "2026-11-17T08:20",
+    195000
+   ]
+  ],
+  "4549660954941": [
+   [
+    "2026-11-17T08:20",
+    192000
+   ]
+  ],
+  "4549660863182": [
+   [
+    "2026-11-17T08:20",
+    185000
+   ]
+  ],
+  "4570118145529": [
+   [
+    "2026-11-17T08:20",
+    188000
+   ]
+  ],
+  "4582769864865": [
+   [
+    "2026-11-17T08:20",
+    180000
+   ]
+  ],
+  "4582769796821": [
+   [
+    "2026-11-17T08:20",
+    179000
+   ]
+  ],
+  "4582769937613": [
+   [
+    "2026-11-17T08:20",
+    150000
+   ]
+  ],
+  "4582770059212": [
+   [
+    "2026-11-17T08:20",
+    143000
+   ]
+  ],
+  "4582769864872": [
+   [
+    "2026-11-17T08:20",
+    137000
+   ]
+  ],
+  "4582769707100": [
+   [
+    "2026-11-17T08:20",
+    125000
+   ]
+  ],
+  "4570118213686": [
+   [
+    "2026-11-17T08:20",
+    124000
+   ]
+  ],
+  "0814585022513": [
+   [
+    "2026-11-17T08:20",
+    164600
+   ]
+  ],
+  "4582769922961": [
+   [
+    "2026-11-17T08:20",
+    116000
+   ]
+  ],
+  "4582770058390": [
+   [
+    "2026-11-17T08:20",
+    110000
+   ]
+  ],
+  "4582769982880": [
+   [
+    "2026-11-17T08:20",
+    101000
+   ]
+  ],
+  "4582769965999": [
+   [
+    "2026-11-17T08:20",
+    100000
+   ]
+  ],
+  "4948872850391": [
+   [
+    "2026-11-17T08:20",
+    118700
+   ]
+  ],
+  "4570118002174": [
+   [
+    "2026-11-17T08:20",
+    36000
+   ]
+  ],
+  "4521329346038": [
+   [
+    "2026-11-17T08:20",
+    36500
+   ]
+  ],
+  "4521329322568": [
+   [
+    "2026-11-17T08:20",
+    35000
+   ]
+  ],
+  "4582770012040": [
+   [
+    "2026-11-17T08:20",
+    30000
+   ]
+  ],
+  "4549660853503": [
+   [
+    "2026-11-17T08:20",
+    31300
+   ]
+  ],
+  "4582769733727": [
+   [
+    "2026-11-17T08:20",
+    26100
+   ]
+  ],
+  "4948872415934": [
+   [
+    "2026-11-17T08:20",
+    118700
+   ]
+  ],
+  "4948872415910": [
+   [
+    "2026-11-17T08:20",
+    108900
+   ]
+  ],
+  "4582769774683": [
+   [
+    "2026-11-17T08:20",
+    24000
+   ]
+  ],
+  "4582769893971": [
+   [
+    "2026-11-17T08:20",
+    24000
+   ]
+  ],
+  "4521329427300": [
+   [
+    "2026-11-17T08:20",
+    23000
+   ]
+  ],
+  "4901777188907": [
+   [
+    "2026-11-17T08:20",
+    84000
+   ]
+  ],
+  "4521329427768": [
+   [
+    "2026-11-17T08:20",
+    21500
+   ]
+  ],
+  "4521329373362": [
+   [
+    "2026-11-17T08:20",
+    21000
+   ]
+  ],
+  "4582769937651": [
+   [
+    "2026-11-17T08:20",
+    35000
+   ]
+  ],
+  "4570118259509": [
+   [
+    "2026-11-17T08:20",
+    20200
+   ]
+  ],
+  "4521329374659": [
+   [
+    "2026-11-17T08:20",
+    20000
+   ]
+  ],
+  "4521329361505": [
+   [
+    "2026-11-17T08:20",
+    20000
+   ]
+  ],
+  "4521329427324": [
+   [
+    "2026-11-17T08:20",
+    20000
+   ]
+  ],
+  "4521329427782": [
+   [
+    "2026-11-17T08:20",
+    19800
+   ]
+  ],
+  "4570118001962": [
+   [
+    "2026-11-17T08:20",
+    19100
+   ]
+  ],
+  "4902370552683": [
+   [
+    "2026-11-17T08:20",
+    83200
+   ]
+  ],
+  "4948872016940": [
+   [
+    "2026-11-17T08:20",
+    121200
+   ]
+  ],
+  "4582769937194": [
+   [
+    "2026-11-17T08:20",
+    14000
+   ]
+  ],
+  "4570118085047": [
+   [
+    "2026-11-17T08:20",
+    18000
+   ]
+  ],
+  "4549660862963": [
+   [
+    "2026-11-17T08:20",
+    17300
+   ]
+  ],
+  "4521329463872": [
+   [
+    "2026-11-17T08:20",
+    40000
+   ]
+  ],
+  "4948872850995": [
+   [
+    "2026-11-17T08:20",
+    108900
+   ]
+  ],
+  "4521329346274": [
+   [
+    "2026-11-17T08:20",
+    16800
    ]
   ],
   "4549995732894": [
    [
     "2026-11-17T03:36",
+    481000
+   ],
+   [
+    "2026-11-17T08:20",
     481000
    ]
   ],
@@ -1980,11 +5005,61 @@
    [
     "2026-11-17T03:36",
     481000
+   ],
+   [
+    "2026-11-17T08:20",
+    481000
+   ]
+  ],
+  "4948872016957": [
+   [
+    "2026-11-17T08:20",
+    110700
+   ]
+  ],
+  "4521329346014": [
+   [
+    "2026-11-17T08:20",
+    16000
+   ]
+  ],
+  "4570118259493": [
+   [
+    "2026-11-17T08:20",
+    15800
+   ]
+  ],
+  "4521329394824": [
+   [
+    "2026-11-17T08:20",
+    16000
+   ]
+  ],
+  "4582769734441": [
+   [
+    "2026-11-17T08:20",
+    12000
+   ]
+  ],
+  "4549660863373": [
+   [
+    "2026-11-17T08:20",
+    15200
+   ]
+  ],
+  "4549660954958": [
+   [
+    "2026-11-17T08:20",
+    15700
    ]
   ],
   "4549995732993": [
    [
     "2026-11-17T03:36",
+    585000
+   ],
+   [
+    "2026-11-17T08:20",
     585000
    ]
   ],
@@ -1992,11 +5067,37 @@
    [
     "2026-11-17T03:36",
     585000
+   ],
+   [
+    "2026-11-17T08:20",
+    585000
+   ]
+  ],
+  "4570118145765": [
+   [
+    "2026-11-17T08:20",
+    15200
+   ]
+  ],
+  "4521329361352": [
+   [
+    "2026-11-17T08:20",
+    15200
+   ]
+  ],
+  "4521329391397": [
+   [
+    "2026-11-17T08:20",
+    15200
    ]
   ],
   "4549995649185": [
    [
     "2026-11-17T03:36",
+    139500
+   ],
+   [
+    "2026-11-17T08:20",
     139500
    ]
   ],
@@ -2004,11 +5105,19 @@
    [
     "2026-11-17T03:36",
     139500
+   ],
+   [
+    "2026-11-17T08:20",
+    139500
    ]
   ],
   "4549995649154": [
    [
     "2026-11-17T03:36",
+    139500
+   ],
+   [
+    "2026-11-17T08:20",
     139500
    ]
   ],
@@ -2016,17 +5125,233 @@
    [
     "2026-11-17T03:36",
     139500
+   ],
+   [
+    "2026-11-17T08:20",
+    139500
    ]
   ],
   "4549995649178": [
    [
     "2026-11-17T03:36",
     139500
+   ],
+   [
+    "2026-11-17T08:20",
+    139500
+   ]
+  ],
+  "4582769865213": [
+   [
+    "2026-11-17T08:20",
+    14600
+   ]
+  ],
+  "4582769796838": [
+   [
+    "2026-11-17T08:20",
+    14500
+   ]
+  ],
+  "4521329374758": [
+   [
+    "2026-11-17T08:20",
+    14500
+   ]
+  ],
+  "4521329431529": [
+   [
+    "2026-11-17T08:20",
+    14000
+   ]
+  ],
+  "4521329431536": [
+   [
+    "2026-11-17T08:20",
+    10000
+   ]
+  ],
+  "4521329427669": [
+   [
+    "2026-11-17T08:20",
+    10000
+   ]
+  ],
+  "4521329431277": [
+   [
+    "2026-11-17T08:20",
+    10000
+   ]
+  ],
+  "4901777359895": [
+   [
+    "2026-11-17T08:20",
+    16500
+   ]
+  ],
+  "4521329373515": [
+   [
+    "2026-11-17T08:20",
+    13000
+   ]
+  ],
+  "4988602179507": [
+   [
+    "2026-11-17T08:20",
+    13200
+   ]
+  ],
+  "9784081024391": [
+   [
+    "2026-11-17T08:20",
+    9000
+   ]
+  ],
+  "4902370551495": [
+   [
+    "2026-11-17T08:20",
+    45300
+   ]
+  ],
+  "4901777359772": [
+   [
+    "2026-11-17T08:20",
+    16000
+   ]
+  ],
+  "4521329368009": [
+   [
+    "2026-11-17T08:20",
+    13700
+   ]
+  ],
+  "9784089084632": [
+   [
+    "2026-11-17T08:20",
+    12000
+   ]
+  ],
+  "4582769937620": [
+   [
+    "2026-11-17T08:20",
+    12100
+   ]
+  ],
+  "4521329462424": [
+   [
+    "2026-11-17T08:20",
+    14000
+   ]
+  ],
+  "4521329362526": [
+   [
+    "2026-11-17T08:20",
+    12000
+   ]
+  ],
+  "4521329394831": [
+   [
+    "2026-11-17T08:20",
+    12000
+   ]
+  ],
+  "4902370549706": [
+   [
+    "2026-11-17T08:20",
+    45300
+   ]
+  ],
+  "4902370550481": [
+   [
+    "2026-11-17T08:20",
+    45300
+   ]
+  ],
+  "4902370550412": [
+   [
+    "2026-11-17T08:20",
+    45300
+   ]
+  ],
+  "4904810939542": [
+   [
+    "2026-11-17T08:20",
+    12000
+   ]
+  ],
+  "4902370552232": [
+   [
+    "2026-11-17T08:20",
+    29200
+   ]
+  ],
+  "4902370551457": [
+   [
+    "2026-11-17T08:20",
+    29100
+   ]
+  ],
+  "4902370551471": [
+   [
+    "2026-11-17T08:20",
+    29100
+   ]
+  ],
+  "4521329361239": [
+   [
+    "2026-11-17T08:20",
+    11500
+   ]
+  ],
+  "4521329394732": [
+   [
+    "2026-11-17T08:20",
+    11500
+   ]
+  ],
+  "4521329362496": [
+   [
+    "2026-11-17T08:20",
+    11200
+   ]
+  ],
+  "4582769865220": [
+   [
+    "2026-11-17T08:20",
+    11000
+   ]
+  ],
+  "4521329361000": [
+   [
+    "2026-11-17T08:20",
+    11000
+   ]
+  ],
+  "4521329346182": [
+   [
+    "2026-11-17T08:20",
+    10600
+   ]
+  ],
+  "4521329394848": [
+   [
+    "2026-11-17T08:20",
+    10500
+   ]
+  ],
+  "4904810085515": [
+   [
+    "2026-11-17T08:20",
+    7500
    ]
   ],
   "4549995732795": [
    [
     "2026-11-17T03:36",
+    402000
+   ],
+   [
+    "2026-11-17T08:20",
     402000
    ]
   ],
@@ -2034,6 +5359,232 @@
    [
     "2026-11-17T03:36",
     402000
+   ],
+   [
+    "2026-11-17T08:20",
+    402000
+   ]
+  ],
+  "4902370553031": [
+   [
+    "2026-11-17T08:20",
+    58500
+   ]
+  ],
+  "4521329346229": [
+   [
+    "2026-11-17T08:20",
+    10300
+   ]
+  ],
+  "4582769707384": [
+   [
+    "2026-11-17T08:20",
+    10000
+   ]
+  ],
+  "4570118227720": [
+   [
+    "2026-11-17T08:20",
+    9900
+   ]
+  ],
+  "0814585022803": [
+   [
+    "2026-11-17T08:20",
+    22200
+   ]
+  ],
+  "4521329431932": [
+   [
+    "2026-11-17T08:20",
+    10000
+   ]
+  ],
+  "4521329394756": [
+   [
+    "2026-11-17T08:20",
+    9800
+   ]
+  ],
+  "4570117961472": [
+   [
+    "2026-11-17T08:20",
+    7000
+   ]
+  ],
+  "4521329373539": [
+   [
+    "2026-11-17T08:20",
+    9600
+   ]
+  ],
+  "4582769922978": [
+   [
+    "2026-11-17T08:20",
+    9400
+   ]
+  ],
+  "4582769865206": [
+   [
+    "2026-11-17T08:20",
+    9500
+   ]
+  ],
+  "4549660863748": [
+   [
+    "2026-11-17T08:20",
+    6000
+   ]
+  ],
+  "4901777395459": [
+   [
+    "2026-11-17T08:20",
+    14500
+   ]
+  ],
+  "4901777377127": [
+   [
+    "2026-11-17T08:20",
+    14500
+   ]
+  ],
+  "4901777378124": [
+   [
+    "2026-11-17T08:20",
+    14500
+   ]
+  ],
+  "4948872414647": [
+   [
+    "2026-11-17T08:20",
+    36200
+   ]
+  ],
+  "4582770059229": [
+   [
+    "2026-11-17T08:20",
+    9000
+   ]
+  ],
+  "4582769912498": [
+   [
+    "2026-11-17T08:20",
+    8500
+   ]
+  ],
+  "4549576275383": [
+   [
+    "2026-11-17T08:20",
+    120000
+   ]
+  ],
+  "4582769721885": [
+   [
+    "2026-11-17T08:20",
+    4000
+   ]
+  ],
+  "4582769982897": [
+   [
+    "2026-11-17T08:20",
+    8000
+   ]
+  ],
+  "4902370553505": [
+   [
+    "2026-11-17T08:20",
+    56200
+   ]
+  ],
+  "4582769966002": [
+   [
+    "2026-11-17T08:20",
+    7900
+   ]
+  ],
+  "0814585023527": [
+   [
+    "2026-11-17T08:20",
+    265000
+   ]
+  ],
+  "4521329362649": [
+   [
+    "2026-11-17T08:20",
+    8000
+   ]
+  ],
+  "4988602180749": [
+   [
+    "2026-11-17T08:20",
+    7500
+   ]
+  ],
+  "4549576167893": [
+   [
+    "2026-11-17T08:20",
+    24300
+   ]
+  ],
+  "0814585023503": [
+   [
+    "2026-11-17T08:20",
+    250000
+   ]
+  ],
+  "4901777433502": [
+   [
+    "2026-11-17T08:20",
+    15500
+   ]
+  ],
+  "4948872416504": [
+   [
+    "2026-11-17T08:20",
+    40000
+   ]
+  ],
+  "4582769824548": [
+   [
+    "2026-11-17T08:20",
+    7600
+   ]
+  ],
+  "4901777447554": [
+   [
+    "2026-11-17T08:20",
+    16500
+   ]
+  ],
+  "4904810939566": [
+   [
+    "2026-11-17T08:20",
+    3500
+   ]
+  ],
+  "4901777395510": [
+   [
+    "2026-11-17T08:20",
+    13000
+   ]
+  ],
+  "4904810098775": [
+   [
+    "2026-11-17T08:20",
+    7000
+   ]
+  ],
+  "4948872416542": [
+   [
+    "2026-11-17T08:20",
+    81200
+   ]
+  ],
+  "4904810080572": [
+   [
+    "2026-11-17T08:20",
+    3800
    ]
   ]
  }
