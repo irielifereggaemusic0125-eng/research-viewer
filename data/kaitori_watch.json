@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17 08:20",
+ "updated_at": "2026-11-17 13:20",
  "source": "買取ルデヤ（kaitori-rudeya.com）",
  "card_rate": 0.01,
  "cash_threshold": 4000,
@@ -12,7 +12,7 @@
   "cat_ok": 63,
   "cat_ng": 0,
   "items": 1829,
-  "fetched_at": "2026-11-17T08:25:33+09:00"
+  "fetched_at": "2026-11-17T13:25:36+09:00"
  },
  "ps5": [
   {
@@ -99,8 +99,11 @@
    "store_later_amt": 0,
    "total": 378274,
    "tier": "normal",
+   "peak": 442000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4549660853268",
@@ -118,8 +121,11 @@
    "store_later_amt": 0,
    "total": 332546,
    "tier": "normal",
+   "peak": 390000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769721816",
@@ -137,8 +143,11 @@
    "store_later_amt": 0,
    "total": 254274,
    "tier": "normal",
+   "peak": 318000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769734311",
@@ -156,8 +165,11 @@
    "store_later_amt": 0,
    "total": 236274,
    "tier": "normal",
+   "peak": 300000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4570118001900",
@@ -175,8 +187,11 @@
    "store_later_amt": 0,
    "total": 170274,
    "tier": "normal",
+   "peak": 234000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4549660860488",
@@ -194,8 +209,11 @@
    "store_later_amt": 0,
    "total": 163546,
    "tier": "normal",
+   "peak": 221000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4570118084910",
@@ -213,8 +231,11 @@
    "store_later_amt": 0,
    "total": 157274,
    "tier": "normal",
+   "peak": 221000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4570118259370",
@@ -232,8 +253,11 @@
    "store_later_amt": 0,
    "total": 131274,
    "tier": "normal",
+   "peak": 195000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4549660954941",
@@ -251,8 +275,11 @@
    "store_later_amt": 0,
    "total": 128274,
    "tier": "normal",
+   "peak": 192000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4549660863182",
@@ -270,8 +297,11 @@
    "store_later_amt": 0,
    "total": 127546,
    "tier": "normal",
+   "peak": 185000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4570118145529",
@@ -289,8 +319,11 @@
    "store_later_amt": 0,
    "total": 124274,
    "tier": "normal",
+   "peak": 188000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769864865",
@@ -308,8 +341,11 @@
    "store_later_amt": 0,
    "total": 116274,
    "tier": "normal",
+   "peak": 180000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769796821",
@@ -327,8 +363,11 @@
    "store_later_amt": 0,
    "total": 115274,
    "tier": "normal",
+   "peak": 179000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769937613",
@@ -346,8 +385,11 @@
    "store_later_amt": 0,
    "total": 86274,
    "tier": "normal",
+   "peak": 150000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582770059212",
@@ -365,8 +407,11 @@
    "store_later_amt": 0,
    "total": 73571,
    "tier": "normal",
+   "peak": 143000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769864872",
@@ -384,8 +429,11 @@
    "store_later_amt": 0,
    "total": 73274,
    "tier": "normal",
+   "peak": 137000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4948872417075",
@@ -425,8 +473,11 @@
    "store_later_amt": 0,
    "total": 61274,
    "tier": "normal",
+   "peak": 125000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4570118213686",
@@ -444,8 +495,11 @@
    "store_later_amt": 0,
    "total": 60274,
    "tier": "normal",
+   "peak": 124000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4948872416320",
@@ -473,17 +527,17 @@
    "jan": "0814585022513",
    "name": "Steam Deck 有機EL (OLED) ホワイト 1TB SSD",
    "cat": "Steam",
-   "price": 164600,
+   "price": 164800,
    "memo": "中古品、免税品買取不可\n箱開封のみ減額-3000\n※中身が完品の場合のみ買取可能",
    "stopped": false,
    "url": "https://kaitori-rudeya.com/product/item/5410",
    "list_price": 109800,
    "list_asof": "2026-11-17",
    "edition": "",
-   "cash": 53800,
+   "cash": 54000,
    "card_amt": 1098,
    "store_later_amt": 0,
-   "total": 54898,
+   "total": 55098,
    "tier": "normal",
    "ended": true,
    "in_watch": false
@@ -504,8 +558,11 @@
    "store_later_amt": 0,
    "total": 52274,
    "tier": "normal",
+   "peak": 116000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582770058390",
@@ -523,8 +580,11 @@
    "store_later_amt": 0,
    "total": 40571,
    "tier": "normal",
+   "peak": 110000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769982880",
@@ -542,8 +602,11 @@
    "store_later_amt": 0,
    "total": 37274,
    "tier": "normal",
+   "peak": 101000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769965999",
@@ -561,8 +624,11 @@
    "store_later_amt": 0,
    "total": 36274,
    "tier": "normal",
+   "peak": 100000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4948872850391",
@@ -580,8 +646,11 @@
    "store_later_amt": 0,
    "total": 31590,
    "tier": "normal",
+   "peak": 118700,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4948872416580",
@@ -621,8 +690,11 @@
    "store_later_amt": 0,
    "total": 29773,
    "tier": "normal",
+   "peak": 36000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329346038",
@@ -640,8 +712,11 @@
    "store_later_amt": 0,
    "total": 29758,
    "tier": "normal",
+   "peak": 36500,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329322568",
@@ -659,8 +734,11 @@
    "store_later_amt": 0,
    "total": 29296,
    "tier": "normal",
+   "peak": 35000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582770012040",
@@ -678,8 +756,11 @@
    "store_later_amt": 0,
    "total": 26822,
    "tier": "normal",
+   "peak": 30000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4549660853503",
@@ -697,8 +778,11 @@
    "store_later_amt": 0,
    "total": 25596,
    "tier": "normal",
+   "peak": 31300,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769733727",
@@ -716,8 +800,11 @@
    "store_later_amt": 0,
    "total": 19873,
    "tier": "normal",
+   "peak": 26100,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4948872415934",
@@ -735,27 +822,11 @@
    "store_later_amt": 0,
    "total": 20700,
    "tier": "normal",
+   "peak": 118700,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
-  },
-  {
-   "jan": "4948872415910",
-   "name": "プレイステーション5 PlayStation5 Slimモデル (CFI-2000B01)デジタル・エディション 新型",
-   "cat": "PlayStation5",
-   "price": 108900,
-   "memo": "印有減額なし",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/3849",
-   "list_price": 89980,
-   "list_asof": "2026-11-17",
-   "edition": "",
-   "cash": 17920,
-   "card_amt": 900,
-   "store_later_amt": 0,
-   "total": 18820,
-   "tier": "normal",
-   "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769774683",
@@ -773,8 +844,11 @@
    "store_later_amt": 0,
    "total": 17773,
    "tier": "normal",
+   "peak": 24000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769893971",
@@ -792,8 +866,33 @@
    "store_later_amt": 0,
    "total": 17773,
    "tier": "normal",
+   "peak": 24000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
+  },
+  {
+   "jan": "4948872415910",
+   "name": "プレイステーション5 PlayStation5 Slimモデル (CFI-2000B01)デジタル・エディション 新型",
+   "cat": "PlayStation5",
+   "price": 108500,
+   "memo": "印有減額なし",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3849",
+   "list_price": 89980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 17520,
+   "card_amt": 900,
+   "store_later_amt": 0,
+   "total": 18420,
+   "tier": "normal",
+   "peak": 108900,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.4,
+   "ended": false,
+   "in_watch": true
   },
   {
    "jan": "4521329427300",
@@ -811,8 +910,11 @@
    "store_later_amt": 0,
    "total": 16258,
    "tier": "normal",
+   "peak": 23000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4901777188907",
@@ -830,8 +932,11 @@
    "store_later_amt": 0,
    "total": 16571,
    "tier": "normal",
+   "peak": 84000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329427768",
@@ -849,8 +954,11 @@
    "store_later_amt": 0,
    "total": 14758,
    "tier": "normal",
+   "peak": 21500,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329373362",
@@ -868,8 +976,11 @@
    "store_later_amt": 0,
    "total": 14555,
    "tier": "normal",
+   "peak": 21000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769937651",
@@ -887,8 +998,11 @@
    "store_later_amt": 0,
    "total": 14398,
    "tier": "normal",
+   "peak": 35000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4570118259509",
@@ -906,8 +1020,11 @@
    "store_later_amt": 0,
    "total": 13755,
    "tier": "normal",
+   "peak": 20200,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329374659",
@@ -925,8 +1042,11 @@
    "store_later_amt": 0,
    "total": 13654,
    "tier": "normal",
+   "peak": 20000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329361505",
@@ -944,8 +1064,11 @@
    "store_later_amt": 0,
    "total": 13654,
    "tier": "normal",
+   "peak": 20000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329427324",
@@ -963,8 +1086,11 @@
    "store_later_amt": 0,
    "total": 13258,
    "tier": "normal",
+   "peak": 20000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329427782",
@@ -982,8 +1108,11 @@
    "store_later_amt": 0,
    "total": 13058,
    "tier": "normal",
+   "peak": 19800,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4570118001962",
@@ -1001,8 +1130,11 @@
    "store_later_amt": 0,
    "total": 12873,
    "tier": "normal",
+   "peak": 19100,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4902370552683",
@@ -1020,8 +1152,11 @@
    "store_later_amt": 0,
    "total": 12920,
    "tier": "normal",
+   "peak": 83200,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4948872016940",
@@ -1039,8 +1174,11 @@
    "store_later_amt": 0,
    "total": 13300,
    "tier": "normal",
+   "peak": 121200,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769937194",
@@ -1058,8 +1196,11 @@
    "store_later_amt": 0,
    "total": 12020,
    "tier": "normal",
+   "peak": 14000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4570118085047",
@@ -1077,8 +1218,11 @@
    "store_later_amt": 0,
    "total": 11773,
    "tier": "normal",
+   "peak": 18000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4549660862963",
@@ -1096,8 +1240,11 @@
    "store_later_amt": 0,
    "total": 11596,
    "tier": "normal",
+   "peak": 17300,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329463872",
@@ -1115,27 +1262,77 @@
    "store_later_amt": 0,
    "total": 11775,
    "tier": "normal",
+   "peak": 40000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
+  },
+  {
+   "jan": "4549995732894",
+   "name": "iPhone Duo 1TB ナイトスカイ MK294J/A 未開封 SIMフリー",
+   "cat": "iPhone Duo",
+   "price": 482000,
+   "memo": "郵送買取 +500円",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7431",
+   "list_price": 469800,
+   "list_asof": "",
+   "edition": "",
+   "cash": 11200,
+   "card_amt": 4698,
+   "store_later_amt": 0,
+   "total": 15898,
+   "tier": "normal",
+   "peak": 482000,
+   "peak_at": "2026-11-17T13:20:01+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
+  },
+  {
+   "jan": "4549995732849",
+   "name": "iPhone Duo 1TB スターホワイト MK284J/A 未開封 SIMフリー",
+   "cat": "iPhone Duo",
+   "price": 482000,
+   "memo": "郵送買取 +500円",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/7430",
+   "list_price": 469800,
+   "list_asof": "",
+   "edition": "",
+   "cash": 11200,
+   "card_amt": 4698,
+   "store_later_amt": 0,
+   "total": 15898,
+   "tier": "normal",
+   "peak": 482000,
+   "peak_at": "2026-11-17T13:20:01+09:00",
+   "drop_pct": 0.0,
+   "ended": false,
+   "in_watch": true
   },
   {
    "jan": "4948872850995",
    "name": "プレイステーション5 デジタル・エディション “Marvel’s Wolverine” バトルイエロー リミテッドエディション (CFIJ-10033)",
    "cat": "PlayStation5",
-   "price": 108900,
+   "price": 108500,
    "memo": "印有減額なし",
    "stopped": false,
    "url": "https://kaitori-rudeya.com/product/item/7269",
    "list_price": 96980,
    "list_asof": "2026-11-17",
    "edition": "",
-   "cash": 10920,
+   "cash": 10520,
    "card_amt": 970,
    "store_later_amt": 0,
-   "total": 11890,
+   "total": 11490,
    "tier": "normal",
+   "peak": 108900,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.4,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329346274",
@@ -1153,71 +1350,11 @@
    "store_later_amt": 0,
    "total": 10454,
    "tier": "normal",
-   "ended": false,
-   "in_watch": false
-  },
-  {
-   "jan": "4549995732894",
-   "name": "iPhone Duo 1TB ナイトスカイ MK294J/A 未開封 SIMフリー",
-   "cat": "iPhone Duo",
-   "price": 481000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7431",
-   "list_price": 469800,
-   "list_asof": "",
-   "edition": "",
-   "cash": 10200,
-   "card_amt": 4698,
-   "store_later_amt": 0,
-   "total": 14898,
-   "tier": "normal",
-   "peak": 481000,
-   "peak_at": "2026-11-17T03:36:00+09:00",
+   "peak": 16800,
+   "peak_at": "2026-11-17T08:20:00+09:00",
    "drop_pct": 0.0,
    "ended": false,
    "in_watch": true
-  },
-  {
-   "jan": "4549995732849",
-   "name": "iPhone Duo 1TB スターホワイト MK284J/A 未開封 SIMフリー",
-   "cat": "iPhone Duo",
-   "price": 481000,
-   "memo": "郵送買取 +500円",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/7430",
-   "list_price": 469800,
-   "list_asof": "",
-   "edition": "",
-   "cash": 10200,
-   "card_amt": 4698,
-   "store_later_amt": 0,
-   "total": 14898,
-   "tier": "normal",
-   "peak": 481000,
-   "peak_at": "2026-11-17T03:36:00+09:00",
-   "drop_pct": 0.0,
-   "ended": false,
-   "in_watch": true
-  },
-  {
-   "jan": "4948872016957",
-   "name": "プレイステーション5 PlayStation5 Slimモデル (CFIJ-10019) デジタル・エディション ワイヤレスコントローラー ダブルパック 新型",
-   "cat": "PlayStation5",
-   "price": 110700,
-   "memo": "印有減額なし",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/3851",
-   "list_price": 99980,
-   "list_asof": "2026-11-17",
-   "edition": "",
-   "cash": 9720,
-   "card_amt": 1000,
-   "store_later_amt": 0,
-   "total": 10720,
-   "tier": "normal",
-   "ended": false,
-   "in_watch": false
   },
   {
    "jan": "4521329346014",
@@ -1235,8 +1372,33 @@
    "store_later_amt": 0,
    "total": 9654,
    "tier": "normal",
+   "peak": 16000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
+  },
+  {
+   "jan": "4948872016957",
+   "name": "プレイステーション5 PlayStation5 Slimモデル (CFIJ-10019) デジタル・エディション ワイヤレスコントローラー ダブルパック 新型",
+   "cat": "PlayStation5",
+   "price": 110500,
+   "memo": "印有減額なし",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3851",
+   "list_price": 99980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 9520,
+   "card_amt": 1000,
+   "store_later_amt": 0,
+   "total": 10520,
+   "tier": "normal",
+   "peak": 110700,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.2,
+   "ended": false,
+   "in_watch": true
   },
   {
    "jan": "4570118259493",
@@ -1254,8 +1416,11 @@
    "store_later_amt": 0,
    "total": 9573,
    "tier": "normal",
+   "peak": 15800,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329394824",
@@ -1273,8 +1438,11 @@
    "store_later_amt": 0,
    "total": 9555,
    "tier": "normal",
+   "peak": 16000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769734441",
@@ -1292,8 +1460,11 @@
    "store_later_amt": 0,
    "total": 9515,
    "tier": "normal",
+   "peak": 12000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4549660863373",
@@ -1311,8 +1482,11 @@
    "store_later_amt": 0,
    "total": 9496,
    "tier": "normal",
+   "peak": 15200,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4549660954958",
@@ -1330,8 +1504,11 @@
    "store_later_amt": 0,
    "total": 9473,
    "tier": "normal",
+   "peak": 15700,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4549995732993",
@@ -1393,8 +1570,11 @@
    "store_later_amt": 0,
    "total": 8973,
    "tier": "normal",
+   "peak": 15200,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329361352",
@@ -1412,8 +1592,11 @@
    "store_later_amt": 0,
    "total": 8854,
    "tier": "normal",
+   "peak": 15200,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329391397",
@@ -1431,8 +1614,11 @@
    "store_later_amt": 0,
    "total": 8854,
    "tier": "normal",
+   "peak": 15200,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4549995649185",
@@ -1560,8 +1746,11 @@
    "store_later_amt": 0,
    "total": 8373,
    "tier": "normal",
+   "peak": 14600,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769796838",
@@ -1579,8 +1768,11 @@
    "store_later_amt": 0,
    "total": 8273,
    "tier": "normal",
+   "peak": 14500,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329374758",
@@ -1598,8 +1790,11 @@
    "store_later_amt": 0,
    "total": 8154,
    "tier": "normal",
+   "peak": 14500,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329431529",
@@ -1617,8 +1812,11 @@
    "store_later_amt": 0,
    "total": 7654,
    "tier": "normal",
+   "peak": 14000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329431536",
@@ -1636,8 +1834,11 @@
    "store_later_amt": 0,
    "total": 6931,
    "tier": "normal",
+   "peak": 10000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329427669",
@@ -1655,8 +1856,11 @@
    "store_later_amt": 0,
    "total": 6931,
    "tier": "normal",
+   "peak": 10000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329431277",
@@ -1674,8 +1878,11 @@
    "store_later_amt": 0,
    "total": 6931,
    "tier": "normal",
+   "peak": 10000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4901777359895",
@@ -1712,8 +1919,11 @@
    "store_later_amt": 0,
    "total": 6654,
    "tier": "normal",
+   "peak": 13000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4988602179507",
@@ -1731,8 +1941,11 @@
    "store_later_amt": 0,
    "total": 6483,
    "tier": "normal",
+   "peak": 13200,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "9784081024391",
@@ -1750,8 +1963,11 @@
    "store_later_amt": 0,
    "total": 6366,
    "tier": "normal",
+   "peak": 9000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4902370551495",
@@ -1807,8 +2023,11 @@
    "store_later_amt": 0,
    "total": 6188,
    "tier": "normal",
+   "peak": 13700,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "9784089084632",
@@ -1826,8 +2045,11 @@
    "store_later_amt": 0,
    "total": 6100,
    "tier": "normal",
+   "peak": 12000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769937620",
@@ -1845,8 +2067,11 @@
    "store_later_amt": 0,
    "total": 5873,
    "tier": "normal",
+   "peak": 12100,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329462424",
@@ -1864,8 +2089,11 @@
    "store_later_amt": 0,
    "total": 5872,
    "tier": "normal",
+   "peak": 14000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329362526",
@@ -1883,8 +2111,11 @@
    "store_later_amt": 0,
    "total": 5654,
    "tier": "normal",
+   "peak": 12000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329394831",
@@ -1902,8 +2133,11 @@
    "store_later_amt": 0,
    "total": 5654,
    "tier": "normal",
+   "peak": 12000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4902370549706",
@@ -1978,8 +2212,11 @@
    "store_later_amt": 0,
    "total": 5357,
    "tier": "normal",
+   "peak": 12000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4902370552232",
@@ -2054,8 +2291,11 @@
    "store_later_amt": 0,
    "total": 5154,
    "tier": "normal",
+   "peak": 11500,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329394732",
@@ -2073,8 +2313,11 @@
    "store_later_amt": 0,
    "total": 5154,
    "tier": "normal",
+   "peak": 11500,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329362496",
@@ -2092,8 +2335,11 @@
    "store_later_amt": 0,
    "total": 4854,
    "tier": "normal",
+   "peak": 11200,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4582769865220",
@@ -2111,8 +2357,11 @@
    "store_later_amt": 0,
    "total": 4773,
    "tier": "normal",
+   "peak": 11000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329361000",
@@ -2130,8 +2379,11 @@
    "store_later_amt": 0,
    "total": 4654,
    "tier": "normal",
+   "peak": 11000,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329346182",
@@ -2149,8 +2401,11 @@
    "store_later_amt": 0,
    "total": 4254,
    "tier": "normal",
+   "peak": 10600,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4521329394848",
@@ -2168,8 +2423,11 @@
    "store_later_amt": 0,
    "total": 4154,
    "tier": "normal",
+   "peak": 10500,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   },
   {
    "jan": "4904810085515",
@@ -2187,8 +2445,11 @@
    "store_later_amt": 0,
    "total": 4025,
    "tier": "normal",
+   "peak": 7500,
+   "peak_at": "2026-11-17T08:20:00+09:00",
+   "drop_pct": 0.0,
    "ended": false,
-   "in_watch": false
+   "in_watch": true
   }
  ],
  "point": [
@@ -2196,17 +2457,17 @@
    "jan": "4549995732795",
    "name": "iPhone Duo 512GB ナイトスカイ MK274J/A 未開封 SIMフリー",
    "cat": "iPhone Duo",
-   "price": 402000,
+   "price": 402500,
    "memo": "郵送買取 +500円",
    "stopped": false,
    "url": "https://kaitori-rudeya.com/product/item/7429",
    "list_price": 399800,
    "list_asof": "",
    "edition": "",
-   "cash": 1200,
+   "cash": 1700,
    "card_amt": 3998,
    "store_later_amt": 0,
-   "total": 5198,
+   "total": 5698,
    "tier": "point",
    "ended": false,
    "in_watch": false
@@ -2215,17 +2476,17 @@
    "jan": "4549995732740",
    "name": "iPhone Duo 512GB スターホワイト MK264J/A 未開封 SIMフリー",
    "cat": "iPhone Duo",
-   "price": 402000,
+   "price": 402500,
    "memo": "郵送買取 +500円",
    "stopped": false,
    "url": "https://kaitori-rudeya.com/product/item/7428",
    "list_price": 399800,
    "list_asof": "",
    "edition": "",
-   "cash": 1200,
+   "cash": 1700,
    "card_amt": 3998,
    "store_later_amt": 0,
-   "total": 5198,
+   "total": 5698,
    "tier": "point",
    "ended": false,
    "in_watch": false
@@ -2359,6 +2620,25 @@
    "card_amt": 54,
    "store_later_amt": 0,
    "total": 3454,
+   "tier": "point",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549576275383",
+   "name": "新型版 Xbox Series X 本体 ディスクモデル 1TB EP2-63835",
+   "cat": "Xbox",
+   "price": 121200,
+   "memo": "必ずJAN・型番をご確認ください。\n印有減額なし。\nシールが剥がれているものは買取不可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6651",
+   "list_price": 117980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": 2220,
+   "card_amt": 1180,
+   "store_later_amt": 0,
+   "total": 3400,
    "tier": "point",
    "ended": false,
    "in_watch": false
@@ -2568,25 +2848,6 @@
    "card_amt": 53,
    "store_later_amt": 0,
    "total": 2273,
-   "tier": "point",
-   "ended": false,
-   "in_watch": false
-  },
-  {
-   "jan": "4549576275383",
-   "name": "新型版 Xbox Series X 本体 ディスクモデル 1TB EP2-63835",
-   "cat": "Xbox",
-   "price": 120000,
-   "memo": "必ずJAN・型番をご確認ください。\n印有減額なし。\nシールが剥がれているものは買取不可。",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6651",
-   "list_price": 117980,
-   "list_asof": "2026-11-17",
-   "edition": "",
-   "cash": 1020,
-   "card_amt": 1180,
-   "store_later_amt": 0,
-   "total": 2200,
    "tier": "point",
    "ended": false,
    "in_watch": false
@@ -2955,6 +3216,44 @@
    "in_watch": false
   },
   {
+   "jan": "0814585022605",
+   "name": "Steam Deck 有機EL(OLED) 512GB SSD [新JAN]",
+   "cat": "Steam",
+   "price": 138500,
+   "memo": "中古品、免税品買取不可\n箱開封のみ減額-3000\n※中身が完品の場合のみ買取可能",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/6332",
+   "list_price": 137980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -480,
+   "card_amt": 1380,
+   "store_later_amt": 0,
+   "total": 900,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "0814585022254",
+   "name": "Steam Deck 有機EL(OLED) 512GB SSD",
+   "cat": "Steam",
+   "price": 138500,
+   "memo": "中古品、免税品買取不可\n箱開封のみ減額-3000\n※中身が完品の場合のみ買取可能",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/3917",
+   "list_price": 137980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -480,
+   "card_amt": 1380,
+   "store_later_amt": 0,
+   "total": 900,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
    "jan": "4582769843532",
    "name": "ONE PIECE カードゲーム プレミアムカードコレクション -ベストセレクション vol.4-",
    "cat": "ワンピースカード",
@@ -3007,44 +3306,6 @@
    "card_amt": 62,
    "store_later_amt": 0,
    "total": 862,
-   "tier": "loss",
-   "ended": false,
-   "in_watch": false
-  },
-  {
-   "jan": "0814585022605",
-   "name": "Steam Deck 有機EL(OLED) 512GB SSD [新JAN]",
-   "cat": "Steam",
-   "price": 138300,
-   "memo": "中古品、免税品買取不可\n箱開封のみ減額-3000\n※中身が完品の場合のみ買取可能",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/6332",
-   "list_price": 137980,
-   "list_asof": "2026-11-17",
-   "edition": "",
-   "cash": -680,
-   "card_amt": 1380,
-   "store_later_amt": 0,
-   "total": 700,
-   "tier": "loss",
-   "ended": false,
-   "in_watch": false
-  },
-  {
-   "jan": "0814585022254",
-   "name": "Steam Deck 有機EL(OLED) 512GB SSD",
-   "cat": "Steam",
-   "price": 138300,
-   "memo": "中古品、免税品買取不可\n箱開封のみ減額-3000\n※中身が完品の場合のみ買取可能",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/3917",
-   "list_price": 137980,
-   "list_asof": "2026-11-17",
-   "edition": "",
-   "cash": -680,
-   "card_amt": 1380,
-   "store_later_amt": 0,
-   "total": 700,
    "tier": "loss",
    "ended": false,
    "in_watch": false
@@ -3216,6 +3477,25 @@
    "card_amt": 59,
    "store_later_amt": 0,
    "total": 369,
+   "tier": "loss",
+   "ended": false,
+   "in_watch": false
+  },
+  {
+   "jan": "4549576247038",
+   "name": "マイクロソフト Microsoft Xbox Series X 本体 1TB ホワイト デジタルエディション EP2-00708",
+   "cat": "Xbox",
+   "price": 110200,
+   "memo": "印有減額なし。\nシールが剥がれているものは買取不可。",
+   "stopped": false,
+   "url": "https://kaitori-rudeya.com/product/item/4756",
+   "list_price": 109980,
+   "list_asof": "2026-11-17",
+   "edition": "",
+   "cash": -780,
+   "card_amt": 1100,
+   "store_later_amt": 0,
+   "total": 320,
    "tier": "loss",
    "ended": false,
    "in_watch": false
@@ -3520,25 +3800,6 @@
    "card_amt": 27,
    "store_later_amt": 0,
    "total": -873,
-   "tier": "loss",
-   "ended": false,
-   "in_watch": false
-  },
-  {
-   "jan": "4549576247038",
-   "name": "マイクロソフト Microsoft Xbox Series X 本体 1TB ホワイト デジタルエディション EP2-00708",
-   "cat": "Xbox",
-   "price": 109000,
-   "memo": "印有減額なし。\nシールが剥がれているものは買取不可。",
-   "stopped": false,
-   "url": "https://kaitori-rudeya.com/product/item/4756",
-   "list_price": 109980,
-   "list_asof": "2026-11-17",
-   "edition": "",
-   "cash": -1980,
-   "card_amt": 1100,
-   "store_later_amt": 0,
-   "total": -880,
    "tier": "loss",
    "ended": false,
    "in_watch": false
@@ -4638,6 +4899,528 @@
    "added_at": "2026-11-17T08:20:00+09:00",
    "tier": "normal",
    "cash_at_add": 8700
+  },
+  "4902370552683": {
+   "name": "Nintendo Switch 2 多言語版 BEE-S-KB6AA",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 12220
+  },
+  "4948872415934": {
+   "name": "プレイステーション5 PlayStation5 Slimモデル (CFI-2000A01) 新型",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 19720
+  },
+  "4948872850391": {
+   "name": "プレイステーション5 Ghost of Yotei ゴールド リミテッドエディション (CFIJ-10029)",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 30720
+  },
+  "4948872415910": {
+   "name": "プレイステーション5 PlayStation5 Slimモデル (CFI-2000B01)デジタル・エディション 新型",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 17520
+  },
+  "4948872850995": {
+   "name": "プレイステーション5 デジタル・エディション “Marvel’s Wolverine” バトルイエロー リミテッドエディション (CFIJ-10033)",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 10520
+  },
+  "4948872016940": {
+   "name": "プレイステーション5 PlayStation5 Slimモデル(CFIJ-10018) ワイヤレスコントローラー ダブルパック 新型",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 12220
+  },
+  "4948872016957": {
+   "name": "プレイステーション5 PlayStation5 Slimモデル (CFIJ-10019) デジタル・エディション ワイヤレスコントローラー ダブルパック 新型",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 9520
+  },
+  "4521329368009": {
+   "name": "Pokemon GO Plus+",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 6122
+  },
+  "4901777188907": {
+   "name": "サントリー シングルモルト ウイスキー 山崎 18年 700ml 43度",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 15900
+  },
+  "4904810085515": {
+   "name": "BEYBLADE X UX-00 スターター サムライセイバー5-60K メタルコート:サムライブルー サッカー日本代表Ver",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 4000
+  },
+  "4904810939542": {
+   "name": "BEYBLADE X UX-10 カスタマイズセットU",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 5300
+  },
+  "4521329462424": {
+   "name": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX [M6a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 5800
+  },
+  "4521329463872": {
+   "name": "ポケモンカードゲーム MEGA 30th CELEBRATION FUTURISTIC BOX",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 11500
+  },
+  "4521329431529": {
+   "name": "ポケモンカードゲーム MEGA 拡張パック インフェルノX BOX [M2]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 7600
+  },
+  "4521329431536": {
+   "name": "ポケモンカードゲーム S&V スペシャルBOX ポケモンセンターフクオカ",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 6910
+  },
+  "4521329427669": {
+   "name": "ポケモンカードゲーム S&V スペシャルBOX ポケモンセンターヒロシマ",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 6910
+  },
+  "4521329431277": {
+   "name": "ポケモンカードゲーム S&V スペシャルBOX ポケモンセンタートウホク",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 6910
+  },
+  "4521329427768": {
+   "name": "ポケモンカード S&V 拡張パック ブラックボルト BOX [SV11B]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 14700
+  },
+  "4521329427782": {
+   "name": "ポケモンカード S&V 拡張パック ホワイトフレア BOX [SV11W]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 13000
+  },
+  "4521329427300": {
+   "name": "ポケモンカード S&V 拡張パックデラックス ブラックボルト BOX [SV11B_DX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 16200
+  },
+  "4521329427324": {
+   "name": "ポケモンカード S&V 拡張パックデラックス ホワイトフレア BOX [SV11W_DX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 13200
+  },
+  "4521329374659": {
+   "name": "ポケモンカード S&V 拡張パック ロケット団の栄光 BOX [SV10]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 13600
+  },
+  "4521329374758": {
+   "name": "ポケモンカードゲーム S&V 拡張パック 熱風のアリーナ BOX [SV9a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 8100
+  },
+  "4521329361505": {
+   "name": "ポケモンカード S&V 強化拡張パック  超電ブレイカー BOX [SV8]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 13600
+  },
+  "4521329361352": {
+   "name": "ポケモンカードゲーム S&V 強化拡張パック 楽園ドラゴーナ BOX [SV7a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 8800
+  },
+  "4521329361000": {
+   "name": "ポケモンカードゲーム S&V 強化拡張パック ステラミラクル BOX [SV7]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 4600
+  },
+  "4521329362496": {
+   "name": "ポケモンカードゲーム S&V 強化拡張パック ナイトワンダラー BOX [SV6a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 4800
+  },
+  "4521329362526": {
+   "name": "ポケモンカードゲーム S&V 拡張パック 変幻の仮面 BOX [SV6]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 5600
+  },
+  "4521329361239": {
+   "name": "ポケモンカードゲーム S&V 強化拡張パック クリムゾンヘイズ BOX [SV5a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 5100
+  },
+  "4521329394831": {
+   "name": "ポケモンカードゲーム S&V 拡張パック ワイルドフォース BOX [SV5K]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 5600
+  },
+  "4521329394848": {
+   "name": "ポケモンカードゲーム S&V 拡張パック サイバージャッジ BOX [SV5M]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 4100
+  },
+  "4521329394824": {
+   "name": "ポケモンカード S&V ハイクラスパック シャイニートレジャーex BOX [SV4a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 9500
+  },
+  "4521329394732": {
+   "name": "ポケモンカードゲーム S&V 拡張パック 古代の咆哮 BOX [SV4K]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 5100
+  },
+  "4521329391397": {
+   "name": "ポケモンカードゲーム S&V 強化拡張パック レイジングサーフ BOX [SV3a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 8800
+  },
+  "4521329346014": {
+   "name": "ポケモンカードゲーム S&V 拡張パック 黒炎の支配者 BOX [SV3]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 9600
+  },
+  "4521329346038": {
+   "name": "ポケモンカード S&V 強化拡張パック 151  BOX [SV2a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 29700
+  },
+  "4521329373362": {
+   "name": "ポケモンカードゲーム S&V ハイクラスパック VSTARユニバース BOX [S12a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 14500
+  },
+  "4521329346182": {
+   "name": "ポケモンカード S＆V 拡張パック クレイバースト BOX [SV2D]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 4200
+  },
+  "4521329346274": {
+   "name": "ポケモンカードゲーム S&V 強化拡張パック トリプレットビート BOX [SV1a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 10400
+  },
+  "4521329373515": {
+   "name": "ポケモンカードゲーム S&V 拡張パック スカーレットex BOX [SV1S]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 6600
+  },
+  "4521329322568": {
+   "name": "ポケモンカードゲーム S&S 拡張パック 25th ANNIVERSARY COLLECTION BOX [S8a]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 29248
+  },
+  "4582769865213": {
+   "name": "ONE PIECEカードゲーム 受け継がれる意志 OP-13 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 8320
+  },
+  "4582769796838": {
+   "name": "ONE PIECEカードゲーム 師弟の絆 OP-12 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 8220
+  },
+  "4549660853503": {
+   "name": "ONE PIECEカードゲーム ROMANCE DAWN OP-01 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 25548
+  },
+  "4582769937620": {
+   "name": "ONE PIECEカードゲーム エクストラブースター EGGHEAD CRISIS EB-04 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 5820
+  },
+  "4582769865220": {
+   "name": "ONE PIECEカードゲーム エクストラブースター ONE PIECE Heroines Edition EB-03 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 4720
+  },
+  "4582769733727": {
+   "name": "ONE PIECEカードゲーム エクストラブースター Anime 25th collection EB-02 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 19820
+  },
+  "4570118085047": {
+   "name": "ONE PIECEカードゲーム エクストラブースター メモリアルコレクション EB-01 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 11720
+  },
+  "4570118259509": {
+   "name": "ONE PIECEカードゲーム プレミアムブースター THE BEST PRB-01 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 13700
+  },
+  "4582769774683": {
+   "name": "ONE PIECEカードゲーム 神速の拳 OP-11 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 17720
+  },
+  "4570118259493": {
+   "name": "ONE PIECEカードゲーム 新たなる皇帝 OP-09 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 9520
+  },
+  "4570118145765": {
+   "name": "ONE PIECEカードゲーム 500年後の未来 OP-07 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 8920
+  },
+  "4570118001962": {
+   "name": "ONE PIECEカードゲーム 双璧の覇者 OP-06 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 12820
+  },
+  "4570118002174": {
+   "name": "ONE PIECEカードゲーム 新時代の主役 OP-05 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 29720
+  },
+  "4549660954958": {
+   "name": "ONE PIECEカードゲーム 謀略の王国 OP-04 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 9420
+  },
+  "4549660863373": {
+   "name": "ONE PIECEカードゲーム 強大な敵 OP-03 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 9448
+  },
+  "4549660862963": {
+   "name": "ONE PIECEカードゲーム 頂上決戦 OP-02 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 11548
+  },
+  "4582770059212": {
+   "name": "ONE PIECEカードゲーム エクストラブースター ONE PIECE Heroines Edition vol.2 EB-05 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 72880
+  },
+  "4582770058390": {
+   "name": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士 OP-17 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 39880
+  },
+  "4582769982880": {
+   "name": "ONE PIECEカードゲーム ブースターパック 決戦の刻 OP-16 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 36640
+  },
+  "4582769965999": {
+   "name": "ONE PIECEカードゲーム エクストラブースター 神の島の冒険 OP-15 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 35640
+  },
+  "4582769937613": {
+   "name": "ONE PIECEカードゲーム エクストラブースター EGGHEAD CRISIS EB-04 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 85640
+  },
+  "4582769864872": {
+   "name": "ONE PIECEカードゲーム エクストラブースター ONE PIECE Heroines Edition EB-03 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 72640
+  },
+  "4582769721816": {
+   "name": "ONE PIECEカードゲーム エクストラブースター Anime 25th collection EB-02 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 253640
+  },
+  "4570118084910": {
+   "name": "ONE PIECEカードゲーム エクストラブースター メモリアルコレクション EB-01 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 156640
+  },
+  "4582769922961": {
+   "name": "ONE PIECEカードゲーム 蒼海の七傑 OP-14 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 51640
+  },
+  "4582769864865": {
+   "name": "ONE PIECEカードゲーム 受け継がれる意志 OP-13 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 115640
+  },
+  "4582769796821": {
+   "name": "ONE PIECEカードゲーム 師弟の絆 OP-12 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 114640
+  },
+  "4582769734311": {
+   "name": "ONE PIECEカードゲーム 神速の拳 OP-11 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 235640
+  },
+  "4582769707100": {
+   "name": "ONE PIECEカードゲーム 王族の血統 OP-10 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 60640
+  },
+  "4570118259370": {
+   "name": "ONE PIECEカードゲーム 新たなる皇帝 OP-09 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 130640
+  },
+  "4570118213686": {
+   "name": "ONE PIECEカードゲーム 二つの伝説 OP-08 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 59640
+  },
+  "4570118145529": {
+   "name": "ONE PIECEカードゲーム 500年後の未来 OP-07 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 123640
+  },
+  "4570118001900": {
+   "name": "ONE PIECEカードゲーム 双璧の覇者 OP-06 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 169640
+  },
+  "4570118002167": {
+   "name": "ONE PIECEカードゲーム 新時代の主役 OP-05 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 377640
+  },
+  "4549660954941": {
+   "name": "ONE PIECEカードゲーム 謀略の王国 OP-04 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 127640
+  },
+  "4549660863182": {
+   "name": "ONE PIECEカードゲーム 強大な敵 OP-03 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 126976
+  },
+  "4549660860488": {
+   "name": "ONE PIECEカードゲーム 頂上決戦 OP-02 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 162976
+  },
+  "4549660853268": {
+   "name": "ONE PIECEカードゲーム ROMANCE DAWN OP-01 [カートン]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 331976
+  },
+  "4582769937194": {
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション ONE PIECE DAY’25",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 12010
+  },
+  "4582770012040": {
+   "name": "ONE PIECEカードゲーム プレミアムカードコレクション-熊本県スペシャル-",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 26800
+  },
+  "4582769734441": {
+   "name": "ONE PIECE カードゲーム プレミアムカードコレクション -リーダーコレクション-",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 9500
+  },
+  "9784081024391": {
+   "name": "ONE PIECE magazine 特集 週刊少年ジャンプとONE PIECE",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 6350
+  },
+  "4582769937651": {
+   "name": "ONEPIECEカードゲーム 3rd ANNIVERSARY SET",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 14200
+  },
+  "9784089084632": {
+   "name": "MONSTERS 一百三情飛龍侍極 公式ガイドブックDVD同梱BOX 大業匣",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 6050
+  },
+  "4582769893971": {
+   "name": "神龍への願い FB07 [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 17720
+  },
+  "4988602179507": {
+   "name": "遊戯王OCG デュエルモンスターズ LIMIT OVER COLLECTION -THE HEROES- [BOX]",
+   "added_at": "2026-11-17T13:20:01+09:00",
+   "tier": "normal",
+   "cash_at_add": 6425
   }
  },
  "removed": [],
@@ -4651,6 +5434,10 @@
    [
     "2026-11-17T08:20",
     200000
+   ],
+   [
+    "2026-11-17T13:20",
+    200000
    ]
   ],
   "4948872416320": [
@@ -4660,6 +5447,10 @@
    ],
    [
     "2026-11-17T08:20",
+    195000
+   ],
+   [
+    "2026-11-17T13:20",
     195000
    ]
   ],
@@ -4671,11 +5462,19 @@
    [
     "2026-11-17T08:20",
     200000
+   ],
+   [
+    "2026-11-17T13:20",
+    200000
    ]
   ],
   "4570118002167": [
    [
     "2026-11-17T08:20",
+    442000
+   ],
+   [
+    "2026-11-17T13:20",
     442000
    ]
   ],
@@ -4683,11 +5482,19 @@
    [
     "2026-11-17T08:20",
     390000
+   ],
+   [
+    "2026-11-17T13:20",
+    390000
    ]
   ],
   "4582769721816": [
    [
     "2026-11-17T08:20",
+    318000
+   ],
+   [
+    "2026-11-17T13:20",
     318000
    ]
   ],
@@ -4695,11 +5502,19 @@
    [
     "2026-11-17T08:20",
     300000
+   ],
+   [
+    "2026-11-17T13:20",
+    300000
    ]
   ],
   "4570118001900": [
    [
     "2026-11-17T08:20",
+    234000
+   ],
+   [
+    "2026-11-17T13:20",
     234000
    ]
   ],
@@ -4707,11 +5522,19 @@
    [
     "2026-11-17T08:20",
     221000
+   ],
+   [
+    "2026-11-17T13:20",
+    221000
    ]
   ],
   "4570118084910": [
    [
     "2026-11-17T08:20",
+    221000
+   ],
+   [
+    "2026-11-17T13:20",
     221000
    ]
   ],
@@ -4719,11 +5542,19 @@
    [
     "2026-11-17T08:20",
     195000
+   ],
+   [
+    "2026-11-17T13:20",
+    195000
    ]
   ],
   "4549660954941": [
    [
     "2026-11-17T08:20",
+    192000
+   ],
+   [
+    "2026-11-17T13:20",
     192000
    ]
   ],
@@ -4731,11 +5562,19 @@
    [
     "2026-11-17T08:20",
     185000
+   ],
+   [
+    "2026-11-17T13:20",
+    185000
    ]
   ],
   "4570118145529": [
    [
     "2026-11-17T08:20",
+    188000
+   ],
+   [
+    "2026-11-17T13:20",
     188000
    ]
   ],
@@ -4743,11 +5582,19 @@
    [
     "2026-11-17T08:20",
     180000
+   ],
+   [
+    "2026-11-17T13:20",
+    180000
    ]
   ],
   "4582769796821": [
    [
     "2026-11-17T08:20",
+    179000
+   ],
+   [
+    "2026-11-17T13:20",
     179000
    ]
   ],
@@ -4755,11 +5602,19 @@
    [
     "2026-11-17T08:20",
     150000
+   ],
+   [
+    "2026-11-17T13:20",
+    150000
    ]
   ],
   "4582770059212": [
    [
     "2026-11-17T08:20",
+    143000
+   ],
+   [
+    "2026-11-17T13:20",
     143000
    ]
   ],
@@ -4767,11 +5622,19 @@
    [
     "2026-11-17T08:20",
     137000
+   ],
+   [
+    "2026-11-17T13:20",
+    137000
    ]
   ],
   "4582769707100": [
    [
     "2026-11-17T08:20",
+    125000
+   ],
+   [
+    "2026-11-17T13:20",
     125000
    ]
   ],
@@ -4779,17 +5642,29 @@
    [
     "2026-11-17T08:20",
     124000
+   ],
+   [
+    "2026-11-17T13:20",
+    124000
    ]
   ],
   "0814585022513": [
    [
     "2026-11-17T08:20",
     164600
+   ],
+   [
+    "2026-11-17T13:20",
+    164800
    ]
   ],
   "4582769922961": [
    [
     "2026-11-17T08:20",
+    116000
+   ],
+   [
+    "2026-11-17T13:20",
     116000
    ]
   ],
@@ -4797,11 +5672,19 @@
    [
     "2026-11-17T08:20",
     110000
+   ],
+   [
+    "2026-11-17T13:20",
+    110000
    ]
   ],
   "4582769982880": [
    [
     "2026-11-17T08:20",
+    101000
+   ],
+   [
+    "2026-11-17T13:20",
     101000
    ]
   ],
@@ -4809,11 +5692,19 @@
    [
     "2026-11-17T08:20",
     100000
+   ],
+   [
+    "2026-11-17T13:20",
+    100000
    ]
   ],
   "4948872850391": [
    [
     "2026-11-17T08:20",
+    118700
+   ],
+   [
+    "2026-11-17T13:20",
     118700
    ]
   ],
@@ -4821,11 +5712,19 @@
    [
     "2026-11-17T08:20",
     36000
+   ],
+   [
+    "2026-11-17T13:20",
+    36000
    ]
   ],
   "4521329346038": [
    [
     "2026-11-17T08:20",
+    36500
+   ],
+   [
+    "2026-11-17T13:20",
     36500
    ]
   ],
@@ -4833,11 +5732,19 @@
    [
     "2026-11-17T08:20",
     35000
+   ],
+   [
+    "2026-11-17T13:20",
+    35000
    ]
   ],
   "4582770012040": [
    [
     "2026-11-17T08:20",
+    30000
+   ],
+   [
+    "2026-11-17T13:20",
     30000
    ]
   ],
@@ -4845,11 +5752,19 @@
    [
     "2026-11-17T08:20",
     31300
+   ],
+   [
+    "2026-11-17T13:20",
+    31300
    ]
   ],
   "4582769733727": [
    [
     "2026-11-17T08:20",
+    26100
+   ],
+   [
+    "2026-11-17T13:20",
     26100
    ]
   ],
@@ -4857,17 +5772,19 @@
    [
     "2026-11-17T08:20",
     118700
-   ]
-  ],
-  "4948872415910": [
+   ],
    [
-    "2026-11-17T08:20",
-    108900
+    "2026-11-17T13:20",
+    118700
    ]
   ],
   "4582769774683": [
    [
     "2026-11-17T08:20",
+    24000
+   ],
+   [
+    "2026-11-17T13:20",
     24000
    ]
   ],
@@ -4875,11 +5792,29 @@
    [
     "2026-11-17T08:20",
     24000
+   ],
+   [
+    "2026-11-17T13:20",
+    24000
+   ]
+  ],
+  "4948872415910": [
+   [
+    "2026-11-17T08:20",
+    108900
+   ],
+   [
+    "2026-11-17T13:20",
+    108500
    ]
   ],
   "4521329427300": [
    [
     "2026-11-17T08:20",
+    23000
+   ],
+   [
+    "2026-11-17T13:20",
     23000
    ]
   ],
@@ -4887,11 +5822,19 @@
    [
     "2026-11-17T08:20",
     84000
+   ],
+   [
+    "2026-11-17T13:20",
+    84000
    ]
   ],
   "4521329427768": [
    [
     "2026-11-17T08:20",
+    21500
+   ],
+   [
+    "2026-11-17T13:20",
     21500
    ]
   ],
@@ -4899,11 +5842,19 @@
    [
     "2026-11-17T08:20",
     21000
+   ],
+   [
+    "2026-11-17T13:20",
+    21000
    ]
   ],
   "4582769937651": [
    [
     "2026-11-17T08:20",
+    35000
+   ],
+   [
+    "2026-11-17T13:20",
     35000
    ]
   ],
@@ -4911,11 +5862,19 @@
    [
     "2026-11-17T08:20",
     20200
+   ],
+   [
+    "2026-11-17T13:20",
+    20200
    ]
   ],
   "4521329374659": [
    [
     "2026-11-17T08:20",
+    20000
+   ],
+   [
+    "2026-11-17T13:20",
     20000
    ]
   ],
@@ -4923,11 +5882,19 @@
    [
     "2026-11-17T08:20",
     20000
+   ],
+   [
+    "2026-11-17T13:20",
+    20000
    ]
   ],
   "4521329427324": [
    [
     "2026-11-17T08:20",
+    20000
+   ],
+   [
+    "2026-11-17T13:20",
     20000
    ]
   ],
@@ -4935,11 +5902,19 @@
    [
     "2026-11-17T08:20",
     19800
+   ],
+   [
+    "2026-11-17T13:20",
+    19800
    ]
   ],
   "4570118001962": [
    [
     "2026-11-17T08:20",
+    19100
+   ],
+   [
+    "2026-11-17T13:20",
     19100
    ]
   ],
@@ -4947,11 +5922,19 @@
    [
     "2026-11-17T08:20",
     83200
+   ],
+   [
+    "2026-11-17T13:20",
+    83200
    ]
   ],
   "4948872016940": [
    [
     "2026-11-17T08:20",
+    121200
+   ],
+   [
+    "2026-11-17T13:20",
     121200
    ]
   ],
@@ -4959,11 +5942,19 @@
    [
     "2026-11-17T08:20",
     14000
+   ],
+   [
+    "2026-11-17T13:20",
+    14000
    ]
   ],
   "4570118085047": [
    [
     "2026-11-17T08:20",
+    18000
+   ],
+   [
+    "2026-11-17T13:20",
     18000
    ]
   ],
@@ -4971,24 +5962,20 @@
    [
     "2026-11-17T08:20",
     17300
+   ],
+   [
+    "2026-11-17T13:20",
+    17300
    ]
   ],
   "4521329463872": [
    [
     "2026-11-17T08:20",
     40000
-   ]
-  ],
-  "4948872850995": [
+   ],
    [
-    "2026-11-17T08:20",
-    108900
-   ]
-  ],
-  "4521329346274": [
-   [
-    "2026-11-17T08:20",
-    16800
+    "2026-11-17T13:20",
+    40000
    ]
   ],
   "4549995732894": [
@@ -4999,6 +5986,10 @@
    [
     "2026-11-17T08:20",
     481000
+   ],
+   [
+    "2026-11-17T13:20",
+    482000
    ]
   ],
   "4549995732849": [
@@ -5009,23 +6000,59 @@
    [
     "2026-11-17T08:20",
     481000
+   ],
+   [
+    "2026-11-17T13:20",
+    482000
    ]
   ],
-  "4948872016957": [
+  "4948872850995": [
    [
     "2026-11-17T08:20",
-    110700
+    108900
+   ],
+   [
+    "2026-11-17T13:20",
+    108500
+   ]
+  ],
+  "4521329346274": [
+   [
+    "2026-11-17T08:20",
+    16800
+   ],
+   [
+    "2026-11-17T13:20",
+    16800
    ]
   ],
   "4521329346014": [
    [
     "2026-11-17T08:20",
     16000
+   ],
+   [
+    "2026-11-17T13:20",
+    16000
+   ]
+  ],
+  "4948872016957": [
+   [
+    "2026-11-17T08:20",
+    110700
+   ],
+   [
+    "2026-11-17T13:20",
+    110500
    ]
   ],
   "4570118259493": [
    [
     "2026-11-17T08:20",
+    15800
+   ],
+   [
+    "2026-11-17T13:20",
     15800
    ]
   ],
@@ -5033,11 +6060,19 @@
    [
     "2026-11-17T08:20",
     16000
+   ],
+   [
+    "2026-11-17T13:20",
+    16000
    ]
   ],
   "4582769734441": [
    [
     "2026-11-17T08:20",
+    12000
+   ],
+   [
+    "2026-11-17T13:20",
     12000
    ]
   ],
@@ -5045,11 +6080,19 @@
    [
     "2026-11-17T08:20",
     15200
+   ],
+   [
+    "2026-11-17T13:20",
+    15200
    ]
   ],
   "4549660954958": [
    [
     "2026-11-17T08:20",
+    15700
+   ],
+   [
+    "2026-11-17T13:20",
     15700
    ]
   ],
@@ -5061,6 +6104,10 @@
    [
     "2026-11-17T08:20",
     585000
+   ],
+   [
+    "2026-11-17T13:20",
+    585000
    ]
   ],
   "4549995732948": [
@@ -5071,11 +6118,19 @@
    [
     "2026-11-17T08:20",
     585000
+   ],
+   [
+    "2026-11-17T13:20",
+    585000
    ]
   ],
   "4570118145765": [
    [
     "2026-11-17T08:20",
+    15200
+   ],
+   [
+    "2026-11-17T13:20",
     15200
    ]
   ],
@@ -5083,11 +6138,19 @@
    [
     "2026-11-17T08:20",
     15200
+   ],
+   [
+    "2026-11-17T13:20",
+    15200
    ]
   ],
   "4521329391397": [
    [
     "2026-11-17T08:20",
+    15200
+   ],
+   [
+    "2026-11-17T13:20",
     15200
    ]
   ],
@@ -5099,6 +6162,10 @@
    [
     "2026-11-17T08:20",
     139500
+   ],
+   [
+    "2026-11-17T13:20",
+    139500
    ]
   ],
   "4549995649192": [
@@ -5108,6 +6175,10 @@
    ],
    [
     "2026-11-17T08:20",
+    139500
+   ],
+   [
+    "2026-11-17T13:20",
     139500
    ]
   ],
@@ -5119,6 +6190,10 @@
    [
     "2026-11-17T08:20",
     139500
+   ],
+   [
+    "2026-11-17T13:20",
+    139500
    ]
   ],
   "4549995649161": [
@@ -5128,6 +6203,10 @@
    ],
    [
     "2026-11-17T08:20",
+    139500
+   ],
+   [
+    "2026-11-17T13:20",
     139500
    ]
   ],
@@ -5139,11 +6218,19 @@
    [
     "2026-11-17T08:20",
     139500
+   ],
+   [
+    "2026-11-17T13:20",
+    139500
    ]
   ],
   "4582769865213": [
    [
     "2026-11-17T08:20",
+    14600
+   ],
+   [
+    "2026-11-17T13:20",
     14600
    ]
   ],
@@ -5151,11 +6238,19 @@
    [
     "2026-11-17T08:20",
     14500
+   ],
+   [
+    "2026-11-17T13:20",
+    14500
    ]
   ],
   "4521329374758": [
    [
     "2026-11-17T08:20",
+    14500
+   ],
+   [
+    "2026-11-17T13:20",
     14500
    ]
   ],
@@ -5163,11 +6258,19 @@
    [
     "2026-11-17T08:20",
     14000
+   ],
+   [
+    "2026-11-17T13:20",
+    14000
    ]
   ],
   "4521329431536": [
    [
     "2026-11-17T08:20",
+    10000
+   ],
+   [
+    "2026-11-17T13:20",
     10000
    ]
   ],
@@ -5175,11 +6278,19 @@
    [
     "2026-11-17T08:20",
     10000
+   ],
+   [
+    "2026-11-17T13:20",
+    10000
    ]
   ],
   "4521329431277": [
    [
     "2026-11-17T08:20",
+    10000
+   ],
+   [
+    "2026-11-17T13:20",
     10000
    ]
   ],
@@ -5187,11 +6298,19 @@
    [
     "2026-11-17T08:20",
     16500
+   ],
+   [
+    "2026-11-17T13:20",
+    16500
    ]
   ],
   "4521329373515": [
    [
     "2026-11-17T08:20",
+    13000
+   ],
+   [
+    "2026-11-17T13:20",
     13000
    ]
   ],
@@ -5199,11 +6318,19 @@
    [
     "2026-11-17T08:20",
     13200
+   ],
+   [
+    "2026-11-17T13:20",
+    13200
    ]
   ],
   "9784081024391": [
    [
     "2026-11-17T08:20",
+    9000
+   ],
+   [
+    "2026-11-17T13:20",
     9000
    ]
   ],
@@ -5211,11 +6338,19 @@
    [
     "2026-11-17T08:20",
     45300
+   ],
+   [
+    "2026-11-17T13:20",
+    45300
    ]
   ],
   "4901777359772": [
    [
     "2026-11-17T08:20",
+    16000
+   ],
+   [
+    "2026-11-17T13:20",
     16000
    ]
   ],
@@ -5223,11 +6358,19 @@
    [
     "2026-11-17T08:20",
     13700
+   ],
+   [
+    "2026-11-17T13:20",
+    13700
    ]
   ],
   "9784089084632": [
    [
     "2026-11-17T08:20",
+    12000
+   ],
+   [
+    "2026-11-17T13:20",
     12000
    ]
   ],
@@ -5235,11 +6378,19 @@
    [
     "2026-11-17T08:20",
     12100
+   ],
+   [
+    "2026-11-17T13:20",
+    12100
    ]
   ],
   "4521329462424": [
    [
     "2026-11-17T08:20",
+    14000
+   ],
+   [
+    "2026-11-17T13:20",
     14000
    ]
   ],
@@ -5247,11 +6398,19 @@
    [
     "2026-11-17T08:20",
     12000
+   ],
+   [
+    "2026-11-17T13:20",
+    12000
    ]
   ],
   "4521329394831": [
    [
     "2026-11-17T08:20",
+    12000
+   ],
+   [
+    "2026-11-17T13:20",
     12000
    ]
   ],
@@ -5259,11 +6418,19 @@
    [
     "2026-11-17T08:20",
     45300
+   ],
+   [
+    "2026-11-17T13:20",
+    45300
    ]
   ],
   "4902370550481": [
    [
     "2026-11-17T08:20",
+    45300
+   ],
+   [
+    "2026-11-17T13:20",
     45300
    ]
   ],
@@ -5271,11 +6438,19 @@
    [
     "2026-11-17T08:20",
     45300
+   ],
+   [
+    "2026-11-17T13:20",
+    45300
    ]
   ],
   "4904810939542": [
    [
     "2026-11-17T08:20",
+    12000
+   ],
+   [
+    "2026-11-17T13:20",
     12000
    ]
   ],
@@ -5283,11 +6458,19 @@
    [
     "2026-11-17T08:20",
     29200
+   ],
+   [
+    "2026-11-17T13:20",
+    29200
    ]
   ],
   "4902370551457": [
    [
     "2026-11-17T08:20",
+    29100
+   ],
+   [
+    "2026-11-17T13:20",
     29100
    ]
   ],
@@ -5295,11 +6478,19 @@
    [
     "2026-11-17T08:20",
     29100
+   ],
+   [
+    "2026-11-17T13:20",
+    29100
    ]
   ],
   "4521329361239": [
    [
     "2026-11-17T08:20",
+    11500
+   ],
+   [
+    "2026-11-17T13:20",
     11500
    ]
   ],
@@ -5307,11 +6498,19 @@
    [
     "2026-11-17T08:20",
     11500
+   ],
+   [
+    "2026-11-17T13:20",
+    11500
    ]
   ],
   "4521329362496": [
    [
     "2026-11-17T08:20",
+    11200
+   ],
+   [
+    "2026-11-17T13:20",
     11200
    ]
   ],
@@ -5319,11 +6518,19 @@
    [
     "2026-11-17T08:20",
     11000
+   ],
+   [
+    "2026-11-17T13:20",
+    11000
    ]
   ],
   "4521329361000": [
    [
     "2026-11-17T08:20",
+    11000
+   ],
+   [
+    "2026-11-17T13:20",
     11000
    ]
   ],
@@ -5331,17 +6538,29 @@
    [
     "2026-11-17T08:20",
     10600
+   ],
+   [
+    "2026-11-17T13:20",
+    10600
    ]
   ],
   "4521329394848": [
    [
     "2026-11-17T08:20",
     10500
+   ],
+   [
+    "2026-11-17T13:20",
+    10500
    ]
   ],
   "4904810085515": [
    [
     "2026-11-17T08:20",
+    7500
+   ],
+   [
+    "2026-11-17T13:20",
     7500
    ]
   ],
@@ -5353,6 +6572,10 @@
    [
     "2026-11-17T08:20",
     402000
+   ],
+   [
+    "2026-11-17T13:20",
+    402500
    ]
   ],
   "4549995732740": [
@@ -5363,11 +6586,19 @@
    [
     "2026-11-17T08:20",
     402000
+   ],
+   [
+    "2026-11-17T13:20",
+    402500
    ]
   ],
   "4902370553031": [
    [
     "2026-11-17T08:20",
+    58500
+   ],
+   [
+    "2026-11-17T13:20",
     58500
    ]
   ],
@@ -5375,11 +6606,19 @@
    [
     "2026-11-17T08:20",
     10300
+   ],
+   [
+    "2026-11-17T13:20",
+    10300
    ]
   ],
   "4582769707384": [
    [
     "2026-11-17T08:20",
+    10000
+   ],
+   [
+    "2026-11-17T13:20",
     10000
    ]
   ],
@@ -5387,11 +6626,19 @@
    [
     "2026-11-17T08:20",
     9900
+   ],
+   [
+    "2026-11-17T13:20",
+    9900
    ]
   ],
   "0814585022803": [
    [
     "2026-11-17T08:20",
+    22200
+   ],
+   [
+    "2026-11-17T13:20",
     22200
    ]
   ],
@@ -5399,17 +6646,39 @@
    [
     "2026-11-17T08:20",
     10000
+   ],
+   [
+    "2026-11-17T13:20",
+    10000
    ]
   ],
   "4521329394756": [
    [
     "2026-11-17T08:20",
     9800
+   ],
+   [
+    "2026-11-17T13:20",
+    9800
+   ]
+  ],
+  "4549576275383": [
+   [
+    "2026-11-17T08:20",
+    120000
+   ],
+   [
+    "2026-11-17T13:20",
+    121200
    ]
   ],
   "4570117961472": [
    [
     "2026-11-17T08:20",
+    7000
+   ],
+   [
+    "2026-11-17T13:20",
     7000
    ]
   ],
@@ -5417,11 +6686,19 @@
    [
     "2026-11-17T08:20",
     9600
+   ],
+   [
+    "2026-11-17T13:20",
+    9600
    ]
   ],
   "4582769922978": [
    [
     "2026-11-17T08:20",
+    9400
+   ],
+   [
+    "2026-11-17T13:20",
     9400
    ]
   ],
@@ -5429,11 +6706,19 @@
    [
     "2026-11-17T08:20",
     9500
+   ],
+   [
+    "2026-11-17T13:20",
+    9500
    ]
   ],
   "4549660863748": [
    [
     "2026-11-17T08:20",
+    6000
+   ],
+   [
+    "2026-11-17T13:20",
     6000
    ]
   ],
@@ -5441,11 +6726,19 @@
    [
     "2026-11-17T08:20",
     14500
+   ],
+   [
+    "2026-11-17T13:20",
+    14500
    ]
   ],
   "4901777377127": [
    [
     "2026-11-17T08:20",
+    14500
+   ],
+   [
+    "2026-11-17T13:20",
     14500
    ]
   ],
@@ -5453,11 +6746,19 @@
    [
     "2026-11-17T08:20",
     14500
+   ],
+   [
+    "2026-11-17T13:20",
+    14500
    ]
   ],
   "4948872414647": [
    [
     "2026-11-17T08:20",
+    36200
+   ],
+   [
+    "2026-11-17T13:20",
     36200
    ]
   ],
@@ -5465,23 +6766,29 @@
    [
     "2026-11-17T08:20",
     9000
+   ],
+   [
+    "2026-11-17T13:20",
+    9000
    ]
   ],
   "4582769912498": [
    [
     "2026-11-17T08:20",
     8500
-   ]
-  ],
-  "4549576275383": [
+   ],
    [
-    "2026-11-17T08:20",
-    120000
+    "2026-11-17T13:20",
+    8500
    ]
   ],
   "4582769721885": [
    [
     "2026-11-17T08:20",
+    4000
+   ],
+   [
+    "2026-11-17T13:20",
     4000
    ]
   ],
@@ -5489,11 +6796,19 @@
    [
     "2026-11-17T08:20",
     8000
+   ],
+   [
+    "2026-11-17T13:20",
+    8000
    ]
   ],
   "4902370553505": [
    [
     "2026-11-17T08:20",
+    56200
+   ],
+   [
+    "2026-11-17T13:20",
     56200
    ]
   ],
@@ -5501,11 +6816,19 @@
    [
     "2026-11-17T08:20",
     7900
+   ],
+   [
+    "2026-11-17T13:20",
+    7900
    ]
   ],
   "0814585023527": [
    [
     "2026-11-17T08:20",
+    265000
+   ],
+   [
+    "2026-11-17T13:20",
     265000
    ]
   ],
@@ -5513,11 +6836,19 @@
    [
     "2026-11-17T08:20",
     8000
+   ],
+   [
+    "2026-11-17T13:20",
+    8000
    ]
   ],
   "4988602180749": [
    [
     "2026-11-17T08:20",
+    7500
+   ],
+   [
+    "2026-11-17T13:20",
     7500
    ]
   ],
@@ -5525,11 +6856,19 @@
    [
     "2026-11-17T08:20",
     24300
+   ],
+   [
+    "2026-11-17T13:20",
+    24300
    ]
   ],
   "0814585023503": [
    [
     "2026-11-17T08:20",
+    250000
+   ],
+   [
+    "2026-11-17T13:20",
     250000
    ]
   ],
@@ -5537,11 +6876,19 @@
    [
     "2026-11-17T08:20",
     15500
+   ],
+   [
+    "2026-11-17T13:20",
+    15500
    ]
   ],
   "4948872416504": [
    [
     "2026-11-17T08:20",
+    40000
+   ],
+   [
+    "2026-11-17T13:20",
     40000
    ]
   ],
@@ -5549,11 +6896,19 @@
    [
     "2026-11-17T08:20",
     7600
+   ],
+   [
+    "2026-11-17T13:20",
+    7600
    ]
   ],
   "4901777447554": [
    [
     "2026-11-17T08:20",
+    16500
+   ],
+   [
+    "2026-11-17T13:20",
     16500
    ]
   ],
@@ -5561,11 +6916,19 @@
    [
     "2026-11-17T08:20",
     3500
+   ],
+   [
+    "2026-11-17T13:20",
+    3500
    ]
   ],
   "4901777395510": [
    [
     "2026-11-17T08:20",
+    13000
+   ],
+   [
+    "2026-11-17T13:20",
     13000
    ]
   ],
@@ -5573,17 +6936,29 @@
    [
     "2026-11-17T08:20",
     7000
+   ],
+   [
+    "2026-11-17T13:20",
+    7000
    ]
   ],
   "4948872416542": [
    [
     "2026-11-17T08:20",
     81200
+   ],
+   [
+    "2026-11-17T13:20",
+    81200
    ]
   ],
   "4904810080572": [
    [
     "2026-11-17T08:20",
+    3800
+   ],
+   [
+    "2026-11-17T13:20",
     3800
    ]
   ]
