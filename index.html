@@ -846,7 +846,7 @@ h1{font-size:16px;font-weight:700;text-align:center;margin-bottom:2px;color:var(
 
 <script>
 // ===== 🔢 バージョン管理（画面ver / version.json / ?v= / commit を同番号で揃える） =====
-const APP_VER = 24;
+const APP_VER = 25;
 const APP_VER_DATE = '2026-11-17';
 
 // 全角数字→半角に正規化（金額入力・全角０-９やカンマ／円記号も許容）
@@ -1584,6 +1584,37 @@ function lotPhase(c){
 }
 function premiumClass(lv){ return lv==='高'?'hi':lv==='中'?'mid':'lo'; }
 
+// v25 (2026-11-17): 品ごとに「定価（確認日・値上げ）」「買取価格」「利益」を出す。
+// lottery.json の price_info / buyback / profit / mercari / needs_check（x-lottery-monitor が lookup.py で埋める）を読む。
+// 新しい項目が無い古いデータは、今までどおり定価だけを出し「要確認」を付ける。
+function lotPriceRows(c){
+  const Y=n=>(n<0?'−¥':'¥')+Math.abs(n).toLocaleString('ja-JP');
+  const md=d=>{ if(!d) return ''; const x=new Date(String(d).slice(0,10)); return isNaN(x)?'':(x.getMonth()+1)+'/'+x.getDate(); };
+  const row=(l,v,st)=>`<div class="lot-row"><span class="lot-lbl">${l}</span><span class="lot-val"${st?` style="${st}"`:''}>${v}</span></div>`;
+  const pi=c.price_info, bb=c.buyback, pr=c.profit, mc=c.mercari;
+  let h='', need=Array.isArray(c.needs_check)?c.needs_check.slice():[];
+  if(pi && pi.price){
+    h+=row('定価',`${Y(pi.price)} <span style="color:var(--muted);font-weight:400;font-size:10px">${pi.checked_at?md(pi.checked_at)+' 確認':'確認日不明'}</span>`);
+    if(pi.change) h+=row('定価の変更',pi.change,'color:var(--alert)');
+  } else if(pi){
+    h+=row('定価','未確認','color:var(--alert)');
+  } else {
+    h+=row('定価',c.price>0?Y(c.price)+' <span style="color:var(--muted);font-weight:400;font-size:10px">確認日不明</span>':'未確認');
+    if(!need.length) need.push('定価・買取価格・利益が未記入（次の巡回で埋まる）');
+  }
+  if(bb && bb.price) h+=row('買取',`${Y(bb.price)}（${bb.shop||''}）`);
+  else if(bb) h+=row('買取',bb.status||'未登録','color:var(--muted)');
+  if(pr && pr.cash!=null){
+    h+=row('現金利益',Y(pr.cash)+(pr.tier?` <span style="font-size:10px">${pr.tier}</span>`:''),pr.cash>=0?'color:var(--profit)':'color:var(--alert)');
+    h+=row('総合利益（クレカ込み）',Y(pr.total),pr.total>=0?'color:var(--profit)':'color:var(--alert)');
+  } else if(pr){
+    h+=row('利益','出せない','color:var(--muted)');
+  }
+  if(mc && mc.profit!=null) h+=row('メルカリで売る場合',`${Y(mc.profit)}（中央値 ${Y(mc.median)}・${mc.n||'?'}件）`);
+  if(need.length) h+=`<div class="lot-row"><span class="lot-lbl" style="color:var(--alert)">⚠️要確認</span><span class="lot-val" style="font-size:11px;text-align:right">${need.join('／')}</span></div>`;
+  return h;
+}
+
 function renderLottery(){
   const area=document.getElementById('lot-cards');
   if(!area) return;
@@ -1642,7 +1673,7 @@ function renderLottery(){
     <div class="lot-name">${c.name}</div>
     <div class="lot-brand">${c.brand}</div>
     <div class="lot-rows">
-      <div class="lot-row"><span class="lot-lbl">定価</span><span class="lot-val">${c.price>0?'¥'+c.price.toLocaleString('ja-JP'):'未定'}</span></div>
+      ${lotPriceRows(c)}
       ${c.jissei>0?`<div class="lot-row"><span class="lot-lbl">実勢</span><span class="lot-val">¥${(+c.jissei).toLocaleString('ja-JP')}</span></div>`:''}
       ${c.deadline?`<div class="lot-row"><span class="lot-lbl">直近締切</span><span class="lot-val ${hrs!==null&&hrs>=0&&hrs<24?'deadline-soon':''}">${new Date(c.deadline).toLocaleString('ja-JP',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}</span></div>`:''}
       ${profit>0?`<div class="lot-row"><span class="lot-lbl">想定最大利益</span><span class="lot-val profit">+¥${profit.toLocaleString('ja-JP')}</span></div>`:''}
@@ -1725,7 +1756,7 @@ function ktCard(r){
   <div class="lot-strip ${cls}"><span>${label}${r.in_watch?' ・👀ウォッチ中':''}</span><span>${dropWarn?'⚠️撤退検討':''}</span></div>
   <div class="lot-body">
     <div class="lot-name">${ktEsc(r.name)}</div>
-    <div class="lot-brand">${ktEsc(r.cat)} ・ JAN ${ktEsc(r.jan)}${r.edition?' ・ '+ktEsc(r.edition):''}</div>
+    <div class="lot-brand">${ktEsc(r.cat)} ・ JAN ${ktEsc(r.jan)}${r.edition?' ・ '+ktEsc(r.edition):''}${r.ended?' ・ <span style="color:var(--alert)">販売終了（今は定価で買えない）</span>':''}</div>
     <div class="lot-rows">${rows}</div>
     ${r.memo?`<div class="lot-note">${ktEsc(r.memo)}</div>`:''}
     <div class="lot-actions"><a class="lot-url-btn" href="${ktEsc(r.url)}" target="_blank" rel="noopener">🔗 ルデヤの買取ページ</a></div>
