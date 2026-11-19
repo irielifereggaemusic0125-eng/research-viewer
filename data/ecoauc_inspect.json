@@ -1,7 +1,139 @@
 {
- "updated_at": "2026-11-18 09:24 +judge+hammer",
- "count": 137,
+ "updated_at": "2026-11-19 09:14 +judge",
+ "count": 140,
  "items": [
+  {
+   "name": "Cartier サントス ドゥ WSSA0029 4075737455CX オートマ レディース腕時計",
+   "brand": "カルティエ",
+   "brand_en": "Cartier",
+   "q": "カルティエ サントス",
+   "category": "A",
+   "current_price": 892000,
+   "price_type": "開始価格",
+   "rank": "AB",
+   "deadline": "2026-11-23T10:00:00+09:00",
+   "auction": "2026年11月23日 第871回 オークション(ブランド市)",
+   "lane": "時計_月曜日",
+   "item_no": "14200_0096",
+   "view_id": "10955510",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10955510/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10955510/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14200_0096",
+   "asking_bid_closing_price": 1050000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": "mercari:n=0(不足)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A",
+   "kaiten": 25,
+   "rieki": 39,
+   "priority": 16,
+   "tax_excluded": true,
+   "matched_queries": [
+    "カルティエ サントス"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "⚠️",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "jissei_n": 0,
+   "judge_hammer": 1050000,
+   "judge_cost": 1167500,
+   "judged_at": "2026-11-19 09:14",
+   "self_band": {
+    "band": "10万超",
+    "n": 1,
+    "margin": 0.266,
+    "loss_rate": 0.0
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "▼JAPAN ONLY▼Cartier サントスデュモンSM WSSA0023 4242394294DY クォーツ レディース腕時計",
+   "brand": "カルティエ",
+   "brand_en": "Cartier",
+   "q": "カルティエ サントス",
+   "category": "A",
+   "current_price": 375000,
+   "price_type": "開始価格",
+   "rank": "AB",
+   "deadline": "2026-11-23T10:00:00+09:00",
+   "auction": "2026年11月23日 第871回 オークション(ブランド市)",
+   "lane": "時計_月曜日",
+   "item_no": "14200_0097",
+   "view_id": "10955511",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10955511/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10955511/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14200_0097",
+   "asking_bid_closing_price": 500000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": "mercari:n=0(不足)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A",
+   "kaiten": 25,
+   "rieki": 39,
+   "priority": 16,
+   "tax_excluded": true,
+   "matched_queries": [
+    "カルティエ サントス"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "⚠️",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "jissei_n": 0,
+   "judge_hammer": 500000,
+   "judge_cost": 560300,
+   "judged_at": "2026-11-19 09:14",
+   "self_band": {
+    "band": "10万超",
+    "n": 1,
+    "margin": 0.266,
+    "loss_rate": 0.0
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
   {
    "name": "Cartier サントスオクタゴンSM 187903 23859 クォーツ レディース腕時計",
    "brand": "カルティエ",
@@ -52,7 +184,7 @@
    "jissei_n": 2,
    "judge_hammer": 400000,
    "judge_cost": 445900,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -118,7 +250,7 @@
    "jissei_n": 1,
    "judge_hammer": 273000,
    "judge_cost": 306200,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -184,7 +316,73 @@
    "jissei_n": 1,
    "judge_hammer": 273000,
    "judge_cost": 306200,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
+   "self_band": {
+    "band": "10万超",
+    "n": 1,
+    "margin": 0.266,
+    "loss_rate": 0.0
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Cartier サントスオクタゴンLM W2001583 18790208190 クォーツ レディース腕時計",
+   "brand": "カルティエ",
+   "brand_en": "Cartier",
+   "q": "カルティエ サントス",
+   "category": "A",
+   "current_price": 200000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-23T10:00:00+09:00",
+   "auction": "2026年11月23日 第871回 オークション(ブランド市)",
+   "lane": "時計_月曜日",
+   "item_no": "14200_0088",
+   "view_id": "10955502",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10955502/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10955502/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14200_0088",
+   "asking_bid_closing_price": 340000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": "mercari:n=0(不足)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A",
+   "kaiten": 25,
+   "rieki": 39,
+   "priority": 16,
+   "tax_excluded": true,
+   "matched_queries": [
+    "カルティエ サントス"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "⚠️",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "jissei_n": 0,
+   "judge_hammer": 340000,
+   "judge_cost": 379900,
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -252,7 +450,7 @@
    "jissei_n": 18,
    "judge_hammer": 22000,
    "judge_cost": 26800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -366,7 +564,7 @@
    "jissei_n": 21,
    "judge_hammer": 37000,
    "judge_cost": 43300,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -376,13 +574,10 @@
    "stamp_note": null,
    "self_cat": null,
    "tsubushi": null,
-   "hammer_est": 24000,
-   "hammer_n": 451,
-   "hammer_period": "2026/11/16〜2026/11/16",
-   "hammer_q": "LOUIS VUITTON モノグラム",
-   "judge_profit_ap": 16300,
-   "judge_profit_hammer": 30600,
-   "hammer_note": "相場なし(相場表の語「LOUIS VUITTON モノグラム」が汎用でバッグ等が混在・同型の落札なし)"
+   "expected_hammer": null,
+   "expected_hammer_n": 0,
+   "hammer_note": "相場表に同型の落札なし（相場なし・11/18と同じ）",
+   "hammer_src": null
   },
   {
    "name": "CHROME HEARTS クロムハーツ ウェーブウォレット 未使用 インボイス原本付き ハワイ購入 財布",
@@ -438,10 +633,7 @@
     "margin": -0.088,
     "loss_rate": 0.25
    },
-   "tsubushi": null,
-   "hammer_est": null,
-   "hammer_n": 1,
-   "hammer_note": "相場なし"
+   "tsubushi": null
   },
   {
    "name": "CHROME HEARTS クロムハーツ タンクトップ レーヨン サイズS ブラック CHプラス トップス",
@@ -495,7 +687,7 @@
    "jissei_n": 22,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -504,10 +696,7 @@
    },
    "stamp_note": null,
    "self_cat": null,
-   "tsubushi": null,
-   "hammer_est": null,
-   "hammer_n": 0,
-   "hammer_note": "相場なし"
+   "tsubushi": null
   },
   {
    "name": "CHROME HEARTS クロムハーツ アイチャート メッシュキャップ その他アパレル",
@@ -532,7 +721,7 @@
    "confidence": "category_only",
    "jissei": 60000,
    "jissei_src": "mercari:n=13(B→p25)",
-   "profit": null,
+   "profit": -5900,
    "shitene": 42454,
    "highlight": false,
    "needs_jissei_verify": false,
@@ -549,7 +738,7 @@
    "rakusatsu_src": null,
    "max_bid": 42454,
    "max_bid_soda": 39954,
-   "profit_flag": "⚠️",
+   "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
@@ -561,7 +750,7 @@
    "jissei_n": 13,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -571,10 +760,10 @@
    "stamp_note": null,
    "self_cat": null,
    "tsubushi": null,
-   "hammer_est": null,
-   "hammer_n": 0,
-   "hammer_note": "相場なし",
-   "judge_profit_ap": 23200
+   "expected_hammer": 50000,
+   "expected_hammer_n": 3,
+   "hammer_note": "相場表 CHトラッカー/メッシュキャップ B 10/23〜10/26 n=3 中央値（型は近似）",
+   "hammer_src": "market-prices:same_item"
   },
   {
    "name": "Tiffany&Co. センチメンタルハート YG 750 17.7g ネックレス(貴金属)",
@@ -630,7 +819,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 243400
+   "tsubushi": 242500
   },
   {
    "name": "Tiffany&Co. Tスマイル スモール ピンクサファイア PG Au750 2.9g ネックレス(貴金属)",
@@ -686,7 +875,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 39800
+   "tsubushi": 39700
   },
   {
    "name": "Tiffany&Co. Tiffany&Co. ティファニー リターントゥ ハート ダイヤ パール Ag925 ネックレス",
@@ -798,7 +987,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 48100
+   "tsubushi": 47900
   },
   {
    "name": "Tiffany&Co. Tiffany&Co. ティファニー ベネチアン ネックレス Ag926 ネックレス",
@@ -966,7 +1155,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 41200
+   "tsubushi": 41100
   },
   {
    "name": "Tiffany&Co. Tiffany&Co. ティファニー ハート トグル チョーカー ネックレス Ag925 ネックレス",
@@ -1078,7 +1267,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 9800
+   "tsubushi": 9700
   },
   {
    "name": "Tiffany&Co. Tiffany Tスマイル ペンダント Ag925 ネックレス",
@@ -1246,7 +1435,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 9200
+   "tsubushi": 9100
   },
   {
    "name": "Tiffany&Co. Tiffany&Co. ティファニー ツイスト ネックレス Ag925 ネックレス",
@@ -1300,7 +1489,7 @@
    "jissei_n": 21,
    "judge_hammer": 40000,
    "judge_cost": 46600,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -1366,7 +1555,7 @@
    "jissei_n": 16,
    "judge_hammer": 33000,
    "judge_cost": 38900,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -1380,7 +1569,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 149900
+   "tsubushi": 149300
   },
   {
    "name": "Tiffany&Co. Tiffany&Co. ティファニー ハート カデナ チョーカー Ag925 ネックレス",
@@ -1490,7 +1679,7 @@
    "jissei_n": 23,
    "judge_hammer": 32000,
    "judge_cost": 37800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -1558,7 +1747,7 @@
    "jissei_n": 17,
    "judge_hammer": 27000,
    "judge_cost": 32300,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -1626,7 +1815,7 @@
    "jissei_n": 17,
    "judge_hammer": 27000,
    "judge_cost": 32300,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -1694,7 +1883,7 @@
    "jissei_n": 13,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -1762,7 +1951,7 @@
    "jissei_n": 18,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -1828,7 +2017,7 @@
    "jissei_n": 27,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -1842,7 +2031,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 108600
+   "tsubushi": 108200
   },
   {
    "name": "Tiffany&Co. リターントゥハート 925ネックレス ネックレス",
@@ -1894,7 +2083,7 @@
    "jissei_n": 24,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -1960,7 +2149,7 @@
    "jissei_n": 14,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2028,7 +2217,7 @@
    "jissei_n": 23,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2096,7 +2285,7 @@
    "jissei_n": 20,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2164,7 +2353,7 @@
    "jissei_n": 18,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2232,7 +2421,7 @@
    "jissei_n": 16,
    "judge_hammer": 17000,
    "judge_cost": 21300,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2300,7 +2489,7 @@
    "jissei_n": 11,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2368,7 +2557,7 @@
    "jissei_n": 24,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2436,7 +2625,7 @@
    "jissei_n": 21,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2504,7 +2693,7 @@
    "jissei_n": 24,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2570,7 +2759,7 @@
    "jissei_n": 17,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2638,7 +2827,7 @@
    "jissei_n": 19,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2706,7 +2895,7 @@
    "jissei_n": 17,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2720,7 +2909,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 700
+   "tsubushi": 600
   },
   {
    "name": "Tiffany&Co. リターントゥ ハートタグ ボールチェーンネックレス 925 ネックレス",
@@ -2774,7 +2963,7 @@
    "jissei_n": 20,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2842,7 +3031,7 @@
    "jissei_n": 29,
    "judge_hammer": 14000,
    "judge_cost": 18000,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2910,7 +3099,7 @@
    "jissei_n": 16,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -2976,7 +3165,7 @@
    "jissei_n": 30,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3044,7 +3233,7 @@
    "jissei_n": 30,
    "judge_hammer": 14000,
    "judge_cost": 18000,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3112,7 +3301,7 @@
    "jissei_n": 21,
    "judge_hammer": 14000,
    "judge_cost": 18000,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3180,7 +3369,7 @@
    "jissei_n": 12,
    "judge_hammer": 14200,
    "judge_cost": 18220,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3248,7 +3437,7 @@
    "jissei_n": 19,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3316,7 +3505,7 @@
    "jissei_n": 19,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3384,7 +3573,7 @@
    "jissei_n": 18,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3452,7 +3641,7 @@
    "jissei_n": 16,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3520,7 +3709,7 @@
    "jissei_n": 21,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3588,7 +3777,7 @@
    "jissei_n": 30,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3654,7 +3843,7 @@
    "jissei_n": 25,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3722,7 +3911,7 @@
    "jissei_n": 20,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3790,7 +3979,7 @@
    "jissei_n": 12,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3858,7 +4047,7 @@
    "jissei_n": 22,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3924,7 +4113,7 @@
    "jissei_n": 22,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3990,7 +4179,7 @@
    "jissei_n": 17,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4056,7 +4245,7 @@
    "jissei_n": 13,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4124,7 +4313,7 @@
    "jissei_n": 22,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4192,7 +4381,7 @@
    "jissei_n": 15,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4258,7 +4447,7 @@
    "jissei_n": 22,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4326,7 +4515,7 @@
    "jissei_n": 22,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4394,7 +4583,7 @@
    "jissei_n": 28,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4462,7 +4651,7 @@
    "jissei_n": 27,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4528,7 +4717,7 @@
    "jissei_n": 13,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4596,7 +4785,7 @@
    "jissei_n": 22,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4610,7 +4799,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 5200
+   "tsubushi": 5100
   },
   {
    "name": "Tiffany&Co. アトラス アトラス キューブ ネックレス SV925 8.3g ネックレス",
@@ -4664,7 +4853,7 @@
    "jissei_n": 12,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4730,7 +4919,7 @@
    "jissei_n": 19,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4798,7 +4987,7 @@
    "jissei_n": 16,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4864,7 +5053,7 @@
    "jissei_n": 8,
    "judge_hammer": 33000,
    "judge_cost": 38900,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -4878,10 +5067,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 6100,
-   "hammer_est": null,
-   "hammer_n": 0,
-   "hammer_note": "相場なし"
+   "tsubushi": 6000
   },
   {
    "name": "Georg Jensen スフィア SV925 ネックレス",
@@ -4933,7 +5119,7 @@
    "jissei_n": 8,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -4947,10 +5133,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": null,
-   "hammer_est": null,
-   "hammer_n": 1,
-   "hammer_note": "相場なし"
+   "tsubushi": null
   },
   {
    "name": "ジョージジェンセン1994年ヘリテージ・イヤーペンダント ネックレス",
@@ -5002,7 +5185,7 @@
    "jissei_n": 12,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5016,10 +5199,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": null,
-   "hammer_est": null,
-   "hammer_n": 0,
-   "hammer_note": "相場なし"
+   "tsubushi": null
   },
   {
    "name": "Georg Jensen ジョージジェンセン ネックレス ノットチェーンブレス 925 A51B ネックレス",
@@ -5071,7 +5251,7 @@
    "jissei_n": 9,
    "judge_hammer": 14000,
    "judge_cost": 18000,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5085,11 +5265,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": null,
-   "hammer_est": 13000,
-   "hammer_n": 123,
-   "hammer_period": "2026/10/06〜2026/11/16",
-   "hammer_q": "Georg Jensen ネックレス"
+   "tsubushi": null
   },
   {
    "name": "Georg Jensen SV925 18.9g リング",
@@ -5114,7 +5290,7 @@
    "confidence": "category_only",
    "jissei": 13580,
    "jissei_src": "mercari:n=9(B→p25)",
-   "profit": -6478,
+   "profit": -7578,
    "shitene": 4974,
    "highlight": false,
    "needs_jissei_verify": false,
@@ -5131,7 +5307,7 @@
    "rakusatsu_src": null,
    "max_bid": 4974,
    "max_bid_soda": 2474,
-   "profit_flag": "見送り",
+   "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
@@ -5143,7 +5319,7 @@
    "jissei_n": 9,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5157,12 +5333,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 3900,
-   "hammer_est": 14000,
-   "hammer_n": 114,
-   "hammer_period": "2026/10/07〜2026/11/16",
-   "hammer_q": "Georg Jensen リング",
-   "judge_profit_ap": -7578
+   "tsubushi": 3800
   },
   {
    "name": "Georg Jensen 925 2003 ネックレス SV925 12.9g ネックレス",
@@ -5214,7 +5385,7 @@
    "jissei_n": 17,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5228,11 +5399,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 2600,
-   "hammer_est": 12000,
-   "hammer_n": 174,
-   "hammer_period": "2026/10/07〜2026/11/16",
-   "hammer_q": "Georg Jensen 925"
+   "tsubushi": 2600
   },
   {
    "name": "Georg Jensen 1996 アーティストペンダント SV925 12.0g ネックレス",
@@ -5257,7 +5424,7 @@
    "confidence": "category_only",
    "jissei": 12700,
    "jissei_src": "mercari:n=12(B→p25)",
-   "profit": -120,
+   "profit": -3970,
    "shitene": 4254,
    "highlight": false,
    "needs_jissei_verify": false,
@@ -5274,7 +5441,7 @@
    "rakusatsu_src": null,
    "max_bid": 4254,
    "max_bid_soda": 1754,
-   "profit_flag": "見送り",
+   "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
@@ -5286,7 +5453,7 @@
    "jissei_n": 12,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5300,12 +5467,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 2400,
-   "hammer_est": 8000,
-   "hammer_n": 2,
-   "hammer_period": "2026/11/09〜2026/11/16",
-   "hammer_q": "Georg Jensen 1996",
-   "judge_profit_ap": -3970
+   "tsubushi": 2400
   },
   {
    "name": "Georg Jensen SV925 9.2g リング",
@@ -5330,7 +5492,7 @@
    "confidence": "category_only",
    "jissei": 13580,
    "jissei_src": "mercari:n=9(B→p25)",
-   "profit": -6478,
+   "profit": -3178,
    "shitene": 4974,
    "highlight": false,
    "needs_jissei_verify": false,
@@ -5347,7 +5509,7 @@
    "rakusatsu_src": null,
    "max_bid": 4974,
    "max_bid_soda": 2474,
-   "profit_flag": "見送り",
+   "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
@@ -5359,7 +5521,7 @@
    "jissei_n": 9,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5373,12 +5535,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 1900,
-   "hammer_est": 14000,
-   "hammer_n": 114,
-   "hammer_period": "2026/10/07〜2026/11/16",
-   "hammer_q": "Georg Jensen リング",
-   "judge_profit_ap": -3178
+   "tsubushi": 1800
   },
   {
    "name": "HERMES エルメス Ag925 アクロバットMM 19コマ 106.6g ブレスレット・バングル",
@@ -5434,7 +5591,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 22000
+   "tsubushi": 21800
   },
   {
    "name": "HERMES ヴィンテージ シェーヌダンクル SV925 12.1g ブレスレット・バングル",
@@ -5490,7 +5647,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 2500
+   "tsubushi": 2400
   },
   {
    "name": "HERMES ノヴァ ブレスレット 49.5g 925 ブレスレット・バングル",
@@ -5546,7 +5703,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 10200
+   "tsubushi": 10100
   },
   {
    "name": "HERMES HERMES ブックルセリエ ブレスレット ブレスレット・バングル",
@@ -5658,7 +5815,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 12800
+   "tsubushi": 12700
   },
   {
    "name": "HERMES ヒストリー ブレスレット 49.1g 925 ブレスレット・バングル",
@@ -5714,7 +5871,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 10100
+   "tsubushi": 10000
   },
   {
    "name": "HERMES エルメス シェーヌダンクルGM 2026 ブレスレット 12コマ 925 69.5g シルバー ブレスレット・バングル",
@@ -5770,7 +5927,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 14300
+   "tsubushi": 14200
   },
   {
    "name": "HERMES ブレスレット シェーヌダンクル GM /12コマ シルバー その他小物",
@@ -7811,7 +7968,7 @@
    "confidence": "category_only",
    "jissei": 81000,
    "jissei_src": "mercari:n=19(B→p25)",
-   "profit": 24500,
+   "profit": 32250,
    "shitene": 58636,
    "highlight": true,
    "needs_jissei_verify": false,
@@ -7840,7 +7997,7 @@
    "jissei_n": 19,
    "judge_hammer": 38000,
    "judge_cost": 44400,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -7855,11 +8012,10 @@
     "loss_rate": 0.333
    },
    "tsubushi": null,
-   "hammer_est": 41000,
-   "hammer_n": 15,
-   "hammer_period": "2026/10/07〜2026/11/16",
-   "hammer_q": "その他 5AC 2WAY",
-   "judge_profit_ap": 27800
+   "expected_hammer": 33500,
+   "expected_hammer_n": 10,
+   "hammer_note": "相場表 5AC B 11/04〜11/16 n=10 中央値（サイズ違い混在）",
+   "hammer_src": "market-prices:same_item"
   },
   {
    "name": "メゾンマルジェラ Maison Margiela 3つ折り財布 ミニ コンパクト 財布",
@@ -7911,7 +8067,7 @@
    "jissei_n": 21,
    "judge_hammer": 26000,
    "judge_cost": 31200,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -7948,12 +8104,12 @@
    "asking_bid_closing_price": 35000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": null,
-   "jissei_src": "mercari:n=14(語ズレ:トムフォードが標本0/3)",
-   "profit": null,
-   "shitene": null,
+   "jissei": 14000,
+   "jissei_src": "mercari:n=24",
+   "profit": -29200,
+   "shitene": 5318,
    "highlight": false,
-   "needs_jissei_verify": true,
+   "needs_jissei_verify": false,
    "tier": "A/香水枠(DEAREST)",
    "kaiten": null,
    "rieki": null,
@@ -7962,22 +8118,24 @@
    "matched_queries": [
     "香水"
    ],
-   "hanbai_souba": null,
+   "hanbai_souba": 14000,
    "rakusatsu_souba": null,
    "rakusatsu_src": null,
-   "max_bid": null,
-   "max_bid_soda": null,
-   "profit_flag": "⚠️",
+   "max_bid": 5318,
+   "max_bid_soda": 2818,
+   "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
    "ideal_vs_current": null,
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "jissei_n": 14,
+   "shitene_safe": 2863,
+   "shitene_attack": 5318,
+   "jissei_n": 24,
    "judge_hammer": 35000,
    "judge_cost": 41100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -8045,7 +8203,7 @@
    "jissei_n": 24,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8288,7 +8446,7 @@
    "confidence": "category_only",
    "jissei": 130000,
    "jissei_src": "mercari:n=12(B→p25)",
-   "profit": null,
+   "profit": 30700,
    "shitene": 98727,
    "highlight": false,
    "needs_jissei_verify": false,
@@ -8317,7 +8475,7 @@
    "jissei_n": 12,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8327,13 +8485,10 @@
    "stamp_note": null,
    "self_cat": null,
    "tsubushi": null,
-   "hammer_est": 13000,
-   "hammer_n": 232,
-   "hammer_period": "2026/10/07〜2026/11/16",
-   "hammer_q": "HERMES カレ 140",
-   "judge_profit_ap": 97200,
-   "judge_profit_hammer": 99400,
-   "hammer_note": "実勢¥130,000はBランクのカレジェアンとして高すぎる可能性・見込み落札¥13,000もカレ140全体の中央値で同型か未確認"
+   "expected_hammer": 74000,
+   "expected_hammer_n": 1,
+   "hammer_note": "相場表 同柄カテナ140 B 10/23 n=1。実勢¥130,000が高すぎる疑い（11/18と同じ）",
+   "hammer_src": "market-prices:same_item"
   },
   {
    "name": "ロロピアーナ 帽子 キャップ 刺繍ロゴ L その他小物",
@@ -8387,7 +8542,7 @@
    "jissei_n": 30,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8397,10 +8552,10 @@
    "stamp_note": null,
    "self_cat": null,
    "tsubushi": null,
-   "hammer_est": null,
-   "hammer_n": 1,
-   "hammer_note": "相場なし",
-   "judge_profit_ap": 7200
+   "expected_hammer": null,
+   "expected_hammer_n": 0,
+   "hammer_note": "相場表に同型の落札なし（相場なし）",
+   "hammer_src": null
   },
   {
    "name": "ロロピアーナ ショートパンツ リネン 100% ロゴボタン サイズ38 パンツ",
@@ -8454,7 +8609,7 @@
    "jissei_n": 24,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8517,7 +8672,7 @@
    "jissei_n": 24,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-18 09:24",
+   "judged_at": "2026-11-19 09:14",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8533,13 +8688,12 @@
  "strategy_c": {
   "profitable": 5,
   "thin": 0,
-  "rejected": 47,
-  "unknown": 23,
-  "eligible": 75,
-  "total": 137,
+  "rejected": 48,
+  "unknown": 25,
+  "eligible": 78,
+  "total": 140,
   "over100k": 0,
   "gate": "仕入総額≤50,000 or kaiten≥6",
-  "enriched_at": "2026-11-18 09:24"
- },
- "_note_hammer": "シルバー系と✅🟡はhammer_est(相場表の同型・同ランク帯の落札中央値)でprofit/profit_flagを再判定。元の値はjudge_profit_ap"
+  "enriched_at": "2026-11-19 09:14"
+ }
 }
