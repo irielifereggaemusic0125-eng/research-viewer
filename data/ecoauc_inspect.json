@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-21 09:23 +judge",
- "count": 177,
+ "updated_at": "2026-11-22 09:25 +judge",
+ "count": 221,
  "items": [
   {
    "name": "Cartier サントス ドゥ WSSA0029 4075737455CX オートマ レディース腕時計",
@@ -52,7 +52,7 @@
    "jissei_n": 0,
    "judge_hammer": 1050000,
    "judge_cost": 1167500,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -120,7 +120,7 @@
    "jissei_n": 8,
    "judge_hammer": 688000,
    "judge_cost": 767100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -134,7 +134,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 338500
+   "tsubushi": null
   },
   {
    "name": "Cartier サントスガルベSM W20012C4 1567 BB146294 クオーツ レディース腕時計",
@@ -186,7 +186,7 @@
    "jissei_n": 0,
    "judge_hammer": 600000,
    "judge_cost": 670300,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -252,7 +252,7 @@
    "jissei_n": 0,
    "judge_hammer": 550000,
    "judge_cost": 615300,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -318,7 +318,7 @@
    "jissei_n": 1,
    "judge_hammer": 600000,
    "judge_cost": 670300,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -384,7 +384,7 @@
    "jissei_n": 0,
    "judge_hammer": 500000,
    "judge_cost": 560300,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -450,7 +450,7 @@
    "jissei_n": 0,
    "judge_hammer": 490000,
    "judge_cost": 544900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -516,7 +516,7 @@
    "jissei_n": 0,
    "judge_hammer": 380000,
    "judge_cost": 423900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -582,7 +582,7 @@
    "jissei_n": 0,
    "judge_hammer": 338000,
    "judge_cost": 377700,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -596,7 +596,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 341200
+   "tsubushi": null
   },
   {
    "name": "Cartier サントスオクタゴンSM W2001683 18790317770 クォーツ レディース腕時計",
@@ -648,7 +648,7 @@
    "jissei_n": 0,
    "judge_hammer": 320000,
    "judge_cost": 357900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -714,7 +714,7 @@
    "jissei_n": 0,
    "judge_hammer": 340000,
    "judge_cost": 379900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -780,7 +780,7 @@
    "jissei_n": 0,
    "judge_hammer": 400000,
    "judge_cost": 445900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -846,7 +846,7 @@
    "jissei_n": 0,
    "judge_hammer": 220000,
    "judge_cost": 247900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -912,12 +912,73 @@
    "jissei_n": 15,
    "judge_hammer": 28000,
    "judge_cost": 33400,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
     "margin": -0.113,
     "loss_rate": 0.333
+   },
+   "stamp_note": null,
+   "self_cat": null,
+   "tsubushi": null
+  },
+  {
+   "name": "◆Cartier サントス ツーブリッジ フレーム 54□16 サングラス・メガネ",
+   "brand": "カルティエ",
+   "brand_en": "Cartier",
+   "q": "カルティエ サントス",
+   "category": "A",
+   "current_price": 10000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物①_水曜日",
+   "item_no": "14210_0525",
+   "view_id": "10990814",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10990814/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10990814/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14210_0525",
+   "asking_bid_closing_price": 24000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": "mercari:n=1(不足)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A",
+   "kaiten": 25,
+   "rieki": 39,
+   "priority": 16,
+   "tax_excluded": true,
+   "matched_queries": [
+    "カルティエ サントス"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "⚠️",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "jissei_n": 1,
+   "judge_hammer": 24000,
+   "judge_cost": 29000,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
    },
    "stamp_note": null,
    "self_cat": null,
@@ -975,7 +1036,7 @@
    "jissei_n": null,
    "judge_hammer": 200000,
    "judge_cost": 225900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "10万超",
     "n": 1,
@@ -1041,7 +1102,7 @@
    "jissei_n": 20,
    "judge_hammer": 74000,
    "judge_cost": 85100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "5〜10万",
     "n": 8,
@@ -1104,7 +1165,7 @@
    "jissei_n": null,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -1328,7 +1389,7 @@
    "jissei_n": 20,
    "judge_hammer": 40000,
    "judge_cost": 46600,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -1393,7 +1454,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 51400
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ラージクロス ダイヤ PT950 5.3g ネックレス(貴金属)",
@@ -1449,7 +1510,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 33600
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ノット d0.25ct PG Au750 7.0g ネックレス(貴金属)",
@@ -1505,7 +1566,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 95900
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー バンブー トグル ネックレス ネックレス",
@@ -1617,7 +1678,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 78100
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ダイヤ PT950 7.7g ネックレス(貴金属)",
@@ -1673,7 +1734,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 48800
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー ハードウェア スモールラップ ネックレス 925 46.2g ネックレス",
@@ -1729,7 +1790,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 9400
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. バターカップ イエローダイヤ カラーレスダイヤ PT950 3.5g ネックレス(貴金属)",
@@ -1785,7 +1846,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 22200
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. Tiffany&Co. ティファニー ハードウェア スモールリンク SV925 46.3g ネックレス",
@@ -1841,7 +1902,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 9400
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. Tスマイル スモール ダイヤ PG Au750 2.6g ネックレス(貴金属)",
@@ -1897,7 +1958,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 35600
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. アトラス オープンメダリオン ダイヤ WG AU750 3.4g ネックレス(貴金属)",
@@ -1953,7 +2014,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 46500
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. センチメンタルハート ダイヤ PT950 5.7g ネックレス(貴金属)",
@@ -2009,7 +2070,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 36100
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. オープンハート 750/K18 6.7g ネックレス(貴金属)",
@@ -2065,7 +2126,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 91800
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. Tスマイル スモール Au750 3.0g ネックレス(貴金属)",
@@ -2121,7 +2182,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 41100
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. オープンハート YG 750 6.2g ネックレス(貴金属)",
@@ -2177,7 +2238,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 84900
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ハートリボン YG 750/K18 5.9g ネックレス(貴金属)",
@@ -2233,7 +2294,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 80800
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. トリプルオープンハート 3PD YG 750 4.0g ネックレス(貴金属)",
@@ -2289,7 +2350,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 54800
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. Tスマイル スモール WG Au750 2.9g ネックレス(貴金属)",
@@ -2345,7 +2406,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 39700
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ストリーメリカ ダイヤ WG 750 5.5g ネックレス(貴金属)",
@@ -2401,7 +2462,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 75300
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. オープンハート YG 750 5.4g ネックレス(貴金属)",
@@ -2457,7 +2518,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 74000
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. バイザヤード 1PD Au750 2.5g ネックレス(貴金属)",
@@ -2513,7 +2574,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 34200
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. オープンハート 750 5.3g ネックレス(貴金属)",
@@ -2569,7 +2630,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 72600
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー ツイストロープ ネックレス 925/750 48.8g 約61cm ネックレス",
@@ -2625,7 +2686,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 668800
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ビーン 750 4.1g ネックレス(貴金属)",
@@ -2681,7 +2742,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 56100
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ドッツ クロス 4PD PT950 6.3g ネックレス(貴金属)",
@@ -2737,7 +2798,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 40000
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. バイザヤード 1PD AU750 2.0g ネックレス(貴金属)",
@@ -2793,7 +2854,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 27400
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. バイザヤード 1PD PT950 2.4g ネックレス(貴金属)",
@@ -2849,7 +2910,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 15200
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. オリーブリーフ AU750 3.7g ネックレス(貴金属)",
@@ -2905,7 +2966,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 50700
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ビーン AU750 3.5g ネックレス(貴金属)",
@@ -2961,7 +3022,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 47900
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ツイストサークル パール直径 約5.2mm YG 750 3.2g ネックレス(貴金属)",
@@ -3017,7 +3078,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 43800
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ビーン 18K 3.5g ネックレス(貴金属)",
@@ -3073,7 +3134,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 47900
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ヴィラ Au750 2.4g ネックレス(貴金属)",
@@ -3129,7 +3190,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 32800
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー ハードウェア リンク ネックレストップ 925 ペンダントトップ",
@@ -3241,7 +3302,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 23200
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ハードウェア グラジュエイテッド ボールネックレス ネックレス",
@@ -3353,7 +3414,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 15200
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ハードウェアグラジュエイテッドボールネックレス ネックレス",
@@ -3405,7 +3466,75 @@
    "jissei_n": 15,
    "judge_hammer": 42000,
    "judge_cost": 48800,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "3〜5万",
+    "n": 3,
+    "margin": -0.113,
+    "loss_rate": 0.333
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティファニー ハードウェア 19mm ボールネックレス ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 18000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0442",
+   "view_id": "10991084",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991084/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991084/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0442",
+   "asking_bid_closing_price": 40000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 55600,
+   "jissei_src": "mercari:n=6(B→p25)",
+   "profit": 2740,
+   "shitene": 38854,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 55600,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 38854,
+   "max_bid_soda": 36354,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 38854,
+   "shitene_attack": 203090,
+   "jissei_n": 6,
+   "judge_hammer": 40000,
+   "judge_cost": 46600,
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -3471,7 +3600,7 @@
    "jissei_n": 21,
    "judge_hammer": 33000,
    "judge_cost": 38900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -3537,7 +3666,75 @@
    "jissei_n": 21,
    "judge_hammer": 35000,
    "judge_cost": 41100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "3〜5万",
+    "n": 3,
+    "margin": -0.113,
+    "loss_rate": 0.333
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. Tiffany&Co. シグネチャークロス ネックレス 925/750 ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 15000,
+   "price_type": "開始価格",
+   "rank": "AB",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0417",
+   "view_id": "10991059",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991059/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991059/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0417",
+   "asking_bid_closing_price": 35000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 38000,
+   "jissei_src": "mercari:n=18",
+   "profit": -7600,
+   "shitene": 24454,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 38000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 24454,
+   "max_bid_soda": 21954,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 21181,
+   "shitene_attack": 24454,
+   "jissei_n": 18,
+   "judge_hammer": 35000,
+   "judge_cost": 41100,
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -3603,7 +3800,75 @@
    "jissei_n": 2,
    "judge_hammer": 31500,
    "judge_cost": 37250,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "3〜5万",
+    "n": 3,
+    "margin": -0.113,
+    "loss_rate": 0.333
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティファニー ネックレス ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 14000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0432",
+   "view_id": "10991074",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991074/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991074/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0432",
+   "asking_bid_closing_price": 31500,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 16000,
+   "jissei_src": "mercari:n=18(B→p25)",
+   "profit": -23550,
+   "shitene": 6954,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 16000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 6954,
+   "max_bid_soda": 4454,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 6954,
+   "shitene_attack": 16272,
+   "jissei_n": 18,
+   "judge_hammer": 31500,
+   "judge_cost": 37250,
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -3671,7 +3936,7 @@
    "jissei_n": 11,
    "judge_hammer": 30000,
    "judge_cost": 35600,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -3685,7 +3950,75 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 4600
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. Tiffany&Co. シグネチャークロス ネックレス 750/925 ネックレス ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 13000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0423",
+   "view_id": "10991065",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991065/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991065/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0423",
+   "asking_bid_closing_price": 30000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 34000,
+   "jissei_src": "mercari:n=18(B→p25)",
+   "profit": -5700,
+   "shitene": 21181,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 34000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 21181,
+   "max_bid_soda": 18681,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 21181,
+   "shitene_attack": 27727,
+   "jissei_n": 18,
+   "judge_hammer": 30000,
+   "judge_cost": 35600,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "3〜5万",
+    "n": 3,
+    "margin": -0.113,
+    "loss_rate": 0.333
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー バイ・ザ・ヤード・ネックレス・ペンダント ダイヤ チェーン約41cm ネックレス",
@@ -3737,7 +4070,7 @@
    "jissei_n": 8,
    "judge_hammer": 28000,
    "judge_cost": 33400,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -3805,7 +4138,7 @@
    "jissei_n": 12,
    "judge_hammer": 26000,
    "judge_cost": 31200,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -3819,7 +4152,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 300
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー バイ・ザ・ヤード・ネックレス・ペンダント アクアマリン 925/1.6g ネックレス",
@@ -3871,7 +4204,7 @@
    "jissei_n": 9,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -3885,7 +4218,143 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 300
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティファニー ツイスト リボン コンビ ゴールド シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 10000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0471",
+   "view_id": "10991113",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991113/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991113/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0471",
+   "asking_bid_closing_price": 23000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 20000,
+   "jissei_src": "mercari:n=18(B→p25)",
+   "profit": -10600,
+   "shitene": 10227,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 20000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 10227,
+   "max_bid_soda": 7727,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 10227,
+   "shitene_attack": 16600,
+   "jissei_n": 18,
+   "judge_hammer": 23000,
+   "judge_cost": 27900,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティファニー SV925 ネックレス ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 10000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0496",
+   "view_id": "10991138",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991138/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991138/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0496",
+   "asking_bid_closing_price": 22000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 16000,
+   "jissei_src": "mercari:n=18(B→p25)",
+   "profit": -13100,
+   "shitene": 6954,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 16000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 6954,
+   "max_bid_soda": 4454,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 6954,
+   "shitene_attack": 16272,
+   "jissei_n": 18,
+   "judge_hammer": 22000,
+   "judge_cost": 26800,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. パロマメロディ ネックレス 925 2.4g ネックレス",
@@ -3937,7 +4406,7 @@
    "jissei_n": 19,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -3951,7 +4420,143 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 400
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. リターントゥティファニー ティファニー リターントゥハート タグ プレート ボールチェーン シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 9000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0480",
+   "view_id": "10991122",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991122/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991122/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0480",
+   "asking_bid_closing_price": 20000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 14500,
+   "jissei_src": "mercari:n=16(B→p25)",
+   "profit": -12250,
+   "shitene": 5727,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 14500,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 5727,
+   "max_bid_soda": 3227,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 5727,
+   "shitene_attack": 9818,
+   "jissei_n": 16,
+   "judge_hammer": 20000,
+   "judge_cost": 24600,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. TIFFANY&Co. ダブルハート SV925 ネックレス ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 9000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0504",
+   "view_id": "10991146",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991146/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991146/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0504",
+   "asking_bid_closing_price": 20000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 25000,
+   "jissei_src": "mercari:n=8(B→p25)",
+   "profit": -2800,
+   "shitene": 13818,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 25000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 13818,
+   "max_bid_soda": 11318,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 13818,
+   "shitene_attack": 17909,
+   "jissei_n": 8,
+   "judge_hammer": 20000,
+   "judge_cost": 24600,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. コインエッジ ドッグタグ スターリングシルバー ネックレス ネックレス",
@@ -4005,7 +4610,7 @@
    "jissei_n": 24,
    "judge_hammer": 18000,
    "judge_cost": 22400,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4071,7 +4676,211 @@
    "jissei_n": 22,
    "judge_hammer": 19000,
    "judge_cost": 23500,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. Tiffany ネックレス ハートチェーン コンビ 750 925 ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 8000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0434",
+   "view_id": "10991076",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991076/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991076/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0434",
+   "asking_bid_closing_price": 18000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 15500,
+   "jissei_src": "mercari:n=10(B→p25)",
+   "profit": -9150,
+   "shitene": 6545,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 15500,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 6545,
+   "max_bid_soda": 4045,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 6545,
+   "shitene_attack": 14227,
+   "jissei_n": 10,
+   "judge_hammer": 18000,
+   "judge_cost": 22400,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. インフィニティ ティファニー インフィニティ ネックレス ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 8000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0443",
+   "view_id": "10991085",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991085/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991085/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0443",
+   "asking_bid_closing_price": 18000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 19000,
+   "jissei_src": "mercari:n=16(B→p25)",
+   "profit": -6000,
+   "shitene": 9409,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 19000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 9409,
+   "max_bid_soda": 6909,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 9409,
+   "shitene_attack": 10299,
+   "jissei_n": 16,
+   "judge_hammer": 18000,
+   "judge_cost": 22400,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティファニー ネックレス Sv925/K18 ツイストノット ロープ コンビ ネックレス ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 8000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0498",
+   "view_id": "10991140",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991140/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991140/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0498",
+   "asking_bid_closing_price": 18000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 35000,
+   "jissei_src": "mercari:n=19(B→p25)",
+   "profit": 8400,
+   "shitene": 21999,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 35000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 21999,
+   "max_bid_soda": 19499,
+   "profit_flag": "🟡",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 21999,
+   "shitene_attack": 43271,
+   "jissei_n": 19,
+   "judge_hammer": 18000,
+   "judge_cost": 22400,
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4139,7 +4948,749 @@
    "jissei_n": 15,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ラヴィングハート ティファニー ラビングハート シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0458",
+   "view_id": "10991100",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991100/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991100/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0458",
+   "asking_bid_closing_price": 16000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": "mercari:n=15(語ズレ:ラヴィングハートが標本0/3)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "⚠️",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "jissei_n": 15,
+   "judge_hammer": 16000,
+   "judge_cost": 20200,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ビーン ティファニー ビーン シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0460",
+   "view_id": "10991102",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991102/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991102/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0460",
+   "asking_bid_closing_price": 16000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 10000,
+   "jissei_src": "mercari:n=11(B→p25)",
+   "profit": -11900,
+   "shitene": 2045,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 10000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 2045,
+   "max_bid_soda": -455,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 2045,
+   "shitene_attack": 3272,
+   "jissei_n": 11,
+   "judge_hammer": 16000,
+   "judge_cost": 20200,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. オープンハート ティファニー オープンハート シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0464",
+   "view_id": "10991106",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991106/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991106/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0464",
+   "asking_bid_closing_price": 16000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 7900,
+   "jissei_src": "mercari:n=17(B→p25)",
+   "profit": -13790,
+   "shitene": 327,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 7900,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 327,
+   "max_bid_soda": -2173,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 327,
+   "shitene_attack": 1636,
+   "jissei_n": 17,
+   "judge_hammer": 16000,
+   "judge_cost": 20200,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティファニー スクエア ストライプ シルバー925 SV ブローチ ペンダントトップ Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0466",
+   "view_id": "10991108",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991108/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991108/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0466",
+   "asking_bid_closing_price": 16000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 7500,
+   "jissei_src": "mercari:n=23(B→p25)",
+   "profit": -14150,
+   "shitene": 0,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 7500,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 0,
+   "max_bid_soda": -2500,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 0,
+   "shitene_attack": 2127,
+   "jissei_n": 23,
+   "judge_hammer": 16000,
+   "judge_cost": 20200,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. クロスモチーフ ティファニー グラフィティ X キス パロマピカソ シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0472",
+   "view_id": "10991114",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991114/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991114/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0472",
+   "asking_bid_closing_price": 16000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": "mercari:n=14(語ズレ:クロスモチーフが標本0/3)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "⚠️",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "jissei_n": 14,
+   "judge_hammer": 16000,
+   "judge_cost": 20200,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティファニー アトラス プレート ボールチェーン シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0475",
+   "view_id": "10991117",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991117/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991117/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0475",
+   "asking_bid_closing_price": 17000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 13000,
+   "jissei_src": "mercari:n=13(B→p25)",
+   "profit": -10300,
+   "shitene": 4500,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 13000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 4500,
+   "max_bid_soda": 2000,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 4500,
+   "shitene_attack": 5318,
+   "jissei_n": 13,
+   "judge_hammer": 17000,
+   "judge_cost": 21300,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティファニー マドンナ ペンダント シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0479",
+   "view_id": "10991121",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991121/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991121/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0479",
+   "asking_bid_closing_price": 16000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 11685,
+   "jissei_src": "mercari:n=15(B→p25)",
+   "profit": -10384,
+   "shitene": 3424,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 11685,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 3424,
+   "max_bid_soda": 924,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 3424,
+   "shitene_attack": 6136,
+   "jissei_n": 15,
+   "judge_hammer": 16000,
+   "judge_cost": 20200,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. クロスモチーフ ティファニー スモール クロス シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0481",
+   "view_id": "10991123",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991123/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991123/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0481",
+   "asking_bid_closing_price": 16000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": "mercari:n=14(語ズレ:クロスモチーフが標本0/3)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "⚠️",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "jissei_n": 14,
+   "judge_hammer": 16000,
+   "judge_cost": 20200,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティアドロップ ティファニー ティアドロップ シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0484",
+   "view_id": "10991126",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991126/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991126/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0484",
+   "asking_bid_closing_price": 16000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 11800,
+   "jissei_src": "mercari:n=17(B→p25)",
+   "profit": -10280,
+   "shitene": 3518,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 11800,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 3518,
+   "max_bid_soda": 1018,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 3518,
+   "shitene_attack": 5972,
+   "jissei_n": 17,
+   "judge_hammer": 16000,
+   "judge_cost": 20200,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. アトラス ティファニー アトラス キューブ シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0486",
+   "view_id": "10991128",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991128/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991128/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0486",
+   "asking_bid_closing_price": 16000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 11000,
+   "jissei_src": "mercari:n=11(B→p25)",
+   "profit": -11000,
+   "shitene": 2863,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 11000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 2863,
+   "max_bid_soda": 363,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 2863,
+   "shitene_attack": 4909,
+   "jissei_n": 11,
+   "judge_hammer": 16000,
+   "judge_cost": 20200,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. オープンハート ティファニー ダブル オープンハート シルバー925 SV ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 7000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0489",
+   "view_id": "10991131",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991131/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991131/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0489",
+   "asking_bid_closing_price": 17000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 10800,
+   "jissei_src": "mercari:n=16(B→p25)",
+   "profit": -12280,
+   "shitene": 2699,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 10800,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 2699,
+   "max_bid_soda": 199,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 2699,
+   "shitene_attack": 6954,
+   "jissei_n": 16,
+   "judge_hammer": 17000,
+   "judge_cost": 21300,
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4207,7 +5758,7 @@
    "jissei_n": 18,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4221,7 +5772,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 5200
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. インフィニティ ネックレス その他小物",
@@ -4275,7 +5826,7 @@
    "jissei_n": 22,
    "judge_hammer": 14000,
    "judge_cost": 18000,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4343,7 +5894,7 @@
    "jissei_n": 21,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4411,7 +5962,7 @@
    "jissei_n": 18,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4479,7 +6030,7 @@
    "jissei_n": 13,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4493,7 +6044,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 800
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー シリウススター 925 ネックレス ネックレス",
@@ -4547,7 +6098,7 @@
    "jissei_n": 17,
    "judge_hammer": 14000,
    "judge_cost": 18000,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4613,7 +6164,7 @@
    "jissei_n": 22,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4627,7 +6178,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 2900
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. TIFFANY&Co ティファニー パロマピカソ ラビングハート SV925 ネックレス ペンダント アクセサリー シルバー系 HC5068 ネックレス",
@@ -4679,7 +6230,7 @@
    "jissei_n": 15,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4745,7 +6296,7 @@
    "jissei_n": 18,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4813,7 +6364,7 @@
    "jissei_n": 20,
    "judge_hammer": 14000,
    "judge_cost": 18000,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4827,7 +6378,75 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 700
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. リターントゥティファニー ティファニー リターントゥハート タグ プレート シルバー925 SV 社外チェーン ネックレス Tiffany ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 6000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0457",
+   "view_id": "10991099",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991099/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991099/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0457",
+   "asking_bid_closing_price": 15000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 14500,
+   "jissei_src": "mercari:n=16(B→p25)",
+   "profit": -6750,
+   "shitene": 5727,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 14500,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 5727,
+   "max_bid_soda": 3227,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 5727,
+   "shitene_attack": 9818,
+   "jissei_n": 16,
+   "judge_hammer": 15000,
+   "judge_cost": 19100,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. オープンハートネックレス 925 ネックレス",
@@ -4879,7 +6498,7 @@
    "jissei_n": 21,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -4945,7 +6564,7 @@
    "jissei_n": 21,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5011,7 +6630,7 @@
    "jissei_n": 22,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5079,7 +6698,7 @@
    "jissei_n": 19,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5116,10 +6735,10 @@
    "asking_bid_closing_price": 11000,
    "non_deductible_tax": false,
    "confidence": "category_only",
-   "jissei": 6980,
-   "jissei_src": "mercari:n=12(B→p25)",
-   "profit": -9118,
-   "shitene": -425,
+   "jissei": 8090,
+   "jissei_src": "mercari:n=18(B→p25)",
+   "profit": -8119,
+   "shitene": 482,
    "highlight": false,
    "needs_jissei_verify": false,
    "tier": "A/アクセ",
@@ -5130,11 +6749,11 @@
    "matched_queries": [
     "ティファニー ネックレス"
    ],
-   "hanbai_souba": 6980,
+   "hanbai_souba": 8090,
    "rakusatsu_souba": null,
    "rakusatsu_src": null,
-   "max_bid": -425,
-   "max_bid_soda": -2925,
+   "max_bid": 482,
+   "max_bid_soda": -2018,
    "profit_flag": "❌",
    "exclude_100k": false,
    "ideal_bid_065": null,
@@ -5142,12 +6761,12 @@
    "tier_band": "その他",
    "new_tag": false,
    "premium_flag": false,
-   "shitene_safe": -425,
-   "shitene_attack": 1636,
-   "jissei_n": 12,
+   "shitene_safe": 482,
+   "shitene_attack": 3272,
+   "jissei_n": 18,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5213,7 +6832,7 @@
    "jissei_n": 19,
    "judge_hammer": 11000,
    "judge_cost": 14700,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5279,7 +6898,7 @@
    "jissei_n": 23,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5347,7 +6966,7 @@
    "jissei_n": 17,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5361,7 +6980,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 400
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ラビングハート SV925/2.8g チェーン約42cm ネックレス",
@@ -5415,7 +7034,7 @@
    "jissei_n": 18,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5429,7 +7048,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 500
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. トリプルハート SV925/4.2g チェーン約46cm ネックレス",
@@ -5483,7 +7102,7 @@
    "jissei_n": 19,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5497,7 +7116,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 800
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー オープンリーフ ネックレス 925 7.0g 首周り約45cm ネックレス",
@@ -5551,7 +7170,7 @@
    "jissei_n": 26,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5565,7 +7184,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 1400
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー SV925 4.3g ネックレス",
@@ -5619,7 +7238,7 @@
    "jissei_n": 18,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5633,7 +7252,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 800
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー SV925 ティアドロップネックレス 2.8g チェーン約41cm ネックレス",
@@ -5685,7 +7304,7 @@
    "jissei_n": 17,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5699,7 +7318,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 500
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー SV925 ティアドロップネックレス 3.0g 首周り約44cm ネックレス",
@@ -5751,7 +7370,7 @@
    "jissei_n": 19,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5765,7 +7384,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 600
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー ビーン 925/8.0g 1837(貴金属)・ネックレス・ペンダント ネックレス",
@@ -5819,7 +7438,7 @@
    "jissei_n": 19,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5833,7 +7452,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 1600
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー インターロッキング 2.9g 925 ネックレス チェーン約41cm ネックレス",
@@ -5887,7 +7506,7 @@
    "jissei_n": 14,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5901,7 +7520,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 500
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー TIFFANY & Co. ネックレス 925/3.0g ネックレス",
@@ -5955,7 +7574,7 @@
    "jissei_n": 21,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -5969,7 +7588,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 600
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー TIFFANY & Co.ネックレス 925/2.4g チェーン約41cm ネックレス",
@@ -6021,7 +7640,7 @@
    "jissei_n": 23,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -6035,7 +7654,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 400
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー TIFFANY & Co. ネックレス 925/2.8g ネックレス",
@@ -6089,7 +7708,7 @@
    "jissei_n": 21,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -6103,7 +7722,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 500
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー TIFFANY & Co.ネックレス 925/2.4g チェーン約42cm ネックレス",
@@ -6155,7 +7774,7 @@
    "jissei_n": 23,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -6169,7 +7788,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 400
+   "tsubushi": null
   },
   {
    "name": "Tiffany&Co. ティファニー TIFFANY & Co. ネックレス チェーン約46cm 2.8g ネックレス",
@@ -6223,7 +7842,7 @@
    "jissei_n": 25,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -6291,7 +7910,7 @@
    "jissei_n": 18,
    "judge_hammer": 13000,
    "judge_cost": 16900,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -6305,7 +7924,483 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 500
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. Tiffany&Co. ビーン ネックレス 925 ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 5000,
+   "price_type": "開始価格",
+   "rank": "AB",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0413",
+   "view_id": "10991055",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991055/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991055/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0413",
+   "asking_bid_closing_price": 12000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 11000,
+   "jissei_src": "mercari:n=19",
+   "profit": -6600,
+   "shitene": 2863,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 11000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 2863,
+   "max_bid_soda": 363,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 1063,
+   "shitene_attack": 2863,
+   "jissei_n": 19,
+   "judge_hammer": 12000,
+   "judge_cost": 15800,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. Tiffany&Co. ビーン ネックレス 925 ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 5000,
+   "price_type": "開始価格",
+   "rank": "AB",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0414",
+   "view_id": "10991056",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991056/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991056/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0414",
+   "asking_bid_closing_price": 12000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 11000,
+   "jissei_src": "mercari:n=19",
+   "profit": -6600,
+   "shitene": 2863,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 11000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 2863,
+   "max_bid_soda": 363,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 1063,
+   "shitene_attack": 2863,
+   "jissei_n": 19,
+   "judge_hammer": 12000,
+   "judge_cost": 15800,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. Tiffany&Co. スクリブル ネックレス 925 ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 5000,
+   "price_type": "開始価格",
+   "rank": "AB",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0415",
+   "view_id": "10991057",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991057/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991057/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0415",
+   "asking_bid_closing_price": 12000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 17900,
+   "jissei_src": "mercari:n=14",
+   "profit": -390,
+   "shitene": 8509,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 17900,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 8509,
+   "max_bid_soda": 6009,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 5154,
+   "shitene_attack": 8509,
+   "jissei_n": 14,
+   "judge_hammer": 12000,
+   "judge_cost": 15800,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. Tiffany&Co. オープンハート ネックレス 925 ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 5000,
+   "price_type": "開始価格",
+   "rank": "AB",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0416",
+   "view_id": "10991058",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991058/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991058/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0416",
+   "asking_bid_closing_price": 12000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 8800,
+   "jissei_src": "mercari:n=22",
+   "profit": -8580,
+   "shitene": 1063,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 8800,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 1063,
+   "max_bid_soda": -1437,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": -490,
+   "shitene_attack": 1063,
+   "jissei_n": 22,
+   "judge_hammer": 12000,
+   "judge_cost": 15800,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティファニー シルバー ネックレス 925 ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 5000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0438",
+   "view_id": "10991080",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991080/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991080/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0438",
+   "asking_bid_closing_price": 13000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 11500,
+   "jissei_src": "mercari:n=22(B→p25)",
+   "profit": -7250,
+   "shitene": 3272,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 11500,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 3272,
+   "max_bid_soda": 772,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 3272,
+   "shitene_attack": 10227,
+   "jissei_n": 22,
+   "judge_hammer": 13000,
+   "judge_cost": 16900,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. Tiffany&Co. オープンティアドロップ ネックレス 925 ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 5000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0446",
+   "view_id": "10991088",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991088/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991088/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0446",
+   "asking_bid_closing_price": 12000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 9600,
+   "jissei_src": "mercari:n=14(B→p25)",
+   "profit": -7860,
+   "shitene": 1718,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 9600,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 1718,
+   "max_bid_soda": -782,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 1718,
+   "shitene_attack": 2699,
+   "jissei_n": 14,
+   "judge_hammer": 12000,
+   "judge_cost": 15800,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Tiffany&Co. ティファニー SV925 ネックレス ネックレス",
+   "brand": "ティファニー",
+   "brand_en": "Tiffany＆Co.",
+   "q": "ティファニー ネックレス",
+   "category": "A/アクセ",
+   "current_price": 5000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0497",
+   "view_id": "10991139",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991139/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991139/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0497",
+   "asking_bid_closing_price": 11000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 16000,
+   "jissei_src": "mercari:n=18(B→p25)",
+   "profit": -1000,
+   "shitene": 6954,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 10,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ティファニー ネックレス"
+   ],
+   "hanbai_souba": 16000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 6954,
+   "max_bid_soda": 4454,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 6954,
+   "shitene_attack": 16272,
+   "jissei_n": 18,
+   "judge_hammer": 11000,
+   "judge_cost": 14700,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
   },
   {
    "name": "Georg Jensen フュージョン #50 750 15.0g リング(貴金属)",
@@ -6361,7 +8456,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 205500
+   "tsubushi": null
   },
   {
    "name": "Georg Jensen バンド #51 YG 750 6.3g リング(貴金属)",
@@ -6417,7 +8512,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 86300
+   "tsubushi": null
   },
   {
    "name": "Georg Jensen ジョージジェンセン 2019 ネックレス ネックレス",
@@ -6471,7 +8566,7 @@
    "jissei_n": 20,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -6539,7 +8634,7 @@
    "jissei_n": null,
    "judge_hammer": 50000,
    "judge_cost": 58700,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "5〜10万",
     "n": 8,
@@ -6665,7 +8760,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 1074500
+   "tsubushi": null
   },
   {
    "name": "HERMES シェーヌダンクル MM 16コマ YG 750 41.7g ブレスレット・バングル(貴金属)",
@@ -6721,7 +8816,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 571500
+   "tsubushi": null
   },
   {
    "name": "HERMES ケリー LG ダイヤ WG Au750 27.2g ブレスレット・バングル(貴金属)",
@@ -6777,7 +8872,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 372700
+   "tsubushi": null
   },
   {
    "name": "HERMES シェーヌダンクル TPM 22コマ PG Au750 20.2g ブレスレット・バングル(貴金属)",
@@ -6833,7 +8928,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 276800
+   "tsubushi": null
   },
   {
    "name": "HERMES ?シェーヌダンクル TPM 24コマ YG 750 22.8g ブレスレット・バングル(貴金属)",
@@ -6889,7 +8984,119 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 312400
+   "tsubushi": null
+  },
+  {
+   "name": "HERMES エルメス ブックルセリエ ブレスレット SV925 シルバー 76.1g ブレスレット・バングル",
+   "brand": "エルメス",
+   "brand_en": "HERMES",
+   "q": "エルメス ブレスレット アクセ",
+   "category": "A/アクセ",
+   "current_price": 318000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物①_水曜日",
+   "item_no": "14210_0433",
+   "view_id": "10990722",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10990722/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10990722/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14210_0433",
+   "asking_bid_closing_price": 500000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": null,
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 18,
+   "tax_excluded": true,
+   "matched_queries": [
+    "エルメス ブレスレット アクセ"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": 66000,
+   "rakusatsu_src": "official:エルメス:B",
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "?",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "特上5-9万",
+   "new_tag": false,
+   "premium_flag": false,
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "HERMES エルメス ブレス ヘラクレス ブレスレット・バングル",
+   "brand": "エルメス",
+   "brand_en": "HERMES",
+   "q": "エルメス ブレスレット アクセ",
+   "category": "A/アクセ",
+   "current_price": 280000,
+   "price_type": "開始価格",
+   "rank": "AB",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物①_水曜日",
+   "item_no": "14210_0416",
+   "view_id": "10990705",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10990705/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10990705/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14210_0416",
+   "asking_bid_closing_price": 440000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": null,
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 18,
+   "tax_excluded": true,
+   "matched_queries": [
+    "エルメス ブレスレット アクセ"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": 103000,
+   "rakusatsu_src": "official:エルメス:AB",
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "?",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "除外10万超",
+   "new_tag": false,
+   "premium_flag": false,
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
   },
   {
    "name": "HERMES 筆記体刻印 シェーヌダンクル PM 18コマ SV925 37.0g ブレスレット・バングル",
@@ -6945,7 +9152,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 7500
+   "tsubushi": null
   },
   {
    "name": "HERMES マルジェラ期 シェーヌダンクル PM 18コマ SV925 37.5g ブレスレット・バングル",
@@ -7001,7 +9208,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 7600
+   "tsubushi": null
   },
   {
    "name": "HERMES マルジェラ期 シェーヌダンクル GM 11コマ 70.7g SV925 ブレスレット・バングル",
@@ -7057,7 +9264,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 14500
+   "tsubushi": null
   },
   {
    "name": "HERMES シェーヌダンクル GM 13コマ 70.2g ブレスレット・バングル",
@@ -7169,7 +9376,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 16900
+   "tsubushi": null
   },
   {
    "name": "HERMES シェーヌダンクル GM 15コマ 24C220273 SV925 79.5g ブレスレット・バングル",
@@ -7225,7 +9432,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 16300
+   "tsubushi": null
   },
   {
    "name": "HERMES シェーヌダンクル ブレスレット MM 15コマ Ag925 54.3g ブレスレット・バングル",
@@ -7281,7 +9488,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 11100
+   "tsubushi": null
   },
   {
    "name": "HERMES フィレドール ダイヤ PG 750 8.6g ブレスレット・バングル(貴金属)",
@@ -7337,7 +9544,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 117800
+   "tsubushi": null
   },
   {
    "name": "HERMES HERMES シェーヌダンクル MM 13コマ AG925/52.1g ブレスレット・バングル",
@@ -7393,7 +9600,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 10600
+   "tsubushi": null
   },
   {
    "name": "HERMES シェーヌダンクル ロンド SH D0.32ct WG Au750 4.7g ブレスレット・バングル(貴金属)",
@@ -7449,7 +9656,63 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 64400
+   "tsubushi": null
+  },
+  {
+   "name": "HERMES エルメス シェーヌダンクル ブレスレット TGM SV925 100.1g ブレスレット・バングル",
+   "brand": "エルメス",
+   "brand_en": "HERMES",
+   "q": "エルメス ブレスレット アクセ",
+   "category": "A/アクセ",
+   "current_price": 146000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物①_水曜日",
+   "item_no": "14210_0432",
+   "view_id": "10990721",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10990721/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10990721/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14210_0432",
+   "asking_bid_closing_price": 230000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": null,
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 18,
+   "tax_excluded": true,
+   "matched_queries": [
+    "エルメス ブレスレット アクセ"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": 66000,
+   "rakusatsu_src": "official:エルメス:B",
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "?",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "特上5-9万",
+   "new_tag": false,
+   "premium_flag": false,
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
   },
   {
    "name": "HERMES シェーヌダンクル TGM12 112.3g ブレスレット・バングル",
@@ -7564,6 +9827,174 @@
    "tsubushi": null
   },
   {
+   "name": "HERMES エルメス シェーヌダンクル ブレスレット PM16 ブレスレット・バングル",
+   "brand": "エルメス",
+   "brand_en": "HERMES",
+   "q": "エルメス ブレスレット アクセ",
+   "category": "A/アクセ",
+   "current_price": 124000,
+   "price_type": "開始価格",
+   "rank": "A",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物①_水曜日",
+   "item_no": "14210_0412",
+   "view_id": "10990701",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10990701/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10990701/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14210_0412",
+   "asking_bid_closing_price": 195000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": null,
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 18,
+   "tax_excluded": true,
+   "matched_queries": [
+    "エルメス ブレスレット アクセ"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": 97000,
+   "rakusatsu_src": "official:エルメス:A",
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "?",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "HERMES エルメス シェーヌダンクル ブレスレット MM16 ブレスレット・バングル",
+   "brand": "エルメス",
+   "brand_en": "HERMES",
+   "q": "エルメス ブレスレット アクセ",
+   "category": "A/アクセ",
+   "current_price": 120000,
+   "price_type": "開始価格",
+   "rank": "AB",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物①_水曜日",
+   "item_no": "14210_0417",
+   "view_id": "10990706",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10990706/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10990706/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14210_0417",
+   "asking_bid_closing_price": 189000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": null,
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 18,
+   "tax_excluded": true,
+   "matched_queries": [
+    "エルメス ブレスレット アクセ"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": 103000,
+   "rakusatsu_src": "official:エルメス:AB",
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "?",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "除外10万超",
+   "new_tag": false,
+   "premium_flag": false,
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "HERMES アミュレット 925/51.6g ブレスレット・バングル",
+   "brand": "エルメス",
+   "brand_en": "HERMES",
+   "q": "エルメス ブレスレット アクセ",
+   "category": "A/アクセ",
+   "current_price": 114000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物①_水曜日",
+   "item_no": "14210_0434",
+   "view_id": "10990723",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10990723/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10990723/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14210_0434",
+   "asking_bid_closing_price": 180000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": null,
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A/アクセ",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 18,
+   "tax_excluded": true,
+   "matched_queries": [
+    "エルメス ブレスレット アクセ"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": 66000,
+   "rakusatsu_src": "official:エルメス:B",
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "?",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "特上5-9万",
+   "new_tag": false,
+   "premium_flag": false,
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "A アクセサリー",
+    "n": 16,
+    "margin": 0.374,
+    "loss_rate": 0.188
+   },
+   "tsubushi": null
+  },
+  {
    "name": "HERMES シェーヌダンクル ブレスレット PM 14コマ Ag925 32.3g ブレスレット・バングル",
    "brand": "エルメス",
    "brand_en": "HERMES",
@@ -7617,7 +10048,7 @@
     "margin": 0.374,
     "loss_rate": 0.188
    },
-   "tsubushi": 6600
+   "tsubushi": null
   },
   {
    "name": "HERMES クリックH バングル ブレスレット・バングル",
@@ -8226,7 +10657,7 @@
    "jissei_n": 21,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -8292,7 +10723,7 @@
    "jissei_n": 10,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8305,6 +10736,142 @@
     "n": 9,
     "margin": -0.053,
     "loss_rate": 0.333
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Maison Margiela マルジェラ ロールトップ クラッチバッグ Paper クラッチバッグ",
+   "brand": "メゾンマルジェラ",
+   "brand_en": "その他",
+   "q": "マルジェラ レプリカ",
+   "category": "A/香水枠(DEAREST)",
+   "current_price": 10000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "バッグ⑦_水曜日",
+   "item_no": "14209_0961",
+   "view_id": "10990600",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10990600/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10990600/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14209_0961",
+   "asking_bid_closing_price": 22000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 23000,
+   "jissei_src": "mercari:n=22(B→p25)",
+   "profit": -6800,
+   "shitene": 12181,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/香水枠(DEAREST)",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 25,
+   "tax_excluded": true,
+   "matched_queries": [
+    "マルジェラ レプリカ"
+   ],
+   "hanbai_souba": 23000,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 12181,
+   "max_bid_soda": 9681,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 12181,
+   "shitene_attack": 21181,
+   "jissei_n": 22,
+   "judge_hammer": 22000,
+   "judge_cost": 26800,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "B カバン",
+    "n": 9,
+    "margin": -0.053,
+    "loss_rate": 0.333
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "Maison Margiela キーケース ライトブルー 箱 キーケース・キーホルダー",
+   "brand": "メゾンマルジェラ",
+   "brand_en": "その他",
+   "q": "マルジェラ レプリカ",
+   "category": "A/香水枠(DEAREST)",
+   "current_price": 6000,
+   "price_type": "開始価格",
+   "rank": "A",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "小物②_水曜日",
+   "item_no": "14211_0604",
+   "view_id": "10991246",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991246/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991246/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14211_0604",
+   "asking_bid_closing_price": 15000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 27300,
+   "jissei_src": "mercari:n=20",
+   "profit": 4770,
+   "shitene": 15700,
+   "highlight": true,
+   "needs_jissei_verify": false,
+   "tier": "A/香水枠(DEAREST)",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 25,
+   "tax_excluded": true,
+   "matched_queries": [
+    "マルジェラ レプリカ"
+   ],
+   "hanbai_souba": 27300,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 15700,
+   "max_bid_soda": 13200,
+   "profit_flag": "✅",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": 11363,
+   "shitene_attack": 15700,
+   "jissei_n": 20,
+   "judge_hammer": 15000,
+   "judge_cost": 19100,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "W 財布",
+    "n": 12,
+    "margin": -0.088,
+    "loss_rate": 0.25
    },
    "tsubushi": null
   },
@@ -8360,7 +10927,7 @@
    "jissei_n": 28,
    "judge_hammer": 12000,
    "judge_cost": 15800,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8647,6 +11214,69 @@
    "tsubushi": null
   },
   {
+   "name": "GUCCI グッチ トムフォード期 レザーベルト キャメル ニット ケープ ポンチョ ポンチョ",
+   "brand": "GUCCI",
+   "brand_en": "GUCCI",
+   "q": "香水",
+   "category": "A/香水枠(DEAREST)",
+   "current_price": 15000,
+   "price_type": "開始価格",
+   "rank": "AB",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "アパレル_水曜日",
+   "item_no": "14212_1031",
+   "view_id": "10991658",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991658/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991658/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14212_1031",
+   "asking_bid_closing_price": 35000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": 15800,
+   "jissei_src": "mercari:n=19",
+   "profit": -27580,
+   "shitene": 6790,
+   "highlight": false,
+   "needs_jissei_verify": false,
+   "tier": "A/香水枠(DEAREST)",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 26,
+   "tax_excluded": true,
+   "matched_queries": [
+    "香水"
+   ],
+   "hanbai_souba": 15800,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": 6790,
+   "max_bid_soda": 4290,
+   "profit_flag": "❌",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "shitene_safe": -327,
+   "shitene_attack": 6790,
+   "jissei_n": 19,
+   "judge_hammer": 35000,
+   "judge_cost": 41100,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "3〜5万",
+    "n": 3,
+    "margin": -0.113,
+    "loss_rate": 0.333
+   },
+   "stamp_note": null,
+   "self_cat": null,
+   "tsubushi": null
+  },
+  {
    "name": "◆Tom Ford 美品 TOM FORD トムフォード TF5870-F-B 001 ECO 52□21 145 メガネ めがね 眼鏡 メンズ レディース ブラック系 EA4551 サングラス・メガネ",
    "brand": "Tom Ford",
    "brand_en": "Tom Ford",
@@ -8698,7 +11328,7 @@
    "jissei_n": 22,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8761,7 +11391,7 @@
    "jissei_n": 25,
    "judge_hammer": 20000,
    "judge_cost": 24600,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8824,7 +11454,7 @@
    "jissei_n": 24,
    "judge_hammer": 16000,
    "judge_cost": 20200,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8887,7 +11517,7 @@
    "jissei_n": 25,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8950,7 +11580,7 @@
    "jissei_n": 24,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -8959,6 +11589,189 @@
    },
    "stamp_note": null,
    "self_cat": null,
+   "tsubushi": null
+  },
+  {
+   "name": "JILSANDER ジルサンダー カンノーロ ショルダーバッグ ショルダーバッグ",
+   "brand": "ジルサンダー",
+   "brand_en": "JILSANDER",
+   "q": "ジルサンダー",
+   "category": "A",
+   "current_price": 30000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "バッグ⑦_水曜日",
+   "item_no": "14209_1311",
+   "view_id": "10996550",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10996550/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10996550/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14209_1311",
+   "asking_bid_closing_price": 66000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": null,
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A",
+   "kaiten": 3,
+   "rieki": null,
+   "priority": 31,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ジルサンダー"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "?",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "B カバン",
+    "n": 9,
+    "margin": -0.053,
+    "loss_rate": 0.333
+   },
+   "tsubushi": null
+  },
+  {
+   "name": "JILSANDER Jil Sander(ジル サンダー) 半袖シャツ(サイズ37) シャツ",
+   "brand": "ジルサンダー",
+   "brand_en": "JILSANDER",
+   "q": "ジルサンダー",
+   "category": "A",
+   "current_price": 10000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "アパレル_水曜日",
+   "item_no": "14212_1248",
+   "view_id": "10991875",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10991875/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10991875/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14212_1248",
+   "asking_bid_closing_price": 10000,
+   "non_deductible_tax": true,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": "mercari:n=21(語ズレ:半袖シャツが標本0/3)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A",
+   "kaiten": 3,
+   "rieki": null,
+   "priority": 31,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ジルサンダー"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "⚠️",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "jissei_n": 21,
+   "judge_hammer": 10000,
+   "judge_cost": 13050,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": null,
+   "tsubushi": null
+  },
+  {
+   "name": "JILSANDER JIL SANDER ジルサンダー Taos Bag タオバッグ レザー ショルダーバッグ ショルダーバッグ",
+   "brand": "ジルサンダー",
+   "brand_en": "JILSANDER",
+   "q": "ジルサンダー",
+   "category": "A",
+   "current_price": 5000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-25T10:00:00+09:00",
+   "auction": "2026年11月25日 第872回 オークション(ブランド市)",
+   "lane": "バッグ⑦_水曜日",
+   "item_no": "14209_1312",
+   "view_id": "10996551",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10996551/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10996551/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14209_1312",
+   "asking_bid_closing_price": 22000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": "mercari:n=24(語ズレ:タオバッグが標本0/3)",
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "A",
+   "kaiten": 3,
+   "rieki": null,
+   "priority": 31,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ジルサンダー"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "⚠️",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
+   "jissei_n": 24,
+   "judge_hammer": 22000,
+   "judge_cost": 26800,
+   "judged_at": "2026-11-22 09:25",
+   "self_band": {
+    "band": "1〜3万",
+    "n": 27,
+    "margin": 0.247,
+    "loss_rate": 0.148
+   },
+   "stamp_note": null,
+   "self_cat": {
+    "cat": "B カバン",
+    "n": 9,
+    "margin": -0.053,
+    "loss_rate": 0.333
+   },
    "tsubushi": null
   },
   {
@@ -9013,7 +11826,7 @@
    "jissei_n": 21,
    "judge_hammer": 10000,
    "judge_cost": 13050,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -9074,7 +11887,7 @@
    "jissei_n": 29,
    "judge_hammer": 3000,
    "judge_cost": 5350,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9137,7 +11950,7 @@
    "jissei_n": 23,
    "judge_hammer": 3000,
    "judge_cost": 5350,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9200,7 +12013,7 @@
    "jissei_n": 21,
    "judge_hammer": 6000,
    "judge_cost": 8650,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9314,7 +12127,7 @@
    "jissei_n": 24,
    "judge_hammer": 3000,
    "judge_cost": 5350,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9377,7 +12190,7 @@
    "jissei_n": 28,
    "judge_hammer": 2000,
    "judge_cost": 4250,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9440,7 +12253,7 @@
    "jissei_n": 5,
    "judge_hammer": 7000,
    "judge_cost": 9750,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9503,7 +12316,7 @@
    "jissei_n": 24,
    "judge_hammer": 10000,
    "judge_cost": 13050,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -9564,7 +12377,7 @@
    "jissei_n": 23,
    "judge_hammer": 7000,
    "judge_cost": 9750,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9625,7 +12438,7 @@
    "jissei_n": 19,
    "judge_hammer": 4000,
    "judge_cost": 6450,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9688,13 +12501,64 @@
    "jissei_n": 22,
    "judge_hammer": 10000,
    "judge_cost": 13050,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
     "margin": 0.247,
     "loss_rate": 0.148
    },
+   "stamp_note": null,
+   "self_cat": null,
+   "tsubushi": null
+  },
+  {
+   "name": "▼ナイキ アウター 1点 その他アパレル",
+   "brand": "ナイキ",
+   "brand_en": "その他",
+   "q": "ナイキ",
+   "category": "B/スポーツアパレル",
+   "current_price": 1000,
+   "price_type": "開始価格",
+   "rank": "B",
+   "deadline": "2026-11-24T10:00:00+09:00",
+   "auction": "2026年11月24日＜関西＞ 第508回 オークション(道具市)",
+   "lane": "道具市⑮〈関西発送〉",
+   "item_no": "14262_0347",
+   "view_id": "10989419",
+   "view_url": "https://www.ecoauc.com/client/auction-items/view/10989419/Auctions/inspect",
+   "product_no": null,
+   "url": "https://www.ecoauc.com/client/auction-items/view/10989419/Auctions/inspect",
+   "search_url": "https://www.ecoauc.com/client/auctions/inspect?q=14262_0347",
+   "asking_bid_closing_price": 3000,
+   "non_deductible_tax": false,
+   "confidence": "category_only",
+   "jissei": null,
+   "jissei_src": null,
+   "profit": null,
+   "shitene": null,
+   "highlight": false,
+   "needs_jissei_verify": true,
+   "tier": "B/スポーツアパレル",
+   "kaiten": null,
+   "rieki": null,
+   "priority": 37,
+   "tax_excluded": true,
+   "matched_queries": [
+    "ナイキ"
+   ],
+   "hanbai_souba": null,
+   "rakusatsu_souba": null,
+   "rakusatsu_src": null,
+   "max_bid": null,
+   "max_bid_soda": null,
+   "profit_flag": "?",
+   "exclude_100k": false,
+   "ideal_bid_065": null,
+   "ideal_vs_current": null,
+   "tier_band": "その他",
+   "new_tag": false,
+   "premium_flag": false,
    "stamp_note": null,
    "self_cat": null,
    "tsubushi": null
@@ -9749,7 +12613,7 @@
    "jissei_n": 25,
    "judge_hammer": 4000,
    "judge_cost": 6450,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9810,7 +12674,7 @@
    "jissei_n": 30,
    "judge_hammer": 3000,
    "judge_cost": 5350,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9871,7 +12735,7 @@
    "jissei_n": 29,
    "judge_hammer": 3000,
    "judge_cost": 5350,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -9934,7 +12798,7 @@
    "jissei_n": 24,
    "judge_hammer": 4000,
    "judge_cost": 6450,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -10097,7 +12961,7 @@
    "jissei_n": 23,
    "judge_hammer": 7000,
    "judge_cost": 9750,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -10158,7 +13022,7 @@
    "jissei_n": 28,
    "judge_hammer": 6000,
    "judge_cost": 8650,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -10219,7 +13083,7 @@
    "jissei_n": 29,
    "judge_hammer": 3000,
    "judge_cost": 5350,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "〜1万",
     "n": 15,
@@ -10382,7 +13246,7 @@
    "jissei_n": 20,
    "judge_hammer": 27000,
    "judge_cost": 32300,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -10445,7 +13309,7 @@
    "jissei_n": 24,
    "judge_hammer": 14000,
    "judge_cost": 18000,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -10559,7 +13423,7 @@
    "jissei_n": 25,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -10622,7 +13486,7 @@
    "jissei_n": 26,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -10683,7 +13547,7 @@
    "jissei_n": 24,
    "judge_hammer": 25000,
    "judge_cost": 30100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "3〜5万",
     "n": 3,
@@ -10746,7 +13610,7 @@
    "jissei_n": 20,
    "judge_hammer": 15000,
    "judge_cost": 19100,
-   "judged_at": "2026-11-21 09:23",
+   "judged_at": "2026-11-22 09:25",
    "self_band": {
     "band": "1〜3万",
     "n": 27,
@@ -10760,14 +13624,14 @@
  ],
  "_note": "jissei未検証(Mercari中央値未取得)。落札相場はenrichでofficial相場表から付与。asking_bid_closing_price=EcoAucカードのdata属性値。brand_en=EcoAucブランド表記",
  "strategy_c": {
-  "profitable": 4,
-  "thin": 0,
-  "rejected": 45,
-  "unknown": 47,
-  "eligible": 96,
-  "total": 177,
+  "profitable": 5,
+  "thin": 1,
+  "rejected": 73,
+  "unknown": 53,
+  "eligible": 132,
+  "total": 221,
   "over100k": 0,
   "gate": "仕入総額≤50,000 or kaiten≥6",
-  "enriched_at": "2026-11-21 09:23"
+  "enriched_at": "2026-11-22 09:25"
  }
 }
