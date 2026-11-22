@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-11-21T21:46:55+09:00",
+  "updated_at": "2026-11-22T21:46:11+09:00",
   "candidates": [
     {
       "name": "ポケカ MEGA拡張パック ハドウシーカー BOX",
@@ -13,7 +13,7 @@
       "profit_max": 0,
       "best_route": "",
       "phase": "受付中",
-      "deadline": "2026-11-22T19:30:00+09:00",
+      "deadline": "2026-11-22T23:00:00+09:00",
       "status": "未応募",
       "routes": [
         {
@@ -49,7 +49,7 @@
         {
           "store": "HMVトレカショップ各店(店頭QR)",
           "url": "https://nyuka-now.com/archives/2459",
-          "phase": "受付中",
+          "phase": "終了",
           "entry_open": "2026-11-20T13:00:00+09:00",
           "entry_deadline": "2026-11-22T20:59:00+09:00",
           "result_date": "2026-11-25T00:00:00+09:00",
@@ -59,7 +59,7 @@
         {
           "store": "ホビーオフ一部店舗(パック)",
           "url": "https://x.com/Hbkokubotoreca/status/2122151320077676920",
-          "phase": "受付中",
+          "phase": "終了",
           "entry_open": "2026-11-16T10:00:00+09:00",
           "entry_deadline": "2026-11-22T19:30:00+09:00",
           "result_date": "2026-11-25T15:00:00+09:00",
@@ -240,8 +240,8 @@
       "note": "🔭11/27発売前・買取価格未登録so利益未判定。応募はノーリスク。締切が近い順: ホビーオフ11/22 19:30・HMV 20:59・古本市場/しまむら 23:00",
       "price_info": {
         "price": 6000,
-        "checked_at": "2026-11-21",
-        "src": "https://nyuka-now.com/archives/162248",
+        "checked_at": "2026-11-22",
+        "src": "https://livepocket.jp/p/puf0p",
         "status": "確認済み",
         "change": null,
         "prev": null
@@ -267,7 +267,7 @@
       "jissei": 8200,
       "premium_rate": 1.37,
       "premium_level": "中",
-      "profit_max": 1200,
+      "profit_max": 1100,
       "best_route": "ホムラ買取",
       "phase": "受付中",
       "deadline": "2026-11-22T23:00:00+09:00",
@@ -292,28 +292,38 @@
           "result_date": "",
           "order_deadline": "",
           "note": ""
+        },
+        {
+          "store": "キデイランド ららぽーと富士見店(LivePocket)",
+          "url": "https://livepocket.jp/p/hpmzs",
+          "phase": "受付中",
+          "entry_open": "2026-11-21T10:00:00+09:00",
+          "entry_deadline": "2026-11-23T23:59:00+09:00",
+          "result_date": "2026-11-27T18:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
         }
       ],
       "note": "🚫基準割れ: 現金利益¥1,200(ホムラ¥8,200)。応募不要",
       "price_info": {
         "price": 6000,
-        "checked_at": "2026-11-21",
-        "src": "https://nyuka-now.com/archives/2459",
+        "checked_at": "2026-11-22",
+        "src": "https://cloud-pass.jp/pr/d5111f868ba8f555add7ef4d8c943ffd19273ae3a622a02861f04cf1c0db1e55",
         "status": "確認済み",
         "change": null,
         "prev": null
       },
       "buyback": {
-        "price": 8200,
+        "price": 8100,
         "shop": "ホムラ",
-        "at": "2026-11-21 12:00",
+        "at": "2026-11-22 12:00",
         "src": "iphone-kaitori（ポケカ）",
         "status": "登録あり"
       },
       "profit": {
-        "cash": 1200,
+        "cash": 1100,
         "card": 60,
-        "total": 1260,
+        "total": 1160,
         "tier": "ポイント狙い候補",
         "ship": 1000,
         "card_rate": 0.01
@@ -399,19 +409,19 @@
         {
           "store": "ビックカメラ岡山駅前店(店頭3F・パック20枚まで)",
           "url": "https://nyuka-now.com/archives/159770",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "2026-11-22T10:00:00+09:00",
           "entry_deadline": "",
           "result_date": "2026-12-04T00:00:00+09:00",
           "order_deadline": "",
-          "note": "1パック¥360×20=1BOX相当"
+          "note": "店頭3F・1BOX(20パック)・購入12/5〜12/6・締切の記載なし"
         }
       ],
       "note": "買取出口 現金利益¥5,800(ルデヤ¥14,000・11/21)。11/20はホムラ¥19,000(今日未確認)。lookup.pyの名前照合がFUTURISTIC BOXに当たるため型番で手計算。当選後は早期売却",
       "price_info": {
         "price": 7200,
         "checked_at": "2026-11-20",
-        "src": "https://www.pokemoncenter-online.com/",
+        "src": "https://nyuka-now.com/archives/2459",
         "status": "確認済み",
         "change": null,
         "prev": null
@@ -419,14 +429,19 @@
       "buyback": {
         "price": 14000,
         "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
+        "at": "2026-11-22T20:25:31+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/7373",
+        "matched_name": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX [M6a]",
         "status": "登録あり"
       },
       "profit": {
         "cash": 5800,
         "card": 72,
         "total": 5872,
-        "tier": "通常候補"
+        "tier": "通常候補",
+        "ship": 1000,
+        "card_rate": 0.01
       },
       "mercari": null,
       "needs_check": [],
@@ -490,8 +505,8 @@
       "note": "🚫基準割れ: 現金利益¥740(ルデヤ¥7,500・11/20)。応募不要",
       "price_info": {
         "price": 5760,
-        "checked_at": "2026-11-21",
-        "src": "https://p-bandai.jp/item/item-1000261368/",
+        "checked_at": "2026-11-22",
+        "src": "https://www.mugiwara-store.com/news/3131/",
         "status": "確認済み",
         "change": null,
         "prev": null
@@ -499,7 +514,7 @@
       "buyback": {
         "price": 7500,
         "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
+        "at": "2026-11-22T20:25:31+09:00",
         "src": "kaitori-watch",
         "url": "https://kaitori-rudeya.com/product/item/7267",
         "matched_name": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士 OP-17 [BOX]",
@@ -564,152 +579,26 @@
       ],
       "note": "🚫基準割れ: 現金利益¥2,540(ルデヤ¥9,300・11/21)。応募は任意",
       "price_info": {
-        "price": 5760,
-        "checked_at": "2026-11-20",
-        "src": "ledger(11/20確認)",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
+        "price": null,
+        "status": "未確認"
       },
       "buyback": {
         "price": 9300,
         "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
-        "status": "登録あり"
-      },
-      "profit": {
-        "cash": 2540,
-        "card": 58,
-        "total": 2598,
-        "tier": "ポイント狙い候補"
-      },
-      "mercari": null,
-      "needs_check": [],
-      "add_to_kaitori": false
-    },
-    {
-      "name": "RICOH GR IV HDF",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 222000,
-      "jissei": 248000,
-      "premium_rate": 1.12,
-      "premium_level": "低",
-      "profit_max": 25000,
-      "best_route": "ルデヤ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-22T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "GR SPACE TOKYO(店頭抽選・来店本人確認要)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "2026-10-21T00:00:00+09:00",
-          "entry_deadline": "2026-11-22T23:59:00+09:00",
-          "result_date": "2026-12-05T00:00:00+09:00",
-          "order_deadline": "2026-12-20T00:00:00+09:00",
-          "note": "来店して本人確認まで期間内に必要。12/6〜12/20店頭受取"
-        },
-        {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "終了",
-          "entry_open": "",
-          "entry_deadline": "2026-10-30T12:00:00+09:00",
-          "result_date": "2026-11-17T00:00:00+09:00",
-          "order_deadline": "2026-11-19T23:59:00+09:00",
-          "note": ""
-        }
-      ],
-      "note": "現金利益¥25,000(ルデヤ¥248,000・11/20)。⚠️GR SPACE TOKYOは期間内に来店して本人確認が必要。⚠️店印ありは減額",
-      "price_info": {
-        "price": 222000,
-        "checked_at": "2026-11-21",
-        "src": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001566&cat=002010",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
-      },
-      "buyback": {
-        "price": 248000,
-        "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
+        "at": "2026-11-22T20:25:31+09:00",
         "src": "kaitori-watch",
-        "url": "https://kaitori-rudeya.com/product/item/6509",
-        "matched_name": "RICOH(リコー) GR IV HDF",
+        "url": "https://kaitori-rudeya.com/product/item/7670",
+        "matched_name": "ONE PIECEカードゲーム ブースターパック 神の支配 OP-18 [BOX]",
         "status": "登録あり"
       },
       "profit": {
-        "cash": 25000,
-        "card": 2220,
-        "total": 27220,
-        "tier": "通常候補",
-        "ship": 1000,
-        "card_rate": 0.01
+        "status": "出せない（定価か買取価格が無い）"
       },
       "mercari": null,
-      "needs_check": [],
-      "add_to_kaitori": false
-    },
-    {
-      "name": "RICOH GR IV (無印)",
-      "brand": "RICOH",
-      "category": "カメラ",
-      "price": 211800,
-      "jissei": 211700,
-      "premium_rate": 1.0,
-      "premium_level": "低",
-      "profit_max": -1100,
-      "best_route": "ルデヤ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-22T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "GR SPACE TOKYO(店頭抽選・来店本人確認要)",
-          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
-          "phase": "受付中",
-          "entry_open": "2026-10-21T00:00:00+09:00",
-          "entry_deadline": "2026-11-22T23:59:00+09:00",
-          "result_date": "2026-12-05T00:00:00+09:00",
-          "order_deadline": "2026-12-20T00:00:00+09:00",
-          "note": ""
-        },
-        {
-          "store": "リコーイメージングストア",
-          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
-          "phase": "終了",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "2026-11-17T00:00:00+09:00",
-          "order_deadline": "2026-11-19T23:59:00+09:00",
-          "note": ""
-        }
+      "needs_check": [
+        "定価 未確認",
+        "利益 出せない"
       ],
-      "note": "🚫応募不要(赤字): 現金利益−¥1,100(ルデヤ¥211,700・11/20)",
-      "price_info": {
-        "price": 211800,
-        "checked_at": "2026-11-21",
-        "src": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
-      },
-      "buyback": {
-        "price": 211700,
-        "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
-        "status": "登録あり"
-      },
-      "profit": {
-        "cash": -1100,
-        "card": 2118,
-        "total": 1018,
-        "tier": "対象外"
-      },
-      "mercari": null,
-      "needs_check": [],
       "add_to_kaitori": false
     },
     {
@@ -749,7 +638,7 @@
       "buyback": {
         "price": 8000,
         "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
+        "at": "2026-11-22T20:25:31+09:00",
         "src": "kaitori-watch",
         "url": "https://kaitori-rudeya.com/product/item/7374",
         "matched_name": "ポケモンカードゲームMEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
@@ -804,7 +693,7 @@
       "buyback": {
         "price": 14600,
         "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
+        "at": "2026-11-22T20:25:31+09:00",
         "src": "kaitori-watch",
         "url": "https://kaitori-rudeya.com/product/item/6498",
         "matched_name": "ONE PIECEカードゲーム 受け継がれる意志 OP-13 [BOX]",
@@ -859,7 +748,7 @@
       "buyback": {
         "price": 9400,
         "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
+        "at": "2026-11-22T20:25:31+09:00",
         "src": "kaitori-watch",
         "url": "https://kaitori-rudeya.com/product/item/6504",
         "matched_name": "ONE PIECEカードゲーム 蒼海の七傑 OP-14 [BOX]",
@@ -914,7 +803,7 @@
       "buyback": {
         "price": 7900,
         "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
+        "at": "2026-11-22T20:25:31+09:00",
         "src": "kaitori-watch",
         "url": "https://kaitori-rudeya.com/product/item/6676",
         "matched_name": "ONE PIECEカードゲーム エクストラブースター 神の島の冒険 OP-15 [BOX]",
@@ -969,7 +858,7 @@
       "buyback": {
         "price": 4500,
         "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
+        "at": "2026-11-22T20:25:31+09:00",
         "src": "kaitori-watch",
         "url": "https://kaitori-rudeya.com/product/item/6826",
         "matched_name": "DUAL EVOLUTION FB09 [BOX]",
@@ -1015,7 +904,7 @@
       "note": "買取出口 現金利益¥14,500(ルデヤ¥21,000・11/20)。送料別",
       "price_info": {
         "price": 5500,
-        "checked_at": "2026-11-21",
+        "checked_at": "2026-11-22",
         "src": "https://www.gangi.co.jp/blog/drawsale-720",
         "status": "確認済み",
         "change": null,
@@ -1024,7 +913,7 @@
       "buyback": {
         "price": 21000,
         "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
+        "at": "2026-11-22T20:25:31+09:00",
         "src": "kaitori-watch",
         "url": "https://kaitori-rudeya.com/product/item/2501",
         "matched_name": "ポケモンカードゲーム S&V ハイクラスパック VSTARユニバース BOX [S12a]",
@@ -1143,7 +1032,7 @@
       "buyback": {
         "price": 10800,
         "shop": "ルデヤ",
-        "at": "2026-11-21T20:25:29+09:00",
+        "at": "2026-11-22T20:25:31+09:00",
         "src": "kaitori-watch",
         "url": "https://kaitori-rudeya.com/product/item/7627",
         "matched_name": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット 9種セット",
@@ -1162,6 +1051,53 @@
       "add_to_kaitori": false
     },
     {
+      "name": "ポケカ 30th CELEBRATION カードイラストフィギュアコレクション",
+      "brand": "ポケモン",
+      "category": "トレカ",
+      "price": 1800,
+      "jissei": 0,
+      "premium_rate": 0,
+      "premium_level": "低",
+      "profit_max": 0,
+      "best_route": "",
+      "status": "未応募",
+      "note": "11/27 16:00受付開始・買取価格 未登録",
+      "routes": [
+        {
+          "store": "ポケモンセンターオンライン",
+          "url": "https://www.pokemon-card.com/info/005764.html",
+          "phase": "予告",
+          "entry_open": "2026-11-27T16:00:00+09:00",
+          "entry_deadline": "2026-11-30T16:59:00+09:00",
+          "result_date": "2026-12-04T15:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "phase": "予告",
+      "deadline": "2026-11-30T16:59:00+09:00",
+      "price_info": {
+        "price": 1800,
+        "checked_at": "2026-11-22",
+        "src": "https://www.pokemon-card.com/info/005764.html",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "status": "未登録"
+      },
+      "profit": {
+        "status": "出せない（定価か買取価格が無い）"
+      },
+      "mercari": null,
+      "needs_check": [
+        "買取価格 未登録（買取タスクへの追加候補）",
+        "利益 出せない"
+      ],
+      "add_to_kaitori": true
+    },
+    {
       "name": "RICOH GR IV 30th Anniversary Edition Kit",
       "brand": "RICOH",
       "category": "カメラ",
@@ -1172,7 +1108,7 @@
       "profit_max": -16800,
       "best_route": "るでや買取",
       "phase": "注文中",
-      "deadline": "2026-11-24T23:59:00+09:00",
+      "deadline": "",
       "status": "未応募",
       "routes": [
         {
@@ -1216,7 +1152,159 @@
           "note": "メンテのため案内11/13→11/18、注文11/18〜11/24 23:59に変更"
         }
       ],
-      "note": "受付終了(公式9/24締切) / 🚫応募不要: るでや買取¥244,000(2026-11-13検証)−定価¥259,800−送料¥1,000=−¥16,800。"
+      "note": "受付終了(公式9/24締切) / 🚫応募不要: るでや買取¥244,000(2026-11-13検証)−定価¥259,800−送料¥1,000=−¥16,800。",
+      "price_info": {
+        "price": null,
+        "status": "未確認"
+      },
+      "buyback": {
+        "price": 235000,
+        "shop": "ルデヤ",
+        "at": "2026-11-22T20:25:31+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/7539",
+        "matched_name": "RICOH（リコー） GR IV 30th Anniversary Edition Kit",
+        "status": "登録あり"
+      },
+      "profit": {
+        "status": "出せない（定価か買取価格が無い）"
+      },
+      "mercari": null,
+      "needs_check": [
+        "定価 未確認",
+        "利益 出せない"
+      ],
+      "add_to_kaitori": false
+    },
+    {
+      "name": "RICOH GR IV HDF",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 222000,
+      "jissei": 248000,
+      "premium_rate": 1.12,
+      "premium_level": "低",
+      "profit_max": 25000,
+      "best_route": "ルデヤ買取",
+      "phase": "案内待ち",
+      "deadline": "2026-11-22T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO(店頭抽選・来店本人確認要)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "案内待ち",
+          "entry_open": "2026-10-21T00:00:00+09:00",
+          "entry_deadline": "2026-11-22T23:59:00+09:00",
+          "result_date": "2026-12-05T00:00:00+09:00",
+          "order_deadline": "2026-12-20T00:00:00+09:00",
+          "note": "店頭受付は11/22まで(19時閉店)。結果12/5・受取12/6〜12/20"
+        },
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "終了",
+          "entry_open": "",
+          "entry_deadline": "2026-10-30T12:00:00+09:00",
+          "result_date": "2026-11-17T00:00:00+09:00",
+          "order_deadline": "2026-11-19T23:59:00+09:00",
+          "note": ""
+        }
+      ],
+      "note": "現金利益¥25,000(ルデヤ¥248,000・11/20)。⚠️GR SPACE TOKYOは期間内に来店して本人確認が必要。⚠️店印ありは減額",
+      "price_info": {
+        "price": 222000,
+        "checked_at": "2026-11-21",
+        "src": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001566&cat=002010",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "price": 248000,
+        "shop": "ルデヤ",
+        "at": "2026-11-22T20:25:31+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/6509",
+        "matched_name": "RICOH(リコー) GR IV HDF",
+        "status": "登録あり"
+      },
+      "profit": {
+        "cash": 25000,
+        "card": 2220,
+        "total": 27220,
+        "tier": "通常候補",
+        "ship": 1000,
+        "card_rate": 0.01
+      },
+      "mercari": null,
+      "needs_check": [],
+      "add_to_kaitori": false
+    },
+    {
+      "name": "RICOH GR IV (無印)",
+      "brand": "RICOH",
+      "category": "カメラ",
+      "price": 211800,
+      "jissei": 211700,
+      "premium_rate": 1.0,
+      "premium_level": "低",
+      "profit_max": -1100,
+      "best_route": "ルデヤ買取",
+      "phase": "案内待ち",
+      "deadline": "2026-11-22T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "GR SPACE TOKYO(店頭抽選・来店本人確認要)",
+          "url": "https://www.ricoh-imaging.co.jp/japan/community/grspace_tokyo/camerasales/",
+          "phase": "案内待ち",
+          "entry_open": "2026-10-21T00:00:00+09:00",
+          "entry_deadline": "2026-11-22T23:59:00+09:00",
+          "result_date": "2026-12-05T00:00:00+09:00",
+          "order_deadline": "2026-12-20T00:00:00+09:00",
+          "note": "店頭受付は11/22まで(19時閉店)。結果12/5・受取12/6〜12/20"
+        },
+        {
+          "store": "リコーイメージングストア",
+          "url": "https://ricohimagingstore.com/Page/Feature/FeaturePage009.aspx",
+          "phase": "終了",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "2026-11-17T00:00:00+09:00",
+          "order_deadline": "2026-11-19T23:59:00+09:00",
+          "note": ""
+        }
+      ],
+      "note": "🚫応募不要(赤字): 現金利益−¥1,100(ルデヤ¥211,700・11/20)",
+      "price_info": {
+        "price": 211800,
+        "checked_at": "2026-11-21",
+        "src": "https://ricohimagingstore.com/Form/Product/ProductDetail.aspx?shop=0&pid=S0001551&cat=002010",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "price": 211700,
+        "shop": "ルデヤ",
+        "at": "2026-11-22T20:25:31+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/6119",
+        "matched_name": "RICOH(リコー) GR IV",
+        "status": "登録あり"
+      },
+      "profit": {
+        "cash": -1100,
+        "card": 2118,
+        "total": 1018,
+        "tier": "ポイント狙い候補",
+        "ship": 1000,
+        "card_rate": 0.01
+      },
+      "mercari": null,
+      "needs_check": [],
+      "add_to_kaitori": false
     },
     {
       "name": "RICOH GR IIIx Urban Edition",
