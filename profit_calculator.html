@@ -247,7 +247,7 @@ body {
 <!-- ヘッダー -->
 <header class="header">
   <div class="header-title">利益計算ツール <span class="ver-badge">v1.0</span></div>
-  <div class="header-sub">ヤフオク・エコオク対応</div>
+  <div class="header-sub">ヤフオク・エコオク・大吉対応</div>
 </header>
 
 <main class="app">
@@ -260,6 +260,7 @@ body {
       <div class="seg">
         <button class="seg-btn on" id="buy-yahoo" onclick="setBuy('yahoo')">ヤフオク</button>
         <button class="seg-btn"   id="buy-eco"   onclick="setBuy('eco')">エコオク</button>
+        <button class="seg-btn"   id="buy-daikichi" onclick="setBuy('daikichi')">大吉</button>
         <button class="seg-btn"   id="buy-store" onclick="setBuy('store')">店舗</button>
       </div>
       <div class="info-pill" id="buy-hint">
@@ -300,6 +301,12 @@ body {
       仕入れ総支払い：<span class="eco-detail-total" id="ec-total-buy">—</span>
     </div>
 
+    <div class="eco-detail hidden" id="dk-cost-detail">
+      税込落札額：<b id="dk-taxed">—</b>　手数料（税込）：<b id="dk-fee">—</b><br>
+      参加費：<b id="dk-share-v">—</b>　送料：<b id="dk-ship-v">—</b><br>
+      仕入れ総支払い：<span class="eco-detail-total" id="dk-total-buy">—</span>
+    </div>
+
     <div class="hidden" id="coupon-row">
       <div class="irow" style="border-bottom:none; padding-bottom:4px; min-height:auto;">
         <div class="ilabel">クーポン割引<span class="ilabel-sub">ヤフオク決済時の割引額</span></div>
@@ -331,6 +338,37 @@ body {
         <span class="ilabel-sub">逆算に自動で加算</span>
       </div>
       <input class="ifield" type="text" id="eco-ship" value="1100" inputmode="numeric" oninput="calc()">
+    </div>
+
+    <!-- 大吉オークション（2026-11-24 追加） -->
+    <div class="hidden" id="dk-rows">
+      <div class="irow">
+        <div class="ilabel">
+          大吉のジャンル
+          <span class="ilabel-sub">落札手数料の率（別途消費税）</span>
+        </div>
+        <select class="iselect" id="dk-genre" onchange="saveDk(); calc()">
+          <option value="0.05" selected>ブランド 5%</option>
+          <option value="0.03">ジュエリー 3%</option>
+          <option value="0.03">時計 3%</option>
+          <option value="0.10">アパレル 10%</option>
+          <option value="0.10">カメラ 10%</option>
+        </select>
+      </div>
+      <div class="irow">
+        <div class="ilabel">
+          参加費（1点あたり）
+          <span class="ilabel-sub">大会ごと¥3,000を、同じ大会で落とす点数で割る</span>
+        </div>
+        <input class="ifield" type="text" id="dk-share" value="3000" inputmode="numeric" oninput="saveDk(); calc()">
+      </div>
+      <div class="irow">
+        <div class="ilabel">
+          大吉の送料（着払い・1点あたり）
+          <span class="ilabel-sub">新宿=ヤマト／新横浜=佐川</span>
+        </div>
+        <input class="ifield" type="text" id="dk-ship" value="1000" inputmode="numeric" oninput="saveDk(); calc()">
+      </div>
     </div>
 
     <div class="irow">
@@ -448,6 +486,17 @@ body {
   </div>
 
   <!-- ⑤ エコオク手数料表 -->
+  <div class="card hidden" id="dk-buy-info">
+    <div class="card-hd">大吉オークションの費用</div>
+    <table class="fee-tbl">
+      <tr><td>落札手数料</td><td>ブランド5%／ジュエリー・時計3%／アパレル・カメラ10%</td></tr>
+      <tr><td>消費税</td><td>落札額と手数料の両方に10%</td></tr>
+      <tr><td>参加費</td><td>1回の大会で1点でも落札したら¥3,000（税込）</td></tr>
+      <tr><td>送料</td><td>着払い（新宿=ヤマト、新横浜=佐川）</td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--text3);margin-top:6px;">入札額は税抜。1点だけ落とすと参加費¥3,000が全部かかるので、エコオクより¥2,000〜3,000高くつく。3点以上まとめて落とすとほぼ同じ。</div>
+  </div>
+
   <div class="card hidden" id="eco-buy-info">
     <div class="card-hd">エコオク 落札手数料（税別）</div>
     <table class="fee-tbl">
@@ -643,10 +692,29 @@ function getSellFee(p) {
   return sellC === 'standard' ? p * 0.10 : ecoSellFee(p);
 }
 function getEcoShip() {
+  if (buyC === 'daikichi') return getDkExtra();
   return buyC === 'eco' ? (parseFloat($('eco-ship').value) || 0) : 0;
 }
+// ── 大吉オークション計算（2026-11-24 追加） ──
+// 仕入れ総額 = 落札額×1.1 ＋ 落札額×手数料率×1.1 ＋ 参加費（頭割り）＋ 着払い送料
+function getDkRate()  { return parseFloat($('dk-genre').value) || 0.05; }
+function getDkExtra() { return (parseFloat($('dk-share').value) || 0) + (parseFloat($('dk-ship').value) || 0); }
+function dkBuyTotal(px) {
+  const tp = Math.round(px * 1.1);
+  const tf = Math.round(px * getDkRate() * 1.1);
+  return { taxedPrice: tp, taxedFee: tf, total: tp + tf };
+}
+function saveDk() {
+  try { localStorage.setItem('bsc_dk', JSON.stringify({ g: $('dk-genre').selectedIndex, s: $('dk-share').value, h: $('dk-ship').value })); } catch(e) {}
+}
+function loadDk() {
+  try {
+    const d = JSON.parse(localStorage.getItem('bsc_dk') || 'null');
+    if (d) { $('dk-genre').selectedIndex = d.g; $('dk-share').value = d.s; $('dk-ship').value = d.h; }
+  } catch(e) {}
+}
 function getBuyShip() {
-  if (buyC === 'store') return 0;   // 店舗：仕入れ送料なし
+  if (buyC === 'store' || buyC === 'daikichi') return 0;   // 店舗：仕入れ送料なし／大吉：送料は大吉の欄で計算
   return parseFloat($('buy-ship').value) || 0;
 }
 
@@ -695,6 +763,12 @@ function calcMaxCost(price, extra, ship, target) {
     const m = Math.floor(budget / 1.088);
     return m > 0 ? m : null;
   }
+  if (buyC === 'daikichi') {
+    // 参加費・送料は budget から引き済み（getEcoShip）。残りを (1+手数料率)×1.1 で割る
+    let m = Math.floor(budget / ((1 + getDkRate()) * 1.1));
+    while (m > 0 && dkBuyTotal(m).total > budget) m--;
+    return m > 0 ? m : null;
+  }
   // エコオク：各帯で最大の落札価格を逆算
   const brackets = [
     { max: 10000,   fee: 500   },
@@ -722,19 +796,25 @@ function setBuy(c) {
   $('buy-yahoo').className = 'seg-btn' + (c === 'yahoo' ? ' on' : '');
   $('buy-eco').className   = 'seg-btn' + (c === 'eco'   ? ' on' : '');
   $('buy-store').className = 'seg-btn' + (c === 'store' ? ' on' : '');
+  $('buy-daikichi').className = 'seg-btn' + (c === 'daikichi' ? ' on' : '');
   c === 'eco' ? show('eco-buy-info') : hide('eco-buy-info');
+  c === 'daikichi' ? show('dk-buy-info') : hide('dk-buy-info');
+  c === 'daikichi' ? show('dk-rows') : hide('dk-rows');
   if (c === 'yahoo') {
     $('buy-hint').innerHTML = '<span class="ico">ℹ️</span><span>プレミアム会員　<b>落札手数料 8.8%</b></span>';
   } else if (c === 'eco') {
     $('buy-hint').innerHTML = '<span class="ico">⚠️</span><span><span class="eco-tag">税抜表示</span>入札金額は税抜で表示<br>実払い = 落札額×1.1 ＋ 手数料×1.1</span>';
+  } else if (c === 'daikichi') {
+    $('buy-hint').innerHTML = '<span class="ico">⚠️</span><span><span class="eco-tag">税抜表示</span>入札金額は税抜で表示<br>実払い = 落札額×1.1 ＋ 落札額×手数料率×1.1 ＋ 参加費 ＋ 着払い送料</span>';
   } else {
     $('buy-hint').innerHTML = '<span class="ico">🏬</span><span><b>仕入れ手数料なし・仕入れ送料なし</b>（税込価格をそのまま入力）</span>';
   }
-  $('cost-sub').textContent = c === 'eco' ? 'エコオク：税抜金額を入力' : (c === 'store' ? '店舗：税込価格（支払額）を入力' : '');
-  $('cost-sub').style.display = (c === 'eco' || c === 'store') ? 'block' : 'none';
+  $('cost-sub').textContent = c === 'eco' ? 'エコオク：税抜金額を入力' : (c === 'daikichi' ? '大吉：税抜の落札額を入力' : (c === 'store' ? '店舗：税込価格（支払額）を入力' : ''));
+  $('cost-sub').style.display = (c === 'eco' || c === 'store' || c === 'daikichi') ? 'block' : 'none';
   c === 'eco' ? show('eco-ship-row') : hide('eco-ship-row');
   c === 'yahoo' ? show('coupon-row') : hide('coupon-row');
-  c === 'store' ? hide('buyship-row') : show('buyship-row');
+  (c === 'store' || c === 'daikichi') ? hide('buyship-row') : show('buyship-row');
+  if (c !== 'daikichi') hide('dk-cost-detail');
   saveSettings(); calc();
 }
 function setSell(c) {
@@ -805,6 +885,16 @@ function calc() {
       $('ec-fee').textContent     = fmt(taxedFee);
       $('ec-total-buy').textContent = fmt(total);
       hlBuy(costInput);
+    } else if (buyC === 'daikichi') {
+      const { taxedPrice, taxedFee, total } = dkBuyTotal(costInput);
+      totalBuy = total;   // 参加費・送料は getEcoShip() で別に足す
+      hide('eco-cost-detail'); show('dk-cost-detail');
+      const sh = parseFloat($('dk-share').value) || 0, hs = parseFloat($('dk-ship').value) || 0;
+      $('dk-taxed').textContent     = fmt(taxedPrice);
+      $('dk-fee').textContent       = fmt(taxedFee);
+      $('dk-share-v').textContent   = fmt(sh);
+      $('dk-ship-v').textContent    = fmt(hs);
+      $('dk-total-buy').textContent = fmt(total + sh + hs);
     } else if (buyC === 'store') {
       totalBuy = costInput;   // 店舗：税込価格そのまま・手数料なし
       hide('eco-cost-detail');
@@ -857,7 +947,7 @@ function calc() {
       $('b-cost').textContent  = fmt(totalBuy);
       let shipLabel = fmt(ship);
       if (buyShip > 0) shipLabel += ' ＋ 仕入送料' + fmt(buyShip);
-      if (ecoShip > 0) shipLabel += ' ＋ エコオク送料' + fmt(ecoShip);
+      if (ecoShip > 0) shipLabel += (buyC === 'daikichi' ? ' ＋ 大吉の参加費・送料' : ' ＋ エコオク送料') + fmt(ecoShip);
       $('b-ship').textContent  = shipLabel;
       $('b-extra').textContent = fmt(extra);
       $('s-rate').textContent  = sellC === 'standard' ? '10%' : '固定';
@@ -913,6 +1003,7 @@ function calc() {
   } else {
     // 仕入れ価格なし：全て非表示
     hide('eco-cost-detail');
+    hide('dk-cost-detail');
     hide('breakdown-card');
     hide('result-card');
     hide('price-box');
@@ -1022,6 +1113,7 @@ document.addEventListener('input', function(e) {
 }, true);
 
 // ── 初期化 ──
+loadDk();
 loadSettings();
 calc();
 </script>
