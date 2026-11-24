@@ -1,6 +1,6 @@
 {
   "schema": "v2",
-  "updated_at": "2026-11-23T21:47:26+09:00",
+  "updated_at": "2026-11-24T21:45:13+09:00",
   "candidates": [
     {
       "name": "ポケカ MEGA拡張パック ハドウシーカー BOX",
@@ -13,7 +13,7 @@
       "profit_max": 0,
       "best_route": "",
       "phase": "受付中",
-      "deadline": "2026-11-23T23:59:00+09:00",
+      "deadline": "2026-11-24T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
@@ -99,7 +99,7 @@
         {
           "store": "トイコンプ各店",
           "url": "https://toycomp.membercard.jp/",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-11-20T15:30:00+09:00",
           "entry_deadline": "2026-11-23T23:59:00+09:00",
           "result_date": "2026-11-24T00:00:00+09:00",
@@ -109,7 +109,7 @@
         {
           "store": "トレカキャピタル豊田本店",
           "url": "https://edion-cp.com/trecapiopen1204",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-11-20T10:00:00+09:00",
           "entry_deadline": "2026-11-23T23:59:00+09:00",
           "result_date": "2026-12-03T00:00:00+09:00",
@@ -119,7 +119,7 @@
         {
           "store": "ポケモンセンター各店(LINEミニアプリ)",
           "url": "https://shop.pokemon.co.jp/ja/shop/pokemoncenter-megatokyo/news/202611/000709.html",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-11-19T14:00:00+09:00",
           "entry_deadline": "2026-11-23T23:59:00+09:00",
           "result_date": "2026-11-25T12:00:00+09:00",
@@ -129,7 +129,7 @@
         {
           "store": "晴れる屋2各店",
           "url": "https://livepocket.jp/e/wfku9",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-11-18T17:00:00+09:00",
           "entry_deadline": "2026-11-23T23:59:00+09:00",
           "result_date": "2026-11-24T00:00:00+09:00",
@@ -159,12 +159,22 @@
         {
           "store": "ジョーシン店頭(アプリ)",
           "url": "https://shop.joshin.co.jp/app/",
-          "phase": "予告",
+          "phase": "受付中",
           "entry_open": "2026-11-24T10:00:00+09:00",
           "entry_deadline": "2026-11-26T19:00:00+09:00",
           "result_date": "2026-11-27T00:00:00+09:00",
           "order_deadline": "",
           "note": ""
+        },
+        {
+          "store": "ホビーステーション(LivePocket)",
+          "url": "https://livepocket.jp/e/d275s",
+          "phase": "受付中",
+          "entry_open": "2026-11-24T12:00:00+09:00",
+          "entry_deadline": "2026-11-26T23:59:00+09:00",
+          "result_date": "2026-12-03T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "当選者は2BOXまで"
         }
       ],
       "note": "🔭11/27発売前・買取価格未登録so利益未判定。応募はノーリスク。締切が近い順: ホビーオフ11/22 19:30・HMV 20:59・古本市場/しまむら 23:00",
@@ -190,571 +200,6 @@
       "add_to_kaitori": true
     },
     {
-      "name": "ポケカ MEGA拡張パック ストームエメラルダ BOX",
-      "brand": "Pokemon",
-      "category": "トレカ",
-      "price": 6000,
-      "jissei": 8000,
-      "premium_rate": 1.33,
-      "premium_level": "中",
-      "profit_max": 1000,
-      "best_route": "ホムラ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-23T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ポケモンカードラウンジ渋谷店",
-          "url": "https://cloud-pass.jp/pr/d5111f868ba8f555add7ef4d8c943ffd19273ae3a622a02861f04cf1c0db1e55",
-          "phase": "案内待ち",
-          "entry_open": "2026-11-20T10:00:00+09:00",
-          "entry_deadline": "2026-11-22T23:59:00+09:00",
-          "result_date": "2026-12-01T18:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "キデイランド ららぽーと富士見店(LivePocket)",
-          "url": "https://livepocket.jp/p/hpmzs",
-          "phase": "受付中",
-          "entry_open": "2026-11-21T10:00:00+09:00",
-          "entry_deadline": "2026-11-23T23:59:00+09:00",
-          "result_date": "2026-11-27T18:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "🚫基準割れ: 現金利益¥1,200(ホムラ¥8,200)。応募不要",
-      "price_info": {
-        "price": 6000,
-        "checked_at": "2026-11-22",
-        "src": "https://cloud-pass.jp/pr/d5111f868ba8f555add7ef4d8c943ffd19273ae3a622a02861f04cf1c0db1e55",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
-      },
-      "buyback": {
-        "price": 8000,
-        "shop": "ホムラ",
-        "at": "2026-11-23 12:00",
-        "src": "iphone-kaitori（ポケカ）",
-        "status": "登録あり"
-      },
-      "profit": {
-        "cash": 1000,
-        "card": 60,
-        "total": 1060,
-        "tier": "ポイント狙い候補",
-        "ship": 1000,
-        "card_rate": 0.01
-      },
-      "mercari": null,
-      "needs_check": [],
-      "add_to_kaitori": false
-    },
-    {
-      "name": "ポケカ 30th CELEBRATION BOX",
-      "brand": "Pokemon",
-      "category": "トレカ",
-      "price": 7200,
-      "jissei": 17000,
-      "premium_rate": 2.36,
-      "premium_level": "高",
-      "profit_max": 8800,
-      "best_route": "ホムラ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-23T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "キデイランド ららぽーと富士見店(LivePocket)",
-          "url": "https://livepocket.jp/p/hpmzs",
-          "phase": "受付中",
-          "entry_open": "2026-11-21T10:00:00+09:00",
-          "entry_deadline": "2026-11-23T23:59:00+09:00",
-          "result_date": "2026-11-27T18:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "トレカキャピタル豊田本店",
-          "url": "https://edion-cp.com/trecapiopen1204",
-          "phase": "受付中",
-          "entry_open": "2026-11-20T10:00:00+09:00",
-          "entry_deadline": "2026-11-23T23:59:00+09:00",
-          "result_date": "2026-12-03T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ノジマオンライン(招待制)",
-          "url": "https://contents.online.nojima.co.jp/secret202609/",
-          "phase": "受付中",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ポケモンセンターオンライン(追加抽選4回目)",
-          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
-          "phase": "予告",
-          "entry_open": "",
-          "entry_deadline": "",
-          "result_date": "",
-          "order_deadline": "",
-          "note": "12月頃予定"
-        },
-        {
-          "store": "ビックカメラ岡山駅前店(店頭3F・パック20枚まで)",
-          "url": "https://nyuka-now.com/archives/159770",
-          "phase": "受付中",
-          "entry_open": "2026-11-22T10:00:00+09:00",
-          "entry_deadline": "",
-          "result_date": "2026-12-04T00:00:00+09:00",
-          "order_deadline": "",
-          "note": "店頭3F・1BOX(20パック)・購入12/5〜12/6・締切の記載なし"
-        }
-      ],
-      "note": "買取出口 現金利益¥5,800(ルデヤ¥14,000・11/21)。11/20はホムラ¥19,000(今日未確認)。lookup.pyの名前照合がFUTURISTIC BOXに当たるため型番で手計算。当選後は早期売却",
-      "price_info": {
-        "price": 7200,
-        "checked_at": "2026-11-20",
-        "src": "https://nyuka-now.com/archives/2459",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
-      },
-      "buyback": {
-        "price": 17000,
-        "shop": "ホムラ",
-        "at": "2026-11-23 12:00",
-        "src": "iphone-kaitori（ポケカ）",
-        "status": "登録あり"
-      },
-      "profit": {
-        "cash": 8800,
-        "card": 72,
-        "total": 8872,
-        "tier": "通常候補",
-        "ship": 1000,
-        "card_rate": 0.01
-      },
-      "mercari": null,
-      "needs_check": [],
-      "add_to_kaitori": false
-    },
-    {
-      "name": "ONE PIECEカード 世界最強の戦士 (OP-17) BOX",
-      "brand": "BANDAI",
-      "category": "トレカ",
-      "price": 5760,
-      "jissei": 7150,
-      "premium_rate": 1.24,
-      "premium_level": "中",
-      "profit_max": 390,
-      "best_route": "ルデヤ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-23T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "ONE PIECE 麦わらストア各店",
-          "url": "https://www.mugiwara-store.com/news/3131/",
-          "phase": "案内待ち",
-          "entry_open": "2026-11-20T00:00:00+09:00",
-          "entry_deadline": "2026-11-22T23:59:00+09:00",
-          "result_date": "2026-11-26T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "ゲオ",
-          "url": "https://geo-online.co.jp/news/792",
-          "phase": "予告",
-          "entry_open": "2026-11-30T11:00:00+09:00",
-          "entry_deadline": "2026-12-03T17:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "トレカステーション各店(店頭)",
-          "url": "https://nyuka-now.com/archives/97393",
-          "phase": "受付中",
-          "entry_open": "2026-11-23T18:00:00+09:00",
-          "entry_deadline": "2026-11-29T23:59:00+09:00",
-          "result_date": "2026-12-01T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        },
-        {
-          "store": "トレカキャピタル豊田本店",
-          "url": "https://edion-cp.com/trecapiopen1204",
-          "phase": "受付中",
-          "entry_open": "2026-11-20T10:00:00+09:00",
-          "entry_deadline": "2026-11-23T23:59:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "🚫基準割れ: 現金利益¥740(ルデヤ¥7,500・11/20)。応募不要",
-      "price_info": {
-        "price": 5760,
-        "checked_at": "2026-11-22",
-        "src": "https://www.mugiwara-store.com/news/3131/",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
-      },
-      "buyback": {
-        "price": 7150,
-        "shop": "ルデヤ",
-        "at": "2026-11-23T20:25:35+09:00",
-        "src": "kaitori-watch",
-        "url": "https://kaitori-rudeya.com/product/item/7267",
-        "matched_name": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士 OP-17 [BOX]",
-        "status": "登録あり"
-      },
-      "profit": {
-        "cash": 390,
-        "card": 58,
-        "total": 448,
-        "tier": "対象外",
-        "ship": 1000,
-        "card_rate": 0.01
-      },
-      "mercari": null,
-      "needs_check": [],
-      "add_to_kaitori": false
-    },
-    {
-      "name": "ONE PIECEカード 神の支配 (OP-18) BOX",
-      "brand": "BANDAI",
-      "category": "トレカ",
-      "price": 5760,
-      "jissei": 7800,
-      "premium_rate": 1.35,
-      "premium_level": "中",
-      "profit_max": 2540,
-      "best_route": "ルデヤ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-23T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "トレカキャピタル豊田本店",
-          "url": "https://edion-cp.com/trecapiopen1204",
-          "phase": "受付中",
-          "entry_open": "2026-11-20T10:00:00+09:00",
-          "entry_deadline": "2026-11-23T23:59:00+09:00",
-          "result_date": "2026-12-03T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "🚫基準割れ: 現金利益¥2,540(ルデヤ¥9,300・11/21)。応募は任意",
-      "price_info": {
-        "price": null,
-        "status": "未確認"
-      },
-      "buyback": {
-        "price": 7800,
-        "shop": "ルデヤ",
-        "at": "2026-11-23T20:25:35+09:00",
-        "src": "kaitori-watch",
-        "url": "https://kaitori-rudeya.com/product/item/7670",
-        "matched_name": "ONE PIECEカードゲーム ブースターパック 神の支配 OP-18 [BOX]",
-        "status": "登録あり"
-      },
-      "profit": {
-        "status": "出せない（定価か買取価格が無い）"
-      },
-      "mercari": null,
-      "needs_check": [
-        "定価 未確認",
-        "利益 出せない"
-      ],
-      "add_to_kaitori": false
-    },
-    {
-      "name": "ポケカ 30th プレミアムデッキセット エーフィ・ブラッキー",
-      "brand": "Pokemon",
-      "category": "トレカ",
-      "price": 6200,
-      "jissei": 8000,
-      "premium_rate": 1.29,
-      "premium_level": "中",
-      "profit_max": 800,
-      "best_route": "ルデヤ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-23T23:59:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "セブンネットショッピング",
-          "url": "https://7net.omni7.jp/detail/2190054905.html",
-          "phase": "受付中",
-          "entry_open": "2026-11-19T17:00:00+09:00",
-          "entry_deadline": "2026-11-23T23:59:00+09:00",
-          "result_date": "2026-12-08T19:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "🚫基準割れ: 現金利益¥800。応募不要",
-      "price_info": {
-        "price": 6200,
-        "checked_at": "2026-11-20",
-        "src": "https://www.pokemoncenter-online.com/4521329462189.html",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
-      },
-      "buyback": {
-        "price": 8000,
-        "shop": "ルデヤ",
-        "at": "2026-11-23T20:25:35+09:00",
-        "src": "kaitori-watch",
-        "url": "https://kaitori-rudeya.com/product/item/7374",
-        "matched_name": "ポケモンカードゲームMEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
-        "status": "登録あり"
-      },
-      "profit": {
-        "cash": 800,
-        "card": 62,
-        "total": 862,
-        "tier": "対象外",
-        "ship": 1000,
-        "card_rate": 0.01
-      },
-      "mercari": null,
-      "needs_check": [],
-      "add_to_kaitori": false
-    },
-    {
-      "name": "ONE PIECEカード 受け継がれる意志 (OP-13) BOX 再販",
-      "brand": "BANDAI",
-      "category": "トレカ",
-      "price": 5280,
-      "jissei": 12000,
-      "premium_rate": 2.27,
-      "premium_level": "高",
-      "profit_max": 5720,
-      "best_route": "ルデヤ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-24T15:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "DMM通販(プレミアホビー抽選・OP-13/14/15)",
-          "url": "https://www.dmm.com/mono/hobby/-/list/=/article=keyword/id=308378/",
-          "phase": "受付中",
-          "entry_open": "2026-11-17T15:00:00+09:00",
-          "entry_deadline": "2026-11-24T15:00:00+09:00",
-          "result_date": "2026-11-26T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "買取出口 現金利益¥8,320(ルデヤ¥14,600・11/20)",
-      "price_info": {
-        "price": 5280,
-        "checked_at": "2026-11-20",
-        "src": "https://nyuka-now.com/archives/97393",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
-      },
-      "buyback": {
-        "price": 12000,
-        "shop": "ルデヤ",
-        "at": "2026-11-23T20:25:35+09:00",
-        "src": "kaitori-watch",
-        "url": "https://kaitori-rudeya.com/product/item/6498",
-        "matched_name": "ONE PIECEカードゲーム 受け継がれる意志 OP-13 [BOX]",
-        "status": "登録あり"
-      },
-      "profit": {
-        "cash": 5720,
-        "card": 53,
-        "total": 5773,
-        "tier": "通常候補",
-        "ship": 1000,
-        "card_rate": 0.01
-      },
-      "mercari": null,
-      "needs_check": [],
-      "add_to_kaitori": false
-    },
-    {
-      "name": "ONE PIECEカード 蒼海の七傑 (OP-14) BOX 再販",
-      "brand": "BANDAI",
-      "category": "トレカ",
-      "price": 5280,
-      "jissei": 8800,
-      "premium_rate": 1.67,
-      "premium_level": "高",
-      "profit_max": 2520,
-      "best_route": "ルデヤ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-24T15:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "DMM通販(プレミアホビー抽選・OP-13/14/15)",
-          "url": "https://www.dmm.com/mono/hobby/-/list/=/article=keyword/id=308378/",
-          "phase": "受付中",
-          "entry_open": "2026-11-17T15:00:00+09:00",
-          "entry_deadline": "2026-11-24T15:00:00+09:00",
-          "result_date": "2026-11-26T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "メルカリ出口未検証。買取出口 現金利益¥3,120で基準(¥4,000)割れ",
-      "price_info": {
-        "price": 5280,
-        "checked_at": "2026-11-20",
-        "src": "https://nyuka-now.com/archives/97393",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
-      },
-      "buyback": {
-        "price": 8800,
-        "shop": "ルデヤ",
-        "at": "2026-11-23T20:25:35+09:00",
-        "src": "kaitori-watch",
-        "url": "https://kaitori-rudeya.com/product/item/6504",
-        "matched_name": "ONE PIECEカードゲーム 蒼海の七傑 OP-14 [BOX]",
-        "status": "登録あり"
-      },
-      "profit": {
-        "cash": 2520,
-        "card": 53,
-        "total": 2573,
-        "tier": "ポイント狙い候補",
-        "ship": 1000,
-        "card_rate": 0.01
-      },
-      "mercari": null,
-      "needs_check": [],
-      "add_to_kaitori": false
-    },
-    {
-      "name": "ONE PIECEカード 神の島の冒険 (OP-15) BOX 再販",
-      "brand": "BANDAI",
-      "category": "トレカ",
-      "price": 5280,
-      "jissei": 8000,
-      "premium_rate": 1.52,
-      "premium_level": "高",
-      "profit_max": 1720,
-      "best_route": "ルデヤ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-24T15:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "DMM通販(プレミアホビー抽選・OP-13/14/15)",
-          "url": "https://www.dmm.com/mono/hobby/-/list/=/article=keyword/id=308378/",
-          "phase": "受付中",
-          "entry_open": "2026-11-17T15:00:00+09:00",
-          "entry_deadline": "2026-11-24T15:00:00+09:00",
-          "result_date": "2026-11-26T00:00:00+09:00",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "🚫基準割れ: 現金利益¥1,620。応募不要",
-      "price_info": {
-        "price": 5280,
-        "checked_at": "2026-11-20",
-        "src": "https://nyuka-now.com/archives/97393",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
-      },
-      "buyback": {
-        "price": 8000,
-        "shop": "ルデヤ",
-        "at": "2026-11-23T20:25:35+09:00",
-        "src": "kaitori-watch",
-        "url": "https://kaitori-rudeya.com/product/item/6676",
-        "matched_name": "ONE PIECEカードゲーム エクストラブースター 神の島の冒険 OP-15 [BOX]",
-        "status": "登録あり"
-      },
-      "profit": {
-        "cash": 1720,
-        "card": 53,
-        "total": 1773,
-        "tier": "ポイント狙い候補",
-        "ship": 1000,
-        "card_rate": 0.01
-      },
-      "mercari": null,
-      "needs_check": [],
-      "add_to_kaitori": false
-    },
-    {
-      "name": "ドラゴンボール FW DUAL EVOLUTION FB09 BOX",
-      "brand": "BANDAI",
-      "category": "トレカ",
-      "price": 5280,
-      "jissei": 4500,
-      "premium_rate": 0.85,
-      "premium_level": "低",
-      "profit_max": -1780,
-      "best_route": "ルデヤ買取",
-      "phase": "受付中",
-      "deadline": "2026-11-24T15:00:00+09:00",
-      "status": "未応募",
-      "routes": [
-        {
-          "store": "DMM通販(プレミアホビー抽選)",
-          "url": "https://www.dmm.com/mono/hobby/-/detail/=/cid=c260803458_lo2608/",
-          "phase": "受付中",
-          "entry_open": "2026-11-17T15:00:00+09:00",
-          "entry_deadline": "2026-11-24T15:00:00+09:00",
-          "result_date": "",
-          "order_deadline": "",
-          "note": ""
-        }
-      ],
-      "note": "🚫定価割れ: 現金利益−¥1,780。応募不要",
-      "price_info": {
-        "price": 5280,
-        "checked_at": "2026-11-20",
-        "src": "https://nyuka-now.com/archives/141863",
-        "status": "確認済み",
-        "change": null,
-        "prev": null
-      },
-      "buyback": {
-        "price": 4500,
-        "shop": "ルデヤ",
-        "at": "2026-11-23T20:25:35+09:00",
-        "src": "kaitori-watch",
-        "url": "https://kaitori-rudeya.com/product/item/6826",
-        "matched_name": "DUAL EVOLUTION FB09 [BOX]",
-        "status": "登録あり"
-      },
-      "profit": {
-        "cash": -1780,
-        "card": 53,
-        "total": -1727,
-        "tier": "対象外",
-        "ship": 1000,
-        "card_rate": 0.01
-      },
-      "mercari": null,
-      "needs_check": [],
-      "add_to_kaitori": false
-    },
-    {
       "name": "ポケカ 30th CELEBRATION カードセット 9種セット",
       "brand": "Pokemon",
       "category": "トレカ",
@@ -765,13 +210,13 @@
       "profit_max": -1000,
       "best_route": "ルデヤ買取",
       "phase": "受付中",
-      "deadline": "2026-11-24T20:00:00+09:00",
+      "deadline": "2026-11-25T23:59:00+09:00",
       "status": "未応募",
       "routes": [
         {
           "store": "ビックカメラ藤沢/相模大野/新横浜/ラゾーナ川崎(店頭)",
           "url": "https://nyuka-now.com/archives/161846",
-          "phase": "受付中",
+          "phase": "案内待ち",
           "entry_open": "2026-11-23T10:00:00+09:00",
           "entry_deadline": "2026-11-24T20:00:00+09:00",
           "result_date": "2026-11-28T13:00:00+09:00",
@@ -807,6 +252,16 @@
           "result_date": "2026-12-01T00:00:00+09:00",
           "order_deadline": "",
           "note": ""
+        },
+        {
+          "store": "ヤマダデンキ(デジタル会員アプリ)",
+          "url": "https://www.yamada-denki.jp/service/pointservice/digital-kaiin.html",
+          "phase": "受付中",
+          "entry_open": "2026-11-23T23:00:00+09:00",
+          "entry_deadline": "2026-11-25T23:59:00+09:00",
+          "result_date": "2026-12-09T12:00:00+09:00",
+          "order_deadline": "",
+          "note": "税込¥10,800・1セット限り"
         }
       ],
       "note": "🚫基準割れ: 現金利益−¥1,000。応募不要",
@@ -821,7 +276,7 @@
       "buyback": {
         "price": 10800,
         "shop": "ルデヤ",
-        "at": "2026-11-23T20:25:35+09:00",
+        "at": "2026-11-24T20:25:29+09:00",
         "src": "kaitori-watch",
         "url": "https://kaitori-rudeya.com/product/item/7627",
         "matched_name": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット 9種セット",
@@ -876,7 +331,7 @@
       "buyback": {
         "price": 21000,
         "shop": "ルデヤ",
-        "at": "2026-11-23T20:25:35+09:00",
+        "at": "2026-11-24T20:25:29+09:00",
         "src": "kaitori-watch",
         "url": "https://kaitori-rudeya.com/product/item/2501",
         "matched_name": "ポケモンカードゲーム S&V ハイクラスパック VSTARユニバース BOX [S12a]",
@@ -957,6 +412,185 @@
         "利益 出せない"
       ],
       "add_to_kaitori": true
+    },
+    {
+      "name": "ONE PIECEカード 世界最強の戦士 (OP-17) BOX",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 7150,
+      "premium_rate": 1.24,
+      "premium_level": "中",
+      "profit_max": 390,
+      "best_route": "ルデヤ買取",
+      "phase": "受付中",
+      "deadline": "2026-11-29T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ONE PIECE 麦わらストア各店",
+          "url": "https://www.mugiwara-store.com/news/3131/",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-20T00:00:00+09:00",
+          "entry_deadline": "2026-11-22T23:59:00+09:00",
+          "result_date": "2026-11-26T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ゲオ",
+          "url": "https://geo-online.co.jp/news/792",
+          "phase": "予告",
+          "entry_open": "2026-11-30T11:00:00+09:00",
+          "entry_deadline": "2026-12-03T17:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "トレカステーション各店(店頭)",
+          "url": "https://nyuka-now.com/archives/97393",
+          "phase": "受付中",
+          "entry_open": "2026-11-23T18:00:00+09:00",
+          "entry_deadline": "2026-11-29T23:59:00+09:00",
+          "result_date": "2026-12-01T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "トレカキャピタル豊田本店",
+          "url": "https://edion-cp.com/trecapiopen1204",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-20T10:00:00+09:00",
+          "entry_deadline": "2026-11-23T23:59:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "🚫基準割れ: 現金利益¥740(ルデヤ¥7,500・11/20)。応募不要",
+      "price_info": {
+        "price": 5760,
+        "checked_at": "2026-11-22",
+        "src": "https://www.mugiwara-store.com/news/3131/",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "price": 7150,
+        "shop": "ルデヤ",
+        "at": "2026-11-24T20:25:29+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/7267",
+        "matched_name": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士 OP-17 [BOX]",
+        "status": "登録あり"
+      },
+      "profit": {
+        "cash": 390,
+        "card": 58,
+        "total": 448,
+        "tier": "対象外",
+        "ship": 1000,
+        "card_rate": 0.01
+      },
+      "mercari": null,
+      "needs_check": [],
+      "add_to_kaitori": false
+    },
+    {
+      "name": "ポケカ 30th CELEBRATION BOX",
+      "brand": "Pokemon",
+      "category": "トレカ",
+      "price": 7200,
+      "jissei": 17000,
+      "premium_rate": 2.36,
+      "premium_level": "高",
+      "profit_max": 5800,
+      "best_route": "ルデヤ買取",
+      "phase": "受付中",
+      "deadline": "",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "キデイランド ららぽーと富士見店(LivePocket)",
+          "url": "https://livepocket.jp/p/hpmzs",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-21T10:00:00+09:00",
+          "entry_deadline": "2026-11-23T23:59:00+09:00",
+          "result_date": "2026-11-27T18:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "トレカキャピタル豊田本店",
+          "url": "https://edion-cp.com/trecapiopen1204",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-20T10:00:00+09:00",
+          "entry_deadline": "2026-11-23T23:59:00+09:00",
+          "result_date": "2026-12-03T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ノジマオンライン(招待制)",
+          "url": "https://contents.online.nojima.co.jp/secret202609/",
+          "phase": "受付中",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "ポケモンセンターオンライン(追加抽選4回目)",
+          "url": "https://www.pokemoncenter-online.com/news/?id=20260929",
+          "phase": "予告",
+          "entry_open": "",
+          "entry_deadline": "",
+          "result_date": "",
+          "order_deadline": "",
+          "note": "12月頃予定"
+        },
+        {
+          "store": "ビックカメラ岡山駅前店(店頭3F・パック20枚まで)",
+          "url": "https://nyuka-now.com/archives/159770",
+          "phase": "受付中",
+          "entry_open": "2026-11-22T10:00:00+09:00",
+          "entry_deadline": "",
+          "result_date": "2026-12-04T00:00:00+09:00",
+          "order_deadline": "",
+          "note": "店頭3F・1BOX(20パック)・購入12/5〜12/6・締切の記載なし"
+        }
+      ],
+      "note": "買取出口 現金利益¥5,800(ルデヤ¥14,000・11/24)。lookup.pyの名前照合がFUTURISTIC BOX(¥27,500/¥40,000)に当たるため型番M6aで手計算。当選後は早期売却",
+      "price_info": {
+        "price": 7200,
+        "checked_at": "2026-11-20",
+        "src": "https://nyuka-now.com/archives/2459",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "price": 14000,
+        "shop": "ルデヤ",
+        "at": "2026-11-24T20:25:29+09:00",
+        "src": "kaitori-watch buyback_latest（M6a 品名で手照合）",
+        "url": "https://kaitori-rudeya.com/product/item/7373",
+        "status": "登録あり"
+      },
+      "profit": {
+        "cash": 5800,
+        "card": 72,
+        "total": 5872,
+        "tier": "通常候補",
+        "ship": 1000,
+        "card_rate": 0.01
+      },
+      "mercari": null,
+      "needs_check": [],
+      "add_to_kaitori": false
     },
     {
       "name": "ポケカ 30th CELEBRATION カードイラストフィギュアコレクション",
@@ -1105,7 +739,7 @@
           "entry_open": "2026-10-21T00:00:00+09:00",
           "entry_deadline": "2026-11-22T23:59:00+09:00",
           "result_date": "2026-12-05T00:00:00+09:00",
-          "order_deadline": "2026-12-20T00:00:00+09:00",
+          "order_deadline": "2026-12-20T23:59:00+09:00",
           "note": "店頭受付は11/22まで(19時閉店)。結果12/5・受取12/6〜12/20"
         },
         {
@@ -1170,7 +804,7 @@
           "entry_open": "2026-10-21T00:00:00+09:00",
           "entry_deadline": "2026-11-22T23:59:00+09:00",
           "result_date": "2026-12-05T00:00:00+09:00",
-          "order_deadline": "2026-12-20T00:00:00+09:00",
+          "order_deadline": "2026-12-20T23:59:00+09:00",
           "note": "店頭受付は11/22まで(19時閉店)。結果12/5・受取12/6〜12/20"
         },
         {
@@ -1206,6 +840,393 @@
         "cash": -2600,
         "card": 2118,
         "total": -482,
+        "tier": "対象外",
+        "ship": 1000,
+        "card_rate": 0.01
+      },
+      "mercari": null,
+      "needs_check": [],
+      "add_to_kaitori": false
+    },
+    {
+      "name": "ポケカ MEGA拡張パック ストームエメラルダ BOX",
+      "brand": "Pokemon",
+      "category": "トレカ",
+      "price": 6000,
+      "jissei": 8000,
+      "premium_rate": 1.33,
+      "premium_level": "中",
+      "profit_max": 1000,
+      "best_route": "ホムラ買取",
+      "phase": "案内待ち",
+      "deadline": "2026-11-23T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "ポケモンカードラウンジ渋谷店",
+          "url": "https://cloud-pass.jp/pr/d5111f868ba8f555add7ef4d8c943ffd19273ae3a622a02861f04cf1c0db1e55",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-20T10:00:00+09:00",
+          "entry_deadline": "2026-11-22T23:59:00+09:00",
+          "result_date": "2026-12-01T18:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        },
+        {
+          "store": "キデイランド ららぽーと富士見店(LivePocket)",
+          "url": "https://livepocket.jp/p/hpmzs",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-21T10:00:00+09:00",
+          "entry_deadline": "2026-11-23T23:59:00+09:00",
+          "result_date": "2026-11-27T18:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "🚫基準割れ: 現金利益¥1,200(ホムラ¥8,200)。応募不要",
+      "price_info": {
+        "price": 6000,
+        "checked_at": "2026-11-22",
+        "src": "https://cloud-pass.jp/pr/d5111f868ba8f555add7ef4d8c943ffd19273ae3a622a02861f04cf1c0db1e55",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "price": 8000,
+        "shop": "ホムラ",
+        "at": "2026-11-24 12:00",
+        "src": "iphone-kaitori（ポケカ）",
+        "status": "登録あり"
+      },
+      "profit": {
+        "cash": 1000,
+        "card": 60,
+        "total": 1060,
+        "tier": "ポイント狙い候補",
+        "ship": 1000,
+        "card_rate": 0.01
+      },
+      "mercari": null,
+      "needs_check": [],
+      "add_to_kaitori": false
+    },
+    {
+      "name": "ONE PIECEカード 神の支配 (OP-18) BOX",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5760,
+      "jissei": 7800,
+      "premium_rate": 1.35,
+      "premium_level": "中",
+      "profit_max": 2540,
+      "best_route": "ルデヤ買取",
+      "phase": "案内待ち",
+      "deadline": "2026-11-23T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "トレカキャピタル豊田本店",
+          "url": "https://edion-cp.com/trecapiopen1204",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-20T10:00:00+09:00",
+          "entry_deadline": "2026-11-23T23:59:00+09:00",
+          "result_date": "2026-12-03T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "🚫基準割れ: 現金利益¥2,540(ルデヤ¥9,300・11/21)。応募は任意",
+      "price_info": {
+        "price": null,
+        "status": "未確認"
+      },
+      "buyback": {
+        "price": 7000,
+        "shop": "ルデヤ",
+        "at": "2026-11-24T20:25:29+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/7670",
+        "matched_name": "ONE PIECEカードゲーム ブースターパック 神の支配 OP-18 [BOX]",
+        "status": "登録あり"
+      },
+      "profit": {
+        "status": "出せない（定価か買取価格が無い）"
+      },
+      "mercari": null,
+      "needs_check": [
+        "定価 未確認",
+        "利益 出せない"
+      ],
+      "add_to_kaitori": false
+    },
+    {
+      "name": "ポケカ 30th プレミアムデッキセット エーフィ・ブラッキー",
+      "brand": "Pokemon",
+      "category": "トレカ",
+      "price": 6200,
+      "jissei": 8000,
+      "premium_rate": 1.29,
+      "premium_level": "中",
+      "profit_max": 800,
+      "best_route": "ルデヤ買取",
+      "phase": "案内待ち",
+      "deadline": "2026-11-23T23:59:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "セブンネットショッピング",
+          "url": "https://7net.omni7.jp/detail/2190054905.html",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-19T17:00:00+09:00",
+          "entry_deadline": "2026-11-23T23:59:00+09:00",
+          "result_date": "2026-12-08T19:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "🚫基準割れ: 現金利益¥800。応募不要",
+      "price_info": {
+        "price": 6200,
+        "checked_at": "2026-11-20",
+        "src": "https://www.pokemoncenter-online.com/4521329462189.html",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "price": 8000,
+        "shop": "ルデヤ",
+        "at": "2026-11-24T20:25:29+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/7374",
+        "matched_name": "ポケモンカードゲームMEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+        "status": "登録あり"
+      },
+      "profit": {
+        "cash": 800,
+        "card": 62,
+        "total": 862,
+        "tier": "対象外",
+        "ship": 1000,
+        "card_rate": 0.01
+      },
+      "mercari": null,
+      "needs_check": [],
+      "add_to_kaitori": false
+    },
+    {
+      "name": "ONE PIECEカード 受け継がれる意志 (OP-13) BOX 再販",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 12000,
+      "premium_rate": 2.27,
+      "premium_level": "高",
+      "profit_max": 5720,
+      "best_route": "ルデヤ買取",
+      "phase": "案内待ち",
+      "deadline": "2026-11-24T15:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "DMM通販(プレミアホビー抽選・OP-13/14/15)",
+          "url": "https://www.dmm.com/mono/hobby/-/list/=/article=keyword/id=308378/",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-17T15:00:00+09:00",
+          "entry_deadline": "2026-11-24T15:00:00+09:00",
+          "result_date": "2026-11-26T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "買取出口 現金利益¥8,320(ルデヤ¥14,600・11/20)",
+      "price_info": {
+        "price": 5280,
+        "checked_at": "2026-11-20",
+        "src": "https://nyuka-now.com/archives/97393",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "price": 12000,
+        "shop": "ルデヤ",
+        "at": "2026-11-24T20:25:29+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/6498",
+        "matched_name": "ONE PIECEカードゲーム 受け継がれる意志 OP-13 [BOX]",
+        "status": "登録あり"
+      },
+      "profit": {
+        "cash": 5720,
+        "card": 53,
+        "total": 5773,
+        "tier": "通常候補",
+        "ship": 1000,
+        "card_rate": 0.01
+      },
+      "mercari": null,
+      "needs_check": [],
+      "add_to_kaitori": false
+    },
+    {
+      "name": "ONE PIECEカード 蒼海の七傑 (OP-14) BOX 再販",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 8800,
+      "premium_rate": 1.67,
+      "premium_level": "高",
+      "profit_max": 2520,
+      "best_route": "ルデヤ買取",
+      "phase": "案内待ち",
+      "deadline": "2026-11-24T15:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "DMM通販(プレミアホビー抽選・OP-13/14/15)",
+          "url": "https://www.dmm.com/mono/hobby/-/list/=/article=keyword/id=308378/",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-17T15:00:00+09:00",
+          "entry_deadline": "2026-11-24T15:00:00+09:00",
+          "result_date": "2026-11-26T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "メルカリ出口未検証。買取出口 現金利益¥3,120で基準(¥4,000)割れ",
+      "price_info": {
+        "price": 5280,
+        "checked_at": "2026-11-20",
+        "src": "https://nyuka-now.com/archives/97393",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "price": 8800,
+        "shop": "ルデヤ",
+        "at": "2026-11-24T20:25:29+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/6504",
+        "matched_name": "ONE PIECEカードゲーム 蒼海の七傑 OP-14 [BOX]",
+        "status": "登録あり"
+      },
+      "profit": {
+        "cash": 2520,
+        "card": 53,
+        "total": 2573,
+        "tier": "ポイント狙い候補",
+        "ship": 1000,
+        "card_rate": 0.01
+      },
+      "mercari": null,
+      "needs_check": [],
+      "add_to_kaitori": false
+    },
+    {
+      "name": "ONE PIECEカード 神の島の冒険 (OP-15) BOX 再販",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 8000,
+      "premium_rate": 1.52,
+      "premium_level": "高",
+      "profit_max": 1720,
+      "best_route": "ルデヤ買取",
+      "phase": "案内待ち",
+      "deadline": "2026-11-24T15:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "DMM通販(プレミアホビー抽選・OP-13/14/15)",
+          "url": "https://www.dmm.com/mono/hobby/-/list/=/article=keyword/id=308378/",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-17T15:00:00+09:00",
+          "entry_deadline": "2026-11-24T15:00:00+09:00",
+          "result_date": "2026-11-26T00:00:00+09:00",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "🚫基準割れ: 現金利益¥1,620。応募不要",
+      "price_info": {
+        "price": 5280,
+        "checked_at": "2026-11-20",
+        "src": "https://nyuka-now.com/archives/97393",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "price": 8000,
+        "shop": "ルデヤ",
+        "at": "2026-11-24T20:25:29+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/6676",
+        "matched_name": "ONE PIECEカードゲーム エクストラブースター 神の島の冒険 OP-15 [BOX]",
+        "status": "登録あり"
+      },
+      "profit": {
+        "cash": 1720,
+        "card": 53,
+        "total": 1773,
+        "tier": "ポイント狙い候補",
+        "ship": 1000,
+        "card_rate": 0.01
+      },
+      "mercari": null,
+      "needs_check": [],
+      "add_to_kaitori": false
+    },
+    {
+      "name": "ドラゴンボール FW DUAL EVOLUTION FB09 BOX",
+      "brand": "BANDAI",
+      "category": "トレカ",
+      "price": 5280,
+      "jissei": 4500,
+      "premium_rate": 0.85,
+      "premium_level": "低",
+      "profit_max": -1780,
+      "best_route": "ルデヤ買取",
+      "phase": "案内待ち",
+      "deadline": "2026-11-24T15:00:00+09:00",
+      "status": "未応募",
+      "routes": [
+        {
+          "store": "DMM通販(プレミアホビー抽選)",
+          "url": "https://www.dmm.com/mono/hobby/-/detail/=/cid=c260803458_lo2608/",
+          "phase": "案内待ち",
+          "entry_open": "2026-11-17T15:00:00+09:00",
+          "entry_deadline": "2026-11-24T15:00:00+09:00",
+          "result_date": "",
+          "order_deadline": "",
+          "note": ""
+        }
+      ],
+      "note": "🚫定価割れ: 現金利益−¥1,780。応募不要",
+      "price_info": {
+        "price": 5280,
+        "checked_at": "2026-11-20",
+        "src": "https://nyuka-now.com/archives/141863",
+        "status": "確認済み",
+        "change": null,
+        "prev": null
+      },
+      "buyback": {
+        "price": 4500,
+        "shop": "ルデヤ",
+        "at": "2026-11-24T20:25:29+09:00",
+        "src": "kaitori-watch",
+        "url": "https://kaitori-rudeya.com/product/item/6826",
+        "matched_name": "DUAL EVOLUTION FB09 [BOX]",
+        "status": "登録あり"
+      },
+      "profit": {
+        "cash": -1780,
+        "card": 53,
+        "total": -1727,
         "tier": "対象外",
         "ship": 1000,
         "card_rate": 0.01
